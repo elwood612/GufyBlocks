@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "gufyblocks:block/cracked_cobblestone_bricks",
-    "top": "gufyblocks:block/cracked_cobblestone_bricks",
-    "side": "gufyblocks:block/cracked_cobblestone_bricks"
-  }
-}

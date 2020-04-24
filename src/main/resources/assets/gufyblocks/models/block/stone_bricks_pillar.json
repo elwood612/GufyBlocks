@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "gufyblocks:block/stone_bricks_pillar_top",
-        "side": "gufyblocks:block/stone_bricks_pillar"
-    }
-}

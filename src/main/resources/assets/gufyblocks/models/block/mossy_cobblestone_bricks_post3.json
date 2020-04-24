@@ -1,7 +1,0 @@
-{ 
-	"parent": "gufyblocks:block/post",
-	"textures": 
-	{
-		"texture": "gufyblocks:block/mossy_cobblestone_bricks3"
-	}
-}
