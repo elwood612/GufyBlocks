@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/hopper",
+	"textures": 
+	{
+		"texture": "minecraft:block/smooth_stone4"
+	}
+}

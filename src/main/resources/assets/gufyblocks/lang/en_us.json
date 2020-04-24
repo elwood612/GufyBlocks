@@ -1,0 +1,66 @@
+{
+	"itemGroup.gufygroup": "Gufy Blocks",
+	
+	"block.gufyblocks.stone_verticalslab": "Stone Vertical Slab",
+	"block.gufyblocks.stone_wall": "Stone Wall",
+	"block.gufyblocks.stone_hopper": "Stone Hopper",
+	"block.gufyblocks.stone_post": "Stone Post",
+	"block.gufyblocks.stone_trapdoor": "Stone Trapdoor",
+
+	"block.gufyblocks.smooth_stone_stairs": "Smooth Stone Stairs",
+	"block.gufyblocks.smooth_stone_verticalslab": "Smooth Stone Vertical Slab",
+	"block.gufyblocks.smooth_stone_wall": "Smooth Stone Wall",
+	"block.gufyblocks.smooth_stone_hopper": "Smooth Stone Hopper",
+	"block.gufyblocks.smooth_stone_post": "Smooth Stone Post",
+	
+	"block.gufyblocks.cobblestone_verticalslab": "Cobblestone Vertical Slab",
+	"block.gufyblocks.cobblestone_hopper": "Cobblestone Hopper",
+	"block.gufyblocks.cobblestone_post": "Cobblestone Post",
+	
+	"block.gufyblocks.mossy_cobblestone_stairs": "Mossy Cobblestone Stairs",
+	"block.gufyblocks.mossy_cobblestone_slab": "Mossy Cobblestone Slab",
+	"block.gufyblocks.mossy_cobblestone_verticalslab": "Mossy Cobblestone Vertical Slab",
+	"block.gufyblocks.mossy_cobblestone_hopper": "Mossy Cobblestone Hopper",
+	"block.gufyblocks.mossy_cobblestone_post": "Mossy Cobblestone Post",
+	
+	"block.gufyblocks.cobblestone_bricks": "Cobblestone Bricks",
+	"block.gufyblocks.cobblestone_bricks_stairs": "Cobblestone Brick Stairs",
+	"block.gufyblocks.cobblestone_bricks_slab": "Cobblestone Brick Slab",
+	"block.gufyblocks.cobblestone_bricks_verticalslab": "Cobblestone Brick Vertical Slab",
+	"block.gufyblocks.cobblestone_bricks_wall": "Cobblestone Brick Wall",
+	"block.gufyblocks.cobblestone_bricks_hopper": "Cobblestone Brick Hopper",
+	"block.gufyblocks.cobblestone_bricks_post": "Cobblestone Bricks Post",
+	
+	"block.gufyblocks.mossy_cobblestone_bricks": "Mossy Cobblestone Bricks",
+	"block.gufyblocks.mossy_cobblestone_bricks_stairs": "Mossy Cobblestone Brick Stairs",
+	"block.gufyblocks.mossy_cobblestone_bricks_slab": "Mossy Cobblestone Brick Slab",
+	"block.gufyblocks.mossy_cobblestone_bricks_verticalslab": "Mossy Cobblestone Brick Vertical Slab",
+	"block.gufyblocks.mossy_cobblestone_bricks_wall": "Mossy Cobblestone Brick Wall",
+	"block.gufyblocks.mossy_cobblestone_bricks_hopper": "Mossy Cobblestone Brick Hopper",
+	"block.gufyblocks.mossy_cobblestone_bricks_post": "Mossy Cobblestone Bricks Post",
+	
+	"block.gufyblocks.cracked_cobblestone_bricks": "Cracked Cobblestone Bricks",
+	"block.gufyblocks.cracked_cobblestone_bricks_stairs": "Cracked Cobblestone Brick Stairs",
+	"block.gufyblocks.cracked_cobblestone_bricks_slab": "Cracked Cobblestone Brick Slab",
+	"block.gufyblocks.cracked_cobblestone_bricks_verticalslab": "Cracked Cobblestone Brick Vertical Slab",
+	"block.gufyblocks.cracked_cobblestone_bricks_wall": "Cracked Cobblestone Brick Wall",
+	"block.gufyblocks.cracked_cobblestone_bricks_hopper": "Cracked Cobblestone Brick Hopper",
+	"block.gufyblocks.cracked_cobblestone_bricks_post": "Cracked Cobblestone Bricks Post",
+	
+	"block.gufyblocks.stone_bricks_verticalslab": "Stone Brick Vertical Slab",
+	"block.gufyblocks.stone_bricks_hopper": "Stone Brick Hopper",
+	"block.gufyblocks.stone_bricks_pillar": "Stone Brick Pillar",
+	"block.gufyblocks.stone_bricks_post": "Stone Bricks Post",
+	
+	"block.gufyblocks.mossy_stone_bricks_verticalslab": "Mossy Stone Brick Vertical Slab",
+	"block.gufyblocks.mossy_stone_bricks_hopper": "Mossy Stone Brick Hopper",
+	"block.gufyblocks.mossy_stone_bricks_post": "Mossy Stone Bricks Post",
+	
+	"block.gufyblocks.cracked_stone_bricks_stairs": "Cracked Stone Brick Stairs",
+	"block.gufyblocks.cracked_stone_bricks_slab": "Cracked Stone Brick Slab",
+	"block.gufyblocks.cracked_stone_bricks_verticalslab": "Cracked Stone Brick Vertical Slab",
+	"block.gufyblocks.cracked_stone_bricks_wall": "Cracked Stone Brick Wall",
+	"block.gufyblocks.cracked_stone_bricks_hopper": "Cracked Stone Brick Hopper",
+	"block.gufyblocks.cracked_stone_bricks_post": "Cracked Stone Bricks Post"
+
+}
