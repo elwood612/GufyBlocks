@@ -1,9 +1,5 @@
 {
   "homepage": "https://drive.google.com/open?id=17nf6joZZkkVFA3Co5iIY8Rg2_K6TIsia",
-  "<mcversion>": {
-    "<modversion>": "<changelog for this version>", 
-    // List all versions of your mod for the given Minecraft version, along with their changelogs
-  },
   "promos": {
     "<mcversion>-latest": "1.0.1",
     "<mcversion>-recommended": "1.0.1",
