@@ -6,7 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.DirectionalBlock;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
@@ -53,7 +53,7 @@ public class GufyRod extends DirectionalBlock implements IWaterLoggable
     public BlockState getStateForPlacement(BlockItemUseContext context) 
     {
     	Direction direction = context.getFace();
-    	IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+    	FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         BlockState blockstate = context.getWorld().getBlockState(context.getPos().offset(direction.getOpposite()));
         return blockstate.getBlock() == this && blockstate.get(FACING) == direction ? this.getDefaultState().with(FACING, direction.getOpposite()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)) : this.getDefaultState().with(FACING, direction).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
     }
@@ -97,7 +97,7 @@ public class GufyRod extends DirectionalBlock implements IWaterLoggable
 
     @Override
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(BlockState state) 
+    public FluidState getFluidState(BlockState state) 
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }

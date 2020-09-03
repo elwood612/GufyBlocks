@@ -17,7 +17,7 @@ public class GufyBlock extends Block
         this.toolLevel = block.level;
         setRegistryName(name);
 	}
-	
+
 	@Override
     public ToolType getHarvestTool(BlockState state) 
 	{
@@ -29,4 +29,5 @@ public class GufyBlock extends Block
     {
         return toolLevel;
     }
+
 }

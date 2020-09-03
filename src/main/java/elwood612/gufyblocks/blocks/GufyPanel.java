@@ -5,12 +5,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.BlockState;
-import net.minecraft.fluid.IFluidState;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
@@ -23,7 +22,6 @@ import net.minecraftforge.common.ToolType;
 
 public class GufyPanel extends HorizontalBlock implements IWaterLoggable
 {  
-    public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     
     protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
@@ -39,28 +37,32 @@ public class GufyPanel extends HorizontalBlock implements IWaterLoggable
 		super(Block.Properties.create(block.material, block.color).hardnessAndResistance(block.hardness, block.resistance).sound(block.sound));
 		this.toolType = block.tool;
         this.toolLevel = block.level;
-        this.setDefaultState(this.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
         setRegistryName(name);
 	}
 	
 	@Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) 
     {
-        builder.add(FACING, WATERLOGGED);
+        builder.add(HORIZONTAL_FACING, WATERLOGGED);
     }
 	
 	@Override
     public BlockState getStateForPlacement(BlockItemUseContext context) 
     {
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        BlockState BlockState = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
-        return BlockState;
+		BlockState BlockState = this.getDefaultState();
+        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        Direction direction = context.getFace();
+        
+        if (direction.getAxis().isHorizontal()) { BlockState = BlockState.with(HORIZONTAL_FACING, direction); } 
+        else { BlockState = BlockState.with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing().getOpposite()); }
+        
+        return BlockState.with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
     }
 	
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) 
     {
-        Direction Direction = state.get(FACING);
-        switch (Direction) 
+        switch((Direction)state.get(HORIZONTAL_FACING).getOpposite())
         {
             case WEST:
                 return (VoxelShape) WEST_SHAPE;
@@ -73,7 +75,7 @@ public class GufyPanel extends HorizontalBlock implements IWaterLoggable
         }
     }
     
-  //Directional Light Blocking
+    //Directional Light Blocking
     public boolean func_220074_n(BlockState p_220074_1_) 
     {
         return true;
@@ -98,7 +100,7 @@ public class GufyPanel extends HorizontalBlock implements IWaterLoggable
 
     @Override
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(BlockState state) 
+    public FluidState getFluidState(BlockState state) 
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }

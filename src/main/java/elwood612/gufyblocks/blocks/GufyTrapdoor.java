@@ -13,7 +13,7 @@ public class GufyTrapdoor extends TrapDoorBlock
     
     public GufyTrapdoor(GufyMaterials block, String name) 
     {
-    	super(Block.Properties.create(block.material, block.color).hardnessAndResistance(block.hardness, block.resistance).sound(block.sound));
+    	super(Block.Properties.create(block.material, block.color).hardnessAndResistance(block.hardness, block.resistance).sound(block.sound).notSolid());
 	    this.toolType = block.tool;
         this.toolLevel = block.level;
         setRegistryName(name);
