@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:white_terracotta"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:white_terracotta_verticalslab",
+    "count": 6
+  }
+}

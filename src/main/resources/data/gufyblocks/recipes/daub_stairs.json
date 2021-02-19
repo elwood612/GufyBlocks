@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:daub"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:daub_stairs",
+    "count": 6
+  }
+}

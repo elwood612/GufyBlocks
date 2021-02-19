@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:stripped_spruce_wood"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:stripped_spruce_wood_fence",
+    "count": 4
+  }
+}

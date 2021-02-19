@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:stone_bricks_hopper",
+    "count": 6
+  }
+}

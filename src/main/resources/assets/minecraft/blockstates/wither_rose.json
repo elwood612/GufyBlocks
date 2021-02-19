@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "": [
+		 { "model": "block/wither_rose"},
+		 { "model": "block/wither_rose2"}
+        ]
+    }
+}

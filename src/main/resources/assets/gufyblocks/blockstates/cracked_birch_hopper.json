@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cracked_birch_hopper" },
+        	{ "model": "gufyblocks:block/cracked_birch_hopper2" },
+        	{ "model": "gufyblocks:block/cracked_birch_hopper3" },
+        	{ "model": "gufyblocks:block/cracked_birch_hopper4" }
+        ]
+    }
+}

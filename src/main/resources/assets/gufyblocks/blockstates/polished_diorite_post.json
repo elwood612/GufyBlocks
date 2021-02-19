@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/polished_diorite_post" },
+        	{ "model": "gufyblocks:block/polished_diorite_post2" },
+        	{ "model": "gufyblocks:block/polished_diorite_post3" },
+        	{ "model": "gufyblocks:block/polished_diorite_post4" }
+        ]
+    }
+}

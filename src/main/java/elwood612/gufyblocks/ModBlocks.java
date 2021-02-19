@@ -833,6 +833,14 @@ public class ModBlocks
 			new GufyVerticalSlab(WARPED_WART, "warped_wart_verticalslab"),
 		//wagon_wheel
 			new GufyTrapdoor(SPRUCE, "wagon_wheel"),
+		//granite_cobble_bricks
+			new GufyBlock(GRANITE, "granite_cobble_bricks"),
+			new GufyStairs(GRANITE, "granite_cobble_bricks_stairs"),
+			new GufySlab(GRANITE, "granite_cobble_bricks_slab"),
+			new GufyVerticalSlab(GRANITE, "granite_cobble_bricks_verticalslab"),
+			new GufyWall(GRANITE, "granite_cobble_bricks_wall"),
+			new GufyHopper(GRANITE, "granite_cobble_bricks_hopper"),
+			new GufyPost(GRANITE, "granite_cobble_bricks_post"),
 	};
 	
 	
@@ -878,7 +886,7 @@ public class ModBlocks
 	{
 		for (final Block block: blockList)
 		{
-			 if (name == block.toString()) {
+			 if (name.equals(block.toString())) {
 				 return block;
 			 }
 		}

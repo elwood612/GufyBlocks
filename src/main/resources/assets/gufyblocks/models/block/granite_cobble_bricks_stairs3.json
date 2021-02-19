@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/granite_cobble_bricks3",
+    "top": "gufyblocks:block/granite_cobble_bricks3",
+    "side": "gufyblocks:block/granite_cobble_bricks3"
+  }
+}

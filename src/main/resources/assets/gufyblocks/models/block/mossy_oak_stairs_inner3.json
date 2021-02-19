@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/mossy_oak3",
+    "top": "gufyblocks:block/mossy_oak3",
+    "side": "gufyblocks:block/mossy_oak3"
+  }
+}

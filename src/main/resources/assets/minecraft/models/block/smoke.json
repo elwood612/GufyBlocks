@@ -1,0 +1,26 @@
+{
+"textures": {
+    "particle": "block/smoke",
+    "texture": "block/smoke"
+},
+"elements": [ 
+{
+    "from": [ 0, 0, 16 ],
+    "to": [ 22.5, 22.5, 16 ],
+    "rotation": { "origin": [ 0, 0, 16 ], "axis": "y", "angle": 45 },
+    "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ 0, 0, 0 ],
+    "to": [ 22.5, 22.5, 0 ],
+    "rotation": { "origin": [ 0, 0, 0 ], "axis": "y", "angle": -45 },
+    "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+}
+]
+}

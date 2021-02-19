@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern":
+  [
+    "#",
+	"#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:spruce_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:spruce_parquet",
+    "count": 1
+  }
+}

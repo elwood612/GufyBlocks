@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/thatch" },
+        	{ "model": "gufyblocks:block/thatch2" },
+        	{ "model": "gufyblocks:block/thatch3" },
+        	{ "model": "gufyblocks:block/thatch4" }
+        ]
+    }
+}

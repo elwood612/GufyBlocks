@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/polished_diorite_hopper" },
+        	{ "model": "gufyblocks:block/polished_diorite_hopper2" },
+        	{ "model": "gufyblocks:block/polished_diorite_hopper3" },
+        	{ "model": "gufyblocks:block/polished_diorite_hopper4" }
+        ]
+    }
+}

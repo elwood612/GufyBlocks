@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/post",
+	"textures": 
+	{
+		"texture": "minecraft:block/pink_terracotta"
+	}
+}

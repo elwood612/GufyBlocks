@@ -1,0 +1,16 @@
+{ 
+	"variants": {
+		"facing=south": [
+			{ "model": "gufyblocks:block/wattle_fence" },
+			{ "model": "gufyblocks:block/wattle_fence2" } ],
+		"facing=north": [
+			{ "model": "gufyblocks:block/wattle_fence", "y": 180, "uvlock": false },
+			{ "model": "gufyblocks:block/wattle_fence2", "y": 180, "uvlock": false } ],
+		"facing=west": [
+			{ "model": "gufyblocks:block/wattle_fence", "y": 90, "uvlock": false },
+			{ "model": "gufyblocks:block/wattle_fence2", "y": 90, "uvlock": false } ],
+		"facing=east": [
+			{ "model": "gufyblocks:block/wattle_fence", "y": 270, "uvlock": false },
+			{ "model": "gufyblocks:block/wattle_fence2", "y": 270, "uvlock": false } ]
+	} 
+}

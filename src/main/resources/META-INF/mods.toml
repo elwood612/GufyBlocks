@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="${loader_version}"
+license="All Rights Reserved"
+
+[[mods]]
+modId="gufyblocks"
+version="${version}"
+displayName="Gufy Blocks"
+updateJSONURL="https://raw.githubusercontent.com/elwood612/GufyBlocks/master/update.json"
+displayURL="https://github.com/elwood612/GufyBlocks/releases"
+logoFile="theG.png"
+description='''
+Adds more blocks to Minecraft
+'''
+
+[[dependencies.gufyblocks]] 
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gufyblocks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${mc_version}"
+    ordering="NONE"
+    side="BOTH"

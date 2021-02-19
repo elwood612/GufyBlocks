@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:mossy_jungle"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_jungle_wall",
+    "count": 8
+  }
+}

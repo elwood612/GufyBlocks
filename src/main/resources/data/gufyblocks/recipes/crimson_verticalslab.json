@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:crimson_planks"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:crimson_verticalslab",
+    "count": 6
+  }
+}

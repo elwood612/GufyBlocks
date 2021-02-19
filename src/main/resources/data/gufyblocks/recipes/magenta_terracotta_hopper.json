@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:magenta_terracotta"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:magenta_terracotta_hopper",
+    "count": 6
+  }
+}

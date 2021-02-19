@@ -1,8 +1,7 @@
 {
   "homepage": "https://github.com/elwood612/GufyBlocks/releases",
   "promos": {
-    "1.16.5-latest": "1.16.5-1.2.1",
-    "1.16.5-recommended": "1.16.5-1.2.1"
-  }, 
-  "forgeTarget": "36.0.22"
-} 
+    "1.16.5-latest": "1.16.5-1.2.1-WIP",
+    "1.16.5-recommended": "1.16.5-1.2.1-WIP"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:diorite"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:diorite_bricks",
+    "count": 4
+  }
+}

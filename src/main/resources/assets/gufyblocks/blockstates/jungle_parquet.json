@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "gufyblocks:block/jungle_parquet" },
+        "facing=west": { "model": "gufyblocks:block/jungle_parquet2" },
+        "facing=north": { "model": "gufyblocks:block/jungle_parquet3" },
+        "facing=east": { "model": "gufyblocks:block/jungle_parquet4" }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    "WIW",
+	" W "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+	"I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:wagon_wheel",
+    "count": 1
+  }
+}

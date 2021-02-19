@@ -1,0 +1,8 @@
+{ 
+	"variants": {
+		"facing=west":  { "model": "gufyblocks:block/stripped_crimson_hyphae_verticalslab" },
+        "facing=east":  { "model": "gufyblocks:block/stripped_crimson_hyphae_verticalslab", "y": 180, "uvlock": true },
+        "facing=north": { "model": "gufyblocks:block/stripped_crimson_hyphae_verticalslab", "y": 90, "uvlock": true },
+        "facing=south": { "model": "gufyblocks:block/stripped_crimson_hyphae_verticalslab", "y": 270, "uvlock": true }
+	} 
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cobblestone_post" },
+        	{ "model": "gufyblocks:block/cobblestone_post2" },
+        	{ "model": "gufyblocks:block/cobblestone_post3" },
+        	{ "model": "gufyblocks:block/cobblestone_post4" }
+        ]
+    }
+}

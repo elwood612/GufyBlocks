@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "gufyblocks:block/spruce_framed_daub" },
+        "facing=west": { "model": "gufyblocks:block/spruce_framed_daub_cross" },
+        "facing=north": { "model": "gufyblocks:block/spruce_framed_daub_left" },
+        "facing=east": { "model": "gufyblocks:block/spruce_framed_daub_right" }
+    }
+}

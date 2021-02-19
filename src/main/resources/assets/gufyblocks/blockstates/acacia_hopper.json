@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/acacia_hopper" },
+        	{ "model": "gufyblocks:block/acacia_hopper2" },
+        	{ "model": "gufyblocks:block/acacia_hopper3" },
+        	{ "model": "gufyblocks:block/acacia_hopper4" }
+        ]
+    }
+}

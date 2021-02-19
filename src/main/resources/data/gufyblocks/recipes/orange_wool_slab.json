@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:orange_wool"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:orange_wool_slab",
+    "count": 6
+  }
+}

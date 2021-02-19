@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/diorite_cobble_slab" },
+        	{ "model": "gufyblocks:block/diorite_cobble_slab2" },
+       		{ "model": "gufyblocks:block/diorite_cobble_slab3" },
+        	{ "model": "gufyblocks:block/diorite_cobble_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/diorite_cobble_slab_top" },
+        	{ "model": "gufyblocks:block/diorite_cobble_slab_top2" },
+        	{ "model": "gufyblocks:block/diorite_cobble_slab_top3" },
+        	{ "model": "gufyblocks:block/diorite_cobble_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "gufyblocks:block/diorite_cobble" }, 
+        	{ "model": "gufyblocks:block/diorite_cobble2" }, 
+        	{ "model": "gufyblocks:block/diorite_cobble3" }, 
+        	{ "model": "gufyblocks:block/diorite_cobble4" }
+       ]
+    }
+}

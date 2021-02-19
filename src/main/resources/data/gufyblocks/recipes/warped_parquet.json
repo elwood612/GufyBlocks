@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern":
+  [
+    "#",
+	"#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:warped_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:warped_parquet",
+    "count": 1
+  }
+}

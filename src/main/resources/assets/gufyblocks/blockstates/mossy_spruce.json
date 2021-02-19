@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/mossy_spruce" },
+        	{ "model": "gufyblocks:block/mossy_spruce2" },
+        	{ "model": "gufyblocks:block/mossy_spruce3" },
+        	{ "model": "gufyblocks:block/mossy_spruce4" }
+        ]
+    }
+}

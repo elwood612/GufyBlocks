@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_wall_side",
+    "textures": {
+        "wall": "gufyblocks:block/cracked_warped4"
+    }
+}

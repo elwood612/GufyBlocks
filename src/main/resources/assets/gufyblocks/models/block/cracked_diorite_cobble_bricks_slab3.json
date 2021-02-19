@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "gufyblocks:block/cracked_diorite_cobble_bricks3",
+        "top": "gufyblocks:block/cracked_diorite_cobble_bricks3",
+        "side": "gufyblocks:block/cracked_diorite_cobble_bricks3"
+    }
+}

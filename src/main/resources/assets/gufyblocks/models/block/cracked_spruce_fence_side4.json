@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_side",
+    "textures": {
+        "texture": "gufyblocks:block/cracked_spruce4"
+    }
+}

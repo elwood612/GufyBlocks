@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/daub" },
+        	{ "model": "gufyblocks:block/daub2" },
+        	{ "model": "gufyblocks:block/daub3" },
+        	{ "model": "gufyblocks:block/daub4" }
+        ]
+    }
+}

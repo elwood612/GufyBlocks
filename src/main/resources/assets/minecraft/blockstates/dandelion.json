@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "": [
+		 { "model": "block/dandelion"},
+		 { "model": "block/dandelion2"},
+		 { "model": "block/dandelion3"}
+		 ]
+    }
+}

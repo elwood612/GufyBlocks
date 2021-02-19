@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:spruce_wood"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:spruce_wood_slab",
+    "count": 6
+  }
+}

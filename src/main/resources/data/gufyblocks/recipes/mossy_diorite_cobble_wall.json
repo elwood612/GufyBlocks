@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:mossy_diorite_cobble"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_diorite_cobble_wall",
+    "count": 8
+  }
+}

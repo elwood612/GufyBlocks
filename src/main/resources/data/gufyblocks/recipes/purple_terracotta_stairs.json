@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:purple_terracotta"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:purple_terracotta_stairs",
+    "count": 6
+  }
+}

@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/panel",
+	"textures": 
+	{
+		"texture": "gufyblocks:block/mossy_dark_oak3"
+	}
+}

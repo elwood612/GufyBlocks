@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:black_concrete"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:black_concrete_slab",
+    "count": 6
+  }
+}

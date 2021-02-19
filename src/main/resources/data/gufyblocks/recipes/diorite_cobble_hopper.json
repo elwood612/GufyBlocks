@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:diorite_cobble"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:diorite_cobble_hopper",
+    "count": 6
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/stripped_dark_oak_wood_slab" },
+        "type=top": { "model": "gufyblocks:block/stripped_dark_oak_wood_slab_top" },
+        "type=double": { "model": "minecraft:block/stripped_dark_oak_wood" }
+    }
+}

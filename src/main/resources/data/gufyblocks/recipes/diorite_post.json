@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:diorite_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:diorite_post",
+    "count": 4
+  }
+}

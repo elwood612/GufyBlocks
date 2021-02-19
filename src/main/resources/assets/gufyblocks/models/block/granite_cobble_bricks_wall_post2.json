@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_wall_post",
+    "textures": {
+        "wall": "gufyblocks:block/granite_cobble_bricks2"
+    }
+}

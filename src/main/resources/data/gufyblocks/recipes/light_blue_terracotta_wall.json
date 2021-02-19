@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:light_blue_terracotta"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:light_blue_terracotta_wall",
+    "count": 8
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/mossy_diorite_cobble_bricks" },
+        	{ "model": "gufyblocks:block/mossy_diorite_cobble_bricks2" },
+        	{ "model": "gufyblocks:block/mossy_diorite_cobble_bricks3" },
+        	{ "model": "gufyblocks:block/mossy_diorite_cobble_bricks4" }
+        ]
+    }
+}
