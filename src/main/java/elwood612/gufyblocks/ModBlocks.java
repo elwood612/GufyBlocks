@@ -4,20 +4,8 @@ import static elwood612.gufyblocks.GufyMaterials.*;
 
 import com.google.common.base.Preconditions;
 
-import elwood612.gufyblocks.blocks.GufyBlock;
-import elwood612.gufyblocks.blocks.GufyHopper;
-import elwood612.gufyblocks.blocks.GufyHorizontalBlock;
-import elwood612.gufyblocks.blocks.GufyPanel;
-import elwood612.gufyblocks.blocks.GufyFence;
-import elwood612.gufyblocks.blocks.GufyPillar;
-import elwood612.gufyblocks.blocks.GufyPost;
-import elwood612.gufyblocks.blocks.GufySlab;
-import elwood612.gufyblocks.blocks.GufyStairs;
-import elwood612.gufyblocks.blocks.GufyTrapdoor;
+import elwood612.gufyblocks.blocks.*;
 //import elwood612.gufyblocks.blocks.GufyTrapdoor;
-import elwood612.gufyblocks.blocks.GufyVerticalSlab;
-import elwood612.gufyblocks.blocks.GufyWall;
-import elwood612.gufyblocks.blocks.GufyWattleFence;
 //import elwood612.gufyblocks.items.GufyHammer;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -841,6 +829,8 @@ public class ModBlocks
 			new GufyWall(GRANITE, "granite_cobble_bricks_wall"),
 			new GufyHopper(GRANITE, "granite_cobble_bricks_hopper"),
 			new GufyPost(GRANITE, "granite_cobble_bricks_post"),
+		//leaded_glass
+			new GufyPane(GLASS_CLEAR, "leaded_glass_pane"),
 	};
 	
 	

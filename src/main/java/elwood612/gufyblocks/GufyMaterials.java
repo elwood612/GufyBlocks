@@ -85,7 +85,9 @@ public enum GufyMaterials
 	FRAME_WHITE(Material.WOOD, MaterialColor.WHITE_TERRACOTTA, SoundType.WOOD, 2.0F, 3.0F, AXE, 0),
 	FRAME_BROWN(Material.WOOD, MaterialColor.BROWN_TERRACOTTA, SoundType.WOOD, 2.0F, 3.0F, AXE, 0),
 	CLAY_WHITE(Material.ROCK, MaterialColor.WHITE_TERRACOTTA, SoundType.STONE, 1.25F, 4.2F, PICKAXE, 0),
-	DAUB(Material.EARTH, MaterialColor.LIGHT_GRAY_TERRACOTTA, SoundType.GROUND, 1.0F, 1.0F, SHOVEL, 0);
+	DAUB(Material.EARTH, MaterialColor.LIGHT_GRAY_TERRACOTTA, SoundType.GROUND, 1.0F, 1.0F, SHOVEL, 0),
+	GLASS_CLEAR(Material.GLASS, MaterialColor.WHITE_TERRACOTTA, SoundType.GLASS, 0.3F, 0.3F, null, 0);
+
 
     public final Material material; //material
     public final MaterialColor color; //map color
