@@ -25,24 +25,6 @@ compileJava {
     //sourceCompatibility = targetCompatibility = '1.8'
 }
 
-/*
-task replaceResources(type: Copy) {
-    outputs.upToDateWhen { false }
-    from(sourceSets.main.resources.srcDirs) {
-        include "META-INF/mods.toml"
-        expand 'version': version, 'mc_version': mc_version_range, 'forge_version': forge_version_range, 'loader_version': loader_version_range
-    }
-    into "$buildDir/resources/main/"
-}
-processResources {
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'META-INF/mods.toml'
-    }
-    finalizedBy replaceResources
-}
-
- */
-
 def resourceTargets = ['META-INF/mods.toml']
 def intoTargets = ["$rootDir/build/resources/main"]
 def replaceProperties = [version: version, mc_version: mc_version_range, forge_version: forge_version_range,
