@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:stone"
+    },
+  "result": "gufyblocks:stone_verticalslab",
+  "count": 2
+}

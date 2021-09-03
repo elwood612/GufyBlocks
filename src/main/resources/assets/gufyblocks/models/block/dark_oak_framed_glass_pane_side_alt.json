@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "pane": "gufyblocks:block/dark_oak_framed_glass_pane",
+    "edge": "gufyblocks:block/dark_oak_framed_glass_pane_top"
+  }
+}

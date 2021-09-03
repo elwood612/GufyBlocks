@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+"gufyblocks:daub",  
+"gufyblocks:daub_stairs",  
+"gufyblocks:daub_slab",  
+"gufyblocks:daub_verticalslab",  
+ 
+"gufyblocks:coarse_dirt_stairs",  
+"gufyblocks:coarse_dirt_slab",  
+"gufyblocks:coarse_dirt_verticalslab"
+  ]
+}

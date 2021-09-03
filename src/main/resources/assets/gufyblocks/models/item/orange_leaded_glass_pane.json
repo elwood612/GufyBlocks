@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gufyblocks:item/orange_leaded_glass_pane"
+  }
+}

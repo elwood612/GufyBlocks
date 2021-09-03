@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "pane": "gufyblocks:block/pink_leaded_glass_pane",
+    "edge": "gufyblocks:block/leaded_glass_pane_top"
+  }
+}

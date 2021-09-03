@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "gufyblocks:block/jungle_framed_terracotta" },
+        "facing=west": { "model": "gufyblocks:block/jungle_framed_terracotta2" },
+        "facing=south": { "model": "gufyblocks:block/jungle_framed_terracotta3" },
+        "facing=east": { "model": "gufyblocks:block/jungle_framed_terracotta4" }
+    }
+}

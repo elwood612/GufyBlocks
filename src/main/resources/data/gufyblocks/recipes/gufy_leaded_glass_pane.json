@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "X": {
+      "item": "gufyblocks:leaded_glass_pane"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:gufy_leaded_glass_pane",
+	"count": 8
+  }
+}

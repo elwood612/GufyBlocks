@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "gufyblocks:oak_parquet",
+	"gufyblocks:spruce_parquet",
+	"gufyblocks:birch_parquet",
+	"gufyblocks:dark_oak_parquet",
+	"gufyblocks:jungle_parquet",
+	"gufyblocks:acacia_parquet",
+	"gufyblocks:crimson_parquet",
+	"gufyblocks:warped_parquet"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:gray_concrete"
+    },
+  "result": "gufyblocks:gray_concrete_hopper",
+  "count": 1
+}

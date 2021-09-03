@@ -1,78 +1,76 @@
 package elwood612.gufyblocks.blocks;
 
 import elwood612.gufyblocks.GufyMaterials;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.DirectionalBlock;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
 
-public class GufyRod extends DirectionalBlock implements IWaterLoggable
+import net.minecraft.world.level.block.state.BlockBehaviour;
+
+public class GufyRod extends DirectionalBlock implements SimpleWaterloggedBlock
 {
-	private ToolType toolType;
-    private int toolLevel;
     
     //RE-DO THIS:
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final VoxelShape SHAPE_VERTICAL = Block.makeCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 16.0D, 10.0D);
-    public static final VoxelShape SHAPE_NS = Block.makeCuboidShape(6.0D, 6.0D, 0.0D, 10.0D, 10.0D, 16.0D);
-    public static final VoxelShape SHAPE_WE = Block.makeCuboidShape(0.0D, 6.0D, 6.0D, 16.0D, 10.0D, 10.0D);
+    public static final VoxelShape SHAPE_VERTICAL = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 16.0D, 10.0D);
+    public static final VoxelShape SHAPE_NS = Block.box(6.0D, 6.0D, 0.0D, 10.0D, 10.0D, 16.0D);
+    public static final VoxelShape SHAPE_WE = Block.box(0.0D, 6.0D, 6.0D, 16.0D, 10.0D, 10.0D);
     
     public GufyRod(GufyMaterials block, String name) 
 	{
-		super(Block.Properties.create(block.material, block.color).hardnessAndResistance(block.hardness, block.resistance).sound(block.sound));
-	    this.toolType = block.tool;
-        this.toolLevel = block.level;
-        this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, Boolean.valueOf(false)).with(FACING, Direction.UP));
+		//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
+        super(GufyMaterials.builder(block, name));
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
         setRegistryName(name);
 	}
 	
     @Override
-	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) 
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) 
 	{
 		builder.add(FACING);
 		builder.add(WATERLOGGED);
 	}
     
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context) 
+    public BlockState getStateForPlacement(BlockPlaceContext context) 
     {
-    	Direction direction = context.getFace();
-    	FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        BlockState blockstate = context.getWorld().getBlockState(context.getPos().offset(direction.getOpposite()));
-        return blockstate.getBlock() == this && blockstate.get(FACING) == direction ? this.getDefaultState().with(FACING, direction.getOpposite()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER)) : this.getDefaultState().with(FACING, direction).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+    	Direction direction = context.getClickedFace();
+    	FluidState ifluidstate = context.getLevel().getFluidState(context.getClickedPos());
+        BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().relative(direction.getOpposite()));
+        return blockstate.getBlock() == this && blockstate.getValue(FACING) == direction ? this.defaultBlockState().setValue(FACING, direction.getOpposite()).setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER)) : this.defaultBlockState().setValue(FACING, direction).setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
     
     @Override
     public BlockState rotate(BlockState state, Rotation direction) 
     {
-        return state.with(FACING, direction.rotate(state.get(FACING)));
+        return state.setValue(FACING, direction.rotate(state.getValue(FACING)));
     }
     
     @Override
     public BlockState mirror(BlockState state, Mirror mirrorIn) 
     {
-        return state.with(FACING, mirrorIn.mirror(state.get(FACING)));
+        return state.setValue(FACING, mirrorIn.mirror(state.getValue(FACING)));
     }
     
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
 	{
-    	switch(state.get(FACING).getAxis()) {
+    	switch(state.getValue(FACING).getAxis()) {
         case X:
         default:
            return SHAPE_WE;
@@ -85,37 +83,26 @@ public class GufyRod extends DirectionalBlock implements IWaterLoggable
     
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) 
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) 
     {
-        if (stateIn.get(WATERLOGGED)) 
+        if (stateIn.getValue(WATERLOGGED)) 
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state) 
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
     
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) 
+    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type) 
     {
         return false;
     }
-    
-    @Override
-    public ToolType getHarvestTool(BlockState state) 
-	{
-        return toolType;
-    }
 
-    @Override
-    public int getHarvestLevel(BlockState state) 
-    {
-        return toolLevel;
-    }
 }

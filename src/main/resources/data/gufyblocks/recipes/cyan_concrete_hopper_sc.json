@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:cyan_concrete"
+    },
+  "result": "gufyblocks:cyan_concrete_hopper",
+  "count": 1
+}

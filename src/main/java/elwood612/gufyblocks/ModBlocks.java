@@ -5,15 +5,17 @@ import static elwood612.gufyblocks.GufyMaterials.*;
 import com.google.common.base.Preconditions;
 
 import elwood612.gufyblocks.blocks.*;
-//import elwood612.gufyblocks.blocks.GufyTrapdoor;
-//import elwood612.gufyblocks.items.GufyHammer;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.util.ResourceLocation;
+//import elwood612.gufyblocks.items.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(Main.MODID)
@@ -379,45 +381,45 @@ public class ModBlocks
 			new GufyHopper(DIORITE, "mossy_diorite_bricks_hopper"),
 			new GufyPost(DIORITE, "mossy_diorite_bricks_post"),
 		//diorite_cobble_bricks
-			new GufyBlock(DIORITE, "diorite_cobble_bricks"),
-			new GufyStairs(DIORITE, "diorite_cobble_bricks_stairs"),
-			new GufySlab(DIORITE, "diorite_cobble_bricks_slab"),
-			new GufyVerticalSlab(DIORITE, "diorite_cobble_bricks_verticalslab"),
-			new GufyWall(DIORITE, "diorite_cobble_bricks_wall"),
-			new GufyHopper(DIORITE, "diorite_cobble_bricks_hopper"),
-			new GufyPost(DIORITE, "diorite_cobble_bricks_post"),
+			new GufyBlock(DIORITE_COBBLE, "diorite_cobble_bricks"),
+			new GufyStairs(DIORITE_COBBLE, "diorite_cobble_bricks_stairs"),
+			new GufySlab(DIORITE_COBBLE, "diorite_cobble_bricks_slab"),
+			new GufyVerticalSlab(DIORITE_COBBLE, "diorite_cobble_bricks_verticalslab"),
+			new GufyWall(DIORITE_COBBLE, "diorite_cobble_bricks_wall"),
+			new GufyHopper(DIORITE_COBBLE, "diorite_cobble_bricks_hopper"),
+			new GufyPost(DIORITE_COBBLE, "diorite_cobble_bricks_post"),
 		//cracked_diorite_cobble_bricks
-			new GufyBlock(DIORITE, "cracked_diorite_cobble_bricks"),
-			new GufyStairs(DIORITE, "cracked_diorite_cobble_bricks_stairs"),
-			new GufySlab(DIORITE, "cracked_diorite_cobble_bricks_slab"),
-			new GufyVerticalSlab(DIORITE, "cracked_diorite_cobble_bricks_verticalslab"),
-			new GufyWall(DIORITE, "cracked_diorite_cobble_bricks_wall"),
-			new GufyHopper(DIORITE, "cracked_diorite_cobble_bricks_hopper"),
-			new GufyPost(DIORITE, "cracked_diorite_cobble_bricks_post"),
+			new GufyBlock(DIORITE_COBBLE, "cracked_diorite_cobble_bricks"),
+			new GufyStairs(DIORITE_COBBLE, "cracked_diorite_cobble_bricks_stairs"),
+			new GufySlab(DIORITE_COBBLE, "cracked_diorite_cobble_bricks_slab"),
+			new GufyVerticalSlab(DIORITE_COBBLE, "cracked_diorite_cobble_bricks_verticalslab"),
+			new GufyWall(DIORITE_COBBLE, "cracked_diorite_cobble_bricks_wall"),
+			new GufyHopper(DIORITE_COBBLE, "cracked_diorite_cobble_bricks_hopper"),
+			new GufyPost(DIORITE_COBBLE, "cracked_diorite_cobble_bricks_post"),
 		//mossy_diorite_cobble_bricks
-			new GufyBlock(DIORITE, "mossy_diorite_cobble_bricks"),
-			new GufyStairs(DIORITE, "mossy_diorite_cobble_bricks_stairs"),
-			new GufySlab(DIORITE, "mossy_diorite_cobble_bricks_slab"),
-			new GufyVerticalSlab(DIORITE, "mossy_diorite_cobble_bricks_verticalslab"),
-			new GufyWall(DIORITE, "mossy_diorite_cobble_bricks_wall"),
-			new GufyHopper(DIORITE, "mossy_diorite_cobble_bricks_hopper"),
-			new GufyPost(DIORITE, "mossy_diorite_cobble_bricks_post"),
+			new GufyBlock(DIORITE_COBBLE, "mossy_diorite_cobble_bricks"),
+			new GufyStairs(DIORITE_COBBLE, "mossy_diorite_cobble_bricks_stairs"),
+			new GufySlab(DIORITE_COBBLE, "mossy_diorite_cobble_bricks_slab"),
+			new GufyVerticalSlab(DIORITE_COBBLE, "mossy_diorite_cobble_bricks_verticalslab"),
+			new GufyWall(DIORITE_COBBLE, "mossy_diorite_cobble_bricks_wall"),
+			new GufyHopper(DIORITE_COBBLE, "mossy_diorite_cobble_bricks_hopper"),
+			new GufyPost(DIORITE_COBBLE, "mossy_diorite_cobble_bricks_post"),
 		//diorite_cobble
-			new GufyBlock(DIORITE, "diorite_cobble"),
-			new GufyStairs(DIORITE, "diorite_cobble_stairs"),
-			new GufySlab(DIORITE, "diorite_cobble_slab"),
-			new GufyVerticalSlab(DIORITE, "diorite_cobble_verticalslab"),
-			new GufyWall(DIORITE, "diorite_cobble_wall"),
-			new GufyHopper(DIORITE, "diorite_cobble_hopper"),
-			new GufyPost(DIORITE, "diorite_cobble_post"),
+			new GufyBlock(DIORITE_COBBLE, "diorite_cobble"),
+			new GufyStairs(DIORITE_COBBLE, "diorite_cobble_stairs"),
+			new GufySlab(DIORITE_COBBLE, "diorite_cobble_slab"),
+			new GufyVerticalSlab(DIORITE_COBBLE, "diorite_cobble_verticalslab"),
+			new GufyWall(DIORITE_COBBLE, "diorite_cobble_wall"),
+			new GufyHopper(DIORITE_COBBLE, "diorite_cobble_hopper"),
+			new GufyPost(DIORITE_COBBLE, "diorite_cobble_post"),
 		//mossy_diorite_cobble
-			new GufyBlock(DIORITE, "mossy_diorite_cobble"),
-			new GufyStairs(DIORITE, "mossy_diorite_cobble_stairs"),
-			new GufySlab(DIORITE, "mossy_diorite_cobble_slab"),
-			new GufyVerticalSlab(DIORITE, "mossy_diorite_cobble_verticalslab"),
-			new GufyWall(DIORITE, "mossy_diorite_cobble_wall"),
-			new GufyHopper(DIORITE, "mossy_diorite_cobble_hopper"),
-			new GufyPost(DIORITE, "mossy_diorite_cobble_post"),
+			new GufyBlock(DIORITE_COBBLE, "mossy_diorite_cobble"),
+			new GufyStairs(DIORITE_COBBLE, "mossy_diorite_cobble_stairs"),
+			new GufySlab(DIORITE_COBBLE, "mossy_diorite_cobble_slab"),
+			new GufyVerticalSlab(DIORITE_COBBLE, "mossy_diorite_cobble_verticalslab"),
+			new GufyWall(DIORITE_COBBLE, "mossy_diorite_cobble_wall"),
+			new GufyHopper(DIORITE_COBBLE, "mossy_diorite_cobble_hopper"),
+			new GufyPost(DIORITE_COBBLE, "mossy_diorite_cobble_post"),
 		//terracotta
 			new GufyStairs(TERRACOTTA, "terracotta_stairs"),
 			new GufySlab(TERRACOTTA, "terracotta_slab"),
@@ -822,15 +824,63 @@ public class ModBlocks
 		//wagon_wheel
 			new GufyTrapdoor(SPRUCE, "wagon_wheel"),
 		//granite_cobble_bricks
-			new GufyBlock(GRANITE, "granite_cobble_bricks"),
-			new GufyStairs(GRANITE, "granite_cobble_bricks_stairs"),
-			new GufySlab(GRANITE, "granite_cobble_bricks_slab"),
-			new GufyVerticalSlab(GRANITE, "granite_cobble_bricks_verticalslab"),
-			new GufyWall(GRANITE, "granite_cobble_bricks_wall"),
-			new GufyHopper(GRANITE, "granite_cobble_bricks_hopper"),
-			new GufyPost(GRANITE, "granite_cobble_bricks_post"),
+			new GufyBlock(GRANITE_COBBLE, "granite_cobble_bricks"),
+			new GufyStairs(GRANITE_COBBLE, "granite_cobble_bricks_stairs"),
+			new GufySlab(GRANITE_COBBLE, "granite_cobble_bricks_slab"),
+			new GufyVerticalSlab(GRANITE_COBBLE, "granite_cobble_bricks_verticalslab"),
+			new GufyWall(GRANITE_COBBLE, "granite_cobble_bricks_wall"),
+			new GufyHopper(GRANITE_COBBLE, "granite_cobble_bricks_hopper"),
+			new GufyPost(GRANITE_COBBLE, "granite_cobble_bricks_post"),
 		//leaded_glass
-			new GufyPane(GLASS_CLEAR, "leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "white_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "light_gray_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "gray_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "black_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "brown_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "red_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "orange_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "yellow_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "lime_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "green_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "cyan_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "light_blue_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "blue_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "purple_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "magenta_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "pink_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "oakfield_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "avalon_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "gufy_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "midland_leaded_glass_pane"),
+			new GufyPane(LEADED_GLASS, "ring_leaded_glass_pane"),
+		//framed_glass
+			new GufyPane(FRAMED_GLASS, "spruce_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "oak_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "birch_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "dark_oak_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "jungle_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "acacia_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "crimson_framed_glass_pane"),
+			new GufyPane(FRAMED_GLASS, "warped_framed_glass_pane"),
+		//framed_daub
+			new GufyHorizontalBlock(FRAMED_BROWN, "spruce_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "oak_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "birch_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "dark_oak_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "jungle_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "acacia_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "crimson_framed_daub"),
+			new GufyHorizontalBlock(FRAMED_BROWN, "warped_framed_daub"),
+		//framed_terracotta
+			new GufyHorizontalBlock(FRAMED_WHITE, "spruce_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "oak_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "birch_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "dark_oak_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "jungle_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "acacia_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "crimson_framed_terracotta"),
+			new GufyHorizontalBlock(FRAMED_WHITE, "warped_framed_terracotta"),
 	};
 	
 	
@@ -851,15 +901,15 @@ public class ModBlocks
             event.getRegistry().register(block);
 		}
 	}
-	
-	
+
+
 	//************************REGISTER ITEMS******************************//
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event)
 	{
 		for (final Block block: blockList)
 		{
-			final BlockItem item = new BlockItem(block, new Item.Properties().group(Main.gufygroup));
+			final BlockItem item = new BlockItem(block, new Item.Properties().tab(Main.gufygroup));
             final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(), "BlockItem: %s has a NULL registry name", block);
             event.getRegistry().register(item.setRegistryName(registryName));
         }
@@ -869,8 +919,8 @@ public class ModBlocks
             event.getRegistry().register(item);
 		}
 	}
-	
-	
+
+
 	//************************GET BLOCK******************************//
 	public static Block getBlock(String name)
 	{

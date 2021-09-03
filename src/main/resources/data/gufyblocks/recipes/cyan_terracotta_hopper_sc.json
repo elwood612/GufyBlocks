@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:cyan_terracotta"
+    },
+  "result": "gufyblocks:cyan_terracotta_hopper",
+  "count": 1
+}

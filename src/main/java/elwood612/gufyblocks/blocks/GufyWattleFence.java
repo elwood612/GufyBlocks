@@ -1,73 +1,71 @@
 package elwood612.gufyblocks.blocks;
 
 import elwood612.gufyblocks.GufyMaterials;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
 
-public class GufyWattleFence extends HorizontalBlock implements IWaterLoggable
+import net.minecraft.world.level.block.state.BlockBehaviour;
+
+public class GufyWattleFence extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock
 {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-	protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
-    protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
-    protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
+	protected static final VoxelShape WEST_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
+    protected static final VoxelShape EAST_SHAPE = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
+    protected static final VoxelShape SOUTH_SHAPE = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
     
-    protected static final VoxelShape COLLISION_WEST_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 1.0D, 24.0D, 16.0D);
-    protected static final VoxelShape COLLISION_EAST_SHAPE = Block.makeCuboidShape(15.0D, 0.0D, 0.0D, 16.0D, 24.0D, 16.0D);
-    protected static final VoxelShape COLLISION_NORTH_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 24.0D, 1.0D);
-    protected static final VoxelShape COLLISION_SOUTH_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 15.0D, 16.0D, 24.0D, 16.0D);
-    
-    private ToolType toolType;
-    private int toolLevel;
-    
-    public GufyWattleFence(GufyMaterials block, String name) 
+    protected static final VoxelShape COLLISION_WEST_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 24.0D, 16.0D);
+    protected static final VoxelShape COLLISION_EAST_SHAPE = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 24.0D, 16.0D);
+    protected static final VoxelShape COLLISION_NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 24.0D, 1.0D);
+    protected static final VoxelShape COLLISION_SOUTH_SHAPE = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 24.0D, 16.0D);
+
+    public GufyWattleFence(GufyMaterials block, String name)
     {
-    	super(Block.Properties.create(block.material, block.color).hardnessAndResistance(block.hardness, block.resistance).sound(block.sound).notSolid());
-	    this.toolType = block.tool;
-        this.toolLevel = block.level;
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false)));
+    	//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound).noOcclusion());
+        super(GufyMaterials.builder(block, name));
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
         setRegistryName(name);
 	}
-    
+
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) 
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) 
     {
-        builder.add(HORIZONTAL_FACING, WATERLOGGED);
+        builder.add(FACING, WATERLOGGED);
     }
 	
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context) 
+    public BlockState getStateForPlacement(BlockPlaceContext context) 
     {
-    	BlockState BlockState = this.getDefaultState();
-        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        Direction direction = context.getFace();
+    	BlockState BlockState = this.defaultBlockState();
+        FluidState ifluidstate = context.getLevel().getFluidState(context.getClickedPos());
+        Direction direction = context.getClickedFace();
         
-        if (direction.getAxis().isHorizontal()) { BlockState = BlockState.with(HORIZONTAL_FACING, direction); } 
-        else { BlockState = BlockState.with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing().getOpposite()); }
+        if (direction.getAxis().isHorizontal()) { BlockState = BlockState.setValue(FACING, direction); } 
+        else { BlockState = BlockState.setValue(FACING, context.getHorizontalDirection().getOpposite()); }
         
-        return BlockState.with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return BlockState.setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
 	
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) 
+    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) 
     {
-    	switch((Direction)state.get(HORIZONTAL_FACING).getOpposite())
+    	switch((Direction)state.getValue(FACING).getOpposite())
         {
             case WEST:
                 return (VoxelShape) WEST_SHAPE;
@@ -80,8 +78,8 @@ public class GufyWattleFence extends HorizontalBlock implements IWaterLoggable
         }
     }
     
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-    	switch((Direction)state.get(HORIZONTAL_FACING).getOpposite())
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+    	switch((Direction)state.getValue(FACING).getOpposite())
         {
             case WEST:
                 return (VoxelShape) COLLISION_WEST_SHAPE;
@@ -96,37 +94,26 @@ public class GufyWattleFence extends HorizontalBlock implements IWaterLoggable
     
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) 
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) 
     {
-        if (stateIn.get(WATERLOGGED)) 
+        if (stateIn.getValue(WATERLOGGED)) 
         {
-            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
-        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state) 
     {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) 
+    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type) 
     {
         return false;
     }
-    
-    @Override
-    public ToolType getHarvestTool(BlockState state) 
-	{
-        return toolType;
-    }
 
-    @Override
-    public int getHarvestLevel(BlockState state) 
-    {
-        return toolLevel;
-    }
 }

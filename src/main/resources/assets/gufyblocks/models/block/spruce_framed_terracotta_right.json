@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "gufyblocks:block/spruce_framed_terracotta",
-        "side": "gufyblocks:block/spruce_framed_terracotta_right"
-    }
-}

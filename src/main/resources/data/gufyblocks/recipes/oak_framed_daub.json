@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "X#X",
+    "YXY"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:oak_planks"
+    },
+    "X": {
+      "item": "gufyblocks:daub"
+    },
+	"Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:oak_framed_daub",
+	"count": 4
+  }
+}

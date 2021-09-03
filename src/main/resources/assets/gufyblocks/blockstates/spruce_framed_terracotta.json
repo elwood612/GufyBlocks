@@ -1,8 +1,8 @@
 {
     "variants": {
-        "facing=south": { "model": "gufyblocks:block/spruce_framed_terracotta" },
-        "facing=west": { "model": "gufyblocks:block/spruce_framed_terracotta_cross" },
-        "facing=north": { "model": "gufyblocks:block/spruce_framed_terracotta_left" },
-        "facing=east": { "model": "gufyblocks:block/spruce_framed_terracotta_right" }
+        "facing=north": { "model": "gufyblocks:block/spruce_framed_terracotta" },
+        "facing=west": { "model": "gufyblocks:block/spruce_framed_terracotta2" },
+        "facing=south": { "model": "gufyblocks:block/spruce_framed_terracotta3" },
+        "facing=east": { "model": "gufyblocks:block/spruce_framed_terracotta4" }
     }
 }

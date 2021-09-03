@@ -1,23 +1,16 @@
 package elwood612.gufyblocks.blocks;
 
 import elwood612.gufyblocks.GufyMaterials;
-import net.minecraft.block.Block;
-import net.minecraft.block.PaneBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.util.Direction;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class GufyPane extends PaneBlock {
-
-    private ToolType toolType;
-    private int toolLevel;
+public class GufyPane extends IronBarsBlock {
 
     public GufyPane(GufyMaterials block, String name)
     {
-        super(Block.Properties.create(block.material, block.color).hardnessAndResistance(block.hardness, block.resistance).sound(block.sound));
-        this.toolType = block.tool;
-        this.toolLevel = block.level;
-        this.setDefaultState(this.getDefaultState().with(NORTH, Boolean.FALSE).with(EAST, Boolean.FALSE).with(SOUTH, Boolean.FALSE).with(WEST, Boolean.FALSE).with(WATERLOGGED, Boolean.FALSE));
+        //super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
+        super(GufyMaterials.builder(block, name));
+        this.registerDefaultState(this.defaultBlockState().setValue(NORTH, Boolean.FALSE).setValue(EAST, Boolean.FALSE).setValue(SOUTH, Boolean.FALSE).setValue(WEST, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE));
         setRegistryName(name);
     }
 
