@@ -70,6 +70,7 @@ public enum GufyMaterials
 	PINK_WOOL(Material.WOOL, MaterialColor.COLOR_PINK, SoundType.WOOL, 0.8F, 0.8F, false, true),
 	OAK(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	SPRUCE(Material.WOOD, MaterialColor.PODZOL, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	SPRUCE_TRAPDOOR(Material.WOOD, MaterialColor.PODZOL, SoundType.WOOD, 2.0F, 3.0F, false, false),
 	BIRCH(Material.WOOD, MaterialColor.SAND, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	JUNGLE(Material.WOOD, MaterialColor.DIRT, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	DARK_OAK(Material.WOOD, MaterialColor.COLOR_BROWN, SoundType.WOOD, 2.0F, 3.0F, false, true),
@@ -78,13 +79,13 @@ public enum GufyMaterials
 	WARPED(Material.NETHER_WOOD, MaterialColor.WARPED_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	NETHER_WART(Material.GRASS, MaterialColor.COLOR_RED, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
 	WARPED_WART(Material.GRASS, MaterialColor.WARPED_WART_BLOCK, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
-	WATTLE(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 0.5F, 0.5F, false, true),
+	WATTLE(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 0.5F, 0.5F, false, false),
 	DIRT(Material.DIRT, MaterialColor.DIRT, SoundType.GRAVEL, 0.5F, 0.5F, false, true),
 	FRAMED_WHITE(Material.STONE, MaterialColor.TERRACOTTA_WHITE, SoundType.STONE, 2.0F, 6.0F, true, true),
 	FRAMED_BROWN(Material.STONE, MaterialColor.TERRACOTTA_BROWN, SoundType.STONE, 2.0F, 6.0F, true, true),
 	DAUB(Material.DIRT, MaterialColor.TERRACOTTA_LIGHT_GRAY, SoundType.GRAVEL, 1.0F, 1.0F, false, true),
-	LEADED_GLASS(Material.GLASS, MaterialColor.STONE, SoundType.GLASS, 1.25F, 3.0F, false, true),
-	FRAMED_GLASS(Material.GLASS, MaterialColor.WOOD, SoundType.GLASS, 2.0F, 3.0F, false, true);
+	LEADED_GLASS(Material.GLASS, MaterialColor.STONE, SoundType.GLASS, 1.25F, 3.0F, false, false),
+	FRAMED_GLASS(Material.GLASS, MaterialColor.WOOD, SoundType.GLASS, 2.0F, 3.0F, false, false);
 
     public final Material material; //material
     public final MaterialColor color; //map color

@@ -822,7 +822,7 @@ public class ModBlocks
 			new GufySlab(WARPED_WART, "warped_wart_slab"),
 			new GufyVerticalSlab(WARPED_WART, "warped_wart_verticalslab"),
 		//wagon_wheel
-			new GufyTrapdoor(SPRUCE, "wagon_wheel"),
+			new GufyTrapdoor(SPRUCE_TRAPDOOR, "wagon_wheel"),
 		//granite_cobble_bricks
 			new GufyBlock(GRANITE_COBBLE, "granite_cobble_bricks"),
 			new GufyStairs(GRANITE_COBBLE, "granite_cobble_bricks_stairs"),
