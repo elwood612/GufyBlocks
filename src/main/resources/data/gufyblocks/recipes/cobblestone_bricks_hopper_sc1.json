@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": 
     {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:stone_bricks"
     },
   "result": "gufyblocks:cobblestone_bricks_hopper",
   "count": 1

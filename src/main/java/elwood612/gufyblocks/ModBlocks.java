@@ -1,21 +1,18 @@
 package elwood612.gufyblocks;
 
-import static elwood612.gufyblocks.GufyMaterials.*;
+import static elwood612.gufyblocks.blocks.blockUtil.GufyMaterials.*;
 
 import com.google.common.base.Preconditions;
 
 import elwood612.gufyblocks.blocks.*;
 //import elwood612.gufyblocks.items.*;
+import elwood612.gufyblocks.items.GufyMallet;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fmllegacy.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(Main.MODID)
@@ -881,14 +878,23 @@ public class ModBlocks
 			new GufyHorizontalBlock(FRAMED_WHITE, "acacia_framed_terracotta"),
 			new GufyHorizontalBlock(FRAMED_WHITE, "crimson_framed_terracotta"),
 			new GufyHorizontalBlock(FRAMED_WHITE, "warped_framed_terracotta"),
+		//deepslate
 	};
 	
 	
 	//************************DECLARE ITEMS******************************//
 	public static final Item[] itemList = 
 	{
-		//hammer
-			//new GufyHammer("hammer", new Item.Properties().group(Main.gufygroup))
+		//mallet
+			/*
+			new GufyMallet("wooden_mallet", Tiers.WOOD, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)),
+			new GufyMallet("golden_mallet", Tiers.GOLD, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)),
+			new GufyMallet("stone_mallet", Tiers.STONE, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)),
+			new GufyMallet("iron_mallet", Tiers.IRON, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)),
+			new GufyMallet("diamond_mallet", Tiers.DIAMOND, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)),
+			new GufyMallet("netherite_mallet", Tiers.NETHERITE, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)),
+
+			 */
 	};
 	
 	
@@ -918,19 +924,6 @@ public class ModBlocks
 			Preconditions.checkNotNull(item.getRegistryName(), "Item: %s has a NULL registry name", item);
             event.getRegistry().register(item);
 		}
-	}
-
-
-	//************************GET BLOCK******************************//
-	public static Block getBlock(String name)
-	{
-		for (final Block block: blockList)
-		{
-			 if (name.equals(block.toString())) {
-				 return block;
-			 }
-		}
-		return null;
 	}
 	
 }

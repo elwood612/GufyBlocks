@@ -1,6 +1,7 @@
 package elwood612.gufyblocks.blocks;
 
-import elwood612.gufyblocks.GufyMaterials;
+import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
+import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -19,8 +20,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 
-import net.minecraft.world.level.block.state.BlockBehaviour;
-
 public class GufyHopper extends Block implements SimpleWaterloggedBlock
 {
     
@@ -31,10 +30,10 @@ public class GufyHopper extends Block implements SimpleWaterloggedBlock
     public static final VoxelShape HOPPER_BOTTOM = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D);
     public static final VoxelShape HOPPER_FINAL = Shapes.or(HOPPER_TOP, Shapes.or(HOPPER_MIDDLE, HOPPER_BOTTOM));
     
-	public GufyHopper(GufyMaterials block, String name) 
+	public GufyHopper(GufyMaterials block, String name)
 	{
 		//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyMaterials.builder(block, name));
+        super(GufyUtil.builder(block, name));
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)));
         setRegistryName(name);
 	}

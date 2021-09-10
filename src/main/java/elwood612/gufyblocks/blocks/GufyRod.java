@@ -1,6 +1,7 @@
 package elwood612.gufyblocks.blocks;
 
-import elwood612.gufyblocks.GufyMaterials;
+import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
+import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.DirectionalBlock;
@@ -21,8 +22,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 
-import net.minecraft.world.level.block.state.BlockBehaviour;
-
 public class GufyRod extends DirectionalBlock implements SimpleWaterloggedBlock
 {
     
@@ -32,10 +31,10 @@ public class GufyRod extends DirectionalBlock implements SimpleWaterloggedBlock
     public static final VoxelShape SHAPE_NS = Block.box(6.0D, 6.0D, 0.0D, 10.0D, 10.0D, 16.0D);
     public static final VoxelShape SHAPE_WE = Block.box(0.0D, 6.0D, 6.0D, 16.0D, 10.0D, 10.0D);
     
-    public GufyRod(GufyMaterials block, String name) 
+    public GufyRod(GufyMaterials block, String name)
 	{
 		//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyMaterials.builder(block, name));
+        super(GufyUtil.builder(block, name));
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
         setRegistryName(name);
 	}

@@ -1,4 +1,4 @@
-package elwood612.gufyblocks;
+package elwood612.gufyblocks.items.itemUtil;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;

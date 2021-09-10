@@ -1,4 +1,4 @@
-package elwood612.gufyblocks;
+package elwood612.gufyblocks.blocks.blockUtil;
 
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -84,6 +84,8 @@ public enum GufyMaterials
 	FRAMED_WHITE(Material.STONE, MaterialColor.TERRACOTTA_WHITE, SoundType.STONE, 2.0F, 6.0F, true, true),
 	FRAMED_BROWN(Material.STONE, MaterialColor.TERRACOTTA_BROWN, SoundType.STONE, 2.0F, 6.0F, true, true),
 	DAUB(Material.DIRT, MaterialColor.TERRACOTTA_LIGHT_GRAY, SoundType.GRAVEL, 1.0F, 1.0F, false, true),
+	DEEPSLATE(Material.STONE, MaterialColor.DEEPSLATE, SoundType.DEEPSLATE, 3.0F, 6.0F, true, true),
+	COBBLED_DEEPSLATE(Material.STONE, MaterialColor.DEEPSLATE, SoundType.DEEPSLATE, 3.5F, 6.0F, true, true),
 	LEADED_GLASS(Material.GLASS, MaterialColor.STONE, SoundType.GLASS, 1.25F, 3.0F, false, false),
 	FRAMED_GLASS(Material.GLASS, MaterialColor.WOOD, SoundType.GLASS, 2.0F, 3.0F, false, false);
 
@@ -106,15 +108,5 @@ public enum GufyMaterials
         this.occlusion = occlusion;
     }
 
-	//Builder - returns properties of block
-	public static BlockBehaviour.Properties builder(GufyMaterials block, String name) {
-		BlockBehaviour.Properties properties = BlockBehaviour.Properties
-				.of(block.material, block.color)
-				.strength(block.hardness, block.resistance)
-				.sound(block.sound);
-		if (block.tool) properties = properties.requiresCorrectToolForDrops();
-		if (!block.occlusion) properties = properties.noOcclusion();
-		return properties;
-	}
 }
 
