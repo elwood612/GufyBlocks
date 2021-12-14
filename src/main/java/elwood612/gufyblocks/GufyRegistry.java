@@ -6,18 +6,22 @@ import com.google.common.base.Preconditions;
 
 import elwood612.gufyblocks.blocks.*;
 //import elwood612.gufyblocks.items.*;
-import elwood612.gufyblocks.items.GufyMallet;
+import elwood612.gufyblocks.blocks.blockSpecialty.*;
+import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import elwood612.gufyblocks.blocks.blockWeathering.*;
+import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-@ObjectHolder(Main.MODID)
-@Mod.EventBusSubscriber(modid = Main.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModBlocks
+@ObjectHolder(GufyBlocks.MODID)
+@Mod.EventBusSubscriber(modid = GufyBlocks.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+public class GufyRegistry
 {
 	//************************DECLARE BLOCKS******************************//
 	public static final Block[] blockList = 
@@ -878,7 +882,354 @@ public class ModBlocks
 			new GufyHorizontalBlock(FRAMED_WHITE, "acacia_framed_terracotta"),
 			new GufyHorizontalBlock(FRAMED_WHITE, "crimson_framed_terracotta"),
 			new GufyHorizontalBlock(FRAMED_WHITE, "warped_framed_terracotta"),
-		//deepslate
+		//brick
+			new GufyVerticalSlab(BRICK, "brick_verticalslab"),
+			new GufyHopper(BRICK, "brick_hopper"),
+			new GufyPost(BRICK, "brick_post"),
+		//granite
+			new GufyVerticalSlab(GRANITE, "granite_verticalslab"),
+			new GufyHopper(GRANITE, "granite_hopper"),
+			new GufyPost(GRANITE, "granite_post"),
+			new GufyTrapdoor(GRANITE_TRAPDOOR, "granite_trapdoor"),
+		//andesite
+			new GufyVerticalSlab(GRANITE, "andesite_verticalslab"),
+			new GufyHopper(GRANITE, "andesite_hopper"),
+			new GufyPost(GRANITE, "andesite_post"),
+			new GufyTrapdoor(ANDESITE_TRAPDOOR, "andesite_trapdoor"),
+		//polished_andesite
+			new GufyVerticalSlab(ANDESITE, "polished_andesite_verticalslab"),
+			new GufyHopper(ANDESITE, "polished_andesite_hopper"),
+			new GufyPost(ANDESITE, "polished_andesite_post"),
+			new GufyWall(ANDESITE, "polished_andesite_wall"),
+		//calcite
+			new GufyStairs(CALCITE, "calcite_stairs"),
+			new GufySlab(CALCITE, "calcite_slab"),
+			new GufyVerticalSlab(CALCITE, "calcite_verticalslab"),
+			new GufyWall(CALCITE, "calcite_wall"),
+			new GufyHopper(CALCITE, "calcite_hopper"),
+			new GufyPost(CALCITE, "calcite_post"),
+		//smooth_basalt
+			new GufyStairs(BASALT, "smooth_basalt_stairs"),
+			new GufySlab(BASALT, "smooth_basalt_slab"),
+			new GufyVerticalSlab(BASALT, "smooth_basalt_verticalslab"),
+			new GufyWall(BASALT, "smooth_basalt_wall"),
+			new GufyHopper(BASALT, "smooth_basalt_hopper"),
+			new GufyPost(BASALT, "smooth_basalt_post"),
+		//moss
+			new GufyStairs(MOSS, "moss_stairs"),
+			new GufySlab(MOSS, "moss_slab"),
+			new GufyVerticalSlab(MOSS, "moss_verticalslab"),
+		//rooted_dirt
+			new GufyStairs(ROOTED_DIRT, "rooted_dirt_stairs"),
+			new GufySlab(ROOTED_DIRT, "rooted_dirt_slab"),
+			new GufyVerticalSlab(ROOTED_DIRT, "rooted_dirt_verticalslab"),
+		//cobbled_deepslate
+			new GufyVerticalSlab(COBBLED_DEEPSLATE, "cobbled_deepslate_verticalslab"),
+			new GufyHopper(COBBLED_DEEPSLATE, "cobbled_deepslate_hopper"),
+			new GufyPost(COBBLED_DEEPSLATE, "cobbled_deepslate_post"),
+		//deepslate_bricks
+			new GufyVerticalSlab(DEEPSLATE_BRICK, "deepslate_bricks_verticalslab"),
+			new GufyHopper(DEEPSLATE_BRICK, "deepslate_bricks_hopper"),
+			new GufyPost(DEEPSLATE_BRICK, "deepslate_bricks_post"),
+		//deepslate_tiles
+			new GufyVerticalSlab(TILED_DEEPSLATE, "deepslate_tiles_verticalslab"),
+			new GufyHopper(TILED_DEEPSLATE, "deepslate_tiles_hopper"),
+			new GufyPost(TILED_DEEPSLATE, "deepslate_tiles_post"),
+		//polished_deepslate
+			new GufyVerticalSlab(POLISHED_DEEPSLATE, "polished_deepslate_verticalslab"),
+			new GufyHopper(POLISHED_DEEPSLATE, "polished_deepslate_hopper"),
+			new GufyPost(POLISHED_DEEPSLATE, "polished_deepslate_post"),
+		//cracked_deepslate_bricks
+			new GufyStairs(DEEPSLATE_BRICK, "cracked_deepslate_bricks_stairs"),
+			new GufySlab(DEEPSLATE_BRICK, "cracked_deepslate_bricks_slab"),
+			new GufyVerticalSlab(DEEPSLATE_BRICK, "cracked_deepslate_bricks_verticalslab"),
+			new GufyWall(DEEPSLATE_BRICK, "cracked_deepslate_bricks_wall"),
+			new GufyHopper(DEEPSLATE_BRICK, "cracked_deepslate_bricks_hopper"),
+			new GufyPost(DEEPSLATE_BRICK, "cracked_deepslate_bricks_post"),
+		//cracked_deepslate_tiles
+			new GufyStairs(TILED_DEEPSLATE, "cracked_deepslate_tiles_stairs"),
+			new GufySlab(TILED_DEEPSLATE, "cracked_deepslate_tiles_slab"),
+			new GufyVerticalSlab(TILED_DEEPSLATE, "cracked_deepslate_tiles_verticalslab"),
+			new GufyWall(TILED_DEEPSLATE, "cracked_deepslate_tiles_wall"),
+			new GufyHopper(TILED_DEEPSLATE, "cracked_deepslate_tiles_hopper"),
+			new GufyPost(TILED_DEEPSLATE, "cracked_deepslate_tiles_post"),
+		//quartz
+			new GufyVerticalSlab(QUARTZ, "quartz_verticalslab"),
+			new GufyWall(QUARTZ, "quartz_wall"),
+			new GufyHopper(QUARTZ, "quartz_hopper"),
+			new GufyPost(QUARTZ, "quartz_post"),
+		//smooth_quartz
+			new GufyVerticalSlab(QUARTZ, "smooth_quartz_verticalslab"),
+			new GufyWall(QUARTZ, "smooth_quartz_wall"),
+			new GufyHopper(QUARTZ, "smooth_quartz_hopper"),
+			new GufyPost(QUARTZ, "smooth_quartz_post"),
+		//quartz_bricks
+			new GufyStairs(QUARTZ, "quartz_bricks_stairs"),
+			new GufySlab(QUARTZ, "quartz_bricks_slab"),
+			new GufyVerticalSlab(QUARTZ, "quartz_bricks_verticalslab"),
+			new GufyWall(QUARTZ, "quartz_bricks_wall"),
+			new GufyHopper(QUARTZ, "quartz_bricks_hopper"),
+			new GufyPost(QUARTZ, "quartz_bricks_post"),
+		//iron
+			new GufyStairs(IRON, "iron_stairs"),
+			new GufySlab(IRON, "iron_slab"),
+			new GufyVerticalSlab(IRON, "iron_verticalslab"),
+			new GufyWall(IRON, "iron_wall"),
+			new GufyHopper(IRON, "iron_hopper"),
+			new GufyPost(IRON, "iron_post"),
+		//gold
+			new GufyStairs(GOLD, "gold_stairs"),
+			new GufySlab(GOLD, "gold_slab"),
+			new GufyVerticalSlab(GOLD, "gold_verticalslab"),
+			new GufyWall(GOLD, "gold_wall"),
+			new GufyHopper(GOLD, "gold_hopper"),
+			new GufyPost(GOLD, "gold_post"),
+		//emerald
+			new GufyStairs(EMERALD, "emerald_stairs"),
+			new GufySlab(EMERALD, "emerald_slab"),
+			new GufyVerticalSlab(EMERALD, "emerald_verticalslab"),
+			new GufyWall(EMERALD, "emerald_wall"),
+			new GufyHopper(EMERALD, "emerald_hopper"),
+			new GufyPost(EMERALD, "emerald_post"),
+		//diamond
+			new GufyStairs(DIAMOND, "diamond_stairs"),
+			new GufySlab(DIAMOND, "diamond_slab"),
+			new GufyVerticalSlab(DIAMOND, "diamond_verticalslab"),
+			new GufyWall(DIAMOND, "diamond_wall"),
+			new GufyHopper(DIAMOND, "diamond_hopper"),
+			new GufyPost(DIAMOND, "diamond_post"),
+		//nether_brick
+			new GufyVerticalSlab(NETHER_BRICKS, "nether_brick_verticalslab"),
+			new GufyHopper(NETHER_BRICKS, "nether_brick_hopper"),
+		//sandstone
+			new GufyVerticalSlab(SANDSTONE, "sandstone_verticalslab"),
+			new GufyHopper(SANDSTONE, "sandstone_hopper"),
+			new GufyPost(SANDSTONE, "sandstone_post"),
+		//smooth_sandstone
+			new GufyVerticalSlab(SMOOTH_SANDSTONE, "smooth_sandstone_verticalslab"),
+			new GufyWall(SMOOTH_SANDSTONE, "smooth_sandstone_wall"),
+			new GufyHopper(SMOOTH_SANDSTONE, "smooth_sandstone_hopper"),
+			new GufyPost(SMOOTH_SANDSTONE, "smooth_sandstone_post"),
+		//cut_sandstone
+			new GufyVerticalSlab(SANDSTONE, "cut_sandstone_verticalslab"),
+			new GufyWall(SANDSTONE, "cut_sandstone_wall"),
+			new GufyHopper(SANDSTONE, "cut_sandstone_hopper"),
+			new GufyPost(SANDSTONE, "cut_sandstone_post"),
+		//red_sandstone
+			new GufyVerticalSlab(RED_SANDSTONE, "red_sandstone_verticalslab"),
+			new GufyHopper(RED_SANDSTONE, "red_sandstone_hopper"),
+			new GufyPost(RED_SANDSTONE, "red_sandstone_post"),
+		//smooth_red_sandstone
+			new GufyVerticalSlab(SMOOTH_RED_SANDSTONE, "smooth_red_sandstone_verticalslab"),
+			new GufyWall(SMOOTH_RED_SANDSTONE, "smooth_red_sandstone_wall"),
+			new GufyHopper(SMOOTH_RED_SANDSTONE, "smooth_red_sandstone_hopper"),
+			new GufyPost(SMOOTH_RED_SANDSTONE, "smooth_red_sandstone_post"),
+		//cut_red_sandstone
+			new GufyVerticalSlab(RED_SANDSTONE, "cut_red_sandstone_verticalslab"),
+			new GufyWall(RED_SANDSTONE, "cut_red_sandstone_wall"),
+			new GufyHopper(RED_SANDSTONE, "cut_red_sandstone_hopper"),
+			new GufyPost(RED_SANDSTONE, "cut_red_sandstone_post"),
+		//copper
+			new GufyWeatheringStairs(COPPER, "copper_stairs", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringSlab(COPPER, "copper_slab", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringVerticalSlab(COPPER, "copper_verticalslab", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringWall(COPPER, "copper_wall", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringHopper(COPPER, "copper_hopper", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringPost(COPPER, "copper_post", GufyWeathering.WeatherState.UNAFFECTED),
+		//cut_copper
+			new GufyWeatheringVerticalSlab(COPPER, "cut_copper_verticalslab", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringWall(COPPER, "cut_copper_wall", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringHopper(COPPER, "cut_copper_hopper", GufyWeathering.WeatherState.UNAFFECTED),
+			new GufyWeatheringPost(COPPER, "cut_copper_post", GufyWeathering.WeatherState.UNAFFECTED),
+		//exposed_copper
+			new GufyWeatheringStairs(EXPOSED_COPPER, "exposed_copper_stairs", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringSlab(EXPOSED_COPPER, "exposed_copper_slab", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringVerticalSlab(EXPOSED_COPPER, "exposed_copper_verticalslab", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringWall(EXPOSED_COPPER, "exposed_copper_wall", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringHopper(EXPOSED_COPPER, "exposed_copper_hopper", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringPost(EXPOSED_COPPER, "exposed_copper_post", GufyWeathering.WeatherState.EXPOSED),
+		//exposed_cut_copper
+			new GufyWeatheringVerticalSlab(EXPOSED_COPPER, "exposed_cut_copper_verticalslab", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringWall(EXPOSED_COPPER, "exposed_cut_copper_wall", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringHopper(EXPOSED_COPPER, "exposed_cut_copper_hopper", GufyWeathering.WeatherState.EXPOSED),
+			new GufyWeatheringPost(EXPOSED_COPPER, "exposed_cut_copper_post", GufyWeathering.WeatherState.EXPOSED),
+		//weathered_copper
+			new GufyWeatheringStairs(WEATHERED_COPPER, "weathered_copper_stairs", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringSlab(WEATHERED_COPPER, "weathered_copper_slab", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringVerticalSlab(WEATHERED_COPPER, "weathered_copper_verticalslab", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringWall(WEATHERED_COPPER, "weathered_copper_wall", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringHopper(WEATHERED_COPPER, "weathered_copper_hopper", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringPost(WEATHERED_COPPER, "weathered_copper_post", GufyWeathering.WeatherState.WEATHERED),
+		//weathered_cut_copper
+			new GufyWeatheringVerticalSlab(WEATHERED_COPPER, "weathered_cut_copper_verticalslab", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringWall(WEATHERED_COPPER, "weathered_cut_copper_wall", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringHopper(WEATHERED_COPPER, "weathered_cut_copper_hopper", GufyWeathering.WeatherState.WEATHERED),
+			new GufyWeatheringPost(WEATHERED_COPPER, "weathered_cut_copper_post", GufyWeathering.WeatherState.WEATHERED),
+		//oxidized_copper
+			new GufyWeatheringStairs(OXIDIZED_COPPER, "oxidized_copper_stairs", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringSlab(OXIDIZED_COPPER, "oxidized_copper_slab", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringVerticalSlab(OXIDIZED_COPPER, "oxidized_copper_verticalslab", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringWall(OXIDIZED_COPPER, "oxidized_copper_wall", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringHopper(OXIDIZED_COPPER, "oxidized_copper_hopper", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringPost(OXIDIZED_COPPER, "oxidized_copper_post", GufyWeathering.WeatherState.OXIDIZED),
+		//oxidized_cut_copper
+			new GufyWeatheringVerticalSlab(OXIDIZED_COPPER, "oxidized_cut_copper_verticalslab", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringWall(OXIDIZED_COPPER, "oxidized_cut_copper_wall", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringHopper(OXIDIZED_COPPER, "oxidized_cut_copper_hopper", GufyWeathering.WeatherState.OXIDIZED),
+			new GufyWeatheringPost(OXIDIZED_COPPER, "oxidized_cut_copper_post", GufyWeathering.WeatherState.OXIDIZED),
+		//waxed_copper
+			new GufyStairs(COPPER, "waxed_copper_stairs"),
+			new GufySlab(COPPER, "waxed_copper_slab"),
+			new GufyVerticalSlab(COPPER, "waxed_copper_verticalslab"),
+			new GufyWall(COPPER, "waxed_copper_wall"),
+			new GufyHopper(COPPER, "waxed_copper_hopper"),
+			new GufyPost(COPPER, "waxed_copper_post"),
+		//waxed_cut_copper
+			new GufyVerticalSlab(COPPER, "waxed_cut_copper_verticalslab"),
+			new GufyWall(COPPER, "waxed_cut_copper_wall"),
+			new GufyHopper(COPPER, "waxed_cut_copper_hopper"),
+			new GufyPost(COPPER, "waxed_cut_copper_post"),
+		//waxed_exposed_copper
+			new GufyStairs(EXPOSED_COPPER, "waxed_exposed_copper_stairs"),
+			new GufySlab(EXPOSED_COPPER, "waxed_exposed_copper_slab"),
+			new GufyVerticalSlab(EXPOSED_COPPER, "waxed_exposed_copper_verticalslab"),
+			new GufyWall(EXPOSED_COPPER, "waxed_exposed_copper_wall"),
+			new GufyHopper(EXPOSED_COPPER, "waxed_exposed_copper_hopper"),
+			new GufyPost(EXPOSED_COPPER, "waxed_exposed_copper_post"),
+		//waxed_exposed_cut_copper
+			new GufyVerticalSlab(EXPOSED_COPPER, "waxed_exposed_cut_copper_verticalslab"),
+			new GufyWall(EXPOSED_COPPER, "waxed_exposed_cut_copper_wall"),
+			new GufyHopper(EXPOSED_COPPER, "waxed_exposed_cut_copper_hopper"),
+			new GufyPost(EXPOSED_COPPER, "waxed_exposed_cut_copper_post"),
+		//waxed_weathered_copper
+			new GufyStairs(WEATHERED_COPPER, "waxed_weathered_copper_stairs"),
+			new GufySlab(WEATHERED_COPPER, "waxed_weathered_copper_slab"),
+			new GufyVerticalSlab(WEATHERED_COPPER, "waxed_weathered_copper_verticalslab"),
+			new GufyWall(WEATHERED_COPPER, "waxed_weathered_copper_wall"),
+			new GufyHopper(WEATHERED_COPPER, "waxed_weathered_copper_hopper"),
+			new GufyPost(WEATHERED_COPPER, "waxed_weathered_copper_post"),
+		//waxed_weathered_cut_copper
+			new GufyVerticalSlab(WEATHERED_COPPER, "waxed_weathered_cut_copper_verticalslab"),
+			new GufyWall(WEATHERED_COPPER, "waxed_weathered_cut_copper_wall"),
+			new GufyHopper(WEATHERED_COPPER, "waxed_weathered_cut_copper_hopper"),
+			new GufyPost(WEATHERED_COPPER, "waxed_weathered_cut_copper_post"),
+		//waxed_oxidized_copper
+			new GufyStairs(OXIDIZED_COPPER, "waxed_oxidized_copper_stairs"),
+			new GufySlab(OXIDIZED_COPPER, "waxed_oxidized_copper_slab"),
+			new GufyVerticalSlab(OXIDIZED_COPPER, "waxed_oxidized_copper_verticalslab"),
+			new GufyWall(OXIDIZED_COPPER, "waxed_oxidized_copper_wall"),
+			new GufyHopper(OXIDIZED_COPPER, "waxed_oxidized_copper_hopper"),
+			new GufyPost(OXIDIZED_COPPER, "waxed_oxidized_copper_post"),
+		//waxed_oxidized_cut_copper
+			new GufyVerticalSlab(OXIDIZED_COPPER, "waxed_oxidized_cut_copper_verticalslab"),
+			new GufyWall(OXIDIZED_COPPER, "waxed_oxidized_cut_copper_wall"),
+			new GufyHopper(OXIDIZED_COPPER, "waxed_oxidized_cut_copper_hopper"),
+			new GufyPost(OXIDIZED_COPPER, "waxed_oxidized_cut_copper_post"),
+		//amethyst
+			new GufyStairs(AMETHYST, "amethyst_stairs"),
+			new GufySlab(AMETHYST, "amethyst_slab"),
+			new GufyVerticalSlab(AMETHYST, "amethyst_verticalslab"),
+			new GufyWall(AMETHYST, "amethyst_wall"),
+			new GufyHopper(AMETHYST, "amethyst_hopper"),
+			new GufyPost(AMETHYST, "amethyst_post"),
+		//end_stone
+			new GufyStairs(END_STONE, "end_stone_stairs"),
+			new GufySlab(END_STONE, "end_stone_slab"),
+			new GufyVerticalSlab(END_STONE, "end_stone_verticalslab"),
+			new GufyWall(END_STONE, "end_stone_wall"),
+			new GufyHopper(END_STONE, "end_stone_hopper"),
+			new GufyPost(END_STONE, "end_stone_post"),
+		//end_stone_brick
+			new GufyVerticalSlab(END_STONE, "end_stone_brick_verticalslab"),
+			new GufyHopper(END_STONE, "end_stone_brick_hopper"),
+			new GufyPost(END_STONE, "end_stone_brick_post"),
+		//purpur
+			new GufyWall(PURPUR, "purpur_wall"),
+			new GufyHopper(PURPUR, "purpur_hopper"),
+			new GufyVerticalSlab(PURPUR, "purpur_verticalslab"),
+			new GufyPost(PURPUR, "purpur_post"),
+		//blackstone
+			new GufyVerticalSlab(BLACKSTONE, "blackstone_verticalslab"),
+			new GufyHopper(BLACKSTONE, "blackstone_hopper"),
+			new GufyPost(BLACKSTONE, "blackstone_post"),
+		//polished_blackstone
+			new GufyVerticalSlab(POLISHED_BLACKSTONE, "polished_blackstone_verticalslab"),
+			new GufyHopper(POLISHED_BLACKSTONE, "polished_blackstone_hopper"),
+			new GufyPost(POLISHED_BLACKSTONE, "polished_blackstone_post"),
+		//polished_blackstone_brick
+			new GufyVerticalSlab(BLACKSTONE, "polished_blackstone_brick_verticalslab"),
+			new GufyHopper(BLACKSTONE, "polished_blackstone_brick_hopper"),
+			new GufyPost(BLACKSTONE, "polished_blackstone_brick_post"),
+		//cracked_polished_blackstone_brick
+			new GufyStairs(BLACKSTONE, "cracked_polished_blackstone_brick_stairs"),
+			new GufySlab(BLACKSTONE, "cracked_polished_blackstone_brick_slab"),
+			new GufyVerticalSlab(BLACKSTONE, "cracked_polished_blackstone_brick_verticalslab"),
+			new GufyWall(BLACKSTONE, "cracked_polished_blackstone_brick_wall"),
+			new GufyHopper(BLACKSTONE, "cracked_polished_blackstone_brick_hopper"),
+			new GufyPost(BLACKSTONE, "cracked_polished_blackstone_brick_post"),
+		//gilded_blackstone
+			new GufyStairs(GILDED_BLACKSTONE, "gilded_blackstone_stairs"),
+			new GufySlab(GILDED_BLACKSTONE, "gilded_blackstone_slab"),
+			new GufyVerticalSlab(GILDED_BLACKSTONE, "gilded_blackstone_verticalslab"),
+			new GufyWall(GILDED_BLACKSTONE, "gilded_blackstone_wall"),
+			new GufyHopper(GILDED_BLACKSTONE, "gilded_blackstone_hopper"),
+			new GufyPost(GILDED_BLACKSTONE, "gilded_blackstone_post"),
+		//fence_gates
+			new GufyFenceGate(ACACIA, "acacia_wood_fence_gate"),
+			new GufyFenceGate(BIRCH, "birch_wood_fence_gate"),
+			new GufyFenceGate(CRIMSON, "crimson_hyphae_fence_gate"),
+			new GufyFenceGate(DARK_OAK, "dark_oak_wood_fence_gate"),
+			new GufyFenceGate(JUNGLE, "jungle_wood_fence_gate"),
+			new GufyFenceGate(OAK, "oak_wood_fence_gate"),
+			new GufyFenceGate(SPRUCE, "spruce_wood_fence_gate"),
+			new GufyFenceGate(WARPED, "warped_hyphae_fence_gate"),
+			new GufyFenceGate(ACACIA, "stripped_acacia_wood_fence_gate"),
+			new GufyFenceGate(BIRCH, "stripped_birch_wood_fence_gate"),
+			new GufyFenceGate(CRIMSON, "stripped_crimson_hyphae_fence_gate"),
+			new GufyFenceGate(DARK_OAK, "stripped_dark_oak_wood_fence_gate"),
+			new GufyFenceGate(JUNGLE, "stripped_jungle_wood_fence_gate"),
+			new GufyFenceGate(OAK, "stripped_oak_wood_fence_gate"),
+			new GufyFenceGate(SPRUCE, "stripped_spruce_wood_fence_gate"),
+			new GufyFenceGate(WARPED, "stripped_warped_hyphae_fence_gate"),
+			new GufyFenceGate(ACACIA, "mossy_acacia_fence_gate"),
+			new GufyFenceGate(BIRCH, "mossy_birch_fence_gate"),
+			new GufyFenceGate(CRIMSON, "mossy_crimson_fence_gate"),
+			new GufyFenceGate(DARK_OAK, "mossy_dark_oak_fence_gate"),
+			new GufyFenceGate(JUNGLE, "mossy_jungle_fence_gate"),
+			new GufyFenceGate(OAK, "mossy_oak_fence_gate"),
+			new GufyFenceGate(SPRUCE, "mossy_spruce_fence_gate"),
+			new GufyFenceGate(WARPED, "mossy_warped_fence_gate"),
+			new GufyFenceGate(ACACIA, "cracked_acacia_fence_gate"),
+			new GufyFenceGate(BIRCH, "cracked_birch_fence_gate"),
+			new GufyFenceGate(CRIMSON, "cracked_crimson_fence_gate"),
+			new GufyFenceGate(DARK_OAK, "cracked_dark_oak_fence_gate"),
+			new GufyFenceGate(JUNGLE, "cracked_jungle_fence_gate"),
+			new GufyFenceGate(OAK, "cracked_oak_fence_gate"),
+			new GufyFenceGate(SPRUCE, "cracked_spruce_fence_gate"),
+			new GufyFenceGate(WARPED, "cracked_warped_fence_gate"),
+			
+			
+		//white_planks
+			//new GufyBlock(WHITE_PLANKS, "white_planks"),
+			//new GufyStairs(WHITE_PLANKS, "white_plank_stairs"),
+			//new GufySlab(WHITE_PLANKS, "white_plank_slab"),
+			//new GufyVerticalSlab(WHITE_PLANKS, "white_plank_verticalslab"),
+			//new GufyWall(WHITE_PLANKS, "white_plank_wall"),
+			//new GufyHopper(WHITE_PLANKS, "white_plank_hopper"),
+			//new GufyFence(WHITE_PLANKS, "white_plank_fence"),
+			//new GufyFenceGate(WHITE_PLANKS, "white_plank_fence_gate"),
+			//new GufyPanel(WHITE_PLANKS, "white_plank_panel"),
+			//new GufyTrapdoor(WHITE_PLANKS, "white_plank_trapdoor"),
+			//new GufyPressurePlate(WHITE_PRESSUREPLATE, "white_planks_pressureplate", PressurePlateBlock.Sensitivity.EVERYTHING),
+			//new GufyButton(WHITE_PRESSUREPLATE, "white_plank_button"),
+		//white_wood
+			//new GufyFence(WHITE_WOOD, "white_wood_fence"),
+			//new GufyFenceGate(WHITE_WOOD, "white_wood_fence_gate"),
+			//new GufyTrapdoor(WHITE_TRAPDOOR, "white_wood_trapdoor"),
+			//new GufyPane(FRAMED_GLASS, "white_wood_framed_glass_pane"),
+			//new GufySign(WHITE_SIGN, "white_wood_sign", GufyUtil.whiteWood),
+
+
 	};
 	
 	
@@ -915,7 +1266,7 @@ public class ModBlocks
 	{
 		for (final Block block: blockList)
 		{
-			final BlockItem item = new BlockItem(block, new Item.Properties().tab(Main.gufygroup));
+			final BlockItem item = new BlockItem(block, new Item.Properties().tab(GufyBlocks.gufygroup));
             final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(), "BlockItem: %s has a NULL registry name", block);
             event.getRegistry().register(item.setRegistryName(registryName));
         }

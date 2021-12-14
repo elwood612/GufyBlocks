@@ -1,4 +1,4 @@
-package elwood612.gufyblocks.blocks;
+package elwood612.gufyblocks.blocks.blockSpecialty;
 
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.util.GufyUtil;
@@ -34,7 +34,7 @@ public class GufyRod extends DirectionalBlock implements SimpleWaterloggedBlock
     public GufyRod(GufyMaterials block, String name)
 	{
 		//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyUtil.builder(block, name));
+        super(GufyUtil.builder(block));
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
         setRegistryName(name);
 	}
@@ -86,7 +86,7 @@ public class GufyRod extends DirectionalBlock implements SimpleWaterloggedBlock
     {
         if (stateIn.getValue(WATERLOGGED)) 
         {
-            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
         return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);

@@ -1,4 +1,4 @@
-package elwood612.gufyblocks.blocks;
+package elwood612.gufyblocks.blocks.blockSpecialty;
 
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.util.GufyUtil;
@@ -19,7 +19,7 @@ public class GufyHorizontalBlock extends HorizontalDirectionalBlock
     public GufyHorizontalBlock(GufyMaterials block, String name)
     {
     	//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyUtil.builder(block, name));
+        super(GufyUtil.builder(block));
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
         setRegistryName(name);
     }

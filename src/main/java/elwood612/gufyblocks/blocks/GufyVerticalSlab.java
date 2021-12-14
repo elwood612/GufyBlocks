@@ -2,6 +2,9 @@ package elwood612.gufyblocks.blocks;
 
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -19,6 +22,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
+
+import javax.annotation.Nullable;
 
 public class GufyVerticalSlab extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock 
 {
@@ -33,9 +40,19 @@ public class GufyVerticalSlab extends HorizontalDirectionalBlock implements Simp
     public GufyVerticalSlab(GufyMaterials block, String name)
     {
     	//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyUtil.builder(block, name));
+        super(GufyUtil.builder(block));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
         setRegistryName(name);
+    }
+
+    @Nullable
+    @Override
+    public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player, ItemStack stack, ToolAction toolAction)
+    {
+        if (!stack.canPerformAction(toolAction) || !GufyUtil.isWaxed(state)) return null;
+        if(ToolActions.AXE_WAX_OFF.equals(toolAction))
+            return GufyUtil.getWaxedOff(state).orElse(null);
+        return null;
     }
 
     @Override
@@ -89,7 +106,7 @@ public class GufyVerticalSlab extends HorizontalDirectionalBlock implements Simp
     {
         if (stateIn.getValue(WATERLOGGED)) 
         {
-            worldIn.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
         return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);

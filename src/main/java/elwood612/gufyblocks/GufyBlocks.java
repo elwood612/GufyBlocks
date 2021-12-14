@@ -1,7 +1,7 @@
 package elwood612.gufyblocks;
 
 import elwood612.gufyblocks.items.itemUtil.GufyBlocksItemGroup;
-import elwood612.gufyblocks.util.DoorEvent;
+import elwood612.gufyblocks.util.GufyDoorEvent;
 import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.resources.ResourceLocation;
@@ -10,13 +10,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fmllegacy.network.NetworkRegistry;
-import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 
-@Mod(Main.MODID)
-public class Main 
+@Mod(GufyBlocks.MODID)
+public class GufyBlocks
 {
-	public static Main instance;
+	public static GufyBlocks instance;
 	public static final String MODID = "gufyblocks";
 	
 	//Ensures vanilla clients can't connect to server
@@ -33,7 +33,7 @@ public class Main
 	public static final CreativeModeTab gufygroup = new GufyBlocksItemGroup();
 	
 	//Constructor
-	public Main() 
+	public GufyBlocks()
 	{
 		instance = this;
 		MinecraftForge.EVENT_BUS.register(this);
@@ -48,6 +48,6 @@ public class Main
 
 	private void loadComplete(final FMLLoadCompleteEvent event)
 	{
-		MinecraftForge.EVENT_BUS.register(new DoorEvent());
+		MinecraftForge.EVENT_BUS.register(new GufyDoorEvent());
 	}
 }
