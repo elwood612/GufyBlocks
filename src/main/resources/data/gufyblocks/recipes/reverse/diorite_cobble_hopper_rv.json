@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "diorite_cobble",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:diorite_cobble_hopper"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:diorite_cobble",
+    "count": 2
+  }
+}

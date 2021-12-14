@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_deepslate_tiles",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_deepslate_tiles_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:cracked_deepslate_tiles",
+    "count": 2
+  }
+}

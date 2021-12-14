@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_spruce_planks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+{
+    "item": "gufyblocks:cracked_oak_panel"
+    }
+  },
+  "result": 
+{
+      "item": "gufyblocks:cracked_oak",
+    "count": 1
+  }
+}

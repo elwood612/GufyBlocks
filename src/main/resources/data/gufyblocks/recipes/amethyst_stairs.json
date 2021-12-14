@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:amethyst_block"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:amethyst_stairs",
+    "count": 6
+  }
+}

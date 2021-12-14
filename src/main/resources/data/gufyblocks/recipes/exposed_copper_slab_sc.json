@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:exposed_copper"
+  },
+  "result": "gufyblocks:exposed_copper_slab",
+  "count": 2
+}

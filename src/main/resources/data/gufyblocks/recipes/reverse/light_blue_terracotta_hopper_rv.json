@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "light_blue_terracotta",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:light_blue_terracotta_hopper"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:light_blue_terracotta",
+    "count": 2
+  }
+}

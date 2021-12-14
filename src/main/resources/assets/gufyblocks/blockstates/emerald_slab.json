@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/emerald_slab" },
+        "type=top": { "model": "gufyblocks:block/emerald_slab_top" },
+        "type=double": { "model": "minecraft:block/emerald_block" }
+    }
+}

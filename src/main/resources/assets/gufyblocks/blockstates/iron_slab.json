@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/iron_slab" },
+        "type=top": { "model": "gufyblocks:block/iron_slab_top" },
+        "type=double": { "model": "minecraft:block/iron_block" }
+    }
+}

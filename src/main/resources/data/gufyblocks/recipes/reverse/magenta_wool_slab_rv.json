@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "magenta_wool",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:magenta_wool_slab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:magenta_wool",
+    "count": 2
+  }
+}

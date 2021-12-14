@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/amethyst_slab" },
+        "type=top": { "model": "gufyblocks:block/amethyst_slab_top" },
+        "type=double": { "model": "minecraft:block/amethyst_block" }
+    }
+}

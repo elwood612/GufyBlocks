@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "thatch",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:thatch_slab"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:thatch",
+    "count": 2
+  }
+}

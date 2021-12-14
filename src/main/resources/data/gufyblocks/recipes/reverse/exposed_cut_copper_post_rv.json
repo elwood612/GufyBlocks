@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "exposed_cut_copper",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:exposed_cut_copper_post"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:exposed_cut_copper",
+    "count": 1
+  }
+}

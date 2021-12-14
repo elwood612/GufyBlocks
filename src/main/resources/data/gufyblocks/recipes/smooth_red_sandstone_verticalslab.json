@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:smooth_red_sandstone"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:smooth_red_sandstone_verticalslab",
+    "count": 6
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blue_concrete",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:blue_concrete_slab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:blue_concrete",
+    "count": 2
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/gilded_blackstone_slab" },
+        "type=top": { "model": "gufyblocks:block/gilded_blackstone_slab_top" },
+        "type=double": { "model": "minecraft:block/gilded_blackstone" }
+    }
+}

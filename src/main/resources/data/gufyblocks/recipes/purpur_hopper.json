@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:purpur_block"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:purpur_hopper",
+    "count": 6
+  }
+}

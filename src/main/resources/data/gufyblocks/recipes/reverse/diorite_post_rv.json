@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "diorite",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:diorite_post"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:diorite",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/end_stone_slab" },
+        "type=top": { "model": "gufyblocks:block/end_stone_slab_top" },
+        "type=double": { "model": "minecraft:block/end_stone" }
+    }
+}

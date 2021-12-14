@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_jungle",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_jungle_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_jungle",
+    "count": 1
+  }
+}

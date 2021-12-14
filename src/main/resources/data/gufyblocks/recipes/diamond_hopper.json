@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:diamond_hopper",
+    "count": 6
+  }
+}

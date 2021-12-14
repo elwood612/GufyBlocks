@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "oxidized_copper",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:oxidized_copper_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:oxidized_copper",
+    "count": 2
+  }
+}

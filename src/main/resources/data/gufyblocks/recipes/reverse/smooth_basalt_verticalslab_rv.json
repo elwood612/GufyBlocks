@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "smooth_basalt",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:smooth_basalt_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:smooth_basalt",
+    "count": 2
+  }
+}

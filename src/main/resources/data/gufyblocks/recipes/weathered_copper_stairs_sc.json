@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:weathered_copper"
+  },
+  "result": "gufyblocks:weathered_copper_stairs",
+  "count": 1
+}

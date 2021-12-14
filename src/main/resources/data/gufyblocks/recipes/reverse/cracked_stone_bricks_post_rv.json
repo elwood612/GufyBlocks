@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_stone_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_stone_bricks_post"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:cracked_stone_bricks",
+    "count": 1
+  }
+}

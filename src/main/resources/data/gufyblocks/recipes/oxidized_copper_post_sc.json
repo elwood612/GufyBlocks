@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:oxidized_copper"
+  },
+  "result": "gufyblocks:oxidized_copper_post",
+  "count": 2
+}

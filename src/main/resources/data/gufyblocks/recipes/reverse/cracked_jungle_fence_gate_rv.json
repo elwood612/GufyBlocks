@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_jungle",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_jungle_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cracked_jungle",
+    "count": 1
+  }
+}

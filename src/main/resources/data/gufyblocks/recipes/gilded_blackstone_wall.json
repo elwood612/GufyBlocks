@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:gilded_blackstone"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:gilded_blackstone_wall",
+    "count": 8
+  }
+}

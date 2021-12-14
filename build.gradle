@@ -11,6 +11,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
+//apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
 version = "${project.mc_version}-${project.mod_version}"
 group = 'com.github.elwood612.gufyblocks'
@@ -21,8 +22,7 @@ sourceSets {
 }
 
 compileJava {
-    java.toolchain.languageVersion = JavaLanguageVersion.of(16)
-    //sourceCompatibility = targetCompatibility = '1.8'
+    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
 def resourceTargets = ['META-INF/mods.toml']

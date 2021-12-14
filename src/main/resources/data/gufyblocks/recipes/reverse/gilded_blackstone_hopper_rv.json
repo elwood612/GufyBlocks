@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "gilded_blackstone",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:gilded_blackstone_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:gilded_blackstone",
+    "count": 2
+  }
+}

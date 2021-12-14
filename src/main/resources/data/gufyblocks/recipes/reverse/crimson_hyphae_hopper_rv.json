@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "crimson_hyphae",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:crimson_hyphae_hopper"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:crimson_hyphae",
+    "count": 2
+  }
+}

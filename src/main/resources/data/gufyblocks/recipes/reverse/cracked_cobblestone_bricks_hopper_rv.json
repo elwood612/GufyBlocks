@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_cobblestone_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_cobblestone_bricks_hopper"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:cracked_cobblestone_bricks",
+    "count": 2
+  }
+}

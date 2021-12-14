@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_brick",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:nether_brick_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:nether_bricks",
+    "count": 2
+  }
+}

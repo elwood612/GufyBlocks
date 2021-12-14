@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_diorite_cobble",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_diorite_cobble_stairs"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:mossy_diorite_cobble",
+    "count": 3
+  }
+}

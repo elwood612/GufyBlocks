@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_crimson",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_crimson_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_crimson",
+    "count": 1
+  }
+}

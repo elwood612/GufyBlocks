@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_birch",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_birch_verticalslab"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:cracked_birch",
+    "count": 2
+  }
+}

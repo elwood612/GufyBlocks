@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "jungle_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:jungle_wood_stairs"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:jungle_wood",
+    "count": 3
+  }
+}

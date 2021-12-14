@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:exposed_copper"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:exposed_copper_verticalslab",
+    "count": 6
+  }
+}

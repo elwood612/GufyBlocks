@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_spruce",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_spruce_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cracked_spruce",
+    "count": 1
+  }
+}

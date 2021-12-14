@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "emerald",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:emerald_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:emerald_block",
+    "count": 2
+  }
+}

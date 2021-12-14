@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:quartz_block"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:quartz_wall",
+    "count": 8
+  }
+}

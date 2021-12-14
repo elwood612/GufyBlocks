@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_spruce_planks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_spruce_fence"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:mossy_spruce",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:nether_bricks"
+  },
+  "result": "gufyblocks:nether_brick_verticalslab",
+  "count": 2
+}

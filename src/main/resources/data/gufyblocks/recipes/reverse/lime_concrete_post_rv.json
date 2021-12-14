@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lime_concrete",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:lime_concrete_post"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:lime_concrete",
+    "count": 1
+  }
+}
