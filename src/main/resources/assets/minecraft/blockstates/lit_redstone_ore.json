@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "": [
-		{ "model": "block/lit_redstone_ore" },
-		{ "model": "block/lit_redstone_ore", "y": 180, "x": 180 }
-		]
-    }
-}

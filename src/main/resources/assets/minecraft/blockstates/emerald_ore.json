@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "": [
-		{ "model": "block/emerald_ore" },
-		{ "model": "block/emerald_ore", "y": 180, "x": 180 }
-		]
-    }
-}
