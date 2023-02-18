@@ -1,7 +1,6 @@
 package elwood612.gufyblocks.blocks.blockUtil;
 
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
@@ -118,8 +117,8 @@ public enum GufyMaterials
 	WHITE_WOOD(Material.WOOD, MaterialColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	WHITE_SIGN(Material.WOOD, MaterialColor.SNOW, SoundType.WOOD, 1.0F, 1.0F, false, true),
 	WHITE_TRAPDOOR(Material.WOOD, MaterialColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, false),
-	LEADED_GLASS(Material.GLASS, MaterialColor.STONE, SoundType.GLASS, 1.25F, 3.0F, false, false),
-	FRAMED_GLASS(Material.GLASS, MaterialColor.WOOD, SoundType.GLASS, 2.0F, 3.0F, false, false);
+	LEADED_GLASS(Material.GLASS, MaterialColor.STONE, SoundType.GLASS, 0.3F, 3.0F, false, false),
+	FRAMED_GLASS(Material.GLASS, MaterialColor.WOOD, SoundType.GLASS, 0.3F, 3.0F, false, false);
 
     public final Material material; //material
     public final MaterialColor color; //map color

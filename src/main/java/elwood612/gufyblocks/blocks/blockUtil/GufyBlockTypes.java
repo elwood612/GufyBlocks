@@ -1,0 +1,37 @@
+package elwood612.gufyblocks.blocks.blockUtil;
+
+public enum GufyBlockTypes
+{
+    BLOCK,
+    STAIRS,
+    SLAB,
+    VERTICALSLAB,
+    WALL,
+    HOPPER,
+    POST,
+
+    FENCE,
+    FENCEGATE,
+    PARQUET,
+    HORIZONTALBLOCK,
+    PANE,
+    PANEL,
+    PILLAR,
+    WATTLEFENCE,
+    WAGONWHEEL,
+    STONE_TRAPDOOR,
+    TRAPDOOR,
+    CHISELED,
+
+    WEATHERINGBLOCK,
+    WEATHERINGSTAIRS,
+    WEATHERINGSLAB,
+    WEATHERINGVERTICALSLAB,
+    WEATHERINGWALL,
+    WEATHERINGHOPPER,
+    WEATHERINGPOST,
+
+    GUFYSTAIRS,
+    GUFYSLAB,
+    GUFYWALL,
+}

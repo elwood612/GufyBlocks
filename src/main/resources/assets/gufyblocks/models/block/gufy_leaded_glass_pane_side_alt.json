@@ -1,4 +1,5 @@
 {
+  "render_type": "translucent",
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "textures": {
     "pane": "gufyblocks:block/gufy_leaded_glass_pane",

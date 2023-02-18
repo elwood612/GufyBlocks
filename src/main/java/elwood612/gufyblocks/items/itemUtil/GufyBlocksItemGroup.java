@@ -1,10 +1,8 @@
 package elwood612.gufyblocks.items.itemUtil;
 
-import net.minecraft.world.item.Item;
+import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class GufyBlocksItemGroup extends CreativeModeTab
 {
@@ -14,8 +12,9 @@ public class GufyBlocksItemGroup extends CreativeModeTab
 	}
 
 	@Override
-	public ItemStack makeIcon() 
+	public ItemStack makeIcon()
 	{
-		return new ItemStack(Item.BY_BLOCK.get(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("gufyblocks", "cobblestone_bricks"))));
+		//return new ItemStack(Item.BY_BLOCK.get(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("gufyblocks", "cobblestone_bricks"))));
+		return new ItemStack(GufyUtil.getGufyBlock("cobblestone_bricks").get());
 	}
 }

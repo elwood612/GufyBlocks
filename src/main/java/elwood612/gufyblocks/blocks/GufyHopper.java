@@ -1,11 +1,12 @@
 package elwood612.gufyblocks.blocks;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.material.FluidState;
@@ -37,19 +38,18 @@ public class GufyHopper extends Block implements SimpleWaterloggedBlock
     public static final VoxelShape HOPPER_BOTTOM = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D);
     public static final VoxelShape HOPPER_FINAL = Shapes.or(HOPPER_TOP, Shapes.or(HOPPER_MIDDLE, HOPPER_BOTTOM));
     
-	public GufyHopper(GufyMaterials block, String name)
+	public GufyHopper(BlockBehaviour.Properties properties)
 	{
-		//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyUtil.builder(block));
-        this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)));
-        setRegistryName(name);
+        super(properties);
+        this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.FALSE));
 	}
 
     @Nullable
     @Override
-    public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player, ItemStack stack, ToolAction toolAction)
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
     {
-        if (!stack.canPerformAction(toolAction) || !GufyUtil.isWaxed(state)) return null;
+        ItemStack itemStack = context.getItemInHand();
+        if (!itemStack.canPerformAction(toolAction) || !GufyUtil.isWaxed(state)) return null;
         if(ToolActions.AXE_WAX_OFF.equals(toolAction))
             return GufyUtil.getWaxedOff(state).orElse(null);
         return null;
@@ -68,7 +68,7 @@ public class GufyHopper extends Block implements SimpleWaterloggedBlock
         BlockState BlockState = this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
         return BlockState;
     }
-	
+
 	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
 	{
 		return HOPPER_FINAL;

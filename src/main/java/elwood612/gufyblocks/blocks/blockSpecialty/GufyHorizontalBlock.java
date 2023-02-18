@@ -1,8 +1,7 @@
 package elwood612.gufyblocks.blocks.blockSpecialty;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -11,17 +10,16 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import org.jetbrains.annotations.NotNull;
 
 public class GufyHorizontalBlock extends HorizontalDirectionalBlock
 {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-    public GufyHorizontalBlock(GufyMaterials block, String name)
+    public GufyHorizontalBlock(BlockBehaviour.Properties properties)
     {
-    	//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyUtil.builder(block));
+        super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
-        setRegistryName(name);
     }
     
     @Override
@@ -33,16 +31,17 @@ public class GufyHorizontalBlock extends HorizontalDirectionalBlock
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) 
     {
-        BlockState BlockState = this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
-        return BlockState;
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
     }
-    
-    public BlockState rotate(BlockState state, Rotation rot) 
+
+    @NotNull
+    public BlockState rotate(BlockState state, Rotation rot)
     {
         return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
     }
 
-    public BlockState mirror(BlockState state, Mirror mirrorIn) 
+    @NotNull
+    public BlockState mirror(BlockState state, Mirror mirrorIn)
     {
        return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
     }

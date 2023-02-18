@@ -3,6 +3,7 @@ package elwood612.gufyblocks.blocks.blockSpecialty;
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -34,12 +35,11 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
     protected static final VoxelShape COLLISION_NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 24.0D, 1.0D);
     protected static final VoxelShape COLLISION_SOUTH_SHAPE = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 24.0D, 16.0D);
 
-    public GufyWattleFence(GufyMaterials block, String name)
+    public GufyWattleFence(BlockBehaviour.Properties properties)
     {
-        super(GufyUtil.builder(block));
+        super(properties);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
-        setRegistryName(name);
 	}
 
     @Override

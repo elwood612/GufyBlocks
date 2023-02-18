@@ -1,15 +1,12 @@
 package elwood612.gufyblocks.blocks.blockSpecialty;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class GufyFenceGate extends FenceGateBlock
 {
-    public GufyFenceGate(GufyMaterials block, String name)
+    public GufyFenceGate(BlockBehaviour.Properties properties)
     {
-        super(GufyUtil.builder(block));
-        setRegistryName(name);
+        super(properties);
     }
-
 }

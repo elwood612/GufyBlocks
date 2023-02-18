@@ -1,33 +1,38 @@
 package elwood612.gufyblocks.util;
 
+import elwood612.gufyblocks.GufyBlocks;
+import elwood612.gufyblocks.GufyRegistry;
+import elwood612.gufyblocks.blocks.*;
+import elwood612.gufyblocks.blocks.blockSpecialty.GufyHorizontalBlock;
+import elwood612.gufyblocks.blocks.blockSpecialty.GufyPane;
+import elwood612.gufyblocks.blocks.blockSpecialty.GufyPanel;
+import elwood612.gufyblocks.blocks.blockSpecialty.GufyWattleFence;
+import elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.blocks.blockUtil.GufyWaxable;
+import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import elwood612.gufyblocks.blocks.blockWeathering.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.texture.AtlasSet;
-import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.ForgeRegistryEntry;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
+import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class GufyUtil
 {
 
-    //************************BUILDER******************************//
-    public static BlockBehaviour.Properties builder(GufyMaterials block) {
+    //*******************PROPERTIES BUILDER**************************//
+    public static BlockBehaviour.Properties propertiesBuilder(GufyMaterials block)
+    {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties
                 .of(block.material, block.color)
                 .strength(block.hardness, block.resistance)
@@ -37,73 +42,213 @@ public class GufyUtil
         return properties;
     }
 
+    //*******************BLOCKTYPES BUILDER**************************//
+    public static List<GufyBlockTypes[]> blocktypeBuilder()
+    {
+        return new ArrayList<>()
+        {{
+            // GUFY_STONE_TYPES - 0
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.BLOCK,
+                    GufyBlockTypes.STAIRS,
+                    GufyBlockTypes.SLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.WALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.POST
+            });
 
-    //*****************RENDER LAYER SETUP*************************//
-    public static void renderSetup() {
-        //Do this for every transparent block
-        ItemBlockRenderTypes.setRenderLayer(getBlock("wattle_fence"), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("white_wood_trapdoor"), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("white_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("light_gray_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("gray_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("black_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("brown_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("red_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("orange_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("yellow_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("lime_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("green_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("cyan_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("light_blue_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("blue_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("purple_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("magenta_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("pink_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("avalon_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("oakfield_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("gufy_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("ring_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("midland_leaded_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("spruce_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("oak_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("dark_oak_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("birch_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("jungle_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("acacia_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("crimson_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("warped_framed_glass_pane"), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(getBlock("white_wood_framed_glass_pane"), RenderType.translucent());
+            // VANILLA_STONE_TYPES - 1
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.POST
+            });
 
-        //Vanilla Blocks
-        ItemBlockRenderTypes.setRenderLayer(net.minecraft.world.level.block.Blocks.GLASS, RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(net.minecraft.world.level.block.Blocks.GLASS_PANE, RenderType.translucent());
+            // GUFY_WOOD_TYPES - 2
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.BLOCK,
+                    GufyBlockTypes.STAIRS,
+                    GufyBlockTypes.SLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.WALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.FENCE,
+                    GufyBlockTypes.FENCEGATE,
+                    GufyBlockTypes.PANEL
+            });
 
+            // VANILLA_WOOD_TYPES - 3
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.WALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.PANEL
+            });
+
+            // GUFY_DIRT_TYPES - 4
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.BLOCK,
+                    GufyBlockTypes.STAIRS,
+                    GufyBlockTypes.SLAB,
+                    GufyBlockTypes.VERTICALSLAB
+            });
+
+            // VANILLA_DIRT_TYPES - 5
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.STAIRS,
+                    GufyBlockTypes.SLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+            });
+
+            // VANILLA_STONE_TYPES_ALL - 6
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.STAIRS,
+                    GufyBlockTypes.SLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.WALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.POST
+            });
+
+            // VANILLA_WOOD_TYPES_ALL - 7
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.STAIRS,
+                    GufyBlockTypes.SLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.WALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.FENCE,
+                    GufyBlockTypes.FENCEGATE,
+                    GufyBlockTypes.PANEL
+            });
+
+            // VANILLA_COPPER_TYPES - 8
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.WEATHERINGSTAIRS,
+                    GufyBlockTypes.WEATHERINGSLAB,
+                    GufyBlockTypes.WEATHERINGVERTICALSLAB,
+                    GufyBlockTypes.WEATHERINGWALL,
+                    GufyBlockTypes.WEATHERINGHOPPER,
+                    GufyBlockTypes.WEATHERINGPOST
+            });
+
+            // VANILLA_CUT_COPPER_TYPES - 9
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.WEATHERINGVERTICALSLAB,
+                    GufyBlockTypes.WEATHERINGWALL,
+                    GufyBlockTypes.WEATHERINGHOPPER,
+                    GufyBlockTypes.WEATHERINGPOST
+            });
+
+            // VANILLA_WAXED_COPPER_TYPES - 10
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.GUFYSTAIRS,
+                    GufyBlockTypes.GUFYSLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.GUFYWALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.POST
+            });
+
+            // VANILLA_WAXED_CUT_COPPER_TYPES - 11
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.GUFYWALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.POST
+            });
+        }};
+    }
+
+    //***********************FAMILY BUILDER***********************//
+    public static List<RegistryObject<Block>> familyBuilder(String name, GufyMaterials properties, GufyBlockTypes ... blockTypes)
+    {
+        return new ArrayList<>()
+        {{
+            for (GufyBlockTypes blockType: blockTypes)
+            {
+                switch (blockType)
+                {
+                    case BLOCK -> add(GufyRegistry.registerBlock(name, () -> new Block(propertiesBuilder(properties))));
+                    case STAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new StairBlock(() -> getGufyBlock(name).get().defaultBlockState(), propertiesBuilder(properties))));
+                    case GUFYSTAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new GufyStairs(() -> getGufyBlock(name).get().defaultBlockState(), propertiesBuilder(properties))));
+                    case SLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new SlabBlock(propertiesBuilder(properties))));
+                    case GUFYSLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new GufySlab(propertiesBuilder(properties))));
+                    case VERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyVerticalSlab(propertiesBuilder(properties))));
+                    case WALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new WallBlock(propertiesBuilder(properties))));
+                    case GUFYWALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new GufyWall(propertiesBuilder(properties))));
+                    case HOPPER -> add(GufyRegistry.registerBlock(name + "_hopper", () -> new GufyHopper(propertiesBuilder(properties))));
+                    case POST -> add(GufyRegistry.registerBlock(name + "_post", () -> new GufyPost(propertiesBuilder(properties))));
+                    case PILLAR -> add(GufyRegistry.registerBlock(name + "_pillar", () -> new RotatedPillarBlock(propertiesBuilder(properties))));
+                    case STONE_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(GufyMaterials.STONE_TRAPDOOR))));
+                    case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(properties))));
+                    case PANEL -> add(GufyRegistry.registerBlock(name + "_panel", () -> new GufyPanel(propertiesBuilder(properties))));
+                    case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
+                    case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties))));
+                    case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
+                    case WATTLEFENCE -> add(GufyRegistry.registerBlock(name, () -> new GufyWattleFence(propertiesBuilder(properties))));
+                    case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(propertiesBuilder(properties))));
+                    case PANE -> add(GufyRegistry.registerBlock(name + "_pane", () -> new GufyPane(propertiesBuilder(properties))));
+                    case HORIZONTALBLOCK -> add(GufyRegistry.registerBlock(name, () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
+                    case CHISELED -> add(GufyRegistry.registerBlock("chiseled_" + name, () -> new Block(propertiesBuilder(properties))));
+                }
+            }
+        }};
+    }
+
+    //********************FAMILY COPPER BUILDER********************//
+    public static List<RegistryObject<Block>> familyBuilder(String name, GufyMaterials properties, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes)
+    {
+        return new ArrayList<>()
+        {{
+            for (GufyBlockTypes blockType : blockTypes)
+            {
+                switch (blockType)
+                {
+                    case WEATHERINGSTAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new GufyWeatheringStairs(() -> getGufyBlock(name).get().defaultBlockState(), propertiesBuilder(properties), state)));
+                    case WEATHERINGSLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new GufyWeatheringSlab(propertiesBuilder(properties), state)));
+                    case WEATHERINGVERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(propertiesBuilder(properties), state)));
+                    case WEATHERINGWALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new GufyWeatheringWall(propertiesBuilder(properties), state)));
+                    case WEATHERINGHOPPER -> add(GufyRegistry.registerBlock(name + "_hopper", () -> new GufyWeatheringHopper(propertiesBuilder(properties), state)));
+                    case WEATHERINGPOST -> add(GufyRegistry.registerBlock(name + "_post", () -> new GufyWeatheringPost(propertiesBuilder(properties), state)));
+                }
+            }
+        }};
     }
 
 
-    //************************GET BLOCK******************************//
-    public static Block getBlock(String name) {
-        return ForgeRegistries.BLOCKS.getValue(new ResourceLocation("gufyblocks", name));
+    //************************GET BLOCK***************************//
+    public static RegistryObject<Block> getGufyBlock(String name)
+    {
+        RegistryObject<Block> GUFYBLOCK = RegistryObject.create(new ResourceLocation(GufyBlocks.MODID, name), ForgeRegistries.BLOCKS);
+        RegistryObject<Block> VANILLABLOCK = RegistryObject.create(new ResourceLocation(name), ForgeRegistries.BLOCKS);
+        RegistryObject<Block> VANILLABLOCKALT = RegistryObject.create(new ResourceLocation(name + "_block"), ForgeRegistries.BLOCKS);
+        RegistryObject<Block> DEFAULT = RegistryObject.create(new ResourceLocation("cobblestone"), ForgeRegistries.BLOCKS);
+
+        if (GUFYBLOCK.isPresent()) return GUFYBLOCK;
+        else if (VANILLABLOCK.isPresent()) return VANILLABLOCK;
+        else if (VANILLABLOCKALT.isPresent()) return VANILLABLOCKALT;
+        else return DEFAULT;
     }
 
     //************************GET ITEM*******************************//
-    public static Item getItem(String name) {
-        return ForgeRegistries.ITEMS.getValue(new ResourceLocation("gufyblocks", name));
+    public static RegistryObject<Item> getGufyItem(String name)
+    {
+        // SAME
+        return RegistryObject.create(new ResourceLocation(GufyBlocks.MODID, name), ForgeRegistries.ITEMS);
     }
 
     //************************IS DOOR******************************//
-    public static boolean isDoorBlock(BlockState blockstate) {
+    public static boolean isDoorBlock(BlockState blockstate)
+    {
         Block block = blockstate.getBlock();
-        if (block instanceof DoorBlock) {
-            //if (blockstate.has(BlockStateProperties.OPEN)) {
-            return true;
-        }
-        return false;
+        return block instanceof DoorBlock;
     }
 
     //************************GET WORLD******************************//
-    public static Level getWorldIfInstanceOfAndNotRemote(LevelAccessor iworld) {
+    public static Level getWorldIfInstanceOfAndNotRemote(LevelAccessor iworld)
+    {
         if (iworld.isClientSide()) {
             return null;
         }
@@ -114,19 +259,22 @@ public class GufyUtil
     }
 
     //***********************WAX ON*********************************//
-    public static Optional<BlockState> getWaxedOn(BlockState blockState) {
+    public static Optional<BlockState> getWaxedOn(BlockState blockState)
+    {
         return Optional.ofNullable(GufyWaxable.WAXABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
     //***********************WAX OFF*******************************//
-    public static Optional<BlockState> getWaxedOff(BlockState blockState) {
+    public static Optional<BlockState> getWaxedOff(BlockState blockState)
+    {
         return Optional.ofNullable(GufyWaxable.WAX_OFF_BY_BLOCK.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
     //***********************IS WAXED*******************************//
-    public static boolean isWaxed(BlockState blockState) {
+    public static boolean isWaxed(BlockState blockState)
+    {
         return GufyWaxable.WAXABLES.get().containsValue(blockState.getBlock());
     }
 }

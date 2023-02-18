@@ -21,7 +21,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.Event.Result;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -33,7 +33,7 @@ public class GufyDoorEvent {
 
     @SubscribeEvent
     public void onNeighbourNotice(BlockEvent.NeighborNotifyEvent e) {
-        Level world = GufyUtil.getWorldIfInstanceOfAndNotRemote(e.getWorld());
+        Level world = GufyUtil.getWorldIfInstanceOfAndNotRemote(e.getLevel());
         if (world == null) {
             return;
         }
@@ -98,12 +98,12 @@ public class GufyDoorEvent {
 
     @SubscribeEvent
     public void onDoorClick(PlayerInteractEvent.RightClickBlock e) {
-        Level world = e.getWorld();
+        Level world = e.getLevel();
         if (world.isClientSide && e.getHand().equals(InteractionHand.MAIN_HAND)) {
             return;
         }
 
-        Player player = e.getPlayer();
+        Player player = e.getEntity();
         if (player.isShiftKeyDown()) {
             return;
         }
@@ -152,7 +152,7 @@ public class GufyDoorEvent {
             BlockState ostate = world.getBlockState(bpa);
             Block oblock = ostate.getBlock();
             if (GufyUtil.isDoorBlock(ostate)) {
-                if (oblock.getRegistryName().equals(block.getRegistryName())) {
+                if (oblock.getName().equals(block.getName())) {
                     if (oblock instanceof DoorBlock) {
 
                         DoorBlock door = (DoorBlock)oblock;

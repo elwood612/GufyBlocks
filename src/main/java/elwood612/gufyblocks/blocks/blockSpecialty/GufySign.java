@@ -1,19 +1,16 @@
 package elwood612.gufyblocks.blocks.blockSpecialty;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraftforge.registries.ForgeRegistryEntry;
 import org.jetbrains.annotations.NotNull;
 
 public class GufySign extends SignBlock
 {
     private final WoodType type;
-    public GufySign(GufyMaterials block, String name, WoodType wood)
+    public GufySign(BlockBehaviour.Properties properties, WoodType wood)
     {
-        super(GufyUtil.builder(block), wood);
-        setRegistryName(name);
+        super(properties, wood);
         this.type = wood;
     }
 

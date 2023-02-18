@@ -4,13 +4,18 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableBiMap;
 import elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChangeOverTimeBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ToolAction;
 
-import java.util.Map;
+import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -18,37 +23,37 @@ public interface GufyWeathering extends ChangeOverTimeBlock<WeatheringCopper.Wea
     Supplier<BiMap<Block, Block>> NEXT_BY_BLOCK = Suppliers.memoize(() -> {
         return ImmutableBiMap.<Block, Block>builder()
                 //copper
-                .put(GufyUtil.getBlock("copper_stairs"), GufyUtil.getBlock("exposed_copper_stairs"))
-                .put(GufyUtil.getBlock("exposed_copper_stairs"), GufyUtil.getBlock("weathered_copper_stairs"))
-                .put(GufyUtil.getBlock("weathered_copper_stairs"), GufyUtil.getBlock("oxidized_copper_stairs"))
-                .put(GufyUtil.getBlock("copper_slab"), GufyUtil.getBlock("exposed_copper_slab"))
-                .put(GufyUtil.getBlock("exposed_copper_slab"), GufyUtil.getBlock("weathered_copper_slab"))
-                .put(GufyUtil.getBlock("weathered_copper_slab"), GufyUtil.getBlock("oxidized_copper_slab"))
-                .put(GufyUtil.getBlock("copper_verticalslab"), GufyUtil.getBlock("exposed_copper_verticalslab"))
-                .put(GufyUtil.getBlock("exposed_copper_verticalslab"), GufyUtil.getBlock("weathered_copper_verticalslab"))
-                .put(GufyUtil.getBlock("weathered_copper_verticalslab"), GufyUtil.getBlock("oxidized_copper_verticalslab"))
-                .put(GufyUtil.getBlock("copper_wall"), GufyUtil.getBlock("exposed_copper_wall"))
-                .put(GufyUtil.getBlock("exposed_copper_wall"), GufyUtil.getBlock("weathered_copper_wall"))
-                .put(GufyUtil.getBlock("weathered_copper_wall"), GufyUtil.getBlock("oxidized_copper_wall"))
-                .put(GufyUtil.getBlock("copper_hopper"), GufyUtil.getBlock("exposed_copper_hopper"))
-                .put(GufyUtil.getBlock("exposed_copper_hopper"), GufyUtil.getBlock("weathered_copper_hopper"))
-                .put(GufyUtil.getBlock("weathered_copper_hopper"), GufyUtil.getBlock("oxidized_copper_hopper"))
-                .put(GufyUtil.getBlock("copper_post"), GufyUtil.getBlock("exposed_copper_post"))
-                .put(GufyUtil.getBlock("exposed_copper_post"), GufyUtil.getBlock("weathered_copper_post"))
-                .put(GufyUtil.getBlock("weathered_copper_post"), GufyUtil.getBlock("oxidized_copper_post"))
+                .put(GufyUtil.getGufyBlock("copper_stairs").get(), GufyUtil.getGufyBlock("exposed_copper_stairs").get())
+                .put(GufyUtil.getGufyBlock("exposed_copper_stairs").get(), GufyUtil.getGufyBlock("weathered_copper_stairs").get())
+                .put(GufyUtil.getGufyBlock("weathered_copper_stairs").get(), GufyUtil.getGufyBlock("oxidized_copper_stairs").get())
+                .put(GufyUtil.getGufyBlock("copper_slab").get(), GufyUtil.getGufyBlock("exposed_copper_slab").get())
+                .put(GufyUtil.getGufyBlock("exposed_copper_slab").get(), GufyUtil.getGufyBlock("weathered_copper_slab").get())
+                .put(GufyUtil.getGufyBlock("weathered_copper_slab").get(), GufyUtil.getGufyBlock("oxidized_copper_slab").get())
+                .put(GufyUtil.getGufyBlock("copper_verticalslab").get(), GufyUtil.getGufyBlock("exposed_copper_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("exposed_copper_verticalslab").get(), GufyUtil.getGufyBlock("weathered_copper_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("weathered_copper_verticalslab").get(), GufyUtil.getGufyBlock("oxidized_copper_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("copper_wall").get(), GufyUtil.getGufyBlock("exposed_copper_wall").get())
+                .put(GufyUtil.getGufyBlock("exposed_copper_wall").get(), GufyUtil.getGufyBlock("weathered_copper_wall").get())
+                .put(GufyUtil.getGufyBlock("weathered_copper_wall").get(), GufyUtil.getGufyBlock("oxidized_copper_wall").get())
+                .put(GufyUtil.getGufyBlock("copper_hopper").get(), GufyUtil.getGufyBlock("exposed_copper_hopper").get())
+                .put(GufyUtil.getGufyBlock("exposed_copper_hopper").get(), GufyUtil.getGufyBlock("weathered_copper_hopper").get())
+                .put(GufyUtil.getGufyBlock("weathered_copper_hopper").get(), GufyUtil.getGufyBlock("oxidized_copper_hopper").get())
+                .put(GufyUtil.getGufyBlock("copper_post").get(), GufyUtil.getGufyBlock("exposed_copper_post").get())
+                .put(GufyUtil.getGufyBlock("exposed_copper_post").get(), GufyUtil.getGufyBlock("weathered_copper_post").get())
+                .put(GufyUtil.getGufyBlock("weathered_copper_post").get(), GufyUtil.getGufyBlock("oxidized_copper_post").get())
                 //cut_copper
-                .put(GufyUtil.getBlock("cut_copper_verticalslab"), GufyUtil.getBlock("exposed_cut_copper_verticalslab"))
-                .put(GufyUtil.getBlock("exposed_cut_copper_verticalslab"), GufyUtil.getBlock("weathered_cut_copper_verticalslab"))
-                .put(GufyUtil.getBlock("weathered_cut_copper_verticalslab"), GufyUtil.getBlock("oxidized_cut_copper_verticalslab"))
-                .put(GufyUtil.getBlock("cut_copper_wall"), GufyUtil.getBlock("exposed_cut_copper_wall"))
-                .put(GufyUtil.getBlock("exposed_cut_copper_wall"), GufyUtil.getBlock("weathered_cut_copper_wall"))
-                .put(GufyUtil.getBlock("weathered_cut_copper_wall"), GufyUtil.getBlock("oxidized_cut_copper_wall"))
-                .put(GufyUtil.getBlock("cut_copper_hopper"), GufyUtil.getBlock("exposed_cut_copper_hopper"))
-                .put(GufyUtil.getBlock("exposed_cut_copper_hopper"), GufyUtil.getBlock("weathered_cut_copper_hopper"))
-                .put(GufyUtil.getBlock("weathered_cut_copper_hopper"), GufyUtil.getBlock("oxidized_cut_copper_hopper"))
-                .put(GufyUtil.getBlock("cut_copper_post"), GufyUtil.getBlock("exposed_cut_copper_post"))
-                .put(GufyUtil.getBlock("exposed_cut_copper_post"), GufyUtil.getBlock("weathered_cut_copper_post"))
-                .put(GufyUtil.getBlock("weathered_cut_copper_post"), GufyUtil.getBlock("oxidized_cut_copper_post"))
+                .put(GufyUtil.getGufyBlock("cut_copper_verticalslab").get(), GufyUtil.getGufyBlock("exposed_cut_copper_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("exposed_cut_copper_verticalslab").get(), GufyUtil.getGufyBlock("weathered_cut_copper_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("weathered_cut_copper_verticalslab").get(), GufyUtil.getGufyBlock("oxidized_cut_copper_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("cut_copper_wall").get(), GufyUtil.getGufyBlock("exposed_cut_copper_wall").get())
+                .put(GufyUtil.getGufyBlock("exposed_cut_copper_wall").get(), GufyUtil.getGufyBlock("weathered_cut_copper_wall").get())
+                .put(GufyUtil.getGufyBlock("weathered_cut_copper_wall").get(), GufyUtil.getGufyBlock("oxidized_cut_copper_wall").get())
+                .put(GufyUtil.getGufyBlock("cut_copper_hopper").get(), GufyUtil.getGufyBlock("exposed_cut_copper_hopper").get())
+                .put(GufyUtil.getGufyBlock("exposed_cut_copper_hopper").get(), GufyUtil.getGufyBlock("weathered_cut_copper_hopper").get())
+                .put(GufyUtil.getGufyBlock("weathered_cut_copper_hopper").get(), GufyUtil.getGufyBlock("oxidized_cut_copper_hopper").get())
+                .put(GufyUtil.getGufyBlock("cut_copper_post").get(), GufyUtil.getGufyBlock("exposed_cut_copper_post").get())
+                .put(GufyUtil.getGufyBlock("exposed_cut_copper_post").get(), GufyUtil.getGufyBlock("weathered_cut_copper_post").get())
+                .put(GufyUtil.getGufyBlock("weathered_cut_copper_post").get(), GufyUtil.getGufyBlock("oxidized_cut_copper_post").get())
                 .build();
     });
     Supplier<BiMap<Block, Block>> PREVIOUS_BY_BLOCK = Suppliers.memoize(() -> {
@@ -94,6 +99,9 @@ public interface GufyWeathering extends ChangeOverTimeBlock<WeatheringCopper.Wea
     default float getChanceModifier() {
         return this.getAge() == net.minecraft.world.level.block.WeatheringCopper.WeatherState.UNAFFECTED ? 0.75F : 1.0F;
     }
+
+    //@Nullable
+    //BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate);
 
     public static enum WeatherState {
         UNAFFECTED,

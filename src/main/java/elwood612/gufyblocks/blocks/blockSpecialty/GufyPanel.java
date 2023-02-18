@@ -1,10 +1,9 @@
 package elwood612.gufyblocks.blocks.blockSpecialty;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -29,12 +28,10 @@ public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWater
     protected static final VoxelShape NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 3.0D);
     protected static final VoxelShape SOUTH_SHAPE = Block.box(0.0D, 0.0D, 13.0D, 16.0D, 16.0D, 16.0D);
 	
-	public GufyPanel(GufyMaterials block, String name)
+	public GufyPanel(BlockBehaviour.Properties properties)
 	{
-		//super(BlockBehaviour.Properties.of(block.material, block.color).strength(block.hardness, block.resistance).sound(block.sound));
-        super(GufyUtil.builder(block));
+        super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
-        setRegistryName(name);
 	}
 	
 	@Override

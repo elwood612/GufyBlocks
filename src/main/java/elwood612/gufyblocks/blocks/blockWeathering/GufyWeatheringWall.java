@@ -1,6 +1,5 @@
 package elwood612.gufyblocks.blocks.blockWeathering;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -11,6 +10,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -18,9 +18,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ToolAction;
@@ -28,23 +30,22 @@ import net.minecraftforge.common.ToolActions;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
 public class GufyWeatheringWall extends WallBlock implements GufyWeathering
 {
     private final GufyWeathering.WeatherState weatherState;
 
-    public GufyWeatheringWall(GufyMaterials block, String name, GufyWeathering.WeatherState state) {
-        super(GufyUtil.builder(block));
+    public GufyWeatheringWall(BlockBehaviour.Properties properties, GufyWeathering.WeatherState state) {
+        super(properties);
         this.weatherState = state;
-        setRegistryName(name);
     }
 
     @Nullable
     @Override
-    public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player, ItemStack stack, ToolAction toolAction)
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
     {
-        if (!stack.canPerformAction(toolAction)) return null;
+        ItemStack itemStack = context.getItemInHand();
+        if (!itemStack.canPerformAction(toolAction)) return null;
         if (ToolActions.AXE_SCRAPE.equals(toolAction)) return GufyWeathering.getPrevious(state).orElse(null);
         return null;
     }
@@ -72,7 +73,7 @@ public class GufyWeatheringWall extends WallBlock implements GufyWeathering
             return InteractionResult.PASS;
     }
 
-    public void randomTick(BlockState p_154929_, ServerLevel p_154930_, BlockPos p_154931_, Random p_154932_) {
+    public void randomTick(BlockState p_154929_, ServerLevel p_154930_, BlockPos p_154931_, RandomSource p_154932_) {
         this.onRandomTick(p_154929_, p_154930_, p_154931_, p_154932_);
     }
 

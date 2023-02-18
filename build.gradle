@@ -11,7 +11,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
-//apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
+//apply from: 'https://raw.githubusercontent.com/SizableShrimp/ForgeUpdatesRemapper/main/remapper.gradle'
 
 version = "${project.mc_version}-${project.mod_version}"
 group = 'com.github.elwood612.gufyblocks'

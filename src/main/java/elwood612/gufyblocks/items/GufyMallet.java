@@ -26,13 +26,12 @@ public class GufyMallet extends TieredItem
 {
 	protected static final Map<Block, Block> CRACKABLES = (new ImmutableMap.Builder<Block, Block>())
 			.put(Blocks.STONE_BRICKS, Blocks.CRACKED_STONE_BRICKS)
-			.put(GufyUtil.getBlock("cobblestone_bricks"), GufyUtil.getBlock("cracked_cobblestone_bricks"))
+			.put(GufyUtil.getGufyBlock("cobblestone_bricks").get(), GufyUtil.getGufyBlock("cracked_cobblestone_bricks").get())
 			.build();
 
-	public GufyMallet(String name, Tier tier, Item.Properties properties)
+	public GufyMallet(Tier tier, Item.Properties properties)
 	{
 		super(tier, properties);
-		setRegistryName(name);
 	}
 
 	public InteractionResult useOn(UseOnContext context) {

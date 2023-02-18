@@ -2,6 +2,6 @@
     "parent": "block/cube_all",
     "textures": 
     {
-        "all": "gufyblocks:block/daub2"
+        "all": "gufyblocks:block/legacy_texture"
     }
 }

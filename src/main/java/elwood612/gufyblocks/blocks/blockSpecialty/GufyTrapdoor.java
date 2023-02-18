@@ -1,15 +1,13 @@
 package elwood612.gufyblocks.blocks.blockSpecialty;
 
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class GufyTrapdoor extends TrapDoorBlock
 {
-    public GufyTrapdoor(GufyMaterials block, String name)
+    public GufyTrapdoor(BlockBehaviour.Properties properties)
     {
-        super(GufyUtil.builder(block));
-        setRegistryName(name);
+        super(properties);
 	}
 
 }
