@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/verticalslab",
+	"textures": 
+	{
+		"texture": "minecraft:block/nether_wart_block"
+	}
+}

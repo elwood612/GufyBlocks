@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "gufyblocks:block/nether_wart_slab" },
-        "type=top": { "model": "gufyblocks:block/nether_wart_slab_top" },
-        "type=double": { "model": "minecraft:block/nether_wart_block" }
-    }
-}

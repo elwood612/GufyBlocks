@@ -13,8 +13,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
-import net.minecraft.world.level.block.StoneButtonBlock;
-import net.minecraft.world.level.block.WoodButtonBlock;
+import net.minecraft.world.level.block.ButtonBlock;
+//import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -44,7 +44,7 @@ public class GufyDoorEvent {
         Block block = state.getBlock();
 
         if (!(block instanceof PressurePlateBlock)) {
-            if (!(block instanceof StoneButtonBlock) && !(block instanceof WoodButtonBlock)) {
+            if (!(block instanceof ButtonBlock)) {
                 return;
             }
             else {
