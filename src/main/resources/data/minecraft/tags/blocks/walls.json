@@ -1,6 +1,14 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:big_warped_wall", 
+    "gufyblocks:big_crimson_wall", 
+    "gufyblocks:big_acacia_wall", 
+    "gufyblocks:big_jungle_wall", 
+    "gufyblocks:big_dark_oak_wall", 
+    "gufyblocks:big_birch_wall", 
+    "gufyblocks:big_spruce_wall", 
+    "gufyblocks:big_oak_wall", 
     "gufyblocks:gilded_blackstone_wall", 
     "gufyblocks:cracked_polished_blackstone_brick_wall", 
     "gufyblocks:purpur_wall", 

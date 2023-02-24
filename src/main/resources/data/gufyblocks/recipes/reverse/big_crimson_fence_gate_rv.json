@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_crimson",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:big_crimson_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_crimson",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_jungle",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:big_jungle_stairs"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_jungle",
+    "count": 3
+  }
+}

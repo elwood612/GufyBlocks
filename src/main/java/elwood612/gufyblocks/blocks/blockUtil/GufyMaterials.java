@@ -79,6 +79,7 @@ public enum GufyMaterials
 	JUNGLE(Material.WOOD, MaterialColor.DIRT, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	DARK_OAK(Material.WOOD, MaterialColor.COLOR_BROWN, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	ACACIA(Material.WOOD, MaterialColor.COLOR_ORANGE, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	MANGROVE(Material.WOOD, MaterialColor.COLOR_RED, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	CRIMSON(Material.NETHER_WOOD, MaterialColor.CRIMSON_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	WARPED(Material.NETHER_WOOD, MaterialColor.WARPED_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	NETHER_WART(Material.GRASS, MaterialColor.COLOR_RED, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),

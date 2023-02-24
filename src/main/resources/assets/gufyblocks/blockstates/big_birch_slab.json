@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/big_birch_slab" },
+        "type=top": { "model": "gufyblocks:block/big_birch_slab_top" },
+        "type=double": { "model": "gufyblocks:block/big_birch" }
+    }
+}

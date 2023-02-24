@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/big_jungle",
+    "top": "gufyblocks:block/big_jungle",
+    "side": "gufyblocks:block/big_jungle"
+  }
+}
