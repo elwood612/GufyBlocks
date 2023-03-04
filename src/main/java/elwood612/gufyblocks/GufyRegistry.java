@@ -3,9 +3,10 @@ package elwood612.gufyblocks;
 import elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import elwood612.gufyblocks.items.GufyHammer;
+import elwood612.gufyblocks.items.GufyMossClump;
 import elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -37,6 +38,7 @@ public class GufyRegistry
     private static final GufyBlockTypes[] CUT_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(9);
     private static final GufyBlockTypes[] WAXED_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(10);
     private static final GufyBlockTypes[] WAXED_CUT_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(11);
+    private static final GufyBlockTypes[] VANILLA_STRIPPABLE_WOOD_TYPES_ALL = GufyUtil.blocktypeBuilder().get(12);
     //**************************************************************//
 
 
@@ -50,37 +52,37 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("big_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("oak_wood", GufyMaterials.OAK, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("oak_wood", GufyMaterials.OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_oak_wood", GufyMaterials.OAK, VANILLA_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("spruce", GufyMaterials.SPRUCE, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_spruce", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_spruce", GufyMaterials.SPRUCE, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_spruce", GufyMaterials.SPRUCE, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("spruce_wood", GufyMaterials.SPRUCE, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("spruce_wood", GufyMaterials.SPRUCE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_spruce_wood", GufyMaterials.SPRUCE, VANILLA_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("birch", GufyMaterials.BIRCH, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_birch", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_birch", GufyMaterials.BIRCH, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_birch", GufyMaterials.BIRCH, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("birch_wood", GufyMaterials.BIRCH, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("birch_wood", GufyMaterials.BIRCH, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_birch_wood", GufyMaterials.BIRCH, VANILLA_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("dark_oak", GufyMaterials.DARK_OAK, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_dark_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_dark_oak", GufyMaterials.DARK_OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_dark_oak", GufyMaterials.DARK_OAK, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("dark_oak_wood", GufyMaterials.DARK_OAK, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("dark_oak_wood", GufyMaterials.DARK_OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_dark_oak_wood", GufyMaterials.DARK_OAK, VANILLA_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("jungle", GufyMaterials.JUNGLE, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_jungle", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_jungle", GufyMaterials.JUNGLE, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_jungle", GufyMaterials.JUNGLE, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("jungle_wood", GufyMaterials.JUNGLE, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("jungle_wood", GufyMaterials.JUNGLE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_jungle_wood", GufyMaterials.JUNGLE, VANILLA_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("acacia", GufyMaterials.ACACIA, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_acacia", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_acacia", GufyMaterials.ACACIA, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_acacia", GufyMaterials.ACACIA, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("acacia_wood", GufyMaterials.ACACIA, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("acacia_wood", GufyMaterials.ACACIA, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_acacia_wood", GufyMaterials.ACACIA, VANILLA_WOOD_TYPES_ALL));
         // mangrove here
         //add(GufyUtil.familyBuilder("mangrove", GufyMaterials.MANGROVE, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
@@ -90,13 +92,13 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("big_crimson", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_crimson", GufyMaterials.CRIMSON, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_crimson", GufyMaterials.CRIMSON, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("crimson_hyphae", GufyMaterials.CRIMSON, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("crimson_hyphae", GufyMaterials.CRIMSON, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_crimson_hyphae", GufyMaterials.CRIMSON, VANILLA_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("warped", GufyMaterials.WARPED, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_warped", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_warped", GufyMaterials.WARPED, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("cracked_warped", GufyMaterials.WARPED, GUFY_WOOD_TYPES));
-        add(GufyUtil.familyBuilder("warped_hyphae", GufyMaterials.WARPED, VANILLA_WOOD_TYPES_ALL));
+        add(GufyUtil.familyBuilder("warped_hyphae", GufyMaterials.WARPED, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(GufyUtil.familyBuilder("stripped_warped_hyphae", GufyMaterials.WARPED, VANILLA_WOOD_TYPES_ALL));
 
         // ~~ DIRTS ~~ //
@@ -300,6 +302,13 @@ public class GufyRegistry
     //**************************************************************//
 
 
+
+    //****************************ITEMS*****************************//
+    public static final RegistryObject<Item> MOSS_CLUMP = ITEMS.register("moss_clump", () -> new GufyMossClump(new Item.Properties()));
+    public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer", () -> new GufyHammer(new Item.Properties().durability(216)));
+    //**************************************************************//
+
+
     //***********************REGISTRY METHODS***********************//
     public static void registerBus(IEventBus bus) {
         BLOCKS.register(bus);
@@ -312,6 +321,10 @@ public class GufyRegistry
     }
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         GufyRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+    private static <T extends Item>RegistryObject<T> registerItem(String name, Supplier<T> item){
+        RegistryObject<T> toReturn = GufyRegistry.ITEMS.register(name, item);
+        return toReturn;
     }
     //**************************************************************//
 }

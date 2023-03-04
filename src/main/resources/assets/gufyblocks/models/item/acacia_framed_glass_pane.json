@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:item/generated",
+  "render_type": "translucent",
   "textures": {
     "layer0": "gufyblocks:item/acacia_framed_glass_pane"
   }

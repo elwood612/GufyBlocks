@@ -7,12 +7,8 @@ import elwood612.gufyblocks.blocks.blockSpecialty.GufyHorizontalBlock;
 import elwood612.gufyblocks.blocks.blockSpecialty.GufyPane;
 import elwood612.gufyblocks.blocks.blockSpecialty.GufyPanel;
 import elwood612.gufyblocks.blocks.blockSpecialty.GufyWattleFence;
-import elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
-import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import elwood612.gufyblocks.blocks.blockUtil.GufyWaxable;
-import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import elwood612.gufyblocks.blocks.blockUtil.*;
 import elwood612.gufyblocks.blocks.blockWeathering.*;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
@@ -159,6 +155,18 @@ public class GufyUtil
                     GufyBlockTypes.HOPPER,
                     GufyBlockTypes.POST
             });
+
+            // VANILLA_STRIPPABLE_WOOD_TYPES_ALL - 12
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.GUFYSTAIRS,
+                    GufyBlockTypes.GUFYSLAB,
+                    GufyBlockTypes.VERTICALSLAB,
+                    GufyBlockTypes.GUFYWALL,
+                    GufyBlockTypes.HOPPER,
+                    GufyBlockTypes.GUFYFENCE,
+                    GufyBlockTypes.FENCEGATE,
+                    GufyBlockTypes.PANEL
+            });
         }};
     }
 
@@ -186,6 +194,7 @@ public class GufyUtil
                     case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(properties), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN)));
                     case PANEL -> add(GufyRegistry.registerBlock(name + "_panel", () -> new GufyPanel(propertiesBuilder(properties))));
                     case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
+                    case GUFYFENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new GufyFence(propertiesBuilder(properties))));
                     case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN)));
                     case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
                     case WATTLEFENCE -> add(GufyRegistry.registerBlock(name, () -> new GufyWattleFence(propertiesBuilder(properties))));
@@ -259,23 +268,45 @@ public class GufyUtil
         return null;
     }
 
-    //***********************WAX ON*********************************//
+    //***********************GET MAPPED BLOCKS*********************************//
     public static Optional<BlockState> getWaxedOn(BlockState blockState)
     {
         return Optional.ofNullable(GufyWaxable.WAXABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    //***********************WAX OFF*******************************//
     public static Optional<BlockState> getWaxedOff(BlockState blockState)
     {
         return Optional.ofNullable(GufyWaxable.WAX_OFF_BY_BLOCK.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
+    public static Optional<BlockState> getMossy(BlockState blockState)
+    {
+        return Optional.ofNullable(GufyMossable.MOSSABLES.get().get(blockState.getBlock())).map((newBlockState) ->
+                newBlockState.withPropertiesOf(blockState));
+    }
+
+    public static Optional<BlockState> getCracked(BlockState blockState)
+    {
+        return Optional.ofNullable(GufyCrackable.CRACKABLES.get().get(blockState.getBlock())).map((newBlockState) ->
+                newBlockState.withPropertiesOf(blockState));
+    }
+
+    public static Optional<BlockState> getStripped(BlockState blockState)
+    {
+        return Optional.ofNullable(GufyStrippable.STRIPPABLES.get().get(blockState.getBlock())).map((newBlockState) ->
+                newBlockState.withPropertiesOf(blockState));
+    }
+
     //***********************IS WAXED*******************************//
-    public static boolean isWaxed(BlockState blockState)
+    public static boolean isScrapeable(BlockState blockState)
     {
         return GufyWaxable.WAXABLES.get().containsValue(blockState.getBlock());
+    }
+
+    public static boolean isStrippable(BlockState blockState)
+    {
+        return GufyStrippable.STRIPPABLES.get().containsKey(blockState.getBlock());
     }
 }

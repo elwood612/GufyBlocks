@@ -73,22 +73,22 @@ public class GufyWeatheringHopper extends Block implements GufyWeathering, Simpl
 
     @NotNull
     @Override
-    public InteractionResult use(BlockState blockState, Level world, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult blockHitResult)
+    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult blockHitResult)
     {
         Item handheldItem = player.getItemInHand(hand).getItem();
         if (Items.HONEYCOMB.equals(handheldItem)) {
             return GufyUtil.getWaxedOn(blockState).map((newBlockState) -> {
                 ItemStack itemStack = player.getItemInHand(hand);
-                if (!world.isClientSide)
+                if (player instanceof ServerPlayer)
                     CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockPos, itemStack);
                 if (!player.isCreative())
                     itemStack.shrink(1);
-                world.setBlock(blockPos, newBlockState, 11);
-                world.playSound(null, blockPos, SoundEvents.HONEYCOMB_WAX_ON, SoundSource.BLOCKS, 1.0F, 1.0F);
-                world.levelEvent(player, 3003, blockPos, 0);
-                if (world.isClientSide)
-                    ParticleUtils.spawnParticlesOnBlockFaces(world, blockPos, ParticleTypes.WAX_OFF, UniformInt.of(3, 5));
-                return InteractionResult.sidedSuccess(world.isClientSide);
+                level.setBlock(blockPos, newBlockState, 11);
+                //world.playSound(null, blockPos, SoundEvents.HONEYCOMB_WAX_ON, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.levelEvent(player, 3003, blockPos, 0);
+                //if (world.isClientSide)
+                //    ParticleUtils.spawnParticlesOnBlockFaces(world, blockPos, ParticleTypes.WAX_OFF, UniformInt.of(3, 5));
+                return InteractionResult.sidedSuccess(level.isClientSide);
             }).orElse(InteractionResult.CONSUME);
         } else
             return InteractionResult.PASS;

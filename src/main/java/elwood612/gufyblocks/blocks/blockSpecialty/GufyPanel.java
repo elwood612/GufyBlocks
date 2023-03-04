@@ -1,5 +1,8 @@
 package elwood612.gufyblocks.blocks.blockSpecialty;
 
+import elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -18,6 +21,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
+
+import javax.annotation.Nullable;
 
 public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock
 {  
@@ -38,6 +45,17 @@ public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWater
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) 
     {
         builder.add(FACING, WATERLOGGED);
+    }
+
+    @Nullable
+    @Override
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
+    {
+        ItemStack itemStack = context.getItemInHand();
+        if (!itemStack.canPerformAction(toolAction)) return null;
+        if(ToolActions.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
+            return GufyUtil.getStripped(state).orElse(null);
+        return null;
     }
 	
 	@Override

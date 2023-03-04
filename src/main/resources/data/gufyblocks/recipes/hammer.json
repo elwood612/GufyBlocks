@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+	"Y": {
+      "item": "minecraft:coal_block"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "YYY",
+    " # "
+  ],
+  "result": {
+    "item": "gufyblocks:hammer"
+  }
+}

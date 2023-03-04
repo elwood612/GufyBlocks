@@ -34,4 +34,5 @@ public enum GufyBlockTypes
     GUFYSTAIRS,
     GUFYSLAB,
     GUFYWALL,
+    GUFYFENCE,
 }
