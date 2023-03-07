@@ -3,6 +3,7 @@ package elwood612.gufyblocks;
 import elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import elwood612.gufyblocks.items.GufyFramingTool;
 import elwood612.gufyblocks.items.GufyHammer;
 import elwood612.gufyblocks.items.GufyMossClump;
 import elwood612.gufyblocks.util.GufyUtil;
@@ -39,6 +40,7 @@ public class GufyRegistry
     private static final GufyBlockTypes[] WAXED_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(10);
     private static final GufyBlockTypes[] WAXED_CUT_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(11);
     private static final GufyBlockTypes[] VANILLA_STRIPPABLE_WOOD_TYPES_ALL = GufyUtil.blocktypeBuilder().get(12);
+    private static final GufyBlockTypes[] FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(13);
     //**************************************************************//
 
 
@@ -256,30 +258,29 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("dark_oak_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("jungle_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("acacia_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
-        // mangrove here
-        // cherry here
+        add(GufyUtil.familyBuilder("mangrove_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("crimson_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("warped_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(GufyUtil.familyBuilder("oak_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("spruce_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("birch_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("dark_oak_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("jungle_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("acacia_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        // mangrove here
-        // cherry here
-        add(GufyUtil.familyBuilder("crimson_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("warped_framed_daub", GufyMaterials.FRAMED_BROWN, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("oak_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("spruce_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("birch_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("dark_oak_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("jungle_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("acacia_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        // mangrove here
-        // cherry here
-        add(GufyUtil.familyBuilder("crimson_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
-        add(GufyUtil.familyBuilder("warped_framed_terracotta", GufyMaterials.FRAMED_WHITE, GufyBlockTypes.HORIZONTALBLOCK));
+
+        add(GufyUtil.familyBuilder("oak_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("spruce_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("birch_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("dark_oak_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("jungle_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("acacia_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("mangrove_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("crimson_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("warped_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+
+        add(GufyUtil.familyBuilder("oak_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("spruce_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("birch_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("dark_oak_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("jungle_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("acacia_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("mangrove_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("crimson_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("warped_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
 
         // ~~ COPPER ~~ //
         add(GufyUtil.familyBuilder("copper", GufyMaterials.COPPER, GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
@@ -306,6 +307,15 @@ public class GufyRegistry
     //****************************ITEMS*****************************//
     public static final RegistryObject<Item> MOSS_CLUMP = ITEMS.register("moss_clump", () -> new GufyMossClump(new Item.Properties()));
     public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer", () -> new GufyHammer(new Item.Properties().durability(216)));
+    public static final RegistryObject<Item> OAK_FRAMING_TOOL = ITEMS.register("oak_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.OAK));
+    public static final RegistryObject<Item> SPRUCE_FRAMING_TOOL = ITEMS.register("spruce_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.SPRUCE));
+    public static final RegistryObject<Item> BIRCH_FRAMING_TOOL = ITEMS.register("birch_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.BIRCH));
+    public static final RegistryObject<Item> DARK_OAK_FRAMING_TOOL = ITEMS.register("dark_oak_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.DARK_OAK));
+    public static final RegistryObject<Item> JUNGLE_FRAMING_TOOL = ITEMS.register("jungle_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.JUNGLE));
+    public static final RegistryObject<Item> ACACIA_FRAMING_TOOL = ITEMS.register("acacia_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.ACACIA));
+    public static final RegistryObject<Item> MANGROVE_FRAMING_TOOL = ITEMS.register("mangrove_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.MANGROVE));
+    public static final RegistryObject<Item> CRIMSON_FRAMING_TOOL = ITEMS.register("crimson_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.CRIMSON));
+    public static final RegistryObject<Item> WARPED_FRAMING_TOOL = ITEMS.register("warped_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.WARPED));
     //**************************************************************//
 
 

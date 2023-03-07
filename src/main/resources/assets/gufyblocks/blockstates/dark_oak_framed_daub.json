@@ -1,8 +1,7 @@
 {
-    "variants": {
-        "facing=north": { "model": "gufyblocks:block/dark_oak_framed_daub" },
-        "facing=west": { "model": "gufyblocks:block/dark_oak_framed_daub2" },
-        "facing=south": { "model": "gufyblocks:block/dark_oak_framed_daub3" },
-        "facing=east": { "model": "gufyblocks:block/dark_oak_framed_daub4" }
+  "variants": {
+    "": {
+      "model": "gufyblocks:block/dark_oak_framed_daub"
     }
+  }
 }

@@ -35,4 +35,8 @@ public enum GufyBlockTypes
     GUFYSLAB,
     GUFYWALL,
     GUFYFENCE,
+
+    FRAMED_LEFT,
+    FRAMED_RIGHT,
+    FRAMED_CROSS,
 }

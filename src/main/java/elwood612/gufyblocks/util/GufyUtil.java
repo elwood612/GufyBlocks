@@ -8,6 +8,7 @@ import elwood612.gufyblocks.blocks.blockSpecialty.GufyPane;
 import elwood612.gufyblocks.blocks.blockSpecialty.GufyPanel;
 import elwood612.gufyblocks.blocks.blockSpecialty.GufyWattleFence;
 import elwood612.gufyblocks.blocks.blockUtil.*;
+import elwood612.gufyblocks.blocks.blockUtil.GufyFrameable;
 import elwood612.gufyblocks.blocks.blockWeathering.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -15,8 +16,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -167,6 +172,14 @@ public class GufyUtil
                     GufyBlockTypes.FENCEGATE,
                     GufyBlockTypes.PANEL
             });
+
+            // FRAMED_BLOCK_TYPES - 13
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.BLOCK,
+                    GufyBlockTypes.FRAMED_LEFT,
+                    GufyBlockTypes.FRAMED_RIGHT,
+                    GufyBlockTypes.FRAMED_CROSS
+            });
         }};
     }
 
@@ -202,6 +215,9 @@ public class GufyUtil
                     case PANE -> add(GufyRegistry.registerBlock(name + "_pane", () -> new GufyPane(propertiesBuilder(properties))));
                     case HORIZONTALBLOCK -> add(GufyRegistry.registerBlock(name, () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
                     case CHISELED -> add(GufyRegistry.registerBlock("chiseled_" + name, () -> new Block(propertiesBuilder(properties))));
+                    case FRAMED_LEFT -> add(GufyRegistry.registerBlock(name + "_left", () -> new Block(propertiesBuilder(properties))));
+                    case FRAMED_RIGHT -> add(GufyRegistry.registerBlock(name + "_right", () -> new Block(propertiesBuilder(properties))));
+                    case FRAMED_CROSS -> add(GufyRegistry.registerBlock(name + "_cross", () -> new Block(propertiesBuilder(properties))));
                 }
             }
         }};
@@ -256,6 +272,7 @@ public class GufyUtil
         return block instanceof DoorBlock;
     }
 
+
     //************************GET WORLD******************************//
     public static Level getWorldIfInstanceOfAndNotRemote(LevelAccessor iworld)
     {
@@ -297,6 +314,49 @@ public class GufyUtil
     {
         return Optional.ofNullable(GufyStrippable.STRIPPABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
+    }
+
+    public static Optional<BlockState> getFrameable(BlockState blockState, GufyMaterials material)
+    {
+        switch(material){
+            case OAK -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_OAK.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case SPRUCE -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_SPRUCE.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case BIRCH -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_BIRCH.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case DARK_OAK -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_DARK_OAK.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case JUNGLE -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_JUNGLE.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case ACACIA -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_ACACIA.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case MANGROVE -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_MANGROVE.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case CRIMSON -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_CRIMSON.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+            case WARPED -> {
+                return Optional.ofNullable(GufyFrameable.FRAMEABLES_WARPED.get().get(blockState.getBlock())).map((newBlockState) ->
+                        newBlockState.withPropertiesOf(blockState));
+            }
+        }
+        return null;
     }
 
     //***********************IS WAXED*******************************//

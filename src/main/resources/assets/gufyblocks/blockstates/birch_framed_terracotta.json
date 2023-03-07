@@ -1,8 +1,7 @@
 {
-    "variants": {
-        "facing=north": { "model": "gufyblocks:block/birch_framed_terracotta" },
-        "facing=west": { "model": "gufyblocks:block/birch_framed_terracotta2" },
-        "facing=south": { "model": "gufyblocks:block/birch_framed_terracotta3" },
-        "facing=east": { "model": "gufyblocks:block/birch_framed_terracotta4" }
+  "variants": {
+    "": {
+      "model": "gufyblocks:block/birch_framed_terracotta"
     }
+  }
 }
