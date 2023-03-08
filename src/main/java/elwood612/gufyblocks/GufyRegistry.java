@@ -3,7 +3,6 @@ package elwood612.gufyblocks;
 import elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
-import elwood612.gufyblocks.items.GufyFramingTool;
 import elwood612.gufyblocks.items.GufyHammer;
 import elwood612.gufyblocks.items.GufyMossClump;
 import elwood612.gufyblocks.util.GufyUtil;
@@ -307,15 +306,6 @@ public class GufyRegistry
     //****************************ITEMS*****************************//
     public static final RegistryObject<Item> MOSS_CLUMP = ITEMS.register("moss_clump", () -> new GufyMossClump(new Item.Properties()));
     public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer", () -> new GufyHammer(new Item.Properties().durability(216)));
-    public static final RegistryObject<Item> OAK_FRAMING_TOOL = ITEMS.register("oak_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.OAK));
-    public static final RegistryObject<Item> SPRUCE_FRAMING_TOOL = ITEMS.register("spruce_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.SPRUCE));
-    public static final RegistryObject<Item> BIRCH_FRAMING_TOOL = ITEMS.register("birch_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.BIRCH));
-    public static final RegistryObject<Item> DARK_OAK_FRAMING_TOOL = ITEMS.register("dark_oak_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.DARK_OAK));
-    public static final RegistryObject<Item> JUNGLE_FRAMING_TOOL = ITEMS.register("jungle_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.JUNGLE));
-    public static final RegistryObject<Item> ACACIA_FRAMING_TOOL = ITEMS.register("acacia_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.ACACIA));
-    public static final RegistryObject<Item> MANGROVE_FRAMING_TOOL = ITEMS.register("mangrove_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.MANGROVE));
-    public static final RegistryObject<Item> CRIMSON_FRAMING_TOOL = ITEMS.register("crimson_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.CRIMSON));
-    public static final RegistryObject<Item> WARPED_FRAMING_TOOL = ITEMS.register("warped_framing_tool", () -> new GufyFramingTool(new Item.Properties(), GufyMaterials.WARPED));
     //**************************************************************//
 
 

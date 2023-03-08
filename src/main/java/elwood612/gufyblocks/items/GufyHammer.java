@@ -29,7 +29,7 @@ public class GufyHammer extends Item{
             Player player = context.getPlayer();
             ItemStack itemstack = context.getItemInHand();
             if (player instanceof ServerPlayer) {
-                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer)player, blockpos, itemstack);
+                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockpos, itemstack);
                 itemstack.hurtAndBreak(1, player, (p_41300_) -> {
                     p_41300_.broadcastBreakEvent(context.getHand());
                 });
@@ -40,6 +40,6 @@ public class GufyHammer extends Item{
             if (level.isClientSide)
                 ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.ASH, UniformInt.of(3, 5));
             return InteractionResult.sidedSuccess(level.isClientSide);
-        }).orElse(InteractionResult.PASS);
+            }).orElse(InteractionResult.PASS);
     }
 }
