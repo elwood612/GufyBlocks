@@ -1,28 +1,31 @@
-buildscript {
-	gradle.startParameter.showStacktrace = org.gradle.api.logging.configuration.ShowStacktrace.ALWAYS
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${project.forge_gradle_version}", changing: true
-    }
+plugins {
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'idea'
-//apply from: 'https://raw.githubusercontent.com/SizableShrimp/ForgeUpdatesRemapper/main/remapper.gradle'
 
 version = "${project.mc_version}-${project.mod_version}"
 group = 'com.github.elwood612.gufyblocks'
 archivesBaseName = "${project.archiveBaseName}"
 
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+//buildscript {
+//	gradle.startParameter.showStacktrace = org.gradle.api.logging.configuration.ShowStacktrace.ALWAYS
+ //   repositories {
+ //       maven { url = 'https://maven.minecraftforge.net' }
+ //       jcenter()
+ //       mavenCentral()
+ //   }
+ //   dependencies {
+ //       classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${project.forge_gradle_version}", changing: true
+ //   }
+//}
+
+
+
 sourceSets {
     main
-}
-
-compileJava {
-    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
 def resourceTargets = ['META-INF/mods.toml']
@@ -62,7 +65,7 @@ minecraft {
             property 'forge.logging.console.level', 'stacktrace'
 
             mods {
-                gufyblocks {
+                "${project.mod_id}" {
                     source sourceSets.main
                 }
             }
@@ -102,7 +105,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "Gufy Blocks",
+            "Specification-Title": "GufyBlocks",
             "Specification-Vendor": "elwood612",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": "Gufy Blocks",

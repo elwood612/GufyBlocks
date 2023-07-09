@@ -1,6 +1,5 @@
 package elwood612.gufyblocks.util;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -14,12 +13,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.ButtonBlock;
-//import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.Event.Result;
@@ -111,10 +108,8 @@ public class GufyDoorEvent {
         BlockPos cpos = e.getPos();
         BlockState clickstate = world.getBlockState(cpos);
 
-        if (!GufyUtil.isDoorBlock(clickstate)) {
-            return;
-        }
-        if (clickstate.getMaterial().equals(Material.METAL)) {
+
+        if (!GufyUtil.isWoodenDoorBlock(clickstate)) {
             return;
         }
 

@@ -6,8 +6,12 @@ import elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import elwood612.gufyblocks.items.GufyHammer;
 import elwood612.gufyblocks.items.GufyMossClump;
 import elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,6 +30,7 @@ public class GufyRegistry
     //***************************VARIABLES**************************//
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     private static final GufyBlockTypes[] GUFY_STONE_TYPES = GufyUtil.blocktypeBuilder().get(0);
     private static final GufyBlockTypes[] VANILLA_STONE_TYPES = GufyUtil.blocktypeBuilder().get(1);
     private static final GufyBlockTypes[] GUFY_WOOD_TYPES = GufyUtil.blocktypeBuilder().get(2);
@@ -304,8 +309,30 @@ public class GufyRegistry
 
 
     //****************************ITEMS*****************************//
-    public static final RegistryObject<Item> MOSS_CLUMP = ITEMS.register("moss_clump", () -> new GufyMossClump(new Item.Properties()));
-    public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer", () -> new GufyHammer(new Item.Properties().durability(216)));
+    public static final RegistryObject<Item> MOSS_CLUMP = ITEMS.register("moss_clump",
+            () -> new GufyMossClump(new Item.Properties()));
+    public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer",
+            () -> new GufyHammer(new Item.Properties().durability(216)));
+    //**************************************************************//
+
+
+    //****************************TABS******************************//
+    public static final RegistryObject<CreativeModeTab> GUFYBLOCKS_TAB = TABS.register("gufyblocks",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.gufyblocks.tab"))
+                    .icon((() -> new ItemStack(GufyUtil.getGufyBlock("cobblestone_bricks").get())))
+                    .displayItems((displayParameters, output) -> {
+                        for (RegistryObject<Block> block : GufyRegistry.BLOCKS.getEntries())
+                        {
+                            output.accept(block.get());
+                        }
+                        for (RegistryObject<Item> item : GufyRegistry.ITEMS.getEntries())
+                        {
+                            output.accept(item.get());
+                        }
+                    })
+                    .build()
+    );
     //**************************************************************//
 
 
@@ -313,6 +340,7 @@ public class GufyRegistry
     public static void registerBus(IEventBus bus) {
         BLOCKS.register(bus);
         ITEMS.register(bus);
+        TABS.register(bus);
     }
     public static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = GufyRegistry.BLOCKS.register(name, block);

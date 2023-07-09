@@ -17,6 +17,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -31,7 +32,8 @@ public class GufyUtil
     public static BlockBehaviour.Properties propertiesBuilder(GufyMaterials block)
     {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties
-                .of(block.material, block.color)
+                .of()
+                .mapColor(block.color)
                 .strength(block.hardness, block.resistance)
                 .sound(block.sound);
         if (block.tool) properties = properties.requiresCorrectToolForDrops();
@@ -198,15 +200,15 @@ public class GufyUtil
                     case HOPPER -> add(GufyRegistry.registerBlock(name + "_hopper", () -> new GufyHopper(propertiesBuilder(properties))));
                     case POST -> add(GufyRegistry.registerBlock(name + "_post", () -> new GufyPost(propertiesBuilder(properties))));
                     case PILLAR -> add(GufyRegistry.registerBlock(name + "_pillar", () -> new RotatedPillarBlock(propertiesBuilder(properties))));
-                    case STONE_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(GufyMaterials.STONE_TRAPDOOR), SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN)));
-                    case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(properties), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN)));
+                    case STONE_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(GufyMaterials.STONE_TRAPDOOR), BlockSetType.STONE)));
+                    case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(properties), BlockSetType.OAK)));
                     case PANEL -> add(GufyRegistry.registerBlock(name + "_panel", () -> new GufyPanel(propertiesBuilder(properties))));
                     case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
                     case GUFYFENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new GufyFence(propertiesBuilder(properties))));
                     case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN)));
                     case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
                     case WATTLEFENCE -> add(GufyRegistry.registerBlock(name, () -> new GufyWattleFence(propertiesBuilder(properties))));
-                    case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(propertiesBuilder(properties), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN)));
+                    case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(propertiesBuilder(properties), BlockSetType.OAK)));
                     case PANE -> add(GufyRegistry.registerBlock(name + "_pane", () -> new GufyPane(propertiesBuilder(properties))));
                     case HORIZONTALBLOCK -> add(GufyRegistry.registerBlock(name, () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
                     case CHISELED -> add(GufyRegistry.registerBlock("chiseled_" + name, () -> new Block(propertiesBuilder(properties))));
@@ -265,6 +267,15 @@ public class GufyUtil
     {
         Block block = blockstate.getBlock();
         return block instanceof DoorBlock;
+    }
+
+    //*********************IS WOODEN DOOR**************************//
+    public static boolean isWoodenDoorBlock(BlockState blockstate){
+        Block block = blockstate.getBlock();
+        if (block instanceof DoorBlock doorblock) {
+            return doorblock.type().canOpenByHand();
+        }
+        return false;
     }
 
 
