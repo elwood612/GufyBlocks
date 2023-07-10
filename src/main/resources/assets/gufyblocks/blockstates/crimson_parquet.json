@@ -1,8 +1,5 @@
 {
     "variants": {
-        "facing=south": { "model": "gufyblocks:block/crimson_parquet" },
-        "facing=west": { "model": "gufyblocks:block/crimson_parquet2" },
-        "facing=north": { "model": "gufyblocks:block/crimson_parquet3" },
-        "facing=east": { "model": "gufyblocks:block/crimson_parquet4" }
+        "": { "model": "gufyblocks:block/crimson_parquet" }
     }
 }

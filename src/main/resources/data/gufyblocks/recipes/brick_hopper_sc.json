@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:brick"
-  },
-  "result": "gufyblocks:brick_hopper",
-  "count": 1
-}

@@ -30,10 +30,10 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
     protected static final VoxelShape NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
     protected static final VoxelShape SOUTH_SHAPE = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
     
-    protected static final VoxelShape COLLISION_WEST_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 24.0D, 16.0D);
-    protected static final VoxelShape COLLISION_EAST_SHAPE = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 24.0D, 16.0D);
-    protected static final VoxelShape COLLISION_NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 24.0D, 1.0D);
-    protected static final VoxelShape COLLISION_SOUTH_SHAPE = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 24.0D, 16.0D);
+    protected static final VoxelShape COLLISION_WEST_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
+    protected static final VoxelShape COLLISION_EAST_SHAPE = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape COLLISION_NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
+    protected static final VoxelShape COLLISION_SOUTH_SHAPE = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
 
     public GufyWattleFence(BlockBehaviour.Properties properties)
     {

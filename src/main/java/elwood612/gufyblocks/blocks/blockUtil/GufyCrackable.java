@@ -28,7 +28,53 @@ public interface GufyCrackable {
                 .put(GufyUtil.getGufyBlock("cobblestone_bricks_wall").get(), GufyUtil.getGufyBlock("cracked_cobblestone_bricks_wall").get())
                 .put(GufyUtil.getGufyBlock("cobblestone_bricks_hopper").get(), GufyUtil.getGufyBlock("cracked_cobblestone_bricks_hopper").get())
                 .put(GufyUtil.getGufyBlock("cobblestone_bricks_post").get(), GufyUtil.getGufyBlock("cracked_cobblestone_bricks_post").get())
-
+                // DIORITE BRICKS
+                .put(GufyUtil.getGufyBlock("diorite_bricks").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_stairs").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks_stairs").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_slab").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks_slab").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_verticalslab").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_wall").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks_wall").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_hopper").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks_hopper").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_post").get(), GufyUtil.getGufyBlock("cracked_diorite_bricks_post").get())
+                // DIORITE TILES
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_stairs").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks_stairs").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_slab").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks_slab").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_verticalslab").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_wall").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks_wall").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_hopper").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks_hopper").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_post").get(), GufyUtil.getGufyBlock("cracked_diorite_cobble_bricks_post").get())
+                // GRANITE BRICKS
+                // GRANITE TILES
+                // ANDESITE BRICKS
+                // NETHER BRICKS
+                .put(Blocks.NETHER_BRICKS, Blocks.CRACKED_NETHER_BRICKS)
+                // DEEPSLATE BRICKS
+                .put(Blocks.DEEPSLATE_BRICKS, Blocks.CRACKED_DEEPSLATE_BRICKS)
+                .put(Blocks.DEEPSLATE_BRICK_STAIRS, GufyUtil.getGufyBlock("cracked_deepslate_bricks_stairs").get())
+                .put(Blocks.DEEPSLATE_BRICK_SLAB, GufyUtil.getGufyBlock("cracked_deepslate_bricks_slab").get())
+                .put(Blocks.DEEPSLATE_BRICK_WALL, GufyUtil.getGufyBlock("cracked_deepslate_bricks_wall").get())
+                .put(GufyUtil.getGufyBlock("deepslate_bricks_verticalslab").get(), GufyUtil.getGufyBlock("cracked_deepslate_bricks_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("deepslate_bricks_hopper").get(), GufyUtil.getGufyBlock("cracked_deepslate_bricks_hopper").get())
+                .put(GufyUtil.getGufyBlock("deepslate_bricks_post").get(), GufyUtil.getGufyBlock("cracked_deepslate_bricks_post").get())
+                // DEEPSLATE TILES
+                .put(Blocks.DEEPSLATE_TILES, Blocks.CRACKED_DEEPSLATE_TILES)
+                .put(Blocks.DEEPSLATE_TILE_STAIRS, GufyUtil.getGufyBlock("cracked_deepslate_tiles_stairs").get())
+                .put(Blocks.DEEPSLATE_TILE_SLAB, GufyUtil.getGufyBlock("cracked_deepslate_tiles_slab").get())
+                .put(Blocks.DEEPSLATE_TILE_WALL, GufyUtil.getGufyBlock("cracked_deepslate_tiles_wall").get())
+                .put(GufyUtil.getGufyBlock("deepslate_tiles_verticalslab").get(), GufyUtil.getGufyBlock("cracked_deepslate_tiles_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("deepslate_tiles_hopper").get(), GufyUtil.getGufyBlock("cracked_deepslate_tiles_hopper").get())
+                .put(GufyUtil.getGufyBlock("deepslate_tiles_post").get(), GufyUtil.getGufyBlock("cracked_deepslate_tiles_post").get())
+                // POLISHED BLACKSTONE BRICKS
+                .put(Blocks.POLISHED_BLACKSTONE_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)
+                .put(Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS, GufyUtil.getGufyBlock("cracked_polished_blackstone_brick_stairs").get())
+                .put(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB, GufyUtil.getGufyBlock("cracked_polished_blackstone_brick_slab").get())
+                .put(Blocks.POLISHED_BLACKSTONE_BRICK_WALL, GufyUtil.getGufyBlock("cracked_polished_blackstone_brick_wall").get())
+                .put(GufyUtil.getGufyBlock("polished_blackstone_brick_verticalslab").get(), GufyUtil.getGufyBlock("cracked_polished_blackstone_brick_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("polished_blackstone_brick_hopper").get(), GufyUtil.getGufyBlock("cracked_polished_blackstone_brick_hopper").get())
+                .put(GufyUtil.getGufyBlock("polished_blackstone_brick_post").get(), GufyUtil.getGufyBlock("cracked_polished_blackstone_brick_post").get())
+                // SANDSTONE BRICKS
+                // SANDSTONE TILES
                 // FRAMED
                 .put(GufyUtil.getGufyBlock("oak_framed_terracotta").get(), GufyUtil.getGufyBlock("oak_framed_terracotta_left").get())
                 .put(GufyUtil.getGufyBlock("oak_framed_terracotta_left").get(), GufyUtil.getGufyBlock("oak_framed_terracotta_right").get())
@@ -66,7 +112,8 @@ public interface GufyCrackable {
                 .put(GufyUtil.getGufyBlock("warped_framed_terracotta_left").get(), GufyUtil.getGufyBlock("warped_framed_terracotta_right").get())
                 .put(GufyUtil.getGufyBlock("warped_framed_terracotta_right").get(), GufyUtil.getGufyBlock("warped_framed_terracotta_cross").get())
                 .put(GufyUtil.getGufyBlock("warped_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("warped_framed_terracotta").get())
-
+                // FRAMED MUD
+                
                 .build();
     });
 }

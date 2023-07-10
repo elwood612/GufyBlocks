@@ -94,6 +94,7 @@ public class GufyRegistry
         //add(GufyUtil.familyBuilder("mangrove", GufyMaterials.MANGROVE, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         //add(GufyUtil.familyBuilder("big_mangrove", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         // cherry here
+        // bamboo here
         add(GufyUtil.familyBuilder("crimson", GufyMaterials.CRIMSON, ArrayUtils.addAll(VANILLA_WOOD_TYPES, GufyBlockTypes.PARQUET)));
         add(GufyUtil.familyBuilder("big_crimson", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(GufyUtil.familyBuilder("mossy_crimson", GufyMaterials.CRIMSON, GUFY_WOOD_TYPES));

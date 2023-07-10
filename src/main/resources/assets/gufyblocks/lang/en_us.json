@@ -537,7 +537,7 @@
 "block.gufyblocks.nether_wart_block_slab": "Nether Wart Slab",  
 "block.gufyblocks.nether_wart_block_verticalslab": "Nether Wart Vertical Slab",  
  
-"block.gufyblocks.warped_parquet": "Warped Parquet",  
+"block.gufyblocks.warped_parquet": "Warped Mosaic",  
  
 "block.gufyblocks.mossy_warped": "Mossy Warped",  
 "block.gufyblocks.mossy_warped_stairs": "Mossy Warped Stairs",  
@@ -594,7 +594,7 @@
 "block.gufyblocks.crimson_hyphae_fence": "Crimson Hyphae Fence",  
 "block.gufyblocks.crimson_hyphae_panel": "Crimson Hyphae Panel",  
  
-"block.gufyblocks.crimson_parquet": "Crimson Parquet",  
+"block.gufyblocks.crimson_parquet": "Crimson Mosaic",  
  
 "block.gufyblocks.mossy_crimson": "Mossy Crimson",  
 "block.gufyblocks.mossy_crimson_stairs": "Mossy Crimson Stairs",  
@@ -1039,7 +1039,7 @@
 "block.gufyblocks.acacia_wood_fence": "Acacia Wood Fence",  
 "block.gufyblocks.acacia_wood_panel": "Acacia Wood Panel",  
 
-"block.gufyblocks.acacia_parquet": "Acacia Parquet",  
+"block.gufyblocks.acacia_parquet": "Acacia Mosaic",  
  
 "block.gufyblocks.mossy_acacia": "Mossy Acacia Planks",  
 "block.gufyblocks.mossy_acacia_stairs": "Mossy Acacia Stairs",  
@@ -1080,7 +1080,7 @@
 "block.gufyblocks.dark_oak_wood_fence": "Dark Oak Wood Fence",  
 "block.gufyblocks.dark_oak_wood_panel": "Dark Oak Wood Panel",  
  
-"block.gufyblocks.dark_oak_parquet": "Dark Oak Parquet",  
+"block.gufyblocks.dark_oak_parquet": "Dark Oak Mosaic",  
  
 "block.gufyblocks.mossy_dark_oak": "Mossy Dark Oak Planks",  
 "block.gufyblocks.mossy_dark_oak_stairs": "Mossy Dark Oak Stairs",  
@@ -1121,7 +1121,7 @@
 "block.gufyblocks.birch_wood_fence": "Birch Wood Fence",  
 "block.gufyblocks.birch_wood_panel": "Birch Wood Panel",  
  
-"block.gufyblocks.birch_parquet": "Birch Parquet",  
+"block.gufyblocks.birch_parquet": "Birch Mosaic",  
  
 "block.gufyblocks.mossy_birch": "Mossy Birch Planks",  
 "block.gufyblocks.mossy_birch_stairs": "Mossy Birch Stairs",  
@@ -1162,7 +1162,7 @@
 "block.gufyblocks.jungle_wood_fence": "Jungle Wood Fence",  
 "block.gufyblocks.jungle_wood_panel": "Jungle Wood Panel",  
  
-"block.gufyblocks.jungle_parquet": "Jungle Parquet",  
+"block.gufyblocks.jungle_parquet": "Jungle Mosaic",  
  
 "block.gufyblocks.mossy_jungle": "Mossy Jungle Planks",  
 "block.gufyblocks.mossy_jungle_stairs": "Mossy Jungle Stairs",  
@@ -1203,7 +1203,7 @@
 "block.gufyblocks.oak_wood_fence": "Oak Wood Fence",  
 "block.gufyblocks.oak_wood_panel": "Oak Wood Panel",   
  
-"block.gufyblocks.oak_parquet": "Oak Parquet",   
+"block.gufyblocks.oak_parquet": "Oak Mosaic",   
  
 "block.gufyblocks.mossy_oak": "Mossy Oak Planks",  
 "block.gufyblocks.mossy_oak_stairs": "Mossy Oak Stairs",  
@@ -1244,7 +1244,7 @@
 "block.gufyblocks.spruce_wood_fence": "Spruce Wood Fence",  
 "block.gufyblocks.spruce_wood_panel": "Spruce Wood Panel",  
  
-"block.gufyblocks.spruce_parquet": "Spruce Parquet", 
+"block.gufyblocks.spruce_parquet": "Spruce Mosaic", 
  
 "block.gufyblocks.mossy_spruce": "Mossy Spruce Planks",  
 "block.gufyblocks.mossy_spruce_stairs": "Mossy Spruce Stairs",  

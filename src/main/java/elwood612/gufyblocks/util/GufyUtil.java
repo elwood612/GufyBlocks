@@ -206,7 +206,8 @@ public class GufyUtil
                     case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
                     case GUFYFENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new GufyFence(propertiesBuilder(properties))));
                     case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN)));
-                    case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
+                    //case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
+                    case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new Block(propertiesBuilder(properties))));
                     case WATTLEFENCE -> add(GufyRegistry.registerBlock(name, () -> new GufyWattleFence(propertiesBuilder(properties))));
                     case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(propertiesBuilder(properties), BlockSetType.OAK)));
                     case PANE -> add(GufyRegistry.registerBlock(name + "_pane", () -> new GufyPane(propertiesBuilder(properties))));

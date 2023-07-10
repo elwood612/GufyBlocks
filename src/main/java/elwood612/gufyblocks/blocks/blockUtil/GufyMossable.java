@@ -29,7 +29,38 @@ public interface GufyMossable
                 .put(GufyUtil.getGufyBlock("cobblestone_verticalslab").get(), GufyUtil.getGufyBlock("mossy_cobblestone_verticalslab").get())
                 .put(GufyUtil.getGufyBlock("cobblestone_hopper").get(), GufyUtil.getGufyBlock("mossy_cobblestone_hopper").get())
                 .put(GufyUtil.getGufyBlock("cobblestone_post").get(), GufyUtil.getGufyBlock("mossy_cobblestone_post").get())
-
+                // STONE TILES
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks").get())
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks_stairs").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks_stairs").get())
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks_slab").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks_slab").get())
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks_verticalslab").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks_wall").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks_wall").get())
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks_hopper").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks_hopper").get())
+                .put(GufyUtil.getGufyBlock("cobblestone_bricks_post").get(), GufyUtil.getGufyBlock("mossy_cobblestone_bricks_post").get())
+                // DIORITE BRICKS
+                .put(GufyUtil.getGufyBlock("diorite_bricks").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_stairs").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks_stairs").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_slab").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks_slab").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_verticalslab").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_wall").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks_wall").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_hopper").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks_hopper").get())
+                .put(GufyUtil.getGufyBlock("diorite_bricks_post").get(), GufyUtil.getGufyBlock("mossy_diorite_bricks_post").get())
+                // DIORITE TILES
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_stairs").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks_stairs").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_slab").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks_slab").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_verticalslab").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_wall").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks_wall").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_hopper").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks_hopper").get())
+                .put(GufyUtil.getGufyBlock("diorite_cobble_bricks_post").get(), GufyUtil.getGufyBlock("mossy_diorite_cobble_bricks_post").get())
+                // GRANITE BRICKS
+                // GRANITE TILES
+                // ANDESITE BRICKS
+                // DEEPSLATE BRICKS
+                // DEEPSLATE TILES
+                // POLISHED BLACKSTONE BRICKS
+                // SANDSTONE BRICKS
+                // SANDSTONE TILES
                 .build();
     });
 }

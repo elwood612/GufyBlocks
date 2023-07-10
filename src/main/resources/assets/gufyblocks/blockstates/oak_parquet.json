@@ -1,8 +1,5 @@
 {
     "variants": {
-        "facing=south": { "model": "gufyblocks:block/oak_parquet" },
-        "facing=west": { "model": "gufyblocks:block/oak_parquet2" },
-        "facing=north": { "model": "gufyblocks:block/oak_parquet3" },
-        "facing=east": { "model": "gufyblocks:block/oak_parquet4" }
+        "": { "model": "gufyblocks:block/oak_parquet" }
     }
 }

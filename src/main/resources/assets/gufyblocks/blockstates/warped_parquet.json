@@ -1,8 +1,5 @@
 {
     "variants": {
-        "facing=south": { "model": "gufyblocks:block/warped_parquet" },
-        "facing=west": { "model": "gufyblocks:block/warped_parquet2" },
-        "facing=north": { "model": "gufyblocks:block/warped_parquet3" },
-        "facing=east": { "model": "gufyblocks:block/warped_parquet4" }
+        "": { "model": "gufyblocks:block/warped_parquet" }
     }
 }

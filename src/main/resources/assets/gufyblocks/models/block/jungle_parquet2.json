@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": 
-    {
-        "all": "gufyblocks:block/jungle_parquet2"
-    }
-}
