@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tuff",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:tuff_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:tuff",
+    "count": 2
+  }
+}

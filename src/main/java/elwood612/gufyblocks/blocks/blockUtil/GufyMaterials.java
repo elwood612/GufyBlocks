@@ -3,6 +3,8 @@ package elwood612.gufyblocks.blocks.blockUtil;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 
+import java.util.Map;
+
 public enum GufyMaterials 
 {
 	//Create Materials in here
@@ -20,7 +22,7 @@ public enum GufyMaterials
 	ANDESITE_TRAPDOOR(MapColor.DIRT, SoundType.STONE, 1.5F, 6.0F, true, false),
 	CALCITE(MapColor.TERRACOTTA_WHITE, SoundType.STONE, 0.75F, 0.75F, true, true),
 	BASALT(MapColor.COLOR_BLACK, SoundType.BASALT, 1.25F, 4.2F, true, true),
-	THATCH(MapColor.TERRACOTTA_YELLOW, SoundType.GRASS, 0.5F, 0.5F, false, true),
+	THATCH(MapColor.COLOR_YELLOW, SoundType.GRASS, 0.5F, 0.5F, false, true),
 	MOSS(MapColor.COLOR_GREEN, SoundType.MOSS, 0.1F, 0.1F, false, true),
 	TERRACOTTA(MapColor.COLOR_ORANGE, SoundType.STONE, 1.25F, 4.2F, true, true),
 	WHITE_TERRACOTTA(MapColor.TERRACOTTA_WHITE, SoundType.STONE, 1.25F, 4.2F, true, true),
@@ -117,6 +119,9 @@ public enum GufyMaterials
 	WHITE_WOOD(MapColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	WHITE_SIGN(MapColor.SNOW, SoundType.WOOD, 1.0F, 1.0F, false, true),
 	WHITE_TRAPDOOR(MapColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, false),
+	PACKED_MUD(MapColor.DIRT, SoundType.PACKED_MUD, 1.0F, 3.0F, false, false),
+	MUD_BRICKS(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.MUD_BRICKS, 1.5F, 3.0F, true, false),
+	TUFF(MapColor.TERRACOTTA_GRAY, SoundType.TUFF, 1.5F, 6.0F, true, false),
 	LEADED_GLASS(MapColor.STONE, SoundType.GLASS, 0.3F, 3.0F, false, false),
 	FRAMED_GLASS(MapColor.WOOD, SoundType.GLASS, 0.3F, 3.0F, false, false);
 

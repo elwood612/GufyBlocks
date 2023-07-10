@@ -1,6 +1,7 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:tuff_wall", 
     "gufyblocks:big_warped_wall", 
     "gufyblocks:big_crimson_wall", 
     "gufyblocks:big_acacia_wall", 

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "gufyblocks:stone_bricks_slab"
+    "item": "minecraft:stone_brick_slab"
   },
   "result": "gufyblocks:cracked_stone_bricks_slab",
   "experience": 0.1,

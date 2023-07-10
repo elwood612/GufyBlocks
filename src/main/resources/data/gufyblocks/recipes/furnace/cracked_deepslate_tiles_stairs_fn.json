@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "gufyblocks:deepslate_tiles_stairs"
+    "item": "minecraft:deepslate_tile_stairs"
   },
   "result": "gufyblocks:cracked_deepslate_tiles_stairs",
   "experience": 0.1,

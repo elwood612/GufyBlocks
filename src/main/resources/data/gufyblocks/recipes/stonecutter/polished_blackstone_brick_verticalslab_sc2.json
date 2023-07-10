@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "minecraft:blackstone"
+    "item": "minecraft:polished_blackstone"
   },
   "result": "gufyblocks:polished_blackstone_brick_verticalslab",
   "count": 2

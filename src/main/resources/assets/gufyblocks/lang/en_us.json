@@ -1,4 +1,23 @@
 { 
+"block.gufyblocks.hay_stairs": "Hay Bale Stairs",  
+"block.gufyblocks.hay_slab": "Hay Bale Slab",  
+"block.gufyblocks.hay_verticalslab": "Hay Bale Vertical Slab",  
+ 
+"block.gufyblocks.tuff_stairs": "Tuff Stairs",  
+"block.gufyblocks.tuff_slab": "Tuff Slab",  
+"block.gufyblocks.tuff_verticalslab": "Tuff Vertical Slab",  
+"block.gufyblocks.tuff_wall": "Tuff Wall",  
+"block.gufyblocks.tuff_hopper": "Tuff Hopper",  
+"block.gufyblocks.tuff_post": "Tuff Post",  
+ 
+"block.gufyblocks.mud_bricks_verticalslab": "Mud Bricks Vertical Slab",  
+"block.gufyblocks.mud_bricks_hopper": "Mud Bricks Hopper",  
+"block.gufyblocks.mud_bricks_post": "Mud Bricks Post",  
+ 
+"block.gufyblocks.packed_mud_stairs": "Packed Mud Stairs",  
+"block.gufyblocks.packed_mud_slab": "Packed Mud Slab",  
+"block.gufyblocks.packed_mud_verticalslab": "Packed Mud Vertical Slab",  
+ 
 "block.gufyblocks.flower_box": "Flower Box",
 
 "block.gufyblocks.big_warped": "Wide Warped Planks",  

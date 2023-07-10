@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:flower_box"
+          "name": "gufyblocks:packed_mud_stairs"
         }
       ],
       "conditions": [

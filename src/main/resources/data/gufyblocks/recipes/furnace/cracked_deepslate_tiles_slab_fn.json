@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "gufyblocks:deepslate_tiles_slab"
+    "item": "minecraft:deepslate_tile_slab"
   },
   "result": "gufyblocks:cracked_deepslate_tiles_slab",
   "experience": 0.1,
