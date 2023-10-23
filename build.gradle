@@ -10,20 +10,6 @@ archivesBaseName = "${project.archiveBaseName}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-//buildscript {
-//	gradle.startParameter.showStacktrace = org.gradle.api.logging.configuration.ShowStacktrace.ALWAYS
- //   repositories {
- //       maven { url = 'https://maven.minecraftforge.net' }
- //       jcenter()
- //       mavenCentral()
- //   }
- //   dependencies {
- //       classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${project.forge_gradle_version}", changing: true
- //   }
-//}
-
-
-
 sourceSets {
     main
 }
