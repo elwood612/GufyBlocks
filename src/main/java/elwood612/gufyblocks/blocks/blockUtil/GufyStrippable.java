@@ -75,6 +75,22 @@ public interface GufyStrippable {
                 .put(GufyUtil.getGufyBlock("warped_hyphae_hopper").get(), GufyUtil.getGufyBlock("stripped_warped_hyphae_hopper").get())
                 .put(GufyUtil.getGufyBlock("warped_hyphae_fence").get(), GufyUtil.getGufyBlock("stripped_warped_hyphae_fence").get())
                 .put(GufyUtil.getGufyBlock("warped_hyphae_panel").get(), GufyUtil.getGufyBlock("stripped_warped_hyphae_panel").get())
+                // MANGROVE
+                .put(GufyUtil.getGufyBlock("mangrove_wood_stairs").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_stairs").get())
+                .put(GufyUtil.getGufyBlock("mangrove_wood_slab").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_slab").get())
+                .put(GufyUtil.getGufyBlock("mangrove_wood_verticalslab").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("mangrove_wood_wall").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_wall").get())
+                .put(GufyUtil.getGufyBlock("mangrove_wood_hopper").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_hopper").get())
+                .put(GufyUtil.getGufyBlock("mangrove_wood_fence").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_fence").get())
+                .put(GufyUtil.getGufyBlock("mangrove_wood_panel").get(), GufyUtil.getGufyBlock("stripped_mangrove_wood_panel").get())
+                // CHERRY
+                .put(GufyUtil.getGufyBlock("cherry_wood_stairs").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_stairs").get())
+                .put(GufyUtil.getGufyBlock("cherry_wood_slab").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_slab").get())
+                .put(GufyUtil.getGufyBlock("cherry_wood_verticalslab").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_verticalslab").get())
+                .put(GufyUtil.getGufyBlock("cherry_wood_wall").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_wall").get())
+                .put(GufyUtil.getGufyBlock("cherry_wood_hopper").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_hopper").get())
+                .put(GufyUtil.getGufyBlock("cherry_wood_fence").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_fence").get())
+                .put(GufyUtil.getGufyBlock("cherry_wood_panel").get(), GufyUtil.getGufyBlock("stripped_cherry_wood_panel").get())
                 
                 .build();
     });

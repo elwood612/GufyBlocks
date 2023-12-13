@@ -21,6 +21,7 @@ public enum GufyBlockTypes
     WAGONWHEEL,
     STONE_TRAPDOOR,
     TRAPDOOR,
+    WOOL_TRAPDOOR,
     CHISELED,
 
     WEATHERINGBLOCK,
@@ -39,4 +40,7 @@ public enum GufyBlockTypes
     FRAMED_LEFT,
     FRAMED_RIGHT,
     FRAMED_CROSS,
+
+    SIGN,
+    CARVED_LOG,
 }

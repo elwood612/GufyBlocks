@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "gufyblocks:stone_trapdoor",
+	"gufyblocks:diorite_trapdoor",
+	"gufyblocks:granite_trapdoor",
+	"gufyblocks:andesite_trapdoor",
+	"gufyblocks:white_wool_trapdoor",
+	"gufyblocks:light_gray_wool_trapdoor",
+	"gufyblocks:gray_wool_trapdoor",
+	"gufyblocks:black_wool_trapdoor",
+	"gufyblocks:red_wool_trapdoor",
+	"gufyblocks:orange_wool_trapdoor",
+	"gufyblocks:yellow_wool_trapdoor",
+	"gufyblocks:lime_wool_trapdoor",
+	"gufyblocks:green_wool_trapdoor",
+	"gufyblocks:cyan_wool_trapdoor",
+	"gufyblocks:light_blue_wool_trapdoor",
+	"gufyblocks:blue_wool_trapdoor",
+	"gufyblocks:purple_wool_trapdoor",
+	"gufyblocks:magenta_wool_trapdoor",
+	"gufyblocks:pink_wool_trapdoor",
+	"gufyblocks:brown_wool_trapdoor"
+  ]
+}

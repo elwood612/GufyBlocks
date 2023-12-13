@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "gufyblocks:block/oak_parquet",
+        "top": "gufyblocks:block/oak_parquet",
+        "side": "gufyblocks:block/oak_parquet"
+    }
+}

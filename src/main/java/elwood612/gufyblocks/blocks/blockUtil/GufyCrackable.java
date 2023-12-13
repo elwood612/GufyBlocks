@@ -100,10 +100,6 @@ public interface GufyCrackable {
                 .put(GufyUtil.getGufyBlock("acacia_framed_terracotta_left").get(), GufyUtil.getGufyBlock("acacia_framed_terracotta_right").get())
                 .put(GufyUtil.getGufyBlock("acacia_framed_terracotta_right").get(), GufyUtil.getGufyBlock("acacia_framed_terracotta_cross").get())
                 .put(GufyUtil.getGufyBlock("acacia_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("acacia_framed_terracotta").get())
-                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta_left").get())
-                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta_left").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta_right").get())
-                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta_right").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta_cross").get())
-                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta").get())
                 .put(GufyUtil.getGufyBlock("crimson_framed_terracotta").get(), GufyUtil.getGufyBlock("crimson_framed_terracotta_left").get())
                 .put(GufyUtil.getGufyBlock("crimson_framed_terracotta_left").get(), GufyUtil.getGufyBlock("crimson_framed_terracotta_right").get())
                 .put(GufyUtil.getGufyBlock("crimson_framed_terracotta_right").get(), GufyUtil.getGufyBlock("crimson_framed_terracotta_cross").get())
@@ -112,7 +108,23 @@ public interface GufyCrackable {
                 .put(GufyUtil.getGufyBlock("warped_framed_terracotta_left").get(), GufyUtil.getGufyBlock("warped_framed_terracotta_right").get())
                 .put(GufyUtil.getGufyBlock("warped_framed_terracotta_right").get(), GufyUtil.getGufyBlock("warped_framed_terracotta_cross").get())
                 .put(GufyUtil.getGufyBlock("warped_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("warped_framed_terracotta").get())
-                // FRAMED MUD
+                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta_left").get())
+                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta_left").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta_right").get())
+                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta_right").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta_cross").get())
+                .put(GufyUtil.getGufyBlock("mangrove_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("mangrove_framed_terracotta").get())
+                .put(GufyUtil.getGufyBlock("cherry_framed_terracotta").get(), GufyUtil.getGufyBlock("cherry_framed_terracotta_left").get())
+                .put(GufyUtil.getGufyBlock("cherry_framed_terracotta_left").get(), GufyUtil.getGufyBlock("cherry_framed_terracotta_right").get())
+                .put(GufyUtil.getGufyBlock("cherry_framed_terracotta_right").get(), GufyUtil.getGufyBlock("cherry_framed_terracotta_cross").get())
+                .put(GufyUtil.getGufyBlock("cherry_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("cherry_framed_terracotta").get())
+                .put(GufyUtil.getGufyBlock("bamboo_framed_terracotta").get(), GufyUtil.getGufyBlock("bamboo_framed_terracotta_left").get())
+                .put(GufyUtil.getGufyBlock("bamboo_framed_terracotta_left").get(), GufyUtil.getGufyBlock("bamboo_framed_terracotta_right").get())
+                .put(GufyUtil.getGufyBlock("bamboo_framed_terracotta_right").get(), GufyUtil.getGufyBlock("bamboo_framed_terracotta_cross").get())
+                .put(GufyUtil.getGufyBlock("bamboo_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("bamboo_framed_terracotta").get())
+                .put(GufyUtil.getGufyBlock("mushroom_framed_terracotta").get(), GufyUtil.getGufyBlock("mushroom_framed_terracotta_left").get())
+                .put(GufyUtil.getGufyBlock("mushroom_framed_terracotta_left").get(), GufyUtil.getGufyBlock("mushroom_framed_terracotta_right").get())
+                .put(GufyUtil.getGufyBlock("mushroom_framed_terracotta_right").get(), GufyUtil.getGufyBlock("mushroom_framed_terracotta_cross").get())
+                .put(GufyUtil.getGufyBlock("mushroom_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("mushroom_framed_terracotta").get())
+                 // FRAMED MUD
                 
                 .build();
     });

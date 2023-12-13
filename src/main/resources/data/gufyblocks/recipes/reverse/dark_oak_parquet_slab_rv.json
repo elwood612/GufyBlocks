@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "dark_oak_parquet",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:dark_oak_parquet_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:dark_oak_parquet",
+    "count": 2
+  }
+}

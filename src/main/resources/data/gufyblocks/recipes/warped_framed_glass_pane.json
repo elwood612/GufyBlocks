@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:warped_planks"
+      "tag": "gufyblocks:warped_planks"
     },
     "X": {
       "item": "minecraft:glass_pane"

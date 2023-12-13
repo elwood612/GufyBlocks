@@ -10,7 +10,7 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "minecraft:spruce_planks"
+      "tag": "gufyblocks:spruce_planks"
     }
   },
   "result": {

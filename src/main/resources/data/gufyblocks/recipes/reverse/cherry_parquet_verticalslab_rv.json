@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cherry_parquet",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cherry_parquet_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cherry_parquet",
+    "count": 2
+  }
+}

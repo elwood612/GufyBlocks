@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_cherry"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_cherry_wall",
+    "count": 8
+  }
+}

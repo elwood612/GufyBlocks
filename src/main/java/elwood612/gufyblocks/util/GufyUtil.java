@@ -3,10 +3,7 @@ package elwood612.gufyblocks.util;
 import elwood612.gufyblocks.GufyBlocks;
 import elwood612.gufyblocks.GufyRegistry;
 import elwood612.gufyblocks.blocks.*;
-import elwood612.gufyblocks.blocks.blockSpecialty.GufyHorizontalBlock;
-import elwood612.gufyblocks.blocks.blockSpecialty.GufyPane;
-import elwood612.gufyblocks.blocks.blockSpecialty.GufyPanel;
-import elwood612.gufyblocks.blocks.blockSpecialty.GufyWattleFence;
+import elwood612.gufyblocks.blocks.blockSpecialty.*;
 import elwood612.gufyblocks.blocks.blockUtil.*;
 import elwood612.gufyblocks.blocks.blockWeathering.*;
 import net.minecraft.resources.ResourceLocation;
@@ -203,11 +200,11 @@ public class GufyUtil
                     case PILLAR -> add(GufyRegistry.registerBlock(name + "_pillar", () -> new RotatedPillarBlock(propertiesBuilder(properties))));
                     case STONE_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(GufyMaterials.STONE_TRAPDOOR), BlockSetType.STONE)));
                     case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(properties), BlockSetType.OAK)));
+                    case WOOL_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(propertiesBuilder(properties).sound(SoundType.WOOL), BlockSetType.OAK)));
                     case PANEL -> add(GufyRegistry.registerBlock(name + "_panel", () -> new GufyPanel(propertiesBuilder(properties))));
                     case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
                     case GUFYFENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new GufyFence(propertiesBuilder(properties))));
                     case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN)));
-                    //case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new GufyHorizontalBlock(propertiesBuilder(properties))));
                     case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new Block(propertiesBuilder(properties))));
                     case WATTLEFENCE -> add(GufyRegistry.registerBlock(name, () -> new GufyWattleFence(propertiesBuilder(properties))));
                     case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(propertiesBuilder(properties), BlockSetType.OAK)));
@@ -217,6 +214,8 @@ public class GufyUtil
                     case FRAMED_LEFT -> add(GufyRegistry.registerBlock(name + "_left", () -> new Block(propertiesBuilder(properties))));
                     case FRAMED_RIGHT -> add(GufyRegistry.registerBlock(name + "_right", () -> new Block(propertiesBuilder(properties))));
                     case FRAMED_CROSS -> add(GufyRegistry.registerBlock(name + "_cross", () -> new Block(propertiesBuilder(properties))));
+                    case SIGN -> add(GufyRegistry.registerBlock(name + "_sign", () -> new GufySign(propertiesBuilder(properties))));
+                    case CARVED_LOG -> add(GufyRegistry.registerBlock(name, () -> new RotatedPillarBlock(propertiesBuilder(properties))));
                 }
             }
         }};

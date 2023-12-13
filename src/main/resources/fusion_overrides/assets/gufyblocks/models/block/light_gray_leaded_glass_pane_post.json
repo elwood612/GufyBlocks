@@ -1,0 +1,17 @@
+{
+  "type": "fusion:connecting",
+  "parent": "gufyblocks:block/template_leaded_glass_pane_post",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "edge": "gufyblocks:block/leaded_glass_pane_top",
+    "pane": "gufyblocks:block/light_gray_leaded_glass_pane"
+  }
+}

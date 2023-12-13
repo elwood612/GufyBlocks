@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "X#X",
+    "YXY"
+  ],
+  "key": {
+    "#": {
+      "tag": "gufyblocks:cherry_planks"
+    },
+    "X": {
+      "item": "minecraft:glass_pane"
+    },
+	"Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:cherry_framed_glass_pane",
+	"count": 4
+  }
+}

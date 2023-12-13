@@ -19,7 +19,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
-public class GufyHammer extends Item{
+public class GufyHammer extends Item
+{
     public GufyHammer(Item.Properties properties) { super(properties); }
 
     public InteractionResult useOn(UseOnContext context) {
@@ -39,8 +40,8 @@ public class GufyHammer extends Item{
             level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, p_238251_));
             level.playSound(player, blockpos, SoundEvents.BASALT_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
             if (level.isClientSide)
-                ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.ASH, UniformInt.of(3, 5));
+                ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.COMPOSTER, UniformInt.of(3, 5));
             return InteractionResult.sidedSuccess(level.isClientSide);
-            }).orElse(InteractionResult.PASS);
+        }).orElse(InteractionResult.PASS);
     }
 }

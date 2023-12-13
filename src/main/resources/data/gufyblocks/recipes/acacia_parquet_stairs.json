@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:acacia_parquet"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:acacia_parquet_stairs",
+    "count": 6
+  }
+}

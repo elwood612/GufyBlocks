@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:dark_oak_parquet"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:dark_oak_parquet_stairs",
+    "count": 6
+  }
+}

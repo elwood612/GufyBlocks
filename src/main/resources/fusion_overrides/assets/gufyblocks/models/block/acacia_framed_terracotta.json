@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_all",
+    "type": "fusion:connecting",
+    "loader": "fusion:model",
+    "textures": {
+        "particle": "gufyblocks:block/acacia_framed_terracotta",
+        "all": "gufyblocks:block/acacia_framed_terracotta"
+    }
+}

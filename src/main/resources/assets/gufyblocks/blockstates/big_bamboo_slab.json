@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/big_bamboo_slab" },
+        "type=top": { "model": "gufyblocks:block/big_bamboo_slab_top" },
+        "type=double": { "model": "gufyblocks:block/big_bamboo" }
+    }
+}

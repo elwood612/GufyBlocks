@@ -1,9 +1,8 @@
 package elwood612.gufyblocks.blocks.blockUtil;
 
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
-
-import java.util.Map;
 
 public enum GufyMaterials 
 {
@@ -81,6 +80,8 @@ public enum GufyMaterials
 	DARK_OAK(MapColor.COLOR_BROWN, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	ACACIA(MapColor.COLOR_ORANGE, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	MANGROVE(MapColor.COLOR_RED, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	CHERRY(MapColor.COLOR_PINK, SoundType.WOOD, 2.0f, 3.0f, false, true),
+	BAMBOO(MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD, 2.0f, 3.0f, false, true),
 	CRIMSON(MapColor.CRIMSON_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	WARPED(MapColor.WARPED_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
 	NETHER_WART(MapColor.COLOR_RED, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
@@ -90,7 +91,7 @@ public enum GufyMaterials
 	DIRT(MapColor.DIRT, SoundType.GRAVEL, 0.5F, 0.5F, false, true),
 	ROOTED_DIRT(MapColor.DIRT, SoundType.ROOTED_DIRT, 0.5F, 0.5F, false, true),
 	FRAMED_WHITE(MapColor.TERRACOTTA_WHITE, SoundType.STONE, 2.0F, 6.0F, true, true),
-	FRAMED_BROWN(MapColor.TERRACOTTA_BROWN, SoundType.STONE, 2.0F, 6.0F, true, true),
+	FRAMED_BROWN(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.STONE, 2.0F, 6.0F, true, true),
 	DAUB(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.GRAVEL, 1.0F, 1.0F, false, true),
 	COBBLED_DEEPSLATE(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 3.5F, 6.0F, true, true),
 	TILED_DEEPSLATE(MapColor.DEEPSLATE, SoundType.DEEPSLATE_TILES, 3.5F, 6.0F, true, true),
@@ -123,7 +124,8 @@ public enum GufyMaterials
 	MUD_BRICKS(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.MUD_BRICKS, 1.5F, 3.0F, true, false),
 	TUFF(MapColor.TERRACOTTA_GRAY, SoundType.TUFF, 1.5F, 6.0F, true, false),
 	LEADED_GLASS(MapColor.STONE, SoundType.GLASS, 0.3F, 3.0F, false, false),
-	FRAMED_GLASS(MapColor.WOOD, SoundType.GLASS, 0.3F, 3.0F, false, false);
+	FRAMED_GLASS(MapColor.WOOD, SoundType.GLASS, 0.3F, 3.0F, false, false),
+	MUSHROOM(MapColor.WOOL, SoundType.WOOD, 0.2f, 0.2f, false, false);
 
     public final MapColor color; //map color
     public final SoundType sound; //sound

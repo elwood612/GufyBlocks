@@ -1,6 +1,24 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:mushroom_framed_terracotta_right", 
+    "gufyblocks:mushroom_framed_terracotta_left", 
+    "gufyblocks:mushroom_framed_terracotta_cross", 
+    "gufyblocks:mushroom_framed_terracotta", 
+ 
+    "gufyblocks:bamboo_framed_terracotta_left", 
+    "gufyblocks:bamboo_framed_terracotta_right", 
+    "gufyblocks:bamboo_framed_terracotta_cross", 
+    "gufyblocks:bamboo_framed_terracotta", 
+    "gufyblocks:cherry_framed_terracotta_left", 
+    "gufyblocks:cherry_framed_terracotta_right", 
+    "gufyblocks:cherry_framed_terracotta_cross", 
+    "gufyblocks:cherry_framed_terracotta", 
+    "gufyblocks:mangrove_framed_terracotta_left", 
+    "gufyblocks:mangrove_framed_terracotta_right", 
+    "gufyblocks:mangrove_framed_terracotta_cross", 
+    "gufyblocks:mangrove_framed_terracotta", 
+ 
     "gufyblocks:tuff_stairs", 
     "gufyblocks:tuff_slab", 
     "gufyblocks:tuff_verticalslab", 

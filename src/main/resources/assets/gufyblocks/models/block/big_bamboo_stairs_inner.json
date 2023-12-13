@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/big_bamboo",
+    "top": "gufyblocks:block/big_bamboo",
+    "side": "gufyblocks:block/big_bamboo"
+  }
+}

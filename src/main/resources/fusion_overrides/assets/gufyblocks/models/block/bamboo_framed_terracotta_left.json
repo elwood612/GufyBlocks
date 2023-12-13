@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_all",
+    "type": "fusion:connecting",
+    "loader": "fusion:model",
+    "textures": 
+    {
+        "all": "gufyblocks:block/bamboo_framed_terracotta_left"
+    }
+}

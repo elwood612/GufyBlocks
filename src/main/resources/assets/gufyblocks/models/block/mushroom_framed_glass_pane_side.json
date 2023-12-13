@@ -1,0 +1,8 @@
+{
+  "render_type": "translucent",
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "pane": "gufyblocks:block/mushroom_framed_glass_pane",
+    "edge": "gufyblocks:block/mushroom_framed_glass_pane_top"
+  }
+}

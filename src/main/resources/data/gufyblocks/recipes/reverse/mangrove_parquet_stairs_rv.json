@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mangrove_parquet",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mangrove_parquet_stairs"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mangrove_parquet",
+    "count": 3
+  }
+}

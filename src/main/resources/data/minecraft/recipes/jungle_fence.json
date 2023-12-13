@@ -10,7 +10,7 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "minecraft:jungle_planks"
+      "tag": "gufyblocks:jungle_planks"
     }
   },
   "result": {

@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "": {
-      "model": "gufyblocks:block/mangrove_framed_terracotta_cross"
+    "variants": {
+        "": { "model": "gufyblocks:block/mangrove_framed_terracotta_cross" }
     }
-  }
 }
