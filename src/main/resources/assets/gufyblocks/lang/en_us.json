@@ -1,10 +1,19 @@
 { 
+"block.gufyblocks.chiseled_stripped_bamboo_block": "Carved Bamboo Block",  
+"block.gufyblocks.chiseled_stripped_warped_hyphae": "Carved Warped Hyphae",  
+"block.gufyblocks.chiseled_stripped_crimson_hyphae": "Carved Crimson Hyphae",  
+"block.gufyblocks.chiseled_stripped_spruce_wood": "Carved Spruce Wood",  
+"block.gufyblocks.chiseled_stripped_oak_wood": "Carved Oak Wood",  
+"block.gufyblocks.chiseled_stripped_mangrove_wood": "Carved Mangrove Wood",  
+"block.gufyblocks.chiseled_stripped_jungle_wood": "Carved Jungle Wood",  
+"block.gufyblocks.chiseled_stripped_dark_oak_wood": "Carved Dark Oak Wood",  
+"block.gufyblocks.chiseled_stripped_cherry_wood": "Carved Cherry Wood",  
+"block.gufyblocks.chiseled_stripped_birch_wood": "Carved Birch Wood",  
+"block.gufyblocks.chiseled_stripped_acacia_wood": "Carved Acacia Wood",  
+
 "block.gufyblocks.mushroom_framed_terracotta_right": "Mushroom Framed Terracotta Right",  
- 
 "block.gufyblocks.mushroom_framed_terracotta_left": "Mushroom Framed Terracotta Left",  
- 
 "block.gufyblocks.mushroom_framed_terracotta_cross": "Mushroom Framed Terracotta Cross",  
- 
 "block.gufyblocks.mushroom_framed_terracotta": "Mushroom Framed Terracotta",  
  
 "block.gufyblocks.mushroom_stem_stairs": "Mushroom Stem Stairs",  
@@ -146,16 +155,6 @@
 "block.gufyblocks.mangrove_wall": "Mangrove Wall",  
 "block.gufyblocks.mangrove_hopper": "Mangrove Hopper",  
 "block.gufyblocks.mangrove_panel": "Mangrove Panel",  
- 
-"block.gufyblocks.big_bamboo": "Wide Bamboo Planks",  
-"block.gufyblocks.big_bamboo_stairs": "Wide Bamboo Stairs",  
-"block.gufyblocks.big_bamboo_slab": "Wide Bamboo Slab",  
-"block.gufyblocks.big_bamboo_verticalslab": "Wide Bamboo Vertical Slab",  
-"block.gufyblocks.big_bamboo_wall": "Wide Bamboo Wall",  
-"block.gufyblocks.big_bamboo_hopper": "Wide Bamboo Hopper",  
-"block.gufyblocks.big_bamboo_fence": "Wide Bamboo Fence",  
-"block.gufyblocks.big_bamboo_fence_gate": "Wide Bamboo Fence Gate",  
-"block.gufyblocks.big_bamboo_panel": "Wide Bamboo Panel",  
  
 "block.gufyblocks.big_cherry": "Wide Cherry Planks",  
 "block.gufyblocks.big_cherry_stairs": "Wide Cherry Stairs",  

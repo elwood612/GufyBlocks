@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:waxed_exposed_copper"
+  },
+  "result": "gufyblocks:waxed_exposed_copper_verticalslab",
+  "count": 2
+}

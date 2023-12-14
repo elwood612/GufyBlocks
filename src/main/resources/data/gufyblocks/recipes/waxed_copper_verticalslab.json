@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:waxed_copper_block"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:waxed_copper_verticalslab",
+    "count": 6
+  }
+}

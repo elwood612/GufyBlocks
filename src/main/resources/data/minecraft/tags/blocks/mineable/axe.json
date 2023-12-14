@@ -1,6 +1,18 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:chiseled_stripped_bamboo_block", 
+    "gufyblocks:chiseled_stripped_warped_hyphae", 
+    "gufyblocks:chiseled_stripped_crimson_hyphae", 
+    "gufyblocks:chiseled_stripped_spruce_wood", 
+    "gufyblocks:chiseled_stripped_oak_wood", 
+    "gufyblocks:chiseled_stripped_mangrove_wood", 
+    "gufyblocks:chiseled_stripped_jungle_wood", 
+    "gufyblocks:chiseled_stripped_dark_oak_wood", 
+    "gufyblocks:chiseled_stripped_cherry_wood", 
+    "gufyblocks:chiseled_stripped_birch_wood", 
+    "gufyblocks:chiseled_stripped_acacia_wood", 
+ 
     "gufyblocks:mushroom_stem_stairs", 
     "gufyblocks:mushroom_stem_slab", 
     "gufyblocks:mushroom_stem_verticalslab", 
@@ -123,16 +135,6 @@
     "gufyblocks:mangrove_wall", 
     "gufyblocks:mangrove_hopper", 
     "gufyblocks:mangrove_panel", 
- 
-    "gufyblocks:big_bamboo", 
-    "gufyblocks:big_bamboo_stairs", 
-    "gufyblocks:big_bamboo_slab", 
-    "gufyblocks:big_bamboo_verticalslab", 
-    "gufyblocks:big_bamboo_wall", 
-    "gufyblocks:big_bamboo_hopper", 
-    "gufyblocks:big_bamboo_fence", 
-    "gufyblocks:big_bamboo_fence_gate", 
-    "gufyblocks:big_bamboo_panel", 
  
     "gufyblocks:big_cherry", 
     "gufyblocks:big_cherry_stairs", 

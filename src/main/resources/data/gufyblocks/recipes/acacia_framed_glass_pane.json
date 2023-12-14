@@ -1,23 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "YXY",
-    "X#X",
-    "YXY"
-  ],
-  "key": {
-    "#": {
-      "tag": "gufyblocks:acacia_planks"
-    },
-    "X": {
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    {
       "item": "minecraft:glass_pane"
     },
-	"Y": {
-      "item": "minecraft:stick"
+    {
+      "tag": "gufyblocks:acacia_fences"
     }
-  },
+  ],
   "result": {
-    "item": "gufyblocks:acacia_framed_glass_pane",
-	"count": 4
+    "item": "gufyblocks:acacia_framed_glass_pane"
   }
 }

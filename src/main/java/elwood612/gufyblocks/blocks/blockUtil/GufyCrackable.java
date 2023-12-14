@@ -125,7 +125,18 @@ public interface GufyCrackable {
                 .put(GufyUtil.getGufyBlock("mushroom_framed_terracotta_right").get(), GufyUtil.getGufyBlock("mushroom_framed_terracotta_cross").get())
                 .put(GufyUtil.getGufyBlock("mushroom_framed_terracotta_cross").get(), GufyUtil.getGufyBlock("mushroom_framed_terracotta").get())
                  // FRAMED MUD
-                
+                // CARVED LOGS
+                .put(Blocks.STRIPPED_ACACIA_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_acacia_wood").get())
+                .put(Blocks.STRIPPED_BIRCH_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_birch_wood").get())
+                .put(Blocks.STRIPPED_BAMBOO_BLOCK, GufyUtil.getGufyBlock("chiseled_stripped_bamboo_block").get())
+                .put(Blocks.STRIPPED_CRIMSON_HYPHAE, GufyUtil.getGufyBlock("chiseled_stripped_crimson_hyphae").get())
+                .put(Blocks.STRIPPED_DARK_OAK_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_dark_oak_wood").get())
+                .put(Blocks.STRIPPED_JUNGLE_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_jungle_wood").get())
+                .put(Blocks.STRIPPED_OAK_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_oak_wood").get())
+                .put(Blocks.STRIPPED_MANGROVE_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_mangrove_wood").get())
+                .put(Blocks.STRIPPED_CHERRY_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_cherry_wood").get())
+                .put(Blocks.STRIPPED_SPRUCE_WOOD, GufyUtil.getGufyBlock("chiseled_stripped_spruce_wood").get())
+                .put(Blocks.STRIPPED_WARPED_HYPHAE, GufyUtil.getGufyBlock("chiseled_stripped_warped_hyphae").get())
                 .build();
     });
 }

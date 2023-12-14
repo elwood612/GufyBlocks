@@ -1,23 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "YXY",
-    "X#X",
-    "YXY"
-  ],
-  "key": {
-    "#": {
-      "tag": "gufyblocks:mangrove_planks"
-    },
-    "X": {
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    {
       "item": "minecraft:glass_pane"
     },
-	"Y": {
-      "item": "minecraft:stick"
+    {
+      "tag": "gufyblocks:mangrove_fences"
     }
-  },
+  ],
   "result": {
-    "item": "gufyblocks:mangrove_framed_glass_pane",
-	"count": 4
+    "item": "gufyblocks:mangrove_framed_glass_pane"
   }
 }

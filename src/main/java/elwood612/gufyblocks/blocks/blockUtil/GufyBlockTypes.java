@@ -41,6 +41,5 @@ public enum GufyBlockTypes
     FRAMED_RIGHT,
     FRAMED_CROSS,
 
-    SIGN,
     CARVED_LOG,
 }

@@ -214,7 +214,6 @@ public class GufyUtil
                     case FRAMED_LEFT -> add(GufyRegistry.registerBlock(name + "_left", () -> new Block(propertiesBuilder(properties))));
                     case FRAMED_RIGHT -> add(GufyRegistry.registerBlock(name + "_right", () -> new Block(propertiesBuilder(properties))));
                     case FRAMED_CROSS -> add(GufyRegistry.registerBlock(name + "_cross", () -> new Block(propertiesBuilder(properties))));
-                    case SIGN -> add(GufyRegistry.registerBlock(name + "_sign", () -> new GufySign(propertiesBuilder(properties))));
                     case CARVED_LOG -> add(GufyRegistry.registerBlock(name, () -> new RotatedPillarBlock(propertiesBuilder(properties))));
                 }
             }

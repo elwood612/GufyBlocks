@@ -13,7 +13,6 @@ import net.minecraftforge.network.simple.SimpleChannel;
 @Mod(GufyBlocks.MODID)
 public class GufyBlocks
 {
-	//public static GufyBlocks instance;
 	public static final String MODID = "gufyblocks";
 	
 	//Ensures vanilla clients can't connect to server
@@ -29,7 +28,6 @@ public class GufyBlocks
 	//Constructor
 	public GufyBlocks()
 	{
-		//instance = this;
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		GufyRegistry.registerBus(bus);
 		bus.addListener(this::loadComplete);

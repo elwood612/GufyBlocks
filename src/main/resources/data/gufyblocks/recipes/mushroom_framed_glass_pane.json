@@ -1,23 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "YXY",
-    "X#X",
-    "YXY"
-  ],
-  "key": {
-    "#": {
-      "tag": "minecraft:mushroom_stem"
-    },
-    "X": {
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    {
       "item": "minecraft:glass_pane"
     },
-	"Y": {
-      "item": "minecraft:stick"
+    {
+      "item": "gufyblocks:mushroom_stem_fence"
     }
-  },
+  ],
   "result": {
-    "item": "gufyblocks:mushroom_framed_glass_pane",
-	"count": 4
+    "item": "gufyblocks:mushroom_framed_glass_pane"
   }
 }
