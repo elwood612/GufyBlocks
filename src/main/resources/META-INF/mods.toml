@@ -10,7 +10,8 @@ license="All Rights Reserved"
     displayURL="https://github.com/elwood612/GufyBlocks/releases"
     logoFile="theG.png"
     description='''
-    Adds more blocks. That's it.'''
+    Adds more blocks to Minecraft.
+    You need this mod to connect to the Gufy Server.'''
 
 [[dependencies.gufyblocks]] 
     modId="forge"
