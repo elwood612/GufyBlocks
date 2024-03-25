@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/crimson_hopper" },
+        	{ "model": "gufyblocks:block/crimson_hopper2" },
+        	{ "model": "gufyblocks:block/crimson_hopper3" },
+        	{ "model": "gufyblocks:block/crimson_hopper4" }
+        ]
+    }
+}

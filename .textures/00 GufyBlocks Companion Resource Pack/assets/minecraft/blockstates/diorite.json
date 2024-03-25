@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "minecraft:block/diorite" },
+        	{ "model": "minecraft:block/diorite2" },
+        	{ "model": "minecraft:block/diorite3" },
+        	{ "model": "minecraft:block/diorite4" }
+        ]
+    }
+}

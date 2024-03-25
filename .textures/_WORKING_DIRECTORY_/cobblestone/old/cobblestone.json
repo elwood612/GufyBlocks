@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cobblestone", "weight": 19 },
+			{ "model": "cobblestone", "weight": 4, "y": 180, "x": 180 },
+			{ "model": "cobblestone2", "weight": 19 },
+			{ "model": "cobblestone2", "weight": 4, "y": 180, "x": 180 },
+			{ "model": "cobblestone3", "weight": 19 },
+			{ "model": "cobblestone3", "weight": 4, "y": 180, "x": 180 },
+			{ "model": "cobblestone4", "weight": 19 },
+			{ "model": "cobblestone4", "weight": 4, "y": 180, "x": 180 },
+			{ "model": "cobblestone5", "weight": 1 },
+			{ "model": "cobblestone5", "weight": 1, "y": 180, "x": 180 },
+			{ "model": "cobblestone6", "weight": 1 },
+			{ "model": "cobblestone6", "weight": 1, "y": 180, "x": 180 },
+			{ "model": "cobblestone7", "weight": 1 },
+			{ "model": "cobblestone7", "weight": 1, "y": 180, "x": 180 },
+			{ "model": "cobblestone8", "weight": 1 },
+			{ "model": "cobblestone8", "weight": 1, "y": 180, "x": 180 }
+        ]
+    }
+}

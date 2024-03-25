@@ -1,0 +1,9 @@
+{
+   "pack":{
+      "pack_format":15,
+      "description":"Textures for Gufy Blocks"
+   },
+    "fusion": {
+        "overrides_folder": "fusion_overrides"
+    }
+}

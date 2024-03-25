@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [
+            { "model": "block/mud_brick_slab" },
+			{ "model": "block/mud_brick_slab2" },
+			{ "model": "block/mud_brick_slab3" },
+			{ "model": "block/mud_brick_slab4" }
+        ],
+		"type=top": [
+            { "model": "block/mud_brick_slab_top" },
+			{ "model": "block/mud_brick_slab_top2" },
+			{ "model": "block/mud_brick_slab_top3" },
+			{ "model": "block/mud_brick_slab_top4" }
+        ],
+		"type=double": [
+            { "model": "block/mud_bricks" },
+			{ "model": "block/mud_bricks2" },
+			{ "model": "block/mud_bricks3" },
+			{ "model": "block/mud_bricks4" }
+        ]
+    }
+}

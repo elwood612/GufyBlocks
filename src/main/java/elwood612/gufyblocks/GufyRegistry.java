@@ -301,17 +301,17 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("warped_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("mushroom_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
 
-        add(GufyUtil.familyBuilder("oak_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("spruce_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("birch_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("dark_oak_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("jungle_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("acacia_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-//        add(GufyUtil.familyBuilder("mangrove_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-//        add(GufyUtil.familyBuilder("cherry_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-//        add(GufyUtil.familyBuilder("bamboo_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("crimson_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
-        add(GufyUtil.familyBuilder("warped_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES));
+        add(GufyUtil.familyBuilder("oak_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("spruce_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("birch_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("dark_oak_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("jungle_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("acacia_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+//        add(GufyUtil.familyBuilder("mangrove_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+//        add(GufyUtil.familyBuilder("cherry_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+//        add(GufyUtil.familyBuilder("bamboo_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("crimson_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(GufyUtil.familyBuilder("warped_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
 
         add(GufyUtil.familyBuilder("oak_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
         add(GufyUtil.familyBuilder("spruce_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));

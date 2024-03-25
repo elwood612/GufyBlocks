@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+			{ "model": "block/pink_tulip", "weight":2 },
+			{ "model": "block/pink_tulip_small", "weight":1 },
+			{ "model": "block/pink_tulip_double", "weight":1 }
+		]
+  }
+}
