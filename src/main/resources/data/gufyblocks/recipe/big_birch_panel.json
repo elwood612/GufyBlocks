@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": {
+      "item": "gufyblocks:big_birch_slab"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:big_birch_panel",
+    "count": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "waxed_copper",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:waxed_copper_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:waxed_copper_block",
+    "count": 2
+  }
+}

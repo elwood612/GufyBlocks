@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mangrove_planks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "minecraft:mangrove_stairs"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:mangrove_planks",
+    "count": 3
+  }
+}

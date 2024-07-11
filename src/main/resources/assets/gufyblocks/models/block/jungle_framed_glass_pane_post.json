@@ -1,0 +1,8 @@
+{
+  "render_type": "translucent",
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "pane": "gufyblocks:block/jungle_framed_glass_pane",
+    "edge": "gufyblocks:block/jungle_framed_glass_pane_top"
+  }
+}

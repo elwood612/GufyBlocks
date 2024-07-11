@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "granite_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:granite_bricks_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:granite_bricks",
+    "count": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "pink_wool",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:pink_wool_stairs"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:pink_wool",
+    "count": 3
+  }
+}

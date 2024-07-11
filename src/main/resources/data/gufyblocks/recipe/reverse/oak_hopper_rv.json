@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "oak_planks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:oak_hopper"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:oak_planks",
+    "count": 2
+  }
+}

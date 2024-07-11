@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "terracotta",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:terracotta_stairs"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:terracotta",
+    "count": 3
+  }
+}

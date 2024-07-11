@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_deepslate_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_deepslate_bricks_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_deepslate_bricks",
+    "count": 2
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/mossy_warped_slab" },
+        	{ "model": "gufyblocks:block/mossy_warped_slab2" },
+       		{ "model": "gufyblocks:block/mossy_warped_slab3" },
+        	{ "model": "gufyblocks:block/mossy_warped_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/mossy_warped_slab_top" },
+        	{ "model": "gufyblocks:block/mossy_warped_slab_top2" },
+        	{ "model": "gufyblocks:block/mossy_warped_slab_top3" },
+        	{ "model": "gufyblocks:block/mossy_warped_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "gufyblocks:block/mossy_warped" }, 
+        	{ "model": "gufyblocks:block/mossy_warped2" }, 
+        	{ "model": "gufyblocks:block/mossy_warped3" }, 
+        	{ "model": "gufyblocks:block/mossy_warped4" }
+       ]
+    }
+}

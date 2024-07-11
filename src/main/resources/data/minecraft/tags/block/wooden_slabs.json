@@ -1,0 +1,15 @@
+{
+  "replace": false, 
+  "values": [
+	"gufyblocks:big_mangrove_slab",
+	"gufyblocks:big_cherry_slab",
+	"gufyblocks:big_oak_slab",
+	"gufyblocks:big_spruce_slab",
+	"gufyblocks:big_birch_slab",
+	"gufyblocks:big_acacia_slab",
+	"gufyblocks:big_dark_oak_slab",
+	"gufyblocks:big_jungle_slab",
+	"gufyblocks:big_crimson_slab",
+	"gufyblocks:big_warped_slab"
+  ]
+}

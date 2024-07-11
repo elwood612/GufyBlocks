@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "gufyblocks:mushroom_stem_fence"
+    }
+  ],
+  "result": {
+    "item": "gufyblocks:mushroom_framed_glass_pane"
+  }
+}

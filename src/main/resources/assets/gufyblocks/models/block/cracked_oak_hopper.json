@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/hopper",
+	"textures": 
+	{
+		"texture": "gufyblocks:block/cracked_oak"
+	}
+}

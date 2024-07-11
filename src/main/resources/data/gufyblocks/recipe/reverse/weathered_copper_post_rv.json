@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "weathered_copper",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:weathered_copper_post"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:weathered_copper",
+    "count": 1
+  }
+}

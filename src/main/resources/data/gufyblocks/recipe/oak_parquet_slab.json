@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:oak_parquet"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:oak_parquet_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "tag": "gufyblocks:acacia_fences"
+    }
+  ],
+  "result": {
+    "item": "gufyblocks:acacia_framed_glass_pane"
+  }
+}

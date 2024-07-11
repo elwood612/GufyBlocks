@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "quartz_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:quartz_bricks_stairs"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:quartz_bricks",
+    "count": 3
+  }
+}

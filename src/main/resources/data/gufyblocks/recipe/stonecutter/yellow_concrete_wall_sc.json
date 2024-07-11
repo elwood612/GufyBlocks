@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:yellow_concrete"
+    },
+  "result": "gufyblocks:yellow_concrete_wall",
+  "count": 1
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:magenta_concrete"
+    },
+  "result": "gufyblocks:magenta_concrete_verticalslab",
+  "count": 2
+}

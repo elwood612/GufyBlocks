@@ -1,0 +1,45 @@
+{
+	"parent": "block/block",
+    "textures": {
+        "particle": "#side"
+    },
+    "elements": [
+        {
+            "name": "HOPPER_TOP",
+            "from": [ 0, 10, 0 ], 
+            "to": [ 16, 16, 16 ], 
+            "faces": {
+                "north": { "texture": "#side", "uv": [ 0, 0, 16, 6 ], "cullface": "north" },
+                "east": { "texture": "#side", "uv": [ 0, 0, 16, 6 ], "cullface": "east" },
+                "south": { "texture": "#side", "uv": [ 0, 0, 16, 6 ], "cullface": "south" },
+                "west": { "texture": "#side", "uv": [ 0, 0, 16, 6 ], "cullface": "west" },
+                "up": { "texture": "#top", "uv": [ 0, 0, 16, 16 ], "cullface": "up" },
+                "down": { "texture": "#side", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "HOPPER_MIDDLE",
+            "from": [ 4, 4, 4 ], 
+            "to": [ 12, 10, 12 ], 
+            "faces": {
+                "north": { "texture": "#side", "uv": [ 4, 6, 12, 12 ] },
+                "east": { "texture": "#side", "uv": [ 4, 6, 12, 12 ] },
+                "south": { "texture": "#side", "uv": [ 4, 6, 12, 12 ] },
+                "west": { "texture": "#side", "uv": [ 4, 6, 12, 12 ] },
+                "down": { "texture": "#side", "uv": [ 4, 4, 12, 12 ] }
+            }
+        },
+        {
+            "name": "HOPPER_BOTTOM",
+            "from": [ 6, 0, 6 ], 
+            "to": [ 10, 4, 10 ], 
+            "faces": {
+                "north": { "texture": "#side", "uv": [ 6, 12, 10, 16 ] },
+                "east": { "texture": "#side", "uv": [ 6, 12, 10, 16 ] },
+                "south": { "texture": "#side", "uv": [ 6, 12, 10, 16 ] },
+                "west": { "texture": "#side", "uv": [ 6, 12, 10, 16 ] },
+                "down": { "texture": "#side", "uv": [ 6, 12, 10, 16 ], "cullface": "down" }
+            }
+        }
+    ]
+}

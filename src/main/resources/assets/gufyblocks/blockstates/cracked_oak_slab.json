@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/cracked_oak_slab" },
+        	{ "model": "gufyblocks:block/cracked_oak_slab2" },
+       		{ "model": "gufyblocks:block/cracked_oak_slab3" },
+        	{ "model": "gufyblocks:block/cracked_oak_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/cracked_oak_slab_top" },
+        	{ "model": "gufyblocks:block/cracked_oak_slab_top2" },
+        	{ "model": "gufyblocks:block/cracked_oak_slab_top3" },
+        	{ "model": "gufyblocks:block/cracked_oak_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "gufyblocks:block/cracked_oak" }, 
+        	{ "model": "gufyblocks:block/cracked_oak2" }, 
+        	{ "model": "gufyblocks:block/cracked_oak3" }, 
+        	{ "model": "gufyblocks:block/cracked_oak4" }
+       ]
+    }
+}

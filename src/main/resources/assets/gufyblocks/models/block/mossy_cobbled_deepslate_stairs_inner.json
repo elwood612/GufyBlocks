@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/mossy_cobbled_deepslate",
+    "top": "gufyblocks:block/mossy_cobbled_deepslate",
+    "side": "gufyblocks:block/mossy_cobbled_deepslate"
+  }
+}

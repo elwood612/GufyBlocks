@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": 
+    {
+        "all": "gufyblocks:block/mossy_granite_bricks"
+    }
+}

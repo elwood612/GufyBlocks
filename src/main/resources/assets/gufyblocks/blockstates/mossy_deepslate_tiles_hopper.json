@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/mossy_deepslate_tiles_hopper" },
+        	{ "model": "gufyblocks:block/mossy_deepslate_tiles_hopper2" },
+        	{ "model": "gufyblocks:block/mossy_deepslate_tiles_hopper3" },
+        	{ "model": "gufyblocks:block/mossy_deepslate_tiles_hopper4" }
+        ]
+    }
+}

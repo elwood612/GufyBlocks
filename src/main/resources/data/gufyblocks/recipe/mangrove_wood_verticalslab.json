@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:mangrove_wood"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mangrove_wood_verticalslab",
+    "count": 6
+  }
+}

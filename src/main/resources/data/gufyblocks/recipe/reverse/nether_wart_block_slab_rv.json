@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_wart_block",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:nether_wart_block_slab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:nether_wart_block",
+    "count": 2
+  }
+}

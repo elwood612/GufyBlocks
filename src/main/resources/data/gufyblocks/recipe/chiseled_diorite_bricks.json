@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern":
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:diorite_bricks_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:chiseled_diorite_bricks",
+    "count": 1
+  }
+}

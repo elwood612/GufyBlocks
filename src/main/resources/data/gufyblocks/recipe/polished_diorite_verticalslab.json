@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:polished_diorite"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:polished_diorite_verticalslab",
+    "count": 6
+  }
+}

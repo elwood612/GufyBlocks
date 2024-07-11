@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_cobblestone",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_cobblestone_verticalslab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:mossy_cobblestone",
+    "count": 2
+  }
+}

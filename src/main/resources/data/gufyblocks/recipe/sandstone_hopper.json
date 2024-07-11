@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:sandstone"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:sandstone_hopper",
+    "count": 6
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab" },
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab2" },
+       		{ "model": "gufyblocks:block/mossy_granite_bricks_slab3" },
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab_top" },
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab_top2" },
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab_top3" },
+        	{ "model": "gufyblocks:block/mossy_granite_bricks_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "gufyblocks:block/mossy_granite_bricks" }, 
+        	{ "model": "gufyblocks:block/mossy_granite_bricks2" }, 
+        	{ "model": "gufyblocks:block/mossy_granite_bricks3" }, 
+        	{ "model": "gufyblocks:block/mossy_granite_bricks4" }
+       ]
+    }
+}

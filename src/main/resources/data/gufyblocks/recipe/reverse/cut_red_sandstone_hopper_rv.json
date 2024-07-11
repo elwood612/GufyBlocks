@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cut_red_sandstone",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cut_red_sandstone_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:cut_red_sandstone",
+    "count": 2
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:amethyst_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:amethyst_post",
+    "count": 4
+  }
+}

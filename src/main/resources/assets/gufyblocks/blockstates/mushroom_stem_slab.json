@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/mushroom_stem_slab" },
+        "type=top": { "model": "gufyblocks:block/mushroom_stem_slab_top" },
+        "type=double": { "model": "gufyblocks:block/mushroom_stem_double_slab" }
+    }
+}

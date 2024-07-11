@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "jungle_parquet",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:jungle_parquet_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:jungle_parquet",
+    "count": 2
+  }
+}

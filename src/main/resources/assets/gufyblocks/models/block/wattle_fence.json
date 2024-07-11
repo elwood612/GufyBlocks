@@ -1,0 +1,22 @@
+{
+	"render_type": "cutout",
+	"ambientocclusion": false,
+    "textures": {
+        "particle": "gufyblocks:block/wattle_fence",
+        "wattle_fence": "gufyblocks:block/wattle_fence"
+    },
+    "elements": [
+        {
+            "from": [ 0, 0, 0 ], 
+            "to": [ 16, 16, 1 ], 
+            "faces": {
+                "north": { "texture": "#wattle_fence", "uv": [ 16, 0, 0, 16 ] },
+                "east": { "texture": "#wattle_fence", "uv": [ 15, 0, 16, 16 ] },
+                "south": { "texture": "#wattle_fence", "uv": [ 0, 0, 16, 16 ] },
+                "west": { "texture": "#wattle_fence", "uv": [ 0, 0, 1, 16 ] },
+                "up": { "texture": "#wattle_fence", "uv": [ 0, 1, 16, 0 ], "cullface": "up" },
+                "down": { "texture": "#wattle_fence", "uv": [ 0, 16, 16, 15 ], "cullface": "down" }
+            }
+        }
+    ]
+}

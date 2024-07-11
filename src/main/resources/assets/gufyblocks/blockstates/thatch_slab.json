@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/thatch_slab" },
+        	{ "model": "gufyblocks:block/thatch_slab2" },
+       		{ "model": "gufyblocks:block/thatch_slab3" },
+        	{ "model": "gufyblocks:block/thatch_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/thatch_slab_top" },
+        	{ "model": "gufyblocks:block/thatch_slab_top2" },
+        	{ "model": "gufyblocks:block/thatch_slab_top3" },
+        	{ "model": "gufyblocks:block/thatch_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "gufyblocks:block/thatch" }, 
+        	{ "model": "gufyblocks:block/thatch2" }, 
+        	{ "model": "gufyblocks:block/thatch3" }, 
+        	{ "model": "gufyblocks:block/thatch4" }
+       ]
+    }
+}

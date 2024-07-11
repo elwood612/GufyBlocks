@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_warped",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:big_warped_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_warped",
+    "count": 2
+  }
+}

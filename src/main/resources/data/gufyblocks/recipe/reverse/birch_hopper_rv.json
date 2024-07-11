@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "birch_planks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:birch_hopper"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:birch_planks",
+    "count": 2
+  }
+}

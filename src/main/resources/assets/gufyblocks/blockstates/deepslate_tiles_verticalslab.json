@@ -1,0 +1,8 @@
+{ 
+	"variants": {
+		"facing=west":  { "model": "gufyblocks:block/deepslate_tiles_verticalslab" },
+        "facing=east":  { "model": "gufyblocks:block/deepslate_tiles_verticalslab", "y": 180, "uvlock": true },
+        "facing=north": { "model": "gufyblocks:block/deepslate_tiles_verticalslab", "y": 90, "uvlock": true },
+        "facing=south": { "model": "gufyblocks:block/deepslate_tiles_verticalslab", "y": 270, "uvlock": true }
+	} 
+}

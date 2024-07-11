@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bamboo_mosaic",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "minecraft:bamboo_mosaic_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:bamboo_mosaic",
+    "count": 2
+  }
+}

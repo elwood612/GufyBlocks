@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "planks",
+  "pattern":
+  [
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "tag": "minecraft:jungle_logs"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_jungle",
+    "count": 8
+  }
+}

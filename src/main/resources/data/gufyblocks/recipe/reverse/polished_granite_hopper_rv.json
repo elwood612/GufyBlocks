@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "polished_granite",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:polished_granite_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:polished_granite",
+    "count": 2
+  }
+}

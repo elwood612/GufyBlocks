@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+	"gufyblocks:big_oak",
+	"gufyblocks:big_spruce",
+	"gufyblocks:big_birch",
+	"gufyblocks:big_dark_oak",
+	"gufyblocks:big_jungle",
+	"gufyblocks:big_acacia",
+	"gufyblocks:big_crimson",
+	"gufyblocks:big_warped",
+	"gufyblocks:big_mangrove",
+	"gufyblocks:big_cherry",
+	"gufyblocks:mangrove_parquet",
+	"gufyblocks:cherry_parquet",
+	"minecraft:bamboo_mosaic",
+    "gufyblocks:oak_parquet",
+	"gufyblocks:spruce_parquet",
+	"gufyblocks:birch_parquet",
+	"gufyblocks:dark_oak_parquet",
+	"gufyblocks:jungle_parquet",
+	"gufyblocks:acacia_parquet",
+	"gufyblocks:crimson_parquet",
+	"gufyblocks:warped_parquet"
+  ]
+}

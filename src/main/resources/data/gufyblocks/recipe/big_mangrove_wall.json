@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_walls",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_mangrove"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_mangrove_wall",
+    "count": 8
+  }
+}

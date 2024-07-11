@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:copper_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:copper_post",
+    "count": 4
+  }
+}

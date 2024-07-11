@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stripped_acacia_wood"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:stripped_acacia_wood_slab",
+    "count": 6
+  }
+}

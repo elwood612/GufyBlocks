@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "planks",
+  "pattern":
+  [
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "tag": "minecraft:mangrove_logs"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_mangrove",
+    "count": 8
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_granite_cobble_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_granite_cobble_bricks_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_granite_cobble_bricks",
+    "count": 2
+  }
+}

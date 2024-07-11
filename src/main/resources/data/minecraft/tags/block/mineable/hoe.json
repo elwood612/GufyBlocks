@@ -1,0 +1,25 @@
+{ 
+  "replace": false, 
+  "values": [ 
+    "gufyblocks:hay_stairs",  
+    "gufyblocks:hay_slab",  
+    "gufyblocks:hay_verticalslab",  
+ 
+    "gufyblocks:moss_stairs",  
+    "gufyblocks:moss_slab",  
+    "gufyblocks:moss_verticalslab",  
+ 
+    "gufyblocks:warped_wart_stairs",  
+    "gufyblocks:warped_wart_slab",  
+    "gufyblocks:warped_wart_verticalslab",  
+ 
+    "gufyblocks:nether_wart_block_stairs",  
+    "gufyblocks:nether_wart_block_slab",  
+    "gufyblocks:nether_wart_block_verticalslab",  
+
+    "gufyblocks:thatch",  
+    "gufyblocks:thatch_stairs",  
+    "gufyblocks:thatch_slab",  
+    "gufyblocks:thatch_verticalslab"
+  ]
+}

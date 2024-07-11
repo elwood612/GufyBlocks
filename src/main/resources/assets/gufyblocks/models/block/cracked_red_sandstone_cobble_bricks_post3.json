@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/post",
+	"textures": 
+	{
+		"texture": "gufyblocks:block/cracked_red_sandstone_cobble_bricks3"
+	}
+}

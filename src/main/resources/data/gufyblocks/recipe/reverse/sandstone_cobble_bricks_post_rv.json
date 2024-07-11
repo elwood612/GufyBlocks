@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sandstone_cobble_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:sandstone_cobble_bricks_post"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:sandstone_cobble_bricks",
+    "count": 1
+  }
+}

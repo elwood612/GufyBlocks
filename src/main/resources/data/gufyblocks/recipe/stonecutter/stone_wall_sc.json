@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:stone"
+    },
+  "result": "gufyblocks:stone_wall",
+  "count": 1
+}

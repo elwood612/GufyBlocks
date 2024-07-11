@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "leaded_vertical_glass",
+  "ingredients": [
+    {
+      "item": "gufyblocks:leaded_glass_pane"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "gufyblocks:gufy_leaded_glass_pane"
+  }
+}

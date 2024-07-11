@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:deepslate_tiles"
+  },
+  "result": "gufyblocks:deepslate_tiles_verticalslab",
+  "count": 2
+}

@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:purple_concrete"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:purple_concrete_hopper",
+    "count": 6
+  }
+}

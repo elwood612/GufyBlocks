@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:cracked_red_sandstone_bricks"
+  },
+  "result": "gufyblocks:cracked_red_sandstone_bricks_post",
+  "count": 2
+}

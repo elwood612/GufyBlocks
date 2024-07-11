@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "particle": "gufyblocks:block/spruce_framed_daub",
+        "all": "gufyblocks:block/spruce_framed_daub"
+    }
+}

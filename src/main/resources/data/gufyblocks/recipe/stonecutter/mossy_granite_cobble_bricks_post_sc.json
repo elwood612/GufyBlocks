@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:mossy_granite_cobble_bricks"
+  },
+  "result": "gufyblocks:mossy_granite_cobble_bricks_post",
+  "count": 2
+}

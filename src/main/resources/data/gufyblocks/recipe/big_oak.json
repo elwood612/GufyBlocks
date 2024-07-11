@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "planks",
+  "pattern":
+  [
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "tag": "minecraft:oak_logs"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_oak",
+    "count": 8
+  }
+}

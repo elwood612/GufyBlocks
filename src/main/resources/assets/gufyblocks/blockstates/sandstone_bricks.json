@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/sandstone_bricks" },
+        	{ "model": "gufyblocks:block/sandstone_bricks2" },
+        	{ "model": "gufyblocks:block/sandstone_bricks3" },
+        	{ "model": "gufyblocks:block/sandstone_bricks4" }
+        ]
+    }
+}

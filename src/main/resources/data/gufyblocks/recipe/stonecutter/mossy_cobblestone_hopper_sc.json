@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:mossy_cobblestone"
+    },
+  "result": "gufyblocks:mossy_cobblestone_hopper",
+    "count": 1
+  }

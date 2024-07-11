@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cracked_warped" },
+        	{ "model": "gufyblocks:block/cracked_warped2" },
+        	{ "model": "gufyblocks:block/cracked_warped3" },
+        	{ "model": "gufyblocks:block/cracked_warped4" }
+        ]
+    }
+}

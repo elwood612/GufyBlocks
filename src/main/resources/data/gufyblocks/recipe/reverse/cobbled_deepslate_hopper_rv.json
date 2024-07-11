@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cobbled_deepslate",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cobbled_deepslate_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:cobbled_deepslate",
+    "count": 2
+  }
+}

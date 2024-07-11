@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cracked_polished_blackstone_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cracked_polished_blackstone_brick_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:cracked_polished_blackstone_bricks",
+    "count": 2
+  }
+}

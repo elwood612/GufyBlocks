@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lime_wool",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:lime_wool_stairs"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:lime_wool",
+    "count": 3
+  }
+}

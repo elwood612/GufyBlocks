@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "moss",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:moss_slab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:moss_block",
+    "count": 2
+  }
+}

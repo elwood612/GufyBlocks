@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:cracked_andesite_bricks"
+  },
+  "result": "gufyblocks:cracked_andesite_bricks_wall",
+  "count": 1
+}

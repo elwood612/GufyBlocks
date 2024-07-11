@@ -1,0 +1,151 @@
+package com.github.elwood612.gufyblocks.blocks.blockUtil;
+
+import net.minecraft.client.resources.sounds.Sound;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
+
+public enum GufyMaterials 
+{
+	//Create Materials in here
+	//Copy values from Blocks.class
+	STONE(MapColor.STONE, SoundType.STONE, 1.5F, 6.0F, true, true),
+	STONE_TRAPDOOR(MapColor.STONE, SoundType.STONE, 1.5F, 6.0F, true, false),
+	COBBLESTONE(MapColor.STONE, SoundType.STONE, 2.0F, 6.0F, true, true),
+	DIORITE(MapColor.QUARTZ, SoundType.STONE, 1.5F, 6.0F, true, true),
+	DIORITE_TRAPDOOR(MapColor.QUARTZ, SoundType.STONE, 1.5F, 6.0F, true, false),
+	DIORITE_COBBLE(MapColor.QUARTZ, SoundType.STONE, 2.0F, 6.0F, true, true),
+	GRANITE(MapColor.DIRT, SoundType.STONE, 1.5F, 6.0F, true, true),
+	GRANITE_TRAPDOOR(MapColor.DIRT, SoundType.STONE, 1.5F, 6.0F, true, false),
+	GRANITE_COBBLE(MapColor.DIRT, SoundType.STONE, 2.0F, 6.0F, true, true),
+	ANDESITE(MapColor.DIRT, SoundType.STONE, 1.5F, 6.0F, true, true),
+	ANDESITE_TRAPDOOR(MapColor.DIRT, SoundType.STONE, 1.5F, 6.0F, true, false),
+	CALCITE(MapColor.TERRACOTTA_WHITE, SoundType.STONE, 0.75F, 0.75F, true, true),
+	BASALT(MapColor.COLOR_BLACK, SoundType.BASALT, 1.25F, 4.2F, true, true),
+	THATCH(MapColor.COLOR_YELLOW, SoundType.GRASS, 0.5F, 0.5F, false, true),
+	MOSS(MapColor.COLOR_GREEN, SoundType.MOSS, 0.1F, 0.1F, false, true),
+	TERRACOTTA(MapColor.COLOR_ORANGE, SoundType.STONE, 1.25F, 4.2F, true, true),
+	WHITE_TERRACOTTA(MapColor.TERRACOTTA_WHITE, SoundType.STONE, 1.25F, 4.2F, true, true),
+	LIGHT_GRAY_TERRACOTTA(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.STONE, 1.25F, 4.2F, true, true),
+	GRAY_TERRACOTTA(MapColor.TERRACOTTA_GRAY, SoundType.STONE, 1.25F, 4.2F, true, true),
+	BLACK_TERRACOTTA(MapColor.TERRACOTTA_BLACK, SoundType.STONE, 1.25F, 4.2F, true, true),
+	BROWN_TERRACOTTA(MapColor.TERRACOTTA_BROWN, SoundType.STONE, 1.25F, 4.2F, true, true),
+	RED_TERRACOTTA(MapColor.TERRACOTTA_RED, SoundType.STONE, 1.25F, 4.2F, true, true),
+	ORANGE_TERRACOTTA(MapColor.TERRACOTTA_ORANGE, SoundType.STONE, 1.25F, 4.2F, true, true),
+	YELLOW_TERRACOTTA(MapColor.TERRACOTTA_YELLOW, SoundType.STONE, 1.25F, 4.2F, true, true),
+	LIME_TERRACOTTA(MapColor.TERRACOTTA_LIGHT_GREEN, SoundType.STONE, 1.25F, 4.2F, true, true),
+	GREEN_TERRACOTTA(MapColor.TERRACOTTA_GREEN, SoundType.STONE, 1.25F, 4.2F, true, true),
+	CYAN_TERRACOTTA(MapColor.TERRACOTTA_CYAN, SoundType.STONE, 1.25F, 4.2F, true, true),
+	LIGHT_BLUE_TERRACOTTA(MapColor.TERRACOTTA_LIGHT_BLUE, SoundType.STONE, 1.25F, 4.2F, true, true),
+	BLUE_TERRACOTTA(MapColor.TERRACOTTA_BLUE, SoundType.STONE, 1.25F, 4.2F, true, true),
+	PURPLE_TERRACOTTA(MapColor.TERRACOTTA_PURPLE, SoundType.STONE, 1.25F, 4.2F, true, true),
+	MAGENTA_TERRACOTTA(MapColor.TERRACOTTA_MAGENTA, SoundType.STONE, 1.25F, 4.2F, true, true),
+	PINK_TERRACOTTA(MapColor.TERRACOTTA_PINK, SoundType.STONE, 1.25F, 4.2F, true, true),
+	WHITE_CONCRETE(MapColor.SNOW, SoundType.STONE, 1.8F, 1.8F, true, true),
+	LIGHT_GRAY_CONCRETE(MapColor.COLOR_LIGHT_GRAY, SoundType.STONE, 1.8F, 1.8F, true, true),
+	GRAY_CONCRETE(MapColor.COLOR_GRAY, SoundType.STONE, 1.8F, 1.8F, true, true),
+	BLACK_CONCRETE(MapColor.COLOR_BLACK, SoundType.STONE, 1.8F, 1.8F, true, true),
+	BROWN_CONCRETE(MapColor.COLOR_BROWN, SoundType.STONE, 1.8F, 1.8F, true, true),
+	RED_CONCRETE(MapColor.COLOR_RED, SoundType.STONE, 1.8F, 1.8F, true, true),
+	ORANGE_CONCRETE(MapColor.COLOR_ORANGE, SoundType.STONE, 1.8F, 1.8F, true, true),
+	YELLOW_CONCRETE(MapColor.COLOR_YELLOW, SoundType.STONE, 1.8F, 1.8F, true, true),
+	LIME_CONCRETE(MapColor.COLOR_LIGHT_GREEN, SoundType.STONE, 1.8F, 1.8F, true, true),
+	GREEN_CONCRETE(MapColor.COLOR_GREEN, SoundType.STONE, 1.8F, 1.8F, true, true),
+	CYAN_CONCRETE(MapColor.COLOR_CYAN, SoundType.STONE, 1.8F, 1.8F, true, true),
+	LIGHT_BLUE_CONCRETE(MapColor.COLOR_LIGHT_BLUE, SoundType.STONE, 1.8F, 1.8F, true, true),
+	BLUE_CONCRETE(MapColor.COLOR_BLUE, SoundType.STONE, 1.8F, 1.8F, true, true),
+	PURPLE_CONCRETE(MapColor.COLOR_PURPLE, SoundType.STONE, 1.8F, 1.8F, true, true),
+	MAGENTA_CONCRETE(MapColor.COLOR_MAGENTA, SoundType.STONE, 1.8F, 1.8F, true, true),
+	PINK_CONCRETE(MapColor.COLOR_PINK, SoundType.STONE, 1.8F, 1.8F, true, true),
+	WHITE_WOOL(MapColor.SNOW, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	LIGHT_GRAY_WOOL(MapColor.COLOR_LIGHT_GRAY, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	GRAY_WOOL(MapColor.COLOR_GRAY, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	BLACK_WOOL(MapColor.COLOR_BLACK, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	BROWN_WOOL(MapColor.COLOR_BROWN, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	RED_WOOL(MapColor.COLOR_RED, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	ORANGE_WOOL(MapColor.COLOR_ORANGE, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	YELLOW_WOOL(MapColor.COLOR_YELLOW, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	LIME_WOOL(MapColor.COLOR_LIGHT_GREEN, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	GREEN_WOOL(MapColor.COLOR_GREEN, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	CYAN_WOOL(MapColor.COLOR_CYAN, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	LIGHT_BLUE_WOOL(MapColor.COLOR_LIGHT_BLUE, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	BLUE_WOOL(MapColor.COLOR_BLUE, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	PURPLE_WOOL(MapColor.COLOR_PURPLE, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	MAGENTA_WOOL(MapColor.COLOR_MAGENTA, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	PINK_WOOL(MapColor.COLOR_PINK, SoundType.WOOL, 0.8F, 0.8F, false, true),
+	OAK(MapColor.WOOD, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	SPRUCE(MapColor.PODZOL, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	SPRUCE_TRAPDOOR(MapColor.PODZOL, SoundType.WOOD, 2.0F, 3.0F, false, false),
+	BIRCH(MapColor.SAND, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	JUNGLE(MapColor.DIRT, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	DARK_OAK(MapColor.COLOR_BROWN, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	ACACIA(MapColor.COLOR_ORANGE, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	MANGROVE(MapColor.COLOR_RED, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	CHERRY(MapColor.COLOR_PINK, SoundType.WOOD, 2.0f, 3.0f, false, true),
+	BAMBOO(MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD, 2.0f, 3.0f, false, true),
+	CRIMSON(MapColor.CRIMSON_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	WARPED(MapColor.WARPED_STEM, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	NETHER_WART(MapColor.COLOR_RED, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
+	WARPED_WART(MapColor.WARPED_WART_BLOCK, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
+	NETHER_BRICKS(MapColor.NETHER, SoundType.NETHER_BRICKS, 2.0F, 6.0F, true, true),
+	WATTLE(MapColor.WOOD, SoundType.WOOD, 0.5F, 0.5F, false, false),
+	DIRT(MapColor.DIRT, SoundType.GRAVEL, 0.5F, 0.5F, false, true),
+	ROOTED_DIRT(MapColor.DIRT, SoundType.ROOTED_DIRT, 0.5F, 0.5F, false, true),
+	FRAMED_WHITE(MapColor.TERRACOTTA_WHITE, SoundType.STONE, 2.0F, 6.0F, true, true),
+	FRAMED_BROWN(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.STONE, 2.0F, 6.0F, true, true),
+	DAUB(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.GRAVEL, 1.0F, 1.0F, false, true),
+	COBBLED_DEEPSLATE(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 3.5F, 6.0F, true, true),
+	COBBLED_DEEPSLATE_TRAPDOOR(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 3.5F, 6.0F, true, false),
+	TILED_DEEPSLATE(MapColor.DEEPSLATE, SoundType.DEEPSLATE_TILES, 3.5F, 6.0F, true, true),
+	DEEPSLATE_BRICK(MapColor.DEEPSLATE, SoundType.DEEPSLATE_BRICKS, 3.5F, 6.0F, true, true),
+	POLISHED_DEEPSLATE(MapColor.DEEPSLATE, SoundType.POLISHED_DEEPSLATE, 3.5F, 6.0F, true, true),
+	QUARTZ(MapColor.QUARTZ, SoundType.STONE, 0.8F, 0.8F, true, true),
+	BRICK(MapColor.COLOR_RED, SoundType.STONE, 2.0F, 6.0F, true, true),
+	OXIDIZED_COPPER(MapColor.WARPED_NYLIUM, SoundType.COPPER, 3.0F, 6.0F, true, true),
+	WEATHERED_COPPER(MapColor.WARPED_STEM, SoundType.COPPER, 3.0F, 6.0F, true, true),
+	EXPOSED_COPPER(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.COPPER, 3.0F, 6.0F, true, true),
+	COPPER(MapColor.COLOR_ORANGE, SoundType.COPPER, 3.0F, 6.0F, true, true),
+	IRON(MapColor.METAL, SoundType.METAL, 5.0F, 6.0F, true, true),
+	GOLD(MapColor.GOLD, SoundType.METAL, 3.0F, 6.0F, true, true),
+	EMERALD(MapColor.EMERALD, SoundType.METAL, 5.0F, 6.0F, true, true),
+	DIAMOND(MapColor.DIAMOND, SoundType.METAL, 5.0F, 6.0F, true, true),
+	SMOOTH_SANDSTONE(MapColor.SAND, SoundType.STONE, 2.0F, 6.0F, true, true),
+	SANDSTONE(MapColor.SAND, SoundType.STONE, 0.8F, 6.0F, true, true),
+	SANDSTONE_TRAPDOOR(MapColor.SAND, SoundType.STONE, 0.8F, 6.0F, true, false),
+	SMOOTH_RED_SANDSTONE(MapColor.COLOR_ORANGE, SoundType.STONE, 2.0F, 6.0F, true, true),
+	RED_SANDSTONE(MapColor.COLOR_ORANGE, SoundType.STONE, 0.8F, 6.0F, true, true),
+	RED_SANDSTONE_TRAPDOOR(MapColor.COLOR_ORANGE, SoundType.STONE, 0.8F, 6.0F, true, false),
+	AMETHYST(MapColor.COLOR_PURPLE, SoundType.AMETHYST, 1.5F, 1.5F, true, true),
+	END_STONE(MapColor.SAND, SoundType.STONE, 3.0F, 9.0F, true, true),
+	PURPUR(MapColor.COLOR_MAGENTA, SoundType.STONE, 1.5F, 6.0F, true, true),
+	BLACKSTONE(MapColor.COLOR_BLACK, SoundType.STONE, 1.5F, 6.0F, true, true),
+	POLISHED_BLACKSTONE(MapColor.COLOR_BLACK, SoundType.STONE, 2.0F, 6.0F, true, true),
+	GILDED_BLACKSTONE(MapColor.COLOR_BLACK, SoundType.GILDED_BLACKSTONE, 1.5F, 6.0F, true, true),
+	WHITE_WOOD(MapColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, true),
+	WHITE_SIGN(MapColor.SNOW, SoundType.WOOD, 1.0F, 1.0F, false, true),
+	WHITE_TRAPDOOR(MapColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, false),
+	PACKED_MUD(MapColor.DIRT, SoundType.PACKED_MUD, 1.0F, 3.0F, false, false),
+	MUD_BRICKS(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.MUD_BRICKS, 1.5F, 3.0F, true, false),
+	TUFF(MapColor.TERRACOTTA_GRAY, SoundType.TUFF, 1.5F, 6.0F, true, false),
+	LEADED_GLASS(MapColor.STONE, SoundType.GLASS, 0.3F, 3.0F, false, false),
+	FRAMED_GLASS(MapColor.WOOD, SoundType.GLASS, 0.3F, 3.0F, false, false),
+	DRIPSTONE(MapColor.TERRACOTTA_BROWN, SoundType.DRIPSTONE_BLOCK, 1.5f, 1.0f, true, false),
+	MUSHROOM(MapColor.WOOL, SoundType.WOOD, 0.2f, 0.2f, false, false);
+
+    public final MapColor color; //map color
+    public final SoundType sound; //sound
+    public final float hardness; //mining hardness
+    public final float resistance; //explosion resistance
+	public final boolean tool;
+	public final boolean occlusion;
+
+    GufyMaterials(MapColor color, SoundType sound, float hardness, float resistance, boolean tool, boolean occlusion)
+    {
+        this.color = color;
+        this.sound = sound;
+        this.hardness = hardness;
+        this.resistance = resistance;
+        this.tool = tool;
+        this.occlusion = occlusion;
+    }
+}
+

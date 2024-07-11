@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_diorite_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_diorite_bricks_slab"
+    }
+  },
+  "result": 
+  {
+      "item": "gufyblocks:mossy_diorite_bricks",
+    "count": 2
+  }
+}

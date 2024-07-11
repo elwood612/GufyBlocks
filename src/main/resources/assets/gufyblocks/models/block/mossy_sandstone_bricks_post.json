@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/post",
+	"textures": 
+	{
+		"texture": "gufyblocks:block/mossy_sandstone_bricks"
+	}
+}

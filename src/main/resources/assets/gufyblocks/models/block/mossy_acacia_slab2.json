@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "gufyblocks:block/mossy_acacia2",
+        "top": "gufyblocks:block/mossy_acacia2",
+        "side": "gufyblocks:block/mossy_acacia2"
+    }
+}

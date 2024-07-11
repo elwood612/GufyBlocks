@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_terracotta",
+  "ingredients": [
+    {
+      "item": "minecraft:white_terracotta"
+    },
+    {
+      "tag": "gufyblocks:birch_fences"
+    }
+  ],
+  "result": {
+    "item": "gufyblocks:birch_framed_terracotta"
+  }
+}

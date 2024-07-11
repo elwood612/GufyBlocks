@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_acacia",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:big_acacia_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_acacia",
+    "count": 1
+  }
+}

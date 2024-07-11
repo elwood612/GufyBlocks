@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:lime_concrete"
+    },
+  "result": "gufyblocks:lime_concrete_post",
+  "count": 2
+}

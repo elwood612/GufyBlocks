@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "gufyblocks:block/sandstone_bricks3",
+        "top": "gufyblocks:block/sandstone_bricks3",
+        "side": "gufyblocks:block/sandstone_bricks3"
+    }
+}

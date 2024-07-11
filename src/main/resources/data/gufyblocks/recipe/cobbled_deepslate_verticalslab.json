@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:cobbled_deepslate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cobbled_deepslate_verticalslab",
+    "count": 6
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/cracked_jungle4",
+    "top": "gufyblocks:block/cracked_jungle4",
+    "side": "gufyblocks:block/cracked_jungle4"
+  }
+}

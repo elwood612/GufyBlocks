@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:granite"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:granite_hopper",
+    "count": 6
+  }
+}

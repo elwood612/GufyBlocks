@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:dripstone_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:dripstone_post",
+    "count": 4
+  }
+}

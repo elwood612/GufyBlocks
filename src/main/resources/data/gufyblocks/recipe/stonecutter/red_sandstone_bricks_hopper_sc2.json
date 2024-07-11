@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cut_red_sandstone"
+  },
+  "result": "gufyblocks:red_sandstone_bricks_hopper",
+  "count": 1
+}

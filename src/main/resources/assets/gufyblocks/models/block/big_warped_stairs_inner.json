@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/big_warped",
+    "top": "gufyblocks:block/big_warped",
+    "side": "gufyblocks:block/big_warped"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:mushroom_stem"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:mushroom_stem_fence",
+    "count": 4
+  }
+}

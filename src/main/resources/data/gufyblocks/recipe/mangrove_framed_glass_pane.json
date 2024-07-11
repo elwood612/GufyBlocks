@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "tag": "gufyblocks:mangrove_fences"
+    }
+  ],
+  "result": {
+    "item": "gufyblocks:mangrove_framed_glass_pane"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:andesite_bricks"
+  },
+  "result": "gufyblocks:andesite_bricks_verticalslab",
+  "count": 2
+}

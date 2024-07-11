@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/hopper",
+	"textures": 
+	{
+		"texture": "gufyblocks:block/mossy_granite_bricks2"
+	}
+}

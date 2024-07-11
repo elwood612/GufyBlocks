@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "planks",
+  "pattern":
+  [
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "tag": "minecraft:spruce_logs"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_spruce",
+    "count": 8
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/mossy_red_sandstone_cobble_bricks2",
+    "top": "gufyblocks:block/mossy_red_sandstone_cobble_bricks2",
+    "side": "gufyblocks:block/mossy_red_sandstone_cobble_bricks2"
+  }
+}

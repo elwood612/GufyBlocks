@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:pink_wool"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:pink_wool_verticalslab",
+    "count": 6
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:birch_wood"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:birch_wood_verticalslab",
+    "count": 6
+  }
+}

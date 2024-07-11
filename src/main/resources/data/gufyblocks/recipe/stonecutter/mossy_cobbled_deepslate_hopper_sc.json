@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:mossy_cobbled_deepslate"
+  },
+  "result": "gufyblocks:mossy_cobbled_deepslate_hopper",
+  "count": 1
+}

@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:red_concrete"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:red_concrete_stairs",
+    "count": 6
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "facing=north,half=bottom,open=false": { "model": "gufyblocks:block/wagon_wheel_bottom", "uvlock": false },
+        "facing=south,half=bottom,open=false": { "model": "gufyblocks:block/wagon_wheel_bottom", "y": 180, "uvlock": false },
+        "facing=east,half=bottom,open=false": { "model": "gufyblocks:block/wagon_wheel_bottom", "y": 90, "uvlock": false },
+        "facing=west,half=bottom,open=false": { "model": "gufyblocks:block/wagon_wheel_bottom", "y": 270, "uvlock": false },
+        "facing=north,half=top,open=false": { "model": "gufyblocks:block/wagon_wheel_top", "uvlock": false },
+        "facing=south,half=top,open=false": { "model": "gufyblocks:block/wagon_wheel_top", "y": 180, "uvlock": false },
+        "facing=east,half=top,open=false": { "model": "gufyblocks:block/wagon_wheel_top", "y": 90, "uvlock": false },
+        "facing=west,half=top,open=false": { "model": "gufyblocks:block/wagon_wheel_top", "y": 270, "uvlock": false },
+        "facing=north,half=bottom,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "uvlock": false },
+        "facing=south,half=bottom,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "y": 180, "uvlock": false },
+        "facing=east,half=bottom,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "y": 90, "uvlock": false },
+        "facing=west,half=bottom,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "y": 270, "uvlock": false },
+        "facing=north,half=top,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "x": 180, "y": 180, "uvlock": false },
+        "facing=south,half=top,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "x": 180, "y": 0, "uvlock": false },
+        "facing=east,half=top,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "x": 180, "y": 270, "uvlock": false },
+        "facing=west,half=top,open=true": { "model": "gufyblocks:block/wagon_wheel_open", "x": 180, "y": 90, "uvlock": false }
+    }
+}

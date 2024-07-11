@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "gufyblocks:block/mossy_deepslate_tiles",
+        "top": "gufyblocks:block/mossy_deepslate_tiles",
+        "side": "gufyblocks:block/mossy_deepslate_tiles"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "gufyblocks:big_crimson"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:big_crimson_fence",
+    "count": 4
+  }
+}

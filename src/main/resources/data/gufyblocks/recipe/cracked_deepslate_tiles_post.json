@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:cracked_deepslate_tiles_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cracked_deepslate_tiles_post",
+    "count": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_oak"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_oak_verticalslab",
+    "count": 6
+  }
+}

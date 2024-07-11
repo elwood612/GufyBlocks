@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_hoppers",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_cherry"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:big_cherry_hopper",
+    "count": 6
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/diorite_cobble2",
+    "top": "gufyblocks:block/diorite_cobble2",
+    "side": "gufyblocks:block/diorite_cobble2"
+  }
+}

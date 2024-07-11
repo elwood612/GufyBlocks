@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:granite_bricks"
+  },
+  "result": "gufyblocks:granite_bricks_slab",
+  "count": 2
+}

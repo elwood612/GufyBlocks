@@ -1,0 +1,38 @@
+{
+    "multipart": [
+        {   "apply": [
+				{ "model": "gufyblocks:block/cracked_crimson_fence_post" },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_post2" },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_post3" },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_post4" } ] 
+		},
+        {   "when": { "north": "true" },
+            "apply": [
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side", "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side2", "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side3", "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side4", "uvlock": true } ]
+        },
+        {   "when": { "east": "true" },
+            "apply": [
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side", "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side2", "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side3", "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side4", "y": 90, "uvlock": true } ]
+        },
+        {   "when": { "south": "true" },
+            "apply": [
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side", "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side2", "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side3", "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side4", "y": 180, "uvlock": true } ]
+        },
+        {   "when": { "west": "true" },
+            "apply": [
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side", "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side2", "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side3", "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/cracked_crimson_fence_side4", "y": 270, "uvlock": true } ]
+        }
+    ]
+}

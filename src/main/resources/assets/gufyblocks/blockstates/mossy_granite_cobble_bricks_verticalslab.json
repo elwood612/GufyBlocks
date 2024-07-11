@@ -1,0 +1,24 @@
+{ 
+	"variants": {
+		"facing=west":  [ 
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab" },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab2" },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab3" },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab4" } ],
+        "facing=east":  [ 
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab", "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab2", "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab3", "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab4", "y": 180, "uvlock": true } ],
+        "facing=north": [ 
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab", "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab2", "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab3", "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab4", "y": 90, "uvlock": true } ],
+        "facing=south": [ 
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab", "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab2", "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab3", "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/mossy_granite_cobble_bricks_verticalslab4", "y": 270, "uvlock": true } ]
+	} 
+}

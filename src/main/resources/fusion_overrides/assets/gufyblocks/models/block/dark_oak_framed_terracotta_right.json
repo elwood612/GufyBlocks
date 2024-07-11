@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_all",
+    "type": "fusion:connecting",
+    "loader": "fusion:model",
+    "textures": {
+        "particle": "gufyblocks:block/dark_oak_framed_terracotta_right",
+        "all": "gufyblocks:block/dark_oak_framed_terracotta_right"
+    }
+}

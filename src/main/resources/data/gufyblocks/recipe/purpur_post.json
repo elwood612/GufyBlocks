@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:purpur_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:purpur_post",
+    "count": 4
+  }
+}

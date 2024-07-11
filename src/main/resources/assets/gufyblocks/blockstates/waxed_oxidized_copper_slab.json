@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/oxidized_copper_slab" },
+        "type=top": { "model": "gufyblocks:block/oxidized_copper_slab_top" },
+        "type=double": { "model": "minecraft:block/oxidized_copper" }
+    }
+}

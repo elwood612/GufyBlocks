@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_post",
+    "textures": {
+        "texture": "gufyblocks:block/mossy_spruce2"
+    }
+}

@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/post",
+	"textures": 
+	{
+		"texture": "minecraft:block/smooth_stone2"
+	}
+}

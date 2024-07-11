@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cracked_diorite_cobble_bricks_post" },
+        	{ "model": "gufyblocks:block/cracked_diorite_cobble_bricks_post2" },
+        	{ "model": "gufyblocks:block/cracked_diorite_cobble_bricks_post3" },
+        	{ "model": "gufyblocks:block/cracked_diorite_cobble_bricks_post4" }
+        ]
+    }
+}

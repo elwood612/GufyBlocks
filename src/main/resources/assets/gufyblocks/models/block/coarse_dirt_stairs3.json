@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "minecraft:block/coarse_dirt3",
+    "top": "minecraft:block/coarse_dirt3",
+    "side": "minecraft:block/coarse_dirt3"
+  }
+}

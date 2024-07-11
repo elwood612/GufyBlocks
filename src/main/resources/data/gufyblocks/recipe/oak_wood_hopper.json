@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_hoppers",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:oak_wood"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:oak_wood_hopper",
+    "count": 6
+  }
+}

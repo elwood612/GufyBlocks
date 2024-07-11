@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:brown_concrete_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:brown_concrete_post",
+    "count": 4
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/cracked_jungle_slab" },
+        	{ "model": "gufyblocks:block/cracked_jungle_slab2" },
+       		{ "model": "gufyblocks:block/cracked_jungle_slab3" },
+        	{ "model": "gufyblocks:block/cracked_jungle_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/cracked_jungle_slab_top" },
+        	{ "model": "gufyblocks:block/cracked_jungle_slab_top2" },
+        	{ "model": "gufyblocks:block/cracked_jungle_slab_top3" },
+        	{ "model": "gufyblocks:block/cracked_jungle_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "gufyblocks:block/cracked_jungle" }, 
+        	{ "model": "gufyblocks:block/cracked_jungle2" }, 
+        	{ "model": "gufyblocks:block/cracked_jungle3" }, 
+        	{ "model": "gufyblocks:block/cracked_jungle4" }
+       ]
+    }
+}

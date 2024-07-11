@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "birch_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:birch_wood_fence_gate"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:birch_wood",
+    "count": 1
+  }
+}

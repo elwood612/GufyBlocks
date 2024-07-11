@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:mossy_cobblestone_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_cobblestone_post",
+    "count": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "rooted_dirt",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:rooted_dirt_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:rooted_dirt",
+    "count": 2
+  }
+}

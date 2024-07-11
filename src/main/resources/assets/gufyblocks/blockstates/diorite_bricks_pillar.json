@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "gufyblocks:block/diorite_bricks_pillar" },
+        "axis=z":   { "model": "gufyblocks:block/diorite_bricks_pillar", "x": 90 },
+        "axis=x":   { "model": "gufyblocks:block/diorite_bricks_pillar", "x": 90, "y": 90 }
+    }
+}

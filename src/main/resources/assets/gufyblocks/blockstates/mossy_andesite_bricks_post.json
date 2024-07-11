@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/mossy_andesite_bricks_post" },
+        	{ "model": "gufyblocks:block/mossy_andesite_bricks_post2" },
+        	{ "model": "gufyblocks:block/mossy_andesite_bricks_post3" },
+        	{ "model": "gufyblocks:block/mossy_andesite_bricks_post4" }
+        ]
+    }
+}

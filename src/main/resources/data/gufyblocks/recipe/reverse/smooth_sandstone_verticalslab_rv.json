@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "smooth_sandstone",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:smooth_sandstone_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:smooth_sandstone",
+    "count": 2
+  }
+}

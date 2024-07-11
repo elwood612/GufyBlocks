@@ -1,0 +1,9 @@
+{
+	"pack": {
+		"description": "Textures for the Gufy Server",
+		"pack_format": 34
+    },
+    "fusion": {
+        "overrides_folder": "fusion_overrides"
+    }
+}

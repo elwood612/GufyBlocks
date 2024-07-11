@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_column",
+    "textures": 
+    {
+        "end": "gufyblocks:block/chiseled_stripped_birch_wood_end",
+		"side": "gufyblocks:block/chiseled_stripped_birch_wood"
+    }
+}

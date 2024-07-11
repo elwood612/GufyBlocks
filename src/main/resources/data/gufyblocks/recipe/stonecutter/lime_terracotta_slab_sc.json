@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:lime_terracotta"
+    },
+  "result": "gufyblocks:lime_terracotta_slab",
+  "count": 2
+}

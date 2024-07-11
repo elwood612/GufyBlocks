@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/mossy_cobbled_deepslate_slab" },
+        "type=top": { "model": "gufyblocks:block/mossy_cobbled_deepslate_slab_top" },
+        "type=double": { "model": "gufyblocks:block/mossy_cobbled_deepslate" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/yellow_terracotta_slab" },
+        "type=top": { "model": "gufyblocks:block/yellow_terracotta_slab_top" },
+        "type=double": { "model": "minecraft:block/yellow_terracotta" }
+    }
+}

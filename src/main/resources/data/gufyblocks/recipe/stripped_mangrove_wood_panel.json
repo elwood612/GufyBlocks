@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": {
+      "item": "gufyblocks:stripped_mangrove_wood_slab"
+    }
+  },
+  "result": {
+    "item": "gufyblocks:stripped_mangrove_wood_panel",
+    "count": 4
+  }
+}

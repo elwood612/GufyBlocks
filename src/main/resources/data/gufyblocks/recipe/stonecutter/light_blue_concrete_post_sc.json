@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:light_blue_concrete"
+    },
+  "result": "gufyblocks:light_blue_concrete_post",
+  "count": 2
+}

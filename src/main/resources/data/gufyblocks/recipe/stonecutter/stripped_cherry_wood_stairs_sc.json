@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:stripped_cherry_wood"
+  },
+  "result": "gufyblocks:stripped_cherry_wood_stairs",
+  "count": 1
+}

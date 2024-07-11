@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "daub",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:daub_verticalslab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:packed_mud",
+    "count": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_andesite_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:mossy_andesite_bricks_hopper"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_andesite_bricks",
+    "count": 2
+  }
+}

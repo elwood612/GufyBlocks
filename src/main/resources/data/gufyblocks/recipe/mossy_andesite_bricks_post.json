@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:mossy_andesite_bricks_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:mossy_andesite_bricks_post",
+    "count": 4
+  }
+}

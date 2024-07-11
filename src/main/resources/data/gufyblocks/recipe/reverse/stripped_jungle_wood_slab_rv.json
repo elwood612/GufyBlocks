@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stripped_jungle_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:stripped_jungle_wood_slab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:stripped_jungle_wood",
+    "count": 2
+  }
+}

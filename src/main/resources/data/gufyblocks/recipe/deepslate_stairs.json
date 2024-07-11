@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:deepslate"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:deepslate_stairs",
+    "count": 6
+  }
+}

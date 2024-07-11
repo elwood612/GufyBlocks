@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "polished_deepslate",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:polished_deepslate_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "item": "minecraft:polished_deepslate",
+    "count": 2
+  }
+}

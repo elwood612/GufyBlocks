@@ -1,0 +1,9 @@
+{ 
+	"variants": 
+	{
+		"facing=south":  { "model": "gufyblocks:block/stripped_birch_wood_panel" },
+		"facing=north":  { "model": "gufyblocks:block/stripped_birch_wood_panel", "y": 180, "uvlock": false },
+		"facing=west":  { "model": "gufyblocks:block/stripped_birch_wood_panel", "y": 90, "uvlock": false },
+		"facing=east":  { "model": "gufyblocks:block/stripped_birch_wood_panel", "y": 270, "uvlock": false }
+	} 
+}

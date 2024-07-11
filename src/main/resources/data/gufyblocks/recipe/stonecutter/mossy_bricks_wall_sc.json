@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:mossy_bricks"
+  },
+  "result": "gufyblocks:mossy_bricks_wall",
+  "count": 1
+}

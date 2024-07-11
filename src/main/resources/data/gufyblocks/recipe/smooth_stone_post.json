@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:smooth_stone_wall"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:smooth_stone_post",
+    "count": 4
+  }
+}

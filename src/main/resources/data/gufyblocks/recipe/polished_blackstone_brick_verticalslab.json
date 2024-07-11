@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:polished_blackstone_bricks"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:polished_blackstone_brick_verticalslab",
+    "count": 6
+  }
+}

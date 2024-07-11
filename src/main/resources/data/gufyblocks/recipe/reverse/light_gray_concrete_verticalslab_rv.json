@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "light_gray_concrete",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:light_gray_concrete_verticalslab"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:light_gray_concrete",
+    "count": 2
+  }
+}

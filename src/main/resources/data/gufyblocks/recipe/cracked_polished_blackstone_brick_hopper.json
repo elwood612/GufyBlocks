@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:cracked_polished_blackstone_bricks"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cracked_polished_blackstone_brick_hopper",
+    "count": 6
+  }
+}

@@ -1,0 +1,8 @@
+{ 
+	"variants": {
+		"facing=west":  { "model": "gufyblocks:block/cut_red_sandstone_verticalslab" },
+        "facing=east":  { "model": "gufyblocks:block/cut_red_sandstone_verticalslab", "y": 180, "uvlock": true },
+        "facing=north": { "model": "gufyblocks:block/cut_red_sandstone_verticalslab", "y": 90, "uvlock": true },
+        "facing=south": { "model": "gufyblocks:block/cut_red_sandstone_verticalslab", "y": 270, "uvlock": true }
+	} 
+}

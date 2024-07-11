@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cracked_andesite_bricks" },
+        	{ "model": "gufyblocks:block/cracked_andesite_bricks2" },
+        	{ "model": "gufyblocks:block/cracked_andesite_bricks3" },
+        	{ "model": "gufyblocks:block/cracked_andesite_bricks4" }
+        ]
+    }
+}

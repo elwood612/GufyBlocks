@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "gufyblocks:block/mossy_bricks",
+    "top": "gufyblocks:block/mossy_bricks",
+    "side": "gufyblocks:block/mossy_bricks"
+  }
+}

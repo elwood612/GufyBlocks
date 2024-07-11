@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:cracked_bricks"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:cracked_bricks_stairs",
+    "count": 6
+  }
+}

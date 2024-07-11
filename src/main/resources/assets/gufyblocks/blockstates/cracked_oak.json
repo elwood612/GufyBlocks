@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cracked_oak" },
+        	{ "model": "gufyblocks:block/cracked_oak2" },
+        	{ "model": "gufyblocks:block/cracked_oak3" },
+        	{ "model": "gufyblocks:block/cracked_oak4" }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{ 
+	"variants": 
+	{
+		"facing=south":  [
+			{ "model": "gufyblocks:block/cracked_birch_panel" },
+			{ "model": "gufyblocks:block/cracked_birch_panel2" },
+			{ "model": "gufyblocks:block/cracked_birch_panel3" },
+			{ "model": "gufyblocks:block/cracked_birch_panel4" } ],
+		"facing=north":  [
+			{ "model": "gufyblocks:block/cracked_birch_panel", "y": 180, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel2", "y": 180, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel3", "y": 180, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel4", "y": 180, "uvlock": false } ],
+		"facing=west": [
+			{ "model": "gufyblocks:block/cracked_birch_panel", "y": 90, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel2", "y": 90, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel3", "y": 90, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel4", "y": 90, "uvlock": false } ],
+		"facing=east": [
+			{ "model": "gufyblocks:block/cracked_birch_panel", "y": 270, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel2", "y": 270, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel3", "y": 270, "uvlock": false },
+			{ "model": "gufyblocks:block/cracked_birch_panel4", "y": 270, "uvlock": false } ]
+	} 
+}

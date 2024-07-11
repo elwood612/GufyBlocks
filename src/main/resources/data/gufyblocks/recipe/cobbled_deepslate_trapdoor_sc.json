@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cobbled_deepslate"
+  },
+  "result": "gufyblocks:cobbled_deepslate_trapdoor",
+  "count": 2
+}

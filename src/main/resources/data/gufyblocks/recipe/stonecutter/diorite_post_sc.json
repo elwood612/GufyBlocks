@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:diorite"
+    },
+  "result": "gufyblocks:diorite_post",
+  "count": 2
+}

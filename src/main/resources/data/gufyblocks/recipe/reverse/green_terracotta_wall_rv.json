@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "green_terracotta",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:green_terracotta_wall"
+    }
+  },
+  "result": 
+  {
+      "item": "minecraft:green_terracotta",
+    "count": 2
+  }
+}

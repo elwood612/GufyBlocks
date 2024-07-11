@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:red_sandstone_bricks"
+    }
+  },
+  "result": 
+  {
+    "item": "gufyblocks:red_sandstone_bricks_stairs",
+    "count": 6
+  }
+}
