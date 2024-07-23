@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:waxed_weathered_copper"
   },
-  "result": "gufyblocks:waxed_weathered_cut_copper_verticalslab",
+  "result": {
+    "id": "gufyblocks:waxed_weathered_cut_copper_verticalslab",
   "count": 8
+  }
 }

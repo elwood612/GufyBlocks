@@ -13,9 +13,8 @@
     "item": "gufyblocks:copper_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:copper_block",
+  "result": { 
+    "id": "minecraft:copper_block",
     "count": 2
   }
 }

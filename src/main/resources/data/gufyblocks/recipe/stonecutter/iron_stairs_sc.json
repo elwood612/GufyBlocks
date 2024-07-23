@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:iron_block"
   },
-  "result": "gufyblocks:iron_stairs",
+  "result": {
+    "id": "gufyblocks:iron_stairs",
   "count": 1
+  }
 }

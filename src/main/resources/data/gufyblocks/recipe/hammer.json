@@ -16,7 +16,8 @@
     "YYY",
     " # "
   ],
-  "result": {
-    "item": "gufyblocks:hammer"
+  "result": 
+  { 
+    "id": "gufyblocks:hammer"
   }
 }

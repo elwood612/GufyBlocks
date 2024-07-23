@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:iron_verticalslab",
+  { 
+    "id": "gufyblocks:iron_verticalslab",
     "count": 6
   }
 }

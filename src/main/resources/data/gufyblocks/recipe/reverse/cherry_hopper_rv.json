@@ -13,9 +13,8 @@
     "item": "gufyblocks:cherry_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:cherry_planks",
+  "result": { 
+    "id": "minecraft:cherry_planks",
     "count": 2
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:amethyst_block"
   },
-  "result": "gufyblocks:amethyst_verticalslab",
+  "result": {
+    "id": "gufyblocks:amethyst_verticalslab",
   "count": 2
+  }
 }

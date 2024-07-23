@@ -13,9 +13,8 @@
     "item": "gufyblocks:big_acacia_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:big_acacia",
+  "result": { 
+    "id": "gufyblocks:big_acacia",
     "count": 2
   }
 }

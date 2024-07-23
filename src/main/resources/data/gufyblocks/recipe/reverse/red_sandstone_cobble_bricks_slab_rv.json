@@ -13,9 +13,8 @@
     "item": "gufyblocks:red_sandstone_cobble_bricks_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:red_sandstone_cobble_bricks",
+  "result": { 
+    "id": "gufyblocks:red_sandstone_cobble_bricks",
     "count": 2
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gold_wall",
+  { 
+    "id": "gufyblocks:gold_wall",
     "count": 8
   }
 }

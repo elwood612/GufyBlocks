@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:andesite"
   },
-  "result": "gufyblocks:andesite_trapdoor",
+  "result": {
+    "id": "gufyblocks:andesite_trapdoor",
   "count": 2
+  }
 }

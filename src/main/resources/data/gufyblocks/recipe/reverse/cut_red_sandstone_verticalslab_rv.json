@@ -13,9 +13,8 @@
     "item": "gufyblocks:cut_red_sandstone_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:cut_red_sandstone",
+  "result": { 
+    "id": "minecraft:cut_red_sandstone",
     "count": 2
   }
 }

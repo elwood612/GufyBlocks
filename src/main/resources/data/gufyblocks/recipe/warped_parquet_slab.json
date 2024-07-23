@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:warped_parquet_slab",
+  { 
+    "id": "gufyblocks:warped_parquet_slab",
     "count": 6
   }
 }

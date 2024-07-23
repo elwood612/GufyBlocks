@@ -13,9 +13,8 @@
     "item": "gufyblocks:big_crimson_wall"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:big_crimson",
+  "result": { 
+    "id": "gufyblocks:big_crimson",
     "count": 2
   }
 }

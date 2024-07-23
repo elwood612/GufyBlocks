@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:wattle_fence",
+  { 
+    "id": "gufyblocks:wattle_fence",
     "count": 6
   }
 }

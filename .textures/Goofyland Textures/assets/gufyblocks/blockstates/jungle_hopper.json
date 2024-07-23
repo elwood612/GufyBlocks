@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/jungle_hopper" },
+        	{ "model": "gufyblocks:block/jungle_hopper2" },
+        	{ "model": "gufyblocks:block/jungle_hopper3" },
+        	{ "model": "gufyblocks:block/jungle_hopper4" }
+        ]
+    }
+}

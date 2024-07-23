@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:andesite"
   },
-  "result": "gufyblocks:andesite_hopper",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "gufyblocks:andesite_hopper"
+}
 }

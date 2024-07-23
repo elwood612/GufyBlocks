@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:yellow_concrete_post",
+  { 
+    "id": "gufyblocks:yellow_concrete_post",
     "count": 4
   }
 }

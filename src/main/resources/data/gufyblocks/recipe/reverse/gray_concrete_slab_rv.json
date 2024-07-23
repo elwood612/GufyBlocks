@@ -13,9 +13,8 @@
     "item": "gufyblocks:gray_concrete_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:gray_concrete",
+  "result": { 
+    "id": "minecraft:gray_concrete",
     "count": 2
   }
 }

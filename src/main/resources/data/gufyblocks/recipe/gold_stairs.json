@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gold_stairs",
+  { 
+    "id": "gufyblocks:gold_stairs",
     "count": 6
   }
 }

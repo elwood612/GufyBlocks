@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cut_copper"
   },
-  "result": "gufyblocks:cut_copper_hopper",
+  "result": {
+    "id": "gufyblocks:cut_copper_hopper",
   "count": 1
+  }
 }

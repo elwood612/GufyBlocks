@@ -13,9 +13,8 @@
     "item": "gufyblocks:tuff_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:tuff",
+  "result": { 
+    "id": "minecraft:tuff",
     "count": 2
   }
 }

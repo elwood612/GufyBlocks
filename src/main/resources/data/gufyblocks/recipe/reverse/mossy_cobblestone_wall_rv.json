@@ -13,9 +13,8 @@
     "item": "minecraft:mossy_cobblestone_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:mossy_cobblestone",
+  "result": { 
+    "id": "minecraft:mossy_cobblestone",
     "count": 2
   }
 }

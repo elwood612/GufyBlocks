@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cobbled_deepslate_verticalslab",
+  { 
+    "id": "gufyblocks:cobbled_deepslate_verticalslab",
     "count": 6
   }
 }

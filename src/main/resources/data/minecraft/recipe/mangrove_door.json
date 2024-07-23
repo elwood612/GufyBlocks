@@ -14,7 +14,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "minecraft:mangrove_door"
-  },
+    "id": "minecraft:mangrove_door"
+},
   "show_notification": true
 }

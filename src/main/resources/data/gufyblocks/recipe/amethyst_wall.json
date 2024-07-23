@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:amethyst_wall",
+  { 
+    "id": "gufyblocks:amethyst_wall",
     "count": 8
   }
 }

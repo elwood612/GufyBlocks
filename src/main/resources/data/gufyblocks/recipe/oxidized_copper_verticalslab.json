@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:oxidized_copper_verticalslab",
+  { 
+    "id": "gufyblocks:oxidized_copper_verticalslab",
     "count": 6
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:birch_parquet_slab",
+  { 
+    "id": "gufyblocks:birch_parquet_slab",
     "count": 6
   }
 }

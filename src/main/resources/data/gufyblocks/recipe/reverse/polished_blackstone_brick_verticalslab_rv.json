@@ -13,9 +13,8 @@
     "item": "gufyblocks:polished_blackstone_brick_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:polished_blackstone_bricks",
+  "result": { 
+    "id": "minecraft:polished_blackstone_bricks",
     "count": 2
   }
 }

@@ -9,8 +9,9 @@
       "item": "gufyblocks:mangrove_wood_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:mangrove_wood_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:mangrove_wood_panel",
     "count": 4
   }
 }

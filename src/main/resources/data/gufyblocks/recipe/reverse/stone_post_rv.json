@@ -13,9 +13,8 @@
     "item": "gufyblocks:stone_post"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:stone",
+  "result": { 
+    "id": "minecraft:stone",
     "count": 1
   }
 }

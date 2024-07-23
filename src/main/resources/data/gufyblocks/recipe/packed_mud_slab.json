@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:packed_mud_slab",
+  { 
+    "id": "gufyblocks:packed_mud_slab",
     "count": 6
   }
 }

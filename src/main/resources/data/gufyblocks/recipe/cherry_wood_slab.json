@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cherry_wood_slab",
+  { 
+    "id": "gufyblocks:cherry_wood_slab",
     "count": 6
   }
 }

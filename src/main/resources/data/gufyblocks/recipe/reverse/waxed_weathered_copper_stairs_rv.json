@@ -13,9 +13,8 @@
     "item": "gufyblocks:waxed_weathered_copper_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:waxed_weathered_copper",
+  "result": { 
+    "id": "minecraft:waxed_weathered_copper",
     "count": 3
   }
 }

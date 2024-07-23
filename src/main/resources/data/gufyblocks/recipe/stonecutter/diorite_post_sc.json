@@ -4,6 +4,8 @@
     {
       "item": "minecraft:diorite"
     },
-  "result": "gufyblocks:diorite_post",
+  "result": {
+    "id": "gufyblocks:diorite_post",
   "count": 2
+  }
 }

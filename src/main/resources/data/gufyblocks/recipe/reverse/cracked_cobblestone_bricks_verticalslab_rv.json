@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_cobblestone_bricks_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "gufyblocks:cracked_cobblestone_bricks",
+  "result": { 
+    "id": "gufyblocks:cracked_cobblestone_bricks",
     "count": 2
   }
 }

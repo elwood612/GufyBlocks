@@ -14,7 +14,8 @@
       "item": "minecraft:stripped_crimson_hyphae"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_crimson_hyphae_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_crimson_hyphae_fence_gate"
   }
 }

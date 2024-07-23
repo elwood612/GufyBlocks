@@ -12,8 +12,9 @@
       "item": "minecraft:cracked_nether_bricks"
     }
   },
-  "result": {
-    "item": "gufyblocks:cracked_nether_bricks_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:cracked_nether_bricks_fence",
     "count": 4
   }
 }

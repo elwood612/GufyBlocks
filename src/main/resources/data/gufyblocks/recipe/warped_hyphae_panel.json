@@ -9,8 +9,9 @@
       "item": "gufyblocks:warped_hyphae_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:warped_hyphae_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:warped_hyphae_panel",
     "count": 6
   }
 }

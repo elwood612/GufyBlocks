@@ -11,8 +11,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:spruce_parquet",
+  { 
+    "id": "gufyblocks:spruce_parquet",
     "count": 1
   }
 }

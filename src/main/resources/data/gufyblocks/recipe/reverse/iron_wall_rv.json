@@ -13,9 +13,8 @@
     "item": "gufyblocks:iron_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:iron_block",
+  "result": { 
+    "id": "minecraft:iron_block",
     "count": 2
   }
 }

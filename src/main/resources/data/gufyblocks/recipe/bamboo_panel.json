@@ -9,8 +9,9 @@
       "item": "minecraft:bamboo_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:bamboo_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:bamboo_panel",
     "count": 4
   }
 }

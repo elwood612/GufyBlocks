@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:iron_hopper",
+  { 
+    "id": "gufyblocks:iron_hopper",
     "count": 6
   }
 }

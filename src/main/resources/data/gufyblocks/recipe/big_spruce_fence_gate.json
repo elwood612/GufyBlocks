@@ -14,7 +14,8 @@
       "item": "gufyblocks:big_spruce"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_spruce_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:big_spruce_fence_gate"
   }
 }

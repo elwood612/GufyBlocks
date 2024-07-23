@@ -42,4 +42,8 @@ public enum GufyBlockTypes
     FRAMED_CROSS,
 
     CARVED_LOG,
+    SEAT,
+    ICE_STAIRS,
+    ICE_SLAB,
+    ICE_VERTICALSLAB,
 }

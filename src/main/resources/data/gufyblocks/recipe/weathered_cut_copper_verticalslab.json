@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:weathered_cut_copper_verticalslab",
+  { 
+    "id": "gufyblocks:weathered_cut_copper_verticalslab",
     "count": 6
   }
 }

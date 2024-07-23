@@ -13,9 +13,8 @@
     "item": "gufyblocks:exposed_cut_copper_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:exposed_cut_copper",
+  "result": { 
+    "id": "minecraft:exposed_cut_copper",
     "count": 2
   }
 }

@@ -4,6 +4,8 @@
     {
       "item": "gufyblocks:cracked_cobblestone_bricks"
     },
-  "result": "gufyblocks:cracked_cobblestone_bricks_hopper",
+  "result": {
+    "id": "gufyblocks:cracked_cobblestone_bricks_hopper",
     "count": 1
-  }
+    }
+}

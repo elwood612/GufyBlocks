@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stripped_jungle_wood_hopper",
+  { 
+    "id": "gufyblocks:stripped_jungle_wood_hopper",
     "count": 6
   }
 }

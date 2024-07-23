@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mangrove_wood_slab",
+  { 
+    "id": "gufyblocks:mangrove_wood_slab",
     "count": 6
   }
 }

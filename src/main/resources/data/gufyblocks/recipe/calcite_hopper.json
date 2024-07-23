@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:calcite_hopper",
+  { 
+    "id": "gufyblocks:calcite_hopper",
     "count": 6
   }
 }

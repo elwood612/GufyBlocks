@@ -13,9 +13,8 @@
     "item": "gufyblocks:cyan_wool_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cyan_wool",
+  "result": { 
+    "id": "minecraft:cyan_wool",
     "count": 2
   }
 }

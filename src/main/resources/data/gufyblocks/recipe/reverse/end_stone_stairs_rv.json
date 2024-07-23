@@ -13,9 +13,8 @@
     "item": "gufyblocks:end_stone_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:end_stone",
+  "result": { 
+    "id": "minecraft:end_stone",
     "count": 3
   }
 }

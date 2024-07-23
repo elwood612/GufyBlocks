@@ -13,9 +13,8 @@
     "item": "gufyblocks:sandstone_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:sandstone",
+  "result": { 
+    "id": "minecraft:sandstone",
     "count": 2
   }
 }

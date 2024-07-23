@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:mossy_deepslate_bricks"
   },
-  "result": "gufyblocks:mossy_deepslate_bricks_slab",
+  "result": {
+    "id": "gufyblocks:mossy_deepslate_bricks_slab",
   "count": 2
+  }
 }

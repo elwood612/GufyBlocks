@@ -13,9 +13,8 @@
     "item": "gufyblocks:birch_parquet_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:birch_parquet",
+  "result": { 
+    "id": "gufyblocks:birch_parquet",
     "count": 2
   }
 }

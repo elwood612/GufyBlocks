@@ -13,9 +13,8 @@
     "item": "gufyblocks:smooth_stone_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:smooth_stone",
+  "result": { 
+    "id": "minecraft:smooth_stone",
     "count": 2
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_bricks_stairs",
+  { 
+    "id": "gufyblocks:diorite_bricks_stairs",
     "count": 6
   }
 }

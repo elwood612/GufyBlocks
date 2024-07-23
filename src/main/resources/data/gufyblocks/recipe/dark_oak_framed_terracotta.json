@@ -10,7 +10,8 @@
       "tag": "gufyblocks:dark_oak_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:dark_oak_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:dark_oak_framed_terracotta"
   }
 }

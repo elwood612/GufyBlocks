@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:terracotta_hopper",
+  { 
+    "id": "gufyblocks:terracotta_hopper",
     "count": 6
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_stone_bricks_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cracked_stone_bricks",
+  "result": { 
+    "id": "minecraft:cracked_stone_bricks",
     "count": 2
   }
 }

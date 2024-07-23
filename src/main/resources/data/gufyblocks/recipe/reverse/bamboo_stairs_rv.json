@@ -13,9 +13,8 @@
     "item": "minecraft:bamboo_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:bamboo_planks",
+  "result": { 
+    "id": "minecraft:bamboo_planks",
     "count": 3
   }
 }

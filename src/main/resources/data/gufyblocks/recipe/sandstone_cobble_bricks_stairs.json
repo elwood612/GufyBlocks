@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:sandstone_cobble_bricks_stairs",
+  { 
+    "id": "gufyblocks:sandstone_cobble_bricks_stairs",
     "count": 6
   }
 }

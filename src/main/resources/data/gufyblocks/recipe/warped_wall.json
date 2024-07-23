@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:warped_wall",
+  { 
+    "id": "gufyblocks:warped_wall",
     "count": 8
   }
 }

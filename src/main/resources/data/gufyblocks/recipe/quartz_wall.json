@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:quartz_wall",
+  { 
+    "id": "gufyblocks:quartz_wall",
     "count": 8
   }
 }

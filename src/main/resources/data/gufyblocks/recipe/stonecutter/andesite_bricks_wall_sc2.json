@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:polished_andesite"
   },
-  "result": "gufyblocks:andesite_bricks_wall",
+  "result": {
+    "id": "gufyblocks:andesite_bricks_wall",
   "count": 1
+  }
 }

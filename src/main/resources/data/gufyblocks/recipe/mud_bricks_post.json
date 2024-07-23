@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mud_bricks_post",
+  { 
+    "id": "gufyblocks:mud_bricks_post",
     "count": 4
   }
 }

@@ -13,9 +13,8 @@
     "item": "minecraft:blackstone_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:blackstone",
+  "result": { 
+    "id": "minecraft:blackstone",
     "count": 3
   }
 }

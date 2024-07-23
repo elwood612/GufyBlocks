@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stone_bricks_post",
+  { 
+    "id": "gufyblocks:stone_bricks_post",
     "count": 4
   }
 }

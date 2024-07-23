@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_granite_bricks_post"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:cracked_granite_bricks",
+  "result": { 
+    "id": "gufyblocks:cracked_granite_bricks",
     "count": 1
   }
 }

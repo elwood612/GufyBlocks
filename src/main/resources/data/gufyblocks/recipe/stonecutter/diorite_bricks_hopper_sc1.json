@@ -4,6 +4,8 @@
     {
       "item": "minecraft:diorite"
     },
-  "result": "gufyblocks:diorite_bricks_hopper",
+  "result": {
+    "id": "gufyblocks:diorite_bricks_hopper",
   "count": 1
+  }
 }

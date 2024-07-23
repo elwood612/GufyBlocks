@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:emerald_block"
   },
-  "result": "gufyblocks:emerald_wall",
+  "result": {
+    "id": "gufyblocks:emerald_wall",
   "count": 1
+  }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_acacia_stairs",
+  { 
+    "id": "gufyblocks:big_acacia_stairs",
     "count": 6
   }
 }

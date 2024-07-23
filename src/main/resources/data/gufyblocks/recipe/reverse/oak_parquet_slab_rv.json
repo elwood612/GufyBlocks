@@ -13,9 +13,8 @@
     "item": "gufyblocks:oak_parquet_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:oak_parquet",
+  "result": { 
+    "id": "gufyblocks:oak_parquet",
     "count": 2
   }
 }

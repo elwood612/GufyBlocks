@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_cherry_stairs",
+  { 
+    "id": "gufyblocks:big_cherry_stairs",
     "count": 6
   }
 }

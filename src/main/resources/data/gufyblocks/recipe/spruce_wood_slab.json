@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:spruce_wood_slab",
+  { 
+    "id": "gufyblocks:spruce_wood_slab",
     "count": 6
   }
 }

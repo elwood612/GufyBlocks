@@ -4,6 +4,8 @@
     {
       "item": "minecraft:lime_terracotta"
     },
-  "result": "gufyblocks:lime_terracotta_wall",
+  "result": {
+    "id": "gufyblocks:lime_terracotta_wall",
   "count": 1
+  }
 }

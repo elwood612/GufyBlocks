@@ -13,9 +13,8 @@
     "item": "gufyblocks:cobblestone_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cobblestone",
+  "result": { 
+    "id": "minecraft:cobblestone",
     "count": 2
   }
 }

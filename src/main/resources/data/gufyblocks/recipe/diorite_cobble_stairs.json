@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_cobble_stairs",
+  { 
+    "id": "gufyblocks:diorite_cobble_stairs",
     "count": 6
   }
 }

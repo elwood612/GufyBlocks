@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:iron_slab",
+  { 
+    "id": "gufyblocks:iron_slab",
     "count": 6
   }
 }

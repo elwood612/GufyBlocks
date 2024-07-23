@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "minecraft:spruce_wood",
+    "id": "minecraft:spruce_wood",
     "count": 4
   }
 }

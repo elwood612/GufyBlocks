@@ -13,9 +13,8 @@
     "item": "gufyblocks:white_wool_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:white_wool",
+  "result": { 
+    "id": "minecraft:white_wool",
     "count": 2
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:jungle_parquet_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:jungle_parquet",
+  "result": { 
+    "id": "gufyblocks:jungle_parquet",
     "count": 2
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:warped_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:warped_planks",
+  "result": { 
+    "id": "minecraft:warped_planks",
     "count": 2
   }
 }

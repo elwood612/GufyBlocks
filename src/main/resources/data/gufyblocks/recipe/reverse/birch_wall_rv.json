@@ -13,9 +13,8 @@
     "item": "gufyblocks:birch_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:birch_planks",
+  "result": { 
+    "id": "minecraft:birch_planks",
     "count": 2
   }
 }

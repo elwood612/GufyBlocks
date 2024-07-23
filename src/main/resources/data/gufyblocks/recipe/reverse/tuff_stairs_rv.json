@@ -13,9 +13,8 @@
     "item": "gufyblocks:tuff_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:tuff",
+  "result": { 
+    "id": "minecraft:tuff",
     "count": 3
   }
 }

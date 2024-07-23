@@ -13,9 +13,8 @@
     "item": "gufyblocks:gold_slab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:gold_block",
+  "result": { 
+    "id": "minecraft:gold_block",
     "count": 2
   }
 }

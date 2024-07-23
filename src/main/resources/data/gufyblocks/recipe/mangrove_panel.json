@@ -9,8 +9,9 @@
       "item": "minecraft:mangrove_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:mangrove_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:mangrove_panel",
     "count": 4
   }
 }

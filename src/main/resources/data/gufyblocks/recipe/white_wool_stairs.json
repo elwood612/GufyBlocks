@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:white_wool_stairs",
+  { 
+    "id": "gufyblocks:white_wool_stairs",
     "count": 6
   }
 }

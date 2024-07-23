@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mushroom_stem_wall",
+  { 
+    "id": "gufyblocks:mushroom_stem_wall",
     "count": 8
   }
 }

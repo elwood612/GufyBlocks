@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:end_stone_stairs",
+  { 
+    "id": "gufyblocks:end_stone_stairs",
     "count": 6
   }
 }

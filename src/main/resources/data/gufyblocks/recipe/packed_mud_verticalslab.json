@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:packed_mud_verticalslab",
+  { 
+    "id": "gufyblocks:packed_mud_verticalslab",
     "count": 6
   }
 }

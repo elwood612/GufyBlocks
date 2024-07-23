@@ -4,6 +4,8 @@
     {
       "item": "minecraft:diorite"
     },
-  "result": "gufyblocks:diorite_bricks_verticalslab",
+  "result": {
+    "id": "gufyblocks:diorite_bricks_verticalslab",
   "count": 2
+  }
 }

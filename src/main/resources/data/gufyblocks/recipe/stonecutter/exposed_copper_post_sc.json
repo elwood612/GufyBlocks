@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:exposed_copper"
   },
-  "result": "gufyblocks:exposed_copper_post",
+  "result": {
+    "id": "gufyblocks:exposed_copper_post",
   "count": 2
+  }
 }

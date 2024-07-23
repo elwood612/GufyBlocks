@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dripstone_verticalslab",
+  { 
+    "id": "gufyblocks:dripstone_verticalslab",
     "count": 6
   }
 }

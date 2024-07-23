@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cobbled_deepslate_hopper",
+  { 
+    "id": "gufyblocks:cobbled_deepslate_hopper",
     "count": 6
   }
 }

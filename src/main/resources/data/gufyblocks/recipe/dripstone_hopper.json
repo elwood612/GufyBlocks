@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dripstone_hopper",
+  { 
+    "id": "gufyblocks:dripstone_hopper",
     "count": 6
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:diorite_post"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:diorite",
+  "result": { 
+    "id": "minecraft:diorite",
     "count": 1
   }
 }

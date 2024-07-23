@@ -9,8 +9,9 @@
       "item": "minecraft:jungle_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:jungle_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:jungle_panel",
     "count": 6
   }
 }

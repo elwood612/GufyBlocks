@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:polished_granite"
   },
-  "result": "gufyblocks:granite_bricks",
+  "result": {
+    "id": "gufyblocks:granite_bricks",
   "count": 1
+  }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_deepslate_tiles_wall",
+  { 
+    "id": "gufyblocks:cracked_deepslate_tiles_wall",
     "count": 8
   }
 }

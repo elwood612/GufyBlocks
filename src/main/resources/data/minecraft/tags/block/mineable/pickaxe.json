@@ -1,6 +1,20 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:packed_ice_stairs", 
+    "gufyblocks:packed_ice_slab", 
+    "gufyblocks:packed_ice_verticalslab", 
+ 
+    "gufyblocks:tuff_bricks_pillar", 
+ 
+    "gufyblocks:polished_tuff_verticalslab", 
+    "gufyblocks:polished_tuff_hopper", 
+    "gufyblocks:polished_tuff_post", 
+ 
+    "gufyblocks:tuff_bricks_verticalslab", 
+    "gufyblocks:tuff_bricks_hopper", 
+    "gufyblocks:tuff_bricks_post", 
+ 
     "gufyblocks:red_sandstone_trapdoor", 
     "gufyblocks:sandstone_trapdoor", 
     "gufyblocks:cobbled_deepslate_trapdoor", 

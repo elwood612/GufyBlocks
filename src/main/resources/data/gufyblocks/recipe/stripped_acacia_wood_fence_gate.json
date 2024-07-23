@@ -14,7 +14,8 @@
       "item": "minecraft:stripped_acacia_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_acacia_wood_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_acacia_wood_fence_gate"
   }
 }

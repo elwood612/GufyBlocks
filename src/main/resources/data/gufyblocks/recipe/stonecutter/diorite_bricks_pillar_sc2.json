@@ -3,6 +3,8 @@
   "ingredient": {
       "item": "minecraft:polished_diorite"
     },
-  "result": "gufyblocks:diorite_bricks_pillar",
+  "result": {
+    "id": "gufyblocks:diorite_bricks_pillar",
   "count": 1
+  }
 }

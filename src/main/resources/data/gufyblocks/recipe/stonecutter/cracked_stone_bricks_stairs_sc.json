@@ -4,6 +4,8 @@
     {
       "item": "minecraft:cracked_stone_bricks"
     },
-  "result": "gufyblocks:cracked_stone_bricks_stairs",
+  "result": {
+    "id": "gufyblocks:cracked_stone_bricks_stairs",
   "count": 1
+  }
 }

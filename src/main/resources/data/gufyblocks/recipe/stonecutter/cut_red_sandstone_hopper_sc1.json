@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:red_sandstone"
   },
-  "result": "gufyblocks:cut_red_sandstone_hopper",
+  "result": {
+    "id": "gufyblocks:cut_red_sandstone_hopper",
   "count": 1
+  }
 }

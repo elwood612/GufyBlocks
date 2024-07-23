@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gilded_blackstone_slab",
+  { 
+    "id": "gufyblocks:gilded_blackstone_slab",
     "count": 6
   }
 }

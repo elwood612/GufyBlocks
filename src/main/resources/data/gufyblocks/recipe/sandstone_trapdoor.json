@@ -9,8 +9,9 @@
       "item": "minecraft:sandstone"
     }
   },
-  "result": {
-    "item": "gufyblocks:sandstone_trapdoor",
+  "result": 
+  { 
+    "id": "gufyblocks:sandstone_trapdoor",
     "count": 12
   }
 }

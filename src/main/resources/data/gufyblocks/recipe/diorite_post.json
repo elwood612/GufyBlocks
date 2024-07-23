@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_post",
+  { 
+    "id": "gufyblocks:diorite_post",
     "count": 4
   }
 }

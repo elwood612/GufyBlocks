@@ -9,8 +9,9 @@
       "item": "minecraft:dark_oak_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:dark_oak_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:dark_oak_panel",
     "count": 6
   }
 }

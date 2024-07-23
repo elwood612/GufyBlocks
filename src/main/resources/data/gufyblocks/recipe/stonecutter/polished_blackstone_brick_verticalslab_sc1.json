@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:blackstone"
   },
-  "result": "gufyblocks:polished_blackstone_brick_verticalslab",
+  "result": {
+    "id": "gufyblocks:polished_blackstone_brick_verticalslab",
   "count": 2
+  }
 }

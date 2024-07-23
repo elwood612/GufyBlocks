@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/smooth_stone_hopper" },
+        	{ "model": "gufyblocks:block/smooth_stone_hopper2" },
+        	{ "model": "gufyblocks:block/smooth_stone_hopper3" },
+        	{ "model": "gufyblocks:block/smooth_stone_hopper4" }
+        ]
+    }
+}

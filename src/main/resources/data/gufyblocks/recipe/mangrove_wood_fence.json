@@ -14,8 +14,9 @@
       "item": "minecraft:mangrove_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:mangrove_wood_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:mangrove_wood_fence",
     "count": 4
   }
 }

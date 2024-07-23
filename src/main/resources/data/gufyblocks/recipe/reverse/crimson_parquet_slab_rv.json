@@ -13,9 +13,8 @@
     "item": "gufyblocks:crimson_parquet_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:crimson_parquet",
+  "result": { 
+    "id": "gufyblocks:crimson_parquet",
     "count": 2
   }
 }

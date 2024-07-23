@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:nether_brick_hopper",
+  { 
+    "id": "gufyblocks:nether_brick_hopper",
     "count": 6
   }
 }

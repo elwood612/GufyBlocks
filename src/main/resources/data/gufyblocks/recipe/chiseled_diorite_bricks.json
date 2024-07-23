@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:chiseled_diorite_bricks",
+  { 
+    "id": "gufyblocks:chiseled_diorite_bricks",
     "count": 1
   }
 }

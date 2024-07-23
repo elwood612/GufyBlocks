@@ -13,9 +13,8 @@
     "item": "gufyblocks:deepslate_post"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:deepslate",
+  "result": { 
+    "id": "minecraft:deepslate",
     "count": 1
   }
 }

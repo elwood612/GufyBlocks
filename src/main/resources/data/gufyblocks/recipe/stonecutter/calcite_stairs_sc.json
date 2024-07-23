@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result": "gufyblocks:calcite_stairs",
+  "result": {
+    "id": "gufyblocks:calcite_stairs",
   "count": 1
+  }
 }

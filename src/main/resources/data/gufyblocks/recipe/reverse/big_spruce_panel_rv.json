@@ -13,9 +13,8 @@
     "item": "gufyblocks:big_spruce_panel"
     }
   },
-  "result": 
-{
-    "item": "gufyblocks:big_spruce",
+  "result": { 
+    "id": "gufyblocks:big_spruce",
     "count": 1
   }
 }

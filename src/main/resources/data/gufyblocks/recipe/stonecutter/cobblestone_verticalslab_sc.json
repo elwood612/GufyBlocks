@@ -4,6 +4,8 @@
     {
       "item": "minecraft:cobblestone"
     },
-  "result": "gufyblocks:cobblestone_verticalslab",
+  "result": {
+    "id": "gufyblocks:cobblestone_verticalslab",
     "count": 2
-  }
+    }
+}

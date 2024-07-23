@@ -10,7 +10,8 @@
       "item": "minecraft:wheat"
     }
   ],
-  "result": {
-    "item": "gufyblocks:gufy_leaded_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:gufy_leaded_glass_pane"
   }
 }

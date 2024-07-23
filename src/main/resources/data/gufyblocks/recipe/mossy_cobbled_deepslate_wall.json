@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_cobbled_deepslate_wall",
+  { 
+    "id": "gufyblocks:mossy_cobbled_deepslate_wall",
     "count": 8
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:moss_stairs",
+  { 
+    "id": "gufyblocks:moss_stairs",
     "count": 6
   }
 }

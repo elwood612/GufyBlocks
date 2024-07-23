@@ -13,9 +13,8 @@
     "item": "gufyblocks:polished_andesite_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:polished_andesite",
+  "result": { 
+    "id": "minecraft:polished_andesite",
     "count": 2
   }
 }

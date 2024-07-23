@@ -13,9 +13,8 @@
     "item": "gufyblocks:end_stone_brick_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:end_stone_bricks",
+  "result": { 
+    "id": "minecraft:end_stone_bricks",
     "count": 2
   }
 }

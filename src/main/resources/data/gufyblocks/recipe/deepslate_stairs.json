@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:deepslate_stairs",
+  { 
+    "id": "gufyblocks:deepslate_stairs",
     "count": 6
   }
 }

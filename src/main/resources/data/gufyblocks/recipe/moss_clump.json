@@ -5,7 +5,8 @@
       "item": "minecraft:moss_block"
     }
   ],
-  "result": {
-    "item": "gufyblocks:moss_clump"
+  "result": 
+  { 
+    "id": "gufyblocks:moss_clump"
   }
 }

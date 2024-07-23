@@ -15,8 +15,10 @@
     "W#W"
   ],
   "result": {
-    "count": 4,
+     {
+    "id": "count": 4,
     "item": "minecraft:bamboo_fence"
-  },
+    }
+},
   "show_notification": true
 }

@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:end_stone_brick_post",
+  { 
+    "id": "gufyblocks:end_stone_brick_post",
     "count": 4
   }
 }

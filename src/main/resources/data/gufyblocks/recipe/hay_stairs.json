@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:hay_stairs",
+  { 
+    "id": "gufyblocks:hay_stairs",
     "count": 6
   }
 }

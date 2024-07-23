@@ -13,9 +13,8 @@
     "item": "gufyblocks:stripped_cherry_wood_fence_gate"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:stripped_cherry_wood",
+  "result": { 
+    "id": "minecraft:stripped_cherry_wood",
     "count": 1
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:end_stone_hopper",
+  { 
+    "id": "gufyblocks:end_stone_hopper",
     "count": 6
   }
 }

@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "minecraft:cherry_wood",
+    "id": "minecraft:cherry_wood",
     "count": 4
   }
 }

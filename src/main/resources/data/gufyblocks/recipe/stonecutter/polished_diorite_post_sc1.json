@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:diorite"
   },
-  "result": "gufyblocks:polished_diorite_post",
+  "result": {
+    "id": "gufyblocks:polished_diorite_post",
   "count": 2
+  }
 }

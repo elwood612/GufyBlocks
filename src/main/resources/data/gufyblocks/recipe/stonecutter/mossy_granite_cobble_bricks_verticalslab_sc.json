@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:mossy_granite_cobble_bricks"
   },
-  "result": "gufyblocks:mossy_granite_cobble_bricks_verticalslab",
+  "result": {
+    "id": "gufyblocks:mossy_granite_cobble_bricks_verticalslab",
   "count": 2
+  }
 }

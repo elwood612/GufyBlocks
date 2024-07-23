@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gilded_blackstone_stairs",
+  { 
+    "id": "gufyblocks:gilded_blackstone_stairs",
     "count": 6
   }
 }

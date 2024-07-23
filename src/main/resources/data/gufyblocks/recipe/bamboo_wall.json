@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:bamboo_wall",
+  { 
+    "id": "gufyblocks:bamboo_wall",
     "count": 8
   }
 }

@@ -10,7 +10,8 @@
       "tag": "gufyblocks:warped_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:warped_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:warped_framed_terracotta"
   }
 }

@@ -9,8 +9,9 @@
       "item": "gufyblocks:crimson_hyphae_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:crimson_hyphae_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:crimson_hyphae_panel",
     "count": 6
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:lime_concrete_hopper",
+  { 
+    "id": "gufyblocks:lime_concrete_hopper",
     "count": 6
   }
 }

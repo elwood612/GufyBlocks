@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:spruce_verticalslab",
+  { 
+    "id": "gufyblocks:spruce_verticalslab",
     "count": 6
   }
 }

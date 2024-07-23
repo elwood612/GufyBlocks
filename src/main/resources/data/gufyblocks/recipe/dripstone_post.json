@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dripstone_post",
+  { 
+    "id": "gufyblocks:dripstone_post",
     "count": 4
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:granite"
   },
-  "result": "gufyblocks:granite_trapdoor",
+  "result": {
+    "id": "gufyblocks:granite_trapdoor",
   "count": 2
+  }
 }

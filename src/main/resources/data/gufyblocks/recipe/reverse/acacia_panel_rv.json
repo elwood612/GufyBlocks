@@ -13,9 +13,8 @@
     "item": "gufyblocks:acacia_panel"
     }
   },
-  "result": 
-{
-      "item": "minecraft:acacia_planks",
+  "result": { 
+    "id": "minecraft:acacia_planks",
     "count": 1
   }
 }

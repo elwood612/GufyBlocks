@@ -13,9 +13,8 @@
     "item": "gufyblocks:oxidized_copper_post"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:oxidized_copper",
+  "result": { 
+    "id": "minecraft:oxidized_copper",
     "count": 1
   }
 }

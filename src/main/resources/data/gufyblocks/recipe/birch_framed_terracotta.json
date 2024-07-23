@@ -10,7 +10,8 @@
       "tag": "gufyblocks:birch_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:birch_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:birch_framed_terracotta"
   }
 }

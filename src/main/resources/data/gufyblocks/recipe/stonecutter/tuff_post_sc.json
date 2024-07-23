@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:tuff"
   },
-  "result": "gufyblocks:tuff_post",
+  "result": {
+    "id": "gufyblocks:tuff_post",
   "count": 2
+  }
 }

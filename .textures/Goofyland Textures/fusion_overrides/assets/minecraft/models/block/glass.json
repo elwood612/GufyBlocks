@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "render_type": "translucent",
+  "type": "fusion:connecting",
+  "loader": "fusion:model",
+  "textures": {
+    "all": "minecraft:block/glass"
+  }
+}

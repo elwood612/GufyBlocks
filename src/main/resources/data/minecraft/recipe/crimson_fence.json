@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "minecraft:crimson_fence",
+    "id": "minecraft:crimson_fence",
     "count": 4
   }
 }

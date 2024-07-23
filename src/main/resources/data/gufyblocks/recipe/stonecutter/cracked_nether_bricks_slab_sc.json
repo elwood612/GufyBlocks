@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cracked_nether_bricks"
   },
-  "result": "gufyblocks:cracked_nether_bricks_slab",
+  "result": {
+    "id": "gufyblocks:cracked_nether_bricks_slab",
   "count": 2
+  }
 }

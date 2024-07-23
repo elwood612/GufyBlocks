@@ -10,7 +10,8 @@
       "item": "minecraft:salmon"
     }
   ],
-  "result": {
-    "item": "gufyblocks:midland_leaded_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:midland_leaded_glass_pane"
   }
 }

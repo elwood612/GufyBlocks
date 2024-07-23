@@ -13,9 +13,8 @@
     "item": "gufyblocks:terracotta_post"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:terracotta",
+  "result": { 
+    "id": "minecraft:terracotta",
     "count": 1
   }
 }

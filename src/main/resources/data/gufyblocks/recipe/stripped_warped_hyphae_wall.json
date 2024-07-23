@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stripped_warped_hyphae_wall",
+  { 
+    "id": "gufyblocks:stripped_warped_hyphae_wall",
     "count": 8
   }
 }

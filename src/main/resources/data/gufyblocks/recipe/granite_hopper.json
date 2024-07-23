@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:granite_hopper",
+  { 
+    "id": "gufyblocks:granite_hopper",
     "count": 6
   }
 }

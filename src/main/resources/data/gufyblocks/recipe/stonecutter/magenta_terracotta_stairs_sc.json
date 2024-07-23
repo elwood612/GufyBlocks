@@ -4,6 +4,8 @@
     {
       "item": "minecraft:magenta_terracotta"
     },
-  "result": "gufyblocks:magenta_terracotta_stairs",
+  "result": {
+    "id": "gufyblocks:magenta_terracotta_stairs",
   "count": 1
+  }
 }

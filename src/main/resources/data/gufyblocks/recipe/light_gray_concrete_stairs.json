@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:light_gray_concrete_stairs",
+  { 
+    "id": "gufyblocks:light_gray_concrete_stairs",
     "count": 6
   }
 }

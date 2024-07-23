@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:andesite"
   },
-  "result": "gufyblocks:polished_andesite_verticalslab",
+  "result": {
+    "id": "gufyblocks:polished_andesite_verticalslab",
   "count": 2
+  }
 }

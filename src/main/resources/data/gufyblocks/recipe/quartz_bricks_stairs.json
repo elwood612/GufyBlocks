@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:quartz_bricks_stairs",
+  { 
+    "id": "gufyblocks:quartz_bricks_stairs",
     "count": 6
   }
 }

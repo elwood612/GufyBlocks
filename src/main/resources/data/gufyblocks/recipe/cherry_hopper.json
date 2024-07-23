@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cherry_hopper",
+  { 
+    "id": "gufyblocks:cherry_hopper",
     "count": 6
   }
 }

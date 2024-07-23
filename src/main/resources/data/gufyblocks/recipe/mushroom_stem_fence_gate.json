@@ -14,7 +14,8 @@
       "item": "minecraft:mushroom_stem"
     }
   },
-  "result": {
-    "item": "gufyblocks:mushroom_stem_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:mushroom_stem_fence_gate"
   }
 }

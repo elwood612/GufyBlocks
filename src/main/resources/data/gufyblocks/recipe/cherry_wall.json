@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cherry_wall",
+  { 
+    "id": "gufyblocks:cherry_wall",
     "count": 8
   }
 }

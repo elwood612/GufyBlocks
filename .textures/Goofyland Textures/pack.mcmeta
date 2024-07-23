@@ -1,0 +1,13 @@
+{
+   "pack":{
+      "pack_format":15,
+      "description":"§6Highly recommended!",
+	  "supported_formats": {
+            "min_inclusive": 15,
+            "max_inclusive": 9999
+        }
+   },
+    "fusion": {
+        "overrides_folder": "fusion_overrides"
+    }
+}

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:deepslate_tiles"
   },
-  "result": "gufyblocks:deepslate_tiles_post",
+  "result": {
+    "id": "gufyblocks:deepslate_tiles_post",
   "count": 2
+  }
 }

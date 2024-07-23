@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diamond_slab",
+  { 
+    "id": "gufyblocks:diamond_slab",
     "count": 6
   }
 }

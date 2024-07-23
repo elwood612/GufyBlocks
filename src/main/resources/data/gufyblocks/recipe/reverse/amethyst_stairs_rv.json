@@ -13,9 +13,8 @@
     "item": "gufyblocks:amethyst_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:amethyst_block",
+  "result": { 
+    "id": "minecraft:amethyst_block",
     "count": 3
   }
 }

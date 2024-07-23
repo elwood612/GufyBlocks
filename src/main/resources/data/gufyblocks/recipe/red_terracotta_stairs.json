@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:red_terracotta_stairs",
+  { 
+    "id": "gufyblocks:red_terracotta_stairs",
     "count": 6
   }
 }

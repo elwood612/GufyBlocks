@@ -13,9 +13,8 @@
     "item": "gufyblocks:mangrove_wood_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:mangrove_wood",
+  "result": { 
+    "id": "minecraft:mangrove_wood",
     "count": 3
   }
 }

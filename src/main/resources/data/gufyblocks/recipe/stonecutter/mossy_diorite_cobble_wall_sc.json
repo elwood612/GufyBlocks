@@ -4,6 +4,8 @@
     {
       "item": "gufyblocks:mossy_diorite_cobble"
     },
-  "result": "gufyblocks:mossy_diorite_cobble_wall",
+  "result": {
+    "id": "gufyblocks:mossy_diorite_cobble_wall",
     "count": 1
-  }
+    }
+}

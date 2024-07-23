@@ -4,6 +4,8 @@
     {
       "item": "minecraft:smooth_stone"
     },
-  "result": "gufyblocks:smooth_stone_stairs",
+  "result": {
+    "id": "gufyblocks:smooth_stone_stairs",
   "count": 1
+  }
 }

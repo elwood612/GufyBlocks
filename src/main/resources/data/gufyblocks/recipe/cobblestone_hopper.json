@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cobblestone_hopper",
+  { 
+    "id": "gufyblocks:cobblestone_hopper",
     "count": 6
   }
 }

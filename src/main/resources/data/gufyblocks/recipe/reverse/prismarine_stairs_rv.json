@@ -13,9 +13,8 @@
     "item": "minecraft:prismarine_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:prismarine",
+  "result": { 
+    "id": "minecraft:prismarine",
     "count": 3
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:purpur_block"
   },
-  "result": "gufyblocks:purpur_wall",
+  "result": {
+    "id": "gufyblocks:purpur_wall",
   "count": 1
+  }
 }

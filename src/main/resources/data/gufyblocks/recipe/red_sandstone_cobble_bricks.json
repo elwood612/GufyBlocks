@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:red_sandstone_cobble_bricks",
+  { 
+    "id": "gufyblocks:red_sandstone_cobble_bricks",
     "count": 4
   }
 }

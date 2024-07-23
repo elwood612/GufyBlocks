@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:packed_mud_stairs",
+  { 
+    "id": "gufyblocks:packed_mud_stairs",
     "count": 6
   }
 }

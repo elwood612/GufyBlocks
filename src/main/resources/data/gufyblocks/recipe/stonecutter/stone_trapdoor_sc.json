@@ -3,6 +3,8 @@
   "ingredient": {
       "item": "minecraft:stone"
     },
-  "result": "gufyblocks:stone_trapdoor",
+  "result": {
+    "id": "gufyblocks:stone_trapdoor",
   "count": 2
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:iron_block"
   },
-  "result": "gufyblocks:iron_slab",
+  "result": {
+    "id": "gufyblocks:iron_slab",
   "count": 2
+  }
 }

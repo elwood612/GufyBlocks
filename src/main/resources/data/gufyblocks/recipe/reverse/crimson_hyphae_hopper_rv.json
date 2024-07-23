@@ -13,9 +13,8 @@
     "item": "gufyblocks:crimson_hyphae_hopper"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:crimson_hyphae",
+  "result": { 
+    "id": "minecraft:crimson_hyphae",
     "count": 2
   }
 }

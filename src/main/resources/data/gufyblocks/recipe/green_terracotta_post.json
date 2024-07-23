@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:green_terracotta_post",
+  { 
+    "id": "gufyblocks:green_terracotta_post",
     "count": 4
   }
 }

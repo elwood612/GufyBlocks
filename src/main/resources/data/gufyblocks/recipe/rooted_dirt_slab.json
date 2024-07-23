@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:rooted_dirt_slab",
+  { 
+    "id": "gufyblocks:rooted_dirt_slab",
     "count": 6
   }
 }

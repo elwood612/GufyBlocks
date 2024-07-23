@@ -14,7 +14,8 @@
       "item": "gufyblocks:big_crimson"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_crimson_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:big_crimson_fence_gate"
   }
 }

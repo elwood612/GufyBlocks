@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_stone_bricks_verticalslab",
+  { 
+    "id": "gufyblocks:cracked_stone_bricks_verticalslab",
     "count": 6
   }
 }

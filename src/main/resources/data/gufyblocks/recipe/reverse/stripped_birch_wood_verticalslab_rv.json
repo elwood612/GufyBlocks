@@ -13,9 +13,8 @@
     "item": "gufyblocks:stripped_birch_wood_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:stripped_birch_wood",
+  "result": { 
+    "id": "minecraft:stripped_birch_wood",
     "count": 2
   }
 }

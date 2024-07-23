@@ -10,7 +10,8 @@
       "tag": "gufyblocks:cherry_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:cherry_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:cherry_framed_glass_pane"
   }
 }

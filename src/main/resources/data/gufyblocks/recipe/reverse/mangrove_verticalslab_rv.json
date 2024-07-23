@@ -13,9 +13,8 @@
     "item": "gufyblocks:mangrove_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:mangrove_planks",
+  "result": { 
+    "id": "minecraft:mangrove_planks",
     "count": 2
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:mud_bricks"
   },
-  "result": "gufyblocks:mud_bricks_hopper",
+  "result": {
+    "id": "gufyblocks:mud_bricks_hopper",
   "count": 1
+  }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:black_concrete_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:black_concrete",
+  "result": { 
+    "id": "minecraft:black_concrete",
     "count": 2
   }
 }

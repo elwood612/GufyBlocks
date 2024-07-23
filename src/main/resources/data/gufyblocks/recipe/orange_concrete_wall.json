@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:orange_concrete_wall",
+  { 
+    "id": "gufyblocks:orange_concrete_wall",
     "count": 8
   }
 }

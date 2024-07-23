@@ -14,7 +14,7 @@
   ],
   "result": {
     "count": 6,
-    "item": "minecraft:mangrove_stairs"
-  },
+    "id": "minecraft:mangrove_stairs"
+},
   "show_notification": true
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cyan_concrete_verticalslab",
+  { 
+    "id": "gufyblocks:cyan_concrete_verticalslab",
     "count": 6
   }
 }

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "gufyblocks:block/tuff_bricks_pillar" },
+        "axis=z":   { "model": "gufyblocks:block/tuff_bricks_pillar", "x": 90 },
+        "axis=x":   { "model": "gufyblocks:block/tuff_bricks_pillar", "x": 90, "y": 90 }
+    }
+}

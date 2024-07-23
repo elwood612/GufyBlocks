@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:crimson_hyphae_wall",
+  { 
+    "id": "gufyblocks:crimson_hyphae_wall",
     "count": 8
   }
 }

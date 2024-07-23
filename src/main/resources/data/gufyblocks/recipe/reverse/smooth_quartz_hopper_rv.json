@@ -13,9 +13,8 @@
     "item": "gufyblocks:smooth_quartz_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:smooth_quartz",
+  "result": { 
+    "id": "minecraft:smooth_quartz",
     "count": 2
   }
 }

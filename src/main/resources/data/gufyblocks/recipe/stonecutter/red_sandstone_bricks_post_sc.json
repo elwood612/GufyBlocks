@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:red_sandstone_bricks"
   },
-  "result": "gufyblocks:red_sandstone_bricks_post",
+  "result": {
+    "id": "gufyblocks:red_sandstone_bricks_post",
   "count": 2
+  }
 }

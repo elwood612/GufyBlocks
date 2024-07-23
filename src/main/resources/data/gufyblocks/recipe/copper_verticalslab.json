@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:copper_verticalslab",
+  { 
+    "id": "gufyblocks:copper_verticalslab",
     "count": 6
   }
 }

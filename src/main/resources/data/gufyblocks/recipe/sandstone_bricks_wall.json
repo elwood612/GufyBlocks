@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:sandstone_bricks_wall",
+  { 
+    "id": "gufyblocks:sandstone_bricks_wall",
     "count": 8
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:lime_concrete_stairs",
+  { 
+    "id": "gufyblocks:lime_concrete_stairs",
     "count": 6
   }
 }

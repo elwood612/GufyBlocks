@@ -9,8 +9,9 @@
       "item": "minecraft:brown_wool"
     }
   },
-  "result": {
-    "item": "gufyblocks:brown_wool_trapdoor",
+  "result": 
+  { 
+    "id": "gufyblocks:brown_wool_trapdoor",
     "count": 12
   }
 }

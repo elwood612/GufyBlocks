@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:jungle_wood_verticalslab",
+  { 
+    "id": "gufyblocks:jungle_wood_verticalslab",
     "count": 6
   }
 }

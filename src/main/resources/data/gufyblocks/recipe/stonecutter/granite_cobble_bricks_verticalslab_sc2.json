@@ -4,6 +4,8 @@
     {
       "item": "minecraft:polished_granite"
     },
-  "result": "gufyblocks:granite_cobble_bricks_verticalslab",
+  "result": {
+    "id": "gufyblocks:granite_cobble_bricks_verticalslab",
     "count": 2
-  }
+    }
+}

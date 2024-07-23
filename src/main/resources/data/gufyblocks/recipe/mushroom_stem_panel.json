@@ -9,8 +9,9 @@
       "item": "gufyblocks:mushroom_stem_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:mushroom_stem_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:mushroom_stem_panel",
     "count": 4
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:stripped_acacia_wood_panel"
     }
   },
-  "result": 
-{
-      "item": "minecraft:stripped_acacia_wood",
+  "result": { 
+    "id": "minecraft:stripped_acacia_wood",
     "count": 1
   }
 }

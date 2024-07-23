@@ -13,9 +13,8 @@
     "item": "gufyblocks:nether_wart_block_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:nether_wart_block",
+  "result": { 
+    "id": "minecraft:nether_wart_block",
     "count": 2
   }
 }

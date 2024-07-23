@@ -13,9 +13,8 @@
     "item": "gufyblocks:mossy_cobbled_deepslate_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:mossy_cobbled_deepslate",
+  "result": { 
+    "id": "gufyblocks:mossy_cobbled_deepslate",
     "count": 2
   }
 }

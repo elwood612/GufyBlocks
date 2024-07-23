@@ -15,7 +15,8 @@
       "item": "minecraft:iron_nugget"
     }
   },
-  "result": {
-    "item": "gufyblocks:black_leaded_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:black_leaded_glass_pane"
   }
 }

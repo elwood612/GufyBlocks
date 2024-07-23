@@ -13,9 +13,8 @@
     "item": "minecraft:blackstone_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:blackstone",
+  "result": { 
+    "id": "minecraft:blackstone",
     "count": 2
   }
 }

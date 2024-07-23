@@ -13,9 +13,8 @@
     "item": "gufyblocks:diorite_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:diorite",
+  "result": { 
+    "id": "minecraft:diorite",
     "count": 2
   }
 }

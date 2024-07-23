@@ -14,7 +14,8 @@
       "item": "minecraft:warped_hyphae"
     }
   },
-  "result": {
-    "item": "gufyblocks:warped_hyphae_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:warped_hyphae_fence_gate"
   }
 }

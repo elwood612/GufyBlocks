@@ -13,9 +13,8 @@
     "item": "gufyblocks:cyan_concrete_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cyan_concrete",
+  "result": { 
+    "id": "minecraft:cyan_concrete",
     "count": 2
   }
 }

@@ -4,6 +4,8 @@
     {
       "item": "minecraft:smooth_stone"
     },
-  "result": "gufyblocks:smooth_stone_verticalslab",
+  "result": {
+    "id": "gufyblocks:smooth_stone_verticalslab",
   "count": 2
+  }
 }

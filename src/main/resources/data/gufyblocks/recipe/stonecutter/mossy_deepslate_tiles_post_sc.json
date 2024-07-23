@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:mossy_deepslate_tiles"
   },
-  "result": "gufyblocks:mossy_deepslate_tiles_post",
+  "result": {
+    "id": "gufyblocks:mossy_deepslate_tiles_post",
   "count": 2
+  }
 }

@@ -9,8 +9,9 @@
       "item": "gufyblocks:red_sandstone_bricks"
     }
   },
-  "result": {
-    "item": "gufyblocks:red_sandstone_bricks_pillar",
+  "result": 
+  { 
+    "id": "gufyblocks:red_sandstone_bricks_pillar",
     "count": 2
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:oxidized_copper"
   },
-  "result": "gufyblocks:oxidized_cut_copper_hopper",
+  "result": {
+    "id": "gufyblocks:oxidized_cut_copper_hopper",
   "count": 4
+  }
 }

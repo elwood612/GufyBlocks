@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:granite_bricks"
   },
-  "result": "gufyblocks:chiseled_granite_bricks",
+  "result": {
+    "id": "gufyblocks:chiseled_granite_bricks",
   "count": 1
+  }
 }

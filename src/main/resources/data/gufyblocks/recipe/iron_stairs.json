@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:iron_stairs",
+  { 
+    "id": "gufyblocks:iron_stairs",
     "count": 6
   }
 }

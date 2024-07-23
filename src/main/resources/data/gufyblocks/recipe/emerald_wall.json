@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:emerald_wall",
+  { 
+    "id": "gufyblocks:emerald_wall",
     "count": 8
   }
 }

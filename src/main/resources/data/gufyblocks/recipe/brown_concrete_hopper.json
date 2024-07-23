@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:brown_concrete_hopper",
+  { 
+    "id": "gufyblocks:brown_concrete_hopper",
     "count": 6
   }
 }

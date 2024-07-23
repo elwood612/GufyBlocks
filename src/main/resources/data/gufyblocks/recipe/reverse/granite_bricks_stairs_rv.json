@@ -13,9 +13,8 @@
     "item": "gufyblocks:granite_bricks_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:granite_bricks",
+  "result": { 
+    "id": "gufyblocks:granite_bricks",
     "count": 3
   }
 }

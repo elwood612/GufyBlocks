@@ -13,9 +13,8 @@
     "item": "minecraft:nether_brick_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:nether_bricks",
+  "result": { 
+    "id": "minecraft:nether_bricks",
     "count": 2
   }
 }

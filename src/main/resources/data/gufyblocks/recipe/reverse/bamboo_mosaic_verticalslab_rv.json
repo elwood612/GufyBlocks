@@ -13,9 +13,8 @@
     "item": "gufyblocks:bamboo_mosaic_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:bamboo_mosaic",
+  "result": { 
+    "id": "minecraft:bamboo_mosaic",
     "count": 2
   }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:spruce_wood_hopper",
+  { 
+    "id": "gufyblocks:spruce_wood_hopper",
     "count": 6
   }
 }

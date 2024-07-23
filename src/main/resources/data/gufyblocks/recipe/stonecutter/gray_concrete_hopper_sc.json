@@ -4,6 +4,8 @@
     {
       "item": "minecraft:gray_concrete"
     },
-  "result": "gufyblocks:gray_concrete_hopper",
+  "result": {
+    "id": "gufyblocks:gray_concrete_hopper",
   "count": 1
+  }
 }

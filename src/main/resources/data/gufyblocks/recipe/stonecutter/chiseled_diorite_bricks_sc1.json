@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:diorite"
   },
-  "result": "gufyblocks:chiseled_diorite_bricks",
+  "result": {
+    "id": "gufyblocks:chiseled_diorite_bricks",
   "count": 1
+  }
 }

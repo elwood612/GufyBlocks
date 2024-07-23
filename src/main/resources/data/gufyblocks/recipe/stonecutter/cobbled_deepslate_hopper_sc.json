@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cobbled_deepslate"
   },
-  "result": "gufyblocks:cobbled_deepslate_hopper",
+  "result": {
+    "id": "gufyblocks:cobbled_deepslate_hopper",
   "count": 1
+  }
 }

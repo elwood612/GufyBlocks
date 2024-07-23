@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tuff_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:tuff_bricks_post"
+    }
+  },
+  "result": 
+  {
+    "id": "minecraft:tuff_bricks",
+    "count": 1
+  }
+}

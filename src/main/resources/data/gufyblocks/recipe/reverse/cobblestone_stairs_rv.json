@@ -13,9 +13,8 @@
     "item": "minecraft:cobblestone_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cobblestone",
+  "result": { 
+    "id": "minecraft:cobblestone",
     "count": 3
   }
 }

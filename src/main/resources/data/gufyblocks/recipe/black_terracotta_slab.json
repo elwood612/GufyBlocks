@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:black_terracotta_slab",
+  { 
+    "id": "gufyblocks:black_terracotta_slab",
     "count": 6
   }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:oak_wall",
+  { 
+    "id": "gufyblocks:oak_wall",
     "count": 8
   }
 }

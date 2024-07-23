@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:hay_slab",
+  { 
+    "id": "gufyblocks:hay_slab",
     "count": 6
   }
 }

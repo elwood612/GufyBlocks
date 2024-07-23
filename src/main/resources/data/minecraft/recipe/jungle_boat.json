@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "minecraft:jungle_boat"
+    "id": "minecraft:jungle_boat"
   },
   "show_notification": true
 }

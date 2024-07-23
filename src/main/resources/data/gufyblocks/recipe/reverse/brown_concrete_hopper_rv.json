@@ -13,9 +13,8 @@
     "item": "gufyblocks:brown_concrete_hopper"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:brown_concrete",
+  "result": { 
+    "id": "minecraft:brown_concrete",
     "count": 2
   }
 }

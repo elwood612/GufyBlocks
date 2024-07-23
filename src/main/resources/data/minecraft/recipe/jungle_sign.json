@@ -16,8 +16,10 @@
     " X "
   ],
   "result": {
-    "count": 3,
+     {
+    "id": "count": 3,
     "item": "minecraft:jungle_sign"
-  },
+    }
+},
   "show_notification": true
 }

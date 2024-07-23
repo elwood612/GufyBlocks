@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:rooted_dirt_stairs",
+  { 
+    "id": "gufyblocks:rooted_dirt_stairs",
     "count": 6
   }
 }

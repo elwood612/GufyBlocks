@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:gold_block"
   },
-  "result": "gufyblocks:gold_wall",
+  "result": {
+    "id": "gufyblocks:gold_wall",
   "count": 1
+  }
 }

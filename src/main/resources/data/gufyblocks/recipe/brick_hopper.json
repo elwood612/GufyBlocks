@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:brick_hopper",
+  { 
+    "id": "gufyblocks:brick_hopper",
     "count": 6
   }
 }

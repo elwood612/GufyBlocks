@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:magenta_wool_stairs",
+  { 
+    "id": "gufyblocks:magenta_wool_stairs",
     "count": 6
   }
 }

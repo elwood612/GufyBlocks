@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gold_verticalslab",
+  { 
+    "id": "gufyblocks:gold_verticalslab",
     "count": 6
   }
 }

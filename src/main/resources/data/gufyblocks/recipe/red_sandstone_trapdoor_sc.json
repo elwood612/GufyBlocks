@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:red_sandstone"
-  },
-  "result": "gufyblocks:red_sandstone_trapdoor",
-  "count": 2
-}

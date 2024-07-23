@@ -13,9 +13,8 @@
     "item": "gufyblocks:copper_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:copper_block",
+  "result": { 
+    "id": "minecraft:copper_block",
     "count": 3
   }
 }

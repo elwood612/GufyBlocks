@@ -13,9 +13,8 @@
     "item": "gufyblocks:orange_wool_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:orange_wool",
+  "result": { 
+    "id": "minecraft:orange_wool",
     "count": 2
   }
 }

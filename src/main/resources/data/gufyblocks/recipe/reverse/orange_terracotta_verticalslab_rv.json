@@ -13,9 +13,8 @@
     "item": "gufyblocks:orange_terracotta_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:orange_terracotta",
+  "result": { 
+    "id": "minecraft:orange_terracotta",
     "count": 2
   }
 }

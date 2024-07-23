@@ -10,7 +10,8 @@
       "tag": "gufyblocks:warped_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:warped_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:warped_framed_glass_pane"
   }
 }

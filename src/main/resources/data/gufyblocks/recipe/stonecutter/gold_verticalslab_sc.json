@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:gold_block"
   },
-  "result": "gufyblocks:gold_verticalslab",
+  "result": {
+    "id": "gufyblocks:gold_verticalslab",
   "count": 2
+  }
 }

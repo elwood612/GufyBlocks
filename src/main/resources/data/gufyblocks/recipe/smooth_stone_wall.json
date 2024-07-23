@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:smooth_stone_wall",
+  { 
+    "id": "gufyblocks:smooth_stone_wall",
     "count": 8
   }
 }

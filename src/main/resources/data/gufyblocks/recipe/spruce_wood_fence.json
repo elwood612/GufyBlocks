@@ -14,8 +14,9 @@
       "item": "minecraft:spruce_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:spruce_wood_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:spruce_wood_fence",
     "count": 4
   }
 }

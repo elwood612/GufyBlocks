@@ -13,9 +13,8 @@
     "item": "gufyblocks:cherry_wood_slab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:cherry_wood",
+  "result": { 
+    "id": "minecraft:cherry_wood",
     "count": 2
   }
 }

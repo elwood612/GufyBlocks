@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_deepslate_bricks_verticalslab",
+  { 
+    "id": "gufyblocks:mossy_deepslate_bricks_verticalslab",
     "count": 6
   }
 }

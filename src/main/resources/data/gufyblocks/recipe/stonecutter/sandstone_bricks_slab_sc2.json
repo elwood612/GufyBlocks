@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cut_sandstone"
   },
-  "result": "gufyblocks:sandstone_bricks_slab",
+  "result": {
+    "id": "gufyblocks:sandstone_bricks_slab",
   "count": 2
+  }
 }

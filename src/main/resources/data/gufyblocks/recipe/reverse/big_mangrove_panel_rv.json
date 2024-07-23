@@ -13,9 +13,8 @@
     "item": "gufyblocks:big_mangrove_panel"
     }
   },
-  "result": 
-{
-    "item": "gufyblocks:big_mangrove",
+  "result": { 
+    "id": "gufyblocks:big_mangrove",
     "count": 1
   }
 }

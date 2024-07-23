@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:deepslate"
   },
-  "result": "gufyblocks:deepslate_verticalslab",
+  "result": {
+    "id": "gufyblocks:deepslate_verticalslab",
   "count": 2
+  }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mangrove_wood_hopper",
+  { 
+    "id": "gufyblocks:mangrove_wood_hopper",
     "count": 6
   }
 }

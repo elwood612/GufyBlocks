@@ -10,7 +10,8 @@
       "tag": "gufyblocks:crimson_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:crimson_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:crimson_framed_glass_pane"
   }
 }

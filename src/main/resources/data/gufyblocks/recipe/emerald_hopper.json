@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:emerald_hopper",
+  { 
+    "id": "gufyblocks:emerald_hopper",
     "count": 6
   }
 }

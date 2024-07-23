@@ -14,7 +14,8 @@
       "item": "minecraft:stripped_spruce_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_spruce_wood_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_spruce_wood_fence_gate"
   }
 }

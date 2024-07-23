@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_sandstone_bricks_wall",
+  { 
+    "id": "gufyblocks:cracked_sandstone_bricks_wall",
     "count": 8
   }
 }

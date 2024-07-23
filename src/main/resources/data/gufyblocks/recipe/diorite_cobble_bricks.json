@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_cobble_bricks",
+  { 
+    "id": "gufyblocks:diorite_cobble_bricks",
     "count": 4
   }
 }

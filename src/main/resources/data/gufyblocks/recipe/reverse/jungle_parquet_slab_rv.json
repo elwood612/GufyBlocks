@@ -13,9 +13,8 @@
     "item": "gufyblocks:jungle_parquet_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:jungle_parquet",
+  "result": { 
+    "id": "gufyblocks:jungle_parquet",
     "count": 2
   }
 }

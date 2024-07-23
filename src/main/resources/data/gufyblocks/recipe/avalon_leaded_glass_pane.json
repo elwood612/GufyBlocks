@@ -10,7 +10,8 @@
       "item": "minecraft:book"
     }
   ],
-  "result": {
-    "item": "gufyblocks:avalon_leaded_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:avalon_leaded_glass_pane"
   }
 }

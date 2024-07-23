@@ -13,9 +13,8 @@
     "item": "gufyblocks:lime_wool_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:lime_wool",
+  "result": { 
+    "id": "minecraft:lime_wool",
     "count": 2
   }
 }

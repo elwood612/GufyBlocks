@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dark_oak_parquet_stairs",
+  { 
+    "id": "gufyblocks:dark_oak_parquet_stairs",
     "count": 6
   }
 }

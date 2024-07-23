@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_stone_bricks_stairs",
+  { 
+    "id": "gufyblocks:cracked_stone_bricks_stairs",
     "count": 6
   }
 }

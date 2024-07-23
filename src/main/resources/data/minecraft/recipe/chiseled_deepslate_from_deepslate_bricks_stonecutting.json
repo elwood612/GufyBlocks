@@ -4,5 +4,7 @@
   "ingredient": {
     "item": "minecraft:deepslate_bricks"
   },
-  "result": "minecraft:chiseled_deepslate"
+  "result":  {
+    "id": "minecraft:chiseled_deepslate"
+  }
 }

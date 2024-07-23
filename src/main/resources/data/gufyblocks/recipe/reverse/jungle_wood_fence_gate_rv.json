@@ -13,9 +13,8 @@
     "item": "gufyblocks:jungle_wood_fence_gate"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:jungle_wood",
+  "result": { 
+    "id": "minecraft:jungle_wood",
     "count": 1
   }
 }

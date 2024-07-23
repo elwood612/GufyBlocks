@@ -14,7 +14,8 @@
       "item": "minecraft:acacia_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:acacia_wood_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:acacia_wood_fence_gate"
   }
 }

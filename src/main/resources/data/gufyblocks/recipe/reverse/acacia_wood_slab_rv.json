@@ -13,9 +13,8 @@
     "item": "gufyblocks:acacia_wood_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:acacia_wood",
+  "result": { 
+    "id": "minecraft:acacia_wood",
     "count": 2
   }
 }

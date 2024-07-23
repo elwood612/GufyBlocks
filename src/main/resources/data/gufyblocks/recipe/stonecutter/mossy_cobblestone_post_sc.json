@@ -4,6 +4,8 @@
     {
       "item": "minecraft:mossy_cobblestone"
     },
-  "result": "gufyblocks:mossy_cobblestone_post",
+  "result": {
+    "id": "gufyblocks:mossy_cobblestone_post",
     "count": 2
-  }
+    }
+}

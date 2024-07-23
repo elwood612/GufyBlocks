@@ -4,6 +4,8 @@
     {
       "item": "gufyblocks:mossy_diorite_cobble"
     },
-  "result": "gufyblocks:mossy_diorite_cobble_verticalslab",
+  "result": {
+    "id": "gufyblocks:mossy_diorite_cobble_verticalslab",
     "count": 2
-  }
+    }
+}

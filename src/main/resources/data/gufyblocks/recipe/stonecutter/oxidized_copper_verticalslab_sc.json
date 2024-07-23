@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:oxidized_copper"
   },
-  "result": "gufyblocks:oxidized_copper_verticalslab",
+  "result": {
+    "id": "gufyblocks:oxidized_copper_verticalslab",
   "count": 2
+  }
 }

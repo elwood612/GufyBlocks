@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:acacia_wood_hopper",
+  { 
+    "id": "gufyblocks:acacia_wood_hopper",
     "count": 6
   }
 }

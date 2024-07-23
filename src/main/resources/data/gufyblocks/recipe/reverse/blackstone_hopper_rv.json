@@ -13,9 +13,8 @@
     "item": "gufyblocks:blackstone_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:blackstone",
+  "result": { 
+    "id": "minecraft:blackstone",
     "count": 2
   }
 }

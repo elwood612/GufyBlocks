@@ -13,9 +13,8 @@
     "item": "gufyblocks:andesite_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:andesite",
+  "result": { 
+    "id": "minecraft:andesite",
     "count": 2
   }
 }

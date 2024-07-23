@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mushroom_stem_verticalslab",
+  { 
+    "id": "gufyblocks:mushroom_stem_verticalslab",
     "count": 6
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_diorite_bricks_wall",
+  { 
+    "id": "gufyblocks:mossy_diorite_bricks_wall",
     "count": 8
   }
 }

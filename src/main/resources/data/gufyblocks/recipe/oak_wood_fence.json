@@ -14,8 +14,9 @@
       "item": "minecraft:oak_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:oak_wood_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:oak_wood_fence",
     "count": 4
   }
 }

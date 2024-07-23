@@ -13,9 +13,8 @@
     "item": "gufyblocks:oak_parquet_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:oak_parquet",
+  "result": { 
+    "id": "gufyblocks:oak_parquet",
     "count": 3
   }
 }

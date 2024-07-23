@@ -4,6 +4,8 @@
     {
       "item": "minecraft:stone_bricks"
     },
-  "result": "gufyblocks:cobblestone_bricks_verticalslab",
+  "result": {
+    "id": "gufyblocks:cobblestone_bricks_verticalslab",
     "count": 2
-  }
+    }
+}

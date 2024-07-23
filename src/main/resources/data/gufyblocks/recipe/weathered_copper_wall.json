@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:weathered_copper_wall",
+  { 
+    "id": "gufyblocks:weathered_copper_wall",
     "count": 8
   }
 }

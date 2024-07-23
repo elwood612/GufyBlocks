@@ -14,8 +14,9 @@
       "item": "gufyblocks:big_cherry"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_cherry_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:big_cherry_fence",
     "count": 4
   }
 }

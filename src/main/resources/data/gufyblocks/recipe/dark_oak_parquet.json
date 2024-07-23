@@ -11,8 +11,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dark_oak_parquet",
+  { 
+    "id": "gufyblocks:dark_oak_parquet",
     "count": 1
   }
 }

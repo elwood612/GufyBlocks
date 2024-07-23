@@ -14,8 +14,9 @@
       "item": "minecraft:stripped_birch_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_birch_wood_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_birch_wood_fence",
     "count": 4
   }
 }

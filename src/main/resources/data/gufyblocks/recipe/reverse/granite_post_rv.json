@@ -13,9 +13,8 @@
     "item": "gufyblocks:granite_post"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:granite",
+  "result": { 
+    "id": "minecraft:granite",
     "count": 1
   }
 }

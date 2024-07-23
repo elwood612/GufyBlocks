@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:polished_deepslate"
   },
-  "result": "gufyblocks:polished_deepslate_verticalslab",
+  "result": {
+    "id": "gufyblocks:polished_deepslate_verticalslab",
   "count": 2
+  }
 }

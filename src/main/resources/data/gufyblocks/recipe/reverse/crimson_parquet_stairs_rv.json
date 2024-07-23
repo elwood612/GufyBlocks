@@ -13,9 +13,8 @@
     "item": "gufyblocks:crimson_parquet_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:crimson_parquet",
+  "result": { 
+    "id": "gufyblocks:crimson_parquet",
     "count": 3
   }
 }

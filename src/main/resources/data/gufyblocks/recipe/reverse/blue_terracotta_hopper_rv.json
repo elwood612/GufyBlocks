@@ -13,9 +13,8 @@
     "item": "gufyblocks:blue_terracotta_hopper"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:blue_terracotta",
+  "result": { 
+    "id": "minecraft:blue_terracotta",
     "count": 2
   }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:spruce_parquet_stairs",
+  { 
+    "id": "gufyblocks:spruce_parquet_stairs",
     "count": 6
   }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stripped_dark_oak_wood_stairs",
+  { 
+    "id": "gufyblocks:stripped_dark_oak_wood_stairs",
     "count": 6
   }
 }

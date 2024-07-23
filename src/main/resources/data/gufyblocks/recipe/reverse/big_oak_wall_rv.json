@@ -13,9 +13,8 @@
     "item": "gufyblocks:big_oak_wall"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:big_oak",
+  "result": { 
+    "id": "gufyblocks:big_oak",
     "count": 2
   }
 }

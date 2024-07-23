@@ -3,6 +3,8 @@
   "ingredient": {
       "item": "gufyblocks:diorite_bricks"
     },
-  "result": "gufyblocks:diorite_bricks_pillar",
+  "result": {
+    "id": "gufyblocks:diorite_bricks_pillar",
   "count": 1
+  }
 }

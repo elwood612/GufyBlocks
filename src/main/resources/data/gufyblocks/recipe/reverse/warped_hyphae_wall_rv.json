@@ -13,9 +13,8 @@
     "item": "gufyblocks:warped_hyphae_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:warped_hyphae",
+  "result": { 
+    "id": "minecraft:warped_hyphae",
     "count": 2
   }
 }

@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_sandstone_bricks_post",
+  { 
+    "id": "gufyblocks:cracked_sandstone_bricks_post",
     "count": 4
   }
 }

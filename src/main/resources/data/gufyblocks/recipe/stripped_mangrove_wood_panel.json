@@ -9,8 +9,9 @@
       "item": "gufyblocks:stripped_mangrove_wood_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_mangrove_wood_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_mangrove_wood_panel",
     "count": 4
   }
 }

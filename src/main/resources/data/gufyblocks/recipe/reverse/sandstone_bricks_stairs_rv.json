@@ -13,9 +13,8 @@
     "item": "gufyblocks:sandstone_bricks_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:sandstone_bricks",
+  "result": { 
+    "id": "gufyblocks:sandstone_bricks",
     "count": 3
   }
 }

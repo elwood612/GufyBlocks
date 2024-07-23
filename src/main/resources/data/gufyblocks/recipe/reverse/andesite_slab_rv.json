@@ -13,9 +13,8 @@
     "item": "minecraft:andesite_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:andesite",
+  "result": { 
+    "id": "minecraft:andesite",
     "count": 2
   }
 }

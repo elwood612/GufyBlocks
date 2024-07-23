@@ -13,9 +13,8 @@
     "item": "gufyblocks:diorite_hopper"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:diorite",
+  "result": { 
+    "id": "minecraft:diorite",
     "count": 2
   }
 }

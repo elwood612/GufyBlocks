@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cracked_polished_blackstone_bricks"
   },
-  "result": "gufyblocks:cracked_polished_blackstone_brick_wall",
+  "result": {
+    "id": "gufyblocks:cracked_polished_blackstone_brick_wall",
   "count": 1
+  }
 }

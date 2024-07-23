@@ -13,9 +13,8 @@
     "item": "gufyblocks:quartz_bricks_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:quartz_bricks",
+  "result": { 
+    "id": "minecraft:quartz_bricks",
     "count": 3
   }
 }

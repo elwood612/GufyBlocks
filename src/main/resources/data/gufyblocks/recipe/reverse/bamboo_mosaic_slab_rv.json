@@ -13,9 +13,8 @@
     "item": "minecraft:bamboo_mosaic_slab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:bamboo_mosaic",
+  "result": { 
+    "id": "minecraft:bamboo_mosaic",
     "count": 2
   }
 }

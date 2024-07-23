@@ -9,8 +9,9 @@
       "item": "minecraft:magenta_wool"
     }
   },
-  "result": {
-    "item": "gufyblocks:magenta_wool_trapdoor",
+  "result": 
+  { 
+    "id": "gufyblocks:magenta_wool_trapdoor",
     "count": 12
   }
 }

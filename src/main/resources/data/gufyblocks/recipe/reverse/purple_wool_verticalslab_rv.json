@@ -13,9 +13,8 @@
     "item": "gufyblocks:purple_wool_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:purple_wool",
+  "result": { 
+    "id": "minecraft:purple_wool",
     "count": 2
   }
 }

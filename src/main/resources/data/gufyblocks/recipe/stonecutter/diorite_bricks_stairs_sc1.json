@@ -4,6 +4,8 @@
     {
       "item": "minecraft:diorite"
     },
-  "result": "gufyblocks:diorite_bricks_stairs",
+  "result": {
+    "id": "gufyblocks:diorite_bricks_stairs",
   "count": 1
+  }
 }

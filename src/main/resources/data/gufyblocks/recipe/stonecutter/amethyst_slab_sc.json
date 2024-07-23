@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:amethyst_block"
   },
-  "result": "gufyblocks:amethyst_slab",
+  "result": {
+    "id": "gufyblocks:amethyst_slab",
   "count": 2
+  }
 }

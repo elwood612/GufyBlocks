@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_warped_hopper",
+  { 
+    "id": "gufyblocks:big_warped_hopper",
     "count": 6
   }
 }

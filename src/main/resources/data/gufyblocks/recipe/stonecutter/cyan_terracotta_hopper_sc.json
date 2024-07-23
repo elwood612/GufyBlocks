@@ -4,6 +4,8 @@
     {
       "item": "minecraft:cyan_terracotta"
     },
-  "result": "gufyblocks:cyan_terracotta_hopper",
+  "result": {
+    "id": "gufyblocks:cyan_terracotta_hopper",
   "count": 1
+  }
 }

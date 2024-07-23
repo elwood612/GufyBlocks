@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:oxidized_cut_copper_wall",
+  { 
+    "id": "gufyblocks:oxidized_cut_copper_wall",
     "count": 8
   }
 }

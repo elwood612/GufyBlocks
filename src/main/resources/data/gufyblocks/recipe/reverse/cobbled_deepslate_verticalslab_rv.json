@@ -13,9 +13,8 @@
     "item": "gufyblocks:cobbled_deepslate_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:cobbled_deepslate",
+  "result": { 
+    "id": "minecraft:cobbled_deepslate",
     "count": 2
   }
 }

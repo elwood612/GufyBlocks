@@ -9,8 +9,9 @@
       "item": "minecraft:mushroom_stem"
     }
   },
-  "result": {
-    "item": "gufyblocks:mushroom_stem_trapdoor",
+  "result": 
+  { 
+    "id": "gufyblocks:mushroom_stem_trapdoor",
     "count": 12
   }
 }

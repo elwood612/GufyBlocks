@@ -13,9 +13,8 @@
     "item": "gufyblocks:acacia_parquet_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:acacia_parquet",
+  "result": { 
+    "id": "gufyblocks:acacia_parquet",
     "count": 3
   }
 }

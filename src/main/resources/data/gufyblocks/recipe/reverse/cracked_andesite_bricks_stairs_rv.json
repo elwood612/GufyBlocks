@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_andesite_bricks_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:cracked_andesite_bricks",
+  "result": { 
+    "id": "gufyblocks:cracked_andesite_bricks",
     "count": 3
   }
 }

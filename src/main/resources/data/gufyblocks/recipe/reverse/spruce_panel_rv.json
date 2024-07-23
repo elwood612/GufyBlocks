@@ -13,9 +13,8 @@
     "item": "gufyblocks:spruce_panel"
     }
   },
-  "result": 
-{
-      "item": "minecraft:spruce_planks",
+  "result": { 
+    "id": "minecraft:spruce_planks",
     "count": 1
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:iron_wall",
+  { 
+    "id": "gufyblocks:iron_wall",
     "count": 8
   }
 }

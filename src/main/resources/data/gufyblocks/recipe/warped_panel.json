@@ -9,8 +9,9 @@
       "item": "minecraft:warped_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:warped_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:warped_panel",
     "count": 6
   }
 }

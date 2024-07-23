@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:waxed_oxidized_copper"
   },
-  "result": "gufyblocks:waxed_oxidized_copper_post",
+  "result": {
+    "id": "gufyblocks:waxed_oxidized_copper_post",
   "count": 2
+  }
 }

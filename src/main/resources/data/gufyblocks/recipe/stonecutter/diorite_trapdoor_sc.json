@@ -4,6 +4,8 @@
     {
       "item": "minecraft:diorite"
     },
-  "result": "gufyblocks:diorite_trapdoor",
+  "result": {
+    "id": "gufyblocks:diorite_trapdoor",
   "count": 2
+  }
 }

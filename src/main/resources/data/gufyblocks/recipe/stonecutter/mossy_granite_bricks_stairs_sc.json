@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:mossy_granite_bricks"
   },
-  "result": "gufyblocks:mossy_granite_bricks_stairs",
+  "result": {
+    "id": "gufyblocks:mossy_granite_bricks_stairs",
   "count": 1
+  }
 }

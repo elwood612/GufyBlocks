@@ -35,7 +35,7 @@ updateJSONURL="https://github.com/elwood612/GufyBlocks/blob/main/update.json"
 displayURL="https://github.com/elwood612/GufyBlocks/releases" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
-# logoFile="theG.png"
+logoFile = "icon.png"
 
 # A text field displayed in the mod UI
 #credits="" #optional

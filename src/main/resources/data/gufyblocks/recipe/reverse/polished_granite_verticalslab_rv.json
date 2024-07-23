@@ -13,9 +13,8 @@
     "item": "gufyblocks:polished_granite_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:polished_granite",
+  "result": { 
+    "id": "minecraft:polished_granite",
     "count": 2
   }
 }

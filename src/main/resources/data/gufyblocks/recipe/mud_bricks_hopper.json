@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mud_bricks_hopper",
+  { 
+    "id": "gufyblocks:mud_bricks_hopper",
     "count": 6
   }
 }

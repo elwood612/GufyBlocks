@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:tuff_wall"
+          "name": "minecraft:tuff_wall"
         }
       ],
       "conditions": [

@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "minecraft:cherry_boat"
+    "id": "minecraft:cherry_boat"
   },
   "show_notification": true
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cracked_deepslate_bricks"
   },
-  "result": "gufyblocks:cracked_deepslate_bricks_stairs",
+  "result": {
+    "id": "gufyblocks:cracked_deepslate_bricks_stairs",
   "count": 1
+  }
 }

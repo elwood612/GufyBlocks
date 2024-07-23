@@ -13,9 +13,8 @@
     "item": "minecraft:sandstone_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:sandstone",
+  "result": { 
+    "id": "minecraft:sandstone",
     "count": 2
   }
 }

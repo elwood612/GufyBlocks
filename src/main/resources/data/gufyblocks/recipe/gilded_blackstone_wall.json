@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gilded_blackstone_wall",
+  { 
+    "id": "gufyblocks:gilded_blackstone_wall",
     "count": 8
   }
 }

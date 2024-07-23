@@ -13,9 +13,8 @@
     "item": "gufyblocks:magenta_concrete_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:magenta_concrete",
+  "result": { 
+    "id": "minecraft:magenta_concrete",
     "count": 3
   }
 }

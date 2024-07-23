@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:waxed_exposed_copper"
   },
-  "result": "gufyblocks:waxed_exposed_copper_stairs",
+  "result": {
+    "id": "gufyblocks:waxed_exposed_copper_stairs",
   "count": 1
+  }
 }

@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cobblestone_bricks",
+  { 
+    "id": "gufyblocks:cobblestone_bricks",
     "count": 4
   }
 }

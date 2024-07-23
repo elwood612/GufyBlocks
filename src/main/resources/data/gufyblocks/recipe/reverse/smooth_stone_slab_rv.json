@@ -13,9 +13,8 @@
     "item": "minecraft:smooth_stone_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:smooth_stone",
+  "result": { 
+    "id": "minecraft:smooth_stone",
     "count": 2
   }
 }

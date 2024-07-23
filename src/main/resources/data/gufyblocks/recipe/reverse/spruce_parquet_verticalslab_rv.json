@@ -13,9 +13,8 @@
     "item": "gufyblocks:spruce_parquet_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:spruce_parquet",
+  "result": { 
+    "id": "gufyblocks:spruce_parquet",
     "count": 2
   }
 }

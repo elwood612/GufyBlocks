@@ -14,8 +14,9 @@
       "item": "minecraft:crimson_hyphae"
     }
   },
-  "result": {
-    "item": "gufyblocks:crimson_hyphae_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:crimson_hyphae_fence",
     "count": 4
   }
 }

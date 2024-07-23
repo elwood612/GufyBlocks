@@ -13,9 +13,8 @@
     "item": "minecraft:smooth_sandstone_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:smooth_sandstone",
+  "result": { 
+    "id": "minecraft:smooth_sandstone",
     "count": 3
   }
 }

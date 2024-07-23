@@ -13,9 +13,8 @@
     "item": "gufyblocks:cobblestone_post"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cobblestone",
+  "result": { 
+    "id": "minecraft:cobblestone",
     "count": 1
   }
 }

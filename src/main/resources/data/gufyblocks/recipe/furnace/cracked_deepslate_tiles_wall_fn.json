@@ -3,7 +3,9 @@
   "ingredient": {
     "item": "minecraft:deepslate_tile_wall"
   },
-  "result": "gufyblocks:cracked_deepslate_tiles_wall",
+  "result": {
+    "id": "gufyblocks:cracked_deepslate_tiles_wall"
+  },
   "experience": 0.1,
   "cookingtime": 200
 }

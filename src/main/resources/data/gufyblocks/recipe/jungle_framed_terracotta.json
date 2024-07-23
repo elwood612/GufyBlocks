@@ -10,7 +10,8 @@
       "tag": "gufyblocks:jungle_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:jungle_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:jungle_framed_terracotta"
   }
 }

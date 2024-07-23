@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:nether_wart_block_slab",
+  { 
+    "id": "gufyblocks:nether_wart_block_slab",
     "count": 6
   }
 }

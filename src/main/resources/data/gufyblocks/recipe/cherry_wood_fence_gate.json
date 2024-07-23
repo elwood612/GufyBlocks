@@ -14,7 +14,8 @@
       "item": "minecraft:cherry_wood"
     }
   },
-  "result": {
-    "item": "gufyblocks:cherry_wood_fence_gate"
+  "result": 
+  { 
+    "id": "gufyblocks:cherry_wood_fence_gate"
   }
 }

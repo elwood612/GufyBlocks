@@ -10,7 +10,8 @@
       "item": "minecraft:bamboo_fence"
     }
   ],
-  "result": {
-    "item": "gufyblocks:bamboo_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:bamboo_framed_glass_pane"
   }
 }

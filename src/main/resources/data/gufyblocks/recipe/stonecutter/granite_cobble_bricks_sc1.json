@@ -4,6 +4,8 @@
     {
       "item": "minecraft:granite"
     },
-  "result": "gufyblocks:granite_cobble_bricks",
+  "result": {
+    "id": "gufyblocks:granite_cobble_bricks",
     "count": 1
-  }
+    }
+}

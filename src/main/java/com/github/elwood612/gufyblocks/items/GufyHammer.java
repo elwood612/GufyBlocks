@@ -24,6 +24,7 @@ public class GufyHammer extends Item
 {
     public GufyHammer(Item.Properties properties) { super(properties); }
 
+    @NotNull
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
         BlockPos blockpos = context.getClickedPos();

@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_cobblestone_post",
+  { 
+    "id": "gufyblocks:mossy_cobblestone_post",
     "count": 4
   }
 }

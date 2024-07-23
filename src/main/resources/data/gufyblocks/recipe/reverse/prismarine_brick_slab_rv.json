@@ -13,9 +13,8 @@
     "item": "minecraft:prismarine_brick_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:prismarine_bricks",
+  "result": { 
+    "id": "minecraft:prismarine_bricks",
     "count": 2
   }
 }

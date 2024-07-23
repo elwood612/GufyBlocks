@@ -9,8 +9,9 @@
       "item": "gufyblocks:big_crimson_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_crimson_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:big_crimson_panel",
     "count": 4
   }
 }

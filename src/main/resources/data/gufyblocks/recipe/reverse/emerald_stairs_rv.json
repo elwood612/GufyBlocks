@@ -13,9 +13,8 @@
     "item": "gufyblocks:emerald_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:emerald_block",
+  "result": { 
+    "id": "minecraft:emerald_block",
     "count": 3
   }
 }

@@ -9,8 +9,9 @@
       "item": "gufyblocks:stripped_jungle_wood_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_jungle_wood_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_jungle_wood_panel",
     "count": 6
   }
 }

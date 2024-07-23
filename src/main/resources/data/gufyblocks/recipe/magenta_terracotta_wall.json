@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:magenta_terracotta_wall",
+  { 
+    "id": "gufyblocks:magenta_terracotta_wall",
     "count": 8
   }
 }

@@ -4,6 +4,8 @@
     {
       "item": "minecraft:white_terracotta"
     },
-  "result": "gufyblocks:white_terracotta_verticalslab",
+  "result": {
+    "id": "gufyblocks:white_terracotta_verticalslab",
   "count": 2
+  }
 }

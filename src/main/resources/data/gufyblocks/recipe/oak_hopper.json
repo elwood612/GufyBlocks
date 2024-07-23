@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:oak_hopper",
+  { 
+    "id": "gufyblocks:oak_hopper",
     "count": 6
   }
 }

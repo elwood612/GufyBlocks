@@ -8,7 +8,8 @@
       "item": "minecraft:vine"
     }
   ],
-  "result": {
-    "item": "gufyblocks:mossy_cobblestone_bricks"
+  "result": 
+  { 
+    "id": "gufyblocks:mossy_cobblestone_bricks"
   }
 }

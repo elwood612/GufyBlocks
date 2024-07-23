@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:nether_wart_block_stairs",
+  { 
+    "id": "gufyblocks:nether_wart_block_stairs",
     "count": 6
   }
 }

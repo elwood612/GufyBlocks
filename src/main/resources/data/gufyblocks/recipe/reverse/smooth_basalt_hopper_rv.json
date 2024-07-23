@@ -13,9 +13,8 @@
     "item": "gufyblocks:smooth_basalt_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:smooth_basalt",
+  "result": { 
+    "id": "minecraft:smooth_basalt",
     "count": 2
   }
 }

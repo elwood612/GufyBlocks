@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:smooth_basalt"
   },
-  "result": "gufyblocks:smooth_basalt_stairs",
+  "result": {
+    "id": "gufyblocks:smooth_basalt_stairs",
   "count": 1
+  }
 }

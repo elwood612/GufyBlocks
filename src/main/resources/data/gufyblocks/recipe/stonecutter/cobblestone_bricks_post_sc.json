@@ -4,6 +4,8 @@
     {
       "item": "gufyblocks:cobblestone_bricks"
     },
-  "result": "gufyblocks:cobblestone_bricks_post",
+  "result": {
+    "id": "gufyblocks:cobblestone_bricks_post",
     "count": 2
-  }
+    }
+}

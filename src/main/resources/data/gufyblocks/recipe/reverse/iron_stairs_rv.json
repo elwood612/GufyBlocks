@@ -13,9 +13,8 @@
     "item": "gufyblocks:iron_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:iron_block",
+  "result": { 
+    "id": "minecraft:iron_block",
     "count": 3
   }
 }

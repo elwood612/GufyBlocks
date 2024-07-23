@@ -4,6 +4,8 @@
     {
       "item": "minecraft:blue_concrete"
     },
-  "result": "gufyblocks:blue_concrete_stairs",
+  "result": {
+    "id": "gufyblocks:blue_concrete_stairs",
   "count": 1
+  }
 }

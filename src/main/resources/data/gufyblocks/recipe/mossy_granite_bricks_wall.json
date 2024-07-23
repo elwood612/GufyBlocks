@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_granite_bricks_wall",
+  { 
+    "id": "gufyblocks:mossy_granite_bricks_wall",
     "count": 8
   }
 }

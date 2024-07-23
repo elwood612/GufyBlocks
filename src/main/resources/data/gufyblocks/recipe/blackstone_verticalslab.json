@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:blackstone_verticalslab",
+  { 
+    "id": "gufyblocks:blackstone_verticalslab",
     "count": 6
   }
 }

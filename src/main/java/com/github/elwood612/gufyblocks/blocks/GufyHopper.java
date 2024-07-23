@@ -86,7 +86,6 @@ public class GufyHopper extends Block implements SimpleWaterloggedBlock
     }
     
     @Override
-    @SuppressWarnings("deprecation")
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
     {
         if (stateIn.getValue(WATERLOGGED)) 
@@ -98,8 +97,7 @@ public class GufyHopper extends Block implements SimpleWaterloggedBlock
     }
 
     @Override
-    @SuppressWarnings("deprecation")
-    public FluidState getFluidState(BlockState state) 
+    public FluidState getFluidState(BlockState state)
     {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }

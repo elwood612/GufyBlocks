@@ -13,9 +13,8 @@
     "item": "gufyblocks:blue_wool_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:blue_wool",
+  "result": { 
+    "id": "minecraft:blue_wool",
     "count": 3
   }
 }

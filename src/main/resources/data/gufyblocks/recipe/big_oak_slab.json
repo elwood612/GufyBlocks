@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_oak_slab",
+  { 
+    "id": "gufyblocks:big_oak_slab",
     "count": 6
   }
 }

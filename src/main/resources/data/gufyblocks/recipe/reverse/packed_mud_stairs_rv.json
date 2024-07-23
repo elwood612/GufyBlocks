@@ -13,9 +13,8 @@
     "item": "gufyblocks:packed_mud_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:packed_mud",
+  "result": { 
+    "id": "minecraft:packed_mud",
     "count": 3
   }
 }

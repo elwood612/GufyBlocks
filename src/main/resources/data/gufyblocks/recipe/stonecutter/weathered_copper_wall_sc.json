@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:weathered_copper"
   },
-  "result": "gufyblocks:weathered_copper_wall",
+  "result": {
+    "id": "gufyblocks:weathered_copper_wall",
   "count": 1
+  }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:brown_wool_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:brown_wool",
+  "result": { 
+    "id": "minecraft:brown_wool",
     "count": 2
   }
 }

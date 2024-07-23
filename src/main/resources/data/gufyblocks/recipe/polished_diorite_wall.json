@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:polished_diorite_wall",
+  { 
+    "id": "gufyblocks:polished_diorite_wall",
     "count": 8
   }
 }

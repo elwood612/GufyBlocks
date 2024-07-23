@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:quartz_block"
   },
-  "result": "gufyblocks:quartz_post",
+  "result": {
+    "id": "gufyblocks:quartz_post",
   "count": 2
+  }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dripstone_stairs",
+  { 
+    "id": "gufyblocks:dripstone_stairs",
     "count": 6
   }
 }

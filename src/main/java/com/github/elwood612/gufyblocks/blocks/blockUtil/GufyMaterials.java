@@ -120,19 +120,18 @@ public enum GufyMaterials
 	BLACKSTONE(MapColor.COLOR_BLACK, SoundType.STONE, 1.5F, 6.0F, true, true),
 	POLISHED_BLACKSTONE(MapColor.COLOR_BLACK, SoundType.STONE, 2.0F, 6.0F, true, true),
 	GILDED_BLACKSTONE(MapColor.COLOR_BLACK, SoundType.GILDED_BLACKSTONE, 1.5F, 6.0F, true, true),
-	WHITE_WOOD(MapColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, true),
-	WHITE_SIGN(MapColor.SNOW, SoundType.WOOD, 1.0F, 1.0F, false, true),
-	WHITE_TRAPDOOR(MapColor.SNOW, SoundType.WOOD, 2.0F, 3.0F, false, false),
-	PACKED_MUD(MapColor.DIRT, SoundType.PACKED_MUD, 1.0F, 3.0F, false, false),
-	MUD_BRICKS(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.MUD_BRICKS, 1.5F, 3.0F, true, false),
-	TUFF(MapColor.TERRACOTTA_GRAY, SoundType.TUFF, 1.5F, 6.0F, true, false),
+	PACKED_MUD(MapColor.DIRT, SoundType.PACKED_MUD, 1.0F, 3.0F, false, true),
+	MUD_BRICKS(MapColor.TERRACOTTA_LIGHT_GRAY, SoundType.MUD_BRICKS, 1.5F, 3.0F, true, true),
+	TUFF(MapColor.TERRACOTTA_GRAY, SoundType.TUFF, 1.5F, 6.0F, true, true),
 	LEADED_GLASS(MapColor.STONE, SoundType.GLASS, 0.3F, 3.0F, false, false),
 	FRAMED_GLASS(MapColor.WOOD, SoundType.GLASS, 0.3F, 3.0F, false, false),
-	DRIPSTONE(MapColor.TERRACOTTA_BROWN, SoundType.DRIPSTONE_BLOCK, 1.5f, 1.0f, true, false),
-	MUSHROOM(MapColor.WOOL, SoundType.WOOD, 0.2f, 0.2f, false, false);
+	DRIPSTONE(MapColor.TERRACOTTA_BROWN, SoundType.DRIPSTONE_BLOCK, 1.5f, 1.0f, true, true),
+	MUSHROOM(MapColor.WOOL, SoundType.WOOD, 0.2f, 0.2f, false, true),
+	ICE(MapColor.ICE, SoundType.GLASS, 0.5f, 0.5f, false, true),
+	SNOW(MapColor.SNOW, SoundType.SNOW, 0.2f, 0.2f, true, true);
 
-    public final MapColor color; //map color
-    public final SoundType sound; //sound
+    public final MapColor color;
+    public final SoundType sound;
     public final float hardness; //mining hardness
     public final float resistance; //explosion resistance
 	public final boolean tool;

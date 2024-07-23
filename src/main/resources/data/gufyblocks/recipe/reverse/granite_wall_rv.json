@@ -13,9 +13,8 @@
     "item": "minecraft:granite_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:granite",
+  "result": { 
+    "id": "minecraft:granite",
     "count": 2
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:thatch_slab"
     }
   },
-  "result": 
-  {
-      "item": "gufyblocks:thatch",
+  "result": { 
+    "id": "gufyblocks:thatch",
     "count": 2
   }
 }

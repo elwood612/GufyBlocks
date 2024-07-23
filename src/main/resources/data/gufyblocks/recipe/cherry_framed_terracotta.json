@@ -10,7 +10,8 @@
       "tag": "gufyblocks:cherry_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:cherry_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:cherry_framed_terracotta"
   }
 }

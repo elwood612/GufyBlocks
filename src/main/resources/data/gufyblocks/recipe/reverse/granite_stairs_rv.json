@@ -13,9 +13,8 @@
     "item": "minecraft:granite_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:granite",
+  "result": { 
+    "id": "minecraft:granite",
     "count": 3
   }
 }

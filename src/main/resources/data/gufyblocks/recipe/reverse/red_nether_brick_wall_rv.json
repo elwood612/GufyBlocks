@@ -13,9 +13,8 @@
     "item": "minecraft:red_nether_brick_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:red_nether_bricks",
+  "result": { 
+    "id": "minecraft:red_nether_bricks",
     "count": 2
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:warped_wart_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:warped_wart_block",
+  "result": { 
+    "id": "minecraft:warped_wart_block",
     "count": 3
   }
 }

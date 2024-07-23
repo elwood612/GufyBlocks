@@ -9,8 +9,9 @@
       "item": "gufyblocks:big_warped_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_warped_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:big_warped_panel",
     "count": 4
   }
 }

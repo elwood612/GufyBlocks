@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:sandstone_hopper",
+  { 
+    "id": "gufyblocks:sandstone_hopper",
     "count": 6
   }
 }

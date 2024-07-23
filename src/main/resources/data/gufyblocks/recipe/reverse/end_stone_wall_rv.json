@@ -13,9 +13,8 @@
     "item": "gufyblocks:end_stone_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:end_stone",
+  "result": { 
+    "id": "minecraft:end_stone",
     "count": 2
   }
 }

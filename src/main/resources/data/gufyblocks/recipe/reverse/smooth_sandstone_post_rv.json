@@ -13,9 +13,8 @@
     "item": "gufyblocks:smooth_sandstone_post"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:smooth_sandstone",
+  "result": { 
+    "id": "minecraft:smooth_sandstone",
     "count": 1
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:exposed_copper_post"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:exposed_copper",
+  "result": { 
+    "id": "minecraft:exposed_copper",
     "count": 1
   }
 }

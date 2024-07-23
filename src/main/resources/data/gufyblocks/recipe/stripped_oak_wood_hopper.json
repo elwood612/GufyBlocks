@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stripped_oak_wood_hopper",
+  { 
+    "id": "gufyblocks:stripped_oak_wood_hopper",
     "count": 6
   }
 }

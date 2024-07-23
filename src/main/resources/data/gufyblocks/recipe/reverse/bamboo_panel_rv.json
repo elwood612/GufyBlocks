@@ -13,9 +13,8 @@
     "item": "gufyblocks:bamboo_panel"
     }
   },
-  "result": 
-{
-    "item": "minecraft:bamboo_planks",
+  "result": { 
+    "id": "minecraft:bamboo_planks",
     "count": 1
   }
 }

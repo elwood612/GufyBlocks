@@ -13,9 +13,8 @@
     "item": "gufyblocks:pink_concrete_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:pink_concrete",
+  "result": { 
+    "id": "minecraft:pink_concrete",
     "count": 2
   }
 }

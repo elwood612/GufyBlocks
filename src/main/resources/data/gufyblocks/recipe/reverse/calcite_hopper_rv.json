@@ -13,9 +13,8 @@
     "item": "gufyblocks:calcite_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:calcite",
+  "result": { 
+    "id": "minecraft:calcite",
     "count": 2
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:blackstone"
   },
-  "result": "gufyblocks:blackstone_hopper",
+  "result": {
+    "id": "gufyblocks:blackstone_hopper",
   "count": 1
+  }
 }

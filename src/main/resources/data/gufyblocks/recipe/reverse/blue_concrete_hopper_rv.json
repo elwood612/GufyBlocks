@@ -13,9 +13,8 @@
     "item": "gufyblocks:blue_concrete_hopper"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:blue_concrete",
+  "result": { 
+    "id": "minecraft:blue_concrete",
     "count": 2
   }
 }

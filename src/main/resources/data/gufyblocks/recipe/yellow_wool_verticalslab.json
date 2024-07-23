@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:yellow_wool_verticalslab",
+  { 
+    "id": "gufyblocks:yellow_wool_verticalslab",
     "count": 6
   }
 }

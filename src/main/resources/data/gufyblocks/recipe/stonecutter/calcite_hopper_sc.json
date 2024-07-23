@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result": "gufyblocks:calcite_hopper",
+  "result": {
+    "id": "gufyblocks:calcite_hopper",
   "count": 1
+  }
 }

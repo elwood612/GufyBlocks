@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:exposed_copper"
   },
-  "result": "gufyblocks:exposed_copper_verticalslab",
+  "result": {
+    "id": "gufyblocks:exposed_copper_verticalslab",
   "count": 2
+  }
 }

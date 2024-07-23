@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:jungle_parquet_stairs",
+  { 
+    "id": "gufyblocks:jungle_parquet_stairs",
     "count": 6
   }
 }

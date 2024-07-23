@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gray_concrete_slab",
+  { 
+    "id": "gufyblocks:gray_concrete_slab",
     "count": 6
   }
 }

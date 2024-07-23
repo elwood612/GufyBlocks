@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:exposed_copper_stairs",
+  { 
+    "id": "gufyblocks:exposed_copper_stairs",
     "count": 6
   }
 }

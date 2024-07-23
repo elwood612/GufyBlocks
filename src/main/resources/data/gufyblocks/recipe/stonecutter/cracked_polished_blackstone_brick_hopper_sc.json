@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cracked_polished_blackstone_bricks"
   },
-  "result": "gufyblocks:cracked_polished_blackstone_brick_hopper",
+  "result": {
+    "id": "gufyblocks:cracked_polished_blackstone_brick_hopper",
   "count": 1
+  }
 }

@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:jungle_hopper",
+  { 
+    "id": "gufyblocks:jungle_hopper",
     "count": 6
   }
 }

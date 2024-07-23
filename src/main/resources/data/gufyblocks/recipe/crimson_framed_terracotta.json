@@ -10,7 +10,8 @@
       "tag": "gufyblocks:crimson_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:crimson_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:crimson_framed_terracotta"
   }
 }

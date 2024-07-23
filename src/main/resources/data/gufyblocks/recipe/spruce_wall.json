@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:spruce_wall",
+  { 
+    "id": "gufyblocks:spruce_wall",
     "count": 8
   }
 }

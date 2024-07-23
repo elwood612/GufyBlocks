@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result": "gufyblocks:calcite_verticalslab",
+  "result": {
+    "id": "gufyblocks:calcite_verticalslab",
   "count": 2
+  }
 }

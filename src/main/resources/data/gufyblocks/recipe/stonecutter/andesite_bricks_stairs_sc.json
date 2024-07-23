@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:andesite_bricks"
   },
-  "result": "gufyblocks:andesite_bricks_stairs",
+  "result": {
+    "id": "gufyblocks:andesite_bricks_stairs",
   "count": 1
+  }
 }

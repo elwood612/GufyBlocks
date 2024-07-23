@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:andesite_bricks_post",
+  { 
+    "id": "gufyblocks:andesite_bricks_post",
     "count": 4
   }
 }

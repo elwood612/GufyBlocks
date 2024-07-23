@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "minecraft:sandstone_wall",
+    "id": "minecraft:sandstone_wall",
     "count": 8
   }
 }

@@ -16,8 +16,10 @@
     " X "
   ],
   "result": {
-    "count": 3,
+     {
+    "id": "count": 3,
     "item": "minecraft:dark_oak_sign"
-  },
+    }
+},
   "show_notification": true
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:diamond_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:diamond_block",
+  "result": { 
+    "id": "minecraft:diamond_block",
     "count": 2
   }
 }

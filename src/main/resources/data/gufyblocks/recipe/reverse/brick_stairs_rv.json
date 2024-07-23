@@ -13,9 +13,8 @@
     "item": "minecraft:brick_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:bricks",
+  "result": { 
+    "id": "minecraft:bricks",
     "count": 3
   }
 }

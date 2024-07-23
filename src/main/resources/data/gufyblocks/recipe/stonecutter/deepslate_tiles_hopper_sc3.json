@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:deepslate_bricks"
   },
-  "result": "gufyblocks:deepslate_tiles_hopper",
+  "result": {
+    "id": "gufyblocks:deepslate_tiles_hopper",
   "count": 1
+  }
 }

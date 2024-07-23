@@ -13,9 +13,8 @@
     "item": "gufyblocks:light_blue_wool_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:light_blue_wool",
+  "result": { 
+    "id": "minecraft:light_blue_wool",
     "count": 2
   }
 }

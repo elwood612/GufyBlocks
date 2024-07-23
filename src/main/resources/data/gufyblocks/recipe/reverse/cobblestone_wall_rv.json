@@ -13,9 +13,8 @@
     "item": "minecraft:cobblestone_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:cobblestone",
+  "result": { 
+    "id": "minecraft:cobblestone",
     "count": 2
   }
 }

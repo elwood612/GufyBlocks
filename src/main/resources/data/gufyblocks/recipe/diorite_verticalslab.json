@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_verticalslab",
+  { 
+    "id": "gufyblocks:diorite_verticalslab",
     "count": 6
   }
 }

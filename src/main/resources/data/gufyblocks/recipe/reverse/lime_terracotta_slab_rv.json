@@ -13,9 +13,8 @@
     "item": "gufyblocks:lime_terracotta_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:lime_terracotta",
+  "result": { 
+    "id": "minecraft:lime_terracotta",
     "count": 2
   }
 }

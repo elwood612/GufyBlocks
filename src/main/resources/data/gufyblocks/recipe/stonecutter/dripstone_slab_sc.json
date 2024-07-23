@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:dripstone_block"
   },
-  "result": "gufyblocks:dripstone_slab",
+  "result": {
+    "id": "gufyblocks:dripstone_slab",
   "count": 2
+  }
 }

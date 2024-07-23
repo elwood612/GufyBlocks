@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gray_wool_slab",
+  { 
+    "id": "gufyblocks:gray_wool_slab",
     "count": 6
   }
 }

@@ -9,7 +9,8 @@
       "item": "minecraft:moss_block"
     }
   ],
-  "result": {
-    "item": "gufyblocks:mossy_cobbled_deepslate"
+  "result": 
+  { 
+    "id": "gufyblocks:mossy_cobbled_deepslate"
   }
 }

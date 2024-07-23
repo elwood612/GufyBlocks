@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gold_hopper",
+  { 
+    "id": "gufyblocks:gold_hopper",
     "count": 6
   }
 }

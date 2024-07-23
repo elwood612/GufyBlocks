@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_warped_stairs",
+  { 
+    "id": "gufyblocks:big_warped_stairs",
     "count": 6
   }
 }

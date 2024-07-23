@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stripped_jungle_wood_slab",
+  { 
+    "id": "gufyblocks:stripped_jungle_wood_slab",
     "count": 6
   }
 }

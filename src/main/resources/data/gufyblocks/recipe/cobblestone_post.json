@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cobblestone_post",
+  { 
+    "id": "gufyblocks:cobblestone_post",
     "count": 4
   }
 }

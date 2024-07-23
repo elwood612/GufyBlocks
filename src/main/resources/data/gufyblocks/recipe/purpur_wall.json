@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:purpur_wall",
+  { 
+    "id": "gufyblocks:purpur_wall",
     "count": 8
   }
 }

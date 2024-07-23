@@ -13,9 +13,8 @@
     "item": "gufyblocks:brick_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:bricks",
+  "result": { 
+    "id": "minecraft:bricks",
     "count": 2
   }
 }

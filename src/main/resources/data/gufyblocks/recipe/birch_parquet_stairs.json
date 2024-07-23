@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:birch_parquet_stairs",
+  { 
+    "id": "gufyblocks:birch_parquet_stairs",
     "count": 6
   }
 }

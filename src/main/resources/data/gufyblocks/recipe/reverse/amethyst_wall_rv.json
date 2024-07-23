@@ -13,9 +13,8 @@
     "item": "gufyblocks:amethyst_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:amethyst_block",
+  "result": { 
+    "id": "minecraft:amethyst_block",
     "count": 2
   }
 }

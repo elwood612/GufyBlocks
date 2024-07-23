@@ -14,7 +14,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "minecraft:jungle_door"
-  },
+    "id": "minecraft:jungle_door"
+},
   "show_notification": true
 }

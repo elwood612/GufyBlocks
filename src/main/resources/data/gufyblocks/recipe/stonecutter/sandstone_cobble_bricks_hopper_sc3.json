@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:sandstone_bricks"
   },
-  "result": "gufyblocks:sandstone_cobble_bricks_hopper",
+  "result": {
+    "id": "gufyblocks:sandstone_cobble_bricks_hopper",
   "count": 1
+  }
 }

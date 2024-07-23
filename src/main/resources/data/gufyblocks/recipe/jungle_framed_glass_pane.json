@@ -10,7 +10,8 @@
       "tag": "gufyblocks:jungle_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:jungle_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:jungle_framed_glass_pane"
   }
 }

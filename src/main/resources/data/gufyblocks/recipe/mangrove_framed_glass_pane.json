@@ -10,7 +10,8 @@
       "tag": "gufyblocks:mangrove_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:mangrove_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:mangrove_framed_glass_pane"
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:polished_deepslate"
   },
-  "result": "gufyblocks:deepslate_bricks_pillar",
+  "result": {
+    "id": "gufyblocks:deepslate_bricks_pillar",
   "count": 1
+  }
 }

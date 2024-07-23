@@ -13,9 +13,8 @@
     "item": "minecraft:quartz_stairs"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:quartz_block",
+  "result": { 
+    "id": "minecraft:quartz_block",
     "count": 3
   }
 }

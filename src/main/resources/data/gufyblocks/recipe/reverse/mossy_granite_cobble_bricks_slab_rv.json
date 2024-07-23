@@ -13,9 +13,8 @@
     "item": "gufyblocks:mossy_granite_cobble_bricks_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:mossy_granite_cobble_bricks",
+  "result": { 
+    "id": "gufyblocks:mossy_granite_cobble_bricks",
     "count": 2
   }
 }

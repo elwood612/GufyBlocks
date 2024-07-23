@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:diorite"
   },
-  "result": "gufyblocks:polished_diorite_verticalslab",
+  "result": {
+    "id": "gufyblocks:polished_diorite_verticalslab",
   "count": 2
+  }
 }

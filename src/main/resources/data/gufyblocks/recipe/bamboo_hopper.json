@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:bamboo_hopper",
+  { 
+    "id": "gufyblocks:bamboo_hopper",
     "count": 6
   }
 }

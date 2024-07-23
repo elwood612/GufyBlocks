@@ -4,6 +4,8 @@
     {
       "item": "minecraft:stone"
     },
-  "result": "gufyblocks:stone_hopper",
+  "result": {
+    "id": "gufyblocks:stone_hopper",
   "count": 1
+  }
 }

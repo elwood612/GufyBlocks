@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:smooth_quartz_hopper",
+  { 
+    "id": "gufyblocks:smooth_quartz_hopper",
     "count": 6
   }
 }

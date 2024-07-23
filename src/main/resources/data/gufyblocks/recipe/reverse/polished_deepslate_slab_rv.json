@@ -13,9 +13,8 @@
     "item": "minecraft:polished_deepslate_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:polished_deepslate",
+  "result": { 
+    "id": "minecraft:polished_deepslate",
     "count": 2
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:gilded_blackstone"
   },
-  "result": "gufyblocks:gilded_blackstone_post",
+  "result": {
+    "id": "gufyblocks:gilded_blackstone_post",
   "count": 2
+  }
 }

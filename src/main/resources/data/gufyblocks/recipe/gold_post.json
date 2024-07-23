@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gold_post",
+  { 
+    "id": "gufyblocks:gold_post",
     "count": 4
   }
 }

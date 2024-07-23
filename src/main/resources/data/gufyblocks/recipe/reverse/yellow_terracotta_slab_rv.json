@@ -13,9 +13,8 @@
     "item": "gufyblocks:yellow_terracotta_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:yellow_terracotta",
+  "result": { 
+    "id": "minecraft:yellow_terracotta",
     "count": 2
   }
 }

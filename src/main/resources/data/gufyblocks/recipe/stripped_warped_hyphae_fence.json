@@ -14,8 +14,9 @@
       "item": "minecraft:stripped_warped_hyphae"
     }
   },
-  "result": {
-    "item": "gufyblocks:stripped_warped_hyphae_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_warped_hyphae_fence",
     "count": 4
   }
 }

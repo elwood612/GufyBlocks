@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:orange_wool_stairs",
+  { 
+    "id": "gufyblocks:orange_wool_stairs",
     "count": 6
   }
 }

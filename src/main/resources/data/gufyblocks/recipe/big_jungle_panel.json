@@ -9,8 +9,9 @@
       "item": "gufyblocks:big_jungle_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_jungle_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:big_jungle_panel",
     "count": 4
   }
 }

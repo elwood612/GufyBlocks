@@ -13,9 +13,8 @@
     "item": "gufyblocks:stripped_oak_wood_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:stripped_oak_wood",
+  "result": { 
+    "id": "minecraft:stripped_oak_wood",
     "count": 2
   }
 }

@@ -14,7 +14,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "minecraft:bamboo_door"
-  },
+    "id": "minecraft:bamboo_door"
+},
   "show_notification": true
 }

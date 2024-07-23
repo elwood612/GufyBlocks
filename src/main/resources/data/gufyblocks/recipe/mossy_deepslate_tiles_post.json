@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_deepslate_tiles_post",
+  { 
+    "id": "gufyblocks:mossy_deepslate_tiles_post",
     "count": 4
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:polished_diorite_post"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:polished_diorite",
+  "result": { 
+    "id": "minecraft:polished_diorite",
     "count": 1
   }
 }

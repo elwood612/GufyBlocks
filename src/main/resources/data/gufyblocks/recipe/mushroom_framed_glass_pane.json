@@ -10,7 +10,8 @@
       "item": "gufyblocks:mushroom_stem_fence"
     }
   ],
-  "result": {
-    "item": "gufyblocks:mushroom_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:mushroom_framed_glass_pane"
   }
 }

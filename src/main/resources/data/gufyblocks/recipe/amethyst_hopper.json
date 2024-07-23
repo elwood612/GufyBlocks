@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:amethyst_hopper",
+  { 
+    "id": "gufyblocks:amethyst_hopper",
     "count": 6
   }
 }

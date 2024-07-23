@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_diorite_bricks_slab"
     }
   },
-  "result": 
-  {
-      "item": "gufyblocks:cracked_diorite_bricks",
+  "result": { 
+    "id": "gufyblocks:cracked_diorite_bricks",
     "count": 2
   }
 }

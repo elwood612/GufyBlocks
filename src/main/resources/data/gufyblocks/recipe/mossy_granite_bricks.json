@@ -9,7 +9,8 @@
       "item": "minecraft:moss_block"
     }
   ],
-  "result": {
-    "item": "gufyblocks:mossy_granite_bricks"
+  "result": 
+  { 
+    "id": "gufyblocks:mossy_granite_bricks"
   }
 }

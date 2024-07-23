@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:end_stone_bricks"
   },
-  "result": "gufyblocks:end_stone_brick_verticalslab",
+  "result": {
+    "id": "gufyblocks:end_stone_brick_verticalslab",
   "count": 2
+  }
 }

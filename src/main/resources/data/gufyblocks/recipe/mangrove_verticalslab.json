@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mangrove_verticalslab",
+  { 
+    "id": "gufyblocks:mangrove_verticalslab",
     "count": 6
   }
 }

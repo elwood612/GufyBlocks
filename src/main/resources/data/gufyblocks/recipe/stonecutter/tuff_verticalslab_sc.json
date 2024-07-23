@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:tuff"
   },
-  "result": "gufyblocks:tuff_verticalslab",
+  "result": {
+    "id": "gufyblocks:tuff_verticalslab",
   "count": 2
+  }
 }

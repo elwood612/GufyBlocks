@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:bricks"
   },
-  "result": "gufyblocks:brick_hopper",
+  "result": {
+    "id": "gufyblocks:brick_hopper",
   "count": 1
+  }
 }

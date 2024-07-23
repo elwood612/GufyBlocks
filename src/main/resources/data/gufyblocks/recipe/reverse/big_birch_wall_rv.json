@@ -13,9 +13,8 @@
     "item": "gufyblocks:big_birch_wall"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:big_birch",
+  "result": { 
+    "id": "gufyblocks:big_birch",
     "count": 2
   }
 }

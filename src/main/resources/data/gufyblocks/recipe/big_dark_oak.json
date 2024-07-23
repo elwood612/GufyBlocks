@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_dark_oak",
+  { 
+    "id": "gufyblocks:big_dark_oak",
     "count": 8
   }
 }

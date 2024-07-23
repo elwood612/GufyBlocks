@@ -1,6 +1,10 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:snow_stairs", 
+    "gufyblocks:snow_slab", 
+    "gufyblocks:snow_verticalslab", 
+ 
     "gufyblocks:rooted_dirt_stairs", 
     "gufyblocks:rooted_dirt_slab", 
     "gufyblocks:rooted_dirt_verticalslab", 

@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:waxed_oxidized_copper_slab",
+  { 
+    "id": "gufyblocks:waxed_oxidized_copper_slab",
     "count": 6
   }
 }

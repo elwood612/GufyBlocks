@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:purple_terracotta_wall",
+  { 
+    "id": "gufyblocks:purple_terracotta_wall",
     "count": 8
   }
 }

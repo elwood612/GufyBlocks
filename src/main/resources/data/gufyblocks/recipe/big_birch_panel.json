@@ -9,8 +9,9 @@
       "item": "gufyblocks:big_birch_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_birch_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:big_birch_panel",
     "count": 4
   }
 }

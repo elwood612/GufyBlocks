@@ -13,9 +13,8 @@
     "item": "gufyblocks:coarse_dirt_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:coarse_dirt",
+  "result": { 
+    "id": "minecraft:coarse_dirt",
     "count": 2
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_polished_blackstone_brick_stairs",
+  { 
+    "id": "gufyblocks:cracked_polished_blackstone_brick_stairs",
     "count": 6
   }
 }

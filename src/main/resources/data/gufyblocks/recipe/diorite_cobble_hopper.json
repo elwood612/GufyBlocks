@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_cobble_hopper",
+  { 
+    "id": "gufyblocks:diorite_cobble_hopper",
     "count": 6
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cyan_terracotta_stairs",
+  { 
+    "id": "gufyblocks:cyan_terracotta_stairs",
     "count": 6
   }
 }

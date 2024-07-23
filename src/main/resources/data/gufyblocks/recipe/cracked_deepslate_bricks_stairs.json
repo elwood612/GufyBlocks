@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_deepslate_bricks_stairs",
+  { 
+    "id": "gufyblocks:cracked_deepslate_bricks_stairs",
     "count": 6
   }
 }

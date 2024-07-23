@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stone_hopper",
+  { 
+    "id": "gufyblocks:stone_hopper",
     "count": 6
   }
 }

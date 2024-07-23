@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/cracked_deepslate_bricks_hopper" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_bricks_hopper2" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_bricks_hopper3" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_bricks_hopper4" }
+        ]
+    }
+}

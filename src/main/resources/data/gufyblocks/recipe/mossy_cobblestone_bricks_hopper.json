@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_cobblestone_bricks_hopper",
+  { 
+    "id": "gufyblocks:mossy_cobblestone_bricks_hopper",
     "count": 6
   }
 }

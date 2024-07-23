@@ -13,9 +13,8 @@
     "item": "gufyblocks:white_terracotta_post"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:white_terracotta",
+  "result": { 
+    "id": "minecraft:white_terracotta",
     "count": 1
   }
 }

@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diamond_post",
+  { 
+    "id": "gufyblocks:diamond_post",
     "count": 4
   }
 }

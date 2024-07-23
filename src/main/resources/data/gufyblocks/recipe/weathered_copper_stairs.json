@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:weathered_copper_stairs",
+  { 
+    "id": "gufyblocks:weathered_copper_stairs",
     "count": 6
   }
 }

@@ -9,8 +9,9 @@
       "item": "minecraft:stone_bricks"
     }
   },
-  "result": {
-    "item": "gufyblocks:stone_bricks_pillar",
+  "result": 
+  { 
+    "id": "gufyblocks:stone_bricks_pillar",
     "count": 2
   }
 }

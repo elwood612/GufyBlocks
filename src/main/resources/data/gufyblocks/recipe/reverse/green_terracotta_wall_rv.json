@@ -13,9 +13,8 @@
     "item": "gufyblocks:green_terracotta_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:green_terracotta",
+  "result": { 
+    "id": "minecraft:green_terracotta",
     "count": 2
   }
 }

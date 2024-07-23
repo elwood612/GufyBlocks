@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_deepslate_bricks_slab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:cracked_deepslate_bricks",
+  "result": { 
+    "id": "minecraft:cracked_deepslate_bricks",
     "count": 2
   }
 }

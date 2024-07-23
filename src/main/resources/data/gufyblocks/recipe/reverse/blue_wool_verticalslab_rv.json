@@ -13,9 +13,8 @@
     "item": "gufyblocks:blue_wool_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:blue_wool",
+  "result": { 
+    "id": "minecraft:blue_wool",
     "count": 2
   }
 }

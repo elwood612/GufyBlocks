@@ -13,9 +13,8 @@
     "item": "gufyblocks:purpur_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:purpur_block",
+  "result": { 
+    "id": "minecraft:purpur_block",
     "count": 2
   }
 }

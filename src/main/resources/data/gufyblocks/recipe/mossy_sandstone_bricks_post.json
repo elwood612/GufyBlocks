@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_sandstone_bricks_post",
+  { 
+    "id": "gufyblocks:mossy_sandstone_bricks_post",
     "count": 4
   }
 }

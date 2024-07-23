@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:light_gray_terracotta_verticalslab",
+  { 
+    "id": "gufyblocks:light_gray_terracotta_verticalslab",
     "count": 6
   }
 }

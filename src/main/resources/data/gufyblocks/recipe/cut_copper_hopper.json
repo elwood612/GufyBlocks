@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cut_copper_hopper",
+  { 
+    "id": "gufyblocks:cut_copper_hopper",
     "count": 6
   }
 }

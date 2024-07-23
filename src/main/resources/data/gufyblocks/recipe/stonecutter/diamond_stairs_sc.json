@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:diamond_block"
   },
-  "result": "gufyblocks:diamond_stairs",
+  "result": {
+    "id": "gufyblocks:diamond_stairs",
   "count": 1
+  }
 }

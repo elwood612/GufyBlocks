@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dark_oak_wood_slab",
+  { 
+    "id": "gufyblocks:dark_oak_wood_slab",
     "count": 6
   }
 }

@@ -9,8 +9,9 @@
       "item": "gufyblocks:big_cherry_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_cherry_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:big_cherry_panel",
     "count": 4
   }
 }

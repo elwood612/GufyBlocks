@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:tuff_hopper",
+  { 
+    "id": "gufyblocks:tuff_hopper",
     "count": 6
   }
 }

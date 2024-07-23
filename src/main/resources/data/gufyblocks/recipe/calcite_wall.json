@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:calcite_wall",
+  { 
+    "id": "gufyblocks:calcite_wall",
     "count": 8
   }
 }

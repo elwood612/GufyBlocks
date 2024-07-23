@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_diorite_cobble_post",
+  { 
+    "id": "gufyblocks:mossy_diorite_cobble_post",
     "count": 4
   }
 }

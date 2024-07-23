@@ -13,9 +13,8 @@
     "item": "gufyblocks:deepslate_bricks_hopper"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:deepslate_bricks",
+  "result": { 
+    "id": "minecraft:deepslate_bricks",
     "count": 2
   }
 }

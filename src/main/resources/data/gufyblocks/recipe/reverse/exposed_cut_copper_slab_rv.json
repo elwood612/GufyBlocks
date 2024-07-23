@@ -13,9 +13,8 @@
     "item": "minecraft:exposed_cut_copper_slab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:exposed_cut_copper",
+  "result": { 
+    "id": "minecraft:exposed_cut_copper",
     "count": 2
   }
 }

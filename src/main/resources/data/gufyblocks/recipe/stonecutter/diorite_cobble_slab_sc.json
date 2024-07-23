@@ -4,6 +4,8 @@
     {
       "item": "gufyblocks:diorite_cobble"
     },
-  "result": "gufyblocks:diorite_cobble_slab",
+  "result": {
+    "id": "gufyblocks:diorite_cobble_slab",
     "count": 2
-  }
+    }
+}

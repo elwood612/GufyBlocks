@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:mossy_cobbled_deepslate"
   },
-  "result": "gufyblocks:mossy_cobbled_deepslate_stairs",
+  "result": {
+    "id": "gufyblocks:mossy_cobbled_deepslate_stairs",
   "count": 1
+  }
 }

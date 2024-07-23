@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:coarse_dirt_stairs",
+  { 
+    "id": "gufyblocks:coarse_dirt_stairs",
     "count": 6
   }
 }

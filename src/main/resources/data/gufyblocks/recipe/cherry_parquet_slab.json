@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cherry_parquet_slab",
+  { 
+    "id": "gufyblocks:cherry_parquet_slab",
     "count": 6
   }
 }

@@ -1,4 +1,40 @@
 { 
+"block.gufyblocks.packed_ice_stairs": "Packed Ice Stairs",  
+"block.gufyblocks.packed_ice_slab": "Packed Ice Slab",  
+"block.gufyblocks.packed_ice_verticalslab": "Packed Ice Vertical Slab",  
+ 
+"block.gufyblocks.snow_stairs": "Snow Stairs",  
+"block.gufyblocks.snow_slab": "Snow Slab",  
+"block.gufyblocks.snow_verticalslab": "Snow Vertical Slab",  
+ 
+"block.gufyblocks.tuff_bricks_pillar": "Tuff Brick Pillar",  
+ 
+"block.gufyblocks.polished_tuff_verticalslab": "Polished Tuff Vertical Slab",  
+"block.gufyblocks.polished_tuff_hopper": "Polished Tuff Hopper",  
+"block.gufyblocks.polished_tuff_post": "Polished Tuff Post",  
+ 
+"block.gufyblocks.tuff_bricks_verticalslab": "Tuff Brick Vertical Slab",  
+"block.gufyblocks.tuff_bricks_hopper": "Tuff Brick Hopper",  
+"block.gufyblocks.tuff_bricks_post": "Tuff Brick Post",  
+ 
+"block.gufyblocks.white_seat": "White Seat",
+"block.gufyblocks.light_gray_seat": "Light Gray Seat",
+"block.gufyblocks.gray_seat": "Gray Seat",
+"block.gufyblocks.black_seat": "Black Seat",
+"block.gufyblocks.brown_seat": "Brown Seat",
+"block.gufyblocks.red_seat": "Red Seat",
+"block.gufyblocks.orange_seat": "Orange Seat",
+"block.gufyblocks.yellow_seat": "Yellow Seat",
+"block.gufyblocks.lime_seat": "Lime Seat",
+"block.gufyblocks.green_seat": "Green Seat",
+"block.gufyblocks.cyan_seat": "Cyan Seat",
+"block.gufyblocks.light_blue_seat": "Light Blue Seat",
+"block.gufyblocks.blue_seat": "Blue Seat",
+"block.gufyblocks.purple_seat": "Purple Seat",
+"block.gufyblocks.magenta_seat": "Magenta Seat",
+"block.gufyblocks.pink_seat": "Pink Seat",  
+"block.gufyblocks.seat": "Seat",  
+ 
 "block.gufyblocks.red_sandstone_trapdoor": "Red Sandstone Trapdoor",  
 "block.gufyblocks.sandstone_trapdoor": "Sandstone Trapdoor",  
 "block.gufyblocks.cobbled_deepslate_trapdoor": "Deepslate Trapdoor",  

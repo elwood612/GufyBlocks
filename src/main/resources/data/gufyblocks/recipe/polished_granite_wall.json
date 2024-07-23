@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:polished_granite_wall",
+  { 
+    "id": "gufyblocks:polished_granite_wall",
     "count": 8
   }
 }

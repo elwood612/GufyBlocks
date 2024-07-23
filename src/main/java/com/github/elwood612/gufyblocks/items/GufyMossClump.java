@@ -17,11 +17,13 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class GufyMossClump extends Item
 {
     public GufyMossClump(Item.Properties properties) { super(properties); }
 
+    @NotNull
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
         BlockPos blockpos = context.getClickedPos();

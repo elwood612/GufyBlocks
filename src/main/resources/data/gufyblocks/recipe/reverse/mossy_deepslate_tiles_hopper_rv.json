@@ -13,9 +13,8 @@
     "item": "gufyblocks:mossy_deepslate_tiles_hopper"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:mossy_deepslate_tiles",
+  "result": { 
+    "id": "gufyblocks:mossy_deepslate_tiles",
     "count": 2
   }
 }

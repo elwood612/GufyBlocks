@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:granite_bricks",
+  { 
+    "id": "gufyblocks:granite_bricks",
     "count": 4
   }
 }

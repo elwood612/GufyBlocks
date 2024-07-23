@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:emerald_block"
   },
-  "result": "gufyblocks:emerald_verticalslab",
+  "result": {
+    "id": "gufyblocks:emerald_verticalslab",
   "count": 2
+  }
 }

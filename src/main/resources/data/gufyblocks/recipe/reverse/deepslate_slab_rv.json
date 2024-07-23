@@ -13,9 +13,8 @@
     "item": "gufyblocks:deepslate_slab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:deepslate",
+  "result": { 
+    "id": "minecraft:deepslate",
     "count": 2
   }
 }

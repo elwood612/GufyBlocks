@@ -10,7 +10,8 @@
       "item": "minecraft:emerald"
     }
   ],
-  "result": {
-    "item": "gufyblocks:ring_leaded_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:ring_leaded_glass_pane"
   }
 }

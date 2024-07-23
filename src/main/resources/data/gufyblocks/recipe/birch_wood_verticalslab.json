@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:birch_wood_verticalslab",
+  { 
+    "id": "gufyblocks:birch_wood_verticalslab",
     "count": 6
   }
 }

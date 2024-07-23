@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:cracked_bricks"
   },
-  "result": "gufyblocks:cracked_bricks_hopper",
+  "result": {
+    "id": "gufyblocks:cracked_bricks_hopper",
   "count": 1
+  }
 }

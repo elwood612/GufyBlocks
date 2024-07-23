@@ -4,6 +4,8 @@
     {
       "item": "gufyblocks:cracked_diorite_bricks"
     },
-  "result": "gufyblocks:cracked_diorite_bricks_post",
+  "result": {
+    "id": "gufyblocks:cracked_diorite_bricks_post",
   "count": 2
+  }
 }

@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:quartz_bricks_slab",
+  { 
+    "id": "gufyblocks:quartz_bricks_slab",
     "count": 6
   }
 }

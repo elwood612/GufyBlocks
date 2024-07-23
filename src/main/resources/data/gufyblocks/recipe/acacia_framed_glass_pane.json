@@ -10,7 +10,8 @@
       "tag": "gufyblocks:acacia_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:acacia_framed_glass_pane"
+  "result": 
+  { 
+    "id": "gufyblocks:acacia_framed_glass_pane"
   }
 }

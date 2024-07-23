@@ -10,7 +10,8 @@
       "tag": "gufyblocks:bamboo_fences"
     }
   ],
-  "result": {
-    "item": "gufyblocks:bamboo_framed_terracotta"
+  "result": 
+  { 
+    "id": "gufyblocks:bamboo_framed_terracotta"
   }
 }

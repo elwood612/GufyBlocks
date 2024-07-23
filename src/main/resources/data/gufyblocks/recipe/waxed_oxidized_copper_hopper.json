@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:waxed_oxidized_copper_hopper",
+  { 
+    "id": "gufyblocks:waxed_oxidized_copper_hopper",
     "count": 6
   }
 }

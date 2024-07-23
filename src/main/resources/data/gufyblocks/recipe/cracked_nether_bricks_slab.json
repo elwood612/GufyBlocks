@@ -12,8 +12,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cracked_nether_bricks_slab",
+  { 
+    "id": "gufyblocks:cracked_nether_bricks_slab",
     "count": 6
   }
 }

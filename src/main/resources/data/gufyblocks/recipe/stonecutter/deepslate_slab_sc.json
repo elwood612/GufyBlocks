@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:deepslate"
   },
-  "result": "gufyblocks:deepslate_slab",
+  "result": {
+    "id": "gufyblocks:deepslate_slab",
   "count": 2
+  }
 }

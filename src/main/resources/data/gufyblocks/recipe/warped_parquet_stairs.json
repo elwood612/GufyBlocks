@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:warped_parquet_stairs",
+  { 
+    "id": "gufyblocks:warped_parquet_stairs",
     "count": 6
   }
 }

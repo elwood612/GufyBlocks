@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:calcite_stairs",
+  { 
+    "id": "gufyblocks:calcite_stairs",
     "count": 6
   }
 }

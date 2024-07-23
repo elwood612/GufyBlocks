@@ -13,9 +13,8 @@
     "item": "minecraft:stone_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:stone",
+  "result": { 
+    "id": "minecraft:stone",
     "count": 3
   }
 }

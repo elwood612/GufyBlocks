@@ -9,8 +9,9 @@
       "item": "minecraft:diorite"
     }
   },
-  "result": {
-    "item": "gufyblocks:diorite_trapdoor",
+  "result": 
+  { 
+    "id": "gufyblocks:diorite_trapdoor",
     "count": 12
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:rooted_dirt_verticalslab",
+  { 
+    "id": "gufyblocks:rooted_dirt_verticalslab",
     "count": 6
   }
 }

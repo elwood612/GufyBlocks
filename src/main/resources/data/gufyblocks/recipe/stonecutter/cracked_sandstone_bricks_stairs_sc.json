@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:cracked_sandstone_bricks"
   },
-  "result": "gufyblocks:cracked_sandstone_bricks_stairs",
+  "result": {
+    "id": "gufyblocks:cracked_sandstone_bricks_stairs",
   "count": 1
+  }
 }

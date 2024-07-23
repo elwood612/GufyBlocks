@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:polished_blackstone_brick_verticalslab",
+  { 
+    "id": "gufyblocks:polished_blackstone_brick_verticalslab",
     "count": 6
   }
 }

@@ -9,8 +9,9 @@
       "item": "minecraft:deepslate_bricks"
     }
   },
-  "result": {
-    "item": "gufyblocks:deepslate_bricks_pillar",
+  "result": 
+  { 
+    "id": "gufyblocks:deepslate_bricks_pillar",
     "count": 2
   }
 }

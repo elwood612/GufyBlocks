@@ -8,7 +8,7 @@
       "item": "minecraft:honeycomb"
     }
   ],
-  "result": {
-    "item": "gufyblocks:waxed_weathered_copper_wall"
+  "result": { 
+    "id": "gufyblocks:waxed_weathered_copper_wall"
   }
 }

@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:smooth_stone_stairs",
+  { 
+    "id": "gufyblocks:smooth_stone_stairs",
     "count": 6
   }
 }

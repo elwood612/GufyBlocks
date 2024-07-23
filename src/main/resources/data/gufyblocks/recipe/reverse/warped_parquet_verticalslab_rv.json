@@ -13,9 +13,8 @@
     "item": "gufyblocks:warped_parquet_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:warped_parquet",
+  "result": { 
+    "id": "gufyblocks:warped_parquet",
     "count": 2
   }
 }

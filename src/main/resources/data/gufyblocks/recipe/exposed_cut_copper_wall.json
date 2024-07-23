@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:exposed_cut_copper_wall",
+  { 
+    "id": "gufyblocks:exposed_cut_copper_wall",
     "count": 8
   }
 }

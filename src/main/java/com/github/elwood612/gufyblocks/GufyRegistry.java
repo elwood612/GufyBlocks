@@ -3,11 +3,15 @@ package com.github.elwood612.gufyblocks;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.GufyHammer;
 import com.github.elwood612.gufyblocks.items.GufyMossClump;
+import com.github.elwood612.gufyblocks.util.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -32,7 +36,9 @@ public class GufyRegistry
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister.Items BLOCKITEMS = DeferredRegister.createItems(MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(Registries.ENTITY_TYPE, MODID);
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+
     private static final GufyBlockTypes[] GUFY_STONE_TYPES = GufyUtil.blocktypeBuilder().get(0);
     private static final GufyBlockTypes[] VANILLA_STONE_TYPES = GufyUtil.blocktypeBuilder().get(1);
     private static final GufyBlockTypes[] GUFY_WOOD_TYPES = GufyUtil.blocktypeBuilder().get(2);
@@ -47,15 +53,16 @@ public class GufyRegistry
     private static final GufyBlockTypes[] WAXED_CUT_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(11);
     private static final GufyBlockTypes[] VANILLA_STRIPPABLE_WOOD_TYPES_ALL = GufyUtil.blocktypeBuilder().get(12);
     private static final GufyBlockTypes[] FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(13);
+    private static final GufyBlockTypes[] PACKED_ICE_TYPES = GufyUtil.blocktypeBuilder().get(14);
     //**************************************************************//
 
 
     //***************************BLOCKLIST**************************//
+
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
         // ~~ WOOD ~~ //
         add(GufyUtil.familyBuilder("wattle_fence", GufyMaterials.WATTLE, GufyBlockTypes.WATTLEFENCE));
-
         add(GufyUtil.familyBuilder("oak", GufyMaterials.OAK, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
         add(GufyUtil.familyBuilder("oak_parquet", GufyMaterials.OAK, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
         add(GufyUtil.familyBuilder("big_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
@@ -130,6 +137,8 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("rooted_dirt", GufyMaterials.ROOTED_DIRT, VANILLA_DIRT_TYPES));
         add(GufyUtil.familyBuilder("nether_wart_block", GufyMaterials.NETHER_WART, VANILLA_DIRT_TYPES));
         add(GufyUtil.familyBuilder("warped_wart", GufyMaterials.WARPED_WART, VANILLA_DIRT_TYPES));
+        add(GufyUtil.familyBuilder("snow", GufyMaterials.SNOW, VANILLA_DIRT_TYPES));
+        add(GufyUtil.familyBuilder("packed_ice", GufyMaterials.ICE, PACKED_ICE_TYPES));
 
         // ~~ STONES ~~ //
         add(GufyUtil.familyBuilder("stone", GufyMaterials.STONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
@@ -171,6 +180,8 @@ public class GufyRegistry
                 GufyBlockTypes.STAIRS, GufyBlockTypes.SLAB, GufyBlockTypes.WALL, GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER, GufyBlockTypes.FENCE));
         add(GufyUtil.familyBuilder("calcite", GufyMaterials.CALCITE, VANILLA_STONE_TYPES_ALL));
         add(GufyUtil.familyBuilder("tuff", GufyMaterials.TUFF, VANILLA_STONE_TYPES_ALL));
+        add(GufyUtil.familyBuilder("tuff_bricks", GufyMaterials.TUFF, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)));
+        add(GufyUtil.familyBuilder("polished_tuff", GufyMaterials.TUFF, VANILLA_STONE_TYPES));
         add(GufyUtil.familyBuilder("smooth_basalt", GufyMaterials.BASALT, VANILLA_STONE_TYPES_ALL));
         add(GufyUtil.familyBuilder("deepslate", GufyMaterials.COBBLED_DEEPSLATE, VANILLA_STONE_TYPES_ALL));
         add(GufyUtil.familyBuilder("cobbled_deepslate", GufyMaterials.COBBLED_DEEPSLATE, VANILLA_STONE_TYPES));
@@ -303,8 +314,6 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("gufy_leaded_glass", GufyMaterials.LEADED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("midland_leaded_glass", GufyMaterials.LEADED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("ring_leaded_glass", GufyMaterials.LEADED_GLASS, GufyBlockTypes.PANE));
-
-        // ~~ FRAMED ~~ //
         add(GufyUtil.familyBuilder("oak_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("spruce_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("birch_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
@@ -318,6 +327,7 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("warped_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
         add(GufyUtil.familyBuilder("mushroom_framed_glass", GufyMaterials.FRAMED_GLASS, GufyBlockTypes.PANE));
 
+        // ~~ FRAMED TERRACOTTA ~~ //
         add(GufyUtil.familyBuilder("oak_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
         add(GufyUtil.familyBuilder("spruce_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
         add(GufyUtil.familyBuilder("birch_framed_terracotta", GufyMaterials.FRAMED_WHITE, FRAMED_BLOCK_TYPES));
@@ -348,6 +358,25 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("waxed_exposed_cut_copper", GufyMaterials.EXPOSED_COPPER, WAXED_CUT_COPPER_TYPES));
         add(GufyUtil.familyBuilder("waxed_weathered_cut_copper", GufyMaterials.WEATHERED_COPPER, WAXED_CUT_COPPER_TYPES));
         add(GufyUtil.familyBuilder("waxed_oxidized_cut_copper", GufyMaterials.OXIDIZED_COPPER, WAXED_CUT_COPPER_TYPES));
+
+        // ~~ SEATS ~~ //
+        add(GufyUtil.familyBuilder("seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("white_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("light_gray_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("gray_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("black_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("brown_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("red_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("orange_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("yellow_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("lime_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("green_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("cyan_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("light_blue_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("blue_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("purple_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("magenta_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("pink_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
 
         // ~~ DEPRECATED BLOCKS ~~ //
         add(GufyUtil.familyBuilder("wagon_wheel", GufyMaterials.SPRUCE_TRAPDOOR, GufyBlockTypes.WAGONWHEEL)); // DEPRECATED
@@ -389,6 +418,9 @@ public class GufyRegistry
             () -> new GufyMossClump(new Item.Properties()));
     public static final DeferredItem<Item> HAMMER = ITEMS.register("hammer",
             () -> new GufyHammer(new Item.Properties().durability(216)));
+    public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
+            () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f).build(MODID + "seat"));
+
     //**************************************************************//
 
 
@@ -417,15 +449,18 @@ public class GufyRegistry
         BLOCKS.register(bus);
         ITEMS.register(bus);
         BLOCKITEMS.register(bus);
+        ENTITIES.register(bus);
         TABS.register(bus);
+
+        bus.register(new GufyRendererEvent());
     }
     public static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-        DeferredBlock<T> toReturn = GufyRegistry.BLOCKS.register(name, block);
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        GufyRegistry.BLOCKITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        BLOCKITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
     //**************************************************************//
 }

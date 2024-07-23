@@ -13,9 +13,8 @@
     "item": "minecraft:mangrove_fence"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:mangrove_planks",
+  "result": { 
+    "id": "minecraft:mangrove_planks",
     "count": 1
   }
 }

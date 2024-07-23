@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mossy_deepslate_bricks_hopper",
+  { 
+    "id": "gufyblocks:mossy_deepslate_bricks_hopper",
     "count": 6
   }
 }

@@ -13,9 +13,8 @@
     "item": "minecraft:acacia_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:acacia_planks",
+  "result": { 
+    "id": "minecraft:acacia_planks",
     "count": 3
   }
 }

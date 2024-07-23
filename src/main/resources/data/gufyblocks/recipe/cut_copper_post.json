@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:cut_copper_post",
+  { 
+    "id": "gufyblocks:cut_copper_post",
     "count": 4
   }
 }

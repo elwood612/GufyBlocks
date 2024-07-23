@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:stripped_dark_oak_wood_wall",
+  { 
+    "id": "gufyblocks:stripped_dark_oak_wood_wall",
     "count": 8
   }
 }

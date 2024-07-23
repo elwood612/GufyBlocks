@@ -13,9 +13,8 @@
     "item": "gufyblocks:weathered_copper_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:weathered_copper",
+  "result": { 
+    "id": "minecraft:weathered_copper",
     "count": 2
   }
 }

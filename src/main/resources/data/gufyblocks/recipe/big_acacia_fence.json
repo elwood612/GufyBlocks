@@ -14,8 +14,9 @@
       "item": "gufyblocks:big_acacia"
     }
   },
-  "result": {
-    "item": "gufyblocks:big_acacia_fence",
+  "result": 
+  { 
+    "id": "gufyblocks:big_acacia_fence",
     "count": 4
   }
 }

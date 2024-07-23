@@ -9,8 +9,9 @@
       "item": "minecraft:acacia_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:acacia_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:acacia_panel",
     "count": 6
   }
 }

@@ -10,8 +10,9 @@
       "item": "minecraft:stone"
     }
   },
-  "result": {
-    "item": "gufyblocks:stone_trapdoor",
+  "result": 
+  { 
+    "id": "gufyblocks:stone_trapdoor",
     "count": 12
   }
 }

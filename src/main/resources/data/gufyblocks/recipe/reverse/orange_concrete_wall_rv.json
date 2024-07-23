@@ -13,9 +13,8 @@
     "item": "gufyblocks:orange_concrete_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:orange_concrete",
+  "result": { 
+    "id": "minecraft:orange_concrete",
     "count": 2
   }
 }

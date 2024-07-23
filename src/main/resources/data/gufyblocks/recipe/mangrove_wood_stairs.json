@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:mangrove_wood_stairs",
+  { 
+    "id": "gufyblocks:mangrove_wood_stairs",
     "count": 6
   }
 }

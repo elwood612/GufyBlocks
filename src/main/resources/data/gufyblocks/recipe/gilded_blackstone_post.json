@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:gilded_blackstone_post",
+  { 
+    "id": "gufyblocks:gilded_blackstone_post",
     "count": 4
   }
 }

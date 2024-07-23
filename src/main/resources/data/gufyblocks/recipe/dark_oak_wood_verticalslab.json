@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dark_oak_wood_verticalslab",
+  { 
+    "id": "gufyblocks:dark_oak_wood_verticalslab",
     "count": 6
   }
 }

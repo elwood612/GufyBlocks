@@ -1,0 +1,8 @@
+{
+  "parent": "gufyblocks:block/template_seat",
+  "textures": {
+	"top": "gufyblocks:block/purple_seat_top",
+    "side": "gufyblocks:block/purple_seat_side",
+    "bottom": "gufyblocks:block/seat_bottom"
+  }
+}

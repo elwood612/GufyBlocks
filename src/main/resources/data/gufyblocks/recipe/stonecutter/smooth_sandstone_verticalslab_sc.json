@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:smooth_sandstone"
   },
-  "result": "gufyblocks:smooth_sandstone_verticalslab",
+  "result": {
+    "id": "gufyblocks:smooth_sandstone_verticalslab",
   "count": 2
+  }
 }

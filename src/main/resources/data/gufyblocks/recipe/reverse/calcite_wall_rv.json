@@ -13,9 +13,8 @@
     "item": "gufyblocks:calcite_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:calcite",
+  "result": { 
+    "id": "minecraft:calcite",
     "count": 2
   }
 }

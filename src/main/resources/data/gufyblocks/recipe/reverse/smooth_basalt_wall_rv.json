@@ -13,9 +13,8 @@
     "item": "gufyblocks:smooth_basalt_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:smooth_basalt",
+  "result": { 
+    "id": "minecraft:smooth_basalt",
     "count": 2
   }
 }

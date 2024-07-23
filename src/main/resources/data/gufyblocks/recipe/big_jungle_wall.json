@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_jungle_wall",
+  { 
+    "id": "gufyblocks:big_jungle_wall",
     "count": 8
   }
 }

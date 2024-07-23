@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diamond_hopper",
+  { 
+    "id": "gufyblocks:diamond_hopper",
     "count": 6
   }
 }

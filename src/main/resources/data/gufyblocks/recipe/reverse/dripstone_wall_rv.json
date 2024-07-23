@@ -13,9 +13,8 @@
     "item": "gufyblocks:dripstone_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:dripstone_block",
+  "result": { 
+    "id": "minecraft:dripstone_block",
     "count": 2
   }
 }

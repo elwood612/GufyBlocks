@@ -13,9 +13,8 @@
     "item": "gufyblocks:daub_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:packed_mud",
+  "result": { 
+    "id": "minecraft:packed_mud",
     "count": 2
   }
 }

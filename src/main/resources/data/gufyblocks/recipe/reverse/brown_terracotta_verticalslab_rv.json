@@ -13,9 +13,8 @@
     "item": "gufyblocks:brown_terracotta_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:brown_terracotta",
+  "result": { 
+    "id": "minecraft:brown_terracotta",
     "count": 2
   }
 }

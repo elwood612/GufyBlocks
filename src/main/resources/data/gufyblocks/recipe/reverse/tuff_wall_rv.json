@@ -13,9 +13,8 @@
     "item": "gufyblocks:tuff_wall"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:tuff",
+  "result": { 
+    "id": "minecraft:tuff",
     "count": 2
   }
 }

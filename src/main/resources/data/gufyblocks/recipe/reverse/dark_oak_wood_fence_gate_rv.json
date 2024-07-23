@@ -13,9 +13,8 @@
     "item": "gufyblocks:dark_oak_wood_fence_gate"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:dark_oak_wood",
+  "result": { 
+    "id": "minecraft:dark_oak_wood",
     "count": 1
   }
 }

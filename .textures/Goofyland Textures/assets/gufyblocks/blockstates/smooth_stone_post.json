@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        	{ "model": "gufyblocks:block/smooth_stone_post" },
+        	{ "model": "gufyblocks:block/smooth_stone_post2" },
+        	{ "model": "gufyblocks:block/smooth_stone_post3" },
+        	{ "model": "gufyblocks:block/smooth_stone_post4" }
+        ]
+    }
+}

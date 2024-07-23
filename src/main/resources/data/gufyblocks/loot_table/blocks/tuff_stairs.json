@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:tuff_stairs"
+          "name": "minecraft:tuff_stairs"
         }
       ],
       "conditions": [

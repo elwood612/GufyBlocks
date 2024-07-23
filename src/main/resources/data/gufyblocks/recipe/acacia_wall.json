@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:acacia_wall",
+  { 
+    "id": "gufyblocks:acacia_wall",
     "count": 8
   }
 }

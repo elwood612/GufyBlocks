@@ -13,9 +13,8 @@
     "item": "minecraft:andesite_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:andesite",
+  "result": { 
+    "id": "minecraft:andesite",
     "count": 3
   }
 }

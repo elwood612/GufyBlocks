@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:birch_hopper",
+  { 
+    "id": "gufyblocks:birch_hopper",
     "count": 6
   }
 }

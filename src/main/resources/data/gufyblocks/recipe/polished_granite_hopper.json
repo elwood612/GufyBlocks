@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:polished_granite_hopper",
+  { 
+    "id": "gufyblocks:polished_granite_hopper",
     "count": 6
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:birch_wood_fence"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:birch_wood",
+  "result": { 
+    "id": "minecraft:birch_wood",
     "count": 1
   }
 }

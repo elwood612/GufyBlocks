@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:dripstone_wall",
+  { 
+    "id": "gufyblocks:dripstone_wall",
     "count": 8
   }
 }

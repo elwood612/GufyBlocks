@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diamond_wall",
+  { 
+    "id": "gufyblocks:diamond_wall",
     "count": 8
   }
 }

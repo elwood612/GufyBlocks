@@ -9,8 +9,9 @@
       "item": "minecraft:crimson_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:crimson_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:crimson_panel",
     "count": 6
   }
 }

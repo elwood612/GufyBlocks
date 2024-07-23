@@ -13,9 +13,8 @@
     "item": "gufyblocks:nether_brick_verticalslab"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:nether_bricks",
+  "result": { 
+    "id": "minecraft:nether_bricks",
     "count": 2
   }
 }

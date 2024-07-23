@@ -13,9 +13,8 @@
     "item": "gufyblocks:mangrove_parquet_stairs"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:mangrove_parquet",
+  "result": { 
+    "id": "gufyblocks:mangrove_parquet",
     "count": 3
   }
 }

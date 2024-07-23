@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "minecraft:oak_fence",
+    "id": "minecraft:oak_fence",
     "count": 4
   }
 }

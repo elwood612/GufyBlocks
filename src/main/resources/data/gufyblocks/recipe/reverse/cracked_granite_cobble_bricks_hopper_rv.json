@@ -13,9 +13,8 @@
     "item": "gufyblocks:cracked_granite_cobble_bricks_hopper"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:cracked_granite_cobble_bricks",
+  "result": { 
+    "id": "gufyblocks:cracked_granite_cobble_bricks",
     "count": 2
   }
 }

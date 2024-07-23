@@ -13,9 +13,8 @@
     "item": "gufyblocks:light_gray_concrete_hopper"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:light_gray_concrete",
+  "result": { 
+    "id": "minecraft:light_gray_concrete",
     "count": 2
   }
 }

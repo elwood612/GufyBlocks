@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:end_stone"
   },
-  "result": "gufyblocks:end_stone_hopper",
+  "result": {
+    "id": "gufyblocks:end_stone_hopper",
   "count": 1
+  }
 }

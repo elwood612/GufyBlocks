@@ -4,5 +4,7 @@
   "ingredient": {
     "item": "minecraft:polished_deepslate"
   },
-  "result": "minecraft:chiseled_deepslate"
+  "result":  {
+    "id": "minecraft:chiseled_deepslate"
+  }
 }

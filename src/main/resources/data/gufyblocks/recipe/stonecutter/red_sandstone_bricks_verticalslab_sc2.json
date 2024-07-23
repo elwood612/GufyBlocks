@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:cut_red_sandstone"
   },
-  "result": "gufyblocks:red_sandstone_bricks_verticalslab",
+  "result": {
+    "id": "gufyblocks:red_sandstone_bricks_verticalslab",
   "count": 2
+  }
 }

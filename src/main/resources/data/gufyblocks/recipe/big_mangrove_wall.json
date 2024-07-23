@@ -16,8 +16,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_mangrove_wall",
+  { 
+    "id": "gufyblocks:big_mangrove_wall",
     "count": 8
   }
 }

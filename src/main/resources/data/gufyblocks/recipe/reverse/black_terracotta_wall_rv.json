@@ -13,9 +13,8 @@
     "item": "gufyblocks:black_terracotta_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:black_terracotta",
+  "result": { 
+    "id": "minecraft:black_terracotta",
     "count": 2
   }
 }

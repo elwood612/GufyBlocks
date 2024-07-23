@@ -9,8 +9,9 @@
       "item": "gufyblocks:oak_wood_slab"
     }
   },
-  "result": {
-    "item": "gufyblocks:oak_wood_panel",
+  "result": 
+  { 
+    "id": "gufyblocks:oak_wood_panel",
     "count": 6
   }
 }

@@ -13,9 +13,8 @@
     "item": "gufyblocks:brick_post"
     }
   },
-  "result": 
-  {
-    "item": "minecraft:bricks",
+  "result": { 
+    "id": "minecraft:bricks",
     "count": 1
   }
 }

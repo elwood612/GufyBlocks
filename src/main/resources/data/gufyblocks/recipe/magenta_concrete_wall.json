@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:magenta_concrete_wall",
+  { 
+    "id": "gufyblocks:magenta_concrete_wall",
     "count": 8
   }
 }

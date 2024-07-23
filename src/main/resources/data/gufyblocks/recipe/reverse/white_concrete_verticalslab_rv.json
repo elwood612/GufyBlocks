@@ -13,9 +13,8 @@
     "item": "gufyblocks:white_concrete_verticalslab"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:white_concrete",
+  "result": { 
+    "id": "minecraft:white_concrete",
     "count": 2
   }
 }

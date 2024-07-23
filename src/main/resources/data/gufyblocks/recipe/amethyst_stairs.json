@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:amethyst_stairs",
+  { 
+    "id": "gufyblocks:amethyst_stairs",
     "count": 6
   }
 }

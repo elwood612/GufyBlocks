@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:big_jungle_slab",
+  { 
+    "id": "gufyblocks:big_jungle_slab",
     "count": 6
   }
 }

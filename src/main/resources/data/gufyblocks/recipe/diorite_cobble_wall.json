@@ -14,8 +14,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:diorite_cobble_wall",
+  { 
+    "id": "gufyblocks:diorite_cobble_wall",
     "count": 8
   }
 }

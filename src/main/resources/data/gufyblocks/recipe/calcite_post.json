@@ -13,8 +13,8 @@
     }
   },
   "result": 
-  {
-    "item": "gufyblocks:calcite_post",
+  { 
+    "id": "gufyblocks:calcite_post",
     "count": 4
   }
 }

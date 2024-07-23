@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "gufyblocks:mossy_bricks"
   },
-  "result": "gufyblocks:mossy_bricks_post",
+  "result": {
+    "id": "gufyblocks:mossy_bricks_post",
   "count": 2
+  }
 }

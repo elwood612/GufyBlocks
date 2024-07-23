@@ -13,9 +13,8 @@
     "item": "gufyblocks:terracotta_stairs"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:terracotta",
+  "result": { 
+    "id": "minecraft:terracotta",
     "count": 3
   }
 }

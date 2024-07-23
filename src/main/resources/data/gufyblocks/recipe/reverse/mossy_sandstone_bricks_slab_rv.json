@@ -13,9 +13,8 @@
     "item": "gufyblocks:mossy_sandstone_bricks_slab"
     }
   },
-  "result": 
-  {
-    "item": "gufyblocks:mossy_sandstone_bricks",
+  "result": { 
+    "id": "gufyblocks:mossy_sandstone_bricks",
     "count": 2
   }
 }

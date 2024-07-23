@@ -13,9 +13,8 @@
     "item": "gufyblocks:green_concrete_wall"
     }
   },
-  "result": 
-  {
-      "item": "minecraft:green_concrete",
+  "result": { 
+    "id": "minecraft:green_concrete",
     "count": 2
   }
 }
