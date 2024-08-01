@@ -8,6 +8,14 @@
 	"gufyblocks:big_dark_oak_slab",
 	"gufyblocks:big_jungle_slab",
 	"gufyblocks:big_crimson_slab",
-	"gufyblocks:big_warped_slab"
+	"gufyblocks:big_warped_slab",
+	"gufyblocks:oak_parquet_slab",
+	"gufyblocks:spruce_parquet_slab",
+	"gufyblocks:birch_parquet_slab",
+	"gufyblocks:dark_oak_parquet_slab",
+	"gufyblocks:jungle_parquet_slab",
+	"gufyblocks:acacia_parquet_slab",
+	"gufyblocks:crimson_parquet_slab",
+	"gufyblocks:warped_parquet_slab"
   ]
 }

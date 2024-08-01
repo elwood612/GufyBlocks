@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": {
+	"#gufyblocks:mosses": {
+      "chance": 0.65
+    },
+	"gufyblocks:moss_clump": {
+      "chance": 0.3
+    },
+	"#gufyblocks:hays": {
+      "chance": 0.85
+    },
+	"#gufyblocks:warts": {
+      "chance": 0.85
+    }
+  }
+}

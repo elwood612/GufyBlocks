@@ -178,6 +178,7 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("nether_brick", GufyMaterials.NETHER_BRICKS, GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER));
         add(GufyUtil.familyBuilder("cracked_nether_bricks", GufyMaterials.NETHER_BRICKS,
                 GufyBlockTypes.STAIRS, GufyBlockTypes.SLAB, GufyBlockTypes.WALL, GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER, GufyBlockTypes.FENCE));
+        add(GufyUtil.familyBuilder("red_nether_bricks", GufyMaterials.NETHER_BRICKS, VANILLA_STONE_TYPES));
         add(GufyUtil.familyBuilder("calcite", GufyMaterials.CALCITE, VANILLA_STONE_TYPES_ALL));
         add(GufyUtil.familyBuilder("tuff", GufyMaterials.TUFF, VANILLA_STONE_TYPES_ALL));
         add(GufyUtil.familyBuilder("tuff_bricks", GufyMaterials.TUFF, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)));
@@ -235,6 +236,9 @@ public class GufyRegistry
         add(GufyUtil.familyBuilder("cobbled_deepslate", GufyMaterials.COBBLED_DEEPSLATE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
         add(GufyUtil.familyBuilder("sandstone", GufyMaterials.SANDSTONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
         add(GufyUtil.familyBuilder("red_sandstone", GufyMaterials.RED_SANDSTONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
+        add(GufyUtil.familyBuilder("prismarine", GufyMaterials.PRISMARINE, VANILLA_STONE_TYPES));
+        add(GufyUtil.familyBuilder("prismarine_bricks", GufyMaterials.PRISMARINE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
+        add(GufyUtil.familyBuilder("dark_prismarine", GufyMaterials.PRISMARINE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
 
         // ~~ TERRACOTTA ~~ //
         add(GufyUtil.familyBuilder("terracotta", GufyMaterials.TERRACOTTA, VANILLA_STONE_TYPES_ALL));
@@ -425,7 +429,7 @@ public class GufyRegistry
 
 
     //****************************TABS******************************//
-    public static final Supplier<CreativeModeTab> EXAMPLE_TAB = TABS.register("gufyblocks",
+    public static final Supplier<CreativeModeTab> GUFY_TAB = TABS.register("gufyblocks",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + MODID + ".tab"))
                     .icon(() -> new ItemStack(GufyUtil.getGufyBlock("cobblestone_bricks")))
@@ -445,15 +449,6 @@ public class GufyRegistry
 
 
     //***********************REGISTRY METHODS***********************//
-    public static void registerBus(IEventBus bus) {
-        BLOCKS.register(bus);
-        ITEMS.register(bus);
-        BLOCKITEMS.register(bus);
-        ENTITIES.register(bus);
-        TABS.register(bus);
-
-        bus.register(new GufyRendererEvent());
-    }
     public static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

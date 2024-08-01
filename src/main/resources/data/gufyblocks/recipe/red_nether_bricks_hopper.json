@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:red_nether_bricks"
+    }
+  },
+  "result": 
+  {
+    "id": "gufyblocks:red_nether_bricks_hopper",
+    "count": 6
+  }
+}

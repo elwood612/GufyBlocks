@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "dark_prismarine",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:dark_prismarine_verticalslab"
+    }
+  },
+  "result": 
+  {
+    "id": "minecraft:dark_prismarine",
+    "count": 2
+  }
+}

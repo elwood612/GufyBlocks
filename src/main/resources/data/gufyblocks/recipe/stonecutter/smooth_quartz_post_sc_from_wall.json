@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:smooth_quartz_wall"
+  },
+  "result": {
+    "id": "gufyblocks:smooth_quartz_post",
+  "count": 2
+  }
+}

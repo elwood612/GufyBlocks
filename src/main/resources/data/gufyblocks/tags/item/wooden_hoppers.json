@@ -1,0 +1,20 @@
+{
+  "values": [
+	"gufyblocks:oak_hopper",
+	"gufyblocks:spruce_hopper",
+	"gufyblocks:birch_hopper",
+	"gufyblocks:acacia_hopper",
+	"gufyblocks:dark_oak_hopper",
+	"gufyblocks:jungle_hopper",
+	"gufyblocks:crimson_hopper",
+	"gufyblocks:warped_hopper",
+	"gufyblocks:big_oak_hopper",
+	"gufyblocks:big_spruce_hopper",
+	"gufyblocks:big_birch_hopper",
+	"gufyblocks:big_acacia_hopper",
+	"gufyblocks:big_dark_oak_hopper",
+	"gufyblocks:big_jungle_hopper",
+	"gufyblocks:big_crimson_hopper",
+	"gufyblocks:big_warped_hopper"
+  ]
+}

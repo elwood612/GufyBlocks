@@ -1,0 +1,21 @@
+{
+  "replace": false, 
+  "values": [
+	"gufyblocks:big_oak_stairs",
+	"gufyblocks:big_spruce_stairs",
+	"gufyblocks:big_birch_stairs",
+	"gufyblocks:big_acacia_stairs",
+	"gufyblocks:big_dark_oak_stairs",
+	"gufyblocks:big_jungle_stairs",
+	"gufyblocks:big_crimson_stairs",
+	"gufyblocks:big_warped_stairs",
+	"gufyblocks:oak_parquet_stairs",
+	"gufyblocks:spruce_parquet_stairs",
+	"gufyblocks:birch_parquet_stairs",
+	"gufyblocks:dark_oak_parquet_stairs",
+	"gufyblocks:jungle_parquet_stairs",
+	"gufyblocks:acacia_parquet_stairs",
+	"gufyblocks:crimson_parquet_stairs",
+	"gufyblocks:warped_parquet_stairs"
+  ]
+}

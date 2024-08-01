@@ -1,0 +1,28 @@
+{
+  "values": [
+	"gufyblocks:oak_verticalslab",
+	"gufyblocks:spruce_verticalslab",
+	"gufyblocks:birch_verticalslab",
+	"gufyblocks:acacia_verticalslab",
+	"gufyblocks:dark_oak_verticalslab",
+	"gufyblocks:jungle_verticalslab",
+	"gufyblocks:crimson_verticalslab",
+	"gufyblocks:warped_verticalslab",
+	"gufyblocks:big_oak_verticalslab",
+	"gufyblocks:big_spruce_verticalslab",
+	"gufyblocks:big_birch_verticalslab",
+	"gufyblocks:big_acacia_verticalslab",
+	"gufyblocks:big_dark_oak_verticalslab",
+	"gufyblocks:big_jungle_verticalslab",
+	"gufyblocks:big_crimson_verticalslab",
+	"gufyblocks:big_warped_verticalslab",
+	"gufyblocks:oak_parquet_verticalslab",
+	"gufyblocks:spruce_parquet_verticalslab",
+	"gufyblocks:birch_parquet_verticalslab",
+	"gufyblocks:acacia_parquet_verticalslab",
+	"gufyblocks:dark_oak_parquet_verticalslab",
+	"gufyblocks:jungle_parquet_verticalslab",
+	"gufyblocks:crimson_parquet_verticalslab",
+	"gufyblocks:warped_parquet_verticalslab"
+  ]
+}

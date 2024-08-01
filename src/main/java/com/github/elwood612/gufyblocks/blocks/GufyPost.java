@@ -20,8 +20,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
-import net.neoforged.neoforge.common.ToolAction;
-import net.neoforged.neoforge.common.ToolActions;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbility;
 
 import javax.annotation.Nullable;
 
@@ -39,11 +39,11 @@ public class GufyPost extends Block implements SimpleWaterloggedBlock
 
     @Nullable
     @Override
-    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
     {
         ItemStack itemStack = context.getItemInHand();
         if (!itemStack.canPerformAction(toolAction) || !GufyUtil.isScrapeable(state)) return null;
-        if(ToolActions.AXE_WAX_OFF.equals(toolAction))
+        if(ItemAbilities.AXE_WAX_OFF.equals(toolAction))
             return GufyUtil.getWaxedOff(state).orElse(null);
         return null;
     }

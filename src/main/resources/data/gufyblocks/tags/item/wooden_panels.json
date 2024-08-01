@@ -1,0 +1,20 @@
+{
+  "values": [
+	"gufyblocks:oak_panel",
+	"gufyblocks:spruce_panel",
+	"gufyblocks:birch_panel",
+	"gufyblocks:acacia_panel",
+	"gufyblocks:dark_oak_panel",
+	"gufyblocks:jungle_panel",
+	"gufyblocks:crimson_panel",
+	"gufyblocks:warped_panel",
+	"gufyblocks:big_oak_panel",
+	"gufyblocks:big_spruce_panel",
+	"gufyblocks:big_birch_panel",
+	"gufyblocks:big_acacia_panel",
+	"gufyblocks:big_dark_oak_panel",
+	"gufyblocks:big_jungle_panel",
+	"gufyblocks:big_crimson_panel",
+	"gufyblocks:big_warped_panel"
+  ]
+}

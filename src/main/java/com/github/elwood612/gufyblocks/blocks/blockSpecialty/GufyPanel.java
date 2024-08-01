@@ -22,8 +22,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
-import net.neoforged.neoforge.common.ToolAction;
-import net.neoforged.neoforge.common.ToolActions;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbility;
 
 import javax.annotation.Nullable;
 
@@ -56,11 +56,11 @@ public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWater
 
     @Nullable
     @Override
-    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
     {
         ItemStack itemStack = context.getItemInHand();
         if (!itemStack.canPerformAction(toolAction)) return null;
-        if(ToolActions.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
+        if(ItemAbilities.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
             return GufyUtil.getStripped(state).orElse(null);
         return null;
     }

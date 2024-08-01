@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gufyblocks:gold_wall"
+  },
+  "result": {
+    "id": "gufyblocks:gold_post",
+  "count": 2
+  }
+}

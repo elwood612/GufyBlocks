@@ -1,6 +1,24 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:dark_prismarine_verticalslab", 
+    "gufyblocks:dark_prismarine_wall", 
+    "gufyblocks:dark_prismarine_hopper", 
+    "gufyblocks:dark_prismarine_post", 
+ 
+    "gufyblocks:prismarine_bricks_verticalslab", 
+    "gufyblocks:prismarine_bricks_wall", 
+    "gufyblocks:prismarine_bricks_hopper", 
+    "gufyblocks:prismarine_bricks_post", 
+ 
+    "gufyblocks:prismarine_verticalslab", 
+    "gufyblocks:prismarine_hopper", 
+    "gufyblocks:prismarine_post", 
+ 
+    "gufyblocks:red_nether_bricks_verticalslab", 
+    "gufyblocks:red_nether_bricks_hopper", 
+    "gufyblocks:red_nether_bricks_post", 
+ 
     "gufyblocks:packed_ice_stairs", 
     "gufyblocks:packed_ice_slab", 
     "gufyblocks:packed_ice_verticalslab", 

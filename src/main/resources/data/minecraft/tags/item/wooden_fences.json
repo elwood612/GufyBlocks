@@ -1,0 +1,15 @@
+{ 
+  "replace": false, 
+  "values": [ 
+    "gufyblocks:big_mangrove_fence",
+    "gufyblocks:big_cherry_fence",
+    "gufyblocks:big_warped_fence",
+    "gufyblocks:big_crimson_fence",
+    "gufyblocks:big_acacia_fence",
+    "gufyblocks:big_jungle_fence",
+    "gufyblocks:big_dark_oak_fence",
+    "gufyblocks:big_birch_fence",
+    "gufyblocks:big_spruce_fence",
+    "gufyblocks:big_oak_fence"
+  ]
+}

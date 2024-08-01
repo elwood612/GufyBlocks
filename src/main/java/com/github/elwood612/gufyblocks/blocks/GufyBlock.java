@@ -6,8 +6,8 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.common.ToolAction;
-import net.neoforged.neoforge.common.ToolActions;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.common.ItemAbility;
 
 import javax.annotation.Nullable;
 
@@ -20,13 +20,13 @@ public class GufyBlock extends Block
 
 	@Nullable
 	@Override
-	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate)
+	public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
 	{
 		ItemStack itemStack = context.getItemInHand();
 		if (!itemStack.canPerformAction(toolAction)) return null;
-		if(ToolActions.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
+		if(ItemAbilities.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
 			return GufyUtil.getStripped(state).orElse(null);
-		if(ToolActions.AXE_WAX_OFF.equals(toolAction) && GufyUtil.isScrapeable(state))
+		if(ItemAbilities.AXE_WAX_OFF.equals(toolAction) && GufyUtil.isScrapeable(state))
 			return GufyUtil.getWaxedOff(state).orElse(null);
 		return null;
 	}

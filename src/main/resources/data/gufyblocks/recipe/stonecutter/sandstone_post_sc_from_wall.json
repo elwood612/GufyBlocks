@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:sandstone_wall"
+  },
+  "result": {
+    "id": "gufyblocks:sandstone_post",
+  "count": 2
+  }
+}

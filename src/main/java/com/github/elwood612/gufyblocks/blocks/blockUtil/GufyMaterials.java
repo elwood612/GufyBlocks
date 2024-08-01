@@ -87,6 +87,8 @@ public enum GufyMaterials
 	NETHER_WART(MapColor.COLOR_RED, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
 	WARPED_WART(MapColor.WARPED_WART_BLOCK, SoundType.WART_BLOCK, 1.0F, 1.0F, false, true),
 	NETHER_BRICKS(MapColor.NETHER, SoundType.NETHER_BRICKS, 2.0F, 6.0F, true, true),
+	PRISMARINE(MapColor.COLOR_CYAN, SoundType.STONE, 1.5f, 6.0f, true, true),
+	PRISMARINE_BRICKS(MapColor.DIAMOND, SoundType.STONE, 1.5f, 6.0f, true, true),
 	WATTLE(MapColor.WOOD, SoundType.WOOD, 0.5F, 0.5F, false, false),
 	DIRT(MapColor.DIRT, SoundType.GRAVEL, 0.5F, 0.5F, false, true),
 	ROOTED_DIRT(MapColor.DIRT, SoundType.ROOTED_DIRT, 0.5F, 0.5F, false, true),
