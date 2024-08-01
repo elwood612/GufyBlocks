@@ -1,2 +1,0 @@
-execute if entity @s[distance=..5] unless block ~ ~ ~ #minecraft:wooden_doors positioned ^ ^ ^.1 run function double_doors:ray
-execute if block ~ ~ ~ #minecraft:wooden_doors run function double_doors:open/root

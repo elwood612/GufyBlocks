@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ #minecraft:doors[half=upper] align xyz positioned ~ ~-1 ~ run function double_doors:open/select_side
-execute if block ~ ~ ~ #minecraft:doors[half=lower] align xyz run function double_doors:open/select_side

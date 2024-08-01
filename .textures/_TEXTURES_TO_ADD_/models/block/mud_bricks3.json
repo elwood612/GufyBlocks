@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_north_west_mirrored_all",
-    "textures": {
-        "all": "block/mud_bricks3"
-    }
-}

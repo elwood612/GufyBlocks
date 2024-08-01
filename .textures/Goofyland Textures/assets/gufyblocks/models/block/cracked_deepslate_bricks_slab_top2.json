@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "minecraft:block/cracked_deepslate_bricks2",
-        "top": "minecraft:block/cracked_deepslate_bricks2",
-        "side": "minecraft:block/cracked_deepslate_bricks2"
-    }
-}

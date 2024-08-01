@@ -1,7 +1,0 @@
-{ 
-	"parent": "gufyblocks:block/hopper",
-	"textures": 
-	{
-		"texture": "minecraft:block/cherry_planks"
-	}
-}
