@@ -1,9 +1,10 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/cube_bottom_top",
     "type": "fusion:connecting",
     "loader": "fusion:model",
     "textures": {
-        "particle": "gufyblocks:block/spruce_framed_terracotta_cross",
-        "all": "gufyblocks:block/spruce_framed_terracotta_cross"
+        "side": "gufyblocks:block/spruce_framed_terracotta_cross_fusion",
+        "bottom": "gufyblocks:block/spruce_framed_terracotta_cross",
+        "top": "gufyblocks:block/spruce_framed_terracotta_cross"
     }
 }

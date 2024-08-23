@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.ArrayList;
@@ -77,7 +78,7 @@ public class GufyUtil
                     case FRAMED_RIGHT -> add(GufyRegistry.registerBlock(name + "_right", () -> new Block(propertiesBuilder(properties))));
                     case FRAMED_CROSS -> add(GufyRegistry.registerBlock(name + "_cross", () -> new Block(propertiesBuilder(properties))));
                     case CARVED_LOG -> add(GufyRegistry.registerBlock(name, () -> new RotatedPillarBlock(propertiesBuilder(properties))));
-                    case SEAT -> add(GufyRegistry.registerBlock(name, () -> new GufySeat(propertiesBuilder(properties))));
+                    case SEAT -> add(GufyRegistry.registerBlock(name, () -> new GufySeat(propertiesBuilder(properties).pushReaction(PushReaction.DESTROY))));
                 }
             }
         }};

@@ -365,22 +365,22 @@ public class GufyRegistry
 
         // ~~ SEATS ~~ //
         add(GufyUtil.familyBuilder("seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("white_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("light_gray_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("gray_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("black_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("brown_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("red_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("orange_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("yellow_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("lime_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("green_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("cyan_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("light_blue_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("blue_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("purple_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("magenta_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
-        add(GufyUtil.familyBuilder("pink_seat", GufyMaterials.OAK, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("white_seat", GufyMaterials.WHITE_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("light_gray_seat", GufyMaterials.LIGHT_GRAY_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("gray_seat", GufyMaterials.GRAY_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("black_seat", GufyMaterials.BLACK_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("brown_seat", GufyMaterials.BROWN_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("red_seat", GufyMaterials.RED_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("orange_seat", GufyMaterials.ORANGE_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("yellow_seat", GufyMaterials.YELLOW_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("lime_seat", GufyMaterials.LIME_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("green_seat", GufyMaterials.GREEN_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("cyan_seat", GufyMaterials.CYAN_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("light_blue_seat", GufyMaterials.LIGHT_BLUE_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("blue_seat", GufyMaterials.BLUE_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("purple_seat", GufyMaterials.PURPLE_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("magenta_seat", GufyMaterials.MAGENTA_SEAT, GufyBlockTypes.SEAT));
+        add(GufyUtil.familyBuilder("pink_seat", GufyMaterials.PINK_SEAT, GufyBlockTypes.SEAT));
 
         // ~~ DEPRECATED BLOCKS ~~ //
         add(GufyUtil.familyBuilder("wagon_wheel", GufyMaterials.SPRUCE_TRAPDOOR, GufyBlockTypes.WAGONWHEEL)); // DEPRECATED

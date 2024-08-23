@@ -4,16 +4,12 @@
     "#": {
       "item": "minecraft:stick"
     },
-	"Y": {
-      "item": "minecraft:coal_block"
-    },
     "X": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:iron_block"
     }
   },
   "pattern": [
     "XXX",
-    "YYY",
     " # "
   ],
   "result": 
