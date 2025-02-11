@@ -9,6 +9,8 @@
 	"gufyblocks:big_jungle_stairs",
 	"gufyblocks:big_crimson_stairs",
 	"gufyblocks:big_warped_stairs",
+	"gufyblocks:big_mangrove_stairs",
+	"gufyblocks:big_cherry_stairs",
 	"gufyblocks:oak_parquet_stairs",
 	"gufyblocks:spruce_parquet_stairs",
 	"gufyblocks:birch_parquet_stairs",
@@ -16,6 +18,8 @@
 	"gufyblocks:jungle_parquet_stairs",
 	"gufyblocks:acacia_parquet_stairs",
 	"gufyblocks:crimson_parquet_stairs",
-	"gufyblocks:warped_parquet_stairs"
+	"gufyblocks:warped_parquet_stairs",
+	"gufyblocks:mangrove_parquet_stairs",
+	"gufyblocks:cherry_parquet_stairs"
   ]
 }
