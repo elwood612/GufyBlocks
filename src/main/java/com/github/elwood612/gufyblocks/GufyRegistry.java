@@ -8,8 +8,11 @@ import com.github.elwood612.gufyblocks.items.GufyHammer;
 import com.github.elwood612.gufyblocks.items.GufyMossClump;
 import com.github.elwood612.gufyblocks.util.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.BlockItem;
@@ -423,7 +426,9 @@ public class GufyRegistry
     public static final DeferredItem<Item> HAMMER = ITEMS.register("hammer",
             () -> new GufyHammer(new Item.Properties().durability(216)));
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
-            () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f).build(MODID + "seat"));
+            //() -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f).build(MODID + "seat"));
+            () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
+                    .build());
 
     //**************************************************************//
 

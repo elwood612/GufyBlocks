@@ -8,7 +8,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -45,11 +45,12 @@ public class GufyWeatheringBlock extends Block implements GufyWeathering
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
         Item handheldItem = player.getItemInHand(hand).getItem();
         if (Items.HONEYCOMB.equals(handheldItem)) {
-            return GufyUtil.getWaxedOn(state).map((newBlockState) -> {
+            return GufyUtil.getWaxedOn(state).map((newBlockState) ->
+            {
                 ItemStack itemStack = player.getItemInHand(hand);
                 if (player instanceof ServerPlayer)
                     CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemStack);
@@ -57,10 +58,11 @@ public class GufyWeatheringBlock extends Block implements GufyWeathering
                     itemStack.shrink(1);
                 level.setBlock(pos, newBlockState, 11);
                 level.levelEvent(player, 3003, pos, 0);
-                return ItemInteractionResult.sidedSuccess(level.isClientSide);
-            }).orElse(ItemInteractionResult.CONSUME);
+                //    return ItemInteractionResult.sidedSuccess(level.isClientSide);
+                return InteractionResult.SUCCESS;
+            }).orElse(InteractionResult.CONSUME);
         } else
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            return InteractionResult.PASS;
     }
 
 
