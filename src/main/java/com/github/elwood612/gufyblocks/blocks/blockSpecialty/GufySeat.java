@@ -4,17 +4,17 @@ import com.github.elwood612.gufyblocks.blocks.blockUtil.GufySeatable;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
@@ -47,7 +47,7 @@ public class GufySeat extends Block implements GufySeatable
             this.sitOnBlock(level, pos, player);
         }
 
-        return InteractionResult.sidedSuccess(level.isClientSide());
+        return InteractionResult.SUCCESS;
     }
 
     private static boolean isPlayerInRange(Player player, BlockPos pos) {
@@ -77,9 +77,17 @@ public class GufySeat extends Block implements GufySeatable
     }
 
     @Override
-    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
-    {
-        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+    protected BlockState updateShape(
+            BlockState stateIn,
+            LevelReader levelIn,
+            ScheduledTickAccess tick,
+            BlockPos currentPos,
+            Direction direction,
+            BlockPos facingPos,
+            BlockState facingState,
+            RandomSource randomSource
+    ) {
+        return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
     }
 
     public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
@@ -88,10 +96,10 @@ public class GufySeat extends Block implements GufySeatable
         }
     }
 
-    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+    public void updateEntityMovementAfterFallOn(BlockGetter level, Entity entity) {
         if (HasCushion){
             if (entity.isSuppressingBounce()) {
-                super.updateEntityAfterFallOn(level, entity);
+                super.updateEntityMovementAfterFallOn(level, entity);
             } else {
                 this.bounceUp(entity);
             }

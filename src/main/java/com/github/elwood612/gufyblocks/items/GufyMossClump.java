@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,12 +20,38 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Optional;
+
 public class GufyMossClump extends Item
 {
     public GufyMossClump(Item.Properties properties) { super(properties); }
 
     @NotNull
     public InteractionResult useOn(UseOnContext context) {
+        Level level = context.getLevel();
+        BlockPos blockpos = context.getClickedPos();
+        BlockState blockstate = level.getBlockState(blockpos);
+        Optional<BlockState> optional = GufyUtil.getMossy(blockstate);
+
+        if (optional.isEmpty()) {
+            return InteractionResult.PASS;
+        } else {
+            Player player = context.getPlayer();
+            ItemStack itemstack = context.getItemInHand();
+            if (player instanceof ServerPlayer) {
+                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockpos, itemstack);
+                itemstack.shrink(1);
+            }
+            level.setBlock(blockpos, (BlockState)optional.get(), 11);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));
+            level.playSound(player, blockpos, SoundEvents.BASALT_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+            if (level.isClientSide)
+                ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.COMPOSTER, UniformInt.of(3, 5));
+
+            return InteractionResult.SUCCESS;
+        }
+
+        /*
         Level level = context.getLevel();
         BlockPos blockpos = context.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
@@ -40,7 +67,9 @@ public class GufyMossClump extends Item
             level.playSound(player, blockpos, SoundEvents.MOSS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
             if (level.isClientSide)
                 ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.COMPOSTER, UniformInt.of(3, 5));
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }).orElse(InteractionResult.PASS);
+
+         */
     }
 }

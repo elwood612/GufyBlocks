@@ -108,7 +108,9 @@ public class GufyUtil
     //************************GET BLOCK***************************//
     public static Block getGufyBlock(String name)
     {
-        return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(MODID, name));
+        return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath(MODID, name));
+
+        //return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(MODID, name));
     }
 
 

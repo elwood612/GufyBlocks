@@ -7,7 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -37,27 +37,22 @@ public class GufyFramedBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
         Item handheldItem = player.getItemInHand(hand).getItem();
-        BlockPos blockPos = hitResult.getBlockPos();
-        BlockState blockState = this.defaultBlockState();
         if (Items.HONEYCOMB.equals(handheldItem)) {
-            return GufyUtil.getWaxedOn(blockState).map((newBlockState) -> {
+            return GufyUtil.getWaxedOn(state).map((newBlockState) -> {
                 ItemStack itemStack = player.getItemInHand(hand);
                 if (player instanceof ServerPlayer)
-                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockPos, itemStack);
+                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemStack);
                 if (!player.isCreative())
                     itemStack.shrink(1);
-                level.setBlock(blockPos, newBlockState, 11);
-//                level.playSound(null, blockPos, SoundEvents.HONEYCOMB_WAX_ON, SoundSource.BLOCKS, 1.0F, 1.0F);
-                level.levelEvent(player, 3003, blockPos, 0);
-//                if (level.isClientSide)
-//                    ParticleUtils.spawnParticlesOnBlockFaces(level, blockPos, ParticleTypes.WAX_OFF, UniformInt.of(3, 5));
-                return ItemInteractionResult.sidedSuccess(level.isClientSide);
-            }).orElse(ItemInteractionResult.CONSUME);
+                level.setBlock(pos, newBlockState, 11);
+                level.levelEvent(player, 3003, pos, 0);
+                return InteractionResult.SUCCESS;
+            }).orElse(InteractionResult.CONSUME);
         } else
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            return InteractionResult.PASS;
     }
 
     @Override

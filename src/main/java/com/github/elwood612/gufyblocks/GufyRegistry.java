@@ -426,9 +426,8 @@ public class GufyRegistry
     public static final DeferredItem<Item> HAMMER = ITEMS.register("hammer",
             () -> new GufyHammer(new Item.Properties().durability(216)));
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
-            //() -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f).build(MODID + "seat"));
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
-                    .build());
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(MODID, "seat"))));
 
     //**************************************************************//
 

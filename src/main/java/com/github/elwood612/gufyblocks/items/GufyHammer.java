@@ -9,16 +9,20 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Optional;
 
 public class GufyHammer extends Item
 {
@@ -29,6 +33,32 @@ public class GufyHammer extends Item
         Level level = context.getLevel();
         BlockPos blockpos = context.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
+        Optional<BlockState> optional = GufyUtil.getCracked(blockstate);
+
+        if (playerHasShieldUseIntent(context)) {
+            return InteractionResult.PASS;
+        }
+        else {
+            if (optional.isEmpty()) {
+                return InteractionResult.PASS;
+            } else {
+                Player player = context.getPlayer();
+                ItemStack itemstack = context.getItemInHand();
+                if (player instanceof ServerPlayer) {
+                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockpos, itemstack);
+                    itemstack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(context.getHand()));
+                }
+                level.setBlock(blockpos, (BlockState)optional.get(), 11);
+                level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));
+                level.playSound(player, blockpos, SoundEvents.BASALT_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                if (level.isClientSide)
+                    ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.COMPOSTER, UniformInt.of(3, 5));
+
+                return InteractionResult.SUCCESS;
+            }
+        }
+
+        /*
         return GufyUtil.getCracked(blockstate).map((p_238251_) -> {
             Player player = context.getPlayer();
             ItemStack itemstack = context.getItemInHand();
@@ -41,7 +71,14 @@ public class GufyHammer extends Item
             level.playSound(player, blockpos, SoundEvents.BASALT_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
             if (level.isClientSide)
                 ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.COMPOSTER, UniformInt.of(3, 5));
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }).orElse(InteractionResult.PASS);
+
+         */
+    }
+
+    private static boolean playerHasShieldUseIntent(UseOnContext context) {
+        Player player = context.getPlayer();
+        return context.getHand().equals(InteractionHand.MAIN_HAND) && player.getOffhandItem().is(Items.SHIELD) && !player.isSecondaryUseActive();
     }
 }

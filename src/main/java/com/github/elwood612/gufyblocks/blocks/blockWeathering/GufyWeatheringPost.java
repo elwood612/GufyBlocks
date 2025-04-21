@@ -9,16 +9,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
@@ -61,7 +59,7 @@ public class GufyWeatheringPost extends Block implements GufyWeathering, SimpleW
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
         Item handheldItem = player.getItemInHand(hand).getItem();
         if (Items.HONEYCOMB.equals(handheldItem)) {
@@ -73,10 +71,10 @@ public class GufyWeatheringPost extends Block implements GufyWeathering, SimpleW
                     itemStack.shrink(1);
                 level.setBlock(pos, newBlockState, 11);
                 level.levelEvent(player, 3003, pos, 0);
-                return ItemInteractionResult.sidedSuccess(level.isClientSide);
-            }).orElse(ItemInteractionResult.CONSUME);
+                return InteractionResult.SUCCESS;
+            }).orElse(InteractionResult.CONSUME);
         } else
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            return InteractionResult.PASS;
     }
 
     public void randomTick(BlockState p_154929_, ServerLevel p_154930_, BlockPos p_154931_, RandomSource p_154932_) {
@@ -123,15 +121,21 @@ public class GufyWeatheringPost extends Block implements GufyWeathering, SimpleW
     }
 
     @Override
-    @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
-    {
-        if (stateIn.getValue(WATERLOGGED))
-        {
-            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+    protected BlockState updateShape(
+            BlockState stateIn,
+            LevelReader levelIn,
+            ScheduledTickAccess tick,
+            BlockPos currentPos,
+            Direction direction,
+            BlockPos facingPos,
+            BlockState facingState,
+            RandomSource randomSource
+    ) {
+        if (stateIn.getValue(WATERLOGGED)) {
+            tick.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelIn));
         }
 
-        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
     }
 
     @Override

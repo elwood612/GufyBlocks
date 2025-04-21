@@ -1,8 +1,11 @@
 package com.github.elwood612.gufyblocks.blocks;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -66,17 +69,23 @@ public class GufyPost extends Block implements SimpleWaterloggedBlock
 	{
 		return SHAPE;
 	}
-    
+
     @Override
-    @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) 
-    {
-        if (stateIn.getValue(WATERLOGGED)) 
-        {
-            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+    protected BlockState updateShape(
+            BlockState stateIn,
+            LevelReader levelIn,
+            ScheduledTickAccess tick,
+            BlockPos currentPos,
+            Direction direction,
+            BlockPos facingPos,
+            BlockState facingState,
+            RandomSource randomSource
+    ) {
+        if (stateIn.getValue(WATERLOGGED)) {
+            tick.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelIn));
         }
 
-        return super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
     }
 
     @Override
