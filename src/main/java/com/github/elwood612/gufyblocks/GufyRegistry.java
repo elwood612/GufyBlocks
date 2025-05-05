@@ -20,6 +20,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -421,10 +422,20 @@ public class GufyRegistry
 
 
     //****************************ITEMS*****************************//
-    public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.register("moss_clump",
-            () -> new GufyMossClump(new Item.Properties()));
-    public static final DeferredItem<Item> HAMMER = ITEMS.register("hammer",
-            () -> new GufyHammer(new Item.Properties().durability(216)));
+//    public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.register("moss_clump",
+//            () -> new GufyMossClump(new Item.Properties()));
+//    public static final DeferredItem<Item> HAMMER = ITEMS.register("hammer",
+//            () -> new GufyHammer(new Item.Properties().durability(216)));
+    public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.registerItem(
+            "moss_clump",
+            GufyMossClump::new,
+            new Item.Properties()
+    );
+    public static final DeferredItem<Item> HAMMER = ITEMS.registerItem(
+            "hammer",
+            GufyHammer::new,
+            new Item.Properties().durability(216)
+    );
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(MODID, "seat"))));
@@ -458,8 +469,23 @@ public class GufyRegistry
         registerBlockItem(name, toReturn);
         return toReturn;
     }
+
+//    public static DeferredBlock<Block> registerBlock(String name, Block block) {
+//        DeferredBlock<Block> toReturn = BLOCKS.registerBlock(
+//                name,
+//                Block::new,
+//                BlockBehaviour.Properties.of()
+//        );
+//        registerBlockItem(name, toReturn);
+//        return toReturn;
+//    }
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        BLOCKITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+//        BLOCKITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        BLOCKITEMS.registerSimpleBlockItem(
+                name,
+                block,
+                new Item.Properties()
+        );
     }
     //**************************************************************//
 }
