@@ -3,8 +3,8 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-//    id 'net.neoforged.gradle.userdev' version '[7.0.184]'
-    id 'net.neoforged.moddev' version '2.0.78'
+    id 'net.neoforged.gradle.userdev' version '[7.0.184]'
+//    id 'net.neoforged.moddev' version '2.0.78'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -24,47 +24,35 @@ base {
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
-neoForge {
-    version = project.neo_version
-    validateAccessTransformers = true
+//neoForge {
+//    version = project.neo_version
+//    validateAccessTransformers = true
+//
+//    parchment {
+//        mappingsVersion = project.parchment_mappings_version
+//        minecraftVersion = project.parchment_minecraft_version
+//    }
+//
+//    mods {
+//        "${mod_id}" {
+//            sourceSet(sourceSets.main)
+//        }
+//    }
+//}
 
-    parchment {
-        mappingsVersion = project.parchment_mappings_version
-        minecraftVersion = project.parchment_minecraft_version
+runs {
+    client {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
     }
 
-    runs {
-        client {
-            client()
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        }
-
-        server {
-            server()
-            programArgument '--nogui'
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        }
-
-        gameTestServer {
-            type = "gameTestServer"
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        }
-
-        data {
-            clientData()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
-        }
-
-        configureEach {
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            logLevel = org.slf4j.event.Level.DEBUG
-        }
+    server {
+        programArgument '--nogui'
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
     }
 
-    mods {
-        "${mod_id}" {
-            sourceSet(sourceSets.main)
-        }
+    configureEach {
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        logLevel = org.slf4j.event.Level.DEBUG
     }
 }
 
@@ -75,7 +63,7 @@ configurations {
 }
 
 dependencies {
-
+    implementation 'net.neoforged:neoforge:'+"${neo_version}"
 }
 
 tasks.withType(ProcessResources).configureEach {
