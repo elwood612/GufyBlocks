@@ -21,6 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -466,26 +467,30 @@ public class GufyRegistry
     //***********************REGISTRY METHODS***********************//
     public static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+        registerBlockItem(block);
         return toReturn;
     }
 
-//    public static DeferredBlock<Block> registerBlock(String name, Block block) {
-//        DeferredBlock<Block> toReturn = BLOCKS.registerBlock(
-//                name,
-//                Block::new,
-//                BlockBehaviour.Properties.of()
-//        );
-//        registerBlockItem(name, toReturn);
-//        return toReturn;
-//    }
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+    public static <T extends Block>DeferredBlock<T> registerBlockNEW(String name, T blockType, BlockBehaviour properties){
+        DeferredBlock<T> newBlock = BLOCKS.registerBlock(name, blockType::new, properties.properties());
+        return newBlock;
+    }
+
+    public static <T extends Block> void registerBlockItem(DeferredBlock<T> block) {
 //        BLOCKITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
         BLOCKITEMS.registerSimpleBlockItem(
-                name,
+                block.getRegisteredName(),
                 block,
                 new Item.Properties()
         );
+    }
+
+    private static final List<DeferredItem<BlockItem>> newBlockItemsList = {
+        for (List<DeferredBlock<Block>> family : newBlockList){
+            for (DeferredBlock<Block> block : family){
+                registerBlockItem(block);
+            }
+        }
     }
     //**************************************************************//
 }
