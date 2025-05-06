@@ -51,43 +51,88 @@ public class GufyUtil
         {{
             for (GufyBlockTypes blockType: blockTypes)
             {
+                BlockBehaviour.Properties blockProperties = propertiesBuilder(properties);
                 switch (blockType)
                 {
-                    case BLOCK -> add(GufyRegistry.registerBlock(name, () -> new Block(propertiesBuilder(properties))));
-                    case STAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new StairBlock(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties))));
-                    case GUFYSTAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new GufyStairs(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties))));
-                    case ICE_STAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new StairBlock(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties).friction(0.98f))));
-                    case SLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new SlabBlock(propertiesBuilder(properties))));
-                    case ICE_SLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new SlabBlock(propertiesBuilder(properties).friction(0.98f))));
-                    case GUFYSLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new GufySlab(propertiesBuilder(properties))));
-                    case VERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyVerticalSlab(propertiesBuilder(properties))));
-                    case ICE_VERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyVerticalSlab(propertiesBuilder(properties).friction(0.98f))));
-                    case WALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new WallBlock(propertiesBuilder(properties))));
-                    case GUFYWALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new GufyWall(propertiesBuilder(properties))));
-                    case HOPPER -> add(GufyRegistry.registerBlock(name + "_hopper", () -> new GufyHopper(propertiesBuilder(properties))));
-                    case POST -> add(GufyRegistry.registerBlock(name + "_post", () -> new GufyPost(propertiesBuilder(properties))));
-                    case PILLAR -> add(GufyRegistry.registerBlock(name + "_pillar", () -> new RotatedPillarBlock(propertiesBuilder(properties))));
-                    case STONE_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.IRON, propertiesBuilder(GufyMaterials.STONE_TRAPDOOR))));
-                    case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, propertiesBuilder(properties))));
-                    case WOOL_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, propertiesBuilder(properties).sound(SoundType.WOOL))));
-                    case PANEL -> add(GufyRegistry.registerBlock(name + "_panel", () -> new GufyPanel(propertiesBuilder(properties))));
-                    case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
-                    case GUFYFENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new GufyFence(propertiesBuilder(properties))));
-                    case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN)));
-                    case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new Block(propertiesBuilder(properties))));
-                    case WATTLEFENCE -> add(GufyRegistry.registerBlock(name, () -> new GufyWattleFence(propertiesBuilder(properties))));
-                    case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(BlockSetType.OAK, propertiesBuilder(properties))));
-                    case PANE -> add(GufyRegistry.registerBlock(name + "_pane", () -> new GufyPane(propertiesBuilder(properties))));
-                    case CHISELED -> add(GufyRegistry.registerBlock("chiseled_" + name, () -> new Block(propertiesBuilder(properties))));
-                    case FRAMED_LEFT -> add(GufyRegistry.registerBlock(name + "_left", () -> new Block(propertiesBuilder(properties))));
-                    case FRAMED_RIGHT -> add(GufyRegistry.registerBlock(name + "_right", () -> new Block(propertiesBuilder(properties))));
-                    case FRAMED_CROSS -> add(GufyRegistry.registerBlock(name + "_cross", () -> new Block(propertiesBuilder(properties))));
-                    case CARVED_LOG -> add(GufyRegistry.registerBlock(name, () -> new RotatedPillarBlock(propertiesBuilder(properties))));
-                    case SEAT -> add(GufyRegistry.registerBlock(name, () -> new GufySeat(propertiesBuilder(properties).pushReaction(PushReaction.DESTROY))));
+                    case BLOCK -> add(GufyRegistry.createRegistry(name, () -> new Block(blockProperties), blockProperties));
+                    case STAIRS -> add(GufyRegistry.createRegistry(name + "_stairs", () -> new StairBlock(getGufyBlock(name).defaultBlockState(), blockProperties), blockProperties));
+                    case GUFYSTAIRS -> add(GufyRegistry.createRegistry(name + "_stairs", () -> new GufyStairs(getGufyBlock(name).defaultBlockState(), blockProperties), blockProperties));
+                    case ICE_STAIRS -> add(GufyRegistry.createRegistry(name + "_stairs", () -> new StairBlock(getGufyBlock(name).defaultBlockState(), blockProperties.friction(0.98f)), blockProperties.friction(0.98f)));
+                    case SLAB -> add(GufyRegistry.createRegistry(name + "_slab", () -> new SlabBlock(blockProperties), blockProperties));
+                    case ICE_SLAB -> add(GufyRegistry.createRegistry(name + "_slab", () -> new SlabBlock(blockProperties.friction(0.98f)), blockProperties.friction(0.98f)));
+                    case GUFYSLAB -> add(GufyRegistry.createRegistry(name + "_slab", () -> new GufySlab(blockProperties), blockProperties));
+                    case VERTICALSLAB -> add(GufyRegistry.createRegistry(name + "_verticalslab", () -> new GufyVerticalSlab(blockProperties), blockProperties));
+                    case ICE_VERTICALSLAB -> add(GufyRegistry.createRegistry(name + "_verticalslab", () -> new GufyVerticalSlab(blockProperties.friction(0.98f)), blockProperties.friction(0.98f)));
+                    case WALL -> add(GufyRegistry.createRegistry(name + "_wall", () -> new WallBlock(blockProperties), blockProperties));
+                    case GUFYWALL -> add(GufyRegistry.createRegistry(name + "_wall", () -> new GufyWall(blockProperties), blockProperties));
+                    case HOPPER -> add(GufyRegistry.createRegistry(name + "_hopper", () -> new GufyHopper(blockProperties), blockProperties));
+                    case POST -> add(GufyRegistry.createRegistry(name + "_post", () -> new GufyPost(blockProperties), blockProperties));
+                    case PILLAR -> add(GufyRegistry.createRegistry(name + "_pillar", () -> new RotatedPillarBlock(blockProperties), blockProperties));
+                    case STONE_TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.IRON, blockProperties), blockProperties));
+                    case TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties));
+                    case WOOL_TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties.sound(SoundType.WOOL)), blockProperties.sound(SoundType.WOOL)));
+                    case PANEL -> add(GufyRegistry.createRegistry(name + "_panel", () -> new GufyPanel(blockProperties), blockProperties));
+                    case FENCE -> add(GufyRegistry.createRegistry(name + "_fence", () -> new FenceBlock(blockProperties), blockProperties));
+                    case GUFYFENCE -> add(GufyRegistry.createRegistry(name + "_fence", () -> new GufyFence(blockProperties), blockProperties));
+                    case FENCEGATE -> add(GufyRegistry.createRegistry(name + "_fence_gate", () -> new FenceGateBlock(blockProperties, SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN), blockProperties));
+                    case PARQUET -> add(GufyRegistry.createRegistry(name + "_parquet", () -> new Block(blockProperties), blockProperties));
+                    case WATTLEFENCE -> add(GufyRegistry.createRegistry(name, () -> new GufyWattleFence(blockProperties), blockProperties));
+                    case WAGONWHEEL -> add(GufyRegistry.createRegistry(name, () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties));
+                    case PANE -> add(GufyRegistry.createRegistry(name + "_pane", () -> new GufyPane(blockProperties), blockProperties));
+                    case CHISELED -> add(GufyRegistry.createRegistry("chiseled_" + name, () -> new Block(blockProperties), blockProperties));
+                    case FRAMED_LEFT -> add(GufyRegistry.createRegistry(name + "_left", () -> new Block(blockProperties), blockProperties));
+                    case FRAMED_RIGHT -> add(GufyRegistry.createRegistry(name + "_right", () -> new Block(blockProperties), blockProperties));
+                    case FRAMED_CROSS -> add(GufyRegistry.createRegistry(name + "_cross", () -> new Block(blockProperties), blockProperties));
+                    case CARVED_LOG -> add(GufyRegistry.createRegistry(name, () -> new RotatedPillarBlock(blockProperties), blockProperties));
+                    case SEAT -> add(GufyRegistry.createRegistry(name, () -> new GufySeat(blockProperties.pushReaction(PushReaction.DESTROY)), blockProperties));
                 }
             }
         }};
     }
+
+//    public static List<DeferredBlock<Block>> familyBuilderNEW(String name, GufyMaterials properties, GufyBlockTypes ... blockTypes)
+//    {
+//        return new ArrayList<>()
+//        {{
+//            for (GufyBlockTypes blockType: blockTypes)
+//            {
+//                switch (blockType)
+//                {
+//                    case BLOCK -> add(GufyRegistry.createRegistry(name, () -> new Block(GufyUtil.propertiesBuilder(properties))));
+//                    case STAIRS -> add(GufyRegistry.createRegistry(name, () -> new StairBlock(GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties))));
+//                    case GUFYSTAIRS -> add(BLOCKS.registerBlock(name + "_stairs", GufyStairs::new, GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties)));
+//                    case ICE_STAIRS -> add(BLOCKS.registerBlock(name + "_stairs", StairBlock::new, GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties).friction(0.98f)));
+//                    case SLAB -> add(BLOCKS.registerBlock(name + "_slab", SlabBlock::new, GufyUtil.propertiesBuilder(properties)));
+//                    case ICE_SLAB -> add(BLOCKS.registerBlock(name + "_slab", SlabBlock::new, GufyUtil.propertiesBuilder(properties).friction(0.98f)));
+//                    case GUFYSLAB -> add(BLOCKS.registerBlock(name + "_slab", GufySlab::new, GufyUtil.propertiesBuilder(properties)));
+//                    case VERTICALSLAB -> add(BLOCKS.registerBlock(name + "_verticalslab", GufyVerticalSlab::new, GufyUtil.propertiesBuilder(properties)));
+//                    case ICE_VERTICALSLAB -> add(BLOCKS.registerBlock(name + "_verticalslab", GufyVerticalSlab::new, (GufyUtil.propertiesBuilder(properties).friction(0.98f))));
+//                    case WALL -> add(BLOCKS.registerBlock(name + "_wall", WallBlock::new, GufyUtil.propertiesBuilder(properties)));
+//                    case GUFYWALL -> add(BLOCKS.registerBlock(name + "_wall", GufyWall::new, GufyUtil.propertiesBuilder(properties)));
+//                    case HOPPER -> add(BLOCKS.registerBlock(name + "_hopper", GufyHopper::new, GufyUtil.propertiesBuilder(properties)));
+//                    case POST -> add(BLOCKS.registerBlock(name + "_post", GufyPost::new, GufyUtil.propertiesBuilder(properties)));
+//                    case PILLAR -> add(BLOCKS.registerBlock(name + "_pillar", RotatedPillarBlock::new, GufyUtil.propertiesBuilder(properties)));
+//                    case STONE_TRAPDOOR -> add(BLOCKS.registerBlock(name + "_trapdoor", TrapDoorBlock::new, BlockSetType.IRON, GufyUtil.propertiesBuilder(GufyMaterials.STONE_TRAPDOOR)));
+//                    case TRAPDOOR -> add(BLOCKS.registerBlock(name + "_trapdoor", TrapDoorBlock::new, BlockSetType.OAK, GufyUtil.propertiesBuilder(properties)));
+//                    case WOOL_TRAPDOOR -> add(BLOCKS.registerBlock(name + "_trapdoor", TrapDoorBlock::new, BlockSetType.OAK, GufyUtil.propertiesBuilder(properties).sound(SoundType.WOOL)));
+//                    case PANEL -> add(BLOCKS.registerBlock(name + "_panel", GufyPanel::new, GufyUtil.propertiesBuilder(properties)));
+//                    case FENCE -> add(BLOCKS.registerBlock(name + "_fence", FenceBlock::new, GufyUtil.propertiesBuilder(properties)));
+//                    case GUFYFENCE -> add(BLOCKS.registerBlock(name + "_fence", GufyFence::new, GufyUtil.propertiesBuilder(properties)));
+//                    case FENCEGATE -> add(BLOCKS.registerBlock(name + "_fence_gate", FenceGateBlock::new, GufyUtil.propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
+//                    case PARQUET -> add(BLOCKS.registerBlock(name + "_parquet", Block::new, GufyUtil.propertiesBuilder(properties)));
+//                    case WATTLEFENCE -> add(BLOCKS.registerBlock(name, GufyWattleFence::new, GufyUtil.propertiesBuilder(properties));
+//                    case WAGONWHEEL -> add(BLOCKS.registerBlock(name, TrapDoorBlock::new, BlockSetType.OAK, GufyUtil.propertiesBuilder(properties)));
+//                    case PANE -> add(BLOCKS.registerBlock(name + "_pane", GufyPane::new, GufyUtil.propertiesBuilder(properties)));
+//                    case CHISELED -> add(BLOCKS.registerBlock("chiseled_" + name, Block::new, GufyUtil.propertiesBuilder(properties)));
+//                    case FRAMED_LEFT -> add(BLOCKS.registerBlock(name + "_left", Block::new, GufyUtil.propertiesBuilder(properties)));
+//                    case FRAMED_RIGHT -> add(BLOCKS.registerBlock(name + "_right", Block::new, GufyUtil.propertiesBuilder(properties)));
+//                    case FRAMED_CROSS -> add(BLOCKS.registerBlock(name + "_cross", Block::new, GufyUtil.propertiesBuilder(properties)));
+//                    case CARVED_LOG -> add(BLOCKS.registerBlock(name, RotatedPillarBlock::new, GufyUtil.propertiesBuilder(properties)));
+//                    case SEAT -> add(BLOCKS.registerBlock(name, GufySeat::new, GufyUtil.propertiesBuilder(properties).pushReaction(PushReaction.DESTROY)));
+//                }
+//            }
+//        }};
+//    }
 
     //********************FAMILY COPPER BUILDER********************//
     // to transfer once the real familyBuilder is working
@@ -97,14 +142,15 @@ public class GufyUtil
         {{
             for (GufyBlockTypes blockType : blockTypes)
             {
+                BlockBehaviour.Properties blockProperties = propertiesBuilder(properties);
                 switch (blockType)
                 {
-                    case WEATHERINGSTAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new GufyWeatheringStairs(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties), state)));
-                    case WEATHERINGSLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new GufyWeatheringSlab(propertiesBuilder(properties), state)));
-                    case WEATHERINGVERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(propertiesBuilder(properties), state)));
-                    case WEATHERINGWALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new GufyWeatheringWall(propertiesBuilder(properties), state)));
-                    case WEATHERINGHOPPER -> add(GufyRegistry.registerBlock(name + "_hopper", () -> new GufyWeatheringHopper(propertiesBuilder(properties), state)));
-                    case WEATHERINGPOST -> add(GufyRegistry.registerBlock(name + "_post", () -> new GufyWeatheringPost(propertiesBuilder(properties), state)));
+                    case WEATHERINGSTAIRS -> add(GufyRegistry.createRegistry(name + "_stairs", () -> new GufyWeatheringStairs(getGufyBlock(name).defaultBlockState(), blockProperties, state), blockProperties));
+                    case WEATHERINGSLAB -> add(GufyRegistry.createRegistry(name + "_slab", () -> new GufyWeatheringSlab(blockProperties, state), blockProperties));
+                    case WEATHERINGVERTICALSLAB -> add(GufyRegistry.createRegistry(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(blockProperties, state), blockProperties));
+                    case WEATHERINGWALL -> add(GufyRegistry.createRegistry(name + "_wall", () -> new GufyWeatheringWall(blockProperties, state), blockProperties));
+                    case WEATHERINGHOPPER -> add(GufyRegistry.createRegistry(name + "_hopper", () -> new GufyWeatheringHopper(blockProperties, state), blockProperties));
+                    case WEATHERINGPOST -> add(GufyRegistry.createRegistry(name + "_post", () -> new GufyWeatheringPost(blockProperties, state), blockProperties));
                 }
             }
         }};
