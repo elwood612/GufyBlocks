@@ -14,6 +14,7 @@ import com.github.elwood612.gufyblocks.items.GufyMossClump;
 import com.github.elwood612.gufyblocks.util.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -39,6 +40,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
@@ -498,11 +500,8 @@ public class GufyRegistry
                 DeferredBlock<Block> newBlock = null;
                 switch (blockType)
                 {
-                    case BLOCK -> newBlock = BLOCKS.registerBlock(name, Block::new, GufyUtil.propertiesBuilder(properties));
-                    case STAIRS -> newBlock = BLOCKS.registerBlock(
-                            name + "_stairs",
-                            StairBlock::new,
-                            GufyUtil.propertiesBuilder(properties));
+                    case BLOCK -> newBlock = createRegistry(name, () -> new Block(GufyUtil.propertiesBuilder(properties)), GufyUtil.propertiesBuilder(properties), new Item.Properties());
+                    case STAIRS -> newBlock = createRegistry(name, () -> new StairBlock(GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties)), GufyUtil.propertiesBuilder(properties), new Item.Properties());
                     case GUFYSTAIRS -> newBlock = BLOCKS.registerBlock(name + "_stairs", GufyStairs::new, GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties));
                     case ICE_STAIRS -> newBlock = BLOCKS.registerBlock(name + "_stairs", StairBlock::new, GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties).friction(0.98f));
                     case SLAB -> newBlock = BLOCKS.registerBlock(name + "_slab", SlabBlock::new, GufyUtil.propertiesBuilder(properties));
@@ -541,4 +540,16 @@ public class GufyRegistry
         }};
     }
     //**************************************************************//
+
+    private static DeferredBlock<Block> createRegistry(String name, Supplier<Block> blockSupplier, BlockBehaviour.Properties blockProperties, Item.Properties itemProperties)
+    {
+//        String name = Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(parent)).getPath() + "_" + type;
+        ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name));
+        blockProperties.setId(blockKey);
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name));
+        itemProperties.useBlockDescriptionPrefix().setId(itemKey);
+        DeferredBlock<Block> block = BLOCKS.register(name, blockSupplier);
+        BLOCKITEMS.register(name, () -> new BlockItem(block.get(), itemProperties));
+        return block;
+    }
 }
