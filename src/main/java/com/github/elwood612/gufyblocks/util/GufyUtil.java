@@ -10,12 +10,14 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +44,7 @@ public class GufyUtil
 
 
     //***********************FAMILY BUILDER***********************//
+    // to remove
     public static List<DeferredBlock<Block>> familyBuilder(String name, GufyMaterials properties, GufyBlockTypes ... blockTypes)
     {
         return new ArrayList<>()
@@ -86,51 +89,8 @@ public class GufyUtil
         }};
     }
 
-    public static List<DeferredBlock<Block>> familyBuilderNEW(String name, GufyMaterials properties, GufyBlockTypes ... blockTypes)
-    {
-        return new ArrayList<>()
-        {{
-            for (GufyBlockTypes blockType: blockTypes)
-            {
-                switch (blockType)
-                {
-                    case BLOCK -> add(GufyRegistry.registerBlockNEW(name, Block, propertiesBuilder(properties)));
-                    case STAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new StairBlock(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties))));
-                    case GUFYSTAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new GufyStairs(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties))));
-                    case ICE_STAIRS -> add(GufyRegistry.registerBlock(name + "_stairs", () -> new StairBlock(getGufyBlock(name).defaultBlockState(), propertiesBuilder(properties).friction(0.98f))));
-                    case SLAB -> add(GufyRegistry.BLOCKS.registerBlock(name + "_slab", SlabBlock::new, propertiesBuilder(properties)));
-                    case ICE_SLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new SlabBlock(propertiesBuilder(properties).friction(0.98f))));
-                    case GUFYSLAB -> add(GufyRegistry.registerBlock(name + "_slab", () -> new GufySlab(propertiesBuilder(properties))));
-                    case VERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyVerticalSlab(propertiesBuilder(properties))));
-                    case ICE_VERTICALSLAB -> add(GufyRegistry.registerBlock(name + "_verticalslab", () -> new GufyVerticalSlab(propertiesBuilder(properties).friction(0.98f))));
-                    case WALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new WallBlock(propertiesBuilder(properties))));
-                    case GUFYWALL -> add(GufyRegistry.registerBlock(name + "_wall", () -> new GufyWall(propertiesBuilder(properties))));
-                    case HOPPER -> add(GufyRegistry.registerBlock(name + "_hopper", () -> new GufyHopper(propertiesBuilder(properties))));
-                    case POST -> add(GufyRegistry.registerBlock(name + "_post", () -> new GufyPost(propertiesBuilder(properties))));
-                    case PILLAR -> add(GufyRegistry.registerBlock(name + "_pillar", () -> new RotatedPillarBlock(propertiesBuilder(properties))));
-                    case STONE_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.IRON, propertiesBuilder(GufyMaterials.STONE_TRAPDOOR))));
-                    case TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, propertiesBuilder(properties))));
-                    case WOOL_TRAPDOOR -> add(GufyRegistry.registerBlock(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, propertiesBuilder(properties).sound(SoundType.WOOL))));
-                    case PANEL -> add(GufyRegistry.registerBlock(name + "_panel", () -> new GufyPanel(propertiesBuilder(properties))));
-                    case FENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new FenceBlock(propertiesBuilder(properties))));
-                    case GUFYFENCE -> add(GufyRegistry.registerBlock(name + "_fence", () -> new GufyFence(propertiesBuilder(properties))));
-                    case FENCEGATE -> add(GufyRegistry.registerBlock(name + "_fence_gate", () -> new FenceGateBlock(propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN)));
-                    case PARQUET -> add(GufyRegistry.registerBlock(name + "_parquet", () -> new Block(propertiesBuilder(properties))));
-                    case WATTLEFENCE -> add(GufyRegistry.BLOCKS.registerBlock(name, GufyWattleFence::new, propertiesBuilder(properties)));
-                    case WAGONWHEEL -> add(GufyRegistry.registerBlock(name, () -> new TrapDoorBlock(BlockSetType.OAK, propertiesBuilder(properties))));
-                    case PANE -> add(GufyRegistry.registerBlock(name + "_pane", () -> new GufyPane(propertiesBuilder(properties))));
-                    case CHISELED -> add(GufyRegistry.registerBlock("chiseled_" + name, () -> new Block(propertiesBuilder(properties))));
-                    case FRAMED_LEFT -> add(GufyRegistry.registerBlock(name + "_left", () -> new Block(propertiesBuilder(properties))));
-                    case FRAMED_RIGHT -> add(GufyRegistry.registerBlock(name + "_right", () -> new Block(propertiesBuilder(properties))));
-                    case FRAMED_CROSS -> add(GufyRegistry.registerBlock(name + "_cross", () -> new Block(propertiesBuilder(properties))));
-                    case CARVED_LOG -> add(GufyRegistry.registerBlock(name, () -> new RotatedPillarBlock(propertiesBuilder(properties))));
-                    case SEAT -> add(GufyRegistry.registerBlock(name, () -> new GufySeat(propertiesBuilder(properties).pushReaction(PushReaction.DESTROY))));
-                }
-            }
-        }};
-    }
-
     //********************FAMILY COPPER BUILDER********************//
+    // to transfer once the real familyBuilder is working
     public static List<DeferredBlock<Block>> familyBuilder(String name, GufyMaterials properties, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes)
     {
         return new ArrayList<>()
@@ -149,8 +109,6 @@ public class GufyUtil
             }
         }};
     }
-
-
 
 
     //************************GET BLOCK***************************//
