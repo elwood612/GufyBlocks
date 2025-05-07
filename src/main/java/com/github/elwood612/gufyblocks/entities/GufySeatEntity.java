@@ -4,7 +4,11 @@ import com.github.elwood612.gufyblocks.GufyRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerEntity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -24,15 +28,14 @@ public class GufySeatEntity extends Entity
 {
     private EjectType ejectType = EjectType.NORTH;
 
-    public GufySeatEntity(EntityType<?> entityType, Level level) {
-        super(entityType, level);
-    }
+    public GufySeatEntity(EntityType<?> entityType, Level level) { super(entityType, level); }
 
     public GufySeatEntity(BlockPos pos, double ridingOffset, Level level, EjectType ejectType) {
         super(GufyRegistry.SEAT.get(), level);
         this.ejectType = ejectType;
 
         this.setPos(pos.getX() + 0.5D, pos.getY() + ridingOffset, pos.getZ() + 0.5D);
+        noPhysics = true;
     }
 
     @Override
@@ -140,5 +143,10 @@ public class GufySeatEntity extends Entity
         public static EjectType fromName(String name) {
             return Arrays.stream(EjectType.values()).filter(ejectType -> ejectType.getName().equals(name)).findFirst().orElse(EjectType.NORTH);
         }
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getAddEntityPacket(ServerEntity serverEntity) {
+        return new ClientboundAddEntityPacket(this, serverEntity);
     }
 }

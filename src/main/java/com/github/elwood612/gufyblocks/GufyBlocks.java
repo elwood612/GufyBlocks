@@ -19,7 +19,6 @@ public class GufyBlocks
 	{
 		GufyRegistry.BLOCKS.register(modEventBus);
 		GufyRegistry.ITEMS.register(modEventBus);
-//		GufyRegistry.BLOCKITEMS.register(modEventBus);
 		GufyRegistry.ENTITIES.register(modEventBus);
 		GufyRegistry.TABS.register(modEventBus);
 

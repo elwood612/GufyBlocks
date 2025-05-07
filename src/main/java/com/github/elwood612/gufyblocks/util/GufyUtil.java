@@ -44,7 +44,6 @@ public class GufyUtil
 
 
     //***********************FAMILY BUILDER***********************//
-    // to remove
     public static List<DeferredBlock<Block>> familyBuilder(String name, GufyMaterials properties, GufyBlockTypes ... blockTypes)
     {
         return new ArrayList<>()
@@ -90,52 +89,7 @@ public class GufyUtil
         }};
     }
 
-//    public static List<DeferredBlock<Block>> familyBuilderNEW(String name, GufyMaterials properties, GufyBlockTypes ... blockTypes)
-//    {
-//        return new ArrayList<>()
-//        {{
-//            for (GufyBlockTypes blockType: blockTypes)
-//            {
-//                switch (blockType)
-//                {
-//                    case BLOCK -> add(GufyRegistry.createRegistry(name, () -> new Block(GufyUtil.propertiesBuilder(properties))));
-//                    case STAIRS -> add(GufyRegistry.createRegistry(name, () -> new StairBlock(GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties))));
-//                    case GUFYSTAIRS -> add(BLOCKS.registerBlock(name + "_stairs", GufyStairs::new, GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties)));
-//                    case ICE_STAIRS -> add(BLOCKS.registerBlock(name + "_stairs", StairBlock::new, GufyUtil.getGufyBlock(name).defaultBlockState(), GufyUtil.propertiesBuilder(properties).friction(0.98f)));
-//                    case SLAB -> add(BLOCKS.registerBlock(name + "_slab", SlabBlock::new, GufyUtil.propertiesBuilder(properties)));
-//                    case ICE_SLAB -> add(BLOCKS.registerBlock(name + "_slab", SlabBlock::new, GufyUtil.propertiesBuilder(properties).friction(0.98f)));
-//                    case GUFYSLAB -> add(BLOCKS.registerBlock(name + "_slab", GufySlab::new, GufyUtil.propertiesBuilder(properties)));
-//                    case VERTICALSLAB -> add(BLOCKS.registerBlock(name + "_verticalslab", GufyVerticalSlab::new, GufyUtil.propertiesBuilder(properties)));
-//                    case ICE_VERTICALSLAB -> add(BLOCKS.registerBlock(name + "_verticalslab", GufyVerticalSlab::new, (GufyUtil.propertiesBuilder(properties).friction(0.98f))));
-//                    case WALL -> add(BLOCKS.registerBlock(name + "_wall", WallBlock::new, GufyUtil.propertiesBuilder(properties)));
-//                    case GUFYWALL -> add(BLOCKS.registerBlock(name + "_wall", GufyWall::new, GufyUtil.propertiesBuilder(properties)));
-//                    case HOPPER -> add(BLOCKS.registerBlock(name + "_hopper", GufyHopper::new, GufyUtil.propertiesBuilder(properties)));
-//                    case POST -> add(BLOCKS.registerBlock(name + "_post", GufyPost::new, GufyUtil.propertiesBuilder(properties)));
-//                    case PILLAR -> add(BLOCKS.registerBlock(name + "_pillar", RotatedPillarBlock::new, GufyUtil.propertiesBuilder(properties)));
-//                    case STONE_TRAPDOOR -> add(BLOCKS.registerBlock(name + "_trapdoor", TrapDoorBlock::new, BlockSetType.IRON, GufyUtil.propertiesBuilder(GufyMaterials.STONE_TRAPDOOR)));
-//                    case TRAPDOOR -> add(BLOCKS.registerBlock(name + "_trapdoor", TrapDoorBlock::new, BlockSetType.OAK, GufyUtil.propertiesBuilder(properties)));
-//                    case WOOL_TRAPDOOR -> add(BLOCKS.registerBlock(name + "_trapdoor", TrapDoorBlock::new, BlockSetType.OAK, GufyUtil.propertiesBuilder(properties).sound(SoundType.WOOL)));
-//                    case PANEL -> add(BLOCKS.registerBlock(name + "_panel", GufyPanel::new, GufyUtil.propertiesBuilder(properties)));
-//                    case FENCE -> add(BLOCKS.registerBlock(name + "_fence", FenceBlock::new, GufyUtil.propertiesBuilder(properties)));
-//                    case GUFYFENCE -> add(BLOCKS.registerBlock(name + "_fence", GufyFence::new, GufyUtil.propertiesBuilder(properties)));
-//                    case FENCEGATE -> add(BLOCKS.registerBlock(name + "_fence_gate", FenceGateBlock::new, GufyUtil.propertiesBuilder(properties), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
-//                    case PARQUET -> add(BLOCKS.registerBlock(name + "_parquet", Block::new, GufyUtil.propertiesBuilder(properties)));
-//                    case WATTLEFENCE -> add(BLOCKS.registerBlock(name, GufyWattleFence::new, GufyUtil.propertiesBuilder(properties));
-//                    case WAGONWHEEL -> add(BLOCKS.registerBlock(name, TrapDoorBlock::new, BlockSetType.OAK, GufyUtil.propertiesBuilder(properties)));
-//                    case PANE -> add(BLOCKS.registerBlock(name + "_pane", GufyPane::new, GufyUtil.propertiesBuilder(properties)));
-//                    case CHISELED -> add(BLOCKS.registerBlock("chiseled_" + name, Block::new, GufyUtil.propertiesBuilder(properties)));
-//                    case FRAMED_LEFT -> add(BLOCKS.registerBlock(name + "_left", Block::new, GufyUtil.propertiesBuilder(properties)));
-//                    case FRAMED_RIGHT -> add(BLOCKS.registerBlock(name + "_right", Block::new, GufyUtil.propertiesBuilder(properties)));
-//                    case FRAMED_CROSS -> add(BLOCKS.registerBlock(name + "_cross", Block::new, GufyUtil.propertiesBuilder(properties)));
-//                    case CARVED_LOG -> add(BLOCKS.registerBlock(name, RotatedPillarBlock::new, GufyUtil.propertiesBuilder(properties)));
-//                    case SEAT -> add(BLOCKS.registerBlock(name, GufySeat::new, GufyUtil.propertiesBuilder(properties).pushReaction(PushReaction.DESTROY)));
-//                }
-//            }
-//        }};
-//    }
-
     //********************FAMILY COPPER BUILDER********************//
-    // to transfer once the real familyBuilder is working
     public static List<DeferredBlock<Block>> familyBuilder(String name, GufyMaterials properties, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes)
     {
         return new ArrayList<>()
@@ -161,8 +115,6 @@ public class GufyUtil
     public static Block getGufyBlock(String name)
     {
         return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath(MODID, name));
-
-        //return BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(MODID, name));
     }
 
 

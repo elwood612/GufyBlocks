@@ -433,10 +433,6 @@ public class GufyRegistry
 
 
     //****************************ITEMS*****************************//
-//    public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.register("moss_clump",
-//            () -> new GufyMossClump(new Item.Properties()));
-//    public static final DeferredItem<Item> HAMMER = ITEMS.register("hammer",
-//            () -> new GufyHammer(new Item.Properties().durability(216)));
     public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.registerItem(
             "moss_clump",
             GufyMossClump::new,
@@ -475,40 +471,13 @@ public class GufyRegistry
 
 
     //***********************REGISTRY METHODS***********************//
-    // to remove
-//    public static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-//        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-//        registerBlockItem(name, block);
-//        return toReturn;
-//    }
-//
-//    // to remove
-//    public static <T extends Block> void registerBlockItem(String name, Supplier<T> block) {
-//        BLOCKITEMS.registerSimpleBlockItem(
-//                name,
-//                block,
-//                new Item.Properties()
-//        );
-//    }
-
-
-    // Try to use registerBlock method
-    // Clean up remaining methods
     public static <T extends Block>DeferredBlock<T> createRegistry(String name, Supplier<T> blockSupplier, BlockBehaviour.Properties blockProperties)
     {
-//        BlockBehaviour.Properties blockProperties = blockSupplier.get().properties();
-//        Item.Properties itemProperties = new Item.Properties();
-
         ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name));
-//        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name));
-
         blockProperties.setId(blockKey);
-//        itemProperties.useBlockDescriptionPrefix().setId(itemKey);
 
         DeferredBlock<T> block = BLOCKS.register(name, blockSupplier);
-//        DeferredBlock<T> block = BLOCKS.registerBlock(name, blockSupplier.get());
-//        BLOCKITEMS.register(name, () -> new BlockItem(block.get(), itemProperties));
-        ITEMS.registerSimpleBlockItem(block, new Item.Properties());
+        ITEMS.registerSimpleBlockItem(name, block, new Item.Properties());
 
         return block;
     }
