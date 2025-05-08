@@ -69,7 +69,7 @@ public class GufyUtil
                     case PILLAR -> add(GufyRegistry.createRegistry(name + "_pillar", () -> new RotatedPillarBlock(blockProperties), blockProperties));
                     case STONE_TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.IRON, blockProperties), blockProperties));
                     case TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties));
-                    case WOOL_TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties.sound(SoundType.WOOL)), blockProperties.sound(SoundType.WOOL)));
+                    case WOOL_TRAPDOOR -> add(GufyRegistry.createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties));
                     case PANEL -> add(GufyRegistry.createRegistry(name + "_panel", () -> new GufyPanel(blockProperties), blockProperties));
                     case FENCE -> add(GufyRegistry.createRegistry(name + "_fence", () -> new FenceBlock(blockProperties), blockProperties));
                     case GUFYFENCE -> add(GufyRegistry.createRegistry(name + "_fence", () -> new GufyFence(blockProperties), blockProperties));
