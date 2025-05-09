@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_crimson"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_crimson_slab",
+    "count": 6
+  }
+}

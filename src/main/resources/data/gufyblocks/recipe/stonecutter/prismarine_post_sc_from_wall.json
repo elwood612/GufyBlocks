@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:prismarine_wall"
-  },
+  "ingredient": "minecraft:prismarine_wall",
   "result":  {
   "id": "gufyblocks:prismarine_post",
   "count": 2

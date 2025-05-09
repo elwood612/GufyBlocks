@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:cobblestone"
-    },
+    "minecraft:cobblestone",
   "result": {
     "id": "gufyblocks:cobblestone_verticalslab",
     "count": 2

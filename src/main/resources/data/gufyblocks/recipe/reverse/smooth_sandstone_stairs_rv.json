@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:smooth_sandstone_stairs"
-    }
+    "minecraft:smooth_sandstone_stairs"
   },
   "result": { 
     "id": "minecraft:smooth_sandstone",

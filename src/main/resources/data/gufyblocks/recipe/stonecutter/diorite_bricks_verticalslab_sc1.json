@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:diorite"
-    },
+    "minecraft:diorite",
   "result": {
     "id": "gufyblocks:diorite_bricks_verticalslab",
   "count": 2

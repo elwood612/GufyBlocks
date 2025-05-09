@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "gufyblocks:stripped_crimson_hyphae_slab"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:chiseled_stripped_crimson_hyphae"
+  }
+}

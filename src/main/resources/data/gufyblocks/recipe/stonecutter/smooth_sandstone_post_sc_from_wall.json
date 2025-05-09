@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:smooth_sandstone_wall"
-  },
+  "ingredient": "gufyblocks:smooth_sandstone_wall",
   "result": {
     "id": "gufyblocks:smooth_sandstone_post",
   "count": 2

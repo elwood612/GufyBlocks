@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:smooth_stone"
-    },
+    "minecraft:smooth_stone",
   "result": {
     "id": "gufyblocks:smooth_stone_post",
   "count": 2

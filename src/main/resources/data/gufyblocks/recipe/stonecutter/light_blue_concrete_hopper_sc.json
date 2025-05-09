@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:light_blue_concrete"
-    },
+    "minecraft:light_blue_concrete",
   "result": {
     "id": "gufyblocks:light_blue_concrete_hopper",
   "count": 1

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:big_mangrove_fence_gate"
-    }
+    "gufyblocks:big_mangrove_fence_gate"
   },
   "result": { 
     "id": "gufyblocks:big_mangrove",

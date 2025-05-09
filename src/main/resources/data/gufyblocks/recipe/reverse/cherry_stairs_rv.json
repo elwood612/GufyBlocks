@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:cherry_stairs"
-    }
+    "minecraft:cherry_stairs"
   },
   "result": { 
     "id": "minecraft:cherry_planks",

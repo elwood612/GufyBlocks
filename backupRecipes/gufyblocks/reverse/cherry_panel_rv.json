@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cherry",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+{
+    "item": "gufyblocks:cherry_panel"
+    }
+  },
+  "result": { 
+    "id": "minecraft:cherry_planks",
+    "count": 1
+  }
+}

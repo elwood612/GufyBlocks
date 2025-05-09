@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "planks",
+  "pattern":
+  [
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "tag": "minecraft:acacia_logs"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_acacia",
+    "count": 8
+  }
+}

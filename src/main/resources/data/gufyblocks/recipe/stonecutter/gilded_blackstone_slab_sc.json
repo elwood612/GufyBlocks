@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:gilded_blackstone"
-  },
+  "ingredient": "minecraft:gilded_blackstone",
   "result": {
     "id": "gufyblocks:gilded_blackstone_slab",
   "count": 2

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:red_sandstone_bricks_wall"
-  },
+  "ingredient": "gufyblocks:red_sandstone_bricks_wall",
   "result": {
     "id": "gufyblocks:cracked_red_sandstone_bricks_wall"
   },

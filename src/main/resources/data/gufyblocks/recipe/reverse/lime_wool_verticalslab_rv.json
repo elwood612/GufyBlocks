@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:lime_wool_verticalslab"
-    }
+    "gufyblocks:lime_wool_verticalslab"
   },
   "result": { 
     "id": "minecraft:lime_wool",

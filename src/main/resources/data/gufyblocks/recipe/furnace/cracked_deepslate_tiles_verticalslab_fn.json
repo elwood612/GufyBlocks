@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:deepslate_tiles_verticalslab"
-  },
+  "ingredient": "gufyblocks:deepslate_tiles_verticalslab",
   "result": {
     "id": "gufyblocks:cracked_deepslate_tiles_verticalslab"
   },

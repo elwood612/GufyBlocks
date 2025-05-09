@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:polished_blackstone_brick_slab"
-  },
+  "ingredient": "minecraft:polished_blackstone_brick_slab",
   "result": {
     "id": "gufyblocks:cracked_polished_blackstone_brick_slab"
   },

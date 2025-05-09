@@ -8,9 +8,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:crimson_planks"
-    }
+    "#": "minecraft:crimson_planks"
   },
   "result": {
     "id": "minecraft:crimson_stairs",

@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_door",
   "key": {
-    "#": {
-      "tag": "gufyblocks:cherry_planks"
-    }
+    "#": "#gufyblocks:cherry_planks"
   },
   "pattern": [
     "##",

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:orange_terracotta"
+    },
+  "result": {
+    "id": "gufyblocks:orange_terracotta_stairs",
+  "count": 1
+  }
+}

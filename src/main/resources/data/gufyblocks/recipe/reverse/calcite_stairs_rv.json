@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:calcite_stairs"
-    }
+    "gufyblocks:calcite_stairs"
   },
   "result": { 
     "id": "minecraft:calcite",

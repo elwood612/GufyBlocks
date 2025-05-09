@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:amethyst_wall"
-  },
+  "ingredient": "gufyblocks:amethyst_wall",
   "result": {
     "id": "gufyblocks:amethyst_post",
   "count": 2

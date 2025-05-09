@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:cracked_polished_blackstone_brick_wall"
-  },
+  "ingredient": "gufyblocks:cracked_polished_blackstone_brick_wall",
   "result": {
     "id": "gufyblocks:cracked_polished_blackstone_brick_post",
   "count": 2

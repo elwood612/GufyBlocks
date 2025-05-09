@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:mossy_granite_bricks"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:mossy_granite_bricks_slab",
+    "count": 6
+  }
+}

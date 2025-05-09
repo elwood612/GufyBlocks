@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:cobblestone_bricks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "gufyblocks:cobblestone_bricks",
+    "minecraft:vine"
   ],
   "result": 
   { 

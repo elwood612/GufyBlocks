@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:spruce_stairs"
-    }
+    "minecraft:spruce_stairs"
   },
   "result": { 
     "id": "minecraft:spruce_planks",

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:brick_wall"
+  },
+  "result": {
+    "id": "gufyblocks:brick_post",
+  "count": 2
+  }
+}

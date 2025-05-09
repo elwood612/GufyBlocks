@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:exposed_cut_copper_verticalslab"
-    }
+    "gufyblocks:exposed_cut_copper_verticalslab"
   },
   "result": { 
     "id": "minecraft:exposed_cut_copper",

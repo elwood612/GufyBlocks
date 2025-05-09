@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:cracked_andesite_bricks"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:cracked_andesite_bricks_hopper",
+    "count": 6
+  }
+}

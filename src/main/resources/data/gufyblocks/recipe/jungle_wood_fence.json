@@ -7,12 +7,8 @@
     "W#W"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:jungle_wood"
-    }
+    "#": "minecraft:stick",
+    "W": "minecraft:jungle_wood"
   },
   "result": 
   { 

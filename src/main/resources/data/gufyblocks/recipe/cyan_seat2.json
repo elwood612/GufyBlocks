@@ -10,13 +10,9 @@
   "key": 
   {
 	"W": 
-    {
-      "item": "minecraft:cyan_wool"
-    },  
+    "minecraft:cyan_wool",  
     "#": 
-    {
-      "tag": "minecraft:wooden_slabs"
-    }
+    "#minecraft:wooden_slabs"
   },
   "result": 
   { 

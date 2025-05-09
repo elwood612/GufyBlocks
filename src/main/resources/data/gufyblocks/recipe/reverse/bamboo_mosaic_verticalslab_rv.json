@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:bamboo_mosaic_verticalslab"
-    }
+    "gufyblocks:bamboo_mosaic_verticalslab"
   },
   "result": { 
     "id": "minecraft:bamboo_mosaic",

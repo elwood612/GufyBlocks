@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:polished_andesite_hopper"
-    }
+    "gufyblocks:polished_andesite_hopper"
   },
   "result": { 
     "id": "minecraft:polished_andesite",

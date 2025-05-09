@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stripped_mangrove_wood_wall"
-    }
+    "gufyblocks:stripped_mangrove_wood_wall"
   },
   "result": { 
     "id": "minecraft:stripped_mangrove_wood",

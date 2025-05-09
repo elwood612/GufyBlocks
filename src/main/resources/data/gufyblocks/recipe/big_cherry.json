@@ -9,9 +9,7 @@
   "key": 
   {
     "#": 
-    {
-      "tag": "minecraft:cherry_logs"
-    }
+    "#minecraft:cherry_logs"
   },
   "result": 
   { 

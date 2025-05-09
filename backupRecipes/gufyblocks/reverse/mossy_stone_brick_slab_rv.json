@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mossy_stone_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "minecraft:mossy_stone_brick_slab"
+    }
+  },
+  "result": { 
+    "id": "minecraft:mossy_stone_bricks",
+    "count": 2
+  }
+}

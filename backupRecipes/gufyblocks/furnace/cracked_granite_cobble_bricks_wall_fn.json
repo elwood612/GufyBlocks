@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "gufyblocks:granite_cobble_bricks_wall"
+  },
+  "result": {
+    "id": "gufyblocks:cracked_granite_cobble_bricks_wall"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

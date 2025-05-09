@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:nether_brick_verticalslab"
-    }
+    "gufyblocks:nether_brick_verticalslab"
   },
   "result": { 
     "id": "minecraft:nether_bricks",

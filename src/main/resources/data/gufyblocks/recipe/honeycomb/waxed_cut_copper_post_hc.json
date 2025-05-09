@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:cut_copper_post"
-    },
-    {
-      "item": "minecraft:honeycomb"
-    }
+    "gufyblocks:cut_copper_post",
+    "minecraft:honeycomb"
   ],
   "result": { 
     "id": "gufyblocks:waxed_cut_copper_post"

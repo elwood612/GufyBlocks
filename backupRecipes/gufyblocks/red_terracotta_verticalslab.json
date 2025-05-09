@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:red_terracotta"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:red_terracotta_verticalslab",
+    "count": 6
+  }
+}

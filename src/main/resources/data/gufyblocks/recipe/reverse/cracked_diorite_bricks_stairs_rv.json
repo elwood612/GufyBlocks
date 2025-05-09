@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cracked_diorite_bricks_stairs"
-    }
+    "gufyblocks:cracked_diorite_bricks_stairs"
   },
   "result": { 
     "id": "gufyblocks:cracked_diorite_bricks",

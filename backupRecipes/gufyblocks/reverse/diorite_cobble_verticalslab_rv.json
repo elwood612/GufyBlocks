@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "diorite_cobble",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:diorite_cobble_verticalslab"
+    }
+  },
+  "result": { 
+    "id": "gufyblocks:diorite_cobble",
+    "count": 2
+  }
+}

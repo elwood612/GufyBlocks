@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cobblestone_bricks_slab"
-    }
+    "gufyblocks:cobblestone_bricks_slab"
   },
   "result": { 
     "id": "gufyblocks:cobblestone_bricks",

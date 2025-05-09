@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "gufyblocks:diorite_cobble_bricks_wall"
-    },
+    "gufyblocks:diorite_cobble_bricks_wall",
   "result": {
     "id": "gufyblocks:diorite_cobble_bricks_post",
     "count": 2

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:deepslate"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:deepslate_hopper",
+    "count": 6
+  }
+}

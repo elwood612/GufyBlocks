@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stripped_warped_hyphae"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_warped_hyphae_slab",
+    "count": 6
+  }
+}

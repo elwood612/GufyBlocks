@@ -7,12 +7,8 @@
     "W#W"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "gufyblocks:big_warped"
-    }
+    "#": "minecraft:stick",
+    "W": "gufyblocks:big_warped"
   },
   "result": 
   { 

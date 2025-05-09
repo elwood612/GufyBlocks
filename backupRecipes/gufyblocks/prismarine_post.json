@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:prismarine_wall"
+    }
+  },
+  "result": 
+  {
+    "id": "gufyblocks:prismarine_post",
+    "count": 4
+  }
+}

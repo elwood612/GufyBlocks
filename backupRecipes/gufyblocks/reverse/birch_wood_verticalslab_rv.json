@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "birch_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:birch_wood_verticalslab"
+    }
+  },
+  "result": { 
+    "id": "minecraft:birch_wood",
+    "count": 2
+  }
+}

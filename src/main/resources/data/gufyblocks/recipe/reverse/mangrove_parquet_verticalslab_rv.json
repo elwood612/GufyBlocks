@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mangrove_parquet_verticalslab"
-    }
+    "gufyblocks:mangrove_parquet_verticalslab"
   },
   "result": { 
     "id": "gufyblocks:mangrove_parquet",

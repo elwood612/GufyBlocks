@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:quartz_stairs"
-    }
+    "minecraft:quartz_stairs"
   },
   "result": { 
     "id": "minecraft:quartz_block",

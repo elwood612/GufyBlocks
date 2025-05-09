@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cherry_hopper"
-    }
+    "gufyblocks:cherry_hopper"
   },
   "result": { 
     "id": "minecraft:cherry_planks",

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mossy_stone_bricks_verticalslab"
-    }
+    "gufyblocks:mossy_stone_bricks_verticalslab"
   },
   "result": { 
     "id": "minecraft:mossy_stone_bricks",

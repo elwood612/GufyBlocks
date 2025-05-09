@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:packed_mud"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:packed_mud_verticalslab",
+    "count": 6
+  }
+}

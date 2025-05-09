@@ -3,12 +3,8 @@
   "category": "building",
   "group": "seats",
   "ingredients": [
-    {
-      "tag": "gufyblocks:seats"
-    },
-    {
-      "item": "minecraft:yellow_dye"
-    }
+    "#gufyblocks:seats",
+    "minecraft:yellow_dye"
   ],
   "result": 
   { 

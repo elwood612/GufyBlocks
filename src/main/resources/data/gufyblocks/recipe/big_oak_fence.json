@@ -7,12 +7,8 @@
     "W#W"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "gufyblocks:big_oak"
-    }
+    "#": "minecraft:stick",
+    "W": "gufyblocks:big_oak"
   },
   "result": 
   { 

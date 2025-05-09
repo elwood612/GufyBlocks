@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "warped_hyphae",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+{
+    "item": "gufyblocks:warped_hyphae_panel"
+    }
+  },
+  "result": { 
+    "id": "minecraft:warped_hyphae",
+    "count": 1
+  }
+}

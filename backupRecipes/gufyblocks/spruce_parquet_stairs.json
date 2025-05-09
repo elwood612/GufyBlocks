@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:spruce_parquet"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:spruce_parquet_stairs",
+    "count": 6
+  }
+}

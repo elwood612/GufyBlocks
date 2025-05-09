@@ -6,9 +6,7 @@
     "#"
   ],
   "key": {
-    "#": {
-      "item": "gufyblocks:spruce_wood_slab"
-    }
+    "#": "gufyblocks:spruce_wood_slab"
   },
   "result": 
   { 

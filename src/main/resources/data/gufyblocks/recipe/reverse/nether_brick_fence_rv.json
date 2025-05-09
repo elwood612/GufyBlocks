@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:nether_brick_fence"
-    }
+    "minecraft:nether_brick_fence"
   },
   "result": { 
     "id": "minecraft:nether_bricks",

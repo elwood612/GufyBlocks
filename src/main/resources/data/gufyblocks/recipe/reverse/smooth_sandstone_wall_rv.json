@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:smooth_sandstone_wall"
-    }
+    "gufyblocks:smooth_sandstone_wall"
   },
   "result": { 
     "id": "minecraft:smooth_sandstone",

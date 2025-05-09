@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": {
-      "item": "gufyblocks:stripped_mangrove_wood_slab"
-    }
+    "#": "gufyblocks:stripped_mangrove_wood_slab"
   },
   "pattern": [
     "#",

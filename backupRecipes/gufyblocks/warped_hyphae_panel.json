@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "gufyblocks:warped_hyphae_slab"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:warped_hyphae_panel",
+    "count": 6
+  }
+}

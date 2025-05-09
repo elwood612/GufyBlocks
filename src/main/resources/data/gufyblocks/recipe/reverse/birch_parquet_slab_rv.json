@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:birch_parquet_slab"
-    }
+    "gufyblocks:birch_parquet_slab"
   },
   "result": { 
     "id": "gufyblocks:birch_parquet",

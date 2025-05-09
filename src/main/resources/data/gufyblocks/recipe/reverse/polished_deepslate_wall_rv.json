@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:polished_deepslate_wall"
-    }
+    "minecraft:polished_deepslate_wall"
   },
   "result": { 
     "id": "minecraft:polished_deepslate",

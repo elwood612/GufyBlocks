@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stripped_birch_wood"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_birch_wood_stairs",
+    "count": 6
+  }
+}

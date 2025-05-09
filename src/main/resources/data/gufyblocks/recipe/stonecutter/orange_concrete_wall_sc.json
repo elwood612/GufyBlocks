@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:orange_concrete"
-    },
+    "minecraft:orange_concrete",
   "result": {
     "id": "gufyblocks:orange_concrete_wall",
   "count": 1

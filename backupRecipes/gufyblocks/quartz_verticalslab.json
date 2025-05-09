@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:quartz_block"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:quartz_verticalslab",
+    "count": 6
+  }
+}

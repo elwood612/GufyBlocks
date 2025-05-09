@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:diorite_bricks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "gufyblocks:diorite_bricks",
+    "minecraft:vine"
   ],
   "result": 
   { 

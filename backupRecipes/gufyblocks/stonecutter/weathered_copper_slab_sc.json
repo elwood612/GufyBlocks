@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:weathered_copper"
+  },
+  "result": {
+    "id": "gufyblocks:weathered_copper_slab",
+  "count": 2
+  }
+}

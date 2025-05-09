@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:mossy_deepslate_tiles"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:mossy_deepslate_tiles_slab",
+    "count": 6
+  }
+}

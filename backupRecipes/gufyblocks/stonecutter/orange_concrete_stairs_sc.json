@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:orange_concrete"
+    },
+  "result": {
+    "id": "gufyblocks:orange_concrete_stairs",
+  "count": 1
+  }
+}

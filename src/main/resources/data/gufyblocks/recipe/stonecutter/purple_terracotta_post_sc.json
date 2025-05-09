@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:purple_terracotta"
-    },
+    "minecraft:purple_terracotta",
   "result": {
     "id": "gufyblocks:purple_terracotta_post",
   "count": 2

@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:mossy_stone_bricks"
-    },
+    "minecraft:mossy_stone_bricks",
   "result": {
     "id": "gufyblocks:mossy_stone_bricks_hopper",
   "count": 1

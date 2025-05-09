@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:stone_bricks"
-    },
+    "minecraft:stone_bricks",
   "result": {
     "id": "gufyblocks:cobblestone_bricks_post",
     "count": 2

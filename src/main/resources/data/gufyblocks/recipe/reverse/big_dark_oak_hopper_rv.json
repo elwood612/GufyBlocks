@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:big_dark_oak_hopper"
-    }
+    "gufyblocks:big_dark_oak_hopper"
   },
   "result": { 
     "id": "gufyblocks:big_dark_oak",

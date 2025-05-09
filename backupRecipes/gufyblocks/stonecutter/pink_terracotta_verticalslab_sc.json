@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:pink_terracotta"
+    },
+  "result": {
+    "id": "gufyblocks:pink_terracotta_verticalslab",
+  "count": 2
+  }
+}

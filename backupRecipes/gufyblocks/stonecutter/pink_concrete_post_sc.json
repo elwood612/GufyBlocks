@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:pink_concrete"
+    },
+  "result": {
+    "id": "gufyblocks:pink_concrete_post",
+  "count": 2
+  }
+}

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:quartz_wall"
-    }
+    "gufyblocks:quartz_wall"
   },
   "result": { 
     "id": "minecraft:quartz_block",

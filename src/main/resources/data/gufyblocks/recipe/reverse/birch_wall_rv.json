@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:birch_wall"
-    }
+    "gufyblocks:birch_wall"
   },
   "result": { 
     "id": "minecraft:birch_planks",

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:jungle_parquet_verticalslab"
-    }
+    "gufyblocks:jungle_parquet_verticalslab"
   },
   "result": { 
     "id": "gufyblocks:jungle_parquet",

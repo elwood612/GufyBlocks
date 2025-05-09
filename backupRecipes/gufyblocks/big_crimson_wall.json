@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_walls",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_crimson"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_crimson_wall",
+    "count": 8
+  }
+}

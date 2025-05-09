@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:emerald_block"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:emerald_verticalslab",
+    "count": 6
+  }
+}

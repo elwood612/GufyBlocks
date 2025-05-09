@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:cut_sandstone"
-  },
+  "ingredient": "minecraft:cut_sandstone",
   "result": {
     "id": "gufyblocks:cut_sandstone_hopper",
   "count": 1

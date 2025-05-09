@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "group": "gufyblocks",
+  "pattern": 
+  [
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:clay"
+    }
+  },
+  "result": 
+  { 
+    "id": "minecraft:clay_ball",
+    "count": 4
+  }
+}

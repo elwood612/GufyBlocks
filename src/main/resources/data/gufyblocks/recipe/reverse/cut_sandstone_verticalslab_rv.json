@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cut_sandstone_verticalslab"
-    }
+    "gufyblocks:cut_sandstone_verticalslab"
   },
   "result": { 
     "id": "minecraft:cut_sandstone",

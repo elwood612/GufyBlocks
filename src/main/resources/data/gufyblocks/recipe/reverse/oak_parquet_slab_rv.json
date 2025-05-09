@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:oak_parquet_slab"
-    }
+    "gufyblocks:oak_parquet_slab"
   },
   "result": { 
     "id": "gufyblocks:oak_parquet",

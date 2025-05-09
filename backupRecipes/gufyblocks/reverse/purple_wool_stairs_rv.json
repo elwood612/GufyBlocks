@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "purple_wool",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:purple_wool_stairs"
+    }
+  },
+  "result": { 
+    "id": "minecraft:purple_wool",
+    "count": 3
+  }
+}

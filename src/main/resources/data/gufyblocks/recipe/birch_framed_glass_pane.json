@@ -3,12 +3,8 @@
   "category": "building",
   "group": "framed_glass_panes",
   "ingredients": [
-    {
-      "item": "minecraft:glass_pane"
-    },
-    {
-      "tag": "gufyblocks:birch_fences"
-    }
+    "minecraft:glass_pane",
+    "#gufyblocks:birch_fences"
   ],
   "result": 
   { 

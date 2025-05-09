@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:jungle_verticalslab"
-    }
+    "gufyblocks:jungle_verticalslab"
   },
   "result": { 
     "id": "minecraft:jungle_planks",

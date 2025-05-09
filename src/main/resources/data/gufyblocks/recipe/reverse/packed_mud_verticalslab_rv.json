@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:packed_mud_verticalslab"
-    }
+    "gufyblocks:packed_mud_verticalslab"
   },
   "result": { 
     "id": "minecraft:packed_mud",

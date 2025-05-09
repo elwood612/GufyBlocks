@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_birch",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:big_birch_stairs"
+    }
+  },
+  "result": { 
+    "id": "gufyblocks:big_birch",
+    "count": 3
+  }
+}

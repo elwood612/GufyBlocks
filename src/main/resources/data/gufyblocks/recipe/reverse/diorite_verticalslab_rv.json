@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:diorite_verticalslab"
-    }
+    "gufyblocks:diorite_verticalslab"
   },
   "result": { 
     "id": "minecraft:diorite",

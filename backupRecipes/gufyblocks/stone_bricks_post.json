@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stone_brick_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:stone_bricks_post",
+    "count": 4
+  }
+}

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:warped_parquet_stairs"
-    }
+    "gufyblocks:warped_parquet_stairs"
   },
   "result": { 
     "id": "gufyblocks:warped_parquet",

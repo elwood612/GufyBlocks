@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:cracked_red_sandstone_bricks"
-  },
+  "ingredient": "gufyblocks:cracked_red_sandstone_bricks",
   "result": {
     "id": "gufyblocks:cracked_red_sandstone_bricks_verticalslab",
   "count": 2

@@ -9,9 +9,7 @@
   "key": 
   {
     "#": 
-    {
-      "tag": "minecraft:jungle_logs"
-    }
+    "#minecraft:jungle_logs"
   },
   "result": 
   { 

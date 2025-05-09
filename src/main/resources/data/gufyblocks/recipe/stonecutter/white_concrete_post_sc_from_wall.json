@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "gufyblocks:white_concrete_wall"
-    },
+    "gufyblocks:white_concrete_wall",
   "result": {
     "id": "gufyblocks:white_concrete_post",
   "count": 2

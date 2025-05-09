@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mushroom_stem_hopper"
-    }
+    "gufyblocks:mushroom_stem_hopper"
   },
   "result": { 
     "id": "minecraft:mushroom_stem",

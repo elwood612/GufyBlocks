@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "pink_concrete",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:pink_concrete_wall"
+    }
+  },
+  "result": { 
+    "id": "minecraft:pink_concrete",
+    "count": 2
+  }
+}

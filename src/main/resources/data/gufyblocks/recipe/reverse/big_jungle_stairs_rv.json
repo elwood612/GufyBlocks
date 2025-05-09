@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:big_jungle_stairs"
-    }
+    "gufyblocks:big_jungle_stairs"
   },
   "result": { 
     "id": "gufyblocks:big_jungle",

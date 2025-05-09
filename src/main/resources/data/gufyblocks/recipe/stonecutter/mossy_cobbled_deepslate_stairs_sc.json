@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:mossy_cobbled_deepslate"
-  },
+  "ingredient": "gufyblocks:mossy_cobbled_deepslate",
   "result": {
     "id": "gufyblocks:mossy_cobbled_deepslate_stairs",
   "count": 1

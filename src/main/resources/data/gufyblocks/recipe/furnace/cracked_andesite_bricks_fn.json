@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:andesite_bricks"
-  },
+  "ingredient": "gufyblocks:andesite_bricks",
   "result": {
     "id": "gufyblocks:cracked_andesite_bricks"
   },

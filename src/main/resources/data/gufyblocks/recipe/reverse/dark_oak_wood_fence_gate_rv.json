@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:dark_oak_wood_fence_gate"
-    }
+    "gufyblocks:dark_oak_wood_fence_gate"
   },
   "result": { 
     "id": "minecraft:dark_oak_wood",

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stripped_acacia_wood"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_acacia_wood_verticalslab",
+    "count": 6
+  }
+}

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cut_sandstone_wall"
-    }
+    "gufyblocks:cut_sandstone_wall"
   },
   "result": { 
     "id": "minecraft:cut_sandstone",

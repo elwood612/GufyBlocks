@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:white_concrete"
+    },
+  "result": {
+    "id": "gufyblocks:white_concrete_hopper",
+  "count": 1
+  }
+}

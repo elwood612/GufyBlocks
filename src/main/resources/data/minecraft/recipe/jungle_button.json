@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "tag": "gufyblocks:jungle_planks"
-    }
+    "#gufyblocks:jungle_planks"
   ],
   "result": {
     "id": "minecraft:jungle_button"

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:crimson_parquet_stairs"
-    }
+    "gufyblocks:crimson_parquet_stairs"
   },
   "result": { 
     "id": "gufyblocks:crimson_parquet",

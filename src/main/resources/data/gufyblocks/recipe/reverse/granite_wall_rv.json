@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:granite_wall"
-    }
+    "minecraft:granite_wall"
   },
   "result": { 
     "id": "minecraft:granite",

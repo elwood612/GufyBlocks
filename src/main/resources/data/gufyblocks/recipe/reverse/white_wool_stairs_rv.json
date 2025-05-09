@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:white_wool_stairs"
-    }
+    "gufyblocks:white_wool_stairs"
   },
   "result": { 
     "id": "minecraft:white_wool",

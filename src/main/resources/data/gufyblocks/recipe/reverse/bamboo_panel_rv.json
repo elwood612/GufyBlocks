@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-{
-    "item": "gufyblocks:bamboo_panel"
-    }
+"gufyblocks:bamboo_panel"
   },
   "result": { 
     "id": "minecraft:bamboo_planks",

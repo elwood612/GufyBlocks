@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:emerald_wall"
-  },
+  "ingredient": "gufyblocks:emerald_wall",
   "result": {
     "id": "gufyblocks:emerald_post",
   "count": 2

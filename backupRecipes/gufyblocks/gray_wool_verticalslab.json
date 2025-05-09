@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:gray_wool_verticalslab",
+    "count": 6
+  }
+}

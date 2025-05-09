@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stripped_jungle_wood_hopper"
-    }
+    "gufyblocks:stripped_jungle_wood_hopper"
   },
   "result": { 
     "id": "minecraft:stripped_jungle_wood",

@@ -6,12 +6,8 @@
     "XXX"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:glass_pane"
-    },
-    "X": {
-      "item": "minecraft:iron_nugget"
-    }
+    "#": "minecraft:glass_pane",
+    "X": "minecraft:iron_nugget"
   },
   "result": 
   { 

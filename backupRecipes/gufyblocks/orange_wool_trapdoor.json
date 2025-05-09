@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:orange_wool"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:orange_wool_trapdoor",
+    "count": 12
+  }
+}

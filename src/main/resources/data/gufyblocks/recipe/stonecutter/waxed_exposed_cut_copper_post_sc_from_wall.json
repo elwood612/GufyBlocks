@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:waxed_exposed_cut_copper_wall"
-  },
+  "ingredient": "gufyblocks:waxed_exposed_cut_copper_wall",
   "result": {
     "id": "gufyblocks:waxed_exposed_cut_copper_post",
   "count": 2

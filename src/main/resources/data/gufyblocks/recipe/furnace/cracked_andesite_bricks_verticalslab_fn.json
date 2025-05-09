@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:andesite_bricks_verticalslab"
-  },
+  "ingredient": "gufyblocks:andesite_bricks_verticalslab",
   "result": {
     "id": "gufyblocks:cracked_andesite_bricks_verticalslab"
   },

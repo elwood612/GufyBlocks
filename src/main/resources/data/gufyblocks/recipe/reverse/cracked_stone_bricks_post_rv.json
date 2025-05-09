@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cracked_stone_bricks_post"
-    }
+    "gufyblocks:cracked_stone_bricks_post"
   },
   "result": { 
     "id": "minecraft:cracked_stone_bricks",

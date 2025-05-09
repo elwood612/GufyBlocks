@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:gray_terracotta"
-    },
+    "minecraft:gray_terracotta",
   "result": {
     "id": "gufyblocks:gray_terracotta_stairs",
   "count": 1

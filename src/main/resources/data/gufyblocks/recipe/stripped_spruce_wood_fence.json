@@ -7,12 +7,8 @@
     "W#W"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:stripped_spruce_wood"
-    }
+    "#": "minecraft:stick",
+    "W": "minecraft:stripped_spruce_wood"
   },
   "result": 
   { 

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:weathered_cut_copper_wall"
-  },
+  "ingredient": "gufyblocks:weathered_cut_copper_wall",
   "result": {
     "id": "gufyblocks:weathered_cut_copper_post",
   "count": 2

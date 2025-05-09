@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:calcite_wall"
-  },
+  "ingredient": "gufyblocks:calcite_wall",
   "result": {
     "id": "gufyblocks:calcite_post",
   "count": 2

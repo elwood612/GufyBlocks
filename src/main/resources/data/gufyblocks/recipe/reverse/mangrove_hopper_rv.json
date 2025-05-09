@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mangrove_hopper"
-    }
+    "gufyblocks:mangrove_hopper"
   },
   "result": { 
     "id": "minecraft:mangrove_planks",

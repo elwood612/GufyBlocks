@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:granite"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:granite_bricks",
+    "count": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bamboo",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+{
+    "item": "gufyblocks:bamboo_panel"
+    }
+  },
+  "result": { 
+    "id": "minecraft:bamboo_planks",
+    "count": 1
+  }
+}

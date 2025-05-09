@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:nether_wart_block"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:nether_wart_block_verticalslab",
+    "count": 6
+  }
+}

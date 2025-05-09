@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:magenta_terracotta"
-    },
+    "minecraft:magenta_terracotta",
   "result": {
     "id": "gufyblocks:magenta_terracotta_wall",
   "count": 1

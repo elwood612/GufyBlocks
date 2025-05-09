@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-{
-    "item": "gufyblocks:jungle_wood_panel"
-    }
+"gufyblocks:jungle_wood_panel"
   },
   "result": { 
     "id": "minecraft:jungle_wood",

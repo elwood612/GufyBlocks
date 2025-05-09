@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:end_stone_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:end_stone_post",
+    "count": 4
+  }
+}

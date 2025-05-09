@@ -3,12 +3,8 @@
   "category": "building",
   "group": "framed_terracotta",
   "ingredients": [
-    {
-      "item": "minecraft:white_terracotta"
-    },
-    {
-      "tag": "gufyblocks:acacia_fences"
-    }
+    "minecraft:white_terracotta",
+    "#gufyblocks:acacia_fences"
   ],
   "result": 
   { 

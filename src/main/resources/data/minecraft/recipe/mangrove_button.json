@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "tag": "gufyblocks:mangrove_planks"
-    }
+    "#gufyblocks:mangrove_planks"
   ],
   "result": {
     "id": "minecraft:mangrove_button"

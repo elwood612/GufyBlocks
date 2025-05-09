@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:tuff"
+  },
+  "result": {
+    "id": "gufyblocks:tuff_slab",
+  "count": 2
+  }
+}

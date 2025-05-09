@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:polished_andesite_wall"
-  },
+  "ingredient": "gufyblocks:polished_andesite_wall",
   "result": {
     "id": "gufyblocks:polished_andesite_post",
   "count": 2

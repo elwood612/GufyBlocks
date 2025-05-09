@@ -7,12 +7,8 @@
     "#W#"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:crimson_hyphae"
-    }
+    "#": "minecraft:stick",
+    "W": "minecraft:crimson_hyphae"
   },
   "result": 
   { 

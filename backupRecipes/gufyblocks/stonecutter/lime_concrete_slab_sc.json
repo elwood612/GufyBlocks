@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:lime_concrete"
+    },
+  "result": {
+    "id": "gufyblocks:lime_concrete_slab",
+  "count": 2
+  }
+}

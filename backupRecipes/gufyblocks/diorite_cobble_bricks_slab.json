@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:diorite_cobble_bricks"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:diorite_cobble_bricks_slab",
+    "count": 6
+  }
+}

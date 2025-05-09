@@ -5,9 +5,7 @@
     "#"
   ],
   "key": {
-    "#": {
-      "item": "gufyblocks:red_sandstone_bricks"
-    }
+    "#": "gufyblocks:red_sandstone_bricks"
   },
   "result": 
   { 

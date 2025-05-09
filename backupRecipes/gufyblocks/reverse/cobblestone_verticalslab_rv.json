@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cobblestone",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:cobblestone_verticalslab"
+    }
+  },
+  "result": { 
+    "id": "minecraft:cobblestone",
+    "count": 2
+  }
+}

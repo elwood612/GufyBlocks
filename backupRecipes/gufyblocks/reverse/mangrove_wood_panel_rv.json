@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mangrove_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+{
+    "item": "gufyblocks:mangrove_wood_panel"
+    }
+  },
+  "result": { 
+    "id": "minecraft:mangrove_wood",
+    "count": 1
+  }
+}

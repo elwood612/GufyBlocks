@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:exposed_copper_stairs"
-    },
-    {
-      "item": "minecraft:honeycomb"
-    }
+    "gufyblocks:exposed_copper_stairs",
+    "minecraft:honeycomb"
   ],
   "result": { 
     "id": "gufyblocks:waxed_exposed_copper_stairs"

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:red_sandstone_bricks_wall"
-  },
+  "ingredient": "gufyblocks:red_sandstone_bricks_wall",
   "result": {
     "id": "gufyblocks:red_sandstone_bricks_post",
   "count": 2

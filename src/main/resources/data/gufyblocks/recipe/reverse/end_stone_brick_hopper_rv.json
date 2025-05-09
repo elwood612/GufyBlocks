@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:end_stone_brick_hopper"
-    }
+    "gufyblocks:end_stone_brick_hopper"
   },
   "result": { 
     "id": "minecraft:end_stone_bricks",

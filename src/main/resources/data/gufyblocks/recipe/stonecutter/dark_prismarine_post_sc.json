@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:dark_prismarine"
-  },
+  "ingredient": "minecraft:dark_prismarine",
   "result":  {
   "id": "gufyblocks:dark_prismarine_post",
   "count": 2

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_cherry"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_cherry_verticalslab",
+    "count": 6
+  }
+}

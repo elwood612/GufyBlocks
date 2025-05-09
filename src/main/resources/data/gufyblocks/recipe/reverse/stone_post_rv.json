@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stone_post"
-    }
+    "gufyblocks:stone_post"
   },
   "result": { 
     "id": "minecraft:stone",

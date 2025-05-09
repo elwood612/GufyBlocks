@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:tuff_wall"
-    }
+    "gufyblocks:tuff_wall"
   },
   "result": { 
     "id": "minecraft:tuff",

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:big_crimson_wall"
-    }
+    "gufyblocks:big_crimson_wall"
   },
   "result": { 
     "id": "gufyblocks:big_crimson",

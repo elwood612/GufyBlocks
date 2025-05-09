@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:smooth_quartz_hopper"
-    }
+    "gufyblocks:smooth_quartz_hopper"
   },
   "result": { 
     "id": "minecraft:smooth_quartz",

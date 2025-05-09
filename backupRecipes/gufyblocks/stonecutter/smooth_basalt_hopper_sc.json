@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:smooth_basalt"
+  },
+  "result": {
+    "id": "gufyblocks:smooth_basalt_hopper",
+  "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:emerald_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:emerald_post",
+    "count": 4
+  }
+}

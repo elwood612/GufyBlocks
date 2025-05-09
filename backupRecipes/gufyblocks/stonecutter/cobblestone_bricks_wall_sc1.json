@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:stone_bricks"
+    },
+  "result": {
+    "id": "gufyblocks:cobblestone_bricks_wall",
+    "count": 1
+    }
+}

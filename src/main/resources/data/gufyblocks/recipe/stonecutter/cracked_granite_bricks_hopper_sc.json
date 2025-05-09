@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:cracked_granite_bricks"
-  },
+  "ingredient": "gufyblocks:cracked_granite_bricks",
   "result": {
     "id": "gufyblocks:cracked_granite_bricks_hopper",
   "count": 1

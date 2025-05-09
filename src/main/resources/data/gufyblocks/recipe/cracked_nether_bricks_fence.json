@@ -5,12 +5,8 @@
     "W#W"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:cracked_nether_bricks"
-    }
+    "#": "minecraft:stick",
+    "W": "minecraft:cracked_nether_bricks"
   },
   "result": 
   { 

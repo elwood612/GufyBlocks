@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_crimson",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:big_crimson_slab"
+    }
+  },
+  "result": { 
+    "id": "gufyblocks:big_crimson",
+    "count": 2
+  }
+}

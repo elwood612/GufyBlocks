@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:diorite_stairs"
-    }
+    "minecraft:diorite_stairs"
   },
   "result": { 
     "id": "minecraft:diorite",

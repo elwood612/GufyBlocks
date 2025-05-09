@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:diorite"
-  },
+  "ingredient": "minecraft:diorite",
   "result": {
     "id": "gufyblocks:polished_diorite_verticalslab",
   "count": 2

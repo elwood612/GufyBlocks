@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:deepslate_bricks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:deepslate_bricks",
+    "minecraft:moss_block"
   ],
   "result": 
   { 

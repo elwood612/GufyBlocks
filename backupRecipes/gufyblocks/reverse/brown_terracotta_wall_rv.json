@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "brown_terracotta",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:brown_terracotta_wall"
+    }
+  },
+  "result": { 
+    "id": "minecraft:brown_terracotta",
+    "count": 2
+  }
+}

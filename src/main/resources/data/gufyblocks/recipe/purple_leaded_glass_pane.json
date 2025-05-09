@@ -8,12 +8,8 @@
     "XXX"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:purple_stained_glass_pane"
-    },
-    "X": {
-      "item": "minecraft:iron_nugget"
-    }
+    "#": "minecraft:purple_stained_glass_pane",
+    "X": "minecraft:iron_nugget"
   },
   "result": 
   { 

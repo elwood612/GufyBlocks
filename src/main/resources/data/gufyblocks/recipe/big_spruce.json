@@ -9,9 +9,7 @@
   "key": 
   {
     "#": 
-    {
-      "tag": "minecraft:spruce_logs"
-    }
+    "#minecraft:spruce_logs"
   },
   "result": 
   { 

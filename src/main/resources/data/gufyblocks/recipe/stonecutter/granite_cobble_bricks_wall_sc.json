@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "gufyblocks:granite_cobble_bricks"
-    },
+    "gufyblocks:granite_cobble_bricks",
   "result": {
     "id": "gufyblocks:granite_cobble_bricks_wall",
     "count": 1

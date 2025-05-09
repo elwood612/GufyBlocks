@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": {
-      "item": "gufyblocks:stripped_warped_hyphae_slab"
-    }
+    "#": "gufyblocks:stripped_warped_hyphae_slab"
   },
   "pattern": [
     "#",

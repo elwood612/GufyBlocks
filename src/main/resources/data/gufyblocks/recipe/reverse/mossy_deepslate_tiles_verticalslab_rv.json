@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mossy_deepslate_tiles_verticalslab"
-    }
+    "gufyblocks:mossy_deepslate_tiles_verticalslab"
   },
   "result": { 
     "id": "gufyblocks:mossy_deepslate_tiles",

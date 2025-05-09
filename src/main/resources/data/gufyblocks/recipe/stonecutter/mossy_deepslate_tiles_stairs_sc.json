@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:mossy_deepslate_tiles"
-  },
+  "ingredient": "gufyblocks:mossy_deepslate_tiles",
   "result": {
     "id": "gufyblocks:mossy_deepslate_tiles_stairs",
   "count": 1

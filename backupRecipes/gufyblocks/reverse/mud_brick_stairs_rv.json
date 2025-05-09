@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mud_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "minecraft:mud_brick_stairs"
+    }
+  },
+  "result": { 
+    "id": "minecraft:mud_bricks",
+    "count": 3
+  }
+}

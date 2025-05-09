@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:andesite_wall"
-    }
+    "minecraft:andesite_wall"
   },
   "result": { 
     "id": "minecraft:andesite",

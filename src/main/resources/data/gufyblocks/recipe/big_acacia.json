@@ -9,9 +9,7 @@
   "key": 
   {
     "#": 
-    {
-      "tag": "minecraft:acacia_logs"
-    }
+    "#minecraft:acacia_logs"
   },
   "result": 
   { 

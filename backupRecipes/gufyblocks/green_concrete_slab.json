@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:green_concrete"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:green_concrete_slab",
+    "count": 6
+  }
+}

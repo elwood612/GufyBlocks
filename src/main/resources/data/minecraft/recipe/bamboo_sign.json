@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "tag": "gufyblocks:bamboo_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "#gufyblocks:bamboo_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",

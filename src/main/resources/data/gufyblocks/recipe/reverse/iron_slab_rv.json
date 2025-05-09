@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:iron_slab"
-    }
+    "gufyblocks:iron_slab"
   },
   "result": { 
     "id": "minecraft:iron_block",

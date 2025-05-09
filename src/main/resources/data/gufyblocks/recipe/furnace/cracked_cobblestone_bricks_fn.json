@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:cobblestone_bricks"
-  },
+  "ingredient": "gufyblocks:cobblestone_bricks",
   "result": {
     "id": "gufyblocks:cracked_cobblestone_bricks"
   },

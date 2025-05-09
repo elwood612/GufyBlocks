@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_hoppers",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stripped_warped_hyphae"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_warped_hyphae_hopper",
+    "count": 6
+  }
+}

@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:copper_wall"
-    },
-    {
-      "item": "minecraft:honeycomb"
-    }
+    "gufyblocks:copper_wall",
+    "minecraft:honeycomb"
   ],
   "result": { 
     "id": "gufyblocks:waxed_copper_wall"

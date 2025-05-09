@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "gufyblocks:big_dark_oak_slab"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_dark_oak_panel",
+    "count": 4
+  }
+}

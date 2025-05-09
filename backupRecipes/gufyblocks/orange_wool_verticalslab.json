@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:orange_wool"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:orange_wool_verticalslab",
+    "count": 6
+  }
+}

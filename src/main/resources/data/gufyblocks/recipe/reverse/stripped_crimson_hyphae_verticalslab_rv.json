@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stripped_crimson_hyphae_verticalslab"
-    }
+    "gufyblocks:stripped_crimson_hyphae_verticalslab"
   },
   "result": { 
     "id": "minecraft:stripped_crimson_hyphae",

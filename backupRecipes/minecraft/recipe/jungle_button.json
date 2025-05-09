@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "tag": "gufyblocks:jungle_planks"
+    }
+  ],
+  "result": {
+    "id": "minecraft:jungle_button"
+  }
+}

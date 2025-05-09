@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "tag": "gufyblocks:jungle_planks"
-    }
+    "#": "#gufyblocks:jungle_planks"
   },
   "result": {
     "id": "minecraft:jungle_trapdoor",

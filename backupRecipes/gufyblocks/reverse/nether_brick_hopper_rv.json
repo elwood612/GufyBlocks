@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_brick",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:nether_brick_hopper"
+    }
+  },
+  "result": { 
+    "id": "minecraft:nether_bricks",
+    "count": 2
+  }
+}

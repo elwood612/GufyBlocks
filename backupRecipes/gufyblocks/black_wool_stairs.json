@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:black_wool_stairs",
+    "count": 6
+  }
+}

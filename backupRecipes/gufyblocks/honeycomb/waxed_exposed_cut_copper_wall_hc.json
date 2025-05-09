@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gufyblocks:exposed_cut_copper_wall"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": { 
+    "id": "gufyblocks:waxed_exposed_cut_copper_wall"
+  }
+}

@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "tag": "gufyblocks:cherry_planks"
-    }
+    "#": "#gufyblocks:cherry_planks"
   },
   "result": {
     "id": "minecraft:cherry_trapdoor",

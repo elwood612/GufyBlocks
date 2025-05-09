@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:waxed_copper_block"
-  },
+  "ingredient": "minecraft:waxed_copper_block",
   "result": {
     "id": "gufyblocks:waxed_copper_post",
   "count": 2

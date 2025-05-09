@@ -3,9 +3,7 @@
   "category": "building",
   "group": "seats",
   "ingredients": [
-    {
-      "tag": "minecraft:wooden_slabs"
-    }
+    "#minecraft:wooden_slabs"
   ],
   "result": 
   { 

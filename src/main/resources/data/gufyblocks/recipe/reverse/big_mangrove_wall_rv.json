@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:big_mangrove_wall"
-    }
+    "gufyblocks:big_mangrove_wall"
   },
   "result": { 
     "id": "gufyblocks:big_mangrove",

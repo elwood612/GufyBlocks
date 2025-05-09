@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:sandstone_cobble_bricks"
-  },
+  "ingredient": "gufyblocks:sandstone_cobble_bricks",
   "result": {
     "id": "gufyblocks:sandstone_cobble_bricks_verticalslab",
   "count": 2

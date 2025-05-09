@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:lime_wool"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:lime_wool_trapdoor",
+    "count": 12
+  }
+}

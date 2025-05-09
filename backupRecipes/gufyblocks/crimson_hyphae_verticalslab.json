@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:crimson_hyphae"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:crimson_hyphae_verticalslab",
+    "count": 6
+  }
+}

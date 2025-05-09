@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mossy_deepslate_bricks_wall"
-    }
+    "gufyblocks:mossy_deepslate_bricks_wall"
   },
   "result": { 
     "id": "gufyblocks:mossy_deepslate_bricks",

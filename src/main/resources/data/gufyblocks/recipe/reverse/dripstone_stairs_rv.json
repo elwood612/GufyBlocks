@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:dripstone_stairs"
-    }
+    "gufyblocks:dripstone_stairs"
   },
   "result": { 
     "id": "minecraft:dripstone_block",

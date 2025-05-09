@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": {
-      "item": "gufyblocks:stripped_acacia_wood_slab"
-    }
+    "#": "gufyblocks:stripped_acacia_wood_slab"
   },
   "pattern": [
     "#",

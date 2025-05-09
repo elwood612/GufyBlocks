@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:pink_terracotta_verticalslab"
-    }
+    "gufyblocks:pink_terracotta_verticalslab"
   },
   "result": { 
     "id": "minecraft:pink_terracotta",

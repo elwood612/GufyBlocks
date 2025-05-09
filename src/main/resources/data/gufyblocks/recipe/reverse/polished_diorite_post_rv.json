@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:polished_diorite_post"
-    }
+    "gufyblocks:polished_diorite_post"
   },
   "result": { 
     "id": "minecraft:polished_diorite",

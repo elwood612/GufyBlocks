@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "tag": "gufyblocks:oak_planks"
-    }
+    "#": "#gufyblocks:oak_planks"
   },
   "result": {
     "id": "minecraft:oak_trapdoor",

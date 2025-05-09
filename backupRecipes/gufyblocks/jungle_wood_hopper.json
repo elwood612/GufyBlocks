@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_hoppers",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:jungle_wood"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:jungle_wood_hopper",
+    "count": 6
+  }
+}

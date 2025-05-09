@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:andesite_wall"
+  },
+  "result": {
+    "id": "gufyblocks:andesite_post",
+  "count": 2
+  }
+}

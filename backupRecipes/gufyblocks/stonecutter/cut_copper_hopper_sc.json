@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cut_copper"
+  },
+  "result": {
+    "id": "gufyblocks:cut_copper_hopper",
+  "count": 1
+  }
+}

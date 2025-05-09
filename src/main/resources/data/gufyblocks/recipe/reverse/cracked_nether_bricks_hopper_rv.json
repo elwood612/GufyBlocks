@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cracked_nether_bricks_hopper"
-    }
+    "gufyblocks:cracked_nether_bricks_hopper"
   },
   "result": { 
     "id": "minecraft:cracked_nether_bricks",

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:diamond_slab",
+    "count": 6
+  }
+}

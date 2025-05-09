@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "gufyblocks:big_cherry"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_cherry_fence",
+    "count": 4
+  }
+}

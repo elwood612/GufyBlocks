@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:cyan_concrete"
+    },
+  "result": {
+    "id": "gufyblocks:cyan_concrete_post",
+  "count": 2
+  }
+}

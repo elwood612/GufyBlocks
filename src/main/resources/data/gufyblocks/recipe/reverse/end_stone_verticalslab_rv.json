@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:end_stone_verticalslab"
-    }
+    "gufyblocks:end_stone_verticalslab"
   },
   "result": { 
     "id": "minecraft:end_stone",

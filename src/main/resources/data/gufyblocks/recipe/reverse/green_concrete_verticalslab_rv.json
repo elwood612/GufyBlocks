@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:green_concrete_verticalslab"
-    }
+    "gufyblocks:green_concrete_verticalslab"
   },
   "result": { 
     "id": "minecraft:green_concrete",

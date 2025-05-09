@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:purple_concrete"
-    },
+    "minecraft:purple_concrete",
   "result": {
     "id": "gufyblocks:purple_concrete_stairs",
   "count": 1

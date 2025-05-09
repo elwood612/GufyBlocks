@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:light_gray_concrete"
-    },
+    "minecraft:light_gray_concrete",
   "result": {
     "id": "gufyblocks:light_gray_concrete_verticalslab",
   "count": 2

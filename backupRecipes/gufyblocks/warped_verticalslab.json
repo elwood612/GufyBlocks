@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_verticalslabs",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:warped_planks"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:warped_verticalslab",
+    "count": 6
+  }
+}

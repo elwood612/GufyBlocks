@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:warped_hyphae_hopper"
-    }
+    "gufyblocks:warped_hyphae_hopper"
   },
   "result": { 
     "id": "minecraft:warped_hyphae",

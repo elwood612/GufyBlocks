@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "warped_wart_block",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:warped_wart_stairs"
+    }
+  },
+  "result": { 
+    "id": "minecraft:warped_wart_block",
+    "count": 3
+  }
+}

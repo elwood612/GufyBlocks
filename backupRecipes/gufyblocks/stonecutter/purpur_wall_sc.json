@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:purpur_block"
+  },
+  "result": {
+    "id": "gufyblocks:purpur_wall",
+  "count": 1
+  }
+}

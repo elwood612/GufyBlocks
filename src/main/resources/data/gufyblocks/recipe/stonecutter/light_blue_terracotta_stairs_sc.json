@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:light_blue_terracotta"
-    },
+    "minecraft:light_blue_terracotta",
   "result": {
     "id": "gufyblocks:light_blue_terracotta_stairs",
   "count": 1

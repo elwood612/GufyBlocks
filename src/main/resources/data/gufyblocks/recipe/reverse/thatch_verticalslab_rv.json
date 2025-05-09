@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:thatch_verticalslab"
-    }
+    "gufyblocks:thatch_verticalslab"
   },
   "result": { 
     "id": "gufyblocks:thatch",

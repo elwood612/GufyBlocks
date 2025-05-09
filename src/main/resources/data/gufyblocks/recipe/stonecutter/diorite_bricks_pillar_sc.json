@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-      "item": "gufyblocks:diorite_bricks"
-    },
+  "ingredient": "gufyblocks:diorite_bricks",
   "result": {
     "id": "gufyblocks:diorite_bricks_pillar",
   "count": 1

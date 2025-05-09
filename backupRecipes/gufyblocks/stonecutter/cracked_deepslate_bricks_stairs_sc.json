@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cracked_deepslate_bricks"
+  },
+  "result": {
+    "id": "gufyblocks:cracked_deepslate_bricks_stairs",
+  "count": 1
+  }
+}

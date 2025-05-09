@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:gold_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:gold_post",
+    "count": 4
+  }
+}

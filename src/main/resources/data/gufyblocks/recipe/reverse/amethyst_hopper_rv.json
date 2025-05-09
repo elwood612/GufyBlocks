@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:amethyst_hopper"
-    }
+    "gufyblocks:amethyst_hopper"
   },
   "result": { 
     "id": "minecraft:amethyst_block",

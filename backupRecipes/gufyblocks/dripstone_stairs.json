@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:dripstone_block"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:dripstone_stairs",
+    "count": 6
+  }
+}

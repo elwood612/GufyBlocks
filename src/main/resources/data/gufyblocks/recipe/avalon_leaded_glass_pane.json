@@ -3,12 +3,8 @@
   "category": "building",
   "group": "leaded_vertical_glass",
   "ingredients": [
-    {
-      "item": "gufyblocks:leaded_glass_pane"
-    },
-    {
-      "item": "minecraft:book"
-    }
+    "gufyblocks:leaded_glass_pane",
+    "minecraft:book"
   ],
   "result": 
   { 

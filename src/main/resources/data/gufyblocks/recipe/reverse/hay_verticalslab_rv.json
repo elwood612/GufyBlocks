@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:hay_verticalslab"
-    }
+    "gufyblocks:hay_verticalslab"
   },
   "result": { 
     "id": "minecraft:hay_block",

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:quartz_bricks"
+  },
+  "result": {
+    "id": "gufyblocks:quartz_bricks_wall",
+  "count": 1
+  }
+}

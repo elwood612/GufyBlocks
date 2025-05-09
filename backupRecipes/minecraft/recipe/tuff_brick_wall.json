@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:tuff_bricks"
+    }
+  },
+  "pattern": [
+    "# #",
+	"###",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "minecraft:tuff_brick_wall"
+  }
+}

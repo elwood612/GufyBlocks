@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:oxidized_copper"
-  },
+  "ingredient": "minecraft:oxidized_copper",
   "result": {
     "id": "gufyblocks:oxidized_copper_hopper",
   "count": 1

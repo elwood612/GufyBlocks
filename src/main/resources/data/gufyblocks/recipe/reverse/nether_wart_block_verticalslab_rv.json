@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:nether_wart_block_verticalslab"
-    }
+    "gufyblocks:nether_wart_block_verticalslab"
   },
   "result": { 
     "id": "minecraft:nether_wart_block",

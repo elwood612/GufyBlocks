@@ -1,0 +1,21 @@
+{
+  "values": [
+	"gufyblocks:white_seat", 
+	"gufyblocks:light_gray_seat", 
+	"gufyblocks:gray_seat", 
+	"gufyblocks:black_seat", 
+	"gufyblocks:brown_seat", 
+	"gufyblocks:red_seat", 
+	"gufyblocks:orange_seat", 
+	"gufyblocks:yellow_seat", 
+	"gufyblocks:lime_seat", 
+	"gufyblocks:green_seat", 
+	"gufyblocks:cyan_seat", 
+	"gufyblocks:light_blue_seat", 
+	"gufyblocks:blue_seat", 
+	"gufyblocks:purple_seat", 
+	"gufyblocks:magenta_seat", 
+    "gufyblocks:pink_seat", 
+    "gufyblocks:seat"
+  ]
+}

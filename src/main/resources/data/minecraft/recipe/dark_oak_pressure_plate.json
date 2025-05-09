@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_pressure_plate",
   "key": {
-    "#": {
-      "tag": "gufyblocks:dark_oak_planks"
-    }
+    "#": "#gufyblocks:dark_oak_planks"
   },
   "pattern": [
     "##"

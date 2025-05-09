@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "gufyblocks:jungle_planks"
+    }
+  },
+  "result": {
+    "id": "minecraft:jungle_trapdoor",
+    "count": 12
+  }
+}

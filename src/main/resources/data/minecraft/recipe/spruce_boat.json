@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "boat",
   "key": {
-    "#": {
-      "tag": "gufyblocks:spruce_planks"
-    }
+    "#": "#gufyblocks:spruce_planks"
   },
   "pattern": [
     "# #",

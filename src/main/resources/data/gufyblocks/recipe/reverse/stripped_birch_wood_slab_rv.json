@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stripped_birch_wood_slab"
-    }
+    "gufyblocks:stripped_birch_wood_slab"
   },
   "result": { 
     "id": "minecraft:stripped_birch_wood",

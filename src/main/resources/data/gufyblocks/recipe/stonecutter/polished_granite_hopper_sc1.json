@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:granite"
-  },
+  "ingredient": "minecraft:granite",
   "result": {
     "id": "gufyblocks:polished_granite_hopper",
   "count": 1

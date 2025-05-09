@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:deepslate_tiles"
+  },
+  "result": {
+    "id": "gufyblocks:deepslate_tiles_hopper",
+  "count": 1
+  }
+}

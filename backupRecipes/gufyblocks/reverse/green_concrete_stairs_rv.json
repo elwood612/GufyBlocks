@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "green_concrete",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:green_concrete_stairs"
+    }
+  },
+  "result": { 
+    "id": "minecraft:green_concrete",
+    "count": 3
+  }
+}

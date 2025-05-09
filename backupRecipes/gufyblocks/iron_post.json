@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:iron_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:iron_post",
+    "count": 4
+  }
+}

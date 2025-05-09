@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:andesite"
+    }
+  },
+  "result": 
+  {
+    "id": "gufyblocks:andesite_hopper",
+    "count": 6
+  }
+}

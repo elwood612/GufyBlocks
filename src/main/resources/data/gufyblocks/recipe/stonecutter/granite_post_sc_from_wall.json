@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:granite_wall"
-  },
+  "ingredient": "minecraft:granite_wall",
   "result": {
     "id": "gufyblocks:granite_post",
   "count": 2

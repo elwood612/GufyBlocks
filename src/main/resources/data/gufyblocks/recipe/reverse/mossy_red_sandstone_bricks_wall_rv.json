@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:mossy_red_sandstone_bricks_wall"
-    }
+    "gufyblocks:mossy_red_sandstone_bricks_wall"
   },
   "result": { 
     "id": "gufyblocks:mossy_red_sandstone_bricks",

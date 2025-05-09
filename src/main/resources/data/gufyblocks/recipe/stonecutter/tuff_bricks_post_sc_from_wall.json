@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:tuff_brick_wall"
-  },
+  "ingredient": "minecraft:tuff_brick_wall",
   "result":  {
   "id": "gufyblocks:tuff_bricks_post",
   "count": 2

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:deepslate_brick_stairs"
-  },
+  "ingredient": "minecraft:deepslate_brick_stairs",
   "result": {
     "id": "gufyblocks:cracked_deepslate_bricks_stairs"
   },

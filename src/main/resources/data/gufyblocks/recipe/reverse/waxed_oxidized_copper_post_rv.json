@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:waxed_oxidized_copper_post"
-    }
+    "gufyblocks:waxed_oxidized_copper_post"
   },
   "result": { 
     "id": "minecraft:waxed_oxidized_copper",

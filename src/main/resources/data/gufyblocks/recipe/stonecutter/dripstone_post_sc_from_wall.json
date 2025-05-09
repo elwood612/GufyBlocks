@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:dripstone_wall"
-  },
+  "ingredient": "gufyblocks:dripstone_wall",
   "result": {
     "id": "gufyblocks:dripstone_post",
   "count": 2

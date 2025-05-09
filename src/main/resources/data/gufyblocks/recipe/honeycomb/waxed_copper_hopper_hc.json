@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:copper_hopper"
-    },
-    {
-      "item": "minecraft:honeycomb"
-    }
+    "gufyblocks:copper_hopper",
+    "minecraft:honeycomb"
   ],
   "result": { 
     "id": "gufyblocks:waxed_copper_hopper"

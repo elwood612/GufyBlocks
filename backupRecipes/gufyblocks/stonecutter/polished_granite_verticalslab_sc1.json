@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:granite"
+  },
+  "result": {
+    "id": "gufyblocks:polished_granite_verticalslab",
+  "count": 2
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "oak_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:oak_wood_fence_gate"
+    }
+  },
+  "result": { 
+    "id": "minecraft:oak_wood",
+    "count": 1
+  }
+}

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:diorite_cobble_slab"
-    }
+    "gufyblocks:diorite_cobble_slab"
   },
   "result": { 
     "id": "gufyblocks:diorite_cobble",

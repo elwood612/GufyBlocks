@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:blackstone"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:blackstone_hopper",
+    "count": 6
+  }
+}

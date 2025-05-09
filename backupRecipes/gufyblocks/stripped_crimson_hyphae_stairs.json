@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:stripped_crimson_hyphae"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:stripped_crimson_hyphae_stairs",
+    "count": 6
+  }
+}

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:deepslate_bricks_hopper"
-  },
+  "ingredient": "gufyblocks:deepslate_bricks_hopper",
   "result": {
     "id": "gufyblocks:cracked_deepslate_bricks_hopper"
   },

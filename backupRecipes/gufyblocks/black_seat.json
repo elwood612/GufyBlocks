@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "seats",
+  "ingredients": [
+    {
+      "tag": "gufyblocks:seats"
+    },
+    {
+      "item": "minecraft:black_dye"
+    }
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:black_seat"
+  }
+}

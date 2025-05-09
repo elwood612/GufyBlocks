@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "gufyblocks:oxidized_cut_copper_hopper"
-    },
-    {
-      "item": "minecraft:honeycomb"
-    }
+    "gufyblocks:oxidized_cut_copper_hopper",
+    "minecraft:honeycomb"
   ],
   "result": { 
     "id": "gufyblocks:waxed_oxidized_cut_copper_hopper"

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:cracked_deepslate_tiles_slab"
-    }
+    "gufyblocks:cracked_deepslate_tiles_slab"
   },
   "result": { 
     "id": "minecraft:cracked_deepslate_tiles",

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "tag": "gufyblocks:mangrove_planks"
-    }
+    "#": "minecraft:stick",
+    "W": "#gufyblocks:mangrove_planks"
   },
   "pattern": [
     "W#W",

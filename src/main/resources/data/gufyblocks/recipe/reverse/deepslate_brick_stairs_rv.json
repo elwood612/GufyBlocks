@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:deepslate_brick_stairs"
-    }
+    "minecraft:deepslate_brick_stairs"
   },
   "result": { 
     "id": "minecraft:deepslate_bricks",

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:smooth_basalt_wall"
-  },
+  "ingredient": "gufyblocks:smooth_basalt_wall",
   "result": {
     "id": "gufyblocks:smooth_basalt_post",
   "count": 2

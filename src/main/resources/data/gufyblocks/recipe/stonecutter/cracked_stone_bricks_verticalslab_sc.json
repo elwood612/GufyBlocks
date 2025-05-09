@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:cracked_stone_bricks"
-    },
+    "minecraft:cracked_stone_bricks",
   "result": {
     "id": "gufyblocks:cracked_stone_bricks_verticalslab",
   "count": 2

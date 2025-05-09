@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gufyblocks:diorite_cobble_bricks_slab"
-  },
+  "ingredient": "gufyblocks:diorite_cobble_bricks_slab",
   "result": {
     "id": "gufyblocks:cracked_diorite_cobble_bricks_slab"
   },

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "tag": "gufyblocks:jungle_planks"
+    }
+  },
+  "result": {
+    "id": "minecraft:jungle_fence",
+    "count": 4
+  }
+}

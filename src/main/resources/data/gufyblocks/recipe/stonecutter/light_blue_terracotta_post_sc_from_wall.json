@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "gufyblocks:light_blue_terracotta_wall"
-    },
+    "gufyblocks:light_blue_terracotta_wall",
   "result": {
     "id": "gufyblocks:light_blue_terracotta_post",
   "count": 2

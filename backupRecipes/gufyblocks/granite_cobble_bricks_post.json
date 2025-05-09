@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:granite_cobble_bricks_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:granite_cobble_bricks_post",
+    "count": 4
+  }
+}

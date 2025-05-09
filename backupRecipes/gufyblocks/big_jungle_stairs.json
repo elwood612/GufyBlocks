@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:big_jungle"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:big_jungle_stairs",
+    "count": 6
+  }
+}

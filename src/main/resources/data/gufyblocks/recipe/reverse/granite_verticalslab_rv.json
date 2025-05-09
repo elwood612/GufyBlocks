@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:granite_verticalslab"
-    }
+    "gufyblocks:granite_verticalslab"
   },
   "result": { 
     "id": "minecraft:granite",

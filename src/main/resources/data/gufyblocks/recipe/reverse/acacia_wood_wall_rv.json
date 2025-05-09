@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:acacia_wood_wall"
-    }
+    "gufyblocks:acacia_wood_wall"
   },
   "result": { 
     "id": "minecraft:acacia_wood",

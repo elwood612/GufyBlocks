@@ -3,12 +3,8 @@
   "category": "building",
   "group": "framed_terracotta",
   "ingredients": [
-    {
-      "item": "minecraft:white_terracotta"
-    },
-    {
-      "tag": "gufyblocks:warped_fences"
-    }
+    "minecraft:white_terracotta",
+    "#gufyblocks:warped_fences"
   ],
   "result": 
   { 

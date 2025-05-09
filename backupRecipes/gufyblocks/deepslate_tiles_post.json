@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:deepslate_tile_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:deepslate_tiles_post",
+    "count": 4
+  }
+}

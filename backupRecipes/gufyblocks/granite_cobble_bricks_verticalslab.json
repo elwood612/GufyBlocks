@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:granite_cobble_bricks"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:granite_cobble_bricks_verticalslab",
+    "count": 6
+  }
+}

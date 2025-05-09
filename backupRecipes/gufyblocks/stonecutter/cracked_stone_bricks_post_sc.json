@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:cracked_stone_bricks"
+    },
+  "result": {
+    "id": "gufyblocks:cracked_stone_bricks_post",
+  "count": 2
+  }
+}

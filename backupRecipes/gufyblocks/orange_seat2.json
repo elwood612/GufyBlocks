@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "seats",
+  "pattern": 
+  [
+    "W",
+	"#"
+  ],
+  "key": 
+  {
+	"W": 
+    {
+      "item": "minecraft:orange_wool"
+    },  
+    "#": 
+    {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:orange_seat",
+    "count": 1
+  }
+}

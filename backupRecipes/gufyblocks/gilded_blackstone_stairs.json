@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:gilded_blackstone"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:gilded_blackstone_stairs",
+    "count": 6
+  }
+}

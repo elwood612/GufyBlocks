@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "tag": "gufyblocks:crimson_planks"
-    }
+    "#": "#gufyblocks:crimson_planks"
   },
   "result": {
     "id": "minecraft:crimson_trapdoor",

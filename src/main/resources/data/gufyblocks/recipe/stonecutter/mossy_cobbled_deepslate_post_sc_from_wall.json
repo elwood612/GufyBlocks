@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:mossy_cobbled_deepslate_wall"
-  },
+  "ingredient": "gufyblocks:mossy_cobbled_deepslate_wall",
   "result": {
     "id": "gufyblocks:mossy_cobbled_deepslate_post",
   "count": 2

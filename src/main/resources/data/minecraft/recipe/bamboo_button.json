@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "tag": "gufyblocks:bamboo_planks"
-    }
+    "#gufyblocks:bamboo_planks"
   ],
   "result": {
     "id": "minecraft:bamboo_button"

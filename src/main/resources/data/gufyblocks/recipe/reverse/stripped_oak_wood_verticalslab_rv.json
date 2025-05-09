@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stripped_oak_wood_verticalslab"
-    }
+    "gufyblocks:stripped_oak_wood_verticalslab"
   },
   "result": { 
     "id": "minecraft:stripped_oak_wood",

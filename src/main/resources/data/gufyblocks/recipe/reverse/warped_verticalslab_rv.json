@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:warped_verticalslab"
-    }
+    "gufyblocks:warped_verticalslab"
   },
   "result": { 
     "id": "minecraft:warped_planks",

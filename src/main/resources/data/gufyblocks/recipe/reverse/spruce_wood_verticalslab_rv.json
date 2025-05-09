@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:spruce_wood_verticalslab"
-    }
+    "gufyblocks:spruce_wood_verticalslab"
   },
   "result": { 
     "id": "minecraft:spruce_wood",

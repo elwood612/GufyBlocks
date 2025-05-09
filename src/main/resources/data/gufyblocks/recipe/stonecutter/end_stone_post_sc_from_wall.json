@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:end_stone_wall"
-  },
+  "ingredient": "gufyblocks:end_stone_wall",
   "result": {
     "id": "gufyblocks:end_stone_post",
   "count": 2

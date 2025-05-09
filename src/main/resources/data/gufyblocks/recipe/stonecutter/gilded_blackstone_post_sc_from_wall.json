@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:gilded_blackstone_wall"
-  },
+  "ingredient": "gufyblocks:gilded_blackstone_wall",
   "result": {
     "id": "gufyblocks:gilded_blackstone_post",
   "count": 2

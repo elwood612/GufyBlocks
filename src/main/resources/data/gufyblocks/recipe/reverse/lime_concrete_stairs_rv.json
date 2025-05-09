@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:lime_concrete_stairs"
-    }
+    "gufyblocks:lime_concrete_stairs"
   },
   "result": { 
     "id": "minecraft:lime_concrete",

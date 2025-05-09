@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:deepslate_tiles_post"
-    }
+    "gufyblocks:deepslate_tiles_post"
   },
   "result": { 
     "id": "minecraft:deepslate_tiles",

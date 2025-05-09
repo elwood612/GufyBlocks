@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:gold_verticalslab"
-    }
+    "gufyblocks:gold_verticalslab"
   },
   "result": { 
     "id": "minecraft:gold_block",

@@ -7,12 +7,8 @@
     "W#W"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "tag": "gufyblocks:jungle_planks"
-    }
+    "#": "minecraft:stick",
+    "W": "#gufyblocks:jungle_planks"
   },
   "result": {
     "id": "minecraft:jungle_fence",

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:big_warped_fence_gate"
-    }
+    "gufyblocks:big_warped_fence_gate"
   },
   "result": { 
     "id": "gufyblocks:big_warped",

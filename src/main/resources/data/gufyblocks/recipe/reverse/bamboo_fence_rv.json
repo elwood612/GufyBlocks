@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "minecraft:bamboo_fence"
-    }
+    "minecraft:bamboo_fence"
   },
   "result": { 
     "id": "minecraft:bamboo_planks",

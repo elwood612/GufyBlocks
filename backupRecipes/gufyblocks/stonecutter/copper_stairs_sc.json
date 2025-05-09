@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:copper_block"
+  },
+  "result": {
+    "id": "gufyblocks:copper_stairs",
+  "count": 1
+  }
+}

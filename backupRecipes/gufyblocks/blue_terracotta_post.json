@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "gufyblocks:blue_terracotta_wall"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:blue_terracotta_post",
+    "count": 4
+  }
+}

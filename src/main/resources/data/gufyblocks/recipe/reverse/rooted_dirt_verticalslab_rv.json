@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:rooted_dirt_verticalslab"
-    }
+    "gufyblocks:rooted_dirt_verticalslab"
   },
   "result": { 
     "id": "minecraft:rooted_dirt",

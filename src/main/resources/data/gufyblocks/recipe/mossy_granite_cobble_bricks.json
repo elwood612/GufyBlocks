@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "gufyblocks:granite_cobble_bricks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "gufyblocks:granite_cobble_bricks",
+    "minecraft:moss_block"
   ],
   "result": 
   { 

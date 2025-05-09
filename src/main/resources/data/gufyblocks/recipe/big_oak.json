@@ -9,9 +9,7 @@
   "key": 
   {
     "#": 
-    {
-      "tag": "minecraft:oak_logs"
-    }
+    "#minecraft:oak_logs"
   },
   "result": 
   { 

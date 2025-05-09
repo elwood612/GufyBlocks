@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "tag": "gufyblocks:cherry_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "#gufyblocks:cherry_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",

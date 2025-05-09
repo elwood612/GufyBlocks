@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:andesite_verticalslab"
-    }
+    "gufyblocks:andesite_verticalslab"
   },
   "result": { 
     "id": "minecraft:andesite",

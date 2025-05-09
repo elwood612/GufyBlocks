@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:andesite_bricks_slab"
-    }
+    "gufyblocks:andesite_bricks_slab"
   },
   "result": { 
     "id": "gufyblocks:andesite_bricks",

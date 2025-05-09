@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "red_terracotta",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:red_terracotta_hopper"
+    }
+  },
+  "result": { 
+    "id": "minecraft:red_terracotta",
+    "count": 2
+  }
+}

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:stripped_acacia_wood_hopper"
-    }
+    "gufyblocks:stripped_acacia_wood_hopper"
   },
   "result": { 
     "id": "minecraft:stripped_acacia_wood",

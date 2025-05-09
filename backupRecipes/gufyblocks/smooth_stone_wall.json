@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:smooth_stone_wall",
+    "count": 8
+  }
+}

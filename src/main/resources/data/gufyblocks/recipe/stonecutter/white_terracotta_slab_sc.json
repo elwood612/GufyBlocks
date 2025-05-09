@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:white_terracotta"
-    },
+    "minecraft:white_terracotta",
   "result": {
     "id": "gufyblocks:white_terracotta_slab",
   "count": 2

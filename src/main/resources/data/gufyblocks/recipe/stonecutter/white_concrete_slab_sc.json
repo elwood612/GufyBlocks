@@ -1,9 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": 
-    {
-      "item": "minecraft:white_concrete"
-    },
+    "minecraft:white_concrete",
   "result": {
     "id": "gufyblocks:white_concrete_slab",
   "count": 2

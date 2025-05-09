@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "gufyblocks:granite_bricks"
-  },
+  "ingredient": "gufyblocks:granite_bricks",
   "result": {
     "id": "gufyblocks:chiseled_granite_bricks",
   "count": 1

@@ -9,9 +9,7 @@
   "key":
   {
     "#": 
-    {
-    "item": "gufyblocks:coarse_dirt_stairs"
-    }
+    "gufyblocks:coarse_dirt_stairs"
   },
   "result": { 
     "id": "minecraft:coarse_dirt",

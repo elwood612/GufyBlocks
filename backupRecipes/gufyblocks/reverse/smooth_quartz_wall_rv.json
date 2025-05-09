@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "smooth_quartz",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:smooth_quartz_wall"
+    }
+  },
+  "result": { 
+    "id": "minecraft:smooth_quartz",
+    "count": 2
+  }
+}

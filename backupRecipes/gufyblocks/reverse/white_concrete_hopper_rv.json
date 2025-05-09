@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "white_concrete",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    {
+    "item": "gufyblocks:white_concrete_hopper"
+    }
+  },
+  "result": { 
+    "id": "minecraft:white_concrete",
+    "count": 2
+  }
+}

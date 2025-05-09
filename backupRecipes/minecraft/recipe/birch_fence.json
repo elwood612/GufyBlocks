@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "tag": "gufyblocks:birch_planks"
+    }
+  },
+  "result": {
+    "id": "minecraft:birch_fence",
+    "count": 4
+  }
+}

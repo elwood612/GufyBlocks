@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": 
+    {
+      "item": "minecraft:polished_diorite"
+    },
+  "result": {
+    "id": "gufyblocks:diorite_cobble_bricks_hopper",
+    "count": 1
+    }
+}
