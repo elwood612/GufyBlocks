@@ -2,6 +2,7 @@
 	"parent": "gufyblocks:block/verticalslab_topbottom",
 	"textures": {
         "top": "minecraft:block/hay_block_top",
-        "side": "minecraft:block/hay_block_side"
+        "side": "minecraft:block/hay_block_side",
+		"bottom": "minecraft:block/hay_block_top"
     }
 }

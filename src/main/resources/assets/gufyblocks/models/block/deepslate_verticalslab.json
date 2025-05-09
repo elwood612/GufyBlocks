@@ -3,6 +3,7 @@
 	"textures": 
 	{
 		"side": "minecraft:block/deepslate",
-		"top": "minecraft:block/deepslate_top"
+		"top": "minecraft:block/deepslate_top",
+		"bottom": "minecraft:block/deepslate_top"
 	}
 }
