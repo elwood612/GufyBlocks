@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+	"#",
+	"#"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:resin_bricks"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:resin_bricks_verticalslab",
+    "count": 6
+  }
+}

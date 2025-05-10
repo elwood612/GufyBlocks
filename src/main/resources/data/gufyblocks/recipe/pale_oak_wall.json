@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+	"###",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:pale_oak_planks"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:pale_oak_wall",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:pale_oak_wood"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:pale_oak_wood_slab",
+    "count": 6
+  }
+}

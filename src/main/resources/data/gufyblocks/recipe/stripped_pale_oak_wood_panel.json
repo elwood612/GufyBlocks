@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": "gufyblocks:stripped_pale_oak_wood_slab"
+  },
+  "result": {
+    "id": "gufyblocks:stripped_pale_oak_wood_panel",
+    "count": 4
+  }
+}

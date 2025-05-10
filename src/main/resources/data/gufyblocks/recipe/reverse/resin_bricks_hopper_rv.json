@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "resin_bricks",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:resin_bricks_hopper"
+  },
+  "result": 
+  {
+    "id": "minecraft:resin_bricks",
+    "count": 2
+  }
+}

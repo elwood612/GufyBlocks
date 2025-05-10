@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "gufyblocks:pale_oak_parquet"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:pale_oak_parquet_slab",
+    "count": 6
+  }
+}

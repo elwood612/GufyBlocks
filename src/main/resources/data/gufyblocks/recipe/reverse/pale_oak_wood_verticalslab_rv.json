@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "pale_oak_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:pale_oak_wood_verticalslab"
+  },
+  "result": 
+  {
+    "id": "minecraft:pale_oak_wood",
+    "count": 2
+  }
+}

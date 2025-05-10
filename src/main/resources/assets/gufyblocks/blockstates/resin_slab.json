@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/resin_slab" },
+        "type=top": { "model": "gufyblocks:block/resin_slab_top" },
+        "type=double": { "model": "minecraft:block/resin_block" }
+    }
+}

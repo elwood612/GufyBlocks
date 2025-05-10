@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "big_pale_oak",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:big_pale_oak_fence_gate"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:big_pale_oak",
+    "count": 1
+  }
+}

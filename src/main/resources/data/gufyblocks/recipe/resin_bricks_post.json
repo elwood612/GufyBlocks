@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:resin_brick_wall"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:resin_bricks_post",
+    "count": 4
+  }
+}

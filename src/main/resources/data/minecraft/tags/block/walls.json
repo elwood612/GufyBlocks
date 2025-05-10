@@ -1,6 +1,10 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:stripped_pale_oak_wood_wall", 
+    "gufyblocks:pale_oak_wood_wall", 
+    "gufyblocks:big_pale_oak_wall", 
+    "gufyblocks:pale_oak_wall", 
     "gufyblocks:dark_prismarine_wall", 
     "gufyblocks:prismarine_bricks_wall", 
     "gufyblocks:mossy_red_sandstone_cobble_bricks_wall", 

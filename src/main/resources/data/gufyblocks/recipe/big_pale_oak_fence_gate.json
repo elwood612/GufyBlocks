@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": "minecraft:stick",
+    "W": "gufyblocks:big_pale_oak"
+  },
+  "result": {
+    "id": "gufyblocks:big_pale_oak_fence_gate",
+	"count": 1
+  }
+}

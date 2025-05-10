@@ -92,6 +92,14 @@ public interface GufyStrippable {
                 .put(getGufyBlock("cherry_wood_hopper"), getGufyBlock("stripped_cherry_wood_hopper"))
                 .put(getGufyBlock("cherry_wood_fence"), getGufyBlock("stripped_cherry_wood_fence"))
                 .put(getGufyBlock("cherry_wood_panel"), getGufyBlock("stripped_cherry_wood_panel"))
+                // PALE_OAK
+                .put(getGufyBlock("pale_oak_wood_stairs"), getGufyBlock("stripped_pale_oak_wood_stairs"))
+                .put(getGufyBlock("pale_oak_wood_slab"), getGufyBlock("stripped_pale_oak_wood_slab"))
+                .put(getGufyBlock("pale_oak_wood_verticalslab"), getGufyBlock("stripped_pale_oak_wood_verticalslab"))
+                .put(getGufyBlock("pale_oak_wood_wall"), getGufyBlock("stripped_pale_oak_wood_wall"))
+                .put(getGufyBlock("pale_oak_wood_hopper"), getGufyBlock("stripped_pale_oak_wood_hopper"))
+                .put(getGufyBlock("pale_oak_wood_fence"), getGufyBlock("stripped_pale_oak_wood_fence"))
+                .put(getGufyBlock("pale_oak_wood_panel"), getGufyBlock("stripped_pale_oak_wood_panel"))
                 
                 .build();
     });

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "pale_oak_parquet",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:pale_oak_parquet_stairs"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:pale_oak_parquet",
+    "count": 3
+  }
+}

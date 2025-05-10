@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/pale_moss_slab" },
+        "type=top": { "model": "gufyblocks:block/pale_moss_slab_top" },
+        "type=double": { "model": "minecraft:block/pale_moss_block" }
+    }
+}

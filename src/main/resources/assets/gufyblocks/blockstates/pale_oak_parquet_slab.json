@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gufyblocks:block/pale_oak_parquet_slab" },
+        "type=top": { "model": "gufyblocks:block/pale_oak_parquet_slab_top" },
+        "type=double": { "model": "gufyblocks:block/pale_oak_parquet" }
+    }
+}

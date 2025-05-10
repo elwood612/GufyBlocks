@@ -126,7 +126,12 @@ public class GufyRegistry
         add(familyBuilder("warped_hyphae", GufyMaterials.WARPED, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_warped_hyphae", GufyMaterials.WARPED, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_warped_hyphae", GufyMaterials.WARPED, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("mushroom_stem", GufyMaterials.MUSHROOM, ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR)));
+        add(familyBuilder("pale_oak", GufyMaterials.PALE_OAK, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
+        add(familyBuilder("pale_oak_parquet", GufyMaterials.PALE_OAK, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
+        add(familyBuilder("big_pale_oak", GufyMaterials.PALE_OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("pale_oak_wood", GufyMaterials.PALE_OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
+        add(familyBuilder("stripped_pale_oak_wood", GufyMaterials.PALE_OAK, VANILLA_WOOD_TYPES_ALL));
+        add(familyBuilder("chiseled_stripped_pale_oak_wood", GufyMaterials.PALE_OAK, GufyBlockTypes.CARVED_LOG));
 
         // ~~ DIRTS ~~ //
         add(familyBuilder("coarse_dirt", GufyMaterials.DIRT, VANILLA_DIRT_TYPES));
@@ -134,11 +139,14 @@ public class GufyRegistry
         add(familyBuilder("mud_bricks", GufyMaterials.MUD_BRICKS, VANILLA_STONE_TYPES));
         add(familyBuilder("hay", GufyMaterials.THATCH, VANILLA_DIRT_TYPES));
         add(familyBuilder("moss", GufyMaterials.MOSS, VANILLA_DIRT_TYPES));
+        add(familyBuilder("pale_moss", GufyMaterials.PALE_MOSS, VANILLA_DIRT_TYPES));
         add(familyBuilder("rooted_dirt", GufyMaterials.ROOTED_DIRT, VANILLA_DIRT_TYPES));
         add(familyBuilder("nether_wart_block", GufyMaterials.NETHER_WART, VANILLA_DIRT_TYPES));
         add(familyBuilder("warped_wart", GufyMaterials.WARPED_WART, VANILLA_DIRT_TYPES));
         add(familyBuilder("snow", GufyMaterials.SNOW, VANILLA_DIRT_TYPES));
         add(familyBuilder("packed_ice", GufyMaterials.ICE, PACKED_ICE_TYPES));
+        add(familyBuilder("resin", GufyMaterials.RESIN, VANILLA_DIRT_TYPES));
+        add(familyBuilder("resin_bricks", GufyMaterials.RESIN_BRICKS, VANILLA_STONE_TYPES));
 
         // ~~ STONES ~~ //
         add(familyBuilder("stone", GufyMaterials.STONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
@@ -202,7 +210,7 @@ public class GufyRegistry
         add(familyBuilder("emerald", GufyMaterials.EMERALD, VANILLA_STONE_TYPES_ALL));
         add(familyBuilder("diamond", GufyMaterials.DIAMOND, VANILLA_STONE_TYPES_ALL));
         add(familyBuilder("sandstone", GufyMaterials.SANDSTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("cut_sandstone", GufyMaterials.SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
+        add(familyBuilder("cut_sandstone", GufyMaterials.SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.STAIRS, GufyBlockTypes.WALL)));
         add(familyBuilder("smooth_sandstone", GufyMaterials.SMOOTH_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
         add(familyBuilder("sandstone_bricks", GufyMaterials.SANDSTONE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR)));
         add(familyBuilder("cracked_sandstone_bricks", GufyMaterials.SANDSTONE, GUFY_STONE_TYPES));
@@ -211,7 +219,7 @@ public class GufyRegistry
         add(familyBuilder("cracked_sandstone_cobble_bricks", GufyMaterials.SANDSTONE, GUFY_STONE_TYPES));
         add(familyBuilder("mossy_sandstone_cobble_bricks", GufyMaterials.SANDSTONE, GUFY_STONE_TYPES));
         add(familyBuilder("red_sandstone", GufyMaterials.RED_SANDSTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("cut_red_sandstone", GufyMaterials.RED_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
+        add(familyBuilder("cut_red_sandstone", GufyMaterials.RED_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.STAIRS, GufyBlockTypes.WALL)));
         add(familyBuilder("smooth_red_sandstone", GufyMaterials.SMOOTH_RED_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
         add(familyBuilder("red_sandstone_bricks", GufyMaterials.RED_SANDSTONE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR)));
         add(familyBuilder("cracked_red_sandstone_bricks", GufyMaterials.RED_SANDSTONE, GUFY_STONE_TYPES));
@@ -239,6 +247,7 @@ public class GufyRegistry
         add(familyBuilder("prismarine", GufyMaterials.PRISMARINE, VANILLA_STONE_TYPES));
         add(familyBuilder("prismarine_bricks", GufyMaterials.PRISMARINE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
         add(familyBuilder("dark_prismarine", GufyMaterials.PRISMARINE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
+
 
         // ~~ TERRACOTTA ~~ //
         add(familyBuilder("terracotta", GufyMaterials.TERRACOTTA, VANILLA_STONE_TYPES_ALL));
@@ -412,6 +421,7 @@ public class GufyRegistry
         add(familyBuilder("warped_framed_daub", GufyMaterials.FRAMED_BROWN, FRAMED_BLOCK_TYPES)); // DEPRECATED
         add(familyBuilder("daub", GufyMaterials.DAUB, GUFY_DIRT_TYPES)); // DEPRECATED
         add(familyBuilder("thatch", GufyMaterials.THATCH, GUFY_DIRT_TYPES)); // DEPRECATED
+        add(familyBuilder("mushroom_stem", GufyMaterials.MUSHROOM, ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR))); // DEPRECATED
     }};
     //**************************************************************//
 

@@ -202,6 +202,7 @@ public interface GufyCrackable {
                 .put(Blocks.STRIPPED_CHERRY_WOOD, getGufyBlock("chiseled_stripped_cherry_wood"))
                 .put(Blocks.STRIPPED_SPRUCE_WOOD, getGufyBlock("chiseled_stripped_spruce_wood"))
                 .put(Blocks.STRIPPED_WARPED_HYPHAE, getGufyBlock("chiseled_stripped_warped_hyphae"))
+                .put(Blocks.STRIPPED_PALE_OAK_WOOD, getGufyBlock("chiseled_stripped_pale_oak_wood"))
 
                 .build();
     });

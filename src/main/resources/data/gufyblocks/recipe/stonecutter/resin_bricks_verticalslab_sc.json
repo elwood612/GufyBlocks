@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:resin_bricks",
+  "result":  {
+  "id": "gufyblocks:resin_bricks_verticalslab",
+  "count": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "gufyblocks:big_pale_oak"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:big_pale_oak_stairs",
+    "count": 6
+  }
+}

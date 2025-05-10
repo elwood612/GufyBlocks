@@ -146,7 +146,11 @@ public enum GufyMaterials
 	DRIPSTONE(MapColor.TERRACOTTA_BROWN, SoundType.DRIPSTONE_BLOCK, 1.5f, 1.0f, true, true),
 	MUSHROOM(MapColor.WOOL, SoundType.WOOD, 0.2f, 0.2f, false, true),
 	ICE(MapColor.ICE, SoundType.GLASS, 0.5f, 0.5f, false, true),
-	SNOW(MapColor.SNOW, SoundType.SNOW, 0.2f, 0.2f, true, true);
+	SNOW(MapColor.SNOW, SoundType.SNOW, 0.2f, 0.2f, true, true),
+	RESIN(MapColor.TERRACOTTA_ORANGE, SoundType.RESIN, 0f, 0.1f, false, true),
+	RESIN_BRICKS(MapColor.TERRACOTTA_ORANGE, SoundType.RESIN_BRICKS, 1.5f, 6f, true, true),
+	PALE_MOSS(MapColor.COLOR_LIGHT_GRAY, SoundType.MOSS, 0.1f, 0.1f, false, true),
+	PALE_OAK(MapColor.QUARTZ, SoundType.WOOD, 2.0f, 3.0f, true, true);
 
     public final MapColor color;
     public final SoundType sound;

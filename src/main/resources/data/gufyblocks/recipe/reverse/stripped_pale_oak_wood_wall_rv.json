@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stripped_pale_oak_wood",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:stripped_pale_oak_wood_wall"
+  },
+  "result": 
+  {
+    "id": "minecraft:stripped_pale_oak_wood",
+    "count": 2
+  }
+}

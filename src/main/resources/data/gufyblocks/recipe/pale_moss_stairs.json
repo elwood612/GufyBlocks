@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:pale_moss_block"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:pale_moss_stairs",
+    "count": 6
+  }
+}

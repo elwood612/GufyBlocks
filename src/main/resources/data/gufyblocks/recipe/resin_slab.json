@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:resin_block"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:resin_slab",
+    "count": 6
+  }
+}
