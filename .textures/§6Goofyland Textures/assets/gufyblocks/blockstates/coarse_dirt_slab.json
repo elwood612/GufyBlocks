@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/coarse_dirt_slab", "weight": 21 },
+        	{ "model": "gufyblocks:block/coarse_dirt_slab2", "weight": 1 },
+       		{ "model": "gufyblocks:block/coarse_dirt_slab3", "weight": 1 },
+        	{ "model": "gufyblocks:block/coarse_dirt_slab4", "weight": 1 }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/coarse_dirt_slab_top", "weight": 21  },
+        	{ "model": "gufyblocks:block/coarse_dirt_slab_top2", "weight": 1 },
+        	{ "model": "gufyblocks:block/coarse_dirt_slab_top3", "weight": 1 },
+        	{ "model": "gufyblocks:block/coarse_dirt_slab_top4", "weight": 1 } 
+        ],
+        "type=double": [
+            { "model": "block/coarse_dirt", "weight": 21 },
+			{ "model": "block/coarse_dirt", "weight": 21, "y": 90, "x": 90 },
+			{ "model": "block/coarse_dirt", "weight": 21, "y": 180, "x": 180 },
+			{ "model": "block/coarse_dirt", "weight": 21, "y": 270, "x": 270 },
+			{ "model": "block/coarse_dirt2", "weight": 1 },
+			{ "model": "block/coarse_dirt2", "weight": 1, "y": 90, "x": 90 },
+			{ "model": "block/coarse_dirt2", "weight": 1, "y": 180, "x": 180 },
+			{ "model": "block/coarse_dirt2", "weight": 1, "y": 270, "x": 270 },
+			{ "model": "block/coarse_dirt3", "weight": 1 },
+			{ "model": "block/coarse_dirt3", "weight": 1, "y": 90, "x": 90 },
+			{ "model": "block/coarse_dirt3", "weight": 1, "y": 180, "x": 180 },
+			{ "model": "block/coarse_dirt3", "weight": 1, "y": 270, "x": 270 },
+			{ "model": "block/coarse_dirt4", "weight": 1 },
+			{ "model": "block/coarse_dirt4", "weight": 1, "y": 90, "x": 90 },
+			{ "model": "block/coarse_dirt4", "weight": 1, "y": 180, "x": 180 },
+			{ "model": "block/coarse_dirt4", "weight": 1, "y": 270, "x": 270 }
+        ]
+    }
+}

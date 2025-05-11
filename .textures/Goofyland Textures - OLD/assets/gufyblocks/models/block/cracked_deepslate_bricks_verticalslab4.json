@@ -1,0 +1,7 @@
+{ 
+	"parent": "gufyblocks:block/verticalslab",
+	"textures": 
+	{
+		"texture": "minecraft:block/cracked_deepslate_bricks4"
+	}
+}

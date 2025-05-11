@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "minecraft:block/packed_ice4",
+        "top": "minecraft:block/packed_ice4",
+        "side": "minecraft:block/packed_ice4"
+    }
+}

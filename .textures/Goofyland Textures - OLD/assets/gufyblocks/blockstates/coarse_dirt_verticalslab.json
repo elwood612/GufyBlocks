@@ -1,0 +1,24 @@
+{ 
+	"variants": {
+		"facing=west":  [ 
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab", "weight": 21 },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab2", "weight": 1 },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab3", "weight": 1 },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab4", "weight": 1 } ],
+        "facing=east":  [ 
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab", "weight": 21, "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab2", "weight": 1, "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab3", "weight": 1, "y": 180, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab4", "weight": 1, "y": 180, "uvlock": true } ],
+        "facing=north": [ 
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab", "weight": 21, "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab2", "weight": 1, "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab3", "weight": 1, "y": 90, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab4", "weight": 1, "y": 90, "uvlock": true } ],
+        "facing=south": [ 
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab", "weight": 21, "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab2", "weight": 1, "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab3", "weight": 1, "y": 270, "uvlock": true },
+				{ "model": "gufyblocks:block/coarse_dirt_verticalslab4", "weight": 1, "y": 270, "uvlock": true } ]
+	} 
+}

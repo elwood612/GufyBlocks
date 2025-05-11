@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/packed_ice_slab" },
+        	{ "model": "gufyblocks:block/packed_ice_slab2" },
+       		{ "model": "gufyblocks:block/packed_ice_slab3" },
+        	{ "model": "gufyblocks:block/packed_ice_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/packed_ice_slab_top" },
+        	{ "model": "gufyblocks:block/packed_ice_slab_top2" },
+        	{ "model": "gufyblocks:block/packed_ice_slab_top3" },
+        	{ "model": "gufyblocks:block/packed_ice_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "minecraft:block/packed_ice" }, 
+        	{ "model": "minecraft:block/packed_ice2" }, 
+        	{ "model": "minecraft:block/packed_ice3" }, 
+        	{ "model": "minecraft:block/packed_ice4" }
+       ]
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "variants": {
+        "distance=1": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				],
+        "distance=2": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				
+				],
+        "distance=3": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				],
+        "distance=4": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				],
+        "distance=5": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				],
+        "distance=6": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				],
+        "distance=7": [
+				{ "model": "block/birch_leaves" },
+				{ "model": "block/birch_leaves2" },
+				{ "model": "block/birch_leaves3" },
+				{ "model": "block/birch_leaves4" }
+				]
+    }
+}

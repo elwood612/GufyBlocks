@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=bottom": [ 
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab2" },
+       		{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab3" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab4" }
+        ],
+        "type=top": [ 
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab_top" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab_top2" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab_top3" },
+        	{ "model": "gufyblocks:block/cracked_deepslate_tiles_slab_top4" } 
+        ],
+        "type=double": [ 
+        	{ "model": "minecraft:block/cracked_deepslate_tiles" }, 
+        	{ "model": "minecraft:block/cracked_deepslate_tiles2" }, 
+        	{ "model": "minecraft:block/cracked_deepslate_tiles3" }, 
+        	{ "model": "minecraft:block/cracked_deepslate_tiles4" }
+       ]
+    }
+}

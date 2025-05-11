@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "minecraft:block/packed_ice2",
+    "top": "minecraft:block/packed_ice2",
+    "side": "minecraft:block/packed_ice2"
+  }
+}

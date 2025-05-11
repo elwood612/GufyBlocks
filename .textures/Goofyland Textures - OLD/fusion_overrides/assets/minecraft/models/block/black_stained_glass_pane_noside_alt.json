@@ -1,0 +1,15 @@
+{
+  "type": "fusion:connecting",
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
+  "loader": "fusion:model",
+  
+  "connections": {
+	"pane":{
+    "type":"is_same_block"
+  }
+  },
+  "textures": {
+    "edge": "minecraft:block/black_stained_glass_pane_top",
+    "pane": "minecraft:block/black_stained_glass"
+  }
+}
