@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
   "group": "bark",
   "key": {
-    "#": "#gufyblocks:pale_oak_logs"
+    "#": "minecraft:pale_oak_log"
   },
   "pattern": [
     "##",

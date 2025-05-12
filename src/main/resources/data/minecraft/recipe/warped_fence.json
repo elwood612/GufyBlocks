@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:warped_planks"
+    "W": "minecraft:warped_planks"
   },
   "result": {
     "id": "minecraft:warped_fence",

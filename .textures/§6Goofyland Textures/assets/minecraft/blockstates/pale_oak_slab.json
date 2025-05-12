@@ -13,10 +13,10 @@
         	{ "model": "minecraft:block/pale_oak_slab_top4" } 
         ],
         "type=double": [ 
-        	{ "model": "minecraft:block/pale_oak" }, 
-        	{ "model": "minecraft:block/pale_oak2" }, 
-        	{ "model": "minecraft:block/pale_oak3" }, 
-        	{ "model": "minecraft:block/pale_oak4" }
+        	{ "model": "minecraft:block/pale_oak_planks" }, 
+        	{ "model": "minecraft:block/pale_oak_planks2" }, 
+        	{ "model": "minecraft:block/pale_oak_planks3" }, 
+        	{ "model": "minecraft:block/pale_oak_planks4" }
        ]
     }
 }

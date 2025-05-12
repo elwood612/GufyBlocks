@@ -31,7 +31,10 @@ import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.familyBuilder;
+import static com.github.elwood612.gufyblocks.util.GufyUtil.familyBuilderNEW;
+import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy;
+import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofLegacyCopy;
 import static com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties.*;
 
 public class GufyRegistry
@@ -65,12 +68,13 @@ public class GufyRegistry
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
         // ~~ TEST ~~ //
-//        add(familyBuilderNEW("wattle_fence", WATTLE, GufyBlockTypes.WATTLEFENCE));
-//        add(familyBuilderNEW("oak", ofFullCopy(Blocks.OAK_PLANKS), VANILLA_WOOD_TYPES));
+        add(familyBuilderNEW("wattle_fence", WATTLE, GufyBlockTypes.WATTLEFENCE));
+        add(familyBuilderNEW("oak", ofFullCopy(Blocks.OAK_PLANKS), VANILLA_WOOD_TYPES));
+        add(familyBuilderNEW("packed_ice", ofFullCopy(Blocks.PACKED_ICE), VANILLA_DIRT_TYPES));
 
         // ~~ WOOD ~~ //
-        add(familyBuilder("wattle_fence", GufyMaterials.WATTLE, GufyBlockTypes.WATTLEFENCE));
-        add(familyBuilder("oak", GufyMaterials.OAK, VANILLA_WOOD_TYPES));
+//        add(familyBuilder("wattle_fence", GufyMaterials.WATTLE, GufyBlockTypes.WATTLEFENCE));
+//        add(familyBuilder("oak", GufyMaterials.OAK, VANILLA_WOOD_TYPES));
         add(familyBuilder("oak_parquet", GufyMaterials.OAK, GUFY_DIRT_TYPES));
         add(familyBuilder("big_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(familyBuilder("oak_wood", GufyMaterials.OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
@@ -151,7 +155,7 @@ public class GufyRegistry
         add(familyBuilder("nether_wart_block", GufyMaterials.NETHER_WART, VANILLA_DIRT_TYPES));
         add(familyBuilder("warped_wart", GufyMaterials.WARPED_WART, VANILLA_DIRT_TYPES));
         add(familyBuilder("snow", GufyMaterials.SNOW, VANILLA_DIRT_TYPES));
-        add(familyBuilder("packed_ice", GufyMaterials.ICE, PACKED_ICE_TYPES));
+//        add(familyBuilder("packed_ice", GufyMaterials.ICE, PACKED_ICE_TYPES));
         add(familyBuilder("resin", GufyMaterials.RESIN, VANILLA_DIRT_TYPES));
         add(familyBuilder("resin_bricks", GufyMaterials.RESIN_BRICKS, VANILLA_STONE_TYPES));
 

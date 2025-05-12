@@ -4,7 +4,7 @@
   "group": "wooden_fence",
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:mangrove_planks"
+    "W": "minecraft:mangrove_planks"
   },
   "pattern": [
     "W#W",

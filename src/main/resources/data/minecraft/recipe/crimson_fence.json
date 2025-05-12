@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:crimson_planks"
+    "W": "minecraft:crimson_planks"
   },
   "result": {
     "id": "minecraft:crimson_fence",

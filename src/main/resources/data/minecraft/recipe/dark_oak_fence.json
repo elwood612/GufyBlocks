@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:dark_oak_planks"
+    "W": "minecraft:dark_oak_planks"
   },
   "result": {
     "id": "minecraft:dark_oak_fence",

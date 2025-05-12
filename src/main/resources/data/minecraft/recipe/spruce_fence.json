@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:spruce_planks"
+    "W": "minecraft:spruce_planks"
   },
   "result": {
     "id": "minecraft:spruce_fence",

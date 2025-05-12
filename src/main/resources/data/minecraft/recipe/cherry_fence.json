@@ -4,7 +4,7 @@
   "group": "wooden_fence",
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:cherry_planks"
+    "W": "minecraft:cherry_planks"
   },
   "pattern": [
     "W#W",

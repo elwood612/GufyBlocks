@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": "minecraft:stick",
-    "W": "#gufyblocks:acacia_planks"
+    "W": "minecraft:acacia_planks"
   },
   "result": {
     "id": "minecraft:acacia_fence",

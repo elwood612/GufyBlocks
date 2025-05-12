@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -38,6 +39,15 @@ public class GufyUtil
                 .sound(block.sound);
         if (block.tool) properties = properties.requiresCorrectToolForDrops();
         if (!block.occlusion) properties = properties.noOcclusion();
+
+        return properties;
+    }
+
+    public static BlockBehaviour.Properties copyPropertiesOf(Block block){
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
+                .mapColor(block.defaultMapColor())
+                .strength(block.defaultDestroyTime())
+                .explosionResistance(block.getExplosionResistance());
 
         return properties;
     }
