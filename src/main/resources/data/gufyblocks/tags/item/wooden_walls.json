@@ -15,6 +15,8 @@
 	"gufyblocks:big_dark_oak_wall",
 	"gufyblocks:big_jungle_wall",
 	"gufyblocks:big_crimson_wall",
-	"gufyblocks:big_warped_wall"
+	"gufyblocks:big_warped_wall",
+	"gufyblocks:big_pale_oak_hopper",
+	"gufyblocks:pale_oak_hopper"
   ]
 }

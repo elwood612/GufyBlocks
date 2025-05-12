@@ -2,6 +2,9 @@
   "values": [
 	"gufyblocks:moss_slab",
 	"gufyblocks:moss_stairs",
-	"gufyblocks:moss_verticalslab"
+	"gufyblocks:moss_verticalslab",
+	"gufyblocks:pale_moss_slab",
+	"gufyblocks:pale_moss_stairs",
+	"gufyblocks:pale_moss_verticalslab"
   ]
 }

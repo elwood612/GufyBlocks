@@ -23,6 +23,8 @@
 	"gufyblocks:dark_oak_parquet_verticalslab",
 	"gufyblocks:jungle_parquet_verticalslab",
 	"gufyblocks:crimson_parquet_verticalslab",
-	"gufyblocks:warped_parquet_verticalslab"
+	"gufyblocks:warped_parquet_verticalslab",
+	"gufyblocks:big_pale_oak_hopper",
+	"gufyblocks:pale_oak_hopper"
   ]
 }

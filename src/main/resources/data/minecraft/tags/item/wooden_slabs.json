@@ -20,6 +20,8 @@
 	"gufyblocks:crimson_parquet_slab",
 	"gufyblocks:warped_parquet_slab",
 	"gufyblocks:mangrove_parquet_slab",
-	"gufyblocks:cherry_parquet_slab"
+	"gufyblocks:cherry_parquet_slab",
+	"gufyblocks:big_pale_oak_slab",
+	"gufyblocks:pale_oak_parquet_slab"
   ]
 }
