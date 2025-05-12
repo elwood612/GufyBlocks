@@ -1,6 +1,5 @@
 package com.github.elwood612.gufyblocks.blocks.blockUtil;
 
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 

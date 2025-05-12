@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
+import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.GufyHammer;
@@ -30,6 +31,8 @@ import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.familyBuilder;
+import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy;
+import static com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties.*;
 
 public class GufyRegistry
 {
@@ -61,73 +64,77 @@ public class GufyRegistry
 
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
+        // ~~ TEST ~~ //
+//        add(familyBuilderNEW("wattle_fence", WATTLE, GufyBlockTypes.WATTLEFENCE));
+//        add(familyBuilderNEW("oak", ofFullCopy(Blocks.OAK_PLANKS), VANILLA_WOOD_TYPES));
+
         // ~~ WOOD ~~ //
         add(familyBuilder("wattle_fence", GufyMaterials.WATTLE, GufyBlockTypes.WATTLEFENCE));
-        add(familyBuilder("oak", GufyMaterials.OAK, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("oak_parquet", GufyMaterials.OAK, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
+        add(familyBuilder("oak", GufyMaterials.OAK, VANILLA_WOOD_TYPES));
+        add(familyBuilder("oak_parquet", GufyMaterials.OAK, GUFY_DIRT_TYPES));
         add(familyBuilder("big_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
         add(familyBuilder("oak_wood", GufyMaterials.OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_oak_wood", GufyMaterials.OAK, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_oak_wood", GufyMaterials.OAK, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("spruce", GufyMaterials.SPRUCE, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("spruce_parquet", GufyMaterials.SPRUCE, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_spruce", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("spruce", GufyMaterials.SPRUCE, VANILLA_WOOD_TYPES));
+        add(familyBuilder("spruce_parquet", GufyMaterials.SPRUCE, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_spruce", GufyMaterials.SPRUCE, GUFY_WOOD_TYPES));
         add(familyBuilder("spruce_wood", GufyMaterials.SPRUCE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_spruce_wood", GufyMaterials.SPRUCE, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_spruce_wood", GufyMaterials.SPRUCE, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("birch", GufyMaterials.BIRCH, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("birch_parquet", GufyMaterials.BIRCH, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_birch", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("birch", GufyMaterials.BIRCH, VANILLA_WOOD_TYPES));
+        add(familyBuilder("birch_parquet", GufyMaterials.BIRCH, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_birch", GufyMaterials.BIRCH, GUFY_WOOD_TYPES));
         add(familyBuilder("birch_wood", GufyMaterials.BIRCH, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_birch_wood", GufyMaterials.BIRCH, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_birch_wood", GufyMaterials.BIRCH, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("dark_oak", GufyMaterials.DARK_OAK, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("dark_oak_parquet", GufyMaterials.DARK_OAK, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_dark_oak", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("dark_oak", GufyMaterials.DARK_OAK, VANILLA_WOOD_TYPES));
+        add(familyBuilder("dark_oak_parquet", GufyMaterials.DARK_OAK, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_dark_oak", GufyMaterials.DARK_OAK, GUFY_WOOD_TYPES));
         add(familyBuilder("dark_oak_wood", GufyMaterials.DARK_OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_dark_oak_wood", GufyMaterials.DARK_OAK, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_dark_oak_wood", GufyMaterials.DARK_OAK, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("jungle", GufyMaterials.JUNGLE, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("jungle_parquet", GufyMaterials.OAK, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_jungle", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("jungle", GufyMaterials.JUNGLE, VANILLA_WOOD_TYPES));
+        add(familyBuilder("jungle_parquet", GufyMaterials.JUNGLE, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_jungle", GufyMaterials.JUNGLE, GUFY_WOOD_TYPES));
         add(familyBuilder("jungle_wood", GufyMaterials.JUNGLE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_jungle_wood", GufyMaterials.JUNGLE, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_jungle_wood", GufyMaterials.JUNGLE, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("acacia", GufyMaterials.ACACIA, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("acacia_parquet", GufyMaterials.ACACIA, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_acacia", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("acacia", GufyMaterials.ACACIA, VANILLA_WOOD_TYPES));
+        add(familyBuilder("acacia_parquet", GufyMaterials.ACACIA, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_acacia", GufyMaterials.ACACIA, GUFY_WOOD_TYPES));
         add(familyBuilder("acacia_wood", GufyMaterials.ACACIA, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_acacia_wood", GufyMaterials.ACACIA, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_acacia_wood", GufyMaterials.ACACIA, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("mangrove", GufyMaterials.MANGROVE, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("mangrove_parquet", GufyMaterials.MANGROVE, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
+        add(familyBuilder("mangrove", GufyMaterials.MANGROVE, VANILLA_WOOD_TYPES));
+        add(familyBuilder("mangrove_parquet", GufyMaterials.MANGROVE, GUFY_DIRT_TYPES));
         add(familyBuilder("big_mangrove", GufyMaterials.MANGROVE, GUFY_WOOD_TYPES));
         add(familyBuilder("mangrove_wood", GufyMaterials.MANGROVE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_mangrove_wood", GufyMaterials.MANGROVE, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_mangrove_wood", GufyMaterials.MANGROVE, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("cherry", GufyMaterials.CHERRY, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("cherry_parquet", GufyMaterials.CHERRY, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
+        add(familyBuilder("cherry", GufyMaterials.CHERRY, VANILLA_WOOD_TYPES));
+        add(familyBuilder("cherry_parquet", GufyMaterials.CHERRY, GUFY_DIRT_TYPES));
         add(familyBuilder("big_cherry", GufyMaterials.CHERRY, GUFY_WOOD_TYPES));
         add(familyBuilder("cherry_wood", GufyMaterials.CHERRY, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_cherry_wood", GufyMaterials.CHERRY, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_cherry_wood", GufyMaterials.CHERRY, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("bamboo", GufyMaterials.BAMBOO, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
+        add(familyBuilder("bamboo", GufyMaterials.BAMBOO, VANILLA_WOOD_TYPES));
         add(familyBuilder("bamboo_mosaic", GufyMaterials.BAMBOO, GufyBlockTypes.VERTICALSLAB));
         add(familyBuilder("chiseled_stripped_bamboo_block", GufyMaterials.BAMBOO, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("crimson", GufyMaterials.CRIMSON, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("crimson_parquet", GufyMaterials.CRIMSON, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_crimson", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("crimson", GufyMaterials.CRIMSON, VANILLA_WOOD_TYPES));
+        add(familyBuilder("crimson_parquet", GufyMaterials.CRIMSON, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_crimson", GufyMaterials.CRIMSON, GUFY_WOOD_TYPES));
         add(familyBuilder("crimson_hyphae", GufyMaterials.CRIMSON, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_crimson_hyphae", GufyMaterials.CRIMSON, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_crimson_hyphae", GufyMaterials.CRIMSON, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("warped", GufyMaterials.WARPED, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("warped_parquet", GufyMaterials.WARPED, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
-        add(familyBuilder("big_warped", GufyMaterials.OAK, GUFY_WOOD_TYPES));
+        add(familyBuilder("warped", GufyMaterials.WARPED, VANILLA_WOOD_TYPES));
+        add(familyBuilder("warped_parquet", GufyMaterials.WARPED, GUFY_DIRT_TYPES));
+        add(familyBuilder("big_warped", GufyMaterials.WARPED, GUFY_WOOD_TYPES));
         add(familyBuilder("warped_hyphae", GufyMaterials.WARPED, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_warped_hyphae", GufyMaterials.WARPED, VANILLA_WOOD_TYPES_ALL));
         add(familyBuilder("chiseled_stripped_warped_hyphae", GufyMaterials.WARPED, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("pale_oak", GufyMaterials.PALE_OAK, ArrayUtils.addAll(VANILLA_WOOD_TYPES)));
-        add(familyBuilder("pale_oak_parquet", GufyMaterials.PALE_OAK, ArrayUtils.addAll(GUFY_DIRT_TYPES)));
+        add(familyBuilder("pale_oak", GufyMaterials.PALE_OAK, VANILLA_WOOD_TYPES));
+        add(familyBuilder("pale_oak_parquet", GufyMaterials.PALE_OAK, GUFY_DIRT_TYPES));
         add(familyBuilder("big_pale_oak", GufyMaterials.PALE_OAK, GUFY_WOOD_TYPES));
         add(familyBuilder("pale_oak_wood", GufyMaterials.PALE_OAK, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
         add(familyBuilder("stripped_pale_oak_wood", GufyMaterials.PALE_OAK, VANILLA_WOOD_TYPES_ALL));
