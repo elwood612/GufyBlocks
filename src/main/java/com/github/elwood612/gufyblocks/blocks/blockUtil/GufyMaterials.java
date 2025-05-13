@@ -3,6 +3,7 @@ package com.github.elwood612.gufyblocks.blocks.blockUtil;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 
+// DEPRECATED
 public enum GufyMaterials 
 {
 	//Create Materials in here
