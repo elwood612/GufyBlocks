@@ -25,19 +25,6 @@ public class GufyUtil
 {
 
     //*******************PROPERTIES BUILDER**************************//
-    public static BlockBehaviour.Properties propertiesBuilder(GufyMaterials block)
-    {
-        BlockBehaviour.Properties properties = BlockBehaviour.Properties
-                .of()
-                .mapColor(block.color)
-                .strength(block.hardness, block.resistance)
-                .sound(block.sound);
-        if (block.tool) properties = properties.requiresCorrectToolForDrops();
-        if (!block.occlusion) properties = properties.noOcclusion();
-
-        return properties;
-    }
-
     public static BlockBehaviour.Properties copyPropertiesOf(BlockBehaviour.Properties parent){
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of();
 
@@ -77,56 +64,34 @@ public class GufyUtil
     }
 
     //***********************FAMILY BUILDER***********************//
-        public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyBlockTypes ... blockTypes)
-    {
-        return new ArrayList<>()
-        {{
-            for (GufyBlockTypes blockType: blockTypes)
-            {
+    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyBlockTypes ... blockTypes) {
+        return new ArrayList<>() {{
+            for (GufyBlockTypes blockType: blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
                 add(getVariant(name, blockProperties, parentBlock, blockType));
             }
         }};
     }
 
-    public static List<DeferredBlock<Block>> familyBuilder(String name, BlockBehaviour.Properties parentProperties, GufyBlockTypes ... blockTypes)
-    {
-        return new ArrayList<>()
-        {{
-            for (GufyBlockTypes blockType: blockTypes)
-            {
+    public static List<DeferredBlock<Block>> familyBuilder(String name, BlockBehaviour.Properties parentProperties, GufyBlockTypes ... blockTypes) {
+        return new ArrayList<>() {{
+            for (GufyBlockTypes blockType: blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentProperties);
                 add(getVariant(name, blockProperties, getStairParent(name), blockType));
             }
         }};
     }
 
-    //********************FAMILY COPPER BUILDER********************//
-    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes)
-    {
-        return new ArrayList<>()
-        {{
-            for (GufyBlockTypes blockType : blockTypes)
-            {
+    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes) {
+        return new ArrayList<>() {{
+            for (GufyBlockTypes blockType : blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
                 add(getVariant(name, blockProperties, parentBlock, state, blockType));
             }
         }};
     }
 
-    public static List<DeferredBlock<Block>> familyBuilder(String name, BlockBehaviour.Properties parentProperties, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes)
-    {
-        return new ArrayList<>()
-        {{
-            for (GufyBlockTypes blockType : blockTypes)
-            {
-                BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentProperties);
-                add(getVariant(name, blockProperties, getStairParent(name), state, blockType));
-            }
-        }};
-    }
-
-
+    //************************GET VARIANT***************************//
     public static DeferredBlock<Block> getVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, GufyBlockTypes blockType)
     {
         return switch (blockType) {

@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "model": {
+    "type": "minecraft:model",
+    "model": "minecraft:block/glass_item/glass"
+  }
+}
