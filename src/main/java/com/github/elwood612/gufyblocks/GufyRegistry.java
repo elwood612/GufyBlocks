@@ -146,7 +146,7 @@ public class GufyRegistry
         add(familyBuilder("nether_wart_block", Blocks.NETHER_WART_BLOCK, VANILLA_DIRT_TYPES));
         add(familyBuilder("warped_wart", Blocks.WARPED_WART_BLOCK, VANILLA_DIRT_TYPES));
         add(familyBuilder("snow", Blocks.SNOW_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("packed_ice", Blocks.PACKED_ICE, PACKED_ICE_TYPES));
+        add(familyBuilder("packed_ice", Blocks.PACKED_ICE, VANILLA_DIRT_TYPES));
         add(familyBuilder("resin", Blocks.RESIN_BLOCK, VANILLA_DIRT_TYPES));
         add(familyBuilder("resin_bricks", Blocks.RESIN_BRICKS, VANILLA_STONE_TYPES));
 
@@ -340,6 +340,7 @@ public class GufyRegistry
         add(familyBuilder("bamboo_framed_glass", GufyProperties.BAMBOO_FRAMED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("crimson_framed_glass", GufyProperties.CRIMSON_FRAMED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("warped_framed_glass", GufyProperties.WARPED_FRAMED_GLASS, GufyBlockTypes.PANE));
+//        add(familyBuilder("pale_oak_framed_glass", GufyProperties.PALE_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
 
         // ~~ FRAMED TERRACOTTA ~~ //
         add(familyBuilder("oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
@@ -353,7 +354,8 @@ public class GufyRegistry
         add(familyBuilder("bamboo_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
         add(familyBuilder("crimson_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
         add(familyBuilder("warped_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
-        add(familyBuilder("mushroom_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
+//        add(familyBuilder("pale_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
+
 
         // ~~ COPPER ~~ //
         add(familyBuilder("copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
@@ -424,6 +426,7 @@ public class GufyRegistry
         add(familyBuilder("thatch", Blocks.HAY_BLOCK, GUFY_DIRT_TYPES)); // DEPRECATED
         add(familyBuilder("mushroom_stem", Blocks.BROWN_MUSHROOM_BLOCK, ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR))); // DEPRECATED
         add(familyBuilder("mushroom_framed_glass", GufyProperties.MUSHROOM_FRAMED_GLASS, GufyBlockTypes.PANE)); // DEPRECATED
+        add(familyBuilder("mushroom_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES)); // DEPRECATED
     }};
     //**************************************************************//
 

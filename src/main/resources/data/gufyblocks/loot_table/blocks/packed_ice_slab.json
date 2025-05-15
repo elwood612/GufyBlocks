@@ -26,6 +26,23 @@
           ],
           "name": "gufyblocks:packed_ice_slab"
         }
+      ],
+	  "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "minecraft:silk_touch",
+                  "levels": {
+                    "min": 1
+                  }
+                }
+              ]
+            }
+          }
+        }
       ]
     }
   ]
