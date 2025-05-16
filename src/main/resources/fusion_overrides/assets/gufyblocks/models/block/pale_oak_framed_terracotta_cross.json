@@ -1,0 +1,10 @@
+{
+    "parent": "block/cube_bottom_top",
+    "type": "fusion:connecting",
+    "loader": "fusion:model",
+    "textures": {
+        "side": "gufyblocks:block/pale_oak_framed_terracotta_cross_fusion",
+        "bottom": "gufyblocks:block/pale_oak_framed_terracotta_cross",
+        "top": "gufyblocks:block/pale_oak_framed_terracotta_cross"
+    }
+}

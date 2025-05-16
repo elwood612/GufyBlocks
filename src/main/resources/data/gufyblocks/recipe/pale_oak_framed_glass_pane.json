@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_glass_panes",
+  "ingredients": [
+    "minecraft:glass_pane",
+    "#gufyblocks:pale_oak_fences"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:pale_oak_framed_glass_pane"
+  }
+}

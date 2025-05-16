@@ -1,6 +1,14 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:pale_oak_framed_terracotta_left", 
+ 
+    "gufyblocks:pale_oak_framed_terracotta_right", 
+ 
+    "gufyblocks:pale_oak_framed_terracotta_cross", 
+ 
+    "gufyblocks:pale_oak_framed_terracotta", 
+ 
     "gufyblocks:resin_bricks_verticalslab", 
     "gufyblocks:resin_bricks_hopper", 
     "gufyblocks:resin_bricks_post", 

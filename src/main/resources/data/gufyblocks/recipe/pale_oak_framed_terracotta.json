@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "framed_terracotta",
+  "ingredients": [
+    "minecraft:white_terracotta",
+    "#gufyblocks:pale_oak_fences"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:pale_oak_framed_terracotta"
+  }
+}

@@ -340,7 +340,7 @@ public class GufyRegistry
         add(familyBuilder("bamboo_framed_glass", GufyProperties.BAMBOO_FRAMED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("crimson_framed_glass", GufyProperties.CRIMSON_FRAMED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("warped_framed_glass", GufyProperties.WARPED_FRAMED_GLASS, GufyBlockTypes.PANE));
-//        add(familyBuilder("pale_oak_framed_glass", GufyProperties.PALE_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("pale_oak_framed_glass", GufyProperties.PALE_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
 
         // ~~ FRAMED TERRACOTTA ~~ //
         add(familyBuilder("oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
@@ -354,7 +354,7 @@ public class GufyRegistry
         add(familyBuilder("bamboo_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
         add(familyBuilder("crimson_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
         add(familyBuilder("warped_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
-//        add(familyBuilder("pale_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
+        add(familyBuilder("pale_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
 
 
         // ~~ COPPER ~~ //
