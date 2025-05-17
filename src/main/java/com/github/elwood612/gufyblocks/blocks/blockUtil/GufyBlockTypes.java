@@ -43,7 +43,4 @@ public enum GufyBlockTypes
 
     CARVED_LOG,
     SEAT,
-    ICE_STAIRS,
-    ICE_SLAB,
-    ICE_VERTICALSLAB,
 }

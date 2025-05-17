@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "render_type": "translucent",
   "textures": {
-    "layer0": "minecraft:block/glass_item/glass"
+    "layer0": "minecraft:item/glass"
   }
 }

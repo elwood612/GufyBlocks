@@ -106,9 +106,9 @@ public class GufyUtil
             case HOPPER -> createRegistry(name + "_hopper", () -> new GufyHopper(blockProperties), blockProperties);
             case POST -> createRegistry(name + "_post", () -> new GufyPost(blockProperties), blockProperties);
             case PILLAR -> createRegistry(name + "_pillar", () -> new RotatedPillarBlock(blockProperties), blockProperties);
-            case STONE_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.IRON, blockProperties), blockProperties);
             case TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties);
-            case WOOL_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties);
+            case STONE_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new GufyTrapdoor(BlockSetType.IRON, blockProperties), blockProperties);
+            case WOOL_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new GufyTrapdoor(BlockSetType.OAK, blockProperties), blockProperties);
             case PANEL -> createRegistry(name + "_panel", () -> new GufyPanel(blockProperties), blockProperties);
             case FENCE -> createRegistry(name + "_fence", () -> new FenceBlock(blockProperties), blockProperties);
             case GUFYFENCE -> createRegistry(name + "_fence", () -> new GufyFence(blockProperties), blockProperties);
@@ -122,7 +122,7 @@ public class GufyUtil
             case FRAMED_RIGHT -> createRegistry(name + "_right", () -> new Block(blockProperties), blockProperties);
             case FRAMED_CROSS -> createRegistry(name + "_cross", () -> new Block(blockProperties), blockProperties);
             case CARVED_LOG -> createRegistry(name, () -> new RotatedPillarBlock(blockProperties), blockProperties);
-            case SEAT -> createRegistry(name, () -> new GufySeat(blockProperties.pushReaction(PushReaction.DESTROY)), blockProperties);
+            case SEAT -> createRegistry(name, () -> new GufySeat(blockProperties), blockProperties);
             default -> null;
         };
     }
@@ -343,13 +343,6 @@ public class GufyUtil
                     GufyBlockTypes.FRAMED_LEFT,
                     GufyBlockTypes.FRAMED_RIGHT,
                     GufyBlockTypes.FRAMED_CROSS
-            });
-
-            // PACKED_ICE_TYPES - 14
-            add(new GufyBlockTypes[] {
-                    GufyBlockTypes.ICE_STAIRS,
-                    GufyBlockTypes.ICE_SLAB,
-                    GufyBlockTypes.ICE_VERTICALSLAB
             });
         }};
     }

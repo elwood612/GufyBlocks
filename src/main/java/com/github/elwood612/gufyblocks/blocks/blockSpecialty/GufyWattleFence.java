@@ -129,5 +129,4 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
     {
         return false;
     }
-
 }

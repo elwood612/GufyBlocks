@@ -12,6 +12,6 @@
   "loader": "fusion:model",
   "textures": {
     "edge": "minecraft:block/blue_stained_glass_pane_top",
-    "pane": "minecraft:block/blue_stained_glass"
+    "pane": "minecraft:block/blue_stained_glass_connected"
   }
 }

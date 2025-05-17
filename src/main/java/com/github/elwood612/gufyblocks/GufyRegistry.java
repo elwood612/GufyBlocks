@@ -18,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -55,7 +56,6 @@ public class GufyRegistry
     private static final GufyBlockTypes[] WAXED_CUT_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(11);
     private static final GufyBlockTypes[] VANILLA_STRIPPABLE_WOOD_TYPES_ALL = GufyUtil.blocktypeBuilder().get(12);
     private static final GufyBlockTypes[] FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(13);
-    private static final GufyBlockTypes[] PACKED_ICE_TYPES = GufyUtil.blocktypeBuilder().get(14);
     //**************************************************************//
 
 
@@ -249,7 +249,6 @@ public class GufyRegistry
         add(familyBuilder("prismarine", Blocks.PRISMARINE, VANILLA_STONE_TYPES));
         add(familyBuilder("prismarine_bricks", Blocks.PRISMARINE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
         add(familyBuilder("dark_prismarine", Blocks.DARK_PRISMARINE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-
 
         // ~~ TERRACOTTA ~~ //
         add(familyBuilder("terracotta", Blocks.TERRACOTTA, VANILLA_STONE_TYPES_ALL));

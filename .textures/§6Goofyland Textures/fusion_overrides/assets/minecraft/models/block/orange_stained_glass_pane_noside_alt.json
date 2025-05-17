@@ -12,6 +12,6 @@
   "loader": "fusion:model",
   "textures": {
     "edge": "minecraft:block/orange_stained_glass_pane_top",
-    "pane": "minecraft:block/orange_stained_glass"
+    "pane": "minecraft:block/orange_stained_glass_connected"
   }
 }

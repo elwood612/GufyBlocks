@@ -3,7 +3,7 @@
   "type": "connecting",
   "parent": "minecraft:block/template_glass_pane_post",
   "textures": {
-	"pane": "minecraft:block/black_stained_glass",  
+	"pane": "minecraft:block/black_stained_glass_connected",  
     "edge": "minecraft:block/black_stained_glass_pane_top"
   },
   "connections": {
