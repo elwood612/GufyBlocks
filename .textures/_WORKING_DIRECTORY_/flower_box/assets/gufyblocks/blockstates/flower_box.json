@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=north,face=wall": {
+      "model": "gufyblocks:block/flower_box"
+    },
+    "facing=east,face=wall": {
+      "model": "gufyblocks:block/flower_box",
+      "y": 90
+    },
+    "facing=south,face=wall": {
+      "model": "gufyblocks:block/flower_box",
+      "y": 180
+    },
+    "facing=west,face=wall": {
+      "model": "gufyblocks:block/flower_box",
+      "y": 270
+    },
+    "facing=north,face=floor": {
+      "model": "gufyblocks:block/flower_box_floor"
+    },
+    "facing=east,face=floor": {
+      "model": "gufyblocks:block/flower_box_floor",
+      "y": 90
+    },
+    "facing=south,face=floor": {
+      "model": "gufyblocks:block/flower_box_floor",
+      "y": 180
+    },
+    "facing=west,face=floor": {
+      "model": "gufyblocks:block/flower_box_floor",
+      "y": 270
+    },
+
+    "facing=north,face=ceiling": {
+      "model": "gufyblocks:block/flower_box_ceiling"
+    },
+    "facing=east,face=ceiling": {
+      "model": "gufyblocks:block/flower_box_ceiling",
+      "y": 90
+    },
+    "facing=south,face=ceiling": {
+      "model": "gufyblocks:block/flower_box_ceiling",
+      "y": 180
+    },
+    "facing=west,face=ceiling": {
+      "model": "gufyblocks:block/flower_box_ceiling",
+      "y": 270
+    }
+  }
+}
