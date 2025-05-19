@@ -10,7 +10,7 @@ import static com.github.elwood612.gufyblocks.util.GufyUtil.copyPropertiesOf;
 
 public class GufyProperties {
 
-    public static final BlockBehaviour.Properties WATTLE = copyPropertiesOf(Blocks.OAK_FENCE).strength(0.5f);
+    public static final BlockBehaviour.Properties WATTLE = copyPropertiesOf(Blocks.OAK_FENCE).strength(0.5f).noOcclusion();
     public static final BlockBehaviour.Properties STONE_TRAPDOOR = copyPropertiesOf(Blocks.STONE).noOcclusion();
     public static final BlockBehaviour.Properties OAK_FRAMED_GLASS = copyPropertiesOf(Blocks.GLASS_PANE).mapColor(MapColor.WOOD);
     public static final BlockBehaviour.Properties SPRUCE_FRAMED_GLASS = copyPropertiesOf(Blocks.GLASS_PANE).mapColor(MapColor.PODZOL);

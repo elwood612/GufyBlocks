@@ -10,5 +10,4 @@ public class GufyPane extends IronBarsBlock {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(NORTH, Boolean.FALSE).setValue(EAST, Boolean.FALSE).setValue(SOUTH, Boolean.FALSE).setValue(WEST, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE));
     }
-
 }

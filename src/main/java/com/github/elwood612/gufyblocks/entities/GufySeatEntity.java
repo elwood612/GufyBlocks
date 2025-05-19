@@ -111,7 +111,7 @@ public class GufySeatEntity extends Entity
 
     @Override
     protected void readAdditionalSaveData(@NotNull CompoundTag tag) {
-        this.ejectType = EjectType.fromName(tag.getString("EjectType"));
+        this.ejectType = EjectType.fromName(tag.getStringOr("EjectType", "North"));
     }
 
     @Override
@@ -121,7 +121,6 @@ public class GufySeatEntity extends Entity
 
     public enum EjectType {
         NORTH("north", (state, livingEntity) -> Direction.NORTH),
-//        BLOCK_HORIZONTAL_FACING("block_horizontal_facing", (state, livingEntity) -> state.getValue(BlockStateProperties.HORIZONTAL_FACING)),
         ENTITY_HEAD_ROTATION("entity_head_rotation", (state, livingEntity) -> Direction.fromYRot(livingEntity.yHeadRot));
 
         private final String name;

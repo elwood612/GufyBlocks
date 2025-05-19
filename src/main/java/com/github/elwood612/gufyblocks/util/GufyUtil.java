@@ -116,7 +116,7 @@ public class GufyUtil
             case PARQUET -> createRegistry(name + "_parquet", () -> new Block(blockProperties), blockProperties);
             case WATTLEFENCE -> createRegistry(name, () -> new GufyWattleFence(blockProperties), blockProperties);
             case WAGONWHEEL -> createRegistry(name, () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties);
-            case PANE -> createRegistry(name + "_pane", () -> new GufyPane(blockProperties), blockProperties);
+            case PANE -> createRegistry(name + "_pane", () -> new IronBarsBlock(blockProperties), blockProperties);
             case CHISELED -> createRegistry("chiseled_" + name, () -> new Block(blockProperties), blockProperties);
             case FRAMED_LEFT -> createRegistry(name + "_left", () -> new Block(blockProperties), blockProperties);
             case FRAMED_RIGHT -> createRegistry(name + "_right", () -> new Block(blockProperties), blockProperties);

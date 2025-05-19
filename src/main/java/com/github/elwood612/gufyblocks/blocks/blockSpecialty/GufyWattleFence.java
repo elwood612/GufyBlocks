@@ -70,7 +70,8 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
         
         return BlockState.setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
-	
+
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) 
     {
     	switch((Direction)state.getValue(FACING).getOpposite())
@@ -85,7 +86,8 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
                 return (VoxelShape) NORTH_SHAPE;
         }
     }
-    
+
+    @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
     	switch((Direction)state.getValue(FACING).getOpposite())
         {
@@ -125,8 +127,8 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type) 
-    {
+    @Override
+    protected boolean isPathfindable(BlockState p_53306_, PathComputationType p_53309_) {
         return false;
     }
 }

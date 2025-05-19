@@ -44,7 +44,7 @@ public class GufyMossClump extends Item
             }
             level.setBlock(blockpos, (BlockState)optional.get(), 11);
             level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));
-            level.playSound(player, blockpos, SoundEvents.BASALT_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound(player, blockpos, SoundEvents.MOSS_BREAK, SoundSource.BLOCKS, 1.0F, level.getRandom().nextFloat() * 0.1F + 0.9F);
             if (level.isClientSide)
                 ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.COMPOSTER, UniformInt.of(3, 5));
 

@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    id 'eclipse'
     id 'idea'
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.88'
@@ -25,8 +24,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     version = project.neo_version
-    validateAccessTransformers = true
 
+    validateAccessTransformers = true
     accessTransformers {
         file('src/main/resources/META-INF/accesstransformer.cfg')
     }

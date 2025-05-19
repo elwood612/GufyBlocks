@@ -80,7 +80,8 @@ public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWater
         
         return BlockState.setValue(WATERLOGGED, Boolean.valueOf(ifluidstate.getType() == Fluids.WATER));
     }
-	
+
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) 
     {
         switch((Direction)state.getValue(FACING).getOpposite())
@@ -97,13 +98,14 @@ public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWater
     }
     
     //Directional Light Blocking
+    @Override
     public boolean useShapeForLightOcclusion(BlockState p_220074_1_) 
     {
         return true;
     }
-    
-    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type) 
-    {
+
+    @Override
+    protected boolean isPathfindable(BlockState p_53306_, PathComputationType p_53309_) {
         return false;
     }
 
