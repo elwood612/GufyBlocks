@@ -82,11 +82,20 @@ public class GufyUtil
         }};
     }
 
-    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes) {
+    public static List<DeferredBlock<Block>> weatheringBuilder(String name, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes) {
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType : blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
-                add(getVariant(name, blockProperties, parentBlock, state, blockType));
+                add(getWeatheringVariant(name, blockProperties, parentBlock, state, blockType));
+            }
+        }};
+    }
+
+    public static List<DeferredBlock<Block>> pottedFlowerBuilder(String name, Block parentBlock, Block flowerBlock, GufyBlockTypes ... blockTypes) {
+        return new ArrayList<>() {{
+            for (GufyBlockTypes blockType : blockTypes) {
+                BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
+                add(getPottedVariant(name, blockProperties, parentBlock, flowerBlock, blockType));
             }
         }};
     }
@@ -127,7 +136,7 @@ public class GufyUtil
         };
     }
 
-    public static DeferredBlock<Block> getVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes blockType)
+    public static DeferredBlock<Block> getWeatheringVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes blockType)
     {
         return switch (blockType) {
             case WEATHERINGSTAIRS -> createRegistry(name + "_stairs", () -> new GufyWeatheringStairs(parentBlock.defaultBlockState(), blockProperties, state), blockProperties);
@@ -136,6 +145,14 @@ public class GufyUtil
             case WEATHERINGWALL -> createRegistry(name + "_wall", () -> new GufyWeatheringWall(blockProperties, state), blockProperties);
             case WEATHERINGHOPPER -> createRegistry(name + "_hopper", () -> new GufyWeatheringHopper(blockProperties, state), blockProperties);
             case WEATHERINGPOST -> createRegistry(name + "_post", () -> new GufyWeatheringPost(blockProperties, state), blockProperties);
+            default -> null;
+        };
+    }
+
+    public static DeferredBlock<Block> getPottedVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, Block flowerBlock, GufyBlockTypes blockType)
+    {
+        return switch (blockType) {
+            case FLOWER_BOX -> createRegistry(name, () -> new GufyFlowerBox(flowerBlock, blockProperties), blockProperties);
             default -> null;
         };
     }
@@ -193,6 +210,12 @@ public class GufyUtil
     public static Optional<BlockState> getStripped(BlockState blockState)
     {
         return Optional.ofNullable(GufyStrippable.STRIPPABLES.get().get(blockState.getBlock())).map((newBlockState) ->
+                newBlockState.withPropertiesOf(blockState));
+    }
+
+    public static Optional<BlockState> getPotted(BlockState blockState)
+    {
+        return Optional.ofNullable(GufyPottable.POTTABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 

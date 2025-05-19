@@ -43,4 +43,5 @@ public enum GufyBlockTypes
 
     CARVED_LOG,
     SEAT,
+    FLOWER_BOX,
 }

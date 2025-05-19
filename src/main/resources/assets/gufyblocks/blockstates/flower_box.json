@@ -1,17 +1,17 @@
 {
   "variants": {
-    "facing=south": {
+    "facing=north": {
       "model": "gufyblocks:block/flower_box"
     },
-    "facing=west": {
+    "facing=east": {
       "model": "gufyblocks:block/flower_box",
       "y": 90
     },
-    "facing=north": {
+    "facing=south": {
       "model": "gufyblocks:block/flower_box",
       "y": 180
     },
-    "facing=east": {
+    "facing=west": {
       "model": "gufyblocks:block/flower_box",
       "y": 270
     }

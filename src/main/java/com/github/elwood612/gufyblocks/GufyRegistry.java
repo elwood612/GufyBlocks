@@ -64,7 +64,6 @@ public class GufyRegistry
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
         // ~~ WOOD ~~ //
-        add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
         add(familyBuilder("oak", Blocks.OAK_PLANKS, VANILLA_WOOD_TYPES));
         add(familyBuilder("oak_parquet", Blocks.OAK_PLANKS, GUFY_DIRT_TYPES));
         add(familyBuilder("big_oak", Blocks.OAK_PLANKS, GUFY_WOOD_TYPES));
@@ -357,14 +356,14 @@ public class GufyRegistry
 
 
         // ~~ COPPER ~~ //
-        add(familyBuilder("copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
-        add(familyBuilder("exposed_copper", Blocks.EXPOSED_COPPER, GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
-        add(familyBuilder("weathered_copper", Blocks.WEATHERED_COPPER, GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
-        add(familyBuilder("oxidized_copper", Blocks.OXIDIZED_COPPER, GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
-        add(familyBuilder("cut_copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
-        add(familyBuilder("exposed_cut_copper", Blocks.EXPOSED_COPPER, GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
-        add(familyBuilder("weathered_cut_copper", Blocks.WEATHERED_COPPER, GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
-        add(familyBuilder("oxidized_cut_copper", Blocks.OXIDIZED_COPPER, GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
+        add(weatheringBuilder("exposed_copper", Blocks.EXPOSED_COPPER, GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
+        add(weatheringBuilder("weathered_copper", Blocks.WEATHERED_COPPER, GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
+        add(weatheringBuilder("oxidized_copper", Blocks.OXIDIZED_COPPER, GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
+        add(weatheringBuilder("cut_copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("exposed_cut_copper", Blocks.EXPOSED_COPPER, GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("weathered_cut_copper", Blocks.WEATHERED_COPPER, GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("oxidized_cut_copper", Blocks.OXIDIZED_COPPER, GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
         add(familyBuilder("waxed_copper", Blocks.COPPER_BLOCK, WAXED_COPPER_TYPES));
         add(familyBuilder("waxed_exposed_copper", Blocks.EXPOSED_COPPER, WAXED_COPPER_TYPES));
         add(familyBuilder("waxed_weathered_copper", Blocks.WEATHERED_COPPER, WAXED_COPPER_TYPES));
@@ -392,6 +391,15 @@ public class GufyRegistry
         add(familyBuilder("purple_seat", GufyProperties.PURPLE_SEAT, GufyBlockTypes.SEAT));
         add(familyBuilder("magenta_seat", GufyProperties.MAGENTA_SEAT, GufyBlockTypes.SEAT));
         add(familyBuilder("pink_seat", GufyProperties.PINK_SEAT, GufyBlockTypes.SEAT));
+
+        // ~~ MISCELLANEOUS ~~ //
+        add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
+        add(pottedFlowerBuilder("flower_box", Blocks.FLOWER_POT, null, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_lilac", Blocks.FLOWER_POT, Blocks.LILAC, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_peony", Blocks.FLOWER_POT, Blocks.PEONY, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_pitcher_plant", Blocks.FLOWER_POT, Blocks.PITCHER_PLANT, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_rose_bush", Blocks.FLOWER_POT, Blocks.ROSE_BUSH, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_sunflower", Blocks.FLOWER_POT, Blocks.SUNFLOWER, GufyBlockTypes.FLOWER_BOX));
 
         // ~~ DEPRECATED BLOCKS ~~ //
         add(familyBuilder("wagon_wheel", Blocks.SPRUCE_TRAPDOOR, GufyBlockTypes.WAGONWHEEL)); // DEPRECATED
