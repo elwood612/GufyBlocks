@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "group": "wooden_fence",
-  "pattern": [
-    "W#W",
-    "W#W"
-  ],
   "key": {
     "#": "minecraft:stick",
     "W": "minecraft:acacia_planks"
   },
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
   "result": {
-    "id": "minecraft:acacia_fence",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:acacia_fence"
   }
 }
