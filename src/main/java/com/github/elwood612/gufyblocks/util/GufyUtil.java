@@ -92,11 +92,11 @@ public class GufyUtil
         }};
     }
 
-    public static List<DeferredBlock<Block>> pottedFlowerBuilder(String name, Block parentBlock, Block flowerBlock, GufyBlockTypes ... blockTypes) {
+    public static List<DeferredBlock<Block>> pottedFlowerBuilder(String name, Block parentBlock, Item flower, GufyBlockTypes ... blockTypes) {
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType : blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
-                add(getPottedVariant(name, blockProperties, parentBlock, flowerBlock, blockType));
+                add(getPottedVariant(name, blockProperties, parentBlock, flower, blockType));
             }
         }};
     }
@@ -150,10 +150,10 @@ public class GufyUtil
         };
     }
 
-    public static DeferredBlock<Block> getPottedVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, Block flowerBlock, GufyBlockTypes blockType)
+    public static DeferredBlock<Block> getPottedVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, Item flower, GufyBlockTypes blockType)
     {
         return switch (blockType) {
-            case FLOWER_BOX -> createRegistry(name, () -> new GufyFlowerBox(flowerBlock, blockProperties), blockProperties);
+            case FLOWER_BOX -> createRegistry(name, () -> new GufyFlowerBox(flower, blockProperties), blockProperties);
             default -> null;
         };
     }
@@ -218,6 +218,10 @@ public class GufyUtil
     {
         return Optional.ofNullable(GufyPottable.POTTABLES.get().get(item)).map((newBlockState) ->
                 newBlockState.withPropertiesOf(state));
+    }
+
+    public static BlockState getFlowerBox(BlockState state){
+        return getGufyBlock("flower_box").withPropertiesOf(state);
     }
 
     //***********************IS WAXED*******************************//

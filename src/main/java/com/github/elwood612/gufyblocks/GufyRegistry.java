@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -395,11 +396,11 @@ public class GufyRegistry
         // ~~ MISCELLANEOUS ~~ //
         add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
         add(pottedFlowerBuilder("flower_box", Blocks.FLOWER_POT, null, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_lilac", Blocks.FLOWER_POT, Blocks.LILAC, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_peony", Blocks.FLOWER_POT, Blocks.PEONY, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_pitcher_plant", Blocks.FLOWER_POT, Blocks.PITCHER_PLANT, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_rose_bush", Blocks.FLOWER_POT, Blocks.ROSE_BUSH, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_sunflower", Blocks.FLOWER_POT, Blocks.SUNFLOWER, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_lilac", Blocks.FLOWER_POT, Items.LILAC, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_peony", Blocks.FLOWER_POT, Items.PEONY, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_pitcher_plant", Blocks.FLOWER_POT, Items.PITCHER_PLANT, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_rose_bush", Blocks.FLOWER_POT, Items.ROSE_BUSH, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_sunflower", Blocks.FLOWER_POT, Items.SUNFLOWER, GufyBlockTypes.FLOWER_BOX));
 
         // ~~ DEPRECATED BLOCKS ~~ //
         add(familyBuilder("wagon_wheel", Blocks.SPRUCE_TRAPDOOR, GufyBlockTypes.WAGONWHEEL)); // DEPRECATED

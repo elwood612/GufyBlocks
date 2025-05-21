@@ -12,7 +12,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,13 +21,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -44,7 +39,7 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    private final Block flower;
+    public final Item flower;
 
     public GufyFlowerBox(Properties properties) {
         super(properties);
@@ -52,7 +47,7 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
         this.flower = null;
     }
 
-    public GufyFlowerBox(Block flower, Properties properties) {
+    public GufyFlowerBox(Item flower, Properties properties) {
         super(properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
         this.flower = flower;
@@ -103,8 +98,10 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
         ItemStack itemStack = player.getItemInHand(hand);
-        Optional<BlockState> optional = GufyUtil.getPotted(itemStack.getItem(), state);
-        if (optional.isEmpty()) { return InteractionResult.PASS; }
+        Item flowerItem = itemStack.getItem();
+
+        Optional<BlockState> optional = GufyUtil.getPotted(flowerItem, state);
+        if (optional.isEmpty() || !this.isEmpty()) { return InteractionResult.TRY_WITH_EMPTY_HAND; }
 
         return optional.map((newBlockState) ->
                 {
@@ -117,27 +114,35 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
                 }).orElse(InteractionResult.CONSUME);
     }
 
-//    protected InteractionResult useWithoutItem(BlockState p_316363_, Level p_316655_, BlockPos p_316654_, Player p_316338_, BlockHitResult p_316518_)
-//    {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result)
+    {
+        if (this.isEmpty()) { return InteractionResult.PASS; }
 
-//    }
+        BlockState newFlowerBox = GufyUtil.getGufyBlock("flower_box").withPropertiesOf(state);
+        ItemStack itemstack = new ItemStack(flower);
+        if (!player.addItem(itemstack)) {
+            player.drop(itemstack, false);
+        }
+        level.setBlock(pos, newFlowerBox, 3);
+        level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
 
-//    @Override
-//    protected BlockState updateShape(
-//            BlockState stateIn,
-//            LevelReader levelIn,
-//            ScheduledTickAccess tick,
-//            BlockPos currentPos,
-//            Direction direction,
-//            BlockPos facingPos,
-//            BlockState facingState,
-//            RandomSource randomSource
-//    ) {
-//        if (stateIn.getValue(WATERLOGGED)) {
-//            tick.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelIn));
-//        }
-//
-//        return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
-//    }
+        return InteractionResult.SUCCESS;
+    }
+
+    private boolean isEmpty(){
+        return flower == null;
+    }
+
+protected BlockState updateShape(
+        BlockState stateIn,
+        LevelReader levelIn,
+        ScheduledTickAccess tick,
+        BlockPos currentPos,
+        Direction direction,
+        BlockPos facingPos,
+        BlockState facingState,
+        RandomSource randomSource) {
+    return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
+}
 
 }
