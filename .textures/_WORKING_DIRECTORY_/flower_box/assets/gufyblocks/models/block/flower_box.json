@@ -1,7 +1,7 @@
 {
 	"ambientocclusion": false,
 	"textures": {
-		"2": "gufyblocks:block/flower_box_top",
+		"top": "gufyblocks:block/flower_box_top",
 		"particle": "gufyblocks:block/flower_box_sides",
 		"flowerpot": "gufyblocks:block/flower_box_sides",
 		"dirt": "block/dirt"
@@ -15,8 +15,8 @@
 				"east": {"uv": [0, 0, 6, 6], "texture": "#flowerpot", "cullface": "east"},
 				"south": {"uv": [15, 10, 16, 16], "texture": "#flowerpot", "cullface": "south"},
 				"west": {"uv": [0, 0, 6, 6], "texture": "#flowerpot"},
-				"up": {"uv": [0, 0, 1, 6], "texture": "#2"},
-				"down": {"uv": [15, 10, 16, 16], "texture": "#2", "cullface": "down"}
+				"up": {"uv": [0, 0, 1, 6], "texture": "#top"},
+				"down": {"uv": [15, 10, 16, 16], "texture": "#top", "cullface": "down"}
 			}
 		},
 		{
@@ -27,8 +27,8 @@
 				"east": {"uv": [0, 0, 6, 6], "texture": "#flowerpot"},
 				"south": {"uv": [0, 10, 1, 16], "texture": "#flowerpot", "cullface": "south"},
 				"west": {"uv": [0, 0, 6, 6], "texture": "#flowerpot", "cullface": "west"},
-				"up": {"uv": [15, 0, 16, 6], "texture": "#2"},
-				"down": {"uv": [0, 10, 1, 16], "texture": "#2", "cullface": "down"}
+				"up": {"uv": [15, 0, 16, 6], "texture": "#top"},
+				"down": {"uv": [0, 10, 1, 16], "texture": "#top", "cullface": "down"}
 			}
 		},
 		{
@@ -37,8 +37,8 @@
 			"faces": {
 				"north": {"uv": [1, 10, 15, 16], "texture": "#flowerpot"},
 				"south": {"uv": [1, 10, 15, 16], "texture": "#flowerpot"},
-				"up": {"uv": [1, 5, 15, 6], "texture": "#2"},
-				"down": {"uv": [1, 15, 15, 16], "texture": "#2", "cullface": "down"}
+				"up": {"uv": [1, 5, 15, 6], "texture": "#top"},
+				"down": {"uv": [1, 15, 15, 16], "texture": "#top", "cullface": "down"}
 			}
 		},
 		{
@@ -47,8 +47,8 @@
 			"faces": {
 				"north": {"uv": [1, 10, 15, 16], "texture": "#flowerpot"},
 				"south": {"uv": [1, 10, 15, 16], "texture": "#flowerpot", "cullface": "south"},
-				"up": {"uv": [1, 0, 15, 1], "texture": "#2"},
-				"down": {"uv": [1, 10, 15, 11], "texture": "#2", "cullface": "down"}
+				"up": {"uv": [1, 0, 15, 1], "texture": "#top"},
+				"down": {"uv": [1, 10, 15, 11], "texture": "#top", "cullface": "down"}
 			}
 		},
 		{
@@ -56,7 +56,7 @@
 			"to": [15, 5, 15],
 			"faces": {
 				"up": {"uv": [1, 6, 15, 10], "texture": "#dirt"},
-				"down": {"uv": [1, 11, 15, 15], "texture": "#2", "cullface": "down"}
+				"down": {"uv": [1, 11, 15, 15], "texture": "#top", "cullface": "down"}
 			}
 		}
 	],

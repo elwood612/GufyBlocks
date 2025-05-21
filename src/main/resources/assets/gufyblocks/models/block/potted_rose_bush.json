@@ -1,9 +1,9 @@
 {
-	"parent": "gufyblocks:block/potted_bush_with_vines",
+	"parent": "gufyblocks:block/potted_bush_with_vines_bb",
 	"render_type": "cutout",
 	"ambientocclusion": false,
 	"textures": {
-		"flower": "gufyblocks:block/potted_rose_bush",
-		"vines": "gufyblocks:block/potted_rose_bush_vine"
+		"vines": "gufyblocks:block/potted_rose_bush_vine",
+		"flower": "gufyblocks:block/potted_rose_bush"
 	}
 }
