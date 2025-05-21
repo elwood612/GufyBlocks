@@ -102,16 +102,14 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
-        Optional<BlockState> optional = GufyUtil.getPotted(state);
+        ItemStack itemStack = player.getItemInHand(hand);
+        Optional<BlockState> optional = GufyUtil.getPotted(itemStack.getItem(), state);
         if (optional.isEmpty()) { return InteractionResult.PASS; }
 
         return optional.map((newBlockState) ->
                 {
-                    ItemStack itemStack = player.getItemInHand(hand);
                     if (player instanceof ServerPlayer)
                         CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemStack);
-//                    if (!player.isCreative())
-//                        itemStack.shrink(1);
                     level.setBlock(pos, newBlockState, 3);
                     level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
                     stack.consume(1, player);

@@ -2,6 +2,6 @@
 	"parent": "gufyblocks:block/potted_bush",
 	"ambientocclusion": false,
 	"textures": {
-		"flower": "gufyblocks:block/potted_lilac"
+		"flower": "gufyblocks:block/potted_sugar_cane"
 	}
 }

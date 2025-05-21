@@ -9,6 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -213,10 +214,10 @@ public class GufyUtil
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    public static Optional<BlockState> getPotted(BlockState blockState)
+    public static Optional<BlockState> getPotted(Item item, BlockState state)
     {
-        return Optional.ofNullable(GufyPottable.POTTABLES.get().get(blockState.getBlock())).map((newBlockState) ->
-                newBlockState.withPropertiesOf(blockState));
+        return Optional.ofNullable(GufyPottable.POTTABLES.get().get(item)).map((newBlockState) ->
+                newBlockState.withPropertiesOf(state));
     }
 
     //***********************IS WAXED*******************************//
