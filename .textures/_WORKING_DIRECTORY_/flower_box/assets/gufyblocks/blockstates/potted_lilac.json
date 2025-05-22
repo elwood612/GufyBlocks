@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "gufyblocks:block/potted_lilac"
+    },
+    "facing=east": {
+      "model": "gufyblocks:block/potted_lilac",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "gufyblocks:block/potted_lilac",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gufyblocks:block/potted_lilac",
+      "y": 270
+    }
+  }
+}

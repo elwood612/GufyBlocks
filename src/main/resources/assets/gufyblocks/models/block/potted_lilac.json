@@ -1,5 +1,6 @@
 {
-	"parent": "gufyblocks:block/potted_bush",
+	"parent": "gufyblocks:block/potted_plant",
+	"render_type": "cutout",
 	"ambientocclusion": false,
 	"textures": {
 		"flower": "gufyblocks:block/potted_lilac"
