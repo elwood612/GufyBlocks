@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "gufyblocks:block/potted_peony"
+    },
+    "facing=east": {
+      "model": "gufyblocks:block/potted_peony",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "gufyblocks:block/potted_peony",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gufyblocks:block/potted_peony",
+      "y": 270
+    }
+  }
+}

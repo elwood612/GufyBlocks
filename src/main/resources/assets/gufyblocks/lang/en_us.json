@@ -1,5 +1,17 @@
 { 
-"block.gufyblocks.flower_box": "Flower Box",  
+"block.gufyblocks.potted_weeping_vine": "Potted Weeping Vine",
+"block.gufyblocks.potted_vine": "Potted Vine",
+"block.gufyblocks.potted_twisting_vine": "Potted Twisting Vine",
+"block.gufyblocks.potted_tall_grass": "Potted Tall Grass",
+"block.gufyblocks.potted_sunflower": "Potted Sunflower",
+"block.gufyblocks.potted_rose_bush": "Potted Rose Bush",
+"block.gufyblocks.potted_pitcher_plant": "Potted Pitcher Plant",
+"block.gufyblocks.potted_peony": "Potted Peony",
+"block.gufyblocks.potted_large_fern": "Potted Large Fern",
+"block.gufyblocks.potted_glow_berries": "Potted Glow Berries",
+"block.gufyblocks.potted_berries": "Potted Berries",
+"block.gufyblocks.potted_lilac": "Potted Lilac",
+"block.gufyblocks.flower_box": "Large Flower Pot",
 
 "block.gufyblocks.pale_oak_framed_terracotta_left": "Pale Oak Framed Terracotta Left",  
 "block.gufyblocks.pale_oak_framed_terracotta_right": "Pale Oak Framed Terracotta Right",  

@@ -395,7 +395,7 @@ public class GufyRegistry
 
         // ~~ MISCELLANEOUS ~~ //
         add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
-        add(pottedFlowerBuilder("flower_box", Blocks.FLOWER_POT, null, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("flower_box", Blocks.FLOWER_POT, Items.AIR, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_lilac", Blocks.FLOWER_POT, Items.LILAC, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_peony", Blocks.FLOWER_POT, Items.PEONY, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_pitcher_plant", Blocks.FLOWER_POT, Items.PITCHER_PLANT, GufyBlockTypes.FLOWER_BOX));

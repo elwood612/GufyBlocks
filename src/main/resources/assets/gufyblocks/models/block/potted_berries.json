@@ -2,7 +2,7 @@
 	"parent": "gufyblocks:block/potted_plant_with_vines",
 	"ambientocclusion": false,
 	"textures": {
-		"flower": "gufyblocks:block/potted_vine",
-		"vines": "gufyblocks:block/potted_vine_vine"
+		"flower": "gufyblocks:block/potted_berries",
+		"vines": "gufyblocks:block/potted_berries_vine"
 	}
 }

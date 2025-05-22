@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "gufyblocks:block/potted_tall_grass"
+    },
+    "facing=east": {
+      "model": "gufyblocks:block/potted_tall_grass",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "gufyblocks:block/potted_tall_grass",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gufyblocks:block/potted_tall_grass",
+      "y": 270
+    }
+  }
+}

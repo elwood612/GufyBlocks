@@ -12,6 +12,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,7 +23,9 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -38,19 +41,16 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
     protected static final VoxelShape EAST_SHAPE = Block.box(10.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D);
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public final Item flower;
 
-    public GufyFlowerBox(Properties properties) {
-        super(properties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
-        this.flower = null;
-    }
-
     public GufyFlowerBox(Item flower, Properties properties) {
         super(properties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
+
+        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(LIT, false));
         this.flower = flower;
+        if (flower == Items.GLOW_BERRIES) { updateLightLevel(true); }
     }
 
 
@@ -63,7 +63,7 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(FACING);
+        builder.add(FACING, LIT);
     }
 
     @Override
@@ -125,15 +125,15 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
         }
         level.setBlock(pos, newFlowerBox, 3);
         level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
-
+        if (flower == Items.GLOW_BERRIES) { updateLightLevel(false); } // need to test
         return InteractionResult.SUCCESS;
     }
 
     private boolean isEmpty(){
-        return flower == null;
+        return flower == Items.AIR;
     }
 
-protected BlockState updateShape(
+    protected BlockState updateShape(
         BlockState stateIn,
         LevelReader levelIn,
         ScheduledTickAccess tick,
@@ -143,6 +143,10 @@ protected BlockState updateShape(
         BlockState facingState,
         RandomSource randomSource) {
     return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
-}
+    }
+
+    private void updateLightLevel(Boolean flag){
+//        this.defaultBlockState().setValue(LIT, flag); // really not sure about this
+    }
 
 }

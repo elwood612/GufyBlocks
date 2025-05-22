@@ -1,7 +1,7 @@
 {
-	"parent": "gufyblocks:block/potted_bush",
+	"parent": "gufyblocks:block/potted_plant",
 	"ambientocclusion": false,
 	"textures": {
-		"flower": "gufyblocks:block/potted_pitcher"
+		"flower": "gufyblocks:block/potted_pitcher_plant"
 	}
 }

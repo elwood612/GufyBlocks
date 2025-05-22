@@ -1,7 +1,0 @@
-{
-	"parent": "gufyblocks:block/potted_bush",
-	"ambientocclusion": false,
-	"textures": {
-		"flower": "gufyblocks:block/potted_sunflower"
-	}
-}

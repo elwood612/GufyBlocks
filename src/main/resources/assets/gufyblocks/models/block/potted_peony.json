@@ -1,5 +1,5 @@
 {
-	"parent": "gufyblocks:block/potted_bush_with_vines",
+	"parent": "gufyblocks:block/potted_plant_with_vines",
 	"ambientocclusion": false,
 	"textures": {
 		"flower": "gufyblocks:block/potted_peony",
