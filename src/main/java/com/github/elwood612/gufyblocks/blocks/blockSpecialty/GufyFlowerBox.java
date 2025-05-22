@@ -41,16 +41,13 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
     protected static final VoxelShape EAST_SHAPE = Block.box(10.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D);
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public final Item flower;
 
     public GufyFlowerBox(Item flower, Properties properties) {
         super(properties);
-
-        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(LIT, false));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
         this.flower = flower;
-        if (flower == Items.GLOW_BERRIES) { updateLightLevel(true); }
     }
 
 
@@ -63,7 +60,7 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(FACING, LIT);
+        builder.add(FACING);
     }
 
     @Override
@@ -125,7 +122,6 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
         }
         level.setBlock(pos, newFlowerBox, 3);
         level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
-        if (flower == Items.GLOW_BERRIES) { updateLightLevel(false); } // need to test
         return InteractionResult.SUCCESS;
     }
 
@@ -143,10 +139,6 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some
         BlockState facingState,
         RandomSource randomSource) {
     return super.updateShape(stateIn, levelIn, tick, currentPos, direction, facingPos, facingState, randomSource);
-    }
-
-    private void updateLightLevel(Boolean flag){
-//        this.defaultBlockState().setValue(LIT, flag); // really not sure about this
     }
 
 }

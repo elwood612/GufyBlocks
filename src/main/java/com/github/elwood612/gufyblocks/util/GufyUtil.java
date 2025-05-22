@@ -220,10 +220,6 @@ public class GufyUtil
                 newBlockState.withPropertiesOf(state));
     }
 
-    public static BlockState getFlowerBox(BlockState state){
-        return getGufyBlock("flower_box").withPropertiesOf(state);
-    }
-
     //***********************IS WAXED*******************************//
     public static boolean isScrapeable(BlockState blockState)
     {

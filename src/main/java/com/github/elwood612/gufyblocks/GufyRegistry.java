@@ -396,11 +396,15 @@ public class GufyRegistry
         // ~~ MISCELLANEOUS ~~ //
         add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
         add(pottedFlowerBuilder("flower_box", Blocks.FLOWER_POT, Items.AIR, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_large_fern", Blocks.FLOWER_POT, Items.LARGE_FERN, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_lilac", Blocks.FLOWER_POT, Items.LILAC, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_peony", Blocks.FLOWER_POT, Items.PEONY, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_pitcher_plant", Blocks.FLOWER_POT, Items.PITCHER_PLANT, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_rose_bush", Blocks.FLOWER_POT, Items.ROSE_BUSH, GufyBlockTypes.FLOWER_BOX));
         add(pottedFlowerBuilder("potted_sunflower", Blocks.FLOWER_POT, Items.SUNFLOWER, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_twisting_vine", Blocks.FLOWER_POT, Items.TWISTING_VINES, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_vine", Blocks.FLOWER_POT, Items.VINE, GufyBlockTypes.FLOWER_BOX));
+        add(pottedFlowerBuilder("potted_weeping_vine", Blocks.FLOWER_POT, Items.WEEPING_VINES, GufyBlockTypes.FLOWER_BOX));
 
         // ~~ DEPRECATED BLOCKS ~~ //
         add(familyBuilder("wagon_wheel", Blocks.SPRUCE_TRAPDOOR, GufyBlockTypes.WAGONWHEEL)); // DEPRECATED

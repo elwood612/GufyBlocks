@@ -1,5 +1,6 @@
 {
 	"parent": "gufyblocks:block/potted_bush",
+	"render_type": "cutout",
 	"ambientocclusion": false,
 	"textures": {
 		"flower": "gufyblocks:block/potted_sugar_cane"

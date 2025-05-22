@@ -1,5 +1,6 @@
 {
 	"parent": "gufyblocks:block/potted_plant_with_vines",
+	"render_type": "cutout",
 	"ambientocclusion": false,
 	"textures": {
 		"flower": "gufyblocks:block/potted_glow_berries",
