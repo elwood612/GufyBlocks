@@ -17,8 +17,6 @@ public interface GufyPottable
     public static final Supplier<BiMap<Item, Block>> POTTABLES = Suppliers.memoize(() ->
     {
         return ImmutableBiMap.<Item, Block>builder()
-                .put(Items.SWEET_BERRIES, getGufyBlock("potted_berries"))
-                .put(Items.GLOW_BERRIES, getGufyBlock("potted_glow_berries"))
                 .put(Items.LARGE_FERN, getGufyBlock("potted_large_fern"))
                 .put(Items.LILAC, getGufyBlock("potted_lilac"))
                 .put(Items.PEONY, getGufyBlock("potted_peony"))
