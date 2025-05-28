@@ -12,10 +12,7 @@
     " X "
   ],
   "result": {
-     {
-    "id": "count": 3,
-    "item": "minecraft:oak_sign"
-    }
-},
-  "show_notification": true
+    "count": 3,
+    "id": "minecraft:oak_sign"
+  }
 }

@@ -50,10 +50,10 @@
 "block.gufyblocks.big_pale_oak_fence_gate": "Wide Pale Oak Fence Gate",  
 "block.gufyblocks.big_pale_oak_panel": "Wide Pale Oak Panel",  
  
-"block.gufyblocks.pale_oak_Mosaic": "Pale Oak Mosaic",  
-"block.gufyblocks.pale_oak_Mosaic_stairs": "Pale Oak Mosaic Stairs",  
-"block.gufyblocks.pale_oak_Mosaic_slab": "Pale Oak Mosaic Slab",  
-"block.gufyblocks.pale_oak_Mosaic_verticalslab": "Pale Oak Mosaic Vertical Slab",  
+"block.gufyblocks.pale_oak_parquet": "Pale Oak Mosaic",  
+"block.gufyblocks.pale_oak_parquet_stairs": "Pale Oak Mosaic Stairs",  
+"block.gufyblocks.pale_oak_parquet_slab": "Pale Oak Mosaic Slab",  
+"block.gufyblocks.pale_oak_parquet_verticalslab": "Pale Oak Mosaic Vertical Slab",  
  
 "block.gufyblocks.pale_oak_verticalslab": "Pale Oak Vertical Slab",  
 "block.gufyblocks.pale_oak_wall": "Pale Oak Wall",  
@@ -400,47 +400,47 @@
 "block.gufyblocks.cherry_framed_glass_pane": "Cherry Framed Glass Pane", 
 "block.gufyblocks.mangrove_framed_glass_pane": "Mangrove Framed Glass Pane", 
  
-"block.gufyblocks.bamboo_mosaic_verticalslab": "Bamboo Mosaic Vertical Slab",  
+"block.gufyblocks.bamboo_parquet_verticalslab": "Bamboo Mosaic Vertical Slab",  
  
-"block.gufyblocks.cherry_Mosaic_stairs": "Cherry Mosaic Stairs",  
-"block.gufyblocks.cherry_Mosaic_slab": "Cherry Mosaic Slab",  
-"block.gufyblocks.cherry_Mosaic_verticalslab": "Cherry Mosaic Vertical Slab",  
+"block.gufyblocks.cherry_parquet_stairs": "Cherry Mosaic Stairs",  
+"block.gufyblocks.cherry_parquet_slab": "Cherry Mosaic Slab",  
+"block.gufyblocks.cherry_parquet_verticalslab": "Cherry Mosaic Vertical Slab",  
  
-"block.gufyblocks.mangrove_Mosaic_stairs": "Mangrove Mosaic Stairs",  
-"block.gufyblocks.mangrove_Mosaic_slab": "Mangrove Mosaic Slab",  
-"block.gufyblocks.mangrove_Mosaic_verticalslab": "Mangrove Mosaic Vertical Slab",  
+"block.gufyblocks.mangrove_parquet_stairs": "Mangrove Mosaic Stairs",  
+"block.gufyblocks.mangrove_parquet_slab": "Mangrove Mosaic Slab",  
+"block.gufyblocks.mangrove_parquet_verticalslab": "Mangrove Mosaic Vertical Slab",  
  
-"block.gufyblocks.warped_Mosaic_stairs": "Warped Mosaic Stairs",  
-"block.gufyblocks.warped_Mosaic_slab": "Warped Mosaic Slab",  
-"block.gufyblocks.warped_Mosaic_verticalslab": "Warped Mosaic Vertical Slab",  
+"block.gufyblocks.warped_parquet_stairs": "Warped Mosaic Stairs",  
+"block.gufyblocks.warped_parquet_slab": "Warped Mosaic Slab",  
+"block.gufyblocks.warped_parquet_verticalslab": "Warped Mosaic Vertical Slab",  
  
-"block.gufyblocks.crimson_Mosaic_stairs": "Crimson Mosaic Stairs",  
-"block.gufyblocks.crimson_Mosaic_slab": "Crimson Mosaic Slab",  
-"block.gufyblocks.crimson_Mosaic_verticalslab": "Crimson Mosaic Vertical Slab",  
+"block.gufyblocks.crimson_parquet_stairs": "Crimson Mosaic Stairs",  
+"block.gufyblocks.crimson_parquet_slab": "Crimson Mosaic Slab",  
+"block.gufyblocks.crimson_parquet_verticalslab": "Crimson Mosaic Vertical Slab",  
  
-"block.gufyblocks.acacia_Mosaic_stairs": "Acacia Mosaic Stairs",  
-"block.gufyblocks.acacia_Mosaic_slab": "Acacia Mosaic Slab",  
-"block.gufyblocks.acacia_Mosaic_verticalslab": "Acacia Mosaic Vertical Slab",  
+"block.gufyblocks.acacia_parquet_stairs": "Acacia Mosaic Stairs",  
+"block.gufyblocks.acacia_parquet_slab": "Acacia Mosaic Slab",  
+"block.gufyblocks.acacia_parquet_verticalslab": "Acacia Mosaic Vertical Slab",  
  
-"block.gufyblocks.jungle_Mosaic_stairs": "Jungle Mosaic Stairs",  
-"block.gufyblocks.jungle_Mosaic_slab": "Jungle Mosaic Slab",  
-"block.gufyblocks.jungle_Mosaic_verticalslab": "Jungle Mosaic Vertical Slab",  
+"block.gufyblocks.jungle_parquet_stairs": "Jungle Mosaic Stairs",  
+"block.gufyblocks.jungle_parquet_slab": "Jungle Mosaic Slab",  
+"block.gufyblocks.jungle_parquet_verticalslab": "Jungle Mosaic Vertical Slab",  
  
-"block.gufyblocks.dark_oak_Mosaic_stairs": "Dark Oak Mosaic Stairs",  
-"block.gufyblocks.dark_oak_Mosaic_slab": "Dark Oak Mosaic Slab",  
-"block.gufyblocks.dark_oak_Mosaic_verticalslab": "Dark Oak Mosaic Vertical Slab",  
+"block.gufyblocks.dark_oak_parquet_stairs": "Dark Oak Mosaic Stairs",  
+"block.gufyblocks.dark_oak_parquet_slab": "Dark Oak Mosaic Slab",  
+"block.gufyblocks.dark_oak_parquet_verticalslab": "Dark Oak Mosaic Vertical Slab",  
  
-"block.gufyblocks.birch_Mosaic_stairs": "Birch Mosaic Stairs",  
-"block.gufyblocks.birch_Mosaic_slab": "Birch Mosaic Slab",  
-"block.gufyblocks.birch_Mosaic_verticalslab": "Birch Mosaic Vertical Slab",  
+"block.gufyblocks.birch_parquet_stairs": "Birch Mosaic Stairs",  
+"block.gufyblocks.birch_parquet_slab": "Birch Mosaic Slab",  
+"block.gufyblocks.birch_parquet_verticalslab": "Birch Mosaic Vertical Slab",  
  
-"block.gufyblocks.oak_Mosaic_stairs": "Oak Mosaic Stairs",  
-"block.gufyblocks.oak_Mosaic_slab": "Oak Mosaic Slab",  
-"block.gufyblocks.oak_Mosaic_verticalslab": "Oak Mosaic Vertical Slab",  
+"block.gufyblocks.oak_parquet_stairs": "Oak Mosaic Stairs",  
+"block.gufyblocks.oak_parquet_slab": "Oak Mosaic Slab",  
+"block.gufyblocks.oak_parquet_verticalslab": "Oak Mosaic Vertical Slab",  
  
-"block.gufyblocks.spruce_Mosaic_stairs": "Spruce Mosaic Stairs",  
-"block.gufyblocks.spruce_Mosaic_slab": "Spruce Mosaic Slab",  
-"block.gufyblocks.spruce_Mosaic_verticalslab": "Spruce Mosaic Vertical Slab",  
+"block.gufyblocks.spruce_parquet_stairs": "Spruce Mosaic Stairs",  
+"block.gufyblocks.spruce_parquet_slab": "Spruce Mosaic Slab",  
+"block.gufyblocks.spruce_parquet_verticalslab": "Spruce Mosaic Vertical Slab",  
  
 "block.gufyblocks.bamboo_framed_terracotta_left": "Bamboo Framed Terracotta Left",  
 "block.gufyblocks.bamboo_framed_terracotta_right": "Bamboo Framed Terracotta Right",  
@@ -514,13 +514,13 @@
 "block.gufyblocks.bamboo_hopper": "Bamboo Hopper",  
 "block.gufyblocks.bamboo_panel": "Bamboo Panel",  
  
-"block.gufyblocks.cherry_Mosaic": "Cherry Mosaic",
+"block.gufyblocks.cherry_parquet": "Cherry Mosaic",
 "block.gufyblocks.cherry_verticalslab": "Cherry Vertical Slab",  
 "block.gufyblocks.cherry_wall": "Cherry Wall",  
 "block.gufyblocks.cherry_hopper": "Cherry Hopper",  
 "block.gufyblocks.cherry_panel": "Cherry Panel",  
  
-"block.gufyblocks.mangrove_Mosaic": "Mangrove Mosaic",
+"block.gufyblocks.mangrove_parquet": "Mangrove Mosaic",
 "block.gufyblocks.mangrove_verticalslab": "Mangrove Vertical Slab",  
 "block.gufyblocks.mangrove_wall": "Mangrove Wall",  
 "block.gufyblocks.mangrove_hopper": "Mangrove Hopper",  
@@ -1104,7 +1104,7 @@
 "block.gufyblocks.nether_wart_block_slab": "Nether Wart Slab",  
 "block.gufyblocks.nether_wart_block_verticalslab": "Nether Wart Vertical Slab",  
  
-"block.gufyblocks.warped_Mosaic": "Warped Mosaic",  
+"block.gufyblocks.warped_parquet": "Warped Mosaic",  
  
 "block.gufyblocks.mossy_warped": "Mossy Warped",  
 "block.gufyblocks.mossy_warped_stairs": "Mossy Warped Stairs",  
@@ -1161,7 +1161,7 @@
 "block.gufyblocks.crimson_hyphae_fence": "Crimson Hyphae Fence",  
 "block.gufyblocks.crimson_hyphae_panel": "Crimson Hyphae Panel",  
  
-"block.gufyblocks.crimson_Mosaic": "Crimson Mosaic",  
+"block.gufyblocks.crimson_parquet": "Crimson Mosaic",  
  
 "block.gufyblocks.mossy_crimson": "Mossy Crimson",  
 "block.gufyblocks.mossy_crimson_stairs": "Mossy Crimson Stairs",  
@@ -1607,7 +1607,7 @@
 "block.gufyblocks.acacia_wood_fence": "Acacia Wood Fence",  
 "block.gufyblocks.acacia_wood_panel": "Acacia Wood Panel",  
 
-"block.gufyblocks.acacia_Mosaic": "Acacia Mosaic",  
+"block.gufyblocks.acacia_parquet": "Acacia Mosaic",  
  
 "block.gufyblocks.mossy_acacia": "Mossy Acacia Planks",  
 "block.gufyblocks.mossy_acacia_stairs": "Mossy Acacia Stairs",  
@@ -1648,7 +1648,7 @@
 "block.gufyblocks.dark_oak_wood_fence": "Dark Oak Wood Fence",  
 "block.gufyblocks.dark_oak_wood_panel": "Dark Oak Wood Panel",  
  
-"block.gufyblocks.dark_oak_Mosaic": "Dark Oak Mosaic",  
+"block.gufyblocks.dark_oak_parquet": "Dark Oak Mosaic",  
  
 "block.gufyblocks.mossy_dark_oak": "Mossy Dark Oak Planks",  
 "block.gufyblocks.mossy_dark_oak_stairs": "Mossy Dark Oak Stairs",  
@@ -1689,7 +1689,7 @@
 "block.gufyblocks.birch_wood_fence": "Birch Wood Fence",  
 "block.gufyblocks.birch_wood_panel": "Birch Wood Panel",  
  
-"block.gufyblocks.birch_Mosaic": "Birch Mosaic",  
+"block.gufyblocks.birch_parquet": "Birch Mosaic",  
  
 "block.gufyblocks.mossy_birch": "Mossy Birch Planks",  
 "block.gufyblocks.mossy_birch_stairs": "Mossy Birch Stairs",  
@@ -1730,7 +1730,7 @@
 "block.gufyblocks.jungle_wood_fence": "Jungle Wood Fence",  
 "block.gufyblocks.jungle_wood_panel": "Jungle Wood Panel",  
  
-"block.gufyblocks.jungle_Mosaic": "Jungle Mosaic",  
+"block.gufyblocks.jungle_parquet": "Jungle Mosaic",  
  
 "block.gufyblocks.mossy_jungle": "Mossy Jungle Planks",  
 "block.gufyblocks.mossy_jungle_stairs": "Mossy Jungle Stairs",  
@@ -1771,7 +1771,7 @@
 "block.gufyblocks.oak_wood_fence": "Oak Wood Fence",  
 "block.gufyblocks.oak_wood_panel": "Oak Wood Panel",   
  
-"block.gufyblocks.oak_Mosaic": "Oak Mosaic",   
+"block.gufyblocks.oak_parquet": "Oak Mosaic",   
  
 "block.gufyblocks.mossy_oak": "Mossy Oak Planks",  
 "block.gufyblocks.mossy_oak_stairs": "Mossy Oak Stairs",  
@@ -1812,7 +1812,7 @@
 "block.gufyblocks.spruce_wood_fence": "Spruce Wood Fence",  
 "block.gufyblocks.spruce_wood_panel": "Spruce Wood Panel",  
  
-"block.gufyblocks.spruce_Mosaic": "Spruce Mosaic", 
+"block.gufyblocks.spruce_parquet": "Spruce Mosaic", 
  
 "block.gufyblocks.mossy_spruce": "Mossy Spruce Planks",  
 "block.gufyblocks.mossy_spruce_stairs": "Mossy Spruce Stairs",  

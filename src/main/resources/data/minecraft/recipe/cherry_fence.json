@@ -11,10 +11,7 @@
     "W#W"
   ],
   "result": {
-     {
-    "id": "count": 4,
-    "item": "minecraft:cherry_fence"
-    }
-},
-  "show_notification": true
+    "count": 4,
+    "id": "minecraft:cherry_fence"
+  }
 }
