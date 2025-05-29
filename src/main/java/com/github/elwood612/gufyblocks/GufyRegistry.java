@@ -115,7 +115,6 @@ public class GufyRegistry
         add(familyBuilder("chiseled_stripped_cherry_wood", Blocks.CHERRY_WOOD, GufyBlockTypes.CARVED_LOG));
         add(familyBuilder("bamboo", Blocks.BAMBOO_PLANKS, VANILLA_WOOD_TYPES));
         add(familyBuilder("bamboo_mosaic", Blocks.BAMBOO_PLANKS, GufyBlockTypes.VERTICALSLAB));
-        add(familyBuilder("chiseled_stripped_bamboo_block", Blocks.STRIPPED_BAMBOO_BLOCK, GufyBlockTypes.CARVED_LOG));
         add(familyBuilder("crimson", Blocks.CRIMSON_PLANKS, VANILLA_WOOD_TYPES));
         add(familyBuilder("crimson_parquet", Blocks.CRIMSON_PLANKS, GUFY_DIRT_TYPES));
         add(familyBuilder("big_crimson", Blocks.CRIMSON_PLANKS, GUFY_WOOD_TYPES));
@@ -439,6 +438,7 @@ public class GufyRegistry
         add(familyBuilder("mushroom_stem", Blocks.BROWN_MUSHROOM_BLOCK, ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR))); // DEPRECATED
         add(familyBuilder("mushroom_framed_glass", GufyProperties.MUSHROOM_FRAMED_GLASS, GufyBlockTypes.PANE)); // DEPRECATED
         add(familyBuilder("mushroom_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(familyBuilder("chiseled_stripped_bamboo_block", Blocks.STRIPPED_BAMBOO_BLOCK, GufyBlockTypes.CARVED_LOG)); // DEPRECATED
     }};
     //**************************************************************//
 
