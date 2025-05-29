@@ -1,4 +1,4 @@
-package com.github.elwood612.gufyblocks.util;
+package com.github.elwood612.gufyblocks.events;
 
 import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.entities.GufySeatRenderer;

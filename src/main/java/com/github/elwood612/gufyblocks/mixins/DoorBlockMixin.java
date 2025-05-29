@@ -13,10 +13,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import javax.annotation.Nullable;
 
 @Mixin(value = DoorBlock.class, priority = 1001)
-public class DoorBlockMixin
+public abstract class DoorBlockMixin
 {
     @Inject(method = "playSound", at = @At("HEAD"))
-    private void processNeighbor(@Nullable Entity source, Level level, BlockPos pos, boolean isOpening, CallbackInfo ci) {
+    private void injected_playSound(@Nullable Entity source, Level level, BlockPos pos, boolean isOpening, CallbackInfo callback) {
         GufyDoorHandler.onDoorStateChange(level, pos, level.getBlockState(pos), isOpening);
     }
 }

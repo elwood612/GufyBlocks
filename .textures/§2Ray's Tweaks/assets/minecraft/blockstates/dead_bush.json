@@ -2,8 +2,7 @@
     "variants": {
         "": [
 		 { "model": "block/dead_bush"},
-		 { "model": "block/dead_bush2"},
-		 { "model": "block/dead_bush3"}
+		 { "model": "block/dead_bush2"}
         ]
     }
 }

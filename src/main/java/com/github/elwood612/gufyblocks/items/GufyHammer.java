@@ -3,14 +3,9 @@ package com.github.elwood612.gufyblocks.items;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleType;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.ParticleUtils;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,15 +15,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.Optional;
-
-import static net.minecraft.world.level.block.Block.BLOCK_STATE_REGISTRY;
 
 public class GufyHammer extends Item
 {
@@ -40,7 +33,6 @@ public class GufyHammer extends Item
         BlockPos blockpos = context.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
         Optional<BlockState> optional = GufyUtil.getCracked(blockstate);
-
 
         if (playerHasShieldUseIntent(context)) {
             return InteractionResult.PASS;
@@ -61,10 +53,7 @@ public class GufyHammer extends Item
                 level.setBlock(blockpos, (BlockState)optional.get(), 11);
                 level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));
                 level.playSound(player, blockpos, soundEvent, SoundSource.BLOCKS, 1.0F, level.getRandom().nextFloat() * 0.1F + 0.9F);
-                level.levelEvent(player, 2001, blockpos, BLOCK_STATE_REGISTRY.getId(blockstate));
-
-                // if (level.isClientSide)
-//                    ParticleUtils.spawnParticlesOnBlockFaces(level, blockpos, ParticleTypes.ASH, UniformInt.of(3, 5));
+                level.levelEvent(player, 2001, blockpos, Block.BLOCK_STATE_REGISTRY.getId(blockstate));
 
                 return InteractionResult.SUCCESS;
             }

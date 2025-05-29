@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/firefly_bush" },
+			{ "model": "block/firefly_bush2" },
+			{ "model": "block/firefly_bush3" },
+			{ "model": "block/firefly_bush4" }
+        ]
+    }
+}

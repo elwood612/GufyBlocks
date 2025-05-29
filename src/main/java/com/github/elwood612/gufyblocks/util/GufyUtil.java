@@ -10,6 +10,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -229,6 +231,18 @@ public class GufyUtil
     public static boolean isStrippable(BlockState blockState)
     {
         return GufyStrippable.STRIPPABLES.get().containsKey(blockState.getBlock());
+    }
+
+
+    //***********************GET LEVEL FROM ACCCESSOR*******************************//
+    public static Level getWorldIfInstanceOfAndNotRemote(LevelAccessor levelAccessor) {
+        if (levelAccessor.isClientSide()) {
+            return null;
+        }
+        if (levelAccessor instanceof Level) {
+            return ((Level)levelAccessor);
+        }
+        return null;
     }
 
 
