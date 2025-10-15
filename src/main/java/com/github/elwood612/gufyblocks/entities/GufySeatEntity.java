@@ -15,6 +15,8 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufySeatable;
@@ -51,6 +53,16 @@ public class GufySeatEntity extends Entity
                 this.level().updateNeighbourForOutputSignal(pos, this.level().getBlockState(pos).getBlock());
             }
         }
+    }
+
+    @Override
+    protected void readAdditionalSaveData(ValueInput valueInput) {
+        this.ejectType = EjectType.fromName(valueInput.getStringOr("EjectType", "North"));
+    }
+
+    @Override
+    protected void addAdditionalSaveData(ValueOutput valueOutput) {
+        valueOutput.putString("EjectType", this.ejectType.name);
     }
 
     @Override
@@ -109,15 +121,7 @@ public class GufySeatEntity extends Entity
 
     }
 
-    @Override
-    protected void readAdditionalSaveData(@NotNull CompoundTag tag) {
-        this.ejectType = EjectType.fromName(tag.getStringOr("EjectType", "North"));
-    }
 
-    @Override
-    protected void addAdditionalSaveData(@NotNull CompoundTag tag) {
-        tag.putString("EjectType", this.ejectType.name);
-    }
 
     public enum EjectType {
         NORTH("north", (state, livingEntity) -> Direction.NORTH),

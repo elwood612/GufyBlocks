@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.events.GufyScaffoldingEvent;
+import com.github.elwood612.gufyblocks.util.GufyTintHandler;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -35,5 +36,6 @@ public class GufyBlocks
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
 		NeoForge.EVENT_BUS.register(GufyScaffoldingEvent.class);
+		//NeoForge.EVENT_BUS.register(GufyTintHandler.class);
 	}
 }

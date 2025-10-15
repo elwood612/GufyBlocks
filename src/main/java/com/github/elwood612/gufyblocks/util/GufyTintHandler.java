@@ -7,7 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = GufyBlocks.MODID)
+@EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyTintHandler
 {
     @SubscribeEvent
