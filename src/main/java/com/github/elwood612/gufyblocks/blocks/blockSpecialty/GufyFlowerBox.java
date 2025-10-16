@@ -23,9 +23,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -33,7 +31,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Optional;
 
-public class GufyFlowerBox extends HorizontalDirectionalBlock // implements some kind of entity block + probably wants to extend HorizontalDirectionalBlock
+public class GufyFlowerBox extends HorizontalDirectionalBlock
 {
     protected static final VoxelShape NORTH_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 6.0D);
     protected static final VoxelShape SOUTH_SHAPE = Block.box(0.0D, 0.0D, 10.0D, 16.0D, 6.0D, 16.0D);

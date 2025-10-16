@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "polished_tuff",
   "pattern":
   [
     "##",
@@ -8,10 +9,10 @@
   "key":
   {
     "#": 
-    "minecraft:tuff_brick_wall"
+    "minecraft:polished_tuff_wall"
   },
   "result": { 
-    "id": "minecraft:tuff_bricks",
+    "id": "minecraft:polished_tuff",
     "count": 2
   }
 }
