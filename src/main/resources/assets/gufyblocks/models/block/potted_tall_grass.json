@@ -1,5 +1,5 @@
 {
-	"parent": "gufyblocks:block/potted_plant",
+	"parent": "gufyblocks:block/potted_plant_tint",
 	"render_type": "cutout",
 	"ambientocclusion": false,
 	"textures": {

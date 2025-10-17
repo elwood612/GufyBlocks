@@ -18,5 +18,8 @@ public class GufyTintHandler
         event.register((state, level, pos, tintIndex) ->
                         level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor(),
                 GufyUtil.getGufyBlock("potted_large_fern"));
+        event.register((state, level, pos, tintIndex) ->
+                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor(),
+                GufyUtil.getGufyBlock("potted_tall_grass"));
     }
 }

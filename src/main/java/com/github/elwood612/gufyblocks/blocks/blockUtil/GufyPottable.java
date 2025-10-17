@@ -26,6 +26,7 @@ public interface GufyPottable
                 .put(Items.TWISTING_VINES, getGufyBlock("potted_twisting_vine"))
                 .put(Items.VINE, getGufyBlock("potted_vine"))
                 .put(Items.WEEPING_VINES, getGufyBlock("potted_weeping_vine"))
+                .put(Items.TALL_GRASS, getGufyBlock("potted_tall_grass"))
 
                 .build();
     });
