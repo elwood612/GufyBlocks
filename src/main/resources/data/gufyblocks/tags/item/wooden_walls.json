@@ -16,7 +16,26 @@
 	"gufyblocks:big_jungle_wall",
 	"gufyblocks:big_crimson_wall",
 	"gufyblocks:big_warped_wall",
-	"gufyblocks:big_pale_oak_hopper",
-	"gufyblocks:pale_oak_hopper"
+	"gufyblocks:big_pale_oak_wall",
+	"gufyblocks:pale_oak_wall",
+	"gufyblocks:oak_wood_wall",
+	"gufyblocks:spruce_wood_wall",
+	"gufyblocks:birch_wood_wall",
+	"gufyblocks:acacia_wood_wall",
+	"gufyblocks:dark_oak_wood_wall",
+	"gufyblocks:jungle_wood_wall",
+	"gufyblocks:crimson_hyphae_wall",
+	"gufyblocks:warped_hyphae_wall",
+	"gufyblocks:pale_oak_wood_wall",
+	"gufyblocks:stripped_oak_wood_wall",
+	"gufyblocks:stripped_spruce_wood_wall",
+	"gufyblocks:stripped_birch_wood_wall",
+	"gufyblocks:stripped_acacia_wood_wall",
+	"gufyblocks:stripped_dark_oak_wood_wall",
+	"gufyblocks:stripped_jungle_wood_wall",
+	"gufyblocks:stripped_crimson_hyphae_wall",
+	"gufyblocks:stripped_warped_hyphae_wall",
+	"gufyblocks:stripped_pale_oak_wood_wall",
+	"gufyblocks:bamboo_wall"
   ]
 }

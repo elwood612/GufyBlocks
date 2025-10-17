@@ -16,5 +16,8 @@
 	"gufyblocks:wattle_fence": {
       "burn_time": 100
     }
-  }
+  },
+  "remove": [
+	"#minecraft:non_flammable_wood"
+  ]
 }
