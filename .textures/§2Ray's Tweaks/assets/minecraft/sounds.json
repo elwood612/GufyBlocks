@@ -1,5 +1,127 @@
 {
+  "music.overworld.lush_caves": {
+    "sounds": [
+      "moremusic:greenpixel/depths"
+	]
+  },
+  "music.overworld.dripstone_caves": {
+    "sounds": [
+      "moremusic:greenpixel/depths",
+	  "minecraft:music/flake"
+	]
+  },
+  "music.overworld.deep_dark": {
+    "sounds": [
+      "moremusic:greenpixel/depths",
+	  "moremusic:dungeons/camp_cartography",
+	  "minecraft:music/mice_on_venus",
+	  "moremusic:dungeons/graveyard",
+	  "minecraft:music/excuse",
+	  "minecraft:music/key",
+	  "moremusic:dungeons/guldrum",
+	  "minecraft:music/halloween/dead_mice",
+	  "minecraft:music/halloween/ghastly_spirits"
+	]
+  },
+  "music.overworld.badlands": {
+    "sounds": [
+      "moremusic:firch/burning_gecko"
+	]
+  },
+  "music.overworld.desert": {
+    "sounds": [
+	  "minecraft:music/equinoxe"
+	]
+  },
+  "music.overworld.frozen_peaks": {
+    "sounds": [
+      "moremusic:firch/secret",
+	  "minecraft:music/kyoto"
+	]
+  },
+  "music.overworld.jagged_peaks": {
+    "sounds": [
+      "moremusic:firch/secret",
+	  "minecraft:music/kyoto"
+	]
+  },
+  "music.overworld.grove": {
+    "sounds": [
+      "moremusic:firch/secret",
+	  "minecraft:music/kyoto"
+	]
+  },
+  "music.overworld.snowy_slopes": {
+    "sounds": [
+      "moremusic:firch/secret",
+	  "minecraft:music/kyoto"
+	]
+  },
+  "music.overworld.forest": {
+    "sounds": [
+      "moremusic:firch/garden",
+	  "minecraft:music/equinoxe"
+	]
+  },
+  "music.overworld.swamp": {
+    "sounds": [
+      "moremusic:firch/garden",
+	  "minecraft:music/flake",
+	  "minecraft:music/equinoxe"
+	]
+  },
+  "music.under_water": {
+    "sounds": [
+      "minecraft:music/halloween/norway"
+	]
+  },
+  "music.nether.nether_wastes": {
+    "sounds": [
+	  "moremusic:dungeons/brunn",
+	  "moremusic:dungeons/guldrum"
+	]
+  },
+  "music.nether.soul_sand_valley": {
+    "sounds": [
+	  "moremusic:dungeons/guldrum",
+	  "minecraft:music/halloween/ghastly_spirits"
+	]
+  },
+  "music.nether.basalt_deltas": {
+    "sounds": [
+	  "moremusic:dungeons/guldrum",
+	  "minecraft:music/halloween/trapdoor"
+	]
+  },
+  "music.nether.crimson_forest": {
+    "sounds": [
+	  "minecraft:music/halloween/undead_voxel"
+	]
+  },
+  "music.nether.warped_forest": {
+    "sounds": [
+      "moremusic:firch/prophet",
+	  "moremusic:dungeons/humus_sifting",
+	  "moremusic:dungeons/graveyard",
+	  "moremusic:dungeons/guldrum"
+	]
+  },
+  "music.end": {
+    "sounds": [
+      "moremusic:firch/maw",
+	  "minecraft:music/excuse",
+	  "minecraft:music/key",
+	  "moremusic:dungeons/guldrum",
+	  "minecraft:music/halloween/all_enders_eve",
+	  "moremusic:dungeons/top"
+	]
+  },
   "music.menu": {
     "replace": true
+  },
+  "music.creative": {
+    "sounds": [
+      "moremusic:earth/earth"
+	]
   }
 }

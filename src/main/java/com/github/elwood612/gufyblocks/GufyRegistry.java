@@ -449,12 +449,12 @@ public class GufyRegistry
     public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.registerItem(
             "moss_clump",
             GufyMossClump::new,
-            new Item.Properties()
+            () -> new Item.Properties()
     );
     public static final DeferredItem<Item> HAMMER = ITEMS.registerItem(
             "hammer",
             GufyHammer::new,
-            new Item.Properties().durability(216)
+            () -> new Item.Properties().durability(216)
     );
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
@@ -490,7 +490,7 @@ public class GufyRegistry
         blockProperties.setId(blockKey);
 
         DeferredBlock<T> block = BLOCKS.register(name, blockSupplier);
-        ITEMS.registerSimpleBlockItem(name, block, new Item.Properties());
+        ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
 
         return block;
     }

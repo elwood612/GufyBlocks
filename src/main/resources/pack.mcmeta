@@ -1,12 +1,11 @@
 {
-	"pack": {
-		"pack_format": 46,
-		"description": "GufyBlocks resources",
-		"supported_formats": {
-            "min_inclusive": 15,
-            "max_inclusive": 9999
-        }
-    },
+	"pack":{
+      "pack_format":15,
+      "description":"GufyBlocks Resources",
+	  "supported_formats": {"min_inclusive": 15, "max_inclusive": 9999},
+	  "min_format": 15,
+	  "max_format": 9999
+   },
     "fusion": {
         "overrides_folder": "fusion_overrides"
     }

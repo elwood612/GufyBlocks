@@ -27,7 +27,7 @@ public class GufyScaffoldingEvent
     public static void onScaffoldingItem(EntityJoinLevelEvent e) {
         Level level = e.getLevel();
         Entity entity = e.getEntity();
-        if (level.isClientSide) { return; }
+        if (level.isClientSide()) { return; }
         if (!(entity instanceof ItemEntity)) { return; }
 
         ItemEntity ie = (ItemEntity)entity;
@@ -59,7 +59,7 @@ public class GufyScaffoldingEvent
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent e) {
         Level level = GufyUtil.getWorldIfInstanceOfAndNotRemote(e.getLevel());
-        if (level == null || level.isClientSide) { return; }
+        if (level == null || level.isClientSide()) { return; }
 
         BlockPos blockPos = e.getPos();
         BlockState blockState = e.getState();

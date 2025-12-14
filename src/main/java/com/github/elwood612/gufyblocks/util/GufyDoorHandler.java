@@ -10,7 +10,7 @@ public class GufyDoorHandler
 {
     public static void onDoorStateChange(Level level, BlockPos blockPos, BlockState state, boolean isOpening)
     {
-        if (level.isClientSide) { return; }
+        if (level.isClientSide()) { return; }
 
         BlockPos neighborPos = getConnectedDoorPos(level, blockPos, state);
         if (neighborPos != null) {

@@ -2,10 +2,9 @@
    "pack":{
       "pack_format":15,
       "description":"Optional. Put at very top of resource packs.",
-	  "supported_formats": {
-            "min_inclusive": 15,
-            "max_inclusive": 9999
-        }
+	  "supported_formats": {"min_inclusive": 15, "max_inclusive": 9999},
+	  "min_format": 15,
+	  "max_format": 9999
    },
     "fusion": {
         "overrides_folder": "fusion_overrides"

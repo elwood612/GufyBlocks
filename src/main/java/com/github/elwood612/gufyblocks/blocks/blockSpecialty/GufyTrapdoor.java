@@ -133,7 +133,7 @@ public class GufyTrapdoor extends HorizontalDirectionalBlock implements SimpleWa
     }
 
     protected void neighborChanged(BlockState p_57547_, Level p_57548_, BlockPos p_57549_, Block p_57550_, @Nullable Orientation p_364404_, boolean p_57552_) {
-        if (!p_57548_.isClientSide) {
+        if (!p_57548_.isClientSide()) {
             boolean flag = p_57548_.hasNeighborSignal(p_57549_);
             if (flag != (Boolean)p_57547_.getValue(POWERED)) {
                 if ((Boolean)p_57547_.getValue(OPEN) != flag) {

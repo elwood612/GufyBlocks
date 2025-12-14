@@ -48,7 +48,7 @@ public class GufyHammer extends Item
 
                 if (player instanceof ServerPlayer) {
                     CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockpos, itemstack);
-                    itemstack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(context.getHand()));
+                    itemstack.hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
                 }
                 level.setBlock(blockpos, (BlockState)optional.get(), 11);
                 level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));
