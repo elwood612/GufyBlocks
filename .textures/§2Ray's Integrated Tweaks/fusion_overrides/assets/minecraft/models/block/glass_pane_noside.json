@@ -1,0 +1,17 @@
+{
+  "type": "fusion:connecting",
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "edge": "minecraft:block/glass_pane_top",
+    "pane": "minecraft:block/glass_connected"
+  }
+}

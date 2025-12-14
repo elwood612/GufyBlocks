@@ -1,0 +1,10 @@
+{
+   "pack":{
+      "pack_format":15,
+      "description":"Does nothing without §2Ray's Tweaks",
+	  "supported_formats": {
+            "min_inclusive": 15,
+            "max_inclusive": 9999
+        }
+   }
+}

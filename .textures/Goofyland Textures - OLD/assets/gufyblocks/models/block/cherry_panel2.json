@@ -1,7 +1,0 @@
-{ 
-	"parent": "gufyblocks:block/panel",
-	"textures": 
-	{
-		"texture": "minecraft:block/cherry_planks2"
-	}
-}
