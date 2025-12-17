@@ -1,0 +1,8 @@
+{
+  "type": "fusion:connecting",
+  "parent": "minecraft:block/cube_all",
+  "loader": "fusion:model",
+  "textures": {
+    "all": "fusion_connected_glass:block/connecting_orange_stained_glass"
+  }
+}

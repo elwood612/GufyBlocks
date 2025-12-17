@@ -1,0 +1,17 @@
+{
+  "type": "fusion:connecting",
+  "parent": "fusion_connected_glass:block/template_glass_pane_post",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "edge": "fusion_connected_glass:block/light_gray_stained_glass_edge",
+    "pane": "fusion_connected_glass:block/connecting_light_gray_stained_glass"
+  }
+}

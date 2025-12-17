@@ -1,0 +1,59 @@
+{
+  "type": "fusion:connecting",
+  "parent": "fusion_connected_glass:block/template_glass_pane_side",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:or",
+        "predicates": [
+          {
+            "type": "fusion:and",
+            "predicates": [
+              {
+                "type": "fusion:match_state",
+                "block": "minecraft:blue_stained_glass_pane",
+                "properties": {
+                  "north": [
+                    "true"
+                  ]
+                }
+              },
+              {
+                "type": "fusion:is_direction",
+                "directions": [
+                  "bottom",
+                  "top"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "fusion:and",
+            "predicates": [
+              {
+                "type": "fusion:is_same_block"
+              },
+              {
+                "type": "fusion:is_direction",
+                "directions": [
+                  "bottom_left",
+                  "bottom_right",
+                  "left",
+                  "right",
+                  "top_left",
+                  "top_right"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "edge": "fusion_connected_glass:block/blue_stained_glass_edge",
+    "pane": "fusion_connected_glass:block/connecting_blue_stained_glass"
+  }
+}
