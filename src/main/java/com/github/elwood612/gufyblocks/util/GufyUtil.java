@@ -1,13 +1,11 @@
 package com.github.elwood612.gufyblocks.util;
 
-import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.blocks.*;
 import com.github.elwood612.gufyblocks.blocks.blockSpecialty.*;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.*;
 import com.github.elwood612.gufyblocks.blocks.blockWeathering.*;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
@@ -16,7 +14,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.*;
@@ -163,23 +160,23 @@ public class GufyUtil
     //************************GET BLOCKS***************************//
     public static Block getGufyBlock(String name)
     {
-        return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath(MODID, name));
+        return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath(MODID, name));
     }
 
     public static Block getStairParent(String name)
     {
-        if (BuiltInRegistries.BLOCK.containsKey(ResourceLocation.fromNamespaceAndPath(MODID, name)))
-            return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath(MODID, name));
-        if (BuiltInRegistries.BLOCK.containsKey(ResourceLocation.fromNamespaceAndPath(MODID, name + "s")))
-            return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath(MODID, name + "s"));
-        if (BuiltInRegistries.BLOCK.containsKey(ResourceLocation.fromNamespaceAndPath("minecraft", name)))
-            return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath("minecraft", name));
-        if (BuiltInRegistries.BLOCK.containsKey(ResourceLocation.fromNamespaceAndPath("minecraft", name + "_block")))
-            return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath("minecraft", name + "_block"));
-        if (BuiltInRegistries.BLOCK.containsKey(ResourceLocation.fromNamespaceAndPath("minecraft", name + "_planks")))
-            return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath("minecraft", name + "_planks"));
-        if (BuiltInRegistries.BLOCK.containsKey(ResourceLocation.fromNamespaceAndPath("minecraft", name + "s")))
-            return BuiltInRegistries.BLOCK.getValue(ResourceLocation.fromNamespaceAndPath("minecraft", name + "s"));
+        if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath(MODID, name)))
+            return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath(MODID, name));
+        if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath(MODID, name + "s")))
+            return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath(MODID, name + "s"));
+        if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath("minecraft", name)))
+            return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name));
+        if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath("minecraft", name + "_block")))
+            return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name + "_block"));
+        if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath("minecraft", name + "_planks")))
+            return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name + "_planks"));
+        if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath("minecraft", name + "s")))
+            return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name + "s"));
 
         else return Blocks.OAK_PLANKS;
     }

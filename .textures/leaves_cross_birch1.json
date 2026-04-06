@@ -1,5 +1,4 @@
 {
-  "format_version": "1.21.11",
   "parent":"block/block",
   "textures": {
     "particle": "#all"
@@ -21,7 +20,7 @@
       "from": [ 14, -6, -7 ],
       "to": [ 14, 22, 25 ],
       "shade": false,
-      "rotation": {"x": 0, "y": -22.5, "z": 2.5, "origin": [14.125, 8, -6.8125]},
+      "rotation": { "origin": [ 6.125, -8, 20.125 ], "axis": "y", "angle": 22.5 },
       "faces": {
         "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bushy" },
         "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bushy" }
@@ -31,7 +30,7 @@
       "from": [ -7, -6, 2 ],
       "to": [ 25, 22, 2 ],
       "shade": false,
-      "rotation": {"x": 2.5, "y": -22.5, "z": 0, "origin": [-6.8125, 8, 1.875]},
+      "rotation": { "origin": [ 20.125, -8, 6.125 ], "axis": "y", "angle": 22.5 },
       "faces": {
         "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#bushy" },
         "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#bushy" }
