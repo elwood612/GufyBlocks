@@ -28,7 +28,8 @@ public class GufyBlocks
 		modEventBus.addListener(this::loadComplete);
 	}
 
-	// prevents vanilla clients from connecting to the server
+	// gives better error message handling (thru Neoforge)
+	// when attempting to connect to the server with vanilla client
 	private void registerPackets(RegisterPayloadHandlersEvent event) {
 		final PayloadRegistrar registrar = event.registrar(MODID).versioned(VERSION);
 		registrar.configurationToClient(
