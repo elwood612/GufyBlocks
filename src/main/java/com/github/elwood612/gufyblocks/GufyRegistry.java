@@ -5,10 +5,14 @@ import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.GufyHammer;
 import com.github.elwood612.gufyblocks.items.GufyMossClump;
+import com.github.elwood612.gufyblocks.items.GufyAnchor;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
+import com.mojang.serialization.Codec;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
@@ -31,7 +35,6 @@ import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.*;
-import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy;
 
 
 public class GufyRegistry
@@ -41,6 +44,7 @@ public class GufyRegistry
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(Registries.ENTITY_TYPE, MODID);
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, MODID);
 
     private static final GufyBlockTypes[] GUFY_STONE_TYPES = GufyUtil.blocktypeBuilder().get(0);
     private static final GufyBlockTypes[] VANILLA_STONE_TYPES = GufyUtil.blocktypeBuilder().get(1);
@@ -455,6 +459,12 @@ public class GufyRegistry
             GufyHammer::new,
             () -> new Item.Properties().durability(216)
     );
+    public static final DeferredItem<Item> ANCHOR = ITEMS.registerItem(
+            "anchor",
+            GufyAnchor::new,
+            () -> new Item.Properties().stacksTo(1)
+    );
+
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MODID, "seat"))));
@@ -462,7 +472,7 @@ public class GufyRegistry
     //**************************************************************//
 
 
-    //****************************TABS******************************//
+    //****************************TABS & UTILITY******************************//
     public static final Supplier<CreativeModeTab> GUFY_TAB = TABS.register("gufyblocks",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + MODID + ".tab"))
@@ -479,7 +489,17 @@ public class GufyRegistry
                     })
                     .build()
     );
+
+    public static final Supplier<DataComponentType<String>> OWNER = GufyRegistry.DATA_COMPONENT_TYPES.register("owner", () ->
+            DataComponentType.<String>builder()
+                    .persistent(Codec.STRING)
+                    .networkSynchronized(ByteBufCodecs.STRING_UTF8)
+                    .build()
+    );
     //**************************************************************//
+
+
+
 
 
     //***********************REGISTRY METHODS***********************//
