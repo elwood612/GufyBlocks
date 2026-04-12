@@ -106,6 +106,13 @@ public class GufyAnchor extends Item
             if (!stack.has(GufyRegistry.OWNER.get())) {
                 if (entity instanceof Player player) {
                     stack.set(GufyRegistry.OWNER.get(), player.getGameProfile().name());
+                    level.playSound((Player) null,
+                            player.getX(),
+                            player.getY(),
+                            player.getZ(),
+                            SoundEvents.ENCHANTMENT_TABLE_USE,
+                            SoundSource.PLAYERS,
+                            0.8f, 0.8f);
                 }
             }
         }
@@ -118,10 +125,14 @@ public class GufyAnchor extends Item
         if (stack.has(GufyRegistry.OWNER.get())) {
             String owner = stack.getOrDefault(GufyRegistry.OWNER.get(), "");
             if (owner.isEmpty()) return super.getName(stack);
-//            return Component.literal(owner + "'s ").append(Component.translatable(this.getDescriptionId()));
-            return Component.translatable(this.getDescriptionId()).append(Component.literal(": " + owner));
+            return Component.literal("Homing Crystal: " + owner);
         } else {
             return super.getName(stack);
         }
+    }
+
+    @Override
+    public boolean isFoil(ItemStack stack) {
+        return stack.has(GufyRegistry.OWNER.get());
     }
 }

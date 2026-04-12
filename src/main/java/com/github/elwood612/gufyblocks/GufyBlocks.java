@@ -1,10 +1,13 @@
 package com.github.elwood612.gufyblocks;
 
+import com.github.elwood612.gufyblocks.events.GufyClientEvents;
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.events.GufyScaffoldingEvent;
 import com.github.elwood612.gufyblocks.packets.GufyPayload;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
@@ -42,6 +45,5 @@ public class GufyBlocks
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
 		NeoForge.EVENT_BUS.register(GufyScaffoldingEvent.class);
-//		GufyComponentHandler.loadClass();
 	}
 }
