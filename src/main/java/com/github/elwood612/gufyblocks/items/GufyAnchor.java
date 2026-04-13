@@ -17,9 +17,12 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class GufyAnchor extends Item
 {
@@ -125,7 +128,7 @@ public class GufyAnchor extends Item
         if (stack.has(GufyRegistry.OWNER.get())) {
             String owner = stack.getOrDefault(GufyRegistry.OWNER.get(), "");
             if (owner.isEmpty()) return super.getName(stack);
-            return Component.literal("Homing Crystal: " + owner);
+            return Component.literal("Homing Crystal: " + owner).withStyle(ChatFormatting.GOLD);
         } else {
             return super.getName(stack);
         }
