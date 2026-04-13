@@ -1899,7 +1899,7 @@
 
 "tooltip.gufyblocks.one_time_use": "One-time use!",
 "tooltip.gufyblocks.instructions": "Right click to teleport to ",
-"tooltip.gufyblocks.empty_anchor": "Put in your inventory to claim.",
+"tooltip.gufyblocks.empty_anchor": "Put in your inventory to claim",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }

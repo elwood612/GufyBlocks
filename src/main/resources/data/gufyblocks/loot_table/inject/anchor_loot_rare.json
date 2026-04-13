@@ -1,0 +1,34 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+	  "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.4
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gufyblocks:anchor"
+        }
+      ]
+    },
+	{
+      "rolls": 1,
+	  "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.15
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gufyblocks:anchor"
+        }
+      ]
+    }
+  ]
+}
