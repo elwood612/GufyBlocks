@@ -449,29 +449,7 @@
 "block.gufyblocks.cherry_framed_terracotta_left": "Cherry Framed Terracotta Left",  
 "block.gufyblocks.cherry_framed_terracotta_right": "Cherry Framed Terracotta Right",  
 "block.gufyblocks.cherry_framed_terracotta_cross": "Cherry Framed Terracotta Cross",  
-"block.gufyblocks.cherry_framed_terracotta": "Cherry Framed Terracotta",  
-"block.gufyblocks.mangrove_framed_terracotta_left": "Mangrove Framed Terracotta Left",  
-"block.gufyblocks.mangrove_framed_terracotta_right": "Mangrove Framed Terracotta Right",  
-"block.gufyblocks.mangrove_framed_terracotta_cross": "Mangrove Framed Terracotta Cross",  
-"block.gufyblocks.mangrove_framed_terracotta": "Mangrove Framed Terracotta",  
- 
-"block.gufyblocks.stripped_cherry_wood_stairs": "Stripped Cherry Wood Stairs",  
-"block.gufyblocks.stripped_cherry_wood_slab": "Stripped Cherry Wood Slab",  
-"block.gufyblocks.stripped_cherry_wood_verticalslab": "Stripped Cherry Wood Vertical Slab",  
-"block.gufyblocks.stripped_cherry_wood_wall": "Stripped Cherry Wood Wall",  
-"block.gufyblocks.stripped_cherry_wood_hopper": "Stripped Cherry Wood Hopper",  
-"block.gufyblocks.stripped_cherry_wood_fence": "Stripped Cherry Wood Fence",  
-"block.gufyblocks.stripped_cherry_wood_fence_gate": "Stripped Cherry Wood Fence Gate",  
-"block.gufyblocks.stripped_cherry_wood_panel": "Stripped Cherry Wood Panel",  
- 
-"block.gufyblocks.stripped_mangrove_wood_stairs": "Stripped Mangrove Wood Stairs",  
-"block.gufyblocks.stripped_mangrove_wood_slab": "Stripped Mangrove Wood Slab",  
-"block.gufyblocks.stripped_mangrove_wood_verticalslab": "Stripped Mangrove Wood Vertical Slab",  
-"block.gufyblocks.stripped_mangrove_wood_wall": "Stripped Mangrove Wood Wall",  
-"block.gufyblocks.stripped_mangrove_wood_hopper": "Stripped Mangrove Wood Hopper",  
-"block.gufyblocks.stripped_mangrove_wood_fence": "Stripped Mangrove Wood Fence",  
-"block.gufyblocks.stripped_mangrove_wood_fence_gate": "Stripped Mangrove Wood Fence Gate",  
-"block.gufyblocks.stripped_mangrove_wood_panel": "Stripped Mangrove Wood Panel",  
+"block.gufyblocks.cherry_framed_terracotta": "Cherry Framed Terracotta",
  
 "block.gufyblocks.stripped_cherry_wood_stairs": "Stripped Cherry Wood Stairs",  
 "block.gufyblocks.stripped_cherry_wood_slab": "Stripped Cherry Wood Slab",  
@@ -1911,16 +1889,17 @@
 "block.gufyblocks.cracked_stone_bricks_hopper": "Cracked Stone Brick Hopper",
 "block.gufyblocks.cracked_stone_bricks_post": "Cracked Stone Brick Post",
 
-"item.gufyblocks.wooden_mallet": "Wooden Mallet",
-"item.gufyblocks.golden_mallet": "Golden Mallet",
-"item.gufyblocks.stone_mallet": "Stone Mallet",
-"item.gufyblocks.iron_mallet": "Iron Mallet",
-"item.gufyblocks.diamond_mallet": "Diamond Mallet",
-"item.gufyblocks.netherite_mallet": "Netherite Mallet",
-
 "item.gufyblocks.moss_clump": "Moss Clump",
 "item.gufyblocks.hammer": "Steel Hammer",
-"item.gufyblocks.oak_framing_tool": "Oak Framing Tool",
+"item.gufyblocks.anchor": "Unclaimed Homing Crystal",
+
+"item.gufyblocks.self":  "§cYou cannot use this on yourself! §r",
+"item.gufyblocks.dimension":  "§cLinked player is in another dimension! §r",
+"item.gufyblocks.offline":  "§cLinked player is offline! §r",
+
+"tooltip.gufyblocks.one_time_use": "One-time use!",
+"tooltip.gufyblocks.instructions": "Right click to teleport to ",
+"tooltip.gufyblocks.empty_anchor": "Put in your inventory to claim",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }
