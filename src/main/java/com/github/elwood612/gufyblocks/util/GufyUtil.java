@@ -7,6 +7,7 @@ import com.github.elwood612.gufyblocks.blocks.blockWeathering.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
@@ -240,6 +242,12 @@ public class GufyUtil
             return ((Level)levelAccessor);
         }
         return null;
+    }
+
+    //***********************PLAYER UTIL*******************************//
+    @Nullable
+    public static Player getPlayerEntityByName(Level level, String name) {
+        return level.players().stream().filter(player -> player.getName().getString().equalsIgnoreCase(name)).findFirst().orElse(null);
     }
 
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:chorus_fruit",
+    "X": "minecraft:amethyst_shard",
+	"Y": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    "  X",
+    " # ",
+	"Y  "
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:anchor"
+  }
+}

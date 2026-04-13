@@ -22,6 +22,7 @@ public class GufyBlocks
 		GufyRegistry.ITEMS.register(modEventBus);
 		GufyRegistry.ENTITIES.register(modEventBus);
 		GufyRegistry.TABS.register(modEventBus);
+		GufyRegistry.DATA_COMPONENT_TYPES.register(modEventBus);
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
@@ -41,5 +42,6 @@ public class GufyBlocks
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
 		NeoForge.EVENT_BUS.register(GufyScaffoldingEvent.class);
+//		GufyComponentHandler.loadClass();
 	}
 }
