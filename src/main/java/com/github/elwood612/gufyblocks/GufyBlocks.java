@@ -42,6 +42,5 @@ public class GufyBlocks
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
 		NeoForge.EVENT_BUS.register(GufyScaffoldingEvent.class);
-//		GufyComponentHandler.loadClass();
 	}
 }
