@@ -1893,7 +1893,7 @@
 "item.gufyblocks.hammer": "Steel Hammer",
 "item.gufyblocks.anchor": "Unclaimed Homing Crystal",
 
-"item.gufyblocks.self":  "§cYou cannot use this on yourself! §r",
+"item.gufyblocks.self":  "§cYou cannot teleport to yourself! §r",
 "item.gufyblocks.dimension":  "§cLinked player is in another dimension! §r",
 "item.gufyblocks.offline":  "§cLinked player is offline! §r",
 

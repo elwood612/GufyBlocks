@@ -16,7 +16,12 @@
 		"gufyblocks:stronghold_crossing",
 		"gufyblocks:trial_reward_ominous_rare",
 		"gufyblocks:trial_reward_rare",
-		"gufyblocks:village_temple",
-		"gufyblocks:woodland_mansion"
+		"gufyblocks:woodland_mansion",
+		"gufyblocks:archeology_pyramid",
+		"gufyblocks:archeology_well",
+		"gufyblocks:archeology_cold_ocean",
+		"gufyblocks:archeology_warm_ocean",
+		"gufyblocks:archeology_trail_common",
+		"gufyblocks:archeology_trail_rare"
     ]
 }

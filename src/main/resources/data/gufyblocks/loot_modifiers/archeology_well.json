@@ -3,8 +3,8 @@
     "conditions": [
 		{
 			"condition": "neoforge:loot_table_id",
-			"loot_table_id": "minecraft:chests/stronghold_corridor"
+			"loot_table_id": "minecraft:archeology/desert_well"
 		}
 	],
-    "table": "gufyblocks:inject/anchor_loot_rare"
+    "table": "gufyblocks:inject/anchor_loot_trial"
 }

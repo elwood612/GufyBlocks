@@ -6,5 +6,5 @@
 			"loot_table_id": "minecraft:chests/stronghold_crossing"
 		}
 	],
-    "table": "gufyblocks:inject/anchor_loot_common"
+    "table": "gufyblocks:inject/anchor_loot_rare"
 }

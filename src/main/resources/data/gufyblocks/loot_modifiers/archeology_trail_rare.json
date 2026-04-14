@@ -1,0 +1,10 @@
+{
+    "type": "neoforge:add_table",
+    "conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "minecraft:archeology/trail_ruins_rare"
+		}
+	],
+    "table": "gufyblocks:inject/anchor_loot_trial_ominous"
+}
