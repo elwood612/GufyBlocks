@@ -30,7 +30,7 @@ public class GufyAnchor extends Item
     public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
         ItemStack itemstack = player.getItemInHand(handIn);
         BlockPos position = player.getOnPos();
-        if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer  && itemstack.has(GufyRegistry.OWNER.get())) {
+        if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer && itemstack.has(GufyRegistry.OWNER.get())) {
             String ownerName = itemstack.getOrDefault(GufyRegistry.OWNER.get(), "");
 
             player.swing(handIn, true);
@@ -38,7 +38,7 @@ public class GufyAnchor extends Item
             if (ownerName.isEmpty()) return InteractionResult.PASS;
 
             if (ownerName.equalsIgnoreCase(player.getGameProfile().name())) {
-                serverPlayer.sendSystemMessage(Component.translatable("item.gufyblocks.self"));
+                serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.teleport_self"));
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
@@ -50,7 +50,7 @@ public class GufyAnchor extends Item
             Player owner = GufyUtil.getPlayerEntityByName(level, ownerName);
             if (owner != null) {
                 if (!owner.level().dimension().equals(player.level().dimension())) {
-                    serverPlayer.sendSystemMessage(Component.translatable("item.gufyblocks.dimension", ChatFormatting.RED + ownerName));
+                    serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.teleport_dimension"));
                     level.playSound((Player) null,
                             position,
                             SoundEvents.ENDERMAN_TELEPORT,
@@ -87,7 +87,7 @@ public class GufyAnchor extends Item
                 );
 
             } else {
-                serverPlayer.sendSystemMessage(Component.translatable("item.gufyblocks.offline", ChatFormatting.RED + ownerName));
+                serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.teleport_offline", ChatFormatting.RED + ownerName));
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
@@ -125,7 +125,7 @@ public class GufyAnchor extends Item
         if (stack.has(GufyRegistry.OWNER.get())) {
             String owner = stack.getOrDefault(GufyRegistry.OWNER.get(), "");
             if (owner.isEmpty()) return super.getName(stack);
-            return Component.literal("Homing Crystal: " + owner).withStyle(ChatFormatting.GOLD);
+            return Component.literal("Homing Crystal: " + owner).copy().withStyle(ChatFormatting.GOLD);
         } else {
             return super.getName(stack);
         }

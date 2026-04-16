@@ -3,13 +3,13 @@ package com.github.elwood612.gufyblocks;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
-import com.github.elwood612.gufyblocks.items.GufyHammer;
-import com.github.elwood612.gufyblocks.items.GufyMossClump;
-import com.github.elwood612.gufyblocks.items.GufyAnchor;
+import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
+import io.netty.buffer.ByteBuf;
 import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -21,6 +21,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -31,6 +32,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
@@ -464,6 +466,36 @@ public class GufyRegistry
             GufyAnchor::new,
             () -> new Item.Properties().stacksTo(1)
     );
+    public static final DeferredItem<Item> SUNLIGHT_SHARD = ITEMS.registerItem(
+            "sunlight_shard",
+            GufySunlightShard::new,
+            () -> new Item.Properties().useCooldown(1f)
+    );
+    public static final DeferredItem<Item> STORM_ECHO = ITEMS.registerItem(
+            "storm_echo",
+            GufyStormEcho::new,
+            () -> new Item.Properties().stacksTo(1)
+    );
+    public static final DeferredItem<Item> SPECTRAL_GEM = ITEMS.registerItem(
+            "spectral_gem",
+            GufySpectralGem::new,
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f)
+    );
+    public static final DeferredItem<Item> BIOME_SEED = ITEMS.registerItem(
+            "biome_seed",
+            GufyBiomeSeed::new,
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f)
+    );
+    public static final DeferredItem<Item> INSOMNIA_FRAGMENT = ITEMS.registerItem(
+            "insomnia_fragment",
+            GufyInsomniaFragment::new,
+            () -> new Item.Properties().stacksTo(1)
+    );
+    public static final DeferredItem<Item> PHASING_VIAL = ITEMS.registerItem(
+            "phasing_vial",
+            GufyPhasingVial::new,
+            () -> new Item.Properties().stacksTo(16).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK)
+    );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
@@ -496,6 +528,18 @@ public class GufyRegistry
                     .networkSynchronized(ByteBufCodecs.STRING_UTF8)
                     .build()
     );
+    public static final Supplier<DataComponentType<Identifier>> STORED_BIOME = GufyRegistry.DATA_COMPONENT_TYPES.register("stored_biome", () ->
+            DataComponentType.<Identifier>builder()
+                    .persistent(Identifier.CODEC)
+                    .networkSynchronized(Identifier.STREAM_CODEC)
+                    .build()
+    );
+//    public static final Supplier<DataComponentType<Optional<Identifier>>> STORED_BIOME_OPTIONAL = GufyRegistry.DATA_COMPONENT_TYPES.register("stored_biome_optional", () ->
+//            DataComponentType.<Optional<Identifier>>builder()
+//                    .persistent(Identifier.CODEC.optionalFieldOf("stored_biome_optional").codec())
+//                    .networkSynchronized(ByteBufCodecs.optional(Identifier.STREAM_CODEC))
+//                    .build()
+//    );
     //**************************************************************//
 
 

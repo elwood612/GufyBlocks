@@ -4,8 +4,18 @@ import com.github.elwood612.gufyblocks.blocks.*;
 import com.github.elwood612.gufyblocks.blocks.blockSpecialty.*;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.*;
 import com.github.elwood612.gufyblocks.blocks.blockWeathering.*;
+import net.minecraft.CrashReport;
+import net.minecraft.CrashReportCategory;
+import net.minecraft.ReportedException;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -15,6 +25,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
 
@@ -248,6 +260,22 @@ public class GufyUtil
     @Nullable
     public static Player getPlayerEntityByName(Level level, String name) {
         return level.players().stream().filter(player -> player.getName().getString().equalsIgnoreCase(name)).findFirst().orElse(null);
+    }
+
+    public static void execute(String command, ServerLevel level, BlockPos pos, Player castingPlayer) {
+        MinecraftServer minecraftserver = level.getServer();
+        var name = Component.literal("@");
+        try {
+            CommandSourceStack commandsourcestack = new CommandSourceStack(
+                    CommandSource.NULL, Vec3.atCenterOf(pos), Vec2.ZERO, level, LevelBasedPermissionSet.OWNER, name.getString(), name, minecraftserver, castingPlayer);
+            minecraftserver.getCommands().performPrefixedCommand(commandsourcestack, command);
+        } catch (Throwable throwable) {
+            CrashReport crashreport = CrashReport.forThrowable(throwable, "Executing command block");
+            CrashReportCategory crashreportcategory = crashreport.addCategory("Command to be executed");
+            crashreportcategory.setDetail("Command", () -> command);
+            crashreportcategory.setDetail("Name", name::getString);
+            throw new ReportedException(crashreport);
+        }
     }
 
 

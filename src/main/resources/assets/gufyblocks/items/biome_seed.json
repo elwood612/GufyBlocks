@@ -1,0 +1,15 @@
+{
+    "model": {
+        "type": "minecraft:condition",
+        "property": "gufyblocks:has_stored_biome",
+        "on_true": {
+            "type": "minecraft:model",
+            "model": "gufyblocks:item/biome_seed_assigned"
+            
+        },
+        "on_false": {
+            "type": "minecraft:model",
+            "model": "gufyblocks:item/biome_seed_dormant"
+        }
+    }
+}
