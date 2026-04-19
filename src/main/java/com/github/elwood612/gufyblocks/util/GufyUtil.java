@@ -172,13 +172,15 @@ public class GufyUtil
     }
 
     //************************GET BLOCKS***************************//
-    public static Block getGufyBlock(String name)
-    {
+    public static Block getGufyBlock(String name) {
         return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath(MODID, name));
     }
 
-    public static Block getStairParent(String name)
-    {
+    public static Item getGufyItem(String name) {
+        return BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath(MODID, name));
+    }
+
+    public static Block getStairParent(String name) {
         if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath(MODID, name)))
             return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath(MODID, name));
         if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath(MODID, name + "s")))

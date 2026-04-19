@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.events.GufyScaffoldingEvent;
+import com.github.elwood612.gufyblocks.items.GufyWhisperingCompass;
 import com.github.elwood612.gufyblocks.packets.GufyPayload;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

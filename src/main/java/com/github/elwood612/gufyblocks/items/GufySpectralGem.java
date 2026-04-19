@@ -65,7 +65,7 @@ public class GufySpectralGem extends Item
     @NotNull
     @Override
     public Component getName(ItemStack stack) {
-        return Component.translatable("item.gufyblocks.spectral_gem").copy().withStyle(ChatFormatting.BLUE);
+        return Component.translatable("item.gufyblocks.spectral_gem").copy().withStyle(ChatFormatting.RED);
     }
 
     @Override

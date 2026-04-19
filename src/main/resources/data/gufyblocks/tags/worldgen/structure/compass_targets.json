@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:village_desert",
+	"minecraft:village_plains",
+	"minecraft:village_savanna",
+	"minecraft:village_snowy",
+	"minecraft:village_taiga",
+    "minecraft:desert_pyramid",
+    "minecraft:jungle_pyramid",
+	"minecraft:mansion",
+	"minecraft:ruined_portal",
+	"minecraft:igloo",
+    "minecraft:trail_ruins",
+	"minecraft:ocean_ruin_cold",
+	"minecraft:ocean_ruin_warm",
+	"minecraft:pillager_outpost",
+	"minecraft:monument",
+	"minecraft:bastion_remnant",
+	"minecraft:fortress",
+	"minecraft:end_city"
+  ]
+}

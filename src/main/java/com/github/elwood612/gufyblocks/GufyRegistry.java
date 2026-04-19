@@ -8,6 +8,7 @@ import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -15,6 +16,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +26,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.levelgen.structure.Structure;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -479,7 +482,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> SPECTRAL_GEM = ITEMS.registerItem(
             "spectral_gem",
             GufySpectralGem::new,
-            () -> new Item.Properties().stacksTo(16).useCooldown(1f)
+            () -> new Item.Properties().useCooldown(1f)
     );
     public static final DeferredItem<Item> BIOME_SEED = ITEMS.registerItem(
             "biome_seed",
@@ -494,7 +497,12 @@ public class GufyRegistry
     public static final DeferredItem<Item> PHASING_VIAL = ITEMS.registerItem(
             "phasing_vial",
             GufyPhasingVial::new,
-            () -> new Item.Properties().stacksTo(16).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK)
+            () -> new Item.Properties().stacksTo(1).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK)
+    );
+    public static final DeferredItem<Item> WHISPERING_COMPASS = ITEMS.registerItem(
+            "whispering_compass",
+            GufyWhisperingCompass::new,
+            () -> new Item.Properties().stacksTo(1)
     );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
@@ -510,36 +518,53 @@ public class GufyRegistry
                     .title(Component.translatable("itemGroup." + MODID + ".tab"))
                     .icon(() -> new ItemStack(GufyUtil.getGufyBlock("cobblestone_bricks")))
                     .displayItems((params, output) -> {
-                        for (DeferredHolder<Block, ? extends Block> block : GufyRegistry.BLOCKS.getEntries())
+                        for (DeferredHolder<Block, ? extends Block> block : BLOCKS.getEntries())
                         {
                             output.accept(block.get());
                         }
-                        for (DeferredHolder<Item, ? extends Item> item : GufyRegistry.ITEMS.getEntries())
+                        for (DeferredHolder<Item, ? extends Item> item : ITEMS.getEntries())
                         {
                             output.accept(item.get());
                         }
                     })
                     .build()
     );
-
-    public static final Supplier<DataComponentType<String>> OWNER = GufyRegistry.DATA_COMPONENT_TYPES.register("owner", () ->
+    public static final Supplier<DataComponentType<String>> OWNER = DATA_COMPONENT_TYPES.register("owner", () ->
             DataComponentType.<String>builder()
                     .persistent(Codec.STRING)
                     .networkSynchronized(ByteBufCodecs.STRING_UTF8)
                     .build()
     );
-    public static final Supplier<DataComponentType<Identifier>> STORED_BIOME = GufyRegistry.DATA_COMPONENT_TYPES.register("stored_biome", () ->
+    public static final Supplier<DataComponentType<Identifier>> STORED_BIOME = DATA_COMPONENT_TYPES.register("stored_biome", () ->
             DataComponentType.<Identifier>builder()
                     .persistent(Identifier.CODEC)
                     .networkSynchronized(Identifier.STREAM_CODEC)
                     .build()
     );
-//    public static final Supplier<DataComponentType<Optional<Identifier>>> STORED_BIOME_OPTIONAL = GufyRegistry.DATA_COMPONENT_TYPES.register("stored_biome_optional", () ->
-//            DataComponentType.<Optional<Identifier>>builder()
-//                    .persistent(Identifier.CODEC.optionalFieldOf("stored_biome_optional").codec())
-//                    .networkSynchronized(ByteBufCodecs.optional(Identifier.STREAM_CODEC))
-//                    .build()
-//    );
+    public static final Supplier<DataComponentType<BlockPos>> COMPASS_TARGET = DATA_COMPONENT_TYPES.register("compass_target", () ->
+            DataComponentType.<BlockPos>builder()
+                    .persistent(BlockPos.CODEC)
+                    .networkSynchronized(BlockPos.STREAM_CODEC)
+                    .build()
+    );
+    public static final Supplier<DataComponentType<Integer>> COMPASS_STATE = DATA_COMPONENT_TYPES.register("compass_state", () ->
+            DataComponentType.<Integer>builder()
+                    .persistent(Codec.INT)
+                    .networkSynchronized(ByteBufCodecs.VAR_INT)
+                    .build()
+    );
+    public static final Supplier<DataComponentType<Integer>> FOUND_X = DATA_COMPONENT_TYPES.register("found_x", () ->
+            DataComponentType.<Integer>builder()
+                    .persistent(Codec.INT)
+                    .networkSynchronized(ByteBufCodecs.VAR_INT)
+                    .build()
+    );
+    public static final Supplier<DataComponentType<Integer>> FOUND_Z = DATA_COMPONENT_TYPES.register("found_z", () ->
+            DataComponentType.<Integer>builder()
+                    .persistent(Codec.INT)
+                    .networkSynchronized(ByteBufCodecs.VAR_INT)
+                    .build()
+    );
     //**************************************************************//
 
 

@@ -56,7 +56,8 @@ public class GufyInsomniaFragment extends Item
                 itemstack.consume(1, player);
             }
 
-            GufyUtil.execute("time set 14000", serverLevel, position, player);
+            int rand = level.random.nextIntBetweenInclusive(14000, 18000);
+            serverLevel.setDayTime(rand);
             GufyUtil.execute("effect give @p minecraft:blindness 3 0 true", serverLevel, position, player);
             GufyUtil.execute("effect give @p minecraft:nausea 3 0 true", serverLevel, position, player);
             GufyUtil.execute("gamerule spawn_phantoms true", serverLevel, position, player);

@@ -88,7 +88,7 @@ public class GufyPhasingVial extends Item
     @NotNull
     @Override
     public Component getName(ItemStack stack) {
-        return Component.translatable("item.gufyblocks.phasing_vial").copy().withStyle(ChatFormatting.WHITE).withStyle(ChatFormatting.BOLD);
+        return Component.translatable("item.gufyblocks.phasing_vial").copy().withStyle(ChatFormatting.DARK_AQUA);
     }
 
     @Override

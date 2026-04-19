@@ -1897,7 +1897,8 @@
 "item.gufyblocks.spectral_gem": "Spectral Gem",
 "item.gufyblocks.biome_seed": "Dormant Biome Seedling",
 "item.gufyblocks.phasing_vial": "Phasing Vial",
-"item.gufyblocks.insomnia_fragment": "Insomnia Fragment",
+"item.gufyblocks.insomnia_fragment": "Moonlight Pearl",
+"item.gufyblocks.whispering_compass": "Whispering Compass",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",

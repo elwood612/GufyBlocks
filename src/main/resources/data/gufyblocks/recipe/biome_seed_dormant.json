@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "gufyblocks:biome_seed",
+    "X": "minecraft:amethyst_shard"
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+	"XXX"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:biome_seed"
+  }
+}

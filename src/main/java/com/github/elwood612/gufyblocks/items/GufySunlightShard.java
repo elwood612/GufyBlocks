@@ -58,8 +58,13 @@ public class GufySunlightShard extends Item
                 itemstack.consume(1, player);
             }
 
-            GufyUtil.execute("time set 0", serverLevel, position, player);
-            GufyUtil.execute("weather clear 6000", serverLevel, position, player);
+            serverLevel.setDayTime(0);
+//            GufyUtil.execute("weather clear 6000", serverLevel, position, player);
+            serverLevel.setWeatherParameters(
+                    12000 + serverLevel.random.nextInt(12000),
+                    12000 + serverLevel.random.nextInt(12000),
+                    false,
+                    false);
 
             level.playSound((Player) null,
                     position,
