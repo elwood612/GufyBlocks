@@ -4,6 +4,7 @@ import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.*;
+import com.github.elwood612.gufyblocks.util.GufyCompassData;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
@@ -504,6 +505,11 @@ public class GufyRegistry
             GufyWhisperingCompass::new,
             () -> new Item.Properties().stacksTo(1)
     );
+    public static final DeferredItem<Item> EXPERIENCE_ORB = ITEMS.registerItem(
+            "experience_orb",
+            GufyExperienceOrb::new,
+            () -> new Item.Properties()
+    );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
@@ -541,28 +547,9 @@ public class GufyRegistry
                     .networkSynchronized(Identifier.STREAM_CODEC)
                     .build()
     );
-    public static final Supplier<DataComponentType<BlockPos>> COMPASS_TARGET = DATA_COMPONENT_TYPES.register("compass_target", () ->
-            DataComponentType.<BlockPos>builder()
-                    .persistent(BlockPos.CODEC)
-                    .networkSynchronized(BlockPos.STREAM_CODEC)
-                    .build()
-    );
-    public static final Supplier<DataComponentType<Integer>> COMPASS_STATE = DATA_COMPONENT_TYPES.register("compass_state", () ->
-            DataComponentType.<Integer>builder()
-                    .persistent(Codec.INT)
-                    .networkSynchronized(ByteBufCodecs.VAR_INT)
-                    .build()
-    );
-    public static final Supplier<DataComponentType<Integer>> FOUND_X = DATA_COMPONENT_TYPES.register("found_x", () ->
-            DataComponentType.<Integer>builder()
-                    .persistent(Codec.INT)
-                    .networkSynchronized(ByteBufCodecs.VAR_INT)
-                    .build()
-    );
-    public static final Supplier<DataComponentType<Integer>> FOUND_Z = DATA_COMPONENT_TYPES.register("found_z", () ->
-            DataComponentType.<Integer>builder()
-                    .persistent(Codec.INT)
-                    .networkSynchronized(ByteBufCodecs.VAR_INT)
+    public static final Supplier<DataComponentType<GufyCompassData>> COMPASS_DATA = DATA_COMPONENT_TYPES.register("compass_data", () ->
+            DataComponentType.<GufyCompassData>builder()
+                    .persistent(GufyCompassData.CODEC)
                     .build()
     );
     //**************************************************************//

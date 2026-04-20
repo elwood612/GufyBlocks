@@ -42,7 +42,7 @@ public class GufyAnchor extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.PLAYERS,
+                        SoundSource.NEUTRAL,
                         0.5f, 0.4f);
                 return InteractionResult.SUCCESS;
             }
@@ -54,7 +54,7 @@ public class GufyAnchor extends Item
                     level.playSound((Player) null,
                             position,
                             SoundEvents.ENDERMAN_TELEPORT,
-                            SoundSource.PLAYERS,
+                            SoundSource.NEUTRAL,
                             0.5f, 0.4f);
                     return InteractionResult.SUCCESS;
                 }
@@ -66,7 +66,7 @@ public class GufyAnchor extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.AMETHYST_CLUSTER_BREAK,
-                        SoundSource.PLAYERS);
+                        SoundSource.NEUTRAL);
                 level.playSound((Player) null,
                         owner.getX(),
                         owner.getY(),
@@ -91,7 +91,7 @@ public class GufyAnchor extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.PLAYERS,
+                        SoundSource.BLOCKS,
                         0.5f, 0.4f);
             }
             return InteractionResult.SUCCESS;

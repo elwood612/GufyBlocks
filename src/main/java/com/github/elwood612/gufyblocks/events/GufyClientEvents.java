@@ -130,6 +130,22 @@ public class GufyClientEvents
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
             }
+            case GufyWhisperingCompass gufyWhisperingCompass -> {
+                event.getToolTip().add(1,
+                        Component.translatable("tooltip.gufyblocks.whispering_compass_instructions")
+                                .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC)
+                );
+            }
+            case GufyExperienceOrb gufyExperienceOrb -> {
+                event.getToolTip().add(1,
+                        Component.translatable("tooltip.gufyblocks.one_time_use")
+                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
+                );
+                event.getToolTip().add(2,
+                        Component.translatable("tooltip.gufyblocks.orb_instructions")
+                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
+                );
+            }
             default -> { }
         }
     }

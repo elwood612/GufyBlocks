@@ -1897,8 +1897,9 @@
 "item.gufyblocks.spectral_gem": "Spectral Gem",
 "item.gufyblocks.biome_seed": "Dormant Biome Seedling",
 "item.gufyblocks.phasing_vial": "Phasing Vial",
-"item.gufyblocks.insomnia_fragment": "Moonlight Pearl",
-"item.gufyblocks.whispering_compass": "Whispering Compass",
+"item.gufyblocks.insomnia_fragment": "Pearl of Insomnia",
+"item.gufyblocks.whispering_compass": "Finder's Compass",
+"item.gufyblocks.experience_orb": "Experience Gem",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -1919,6 +1920,8 @@
 "tooltip.gufyblocks.biome_seed_dormant": "Right click to save current biome",
 "tooltip.gufyblocks.phasing_vial_instructions": "Drink to become ethereal",
 "tooltip.gufyblocks.insomnia_fragment_instructions": "Right click to call the night",
+"tooltip.gufyblocks.whispering_compass_instructions": "Points to nearby structures",
+"tooltip.gufyblocks.orb_instructions": "Right click to obtain one level",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }

@@ -1,6 +1,9 @@
 package com.github.elwood612.gufyblocks.items;
 
+import com.github.elwood612.gufyblocks.GufyRegistry;
+import com.github.elwood612.gufyblocks.events.GufyClientEvents;
 import com.github.elwood612.gufyblocks.events.GufyPlayerEvents;
+import com.github.elwood612.gufyblocks.util.GufyCompassData;
 import com.github.elwood612.gufyblocks.util.GufyTags;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.*;
@@ -19,7 +22,6 @@ import net.minecraft.world.item.component.LodestoneTracker;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.BuiltinStructureSets;
-import net.minecraft.world.level.levelgen.structure.BuiltinStructures;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -30,31 +32,36 @@ public class GufyWhisperingCompass extends Item
 {
     public GufyWhisperingCompass(Item.Properties properties) { super(properties); }
 
-    private BlockPos lastSuccessfulSearchPos = null;
-    private ResourceKey<Level> lastSuccessfulSearchDimension = null;
-    private GlobalPos lastSuccessfulTarget = null;
-
     @Override
     public void inventoryTick(@NotNull ItemStack stack, ServerLevel level, @NotNull Entity entity, @Nullable EquipmentSlot slot) {
-        if (!level.isClientSide() && entity instanceof Player player && level.getGameTime() % (80 + player.getId() % 20) == 0) {
+
+        // Every time a player logs in, including you, close & reset the compass
+        if (level.getGameTime() < GufyPlayerEvents.lastGlobalLoginTick) {
+            if (stack.get(DataComponents.LODESTONE_TRACKER) != null) {
+                stack.remove(DataComponents.LODESTONE_TRACKER);
+            }
+            if (stack.get(GufyRegistry.COMPASS_DATA.get()) != null) {
+                stack.remove(GufyRegistry.COMPASS_DATA);
+            }
+            return;
+        }
+
+        if (entity instanceof Player player && level.getGameTime() % (80 + player.getId() % 20) == 0) {
             BlockPos playerPos = player.blockPosition();
             RegistryAccess registryAccess = level.registryAccess();
             HolderLookup.RegistryLookup<Structure> structureLookup = registryAccess.lookupOrThrow(Registries.STRUCTURE);
             HolderSet<Structure> targets = structureLookup.getOrThrow(GufyTags.ALL_COMPASS_TARGETS);
             long averageTickTime = level.getServer().getAverageTickTimeNanos();
             int radius = averageTickTime > 40_000_000L ? 2 : 3; // would be nice to actually measure this
+            GufyCompassData lastSearchData = stack.get(GufyRegistry.COMPASS_DATA.get());
 
-            if (lastSuccessfulSearchPos != null && lastSuccessfulSearchDimension != null &&
-                    (lastSuccessfulSearchDimension.equals(level.dimension()) && playerPos.distSqr(lastSuccessfulSearchPos) < 32 * 32)){
-//                System.out.println("Skipping compass search - haven't moved far enough");
+            // if we haven't moved far enough - skip search
+            if (lastSearchData != null && (lastSearchData.lastSuccessfulSearchDimension().equals(level.dimension()) &&
+                            playerPos.distSqr(lastSearchData.lastSuccessfulSearchPos()) < 32 * 32)){
                 return;
             }
-            if (level.getGameTime() < GufyPlayerEvents.lastGlobalLoginTick) {
-//                System.out.println("Skipping compass search - too soon after player login");
-                return;
-            }
+            // if server is struggling - skip half the searches
             if (averageTickTime > 50_000_000L && level.random.nextFloat() < 0.5f) {
-//                System.out.println("Skipping compass search - too much server lag");
                 return;
             }
 
@@ -67,68 +74,38 @@ public class GufyWhisperingCompass extends Item
                             false
                     );
 
-            lastSuccessfulSearchPos = playerPos;
-            lastSuccessfulSearchDimension = level.dimension();
+            GlobalPos newTarget = null;
 
             if (result != null) {
                 BlockPos candidatePos = result.getFirst();
-                GlobalPos targetPos = GlobalPos.of(level.dimension(), result.getFirst());
-
-                double maxDistance = 28 * 16;
                 double distSqr = candidatePos.distSqr(playerPos);
+                double maxDistance = 28 * 16;
                 int surfaceY = level.getHeight(Heightmap.Types.WORLD_SURFACE, candidatePos.getX(), candidatePos.getZ());
-                boolean isUndergroundPortal = false;
-                if (result.getSecond().is(BuiltinStructureSets.RUINED_PORTALS.identifier()) && candidatePos.getY() < surfaceY - 8) {
-                    isUndergroundPortal = true;
-                }
+                boolean isUndergroundPortal =
+                        result.getSecond().is(BuiltinStructureSets.RUINED_PORTALS.identifier()) && candidatePos.getY() < surfaceY - 8;
 
                 if (distSqr <= maxDistance * maxDistance && !isUndergroundPortal) {
-                    LodestoneTracker tracker = new LodestoneTracker(Optional.of(targetPos), true);
-                    stack.set(DataComponents.LODESTONE_TRACKER, tracker);
-//                    System.out.println("Found valid compass target");
-                    if (lastSuccessfulTarget == null || !lastSuccessfulTarget.equals(targetPos)) {
-                        level.playSound((Player) null,
-                                playerPos,
-                                SoundEvents.SPYGLASS_USE,
-                                SoundSource.PLAYERS,
-                                1f, 1.5f);
-                    }
-                    lastSuccessfulTarget = targetPos;
-
+                    newTarget = GlobalPos.of(level.dimension(), result.getFirst());
+                    stack.set(DataComponents.LODESTONE_TRACKER,
+                            new LodestoneTracker(Optional.of(newTarget), true));
                 } else {
                     stack.remove(DataComponents.LODESTONE_TRACKER);
-//                    System.out.println("No valid compass target");
-                    if (lastSuccessfulTarget != null) {
-                        level.playSound((Player) null,
-                                playerPos,
-                                SoundEvents.SPYGLASS_STOP_USING,
-                                SoundSource.PLAYERS,
-                                1f, 1.2f);
-                        level.playSound((Player) null,
-                                playerPos,
-                                SoundEvents.NOTE_BLOCK_HAT.value(),
-                                SoundSource.PLAYERS,
-                                0.3f, 1.2f);
-                    }
-                    lastSuccessfulTarget = null;
                 }
             } else {
                 stack.remove(DataComponents.LODESTONE_TRACKER);
-//                System.out.println("No valid compass target");
-                if (lastSuccessfulTarget != null) {
-                    level.playSound((Player) null,
-                            playerPos,
-                            SoundEvents.SPYGLASS_STOP_USING,
-                            SoundSource.PLAYERS,
-                            1f, 1.2f);
-                    level.playSound((Player) null,
-                            playerPos,
-                            SoundEvents.NOTE_BLOCK_HAT.value(),
-                            SoundSource.PLAYERS,
-                            0.3f, 1.2f);
-                }
-                lastSuccessfulTarget = null;
             }
+
+            GlobalPos oldTarget = lastSearchData != null ? lastSearchData.lastSuccessfulTarget() : null;
+
+            if (newTarget != null && (oldTarget == null || !oldTarget.equals(newTarget))) {
+                level.playSound(null, playerPos, SoundEvents.SPYGLASS_USE, SoundSource.NEUTRAL, 1f, 1.5f);
+            } else if (oldTarget != null && newTarget == null) {
+                level.playSound(null, playerPos, SoundEvents.SPYGLASS_STOP_USING, SoundSource.NEUTRAL, 1f, 1.2f);
+                level.playSound(null, playerPos, SoundEvents.NOTE_BLOCK_HAT.value(), SoundSource.NEUTRAL, 0.4f, 1.2f);
+            }
+
+            stack.set(GufyRegistry.COMPASS_DATA.get(),
+                    new GufyCompassData(playerPos, level.dimension(), newTarget));
         }
         super.inventoryTick(stack, level, entity, slot);
     }

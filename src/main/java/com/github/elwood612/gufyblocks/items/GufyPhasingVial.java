@@ -24,10 +24,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
 public class GufyPhasingVial extends Item
 {
     private static final int delay = 200; // 200 ticks = 10 seconds
@@ -134,17 +130,17 @@ public class GufyPhasingVial extends Item
         level.playSound((Player) null,
                 center.x, center.y + 1, center.z,
                 SoundEvents.BEACON_AMBIENT,
-                SoundSource.PLAYERS,
+                SoundSource.NEUTRAL,
                 0.8f, 0.4f);
         level.playSound((Player) null,
                 center.x, center.y + 1, center.z,
                 SoundEvents.ENDERMAN_TELEPORT,
-                SoundSource.PLAYERS,
+                SoundSource.NEUTRAL,
                 1f, 2.5f);
         level.playSound((Player) null,
                 center.x, center.y + 1, center.z,
                 SoundEvents.AMETHYST_CLUSTER_BREAK,
-                SoundSource.PLAYERS,
+                SoundSource.NEUTRAL,
                 0.4f, 0.5f);
     }
 }

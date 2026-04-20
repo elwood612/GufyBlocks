@@ -47,7 +47,7 @@ public class GufyInsomniaFragment extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.PLAYERS,
+                        SoundSource.NEUTRAL,
                         0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
@@ -74,12 +74,12 @@ public class GufyInsomniaFragment extends Item
             level.playSound((Player) null,
                     position,
                     SoundEvents.AMBIENT_CAVE.value(),
-                    SoundSource.PLAYERS,
+                    SoundSource.NEUTRAL,
                     1.2f, 0.4f);
             level.playSound((Player) null,
                     position,
                     SoundEvents.AMETHYST_BLOCK_BREAK,
-                    SoundSource.PLAYERS);
+                    SoundSource.NEUTRAL);
             ((ServerLevel) player.level()).sendParticles(
                     ParticleTypes.PORTAL,
                     player.getX(),

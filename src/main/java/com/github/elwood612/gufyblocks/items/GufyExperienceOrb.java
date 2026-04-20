@@ -1,6 +1,5 @@
 package com.github.elwood612.gufyblocks.items;
 
-import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -17,9 +16,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public class GufySpectralGem extends Item
+public class GufyExperienceOrb extends Item
 {
-    public GufySpectralGem(Item.Properties properties) { super(properties); }
+    public GufyExperienceOrb(Item.Properties properties) { super(properties); }
 
     @NotNull
     @Override
@@ -29,31 +28,28 @@ public class GufySpectralGem extends Item
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
 
+            int levelsToGive = player.isShiftKeyDown() ? itemstack.getCount() : 1;
+            player.giveExperienceLevels(levelsToGive);
+
             if (!player.getAbilities().instabuild) {
-                itemstack.consume(1, player);
+                itemstack.shrink(levelsToGive);
             }
 
-            GufyUtil.execute("effect give @p minecraft:night_vision 14 0 true", serverLevel, position, player);
-            GufyUtil.execute("execute at @p run effect give @e[distance=..64] minecraft:glowing 14 0 true", serverLevel, position, player);
-            GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, position, player);
-
             level.playSound((Player) null,
                     position,
-                    SoundEvents.ENDERMAN_AMBIENT,
+                    SoundEvents.SMALL_AMETHYST_BUD_BREAK,
                     SoundSource.NEUTRAL,
-                    0.4f, 0.2f);
+                    0.5f, 0.5f);
             level.playSound((Player) null,
                     position,
-                    SoundEvents.AMETHYST_BLOCK_BREAK,
+                    SoundEvents.EXPERIENCE_ORB_PICKUP,
                     SoundSource.NEUTRAL);
-            ((ServerLevel) player.level()).sendParticles(
-                    ParticleTypes.PORTAL,
-                    player.getX(),
-                    player.getY() + 1.0,
-                    player.getZ(),
-                    16,
-                    0.5, 0.5, 0.5,
-                    0.1
+            serverLevel.sendParticles(
+                    ParticleTypes.HAPPY_VILLAGER,
+                    player.getX(), player.getY() + 1.0, player.getZ(),
+                    5,
+                    0.3, 0.3, 0.3,
+                    0.05
             );
 
             return InteractionResult.SUCCESS;
@@ -62,14 +58,14 @@ public class GufySpectralGem extends Item
         }
     }
 
-    @NotNull
-    @Override
-    public Component getName(ItemStack stack) {
-        return Component.translatable("item.gufyblocks.spectral_gem").copy().withStyle(ChatFormatting.RED);
-    }
-
     @Override
     public boolean isFoil(ItemStack stack) {
         return true;
+    }
+
+    @NotNull
+    @Override
+    public Component getName(ItemStack stack) {
+        return Component.translatable("item.gufyblocks.experience_orb").copy().withStyle(ChatFormatting.GREEN);
     }
 }

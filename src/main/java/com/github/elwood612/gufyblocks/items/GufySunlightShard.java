@@ -49,7 +49,7 @@ public class GufySunlightShard extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.PLAYERS,
+                        SoundSource.NEUTRAL,
                         0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
@@ -69,12 +69,12 @@ public class GufySunlightShard extends Item
             level.playSound((Player) null,
                     position,
                     SoundEvents.BEACON_ACTIVATE,
-                    SoundSource.PLAYERS,
+                    SoundSource.NEUTRAL,
                     0.4f, 1.5f);
             level.playSound((Player) null,
                     position,
                     SoundEvents.GLASS_BREAK,
-                    SoundSource.PLAYERS,
+                    SoundSource.NEUTRAL,
                     0.5f, 1.2f);
 
             Vec3 pos = player.position().add(0, 1.0, 0);

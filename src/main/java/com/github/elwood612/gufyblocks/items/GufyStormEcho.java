@@ -36,7 +36,7 @@ public class GufyStormEcho extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.PLAYERS,
+                        SoundSource.NEUTRAL,
                         0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
@@ -45,7 +45,7 @@ public class GufyStormEcho extends Item
                 level.playSound((Player) null,
                         position,
                         SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.PLAYERS,
+                        SoundSource.NEUTRAL,
                         0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
@@ -65,7 +65,7 @@ public class GufyStormEcho extends Item
             level.playSound((Player) null,
                     position,
                     SoundEvents.DRAGON_FIREBALL_EXPLODE,
-                    SoundSource.PLAYERS);
+                    SoundSource.NEUTRAL);
 
             return InteractionResult.SUCCESS;
         } else {
