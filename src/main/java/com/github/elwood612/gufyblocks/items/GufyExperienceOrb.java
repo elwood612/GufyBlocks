@@ -10,10 +10,12 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
 public class GufyExperienceOrb extends Item
@@ -23,16 +25,17 @@ public class GufyExperienceOrb extends Item
     @NotNull
     @Override
     public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
-        BlockPos position = player.getOnPos();
+        BlockPos position = player.blockPosition();
         ItemStack itemstack = player.getItemInHand(handIn);
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
 
-            int levelsToGive = player.isShiftKeyDown() ? itemstack.getCount() : 1;
-            player.giveExperienceLevels(levelsToGive);
+            int basePerItem = 10 + serverLevel.random.nextInt(8) + serverLevel.random.nextInt(8);
+            int itemsUsed = player.isShiftKeyDown() ? itemstack.getCount() : 1;
+            ExperienceOrb.awardWithDirection(serverLevel, player.position(), new Vec3(0, 0.1, 0), basePerItem * itemsUsed);
 
             if (!player.getAbilities().instabuild) {
-                itemstack.shrink(levelsToGive);
+                itemstack.shrink(itemsUsed);
             }
 
             level.playSound((Player) null,

@@ -60,9 +60,14 @@ public class GufySunlightShard extends Item
 
             serverLevel.setDayTime(0);
 //            GufyUtil.execute("weather clear 6000", serverLevel, position, player);
+//            serverLevel.setWeatherParameters(
+//                    12000 + serverLevel.random.nextInt(12000),
+//                    12000 + serverLevel.random.nextInt(12000),
+//                    false,
+//                    false);
             serverLevel.setWeatherParameters(
-                    12000 + serverLevel.random.nextInt(12000),
-                    12000 + serverLevel.random.nextInt(12000),
+                    0,
+                    0,
                     false,
                     false);
 

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:fishing",
+  "type": "minecraft:chest",
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -12,12 +12,12 @@
         {
           "type": "minecraft:item",
           "name": "gufyblocks:sunlight_shard",
-		  "weight": 20
+		  "weight": 100
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:spectral_gem",
-		  "weight": 10
+		  "weight": 5
         },
 		{
           "type": "minecraft:item",
@@ -45,7 +45,13 @@
 		  "weight": 1
         }
       ],
-      "rolls": 1.0
+      "rolls": 1.0,
+	  "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.25
+        }
+      ]
     }
   ]
 }

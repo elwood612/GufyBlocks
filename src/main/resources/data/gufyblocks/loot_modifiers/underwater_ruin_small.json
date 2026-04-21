@@ -3,7 +3,7 @@
     "conditions": [
 		{
 			"condition": "neoforge:loot_table_id",
-			"loot_table_id": "minecraft:chests/igloo_chest"
+			"loot_table_id": "minecraft:chests/underwater_ruin_small"
 		}
 	],
     "table": "gufyblocks:inject/relics_aboveground"

@@ -3,8 +3,8 @@
     "conditions": [
 		{
 			"condition": "neoforge:loot_table_id",
-			"loot_table_id": "minecraft:chests/buried_treasure"
+			"loot_table_id": "minecraft:chests/underwater_ruin_big"
 		}
 	],
-    "table": "gufyblocks:inject/relics_buried_treasure"
+    "table": "gufyblocks:inject/relics_aboveground"
 }
