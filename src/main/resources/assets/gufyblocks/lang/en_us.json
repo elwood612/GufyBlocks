@@ -1914,17 +1914,17 @@
 "tooltip.gufyblocks.one_time_use": "One-time use!",
 "tooltip.gufyblocks.anchor_instructions": "Break to teleport to ",
 "tooltip.gufyblocks.anchor_empty": "Put in your inventory to claim",
-"tooltip.gufyblocks.sunlight_shard_instructions": "Break to call the sun",
-"tooltip.gufyblocks.storm_echo_instructions": "Instantly summon a thunderstorm",
+"tooltip.gufyblocks.sunlight_shard_instructions": "Break to summon daylight",
+"tooltip.gufyblocks.storm_echo_instructions": "Break to summon a thunderstorm",
 "tooltip.gufyblocks.spectral_gem_instructions": "Break to reveal nearby mobs",
 "tooltip.gufyblocks.biome_seed_instructions": "Break to spread ",
 "tooltip.gufyblocks.biome_seed_dormant": "Right click to save current biome",
 "tooltip.gufyblocks.phasing_vial_instructions": "Drink to become ethereal",
 "tooltip.gufyblocks.phasing_vial_warning": "Highly volatile!",
-"tooltip.gufyblocks.insomnia_fragment_instructions": "Break to call the night",
+"tooltip.gufyblocks.insomnia_fragment_instructions": "Break to summon the night",
 "tooltip.gufyblocks.whispering_compass_instructions": "Points to nearby structures",
 "tooltip.gufyblocks.orb_instructions": "Break to gain XP",
-"tooltip.gufyblocks.totem_instructions": "Put in hand to drop nothing on death",
+"tooltip.gufyblocks.totem_instructions": "Hold in hand to keep items on death",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }
