@@ -17,6 +17,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +31,13 @@ public class GufyBiomeSeed extends Item
 
     @NotNull
     @Override
-    public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
+//    public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
+    public InteractionResult useOn(UseOnContext context) {
+        Player player = context.getPlayer();
+        InteractionHand handIn = context.getHand();
         ItemStack itemstack = player.getItemInHand(handIn);
-        BlockPos position = player.getOnPos();
+        Level level = context.getLevel();
+        BlockPos position = context.getClickedPos();
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer && level instanceof ServerLevel serverLevel) {
             Holder<Biome> biomeHolder = level.getBiome(player.blockPosition());
             Identifier biomeID = biomeHolder.unwrapKey().get().identifier();
@@ -41,11 +46,7 @@ public class GufyBiomeSeed extends Item
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
 
@@ -66,20 +67,12 @@ public class GufyBiomeSeed extends Item
                         0.3, 0.3, 0.3, // spread
                         0.02         // speed
                 );
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ALLAY_ITEM_GIVEN,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.8f);
+                level.playSound((Player) null, position, SoundEvents.ALLAY_ITEM_GIVEN, SoundSource.NEUTRAL, 0.5f, 0.8f);
                 return InteractionResult.SUCCESS;
             } else {
                 if (Objects.equals(itemstack.get(GufyRegistry.STORED_BIOME.get()), biomeID) && !player.isShiftKeyDown()) {
                     serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.biome_same"));
-                    level.playSound((Player) null,
-                            position,
-                            SoundEvents.ENDERMAN_TELEPORT,
-                            SoundSource.NEUTRAL,
-                            0.5f, 0.4f);
+                    level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                     return InteractionResult.FAIL;
                 }
 
@@ -119,15 +112,8 @@ public class GufyBiomeSeed extends Item
                         0.6, 0.6, 0.6,
                         0.05
                 );
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.AMETHYST_CLUSTER_BREAK,
-                        SoundSource.NEUTRAL);
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ALLAY_AMBIENT_WITHOUT_ITEM,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL);
+                level.playSound((Player) null, position, SoundEvents.ALLAY_AMBIENT_WITHOUT_ITEM, SoundSource.NEUTRAL, 0.5f, 0.4f);
 
                 if (!player.getAbilities().instabuild) {
                     itemstack.consume(1, player);
@@ -147,7 +133,7 @@ public class GufyBiomeSeed extends Item
             Identifier biomeID = stack.get(GufyRegistry.STORED_BIOME.get());
             if (biomeID == null) { return super.getName(stack); }
             String biomeKey = "biome." + biomeID.getNamespace() + "." + biomeID.getPath();
-            return Component.translatable(biomeKey).copy().append(" Biome Seedling").withStyle(ChatFormatting.AQUA);
+            return Component.translatable(biomeKey).copy().append(Component.translatable("tooltip.gufyblocks.biome_seed_title")).withStyle(ChatFormatting.AQUA);
         } else {
             return super.getName(stack);
         }
