@@ -83,12 +83,6 @@ public class GufyInsomniaFragment extends Item
         }
     }
 
-//    @NotNull
-//    @Override
-//    public Component getName(ItemStack stack) {
-//        return Component.translatable("item.gufyblocks.insomnia_fragment").copy().withStyle(ChatFormatting.DARK_PURPLE);
-//    }
-
     @Override
     public boolean isFoil(ItemStack stack) {
         return true;

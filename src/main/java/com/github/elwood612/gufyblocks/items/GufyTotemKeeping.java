@@ -12,9 +12,4 @@ public class GufyTotemKeeping extends Item
 
     // Main code is handled in GufyPlayerEvents and the PlayerMixin
 
-//    @NotNull
-//    @Override
-//    public Component getName(ItemStack stack) {
-//        return Component.translatable("item.gufyblocks.totem_keeping").copy().withStyle(ChatFormatting.AQUA);
-//    }
 }

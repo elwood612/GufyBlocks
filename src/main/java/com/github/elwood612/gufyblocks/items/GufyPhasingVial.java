@@ -81,12 +81,6 @@ public class GufyPhasingVial extends Item
         return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
     }
 
-//    @NotNull
-//    @Override
-//    public Component getName(ItemStack stack) {
-//        return Component.translatable("item.gufyblocks.phasing_vial").copy().withStyle(ChatFormatting.DARK_AQUA);
-//    }
-
     @Override
     public boolean isFoil(ItemStack stack) {
         return true;

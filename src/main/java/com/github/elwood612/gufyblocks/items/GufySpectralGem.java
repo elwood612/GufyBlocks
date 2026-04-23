@@ -62,12 +62,6 @@ public class GufySpectralGem extends Item
         }
     }
 
-//    @NotNull
-//    @Override
-//    public Component getName(ItemStack stack) {
-//        return Component.translatable("item.gufyblocks.spectral_gem").copy().withStyle(ChatFormatting.RED);
-//    }
-
     @Override
     public boolean isFoil(ItemStack stack) {
         return true;

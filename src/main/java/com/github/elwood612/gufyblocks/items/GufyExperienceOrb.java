@@ -66,9 +66,4 @@ public class GufyExperienceOrb extends Item
         return true;
     }
 
-//    @NotNull
-//    @Override
-//    public Component getName(ItemStack stack) {
-//        return Component.translatable("item.gufyblocks.experience_orb").copy().withStyle(ChatFormatting.GREEN);
-//    }
 }
