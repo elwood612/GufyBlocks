@@ -125,7 +125,7 @@ public class GufyAnchor extends Item
         if (stack.has(GufyRegistry.OWNER.get())) {
             String owner = stack.getOrDefault(GufyRegistry.OWNER.get(), "");
             if (owner.isEmpty()) return super.getName(stack);
-            return Component.literal("Homing Crystal: " + owner).copy().withStyle(ChatFormatting.GOLD);
+            return Component.literal("Homing Crystal: " + owner).copy().withStyle(ChatFormatting.AQUA);
         } else {
             return super.getName(stack);
         }

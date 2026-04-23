@@ -75,11 +75,11 @@ public class GufySunlightShard extends Item
         return true;
     }
 
-    @NotNull
-    @Override
-    public Component getName(ItemStack stack) {
-        return Component.translatable("item.gufyblocks.sunlight_shard").copy().withStyle(ChatFormatting.YELLOW);
-    }
+//    @NotNull
+//    @Override
+//    public Component getName(ItemStack stack) {
+//        return Component.translatable("item.gufyblocks.sunlight_shard").copy().withStyle(ChatFormatting.YELLOW);
+//    }
 
     private void sendSunlightParticles(ServerLevel serverLevel, Vec3 pos) {
         serverLevel.sendParticles(

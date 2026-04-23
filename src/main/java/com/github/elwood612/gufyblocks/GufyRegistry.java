@@ -18,10 +18,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -469,17 +466,17 @@ public class GufyRegistry
     public static final DeferredItem<Item> SUNLIGHT_SHARD = ITEMS.registerItem(
             "sunlight_shard",
             GufySunlightShard::new,
-            () -> new Item.Properties().useCooldown(1f)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.UNCOMMON)
     );
     public static final DeferredItem<Item> STORM_ECHO = ITEMS.registerItem(
             "storm_echo",
             GufyStormEcho::new,
-            () -> new Item.Properties().stacksTo(1)
+            () -> new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> SPECTRAL_GEM = ITEMS.registerItem(
             "spectral_gem",
             GufySpectralGem::new,
-            () -> new Item.Properties().useCooldown(1f)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
     );
     public static final DeferredItem<Item> BIOME_SEED = ITEMS.registerItem(
             "biome_seed",
@@ -489,12 +486,12 @@ public class GufyRegistry
     public static final DeferredItem<Item> INSOMNIA_FRAGMENT = ITEMS.registerItem(
             "insomnia_fragment",
             GufyInsomniaFragment::new,
-            () -> new Item.Properties().stacksTo(1)
+            () -> new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> PHASING_VIAL = ITEMS.registerItem(
             "phasing_vial",
             GufyPhasingVial::new,
-            () -> new Item.Properties().stacksTo(1).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK)
+            () -> new Item.Properties().stacksTo(1).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> WHISPERING_COMPASS = ITEMS.registerItem(
             "whispering_compass",
@@ -504,12 +501,12 @@ public class GufyRegistry
     public static final DeferredItem<Item> EXPERIENCE_ORB = ITEMS.registerItem(
             "experience_orb",
             GufyExperienceOrb::new,
-            () -> new Item.Properties()
+            () -> new Item.Properties().rarity(Rarity.UNCOMMON)
     );
     public static final DeferredItem<Item> TOTEM_KEEPING = ITEMS.registerItem(
             "totem_keeping",
             GufyTotemKeeping::new,
-            () -> new Item.Properties().stacksTo(1)
+            () -> new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
     );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",

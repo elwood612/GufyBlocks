@@ -147,7 +147,7 @@ public class GufyBiomeSeed extends Item
             Identifier biomeID = stack.get(GufyRegistry.STORED_BIOME.get());
             if (biomeID == null) { return super.getName(stack); }
             String biomeKey = "biome." + biomeID.getNamespace() + "." + biomeID.getPath();
-            return Component.translatable(biomeKey).copy().append(" Seedling").withStyle(ChatFormatting.DARK_GREEN);
+            return Component.translatable(biomeKey).copy().append(" Biome Seedling").withStyle(ChatFormatting.AQUA);
         } else {
             return super.getName(stack);
         }

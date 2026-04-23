@@ -62,11 +62,11 @@ public class GufyStormEcho extends Item
         }
     }
 
-    @NotNull
-    @Override
-    public Component getName(ItemStack stack) {
-        return Component.translatable("item.gufyblocks.storm_echo").copy().withStyle(ChatFormatting.AQUA);
-    }
+//    @NotNull
+//    @Override
+//    public Component getName(ItemStack stack) {
+//        return Component.translatable("item.gufyblocks.storm_echo").copy().withStyle(ChatFormatting.AQUA);
+//    }
 
     @Override
     public boolean isFoil(ItemStack stack) {

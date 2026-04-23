@@ -39,91 +39,75 @@ public class GufyClientEvents
 
         switch (itemstack.getItem()) {
             case GufyAnchor gufyAnchor -> {
-                if (itemstack.has(GufyRegistry.OWNER.get()))
-                {
+                if (itemstack.has(GufyRegistry.OWNER.get())) {
                     String owner = itemstack.getOrDefault(GufyRegistry.OWNER.get(), "");
-                    event.getToolTip().add(1,
-                            Component.translatable("tooltip.gufyblocks.anchor_instructions")
-                                    .append(Component.literal(owner))
-                                    .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                    );
+                    event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                    event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                    event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                    event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.anchor_instructions").append(Component.literal(owner)).withStyle(ChatFormatting.BLUE));
                 } else {
-                    event.getToolTip().add(1,
-                            Component.translatable("tooltip.gufyblocks.anchor_empty")
-                                    .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC)
-                    );
+                    event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.anchor_empty").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
                 }
             }
             case GufySunlightShard gufySunlightShard -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.sunlight_shard_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.sunlight_shard_instructions").withStyle(ChatFormatting.BLUE));
             }
             case GufyStormEcho gufyStormEcho -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.storm_echo_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.storm_echo_instructions").withStyle(ChatFormatting.BLUE));
             }
             case GufySpectralGem gufySpectralGem -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.spectral_gem_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions").withStyle(ChatFormatting.BLUE));
             }
             case GufyInsomniaFragment gufyInsomniaFragment -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.insomnia_fragment_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.insomnia_fragment_instructions").withStyle(ChatFormatting.BLUE));
             }
             case GufyBiomeSeed gufyBiomeSeed -> {
-                if (itemstack.has(GufyRegistry.STORED_BIOME.get()))
-                {
+                if (itemstack.has(GufyRegistry.STORED_BIOME.get())) {
                     Identifier biomeID = itemstack.get(GufyRegistry.STORED_BIOME.get());
                     if (biomeID == null) { return; }
                     String biomeKey = "biome." + biomeID.getNamespace() + "." + biomeID.getPath();
-                    event.getToolTip().add(1,
-                            Component.translatable("tooltip.gufyblocks.biome_seed_instructions")
-                                    .append(Component.translatable(biomeKey))
-                                    .append(Component.literal(" around you"))
-                                    .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                    );
+                    event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                    event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                    event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                    event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.biome_seed_instructions").append(Component.translatable(biomeKey)).append(Component.literal(" around you")).withStyle(ChatFormatting.BLUE));
                 } else {
-                    event.getToolTip().add(1,
-                            Component.translatable("tooltip.gufyblocks.biome_seed_dormant")
-                                    .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC)
-                    );
+                    event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.biome_seed_dormant").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
                 }
             }
             case GufyPhasingVial gufyPhasingVial -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.phasing_vial_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
-                event.getToolTip().add(2,
-                        Component.translatable("tooltip.gufyblocks.phasing_vial_warning")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_2").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.phasing_vial_instructions").withStyle(ChatFormatting.BLUE));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.phasing_vial_warning").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             }
             case GufyWhisperingCompass gufyWhisperingCompass -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.whispering_compass_instructions")
-                                .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.whispering_compass_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
             }
             case GufyExperienceOrb gufyExperienceOrb -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.orb_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.orb_instructions").withStyle(ChatFormatting.BLUE)
                 );
             }
             case GufyTotemKeeping gufyTotemKeeping -> {
-                event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.totem_instructions")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_3").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.totem_instructions").withStyle(ChatFormatting.BLUE));
             }
             default -> { }
         }
