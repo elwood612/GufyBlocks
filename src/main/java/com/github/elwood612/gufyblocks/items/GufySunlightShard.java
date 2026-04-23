@@ -18,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 
 public class GufySunlightShard extends Item
@@ -46,11 +47,7 @@ public class GufySunlightShard extends Item
                 fail = true;
             }
             if (fail) {
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
 
@@ -59,28 +56,10 @@ public class GufySunlightShard extends Item
             }
 
             serverLevel.setDayTime(0);
-//            GufyUtil.execute("weather clear 6000", serverLevel, position, player);
-//            serverLevel.setWeatherParameters(
-//                    12000 + serverLevel.random.nextInt(12000),
-//                    12000 + serverLevel.random.nextInt(12000),
-//                    false,
-//                    false);
-            serverLevel.setWeatherParameters(
-                    0,
-                    0,
-                    false,
-                    false);
+            serverLevel.resetWeatherCycle();
 
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.BEACON_ACTIVATE,
-                    SoundSource.NEUTRAL,
-                    0.4f, 1.5f);
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.GLASS_BREAK,
-                    SoundSource.NEUTRAL,
-                    0.5f, 1.2f);
+            level.playSound((Player) null, position, SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.4f, 1.5f);
+            level.playSound((Player) null, position, SoundEvents.GLASS_BREAK, SoundSource.NEUTRAL, 0.5f, 1.2f);
 
             Vec3 pos = player.position().add(0, 1.0, 0);
             sendSunlightParticles(serverLevel, pos);

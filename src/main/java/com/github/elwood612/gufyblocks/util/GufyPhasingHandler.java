@@ -36,9 +36,9 @@ public class GufyPhasingHandler
                 origin.getX() + 0.5,
                 origin.getY() + 2,
                 origin.getZ() + 0.5,
-                1.0f,
+                0.8f,
                 true,
-                Level.ExplosionInteraction.MOB
+                Level.ExplosionInteraction.NONE
         );
     }
 }

@@ -33,20 +33,12 @@ public class GufyStormEcho extends Item
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
             if (!level.canSeeSky(position.above())) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_outdoors"));
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
 
@@ -62,10 +54,7 @@ public class GufyStormEcho extends Item
                 serverLevel.addFreshEntity(lightning);
             }
 
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.DRAGON_FIREBALL_EXPLODE,
-                    SoundSource.NEUTRAL);
+            level.playSound((Player) null, position, SoundEvents.DRAGON_FIREBALL_EXPLODE, SoundSource.NEUTRAL);
 
             return InteractionResult.SUCCESS;
         } else {

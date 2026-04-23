@@ -43,10 +43,6 @@ public class GufyClientEvents
                 {
                     String owner = itemstack.getOrDefault(GufyRegistry.OWNER.get(), "");
                     event.getToolTip().add(1,
-                            Component.translatable("tooltip.gufyblocks.one_time_use")
-                                    .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                    );
-                    event.getToolTip().add(2,
                             Component.translatable("tooltip.gufyblocks.anchor_instructions")
                                     .append(Component.literal(owner))
                                     .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
@@ -60,40 +56,24 @@ public class GufyClientEvents
             }
             case GufySunlightShard gufySunlightShard -> {
                 event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.one_time_use")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
-                event.getToolTip().add(2,
                         Component.translatable("tooltip.gufyblocks.sunlight_shard_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
             }
             case GufyStormEcho gufyStormEcho -> {
                 event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.one_time_use")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
-                event.getToolTip().add(2,
                         Component.translatable("tooltip.gufyblocks.storm_echo_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
             }
             case GufySpectralGem gufySpectralGem -> {
                 event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.one_time_use")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
-                event.getToolTip().add(2,
                         Component.translatable("tooltip.gufyblocks.spectral_gem_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
             }
             case GufyInsomniaFragment gufyInsomniaFragment -> {
                 event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.one_time_use")
-                                .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                );
-                event.getToolTip().add(2,
                         Component.translatable("tooltip.gufyblocks.insomnia_fragment_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
@@ -105,12 +85,9 @@ public class GufyClientEvents
                     if (biomeID == null) { return; }
                     String biomeKey = "biome." + biomeID.getNamespace() + "." + biomeID.getPath();
                     event.getToolTip().add(1,
-                            Component.translatable("tooltip.gufyblocks.one_time_use")
-                                    .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
-                    );
-                    event.getToolTip().add(2,
                             Component.translatable("tooltip.gufyblocks.biome_seed_instructions")
                                     .append(Component.translatable(biomeKey))
+                                    .append(Component.literal(" around you"))
                                     .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                     );
                 } else {
@@ -122,11 +99,11 @@ public class GufyClientEvents
             }
             case GufyPhasingVial gufyPhasingVial -> {
                 event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.one_time_use")
+                        Component.translatable("tooltip.gufyblocks.phasing_vial_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
                 event.getToolTip().add(2,
-                        Component.translatable("tooltip.gufyblocks.phasing_vial_instructions")
+                        Component.translatable("tooltip.gufyblocks.phasing_vial_warning")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
             }
@@ -138,11 +115,13 @@ public class GufyClientEvents
             }
             case GufyExperienceOrb gufyExperienceOrb -> {
                 event.getToolTip().add(1,
-                        Component.translatable("tooltip.gufyblocks.one_time_use")
+                        Component.translatable("tooltip.gufyblocks.orb_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
-                event.getToolTip().add(2,
-                        Component.translatable("tooltip.gufyblocks.orb_instructions")
+            }
+            case GufyTotemKeeping gufyTotemKeeping -> {
+                event.getToolTip().add(1,
+                        Component.translatable("tooltip.gufyblocks.totem_instructions")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)
                 );
             }

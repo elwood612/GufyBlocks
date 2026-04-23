@@ -1,5 +1,6 @@
 package com.github.elwood612.gufyblocks.util;
 
+import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.blocks.*;
 import com.github.elwood612.gufyblocks.blocks.blockSpecialty.*;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.*;
@@ -17,8 +18,11 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
@@ -280,6 +284,25 @@ public class GufyUtil
         }
     }
 
+    public static boolean hasTotemOfKeeping(Player player) {
+        ItemStack main = player.getMainHandItem();
+        ItemStack off = player.getOffhandItem();
+        return main.getItem() == GufyRegistry.TOTEM_KEEPING.get() || off.getItem() == GufyRegistry.TOTEM_KEEPING.get();
+    }
+
+    public static void consumeTotem(Player player) {
+        ItemStack main = player.getMainHandItem();
+        ItemStack off = player.getOffhandItem();
+
+        if (main.getItem() == GufyRegistry.TOTEM_KEEPING.get()) {
+            main.shrink(1);
+        } else if (off.getItem() == GufyRegistry.TOTEM_KEEPING.get()) {
+            off.shrink(1);
+        }
+        if (!(player.level() instanceof ServerLevel level)) return;
+        level.broadcastEntityEvent(player, (byte)35);
+        level.playSound(null, player.blockPosition(), SoundEvents.TOTEM_USE, SoundSource.PLAYERS);
+    }
 
     //*******************BLOCKTYPES BUILDER**************************//
     public static List<GufyBlockTypes[]> blocktypeBuilder()

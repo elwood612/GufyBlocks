@@ -30,7 +30,7 @@ public class GufyExperienceOrb extends Item
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
 
-            int basePerItem = 10 + serverLevel.random.nextInt(8) + serverLevel.random.nextInt(8);
+            int basePerItem = 10 + serverLevel.random.nextInt(10) + serverLevel.random.nextInt(10);
             int itemsUsed = player.isShiftKeyDown() ? itemstack.getCount() : 1;
             ExperienceOrb.awardWithDirection(serverLevel, player.position(), new Vec3(0, 0.1, 0), basePerItem * itemsUsed);
 

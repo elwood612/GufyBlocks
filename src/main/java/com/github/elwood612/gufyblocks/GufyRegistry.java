@@ -5,11 +5,10 @@ import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
+import com.github.elwood612.gufyblocks.util.GufyOwnership;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
-import io.netty.buffer.ByteBuf;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -17,7 +16,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,7 +25,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.levelgen.structure.Structure;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -36,7 +33,6 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
@@ -509,6 +505,11 @@ public class GufyRegistry
             "experience_orb",
             GufyExperienceOrb::new,
             () -> new Item.Properties()
+    );
+    public static final DeferredItem<Item> TOTEM_KEEPING = ITEMS.registerItem(
+            "totem_keeping",
+            GufyTotemKeeping::new,
+            () -> new Item.Properties().stacksTo(1)
     );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",

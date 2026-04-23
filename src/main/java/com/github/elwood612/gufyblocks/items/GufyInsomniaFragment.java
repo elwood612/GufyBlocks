@@ -44,11 +44,7 @@ public class GufyInsomniaFragment extends Item
                 fail = true;
             }
             if (fail) {
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
 
@@ -65,21 +61,12 @@ public class GufyInsomniaFragment extends Item
             if (level.random.nextFloat() < 0.5f) {
                 GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", serverLevel, position, player);
             }
-            if (level.random.nextFloat() < 0.25f) {
-                GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", serverLevel, position, player);
-            }
+
             player.resetStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST));
             player.awardStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST), 200000);
 
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.AMBIENT_CAVE.value(),
-                    SoundSource.NEUTRAL,
-                    1.2f, 0.4f);
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.AMETHYST_BLOCK_BREAK,
-                    SoundSource.NEUTRAL);
+            level.playSound((Player) null, position, SoundEvents.AMBIENT_CAVE.value(), SoundSource.NEUTRAL, 1.2f, 0.4f);
+            level.playSound((Player) null, position, SoundEvents.AMETHYST_BLOCK_BREAK, SoundSource.NEUTRAL);
             ((ServerLevel) player.level()).sendParticles(
                     ParticleTypes.PORTAL,
                     player.getX(),

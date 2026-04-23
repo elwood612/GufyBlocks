@@ -9,7 +9,7 @@
           "name": "gufyblocks:experience_orb"
         }
       ],
-      "rolls": 1.0,
+      "rolls": 2.0,
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
