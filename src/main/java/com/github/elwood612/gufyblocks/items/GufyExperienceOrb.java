@@ -41,8 +41,9 @@ public class GufyExperienceOrb extends Item
                 itemstack.shrink(itemsUsed);
             }
 
-            level.playSound((Player) null, position, SoundEvents.SMALL_AMETHYST_BUD_BREAK, SoundSource.NEUTRAL, 0.5f, 0.5f);
-            level.playSound((Player) null, position, SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL);
+            level.playSound((Player) null, position, SoundEvents.SMALL_AMETHYST_BUD_BREAK, SoundSource.NEUTRAL, 0.6f, 0.5f);
+            level.playSound((Player) null, position, SoundEvents.GLASS_BREAK, SoundSource.NEUTRAL, 0.8f, 1.3f);
+
             serverLevel.sendParticles(
                     ParticleTypes.HAPPY_VILLAGER,
                     player.getX(), player.getY() + 1.0, player.getZ(),
