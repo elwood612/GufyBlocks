@@ -6,5 +6,5 @@
 			"loot_table_id": "minecraft:chests/shipwreck_map"
 		}
 	],
-    "table": "gufyblocks:inject/relics_shipwrecks"
+    "table": "gufyblocks:inject/relics_aboveground"
 }

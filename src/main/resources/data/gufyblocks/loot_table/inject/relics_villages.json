@@ -7,17 +7,17 @@
         {
           "type": "minecraft:item",
           "name": "gufyblocks:experience_orb",
-		  "weight": 50
+		  "weight": 15
         },
         {
           "type": "minecraft:item",
           "name": "gufyblocks:sunlight_shard",
-		  "weight": 40
+		  "weight": 50
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:biome_seed",
-		  "weight": 10
+		  "weight": 35
         }
       ],
       "rolls": 1.0,

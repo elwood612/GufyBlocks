@@ -87,7 +87,6 @@ public class GufyClientEvents
                 event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_drunk").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.phasing_vial_instructions").withStyle(ChatFormatting.GOLD));
-                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.phasing_vial_warning").withStyle(ChatFormatting.GOLD, ChatFormatting.ITALIC));
             }
             case GufyWhisperingCompass gufyWhisperingCompass -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.whispering_compass_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));

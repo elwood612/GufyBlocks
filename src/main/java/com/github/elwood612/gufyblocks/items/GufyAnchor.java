@@ -63,17 +63,8 @@ public class GufyAnchor extends Item
                     itemstack.consume(1, player);
                 }
 
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.AMETHYST_CLUSTER_BREAK,
-                        SoundSource.NEUTRAL);
-                level.playSound((Player) null,
-                        owner.getX(),
-                        owner.getY(),
-                        owner.getZ(),
-                        SoundEvents.CHORUS_FRUIT_TELEPORT,
-                        SoundSource.PLAYERS,
-                        0.5F, 0.4F / (level.random.nextFloat() * 0.4F + 0.8F));
+                level.playSound((Player) null, position, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL);
+                level.playSound((Player) null, owner.blockPosition(), SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 0.5F, 0.4F / (level.random.nextFloat() * 0.4F + 0.8F));
 
                 player.teleportTo(owner.getX(), owner.getY(), owner.getZ());
                 ((ServerLevel) player.level()).sendParticles(
@@ -125,7 +116,7 @@ public class GufyAnchor extends Item
         if (stack.has(GufyRegistry.OWNER.get())) {
             String owner = stack.getOrDefault(GufyRegistry.OWNER.get(), "");
             if (owner.isEmpty()) return super.getName(stack);
-            return Component.literal("Homing Crystal: " + owner).copy().withStyle(ChatFormatting.AQUA);
+            return Component.literal("Homing Crystal: " + owner).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
         } else {
             return super.getName(stack);
         }

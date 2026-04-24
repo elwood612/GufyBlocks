@@ -37,15 +37,10 @@ public class GufySpectralGem extends Item
             GufyUtil.execute("execute at @p run effect give @e[distance=..64] minecraft:glowing 14 0 true", serverLevel, position, player);
             GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, position, player);
 
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.ENDERMAN_AMBIENT,
-                    SoundSource.NEUTRAL,
-                    0.4f, 0.2f);
-            level.playSound((Player) null,
-                    position,
-                    SoundEvents.AMETHYST_BLOCK_BREAK,
-                    SoundSource.NEUTRAL);
+            level.playSound((Player) null, position, SoundEvents.ENDERMAN_AMBIENT, SoundSource.NEUTRAL, 0.4f, 0.2f);
+            level.playSound((Player) null, position, SoundEvents.AMETHYST_BLOCK_BREAK, SoundSource.NEUTRAL, 1f, 0.4f);
+            level.playSound((Player) null, position, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL, 0.8f, 0.5f);
+
             ((ServerLevel) player.level()).sendParticles(
                     ParticleTypes.PORTAL,
                     player.getX(),

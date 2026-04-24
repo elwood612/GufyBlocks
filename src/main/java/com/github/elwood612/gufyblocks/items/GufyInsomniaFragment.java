@@ -66,12 +66,12 @@ public class GufyInsomniaFragment extends Item
             player.awardStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST), 200000);
 
             level.playSound((Player) null, position, SoundEvents.AMBIENT_CAVE.value(), SoundSource.NEUTRAL, 1.2f, 0.4f);
-            level.playSound((Player) null, position, SoundEvents.AMETHYST_BLOCK_BREAK, SoundSource.NEUTRAL);
+            level.playSound((Player) null, position, SoundEvents.BELL_BLOCK, SoundSource.NEUTRAL, 1f, 0.4f);
+            level.playSound((Player) null, position, SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.5f, 0.4f);
+
             ((ServerLevel) player.level()).sendParticles(
                     ParticleTypes.PORTAL,
-                    player.getX(),
-                    player.getY() + 1.0,
-                    player.getZ(),
+                    player.getX(), player.getY() + 1.0, player.getZ(),
                     8,
                     0.5, 0.5, 0.5,
                     0.05

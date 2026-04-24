@@ -71,8 +71,6 @@ public class GufyBiomeSeed extends Item
                         0.02         // speed
                 );
 
-//                ParticleUtils.spawnParticlesOnBlockFaces(level, position, ParticleTypes.POOF, UniformInt.of(3, 5));
-
                 level.playSound((Player) null, position, SoundEvents.ALLAY_ITEM_GIVEN, SoundSource.NEUTRAL, 0.6f, 0.8f);
                 level.playSound((Player) null, position, SoundEvents.COMPOSTER_READY, SoundSource.NEUTRAL, 1f, 0.8f);
                 return InteractionResult.SUCCESS;

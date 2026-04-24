@@ -466,7 +466,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> SUNLIGHT_SHARD = ITEMS.registerItem(
             "sunlight_shard",
             GufySunlightShard::new,
-            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.UNCOMMON)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
     );
     public static final DeferredItem<Item> STORM_ECHO = ITEMS.registerItem(
             "storm_echo",

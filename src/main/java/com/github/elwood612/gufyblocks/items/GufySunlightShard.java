@@ -58,8 +58,9 @@ public class GufySunlightShard extends Item
             serverLevel.setDayTime(0);
             serverLevel.resetWeatherCycle();
 
-            level.playSound((Player) null, position, SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.4f, 1.5f);
-            level.playSound((Player) null, position, SoundEvents.GLASS_BREAK, SoundSource.NEUTRAL, 0.5f, 1.2f);
+            level.playSound((Player) null, position, SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
+            level.playSound((Player) null, position, SoundEvents.FIRECHARGE_USE, SoundSource.NEUTRAL, 1f, 0.5f);
+            level.playSound((Player) null, position, SoundEvents.FIRE_EXTINGUISH, SoundSource.NEUTRAL, 0.5f, 0.7f);
 
             Vec3 pos = player.position().add(0, 1.0, 0);
             sendSunlightParticles(serverLevel, pos);
