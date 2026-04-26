@@ -496,7 +496,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> WHISPERING_COMPASS = ITEMS.registerItem(
             "whispering_compass",
             GufyWhisperingCompass::new,
-            () -> new Item.Properties().stacksTo(1)
+            () -> new Item.Properties()
     );
     public static final DeferredItem<Item> EXPERIENCE_ORB = ITEMS.registerItem(
             "experience_orb",
