@@ -6,5 +6,5 @@
 			"loot_table_id": "minecraft:chests/pillager_outpost"
 		}
 	],
-    "table": "gufyblocks:inject/relics_pillager_outposts"
+    "table": "gufyblocks:inject/relics_illagers"
 }

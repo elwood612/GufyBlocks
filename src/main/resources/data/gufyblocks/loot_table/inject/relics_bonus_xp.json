@@ -2,18 +2,17 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+	  "rolls": 2.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb"
-        }
-      ],
-      "rolls": 2.0,
-	  "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.25
+          "name": "gufyblocks:experience_orb",
+		  "conditions": [
+		  {
+			  "condition": "minecraft:random_chance",
+			  "chance": 0.35
+		  }
+		  ]
         }
       ]
     }

@@ -4,11 +4,6 @@
     {
       "bonus_rolls": 0.0,
       "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 35
-        },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:spectral_gem",
@@ -17,12 +12,12 @@
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:anchor",
-		  "weight": 8
+		  "weight": 35
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:phasing_vial",
-		  "weight": 5
+		  "weight": 13
         },
 		{
           "type": "minecraft:item",
@@ -39,7 +34,7 @@
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.45
+          "chance": 0.35
         }
       ]
     }

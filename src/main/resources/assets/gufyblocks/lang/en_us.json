@@ -1891,7 +1891,7 @@
 
 "item.gufyblocks.moss_clump": "Moss Clump",
 "item.gufyblocks.hammer": "Steel Hammer",
-"item.gufyblocks.anchor": "Unclaimed Homing Crystal",
+"item.gufyblocks.anchor": "Unclaimed Teleportation Crystal",
 "item.gufyblocks.sunlight_shard": "Sunlight Shard",
 "item.gufyblocks.storm_echo": "Storm Echo",
 "item.gufyblocks.spectral_gem": "Spectral Fragment",
@@ -1901,6 +1901,8 @@
 "item.gufyblocks.whispering_compass": "Finder's Compass",
 "item.gufyblocks.experience_orb": "Experience Gem",
 "item.gufyblocks.totem_keeping": "Totem of Keeping",
+"item.gufyblocks.soulbound_anchor": "Soulbound Crystal",
+"item.gufyblocks.memory_charm": "Memory Charm",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -1910,6 +1912,10 @@
 "message.gufyblocks.biome_same":  "§cShift right click to use in same biome! §r",
 "message.gufyblocks.insomnia_altitude":  "§cYou must get to higher ground to use this! §r",
 "message.gufyblocks.sunlight_daytime":  "§cYou must wait for night to use this! §r",
+"message.gufyblocks.soulbound_nodeath":  "§cNo death location available! §r",
+"message.gufyblocks.soulbound_dimension":  "§cYou must be in the same dimension as your death to use! §r",
+"message.gufyblocks.server_thunder":  "Summoning a thunderstorm",
+"message.gufyblocks.server_night":  "Summoning the night",
 
 "tooltip.gufyblocks.relic_title": "Relic",
 "tooltip.gufyblocks.relic_blank": " ",
@@ -1917,6 +1923,7 @@
 "tooltip.gufyblocks.relic_subtitle_drunk": "When drunk:",
 "tooltip.gufyblocks.relic_subtitle_held": "When held in hand:",
 "tooltip.gufyblocks.relic_subtitle_planted": "When planted:",
+"tooltip.gufyblocks.relic_subtitle_given": "When given to a villager:",
 "tooltip.gufyblocks.anchor_instructions": " Teleports player",
 "tooltip.gufyblocks.anchor_instructions_2": " to ",
 "tooltip.gufyblocks.anchor_empty": "Put in your inventory to claim",
@@ -1930,8 +1937,13 @@
 "tooltip.gufyblocks.phasing_vial_instructions": " Become ethereal",
 "tooltip.gufyblocks.insomnia_fragment_instructions": " Summons nighttime",
 "tooltip.gufyblocks.whispering_compass_instructions": "Points to nearby structures",
-"tooltip.gufyblocks.orb_instructions": " Grants XP",
+"tooltip.gufyblocks.orb_instructions": " Grants one level",
 "tooltip.gufyblocks.totem_instructions": " Keep items on death",
+"tooltip.gufyblocks.soulbound_instructions": " Teleports player",
+"tooltip.gufyblocks.soulbound_instructions_2": " to last death location",
+"tooltip.gufyblocks.soulbound_instructions_3": " Use with caution!",
+"tooltip.gufyblocks.charm_instructions": " Resets their job and level",
+"tooltip.gufyblocks.charm_instructions_2": " Irreversible!",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }

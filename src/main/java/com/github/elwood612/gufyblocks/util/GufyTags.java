@@ -8,7 +8,5 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 public class GufyTags
 {
     public static final TagKey<Structure> ALL_COMPASS_TARGETS =
-            TagKey.create(
-                    Registries.STRUCTURE,
-                    Identifier.fromNamespaceAndPath("gufyblocks", "compass_targets"));
+            TagKey.create(Registries.STRUCTURE, Identifier.fromNamespaceAndPath("gufyblocks", "compass_targets"));
 }

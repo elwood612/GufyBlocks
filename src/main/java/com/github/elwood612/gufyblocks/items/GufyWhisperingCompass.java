@@ -1,7 +1,6 @@
 package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.GufyRegistry;
-import com.github.elwood612.gufyblocks.events.GufyClientEvents;
 import com.github.elwood612.gufyblocks.events.GufyPlayerEvents;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
 import com.github.elwood612.gufyblocks.util.GufyTags;
@@ -9,7 +8,6 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -20,12 +18,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.LodestoneTracker;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.levelgen.structure.BuiltinStructureSets;
+import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.structure.StructurePiece;
+import net.minecraft.world.level.levelgen.structure.StructureStart;
+import net.minecraft.world.level.levelgen.structure.structures.RuinedPortalPiece;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class GufyWhisperingCompass extends Item
@@ -80,11 +81,8 @@ public class GufyWhisperingCompass extends Item
                 BlockPos candidatePos = result.getFirst();
                 double distSqr = candidatePos.distSqr(playerPos);
                 double maxDistance = 28 * 16;
-                int surfaceY = level.getHeight(Heightmap.Types.WORLD_SURFACE, candidatePos.getX(), candidatePos.getZ());
-                boolean isUndergroundPortal =
-                        result.getSecond().is(BuiltinStructureSets.RUINED_PORTALS.identifier()) && candidatePos.getY() < surfaceY - 8;
 
-                if (distSqr <= maxDistance * maxDistance && !isUndergroundPortal) {
+                if (distSqr <= maxDistance * maxDistance && !isUndergroundPortal(level, candidatePos)) {
                     newTarget = GlobalPos.of(level.dimension(), result.getFirst());
                     stack.set(DataComponents.LODESTONE_TRACKER,
                             new LodestoneTracker(Optional.of(newTarget), true));
@@ -108,5 +106,22 @@ public class GufyWhisperingCompass extends Item
                     new GufyCompassData(playerPos, level.dimension(), newTarget));
         }
         super.inventoryTick(stack, level, entity, slot);
+    }
+
+    private boolean isUndergroundPortal(Level level, BlockPos candidatePos) {
+        ChunkAccess chunk = level.getChunk(candidatePos);
+        Map<Structure, StructureStart> starts = chunk.getAllStarts();
+
+        for (StructureStart start : starts.values()) {
+            for (StructurePiece piece : start.getPieces()) {
+
+                if (piece instanceof RuinedPortalPiece portalPiece) {
+                    RuinedPortalPiece.VerticalPlacement placement = portalPiece.verticalPlacement;
+                    if (placement == RuinedPortalPiece.VerticalPlacement.UNDERGROUND) return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

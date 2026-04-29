@@ -13,7 +13,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterConditionalItemModelPropertyEvent;
-import net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID, value = Dist.CLIENT)
@@ -102,6 +101,21 @@ public class GufyClientEvents
                 event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_held").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.totem_instructions").withStyle(ChatFormatting.GOLD));
+            }
+            case GufySoulboundAnchor gufySoulboundAnchor -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_held").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.soulbound_instructions").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.soulbound_instructions_2").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.soulbound_instructions_3").withStyle(ChatFormatting.RED).withStyle(ChatFormatting.ITALIC));
+            }
+            case GufyMemoryCharm gufyMemoryCharm -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_given").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.charm_instructions").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.charm_instructions_2").withStyle(ChatFormatting.RED).withStyle(ChatFormatting.ITALIC));
             }
             default -> { }
         }

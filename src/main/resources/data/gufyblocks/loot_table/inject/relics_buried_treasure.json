@@ -4,16 +4,6 @@
     {
       "bonus_rolls": 0.0,
       "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 50
-        },
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:sunlight_shard",
-		  "weight": 25
-        },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:spectral_gem",
@@ -21,25 +11,25 @@
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:biome_seed",
-		  "weight": 8
-        },
-		{
-          "type": "minecraft:item",
           "name": "gufyblocks:anchor",
-		  "weight": 100
+		  "weight": 5
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:phasing_vial",
 		  "weight": 5
+        },
+		{
+          "type": "minecraft:item",
+          "name": "gufyblocks:storm_echo",
+		  "weight": 85
         }
       ],
       "rolls": 1.0,
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.75
+          "chance": 0.65
         }
       ]
     }

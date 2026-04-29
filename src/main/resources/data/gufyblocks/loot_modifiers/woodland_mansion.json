@@ -6,5 +6,5 @@
 			"loot_table_id": "minecraft:chests/woodland_mansion"
 		}
 	],
-    "table": "gufyblocks:inject/relics_mansion"
+    "table": "gufyblocks:inject/relics_illagers"
 }

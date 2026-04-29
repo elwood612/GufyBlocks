@@ -4,7 +4,6 @@ import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

@@ -5,7 +5,6 @@ import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
-import com.github.elwood612.gufyblocks.util.GufyOwnership;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
@@ -34,7 +33,6 @@ import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.*;
-
 
 public class GufyRegistry
 {
@@ -461,7 +459,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> ANCHOR = ITEMS.registerItem(
             "anchor",
             GufyAnchor::new,
-            () -> new Item.Properties().stacksTo(1)
+            () -> new Item.Properties().stacksTo(16)
     );
     public static final DeferredItem<Item> SUNLIGHT_SHARD = ITEMS.registerItem(
             "sunlight_shard",
@@ -491,7 +489,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> PHASING_VIAL = ITEMS.registerItem(
             "phasing_vial",
             GufyPhasingVial::new,
-            () -> new Item.Properties().stacksTo(1).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK).rarity(Rarity.EPIC)
+            () -> new Item.Properties().stacksTo(16).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> WHISPERING_COMPASS = ITEMS.registerItem(
             "whispering_compass",
@@ -507,6 +505,16 @@ public class GufyRegistry
             "totem_keeping",
             GufyTotemKeeping::new,
             () -> new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
+    );
+    public static final DeferredItem<Item> SOULBOUND_ANCHOR = ITEMS.registerItem(
+            "soulbound_anchor",
+            GufySoulboundAnchor::new,
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.EPIC)
+    );
+    public static final DeferredItem<Item> MEMORY_CHARM = ITEMS.registerItem(
+            "memory_charm",
+            GufyMemoryCharm::new,
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.RARE)
     );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",

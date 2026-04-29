@@ -6,93 +6,52 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:angler_pottery_sherd",
-		  "weight": 100
+          "name": "minecraft:angler_pottery_sherd"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:shelter_pottery_sherd",
-		  "weight": 100
+          "name": "minecraft:shelter_pottery_sherd"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:snort_pottery_sherd",
-		  "weight": 100
+          "name": "minecraft:snort_pottery_sherd"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:sniffer_egg",
-		  "weight": 100
+          "name": "minecraft:sniffer_egg"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_axe",
-		  "weight": 100
+          "name": "minecraft:iron_axe"
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:emerald",
-          "weight": 200
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:wheat",
-          "weight": 200
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:wooden_hoe",
-          "weight": 200
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:coal",
-          "weight": 200
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_nugget",
-          "weight": 200
+          "weight": 2
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 50
-        },
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:sunlight_shard",
-		  "weight": 25
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
-		  "weight": 5
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:biome_seed",
-		  "weight": 8
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:anchor",
-		  "weight": 5
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:phasing_vial",
-		  "weight": 5
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:storm_echo",
-		  "weight": 100
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:insomnia_fragment",
-		  "weight": 1
+          "name": "gufyblocks:biome_seed"
         }
       ],
       "rolls": 1.0

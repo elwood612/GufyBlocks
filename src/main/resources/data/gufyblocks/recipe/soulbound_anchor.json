@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "gufyblocks:anchor",
+    "X": "minecraft:echo_shard"
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+	"XXX"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:soulbound_anchor"
+  }
+}

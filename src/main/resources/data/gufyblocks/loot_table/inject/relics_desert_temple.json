@@ -4,35 +4,25 @@
     {
       "bonus_rolls": 0.0,
       "entries": [
-        {
+		{
           "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 50
-        },
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:sunlight_shard",
-		  "weight": 100
+          "name": "gufyblocks:memory_charm",
+		  "weight": 35
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:spectral_gem",
-		  "weight": 5
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:biome_seed",
-		  "weight": 8
+		  "weight": 35
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:anchor",
-		  "weight": 5
+		  "weight": 20
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:phasing_vial",
-		  "weight": 5
+		  "weight": 8
         },
 		{
           "type": "minecraft:item",

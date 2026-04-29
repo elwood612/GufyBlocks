@@ -7,27 +7,24 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:arms_up_pottery_sherd",
-          "weight": 200
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:brewer_pottery_sherd",
-          "weight": 200
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:brick",
-		  "weight": 100
+          "name": "minecraft:brick"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
-		  "weight": 100
+          "name": "minecraft:emerald"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:stick",
-		  "weight": 100
+          "name": "minecraft:stick"
         },
         {
           "type": "minecraft:item",
@@ -86,23 +83,11 @@
               "function": "minecraft:set_stew_effect"
             }
           ],
-          "name": "minecraft:suspicious_stew",
-		  "weight": 100
+          "name": "minecraft:suspicious_stew"
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 20
-        },
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:sunlight_shard",
-		  "weight": 100
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
-		  "weight": 1
+          "name": "gufyblocks:biome_seed"
         }
       ],
       "rolls": 1.0

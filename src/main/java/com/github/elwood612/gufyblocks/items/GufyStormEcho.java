@@ -4,6 +4,7 @@ import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -47,6 +48,7 @@ public class GufyStormEcho extends Item
             }
 
             GufyUtil.execute("weather thunder 6000", serverLevel, position, player);
+            level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("message.gufyblocks.server_thunder"), true);
 
             LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(serverLevel, EntitySpawnReason.COMMAND);
             if (lightning != null) {

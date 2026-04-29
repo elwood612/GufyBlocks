@@ -7,22 +7,17 @@
         {
           "type": "minecraft:item",
           "name": "gufyblocks:experience_orb",
-		  "weight": 50
-        },
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:sunlight_shard",
-		  "weight": 20
+		  "weight": 85
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:biome_seed",
-		  "weight": 20
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:anchor",
+          "name": "gufyblocks:memory_charm",
 		  "weight": 10
+        },
+		{
+          "type": "minecraft:item",
+          "name": "gufyblocks:storm_echo",
+		  "weight": 5
         }
       ],
       "rolls": 1.0

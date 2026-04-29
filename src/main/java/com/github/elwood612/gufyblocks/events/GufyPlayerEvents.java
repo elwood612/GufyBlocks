@@ -1,25 +1,19 @@
 package com.github.elwood612.gufyblocks.events;
 
 import com.github.elwood612.gufyblocks.GufyBlocks;
-import com.github.elwood612.gufyblocks.GufyRegistry;
+import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
 import com.github.elwood612.gufyblocks.util.GufyPhasingHandler;
 import com.github.elwood612.gufyblocks.util.GufyScheduler;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.EventHooks;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerWakeUpEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import java.util.UUID;
 
@@ -45,15 +39,23 @@ public class GufyPlayerEvents
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
         Level level = player.level();
 
+        // should prevent out-of-date clients loggin in to the server
+        PacketDistributor.sendToPlayer(player, new GufyVersionCheckPayload(GufyBlocks.VERSION));
+
         if (level instanceof ServerLevel serverLevel) {
             MinecraftServer server = serverLevel.getServer();
 
             // set time to day if nobody was on when you joined
-            if (server != null && server.getPlayerList().getPlayerCount() == 1){
-                int rand = level.random.nextIntBetweenInclusive(0, 5500);
-                long j = serverLevel.getLevelData().getDayTime() + 24000L;
-                serverLevel.setDayTime(EventHooks.onSleepFinished(serverLevel, j - j % 24000L + rand, serverLevel.getDayTime()));
-//                serverLevel.setDayTime(rand);
+            if (server != null && server.getPlayerList().getPlayerCount() == 1) {
+                int desiredTime = level.random.nextIntBetweenInclusive(0, 5500); // 2000
+                long currentTotalTime = serverLevel.getDayTime();
+                long currentTimeOfDay = currentTotalTime % 24000L; // 3000
+
+                long timeToAdvance = currentTimeOfDay < desiredTime ?
+                        desiredTime - currentTimeOfDay : 24000L + desiredTime - currentTimeOfDay;
+
+                long newTime = currentTotalTime + timeToAdvance;
+                serverLevel.setDayTime(newTime);
             }
 
             // set compass login delay

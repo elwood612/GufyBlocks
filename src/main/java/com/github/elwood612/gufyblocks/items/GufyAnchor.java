@@ -39,11 +39,7 @@ public class GufyAnchor extends Item
 
             if (ownerName.equalsIgnoreCase(player.getGameProfile().name())) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.teleport_self"));
-                level.playSound((Player) null,
-                        position,
-                        SoundEvents.ENDERMAN_TELEPORT,
-                        SoundSource.NEUTRAL,
-                        0.5f, 0.4f);
+                level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.SUCCESS;
             }
 
@@ -116,7 +112,7 @@ public class GufyAnchor extends Item
         if (stack.has(GufyRegistry.OWNER.get())) {
             String owner = stack.getOrDefault(GufyRegistry.OWNER.get(), "");
             if (owner.isEmpty()) return super.getName(stack);
-            return Component.literal("Homing Crystal: " + owner).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+            return Component.literal("Teleportation Crystal: " + owner).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
         } else {
             return super.getName(stack);
         }

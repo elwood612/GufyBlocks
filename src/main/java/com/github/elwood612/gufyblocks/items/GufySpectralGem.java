@@ -33,8 +33,8 @@ public class GufySpectralGem extends Item
                 itemstack.consume(1, player);
             }
 
-            GufyUtil.execute("effect give @p minecraft:night_vision 14 0 true", serverLevel, position, player);
-            GufyUtil.execute("execute at @p run effect give @e[distance=..64] minecraft:glowing 14 0 true", serverLevel, position, player);
+            GufyUtil.execute("effect give @p minecraft:night_vision 20 0 true", serverLevel, position, player);
+            GufyUtil.execute("execute at @p run effect give @e[distance=..64] minecraft:glowing 20 0 true", serverLevel, position, player);
             GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, position, player);
 
             level.playSound((Player) null, position, SoundEvents.ENDERMAN_AMBIENT, SoundSource.NEUTRAL, 0.4f, 0.2f);

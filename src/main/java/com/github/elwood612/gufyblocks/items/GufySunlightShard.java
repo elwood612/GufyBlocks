@@ -1,7 +1,5 @@
 package com.github.elwood612.gufyblocks.items;
 
-import com.github.elwood612.gufyblocks.util.GufyUtil;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -18,7 +16,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 
 public class GufySunlightShard extends Item
@@ -30,7 +27,7 @@ public class GufySunlightShard extends Item
     public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
         BlockPos position = player.getOnPos();
         ItemStack itemstack = player.getItemInHand(handIn);
-        Boolean fail = false;
+        boolean fail = false;
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
 
@@ -55,7 +52,14 @@ public class GufySunlightShard extends Item
                 itemstack.consume(1, player);
             }
 
-            serverLevel.setDayTime(0);
+            long currentTotalTime = serverLevel.getDayTime();
+            long currentTimeOfDay = currentTotalTime % 24000L;
+
+            long timeToAdvance = 24000L - currentTimeOfDay;
+
+            long newTime = currentTotalTime + timeToAdvance;
+            serverLevel.setDayTime(newTime);
+//            serverLevel.setDayTime(0);
             serverLevel.resetWeatherCycle();
 
             level.playSound((Player) null, position, SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.5f, 1.5f);

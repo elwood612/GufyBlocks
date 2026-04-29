@@ -2,9 +2,10 @@ package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.events.GufyScaffoldingEvent;
-import com.github.elwood612.gufyblocks.items.GufyWhisperingCompass;
-import com.github.elwood612.gufyblocks.packets.GufyPayload;
+import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
+import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -15,7 +16,10 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 public class GufyBlocks
 {
 	public static final String MODID = "gufyblocks";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = ModList.get()
+			.getModContainerById(MODID)
+			.map(mc -> mc.getModInfo().getVersion().toString())
+			.orElse("1.0");
 
 	public GufyBlocks(IEventBus modEventBus)
 	{
@@ -33,11 +37,21 @@ public class GufyBlocks
 	// gives better error message handling (thru Neoforge)
 	// when attempting to connect to the server with vanilla client
 	private void registerPackets(RegisterPayloadHandlersEvent event) {
-		final PayloadRegistrar registrar = event.registrar(MODID).versioned(VERSION);
-		registrar.configurationToClient(
-				GufyPayload.TYPE,
-				GufyPayload.CODEC,
-				(gufyPayload, iPayloadContext) -> {}
+		final PayloadRegistrar registrar = event.registrar(MODID);
+		registrar.playToClient(
+				GufyVersionCheckPayload.TYPE,
+				GufyVersionCheckPayload.CODEC,
+				(payload, context) -> {
+					if (!payload.serverVersion().equals(VERSION)) {
+                        context.disconnect(Component.literal(
+								"§cYou need to update your modpack to play on the server!\n\n" +
+										"§7Server version: §f" + payload.serverVersion() + "\n" +
+										"§7Your version: §f" + VERSION + "\n\n" +
+										"§6If you need instructions on how to update," + "\n" +
+										"§6head over to the Gufy Server discord -> `Resources` channel"
+						));
+					}
+				}
 		);
 	}
 

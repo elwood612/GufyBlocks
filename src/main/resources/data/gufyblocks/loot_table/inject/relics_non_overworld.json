@@ -4,11 +4,6 @@
     {
       "bonus_rolls": 0.0,
       "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 50
-        },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:spectral_gem",
@@ -17,7 +12,7 @@
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:anchor",
-		  "weight": 10
+		  "weight": 20
         },
 		{
           "type": "minecraft:item",
@@ -26,15 +21,15 @@
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:totem_undying",
-		  "weight": 10
+          "name": "gufyblocks:totem_keeping",
+		  "weight": 50
         }
       ],
       "rolls": 1.0,
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.45
+          "chance": 0.35
         }
       ]
     }

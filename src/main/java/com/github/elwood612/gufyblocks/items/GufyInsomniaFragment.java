@@ -1,7 +1,6 @@
 package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -27,7 +26,7 @@ public class GufyInsomniaFragment extends Item
     public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
         BlockPos position = player.getOnPos();
         ItemStack itemstack = player.getItemInHand(handIn);
-        Boolean fail = false;
+        boolean fail = false;
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
 
@@ -52,8 +51,15 @@ public class GufyInsomniaFragment extends Item
                 itemstack.consume(1, player);
             }
 
-            int rand = level.random.nextIntBetweenInclusive(14000, 18000);
-            serverLevel.setDayTime(rand);
+            int desiredNighttime = level.random.nextIntBetweenInclusive(14000, 18000); // 14000
+            long currentTotalTime = serverLevel.getDayTime();
+            long currentTimeOfDay = currentTotalTime % 24000L; // 2000
+
+            long timeToAdvance = currentTimeOfDay < desiredNighttime ?
+                    desiredNighttime - currentTimeOfDay : 24000L + desiredNighttime - currentTimeOfDay;
+
+            long newTime = currentTotalTime + timeToAdvance;
+            serverLevel.setDayTime(newTime);
             GufyUtil.execute("effect give @p minecraft:blindness 3 0 true", serverLevel, position, player);
             GufyUtil.execute("effect give @p minecraft:nausea 3 0 true", serverLevel, position, player);
             GufyUtil.execute("gamerule spawn_phantoms true", serverLevel, position, player);
@@ -61,6 +67,8 @@ public class GufyInsomniaFragment extends Item
             if (level.random.nextFloat() < 0.5f) {
                 GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", serverLevel, position, player);
             }
+
+            level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("message.gufyblocks.server_night"), true);
 
             player.resetStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST));
             player.awardStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST), 200000);

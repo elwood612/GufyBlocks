@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class GufyPhasingVial extends Item
 {
-    private static final int delay = 200; // 200 ticks = 10 seconds
+    private static final int delay = 240; // 240 ticks = 12 seconds
 
     public GufyPhasingVial(Item.Properties properties) { super(properties); }
 

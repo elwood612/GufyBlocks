@@ -6,23 +6,22 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 50
+		  "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "gufyblocks:experience_orb"
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
-		  "weight": 40
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:anchor",
-		  "weight": 5
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:phasing_vial",
-		  "weight": 5
+          "name": "gufyblocks:anchor"
         }
       ],
       "rolls": 1.0
