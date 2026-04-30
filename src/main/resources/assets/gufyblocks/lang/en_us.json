@@ -1894,7 +1894,7 @@
 "item.gufyblocks.anchor": "Unclaimed Teleportation Crystal",
 "item.gufyblocks.sunlight_shard": "Sunlight Shard",
 "item.gufyblocks.storm_echo": "Storm Echo",
-"item.gufyblocks.spectral_gem": "Spectral Fragment",
+"item.gufyblocks.spectral_gem": "Spectral Shard",
 "item.gufyblocks.biome_seed": "Dormant Biome Seedling",
 "item.gufyblocks.phasing_vial": "Phasing Vial",
 "item.gufyblocks.insomnia_fragment": "Pearl of Insomnia",
@@ -1903,6 +1903,7 @@
 "item.gufyblocks.totem_keeping": "Totem of Keeping",
 "item.gufyblocks.soulbound_anchor": "Soulbound Crystal",
 "item.gufyblocks.memory_charm": "Memory Charm",
+"item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -1926,10 +1927,12 @@
 "tooltip.gufyblocks.relic_subtitle_given": "When given to a villager:",
 "tooltip.gufyblocks.anchor_instructions": " Teleports player",
 "tooltip.gufyblocks.anchor_instructions_2": " to ",
+"tooltip.gufyblocks.anchor_instructions_3": "Can be used as an ingredient",
 "tooltip.gufyblocks.anchor_empty": "Put in your inventory to claim",
 "tooltip.gufyblocks.sunlight_shard_instructions": " Summons daylight",
 "tooltip.gufyblocks.storm_echo_instructions": " Summons a thunderstorm",
 "tooltip.gufyblocks.spectral_gem_instructions": " Reveals nearby mobs",
+"tooltip.gufyblocks.spectral_gem_instructions_2": "Can be traded",
 "tooltip.gufyblocks.biome_seed_instructions": " Spreads ",
 "tooltip.gufyblocks.biome_seed_instructions_2": " around you",
 "tooltip.gufyblocks.biome_seed_dormant": "Right click to save current biome",
@@ -1944,6 +1947,10 @@
 "tooltip.gufyblocks.soulbound_instructions_3": " Use with caution!",
 "tooltip.gufyblocks.charm_instructions": " Resets their job and level",
 "tooltip.gufyblocks.charm_instructions_2": " Irreversible!",
+"tooltip.gufyblocks.hammer_instructions": "Cracks blocks",
+"tooltip.gufyblocks.moss_instructions": "Makes blocks mossy",
+"tooltip.gufyblocks.potent_instructions": " Reveals nearby hostile",
+"tooltip.gufyblocks.potent_instructions_2": " spawn points",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }

@@ -39,6 +39,8 @@ public class GufyClientEvents
                     event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
                     event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.anchor_instructions").withStyle(ChatFormatting.GOLD));
                     event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.anchor_instructions_2").append(Component.literal(owner)).withStyle(ChatFormatting.GOLD));
+                    event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                    event.getToolTip().add(7, Component.translatable("tooltip.gufyblocks.anchor_instructions_3").withStyle(ChatFormatting.GRAY));
                 } else {
                     event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.anchor_empty").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
                 }
@@ -60,6 +62,8 @@ public class GufyClientEvents
                 event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GRAY));
             }
             case GufyInsomniaFragment gufyInsomniaFragment -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
@@ -105,7 +109,7 @@ public class GufyClientEvents
             case GufySoulboundAnchor gufySoulboundAnchor -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
-                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_held").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.soulbound_instructions").withStyle(ChatFormatting.GOLD));
                 event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.soulbound_instructions_2").withStyle(ChatFormatting.GOLD));
                 event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.soulbound_instructions_3").withStyle(ChatFormatting.RED).withStyle(ChatFormatting.ITALIC));
@@ -116,6 +120,19 @@ public class GufyClientEvents
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_given").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.charm_instructions").withStyle(ChatFormatting.GOLD));
                 event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.charm_instructions_2").withStyle(ChatFormatting.RED).withStyle(ChatFormatting.ITALIC));
+            }
+            case GufyHammer gufyHammer -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.hammer_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+            }
+            case GufyMossClump gufyMossClump -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.moss_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+            }
+            case GufyPotentSpectralShard gufyPotentSpectralShard -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_held").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.potent_instructions").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.potent_instructions_2").withStyle(ChatFormatting.GOLD));
             }
             default -> { }
         }
