@@ -521,6 +521,11 @@ public class GufyRegistry
             GufyPotentSpectralShard::new,
             () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.EPIC)
     );
+    public static final DeferredItem<Item> MONOCLE = ITEMS.registerItem(
+            "monocle",
+            GufyMonocle::new,
+            () -> new Item.Properties().stacksTo(1)
+    );
 
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)

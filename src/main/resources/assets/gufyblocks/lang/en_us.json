@@ -1904,6 +1904,7 @@
 "item.gufyblocks.soulbound_anchor": "Soulbound Crystal",
 "item.gufyblocks.memory_charm": "Memory Charm",
 "item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
+"item.gufyblocks.monocle": "Monocle",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",

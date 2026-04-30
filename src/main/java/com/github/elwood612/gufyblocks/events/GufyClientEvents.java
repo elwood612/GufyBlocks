@@ -5,24 +5,58 @@ import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyOwnership;
 import com.github.elwood612.gufyblocks.util.GufyStoredBiome;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterConditionalItemModelPropertyEvent;
+import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
+import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID, value = Dist.CLIENT)
 public class GufyClientEvents
 {
+    private static final Identifier OVERLAY = Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "textures/misc/monocle_overlay.png");
+
     // Adds model properties to alter appearance of certain items
     @SubscribeEvent
     public static void registerConditionalProperties(RegisterConditionalItemModelPropertyEvent event) {
         event.register(Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "has_owner"), GufyOwnership.MAP_CODEC);
         event.register(Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "has_stored_biome"), GufyStoredBiome.MAP_CODEC);
+    }
+
+    // Render particles when using the monocle
+    @SubscribeEvent
+    public static void onRender(RenderLevelStageEvent.AfterTranslucentBlocks event) {
+        Minecraft mc = Minecraft.getInstance();
+        Player player = mc.player;
+
+        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE)) {
+            // render spawn particles here
+
+        }
+    }
+
+    // Render the GUI overlay for the monocle
+    // currently NOT WORKING
+    @SubscribeEvent
+    public static void onGuiRender(RenderGuiLayerEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        Player player = mc.player;
+
+        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+            int width = mc.getWindow().getGuiScaledWidth();
+            int height = mc.getWindow().getGuiScaledHeight();
+
+            event.getGuiGraphics().blit(OVERLAY, 0, 0, 0, 0, width, height, 1, 1);
+        }
     }
 
     // Adds a tooltip to anchors based on ownership

@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"1": "gufyblocks:item/monocle",
+		"layer0": "gufyblocks:item/monocle",
+		"particle": "gufyblocks:item/monocle"
+	}
+}
