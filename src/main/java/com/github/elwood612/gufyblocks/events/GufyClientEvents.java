@@ -8,6 +8,8 @@ import com.github.elwood612.gufyblocks.util.GufyStoredBiome;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
@@ -15,9 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.RegisterConditionalItemModelPropertyEvent;
-import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID, value = Dist.CLIENT)
@@ -34,7 +34,7 @@ public class GufyClientEvents
 
     // Render particles when using the monocle
     @SubscribeEvent
-    public static void onRender(RenderLevelStageEvent.AfterTranslucentBlocks event) {
+    public static void onRender(RenderLevelStageEvent.AfterEntities event) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
 
@@ -45,21 +45,45 @@ public class GufyClientEvents
     }
 
     // Render the GUI overlay for the monocle
-    // currently NOT WORKING
     @SubscribeEvent
-    public static void onGuiRender(RenderGuiLayerEvent.Post event) {
+    public static void onGuiRender(RenderGuiLayerEvent.Pre event) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
 
         if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
-            int width = mc.getWindow().getGuiScaledWidth();
-            int height = mc.getWindow().getGuiScaledHeight();
+            GuiGraphics gui = event.getGuiGraphics();
+            float scale = 1.25f;
+            int width = event.getGuiGraphics().guiWidth();
+            int height = event.getGuiGraphics().guiHeight();
+            int size = (int) (Math.min(width, height) * scale);
+            int x0 = (width - size) / 2;
+            int y0 = (height - size) / 2;
+            int x1 = x0 + size;
+            int y1 = y0 + size;
+            int black = 0xFF000000;
 
-            event.getGuiGraphics().blit(OVERLAY, 0, 0, 0, 0, width, height, 1, 1);
+
+            gui.fill(0, 0, x0, height, black);
+            gui.fill(x1, 0, width, height, black);
+            gui.fill(x0, 0, x1, y0, black);
+            gui.fill(x0, y1, x1, height, black);
+
+            gui.blit(OVERLAY, x0, y0, x0 + size, y0 + size, 0f, 1f, 0f, 1f);
         }
     }
 
-    // Adds a tooltip to anchors based on ownership
+    // Hide player's hands when holding the monocle
+    @SubscribeEvent
+    public static void onRenderHand(RenderHandEvent event) {
+        Minecraft mc = Minecraft.getInstance();
+        Player player = mc.player;
+
+        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+            event.setCanceled(true);
+        }
+    }
+
+    // Adds tooltips to relics
     @SubscribeEvent
     public static void onItemTooltip(ItemTooltipEvent event) {
         ItemStack itemstack = event.getItemStack();
