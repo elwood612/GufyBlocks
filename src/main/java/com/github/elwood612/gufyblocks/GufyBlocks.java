@@ -1,5 +1,6 @@
 package com.github.elwood612.gufyblocks;
 
+import com.github.elwood612.gufyblocks.events.GufyInteractEvent;
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.events.GufyScaffoldingEvent;
 import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
@@ -28,6 +29,7 @@ public class GufyBlocks
 		GufyRegistry.ENTITIES.register(modEventBus);
 		GufyRegistry.TABS.register(modEventBus);
 		GufyRegistry.DATA_COMPONENT_TYPES.register(modEventBus);
+		GufyRegistry.PARTICLES.register(modEventBus);
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);

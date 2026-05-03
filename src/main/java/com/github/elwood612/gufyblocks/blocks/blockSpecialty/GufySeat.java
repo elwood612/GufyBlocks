@@ -1,7 +1,7 @@
 package com.github.elwood612.gufyblocks.blocks.blockSpecialty;
 
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufySeatable;
-import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
+import com.github.elwood612.gufyblocks.seat.GufySeatEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -14,7 +14,6 @@ import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;

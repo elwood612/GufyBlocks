@@ -42,6 +42,10 @@ public class GufyInsomniaFragment extends Item
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_altitude"));
                 fail = true;
             }
+            if ((level.getDayTime() % 24000 < 13000 || level.getDayTime() % 24000 > 22500)) {
+                serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.sunlight_daytime"));
+                fail = true;
+            }
             if (fail) {
                 level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
@@ -51,15 +55,16 @@ public class GufyInsomniaFragment extends Item
                 itemstack.consume(1, player);
             }
 
-            int desiredNighttime = level.random.nextIntBetweenInclusive(14000, 18000); // 14000
-            long currentTotalTime = serverLevel.getDayTime();
-            long currentTimeOfDay = currentTotalTime % 24000L; // 2000
+//            int desiredNighttime = level.random.nextIntBetweenInclusive(14000, 18000); // 14000
+//            long currentTotalTime = serverLevel.getDayTime();
+//            long currentTimeOfDay = currentTotalTime % 24000L; // 2000
+//
+//            long timeToAdvance = currentTimeOfDay < desiredNighttime ?
+//                    desiredNighttime - currentTimeOfDay : 24000L + desiredNighttime - currentTimeOfDay;
+//
+//            long newTime = currentTotalTime + timeToAdvance;
+//            serverLevel.setDayTime(newTime);
 
-            long timeToAdvance = currentTimeOfDay < desiredNighttime ?
-                    desiredNighttime - currentTimeOfDay : 24000L + desiredNighttime - currentTimeOfDay;
-
-            long newTime = currentTotalTime + timeToAdvance;
-            serverLevel.setDayTime(newTime);
             GufyUtil.execute("effect give @p minecraft:blindness 3 0 true", serverLevel, position, player);
             GufyUtil.execute("effect give @p minecraft:nausea 3 0 true", serverLevel, position, player);
             GufyUtil.execute("gamerule spawn_phantoms true", serverLevel, position, player);
@@ -68,7 +73,7 @@ public class GufyInsomniaFragment extends Item
                 GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", serverLevel, position, player);
             }
 
-            level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("message.gufyblocks.server_night"), true);
+//            level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("message.gufyblocks.server_night"), true);
 
             player.resetStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST));
             player.awardStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST), 200000);

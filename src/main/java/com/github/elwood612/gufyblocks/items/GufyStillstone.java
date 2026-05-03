@@ -3,11 +3,11 @@ package com.github.elwood612.gufyblocks.items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-public class GufyMemoryCharm extends Item
+public class GufyStillstone extends Item
 {
-    public GufyMemoryCharm(Item.Properties properties) { super(properties); }
+    public GufyStillstone(Item.Properties properties) { super(properties); }
 
-    // Code for Memory charm is in InteractEvent
+    // Code for Stillstone (Amulet of Peace) is in InteractEvent
 
     @Override
     public boolean isFoil(ItemStack stack) {

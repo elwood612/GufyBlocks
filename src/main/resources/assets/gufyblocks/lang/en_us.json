@@ -1905,6 +1905,7 @@
 "item.gufyblocks.memory_charm": "Memory Charm",
 "item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
 "item.gufyblocks.monocle": "Monocle",
+"item.gufyblocks.stillstone": "Amulet of Peace",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -1916,6 +1917,7 @@
 "message.gufyblocks.sunlight_daytime":  "§cYou must wait for night to use this! §r",
 "message.gufyblocks.soulbound_nodeath":  "§cNo death location available! §r",
 "message.gufyblocks.soulbound_dimension":  "§cYou must be in the same dimension as your death to use! §r",
+"message.gufyblocks.stillstone_resisted":  "§c This mob is too powerful! §r",
 "message.gufyblocks.server_thunder":  "Summoning a thunderstorm",
 "message.gufyblocks.server_night":  "Summoning the night",
 
@@ -1926,6 +1928,7 @@
 "tooltip.gufyblocks.relic_subtitle_held": "When held in hand:",
 "tooltip.gufyblocks.relic_subtitle_planted": "When planted:",
 "tooltip.gufyblocks.relic_subtitle_given": "When given to a villager:",
+"tooltip.gufyblocks.relic_subtitle_used": "When used on a mob:",
 "tooltip.gufyblocks.anchor_instructions": " Teleports player",
 "tooltip.gufyblocks.anchor_instructions_2": " to ",
 "tooltip.gufyblocks.anchor_instructions_3": "Can be used as an ingredient",
@@ -1952,6 +1955,7 @@
 "tooltip.gufyblocks.moss_instructions": "Makes blocks mossy",
 "tooltip.gufyblocks.potent_instructions": " Reveals nearby hostile",
 "tooltip.gufyblocks.potent_instructions_2": " spawn points",
+"tooltip.gufyblocks.stillstone_instructions": " Silences and befriends them",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks"
 }

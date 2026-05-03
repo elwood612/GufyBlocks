@@ -1,7 +1,7 @@
 package com.github.elwood612.gufyblocks.events;
 
 import com.github.elwood612.gufyblocks.GufyRegistry;
-import com.github.elwood612.gufyblocks.entities.GufySeatRenderer;
+import com.github.elwood612.gufyblocks.seat.GufySeatRenderer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 

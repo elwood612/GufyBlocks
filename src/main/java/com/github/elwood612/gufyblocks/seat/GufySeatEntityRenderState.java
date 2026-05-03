@@ -1,4 +1,4 @@
-package com.github.elwood612.gufyblocks.entities;
+package com.github.elwood612.gufyblocks.seat;
 
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
 

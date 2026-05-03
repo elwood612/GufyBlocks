@@ -3,20 +3,20 @@ package com.github.elwood612.gufyblocks.events;
 import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.items.*;
-import com.github.elwood612.gufyblocks.util.GufyOwnership;
-import com.github.elwood612.gufyblocks.util.GufyStoredBiome;
-import com.mojang.blaze3d.systems.RenderSystem;
+import com.github.elwood612.gufyblocks.util.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
@@ -24,6 +24,12 @@ import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 public class GufyClientEvents
 {
     private static final Identifier OVERLAY = Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "textures/misc/monocle_overlay.png");
+
+    // Client setup
+    @SubscribeEvent
+    public static void onClientSetup(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(GufyRegistry.MONOCLE_PARTICLE.get(), GufyParticleProvider::new);
+    }
 
     // Adds model properties to alter appearance of certain items
     @SubscribeEvent
@@ -37,11 +43,17 @@ public class GufyClientEvents
     public static void onRender(RenderLevelStageEvent.AfterEntities event) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
+//        GufyMonocleParticles.monocleActive = player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE);
+    }
 
-        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE)) {
-            // render spawn particles here
-
-        }
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        Player player = mc.player;
+        if (player == null) return;
+        Level level = player.level();
+        GufyMonocleParticles.monocleActive = player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE);
+        GufyMonocleParticles.showLightLevelParticles(level, player);
     }
 
     // Render the GUI overlay for the monocle
@@ -191,6 +203,14 @@ public class GufyClientEvents
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_held").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.potent_instructions").withStyle(ChatFormatting.GOLD));
                 event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.potent_instructions_2").withStyle(ChatFormatting.GOLD));
+            }
+            case GufyStillstone gufyStillstone -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_used").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.stillstone_instructions").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GRAY));
             }
             default -> { }
         }

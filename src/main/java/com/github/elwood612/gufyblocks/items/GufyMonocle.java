@@ -1,5 +1,6 @@
 package com.github.elwood612.gufyblocks.items;
 
+import com.github.elwood612.gufyblocks.util.GufyMonocleParticles;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -27,8 +28,9 @@ public class GufyMonocle extends Item
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         player.playSound(SoundEvents.SPYGLASS_USE, 1.0F, 1.0F);
-        ItemStack stack = player.getItemInHand(hand);
         player.startUsingItem(hand);
+//        player.getPersistentData().putBoolean("monocle_active", true);
+        GufyMonocleParticles.override = false;
 
         return InteractionResult.CONSUME;
     }
@@ -46,6 +48,7 @@ public class GufyMonocle extends Item
     }
 
     private void stopUsing(LivingEntity user) {
+        GufyMonocleParticles.override = true;
         user.playSound(SoundEvents.SPYGLASS_STOP_USING, 1.0F, 1.0F);
     }
 

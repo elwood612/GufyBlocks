@@ -1,7 +1,7 @@
 package com.github.elwood612.gufyblocks.blocks.blockUtil;
 
 
-import com.github.elwood612.gufyblocks.entities.GufySeatEntity;
+import com.github.elwood612.gufyblocks.seat.GufySeatEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.EntityGetter;
