@@ -6,28 +6,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
-		  "weight": 10
+          "name": "gufyblocks:stillstone",
+		  "weight": 5
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:anchor",
-		  "weight": 3
+		  "weight": 1
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:phasing_vial",
-		  "weight": 85
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:storm_echo",
-		  "weight": 1
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:insomnia_fragment",
-		  "weight": 1
+		  "weight": 20
         }
       ],
       "rolls": 1.0,

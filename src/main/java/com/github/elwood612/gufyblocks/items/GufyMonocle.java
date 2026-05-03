@@ -29,9 +29,7 @@ public class GufyMonocle extends Item
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         player.playSound(SoundEvents.SPYGLASS_USE, 1.0F, 1.0F);
         player.startUsingItem(hand);
-//        player.getPersistentData().putBoolean("monocle_active", true);
-        GufyMonocleParticles.override = false;
-
+        GufyMonocleParticles.OVERRIDE = false;
         return InteractionResult.CONSUME;
     }
 
@@ -48,7 +46,7 @@ public class GufyMonocle extends Item
     }
 
     private void stopUsing(LivingEntity user) {
-        GufyMonocleParticles.override = true;
+        GufyMonocleParticles.OVERRIDE = true;
         user.playSound(SoundEvents.SPYGLASS_STOP_USING, 1.0F, 1.0F);
     }
 

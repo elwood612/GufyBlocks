@@ -1905,7 +1905,7 @@
 "item.gufyblocks.memory_charm": "Memory Charm",
 "item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
 "item.gufyblocks.monocle": "Monocle",
-"item.gufyblocks.stillstone": "Amulet of Peace",
+"item.gufyblocks.stillstone": "Quelling Amulet",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -1942,7 +1942,7 @@
 "tooltip.gufyblocks.biome_seed_dormant": "Right click to save current biome",
 "tooltip.gufyblocks.biome_seed_title": " Biome Seedling",
 "tooltip.gufyblocks.phasing_vial_instructions": " Become ethereal",
-"tooltip.gufyblocks.insomnia_fragment_instructions": " Summons nighttime",
+"tooltip.gufyblocks.insomnia_fragment_instructions": " Gives player max insomnia",
 "tooltip.gufyblocks.whispering_compass_instructions": "Points to nearby structures",
 "tooltip.gufyblocks.orb_instructions": " Grants one level",
 "tooltip.gufyblocks.totem_instructions": " Keep items on death",

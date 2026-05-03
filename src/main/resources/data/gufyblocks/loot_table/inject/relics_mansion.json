@@ -6,17 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:experience_orb",
-		  "weight": 50
-        },
-        {
-          "type": "minecraft:item",
-          "name": "gufyblocks:sunlight_shard",
-		  "weight": 5
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
+          "name": "gufyblocks:stillstone",
 		  "weight": 100
         },
 		{
@@ -34,7 +24,7 @@
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.45
+          "chance": 0.35
         }
       ]
     }

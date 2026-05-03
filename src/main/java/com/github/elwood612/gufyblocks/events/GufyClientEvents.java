@@ -7,16 +7,16 @@ import com.github.elwood612.gufyblocks.util.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
@@ -31,6 +31,32 @@ public class GufyClientEvents
         event.registerSpriteSet(GufyRegistry.MONOCLE_PARTICLE.get(), GufyParticleProvider::new);
     }
 
+    // Render black & white shader while holding monocle
+    @SubscribeEvent
+    public static void onRenderLevel(RenderLevelStageEvent.AfterTranslucentBlocks event) {
+        Minecraft mc = Minecraft.getInstance();
+        GameRenderer renderer = mc.gameRenderer;
+        Player player = mc.player;
+
+        // this works fine
+        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+//            renderer.setPostEffect(Identifier.fromNamespaceAndPath("gufyblocks", "monocle_vision"));
+        } else {
+//            renderer.clearPostEffect();
+        }
+    }
+
+    @SubscribeEvent
+    public static void onAfterParticles(RenderLevelStageEvent.AfterParticles event) {
+        Minecraft mc = Minecraft.getInstance();
+        GameRenderer renderer = mc.gameRenderer;
+        Player player = mc.player;
+
+        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+            // render custom pass particles here
+        }
+    }
+
     // Adds model properties to alter appearance of certain items
     @SubscribeEvent
     public static void registerConditionalProperties(RegisterConditionalItemModelPropertyEvent event) {
@@ -38,22 +64,15 @@ public class GufyClientEvents
         event.register(Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "has_stored_biome"), GufyStoredBiome.MAP_CODEC);
     }
 
-    // Render particles when using the monocle
-    @SubscribeEvent
-    public static void onRender(RenderLevelStageEvent.AfterEntities event) {
-        Minecraft mc = Minecraft.getInstance();
-        Player player = mc.player;
-//        GufyMonocleParticles.monocleActive = player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE);
-    }
-
+    // Detect using the monocle
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
         if (player == null) return;
         Level level = player.level();
-        GufyMonocleParticles.monocleActive = player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE);
         GufyMonocleParticles.showLightLevelParticles(level, player);
+//        GufyMonocleParticles.highlightNearbyMobs(level, player);
     }
 
     // Render the GUI overlay for the monocle
@@ -94,6 +113,22 @@ public class GufyClientEvents
             event.setCanceled(true);
         }
     }
+
+//    @SubscribeEvent
+//    public static void onRenderLiving(RenderLivingEvent.Post<?, ?> event) {
+//        if (GufyMonocleParticles.HIGHLIGHTED.contains(event.getEntity().getUUID())) {
+//
+//            // render your own outline layer OR reuse outline buffer
+//            event.getRenderer().render(
+//                    event.getEntity(),
+//                    event.getEntity().getYRot(),
+//                    event.getPartialTick(),
+//                    event.getPoseStack(),
+//                    event.getMultiBufferSource(),
+//                    event.getPackedLight()
+//            );
+//        }
+//    }
 
     // Adds tooltips to relics
     @SubscribeEvent

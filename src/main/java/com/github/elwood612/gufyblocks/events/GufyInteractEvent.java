@@ -98,6 +98,7 @@ public class GufyInteractEvent
                         0.1
                 );
                 villager.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
+                villager.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
 
                 event.setCanceled(true);
                 event.setCancellationResult(InteractionResult.SUCCESS);

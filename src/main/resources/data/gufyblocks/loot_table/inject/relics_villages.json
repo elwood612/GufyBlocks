@@ -6,8 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:memory_charm",
-		  "weight": 50
+          "name": "gufyblocks:memory_charm"
         }
       ],
       "rolls": 1.0,

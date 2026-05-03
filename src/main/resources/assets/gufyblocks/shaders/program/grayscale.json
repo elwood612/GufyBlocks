@@ -1,7 +1,0 @@
-{
-  "vertex": "minecraft:shaders/program/post",
-  "fragment": "gufyblocks:shaders/program/grayscale",
-  "samplers": [
-    { "name": "DiffuseSampler" }
-  ]
-}

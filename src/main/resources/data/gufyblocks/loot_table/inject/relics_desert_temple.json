@@ -6,40 +6,35 @@
       "entries": [
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:memory_charm",
-		  "weight": 35
+          "name": "gufyblocks:stillstone",
+		  "weight": 5
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
-		  "weight": 35
+          "name": "gufyblocks:memory_charm",
+		  "weight": 5
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:anchor",
-		  "weight": 20
+		  "weight": 1
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:phasing_vial",
-		  "weight": 8
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:storm_echo",
 		  "weight": 1
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:insomnia_fragment",
-		  "weight": 1
+		  "weight": 20
         }
       ],
       "rolls": 1.0,
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.35
+          "chance": 0.25
         }
       ]
     }

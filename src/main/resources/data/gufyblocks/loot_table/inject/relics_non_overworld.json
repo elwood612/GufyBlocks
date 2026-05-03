@@ -6,30 +6,27 @@
       "entries": [
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:spectral_gem",
-		  "weight": 20
+          "name": "gufyblocks:stillstone"
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:anchor",
-		  "weight": 20
+          "name": "gufyblocks:anchor"
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:phasing_vial",
-		  "weight": 10
+          "name": "gufyblocks:phasing_vial"
         },
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:totem_keeping",
-		  "weight": 50
+		  "weight": 3
         }
       ],
       "rolls": 1.0,
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.35
+          "chance": 0.25
         }
       ]
     }

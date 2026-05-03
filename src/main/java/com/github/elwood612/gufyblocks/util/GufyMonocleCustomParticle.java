@@ -36,8 +36,7 @@ public class GufyMonocleCustomParticle extends SingleQuadParticle
     }
 
     @Override
-    protected SingleQuadParticle.Layer getLayer()
-    {
+    protected SingleQuadParticle.Layer getLayer() {
         return Layer.TRANSLUCENT;
     }
 

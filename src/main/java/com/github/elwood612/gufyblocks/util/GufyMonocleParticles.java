@@ -5,36 +5,34 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.DustParticleOptions;
-import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class GufyMonocleParticles
 {
-    public static boolean monocleActive = false;
-    public static boolean override = false;
+    public static boolean OVERRIDE = true;
     private static final List<Particle> myParticles = new ArrayList<>();
+    public static final Set<UUID> HIGHLIGHTED = new HashSet<>();
 
     public static void showLightLevelParticles(Level level, Player player) {
-        if (!monocleActive || override) {
+        if (OVERRIDE) {
             // instantly clear particles if they exist
             if (!myParticles.isEmpty()) {
                 for (Particle p : myParticles) {
                     p.remove();
                 }
                 myParticles.clear();
-//                Minecraft.getInstance().gameRenderer.clearPostEffect();
             }
             return;
         }
 
         BlockPos center = player.blockPosition();
-
         int r = 10;
 
         for (BlockPos pos : BlockPos.betweenClosed(
@@ -47,17 +45,38 @@ public class GufyMonocleParticles
             double y = pos.getY() + 1.01;
             double z = pos.getZ() + 0.5;
 
-            if (level.random.nextInt(2) == 0) {
+            if (level.random.nextInt(3) == 0) {
                 spawnSmallParticles(level, pos, x, y, z);
             }
             if ((pos.asLong() % 20) == Math.max(level.getGameTime() % 40, 1)) {
 //                spawnBigParticles(level, pos, x, y, z);
             }
         }
-        if (Minecraft.getInstance().level != null) {
-//            Minecraft.getInstance().gameRenderer.setPostEffect(Identifier.fromNamespaceAndPath("minecraft", "post_effect/invert"));
+    }
+
+    public static void highlightNearbyMobs(Level level, Player player) {
+        if (OVERRIDE) return;
+
+        HIGHLIGHTED.clear();
+        AABB box = player.getBoundingBox().inflate(10);
+
+        if (level.getGameTime() % 5 == 0) {
+            for (Mob mob : level.getEntitiesOfClass(Mob.class, box)) {
+                HIGHLIGHTED.add(mob.getUUID());
+            }
         }
 
+
+
+//        BlockPos center = player.blockPosition();
+//        AABB box = new AABB(center).inflate(10);
+//        List<Mob> mobs = level.getEntitiesOfClass(Mob.class, box);
+//
+//        if (level.getGameTime() % 5 == 0) {
+//            for (Mob mob : mobs) {
+//                mob.addEffect(new MobEffectInstance(MobEffects.GLOWING, 5, 0));
+//            }
+//        }
     }
 
     private static boolean isHostileSpawnable(Level level, BlockPos pos) {
