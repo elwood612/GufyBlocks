@@ -1,5 +1,6 @@
 package com.github.elwood612.gufyblocks.events;
 
+import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -11,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
@@ -18,15 +20,16 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+@EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyScaffoldingEvent
 {
     private static final CopyOnWriteArrayList<BlockPos> lastScaffoldings = new CopyOnWriteArrayList<BlockPos>();
     private static final HashMap<BlockPos, Date> lastaction = new HashMap<BlockPos, Date>();
 
     @SubscribeEvent
-    public static void onScaffoldingItem(EntityJoinLevelEvent e) {
-        Level level = e.getLevel();
-        Entity entity = e.getEntity();
+    public static void onScaffoldingItem(EntityJoinLevelEvent event) {
+        Level level = event.getLevel();
+        Entity entity = event.getEntity();
         if (level.isClientSide()) { return; }
         if (!(entity instanceof ItemEntity)) { return; }
 
@@ -57,12 +60,12 @@ public class GufyScaffoldingEvent
     }
 
     @SubscribeEvent
-    public static void onBlockBreak(BlockEvent.BreakEvent e) {
-        Level level = GufyUtil.getWorldIfInstanceOfAndNotRemote(e.getLevel());
+    public static void onBlockBreak(BlockEvent.BreakEvent event) {
+        Level level = GufyUtil.getWorldIfInstanceOfAndNotRemote(event.getLevel());
         if (level == null || level.isClientSide()) { return; }
 
-        BlockPos blockPos = e.getPos();
-        BlockState blockState = e.getState();
+        BlockPos blockPos = event.getPos();
+        BlockState blockState = event.getState();
         Block block = blockState.getBlock();
 
         if (block.equals(Blocks.SCAFFOLDING)) {

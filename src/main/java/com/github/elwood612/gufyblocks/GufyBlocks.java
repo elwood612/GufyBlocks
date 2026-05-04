@@ -1,17 +1,15 @@
 package com.github.elwood612.gufyblocks;
 
-import com.github.elwood612.gufyblocks.events.GufyInteractEvent;
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
-import com.github.elwood612.gufyblocks.events.GufyScaffoldingEvent;
 import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
+import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
+import org.slf4j.Logger;
 
 @Mod(GufyBlocks.MODID)
 public class GufyBlocks
@@ -21,9 +19,11 @@ public class GufyBlocks
 			.getModContainerById(MODID)
 			.map(mc -> mc.getModInfo().getVersion().toString())
 			.orElse("1.0");
+	public static final Logger LOGGER = LogUtils.getLogger();
 
-	public GufyBlocks(IEventBus modEventBus)
-	{
+	public GufyBlocks(IEventBus modEventBus) {
+		LOGGER.info("{} mod loading, version {}", MODID, VERSION);
+
 		GufyRegistry.BLOCKS.register(modEventBus);
 		GufyRegistry.ITEMS.register(modEventBus);
 		GufyRegistry.ENTITIES.register(modEventBus);
@@ -33,7 +33,6 @@ public class GufyBlocks
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
-		modEventBus.addListener(this::loadComplete);
 	}
 
 	// gives better error message handling (thru Neoforge)
@@ -55,9 +54,5 @@ public class GufyBlocks
 					}
 				}
 		);
-	}
-
-	private void loadComplete(final FMLLoadCompleteEvent event) {
-		NeoForge.EVENT_BUS.register(GufyScaffoldingEvent.class);
 	}
 }
