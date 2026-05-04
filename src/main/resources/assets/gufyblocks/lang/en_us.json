@@ -1,4 +1,9 @@
-{ 
+{
+"block.gufyblocks.spruce_framed_white_terracotta": "Spruce Framed White Terracotta",
+"block.gufyblocks.spruce_framed_white_terracotta_left": "Spruce Framed White Terracotta Left",
+"block.gufyblocks.spruce_framed_white_terracotta_right": "Spruce Framed White Terracotta Right",
+"block.gufyblocks.spruce_framed_white_terracotta_cross": "Spruce Framed White Terracotta Cross",
+
 "block.gufyblocks.potted_weeping_vine": "Potted Weeping Vine",
 "block.gufyblocks.potted_vine": "Potted Vine",
 "block.gufyblocks.potted_twisting_vine": "Potted Twisting Vine",

@@ -61,6 +61,7 @@ public class GufyRegistry
     private static final GufyBlockTypes[] WAXED_CUT_COPPER_TYPES = GufyUtil.blocktypeBuilder().get(11);
     private static final GufyBlockTypes[] VANILLA_STRIPPABLE_WOOD_TYPES_ALL = GufyUtil.blocktypeBuilder().get(12);
     private static final GufyBlockTypes[] FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(13);
+    private static final GufyBlockTypes[] VERTICAL_FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(14);
     //**************************************************************//
 
 
@@ -358,6 +359,9 @@ public class GufyRegistry
         add(familyBuilder("crimson_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
         add(familyBuilder("warped_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
         add(familyBuilder("pale_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
+
+        // ~~ NEW FRAMED TERRACOTTA ~~ //
+        add(familyBuilder("spruce_framed_white_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
 
 
         // ~~ COPPER ~~ //

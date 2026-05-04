@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "neighbors_vertical=0": {
+      "model": "gufyblocks:block/spruce_framed_white_terracotta_right"
+    },
+	"neighbors_vertical=1": {
+      "model": "gufyblocks:block/spruce_framed_white_terracotta_right_1"
+    },
+	"neighbors_vertical=2": {
+      "model": "gufyblocks:block/spruce_framed_white_terracotta_right_2"
+    },
+	"neighbors_vertical=3": {
+      "model": "gufyblocks:block/spruce_framed_white_terracotta_right_3"
+    }
+  }
+}

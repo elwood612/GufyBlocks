@@ -194,6 +194,11 @@ public interface GufyCrackable {
                 .put(getGufyBlock("pale_oak_framed_terracotta_left"), getGufyBlock("pale_oak_framed_terracotta_right"))
                 .put(getGufyBlock("pale_oak_framed_terracotta_right"), getGufyBlock("pale_oak_framed_terracotta_cross"))
                 .put(getGufyBlock("pale_oak_framed_terracotta_cross"), getGufyBlock("pale_oak_framed_terracotta"))
+                // NEW FRAMED TERRACOTTA
+                .put(getGufyBlock("spruce_framed_white_terracotta"), getGufyBlock("spruce_framed_white_terracotta_left"))
+                .put(getGufyBlock("spruce_framed_white_terracotta_left"), getGufyBlock("spruce_framed_white_terracotta_right"))
+                .put(getGufyBlock("spruce_framed_white_terracotta_right"), getGufyBlock("spruce_framed_white_terracotta_cross"))
+                .put(getGufyBlock("spruce_framed_white_terracotta_cross"), getGufyBlock("spruce_framed_white_terracotta"))
                 // CARVED LOGS
                 .put(Blocks.STRIPPED_ACACIA_WOOD, getGufyBlock("chiseled_stripped_acacia_wood"))
                 .put(Blocks.STRIPPED_BIRCH_WOOD, getGufyBlock("chiseled_stripped_birch_wood"))

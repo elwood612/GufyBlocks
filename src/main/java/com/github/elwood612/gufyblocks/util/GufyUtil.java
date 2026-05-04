@@ -149,6 +149,10 @@ public class GufyUtil
             case FRAMED_CROSS -> createRegistry(name + "_cross", () -> new Block(blockProperties), blockProperties);
             case CARVED_LOG -> createRegistry(name, () -> new RotatedPillarBlock(blockProperties), blockProperties);
             case SEAT -> createRegistry(name, () -> new GufySeat(blockProperties), blockProperties);
+            case VERTICAL_CONNECTED_BLOCK -> createRegistry(name, () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
+            case VERTICAL_CONNECTED_LEFT -> createRegistry(name + "_left", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
+            case VERTICAL_CONNECTED_RIGHT -> createRegistry(name + "_right", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
+            case VERTICAL_CONNECTED_CROSS -> createRegistry(name + "_cross", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             default -> null;
         };
     }
@@ -438,6 +442,14 @@ public class GufyUtil
                     GufyBlockTypes.FRAMED_LEFT,
                     GufyBlockTypes.FRAMED_RIGHT,
                     GufyBlockTypes.FRAMED_CROSS
+            });
+
+            // FRAMED_BLOCK_TYPES - 14
+            add(new GufyBlockTypes[] {
+                    GufyBlockTypes.VERTICAL_CONNECTED_BLOCK,
+                    GufyBlockTypes.VERTICAL_CONNECTED_LEFT,
+                    GufyBlockTypes.VERTICAL_CONNECTED_RIGHT,
+                    GufyBlockTypes.VERTICAL_CONNECTED_CROSS
             });
         }};
     }
