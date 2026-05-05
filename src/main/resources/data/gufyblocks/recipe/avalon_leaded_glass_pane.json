@@ -1,11 +1,19 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "leaded_vertical_glass",
-  "ingredients": [
-    "gufyblocks:leaded_glass_pane",
-    "minecraft:book"
+  "group": "leaded_colored_glass",
+  "pattern": [
+    "+X-",
+    "X#X",
+    " X="
   ],
+  "key": {
+    "#": "minecraft:glass_pane",
+    "X": "minecraft:iron_ingot",
+	"+": "minecraft:yellow_dye",
+	"-": "minecraft:black_dye",
+	"=": "minecraft:white_dye"
+  },
   "result": 
   { 
     "id": "gufyblocks:avalon_leaded_glass_pane"

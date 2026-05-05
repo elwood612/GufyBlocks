@@ -3,13 +3,14 @@
   "category": "building",
   "group": "leaded_colored_glass",
   "pattern": [
-    "XXX",
+    "+X+",
     "X#X",
-    "XXX"
+    "+X+"
   ],
   "key": {
-    "#": "minecraft:orange_stained_glass_pane",
-    "X": "minecraft:iron_nugget"
+    "#": "minecraft:glass_pane",
+    "X": "minecraft:iron_ingot",
+	"+": "minecraft:orange_dye"
   },
   "result": 
   { 
