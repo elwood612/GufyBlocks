@@ -311,7 +311,7 @@ public class GufyRegistry
         add(familyBuilder("pink_wool", Blocks.PINK_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
 
         // ~~ GLASS ~~ //
-        add(familyBuilder("leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.VERTICAL_CONNECTED_PANE));
         add(familyBuilder("white_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("light_gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));

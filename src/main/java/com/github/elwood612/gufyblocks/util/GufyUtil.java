@@ -153,6 +153,7 @@ public class GufyUtil
             case VERTICAL_CONNECTED_LEFT -> createRegistry(name + "_left", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             case VERTICAL_CONNECTED_RIGHT -> createRegistry(name + "_right", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             case VERTICAL_CONNECTED_CROSS -> createRegistry(name + "_cross", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
+            case VERTICAL_CONNECTED_PANE -> createRegistry(name + "_pane", () -> new GufyVerticalConnectedPane(blockProperties), blockProperties);
             default -> null;
         };
     }

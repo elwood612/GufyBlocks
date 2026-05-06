@@ -1,6 +1,6 @@
 {
   "render_type": "translucent",
-  "parent": "gufyblocks:block/template_vertical_connected_pane_noside",
+  "parent": "gufyblocks:block/template_vertical_connected_pane_noside_2",
   "textures": {
     "pane": "gufyblocks:block/atlas/leaded_glass_pane_atlas"
   }
