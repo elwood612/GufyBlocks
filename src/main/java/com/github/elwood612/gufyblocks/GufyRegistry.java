@@ -312,7 +312,7 @@ public class GufyRegistry
 
         // ~~ GLASS ~~ //
         add(familyBuilder("leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.VERTICAL_CONNECTED_PANE));
-        add(familyBuilder("white_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.EIGHTWAY_CONNECTED_PANE));
+        add(familyBuilder("white_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("light_gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("black_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
