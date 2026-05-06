@@ -3,132 +3,180 @@
     {
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_post" }
     },
+	{
+		"when": { "north_exposed": 1, "north": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_1" }
+    },
+	{
+		"when": { "north_exposed": 2, "north": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_2" }
+    },
+	{
+		"when": { "north_exposed": 3, "north": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_3" }
+    },
+	{
+		"when": { "east_exposed": 1, "east": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_1", "y": 90 }
+    },
+	{
+		"when": { "east_exposed": 2, "east": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_2", "y": 90 }
+    },
+	{
+		"when": { "east_exposed": 3, "east": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_3", "y": 90 }
+    },
+	{
+		"when": { "south_exposed": 1, "south": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_1" }
+    },
+	{
+		"when": { "south_exposed": 2, "south": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_2" }
+    },
+	{
+		"when": { "south_exposed": 3, "south": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_3" }
+    },
+	{
+		"when": { "west_exposed": 1, "west": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_1", "y": 90 }
+    },
+	{
+		"when": { "west_exposed": 2, "west": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_2", "y": 90 }
+    },
+	{
+		"when": { "west_exposed": 3, "west": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_3", "y": 90 }
+    },
     {
-		"when": { "north": "true", "neighbors_vertical": "0" },
+		"when": { "north": "true", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side" }
     },
 	{
-		"when": { "north": "true", "neighbors_vertical": "1" },
+		"when": { "north": "true", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_1" }
     },
 	{
-		"when": { "north": "true", "neighbors_vertical": "2" },
+		"when": { "north": "true", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_2" }
     },
 	{
-		"when": { "north": "true", "neighbors_vertical": "3" },
+		"when": { "north": "true", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_3" }
     },
     {
-		"when": { "east": "true", "neighbors_vertical": "0" },
+		"when": { "east": "true", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side", "y": 90 }
     },
 	{
-		"when": { "east": "true", "neighbors_vertical": "1" },
+		"when": { "east": "true", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_1", "y": 90 }
     },
 	{
-		"when": { "east": "true", "neighbors_vertical": "2" },
+		"when": { "east": "true", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_2", "y": 90 }
     },
 	{
-		"when": { "east": "true", "neighbors_vertical": "3" },
+		"when": { "east": "true", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_3", "y": 90 }
     },
     {
-		"when": { "south": "true", "neighbors_vertical": "0" },
+		"when": { "south": "true", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt" }
     },
 	{
-		"when": { "south": "true", "neighbors_vertical": "1" },
+		"when": { "south": "true", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt_1" }
     },
 	{
-		"when": { "south": "true", "neighbors_vertical": "2" },
+		"when": { "south": "true", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt_2" }
     },
 	{
-		"when": { "south": "true", "neighbors_vertical": "3" },
+		"when": { "south": "true", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt_3" }
     },
     {
-		"when": { "west": "true", "neighbors_vertical": "0" },
+		"when": { "west": "true", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt", "y": 90 }
     },
 	{
-		"when": { "west": "true", "neighbors_vertical": "1" },
+		"when": { "west": "true", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt_1", "y": 90 }
     },
 	{
-		"when": { "west": "true", "neighbors_vertical": "2" },
+		"when": { "west": "true", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt_2", "y": 90 }
     },
 	{
-		"when": { "west": "true", "neighbors_vertical": "3" },
+		"when": { "west": "true", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side_alt_3", "y": 90 }
     },
     {
-		"when": { "north": "false", "neighbors_vertical": "0" },
+		"when": { "north": "false", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside" }
     },
 	{
-		"when": { "north": "false", "neighbors_vertical": "1" },
+		"when": { "north": "false", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_1" }
     },
 	{
-		"when": { "north": "false", "neighbors_vertical": "2" },
+		"when": { "north": "false", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_2" }
     },
 	{
-		"when": { "north": "false", "neighbors_vertical": "3" },
+		"when": { "north": "false", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_3" }
     },
     {
-		"when": { "east": "false", "neighbors_vertical": "0" },
+		"when": { "east": "false", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt" }
     },
 	{
-		"when": { "east": "false", "neighbors_vertical": "1" },
+		"when": { "east": "false", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt_1" }
     },
 	{
-		"when": { "east": "false", "neighbors_vertical": "2" },
+		"when": { "east": "false", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt_2" }
     },
 	{
-		"when": { "east": "false", "neighbors_vertical": "3" },
+		"when": { "east": "false", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt_3" }
     },
     {
-		"when": { "south": "false", "neighbors_vertical": "0" },
+		"when": { "south": "false", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt", "y": 90 }
     },
 	{
-		"when": { "south": "false", "neighbors_vertical": "1" },
+		"when": { "south": "false", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt_1", "y": 90 }
     },
 	{
-		"when": { "south": "false", "neighbors_vertical": "2" },
+		"when": { "south": "false", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt_2", "y": 90 }
     },
 	{
-		"when": { "south": "false", "neighbors_vertical": "3" },
+		"when": { "south": "false", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_alt_3", "y": 90 }
     },
     {
-		"when": { "west": "false", "neighbors_vertical": "0" },
+		"when": { "west": "false", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside", "y": 270 }
     },
 	{
-		"when": { "west": "false", "neighbors_vertical": "1" },
+		"when": { "west": "false", "vertical_position": "1" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_1", "y": 270 }
     },
 	{
-		"when": { "west": "false", "neighbors_vertical": "2" },
+		"when": { "west": "false", "vertical_position": "2" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_2", "y": 270 }
     },
 	{
-		"when": { "west": "false", "neighbors_vertical": "3" },
+		"when": { "west": "false", "vertical_position": "3" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_noside_3", "y": 270 }
     }
   ]

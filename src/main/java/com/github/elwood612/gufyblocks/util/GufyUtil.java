@@ -154,6 +154,7 @@ public class GufyUtil
             case VERTICAL_CONNECTED_RIGHT -> createRegistry(name + "_right", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             case VERTICAL_CONNECTED_CROSS -> createRegistry(name + "_cross", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             case VERTICAL_CONNECTED_PANE -> createRegistry(name + "_pane", () -> new GufyVerticalConnectedPane(blockProperties), blockProperties);
+            case EIGHTWAY_CONNECTED_PANE -> createRegistry(name + "_pane", () -> new GufyEightWayConnectedPane(blockProperties), blockProperties);
             default -> null;
         };
     }
@@ -179,7 +180,7 @@ public class GufyUtil
         };
     }
 
-    //************************GET BLOCKS***************************//
+    //************************BLOCK UTIL***************************//
     public static Block getGufyBlock(String name) {
         return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath(MODID, name));
     }
@@ -203,6 +204,24 @@ public class GufyUtil
             return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name + "s"));
 
         else return Blocks.OAK_PLANKS;
+    }
+
+    public static int getVerticalPosition(boolean up, boolean down) {
+        // 0 = isolated
+        // 1 = top (has bottom only)
+        // 2 = middle (both)
+        // 3 = bottom (has top only)
+        if (up) {
+            if (down) return 2;
+            else return 3;
+        } else {
+            if (down) return 1;
+            else return 0;
+        }
+    }
+
+    public static int getEightwayPosition(boolean horizontal, boolean vertical, boolean diagonal) {
+        return 0;
     }
 
 
