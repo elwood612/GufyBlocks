@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "framed_terracotta",
-  "ingredients": [
-    "minecraft:white_terracotta",
-    "#gufyblocks:crimson_fences"
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
   ],
+  "key": {
+    "#": "minecraft:white_terracotta",
+    "X": "minecraft:crimson_planks"
+  },
   "result": 
   { 
     "id": "gufyblocks:crimson_framed_terracotta"

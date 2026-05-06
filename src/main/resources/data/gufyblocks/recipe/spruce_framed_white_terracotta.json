@@ -9,10 +9,10 @@
   ],
   "key": {
     "#": "minecraft:white_terracotta",
-    "X": "minecraft:warped_planks"
+    "X": "minecraft:spruce_planks"
   },
   "result": 
   { 
-    "id": "gufyblocks:warped_framed_terracotta"
+    "id": "gufyblocks:spruce_framed_white_terracotta"
   }
 }

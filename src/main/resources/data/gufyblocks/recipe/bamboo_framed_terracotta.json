@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "framed_terracotta",
-  "ingredients": [
-    "minecraft:white_terracotta",
-    "minecraft:bamboo_fence"
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
   ],
+  "key": {
+    "#": "minecraft:white_terracotta",
+    "X": "minecraft:bamboo_planks"
+  },
   "result": 
   { 
     "id": "gufyblocks:bamboo_framed_terracotta"

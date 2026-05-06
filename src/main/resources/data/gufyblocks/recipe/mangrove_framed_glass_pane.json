@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "framed_glass_panes",
-  "ingredients": [
-    "minecraft:glass_pane",
-    "#gufyblocks:mangrove_fences"
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
   ],
+  "key": {
+    "#": "minecraft:glass_pane",
+    "X": "minecraft:mangrove_planks"
+  },
   "result": 
   { 
     "id": "gufyblocks:mangrove_framed_glass_pane"

@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "framed_terracotta",
-  "ingredients": [
-    "minecraft:white_terracotta",
-    "#gufyblocks:spruce_fences"
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
   ],
+  "key": {
+    "#": "minecraft:white_terracotta",
+    "X": "minecraft:spruce_planks"
+  },
   "result": 
   { 
     "id": "gufyblocks:spruce_framed_terracotta"

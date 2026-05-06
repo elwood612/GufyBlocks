@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "framed_terracotta",
-  "ingredients": [
-    "minecraft:white_terracotta",
-    "#gufyblocks:jungle_fences"
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
   ],
+  "key": {
+    "#": "minecraft:white_terracotta",
+    "X": "minecraft:jungle_planks"
+  },
   "result": 
   { 
     "id": "gufyblocks:jungle_framed_terracotta"

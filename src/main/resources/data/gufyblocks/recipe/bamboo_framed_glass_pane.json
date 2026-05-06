@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "framed_glass_panes",
-  "ingredients": [
-    "minecraft:glass_pane",
-    "minecraft:bamboo_fence"
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
   ],
+  "key": {
+    "#": "minecraft:glass_pane",
+    "X": "minecraft:bamboo_planks"
+  },
   "result": 
   { 
     "id": "gufyblocks:bamboo_framed_glass_pane"
