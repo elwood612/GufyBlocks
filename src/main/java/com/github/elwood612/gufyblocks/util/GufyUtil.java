@@ -220,7 +220,28 @@ public class GufyUtil
         }
     }
 
-    public static int getEightwayPosition(boolean horizontal, boolean vertical, boolean diagonal) {
+    public static int getEightwayPositionLegacy(boolean horizontal, boolean vertical, boolean diagonal) {
+        // 0 = isolated
+        // 1 = H + V + D
+        // 2 = V
+        // 3 = H
+        // 4 = H + V
+        if (horizontal) {
+            if (vertical) {
+                if (diagonal) return 1;
+                else return 4;
+            }
+            return 3;
+        } else {
+            if (vertical) return 2;
+            else return 0;
+        }
+    }
+
+    public static int getEightwayPosition(boolean topLeft, boolean top, boolean topRight, boolean right,
+                                          boolean bottomRight, boolean bottom, boolean bottomLeft, boolean left) {
+
+
         return 0;
     }
 
