@@ -1,9 +1,6 @@
 package com.github.elwood612.gufyblocks.blocks.blockSpecialty;
 
-import com.github.elwood612.gufyblocks.util.GufyEightWayPosition;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -22,41 +19,9 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 
-import java.util.Map;
-
 public class GufyEightWayConnectedPane extends IronBarsBlock {
 
-    // Need to replace all this with 2 properties, NS_POSITION and WE_POSITION
-    // Get rid of the map
-    // Simply calculate it based on the axis
-    // Good luck with GufyUtils.computePosition()
-    private static final IntegerProperty NORTH_UP_POSITION = IntegerProperty.create("north_up_position", 0, 4);
-    private static final IntegerProperty NORTH_DOWN_POSITION = IntegerProperty.create("north_down_position", 0, 4);
-    private static final IntegerProperty SOUTH_UP_POSITION = IntegerProperty.create("south_up_position", 0, 4);
-    private static final IntegerProperty SOUTH_DOWN_POSITION = IntegerProperty.create("south_down_position", 0, 4);
-    private static final IntegerProperty WEST_UP_POSITION = IntegerProperty.create("west_up_position", 0, 4);
-    private static final IntegerProperty WEST_DOWN_POSITION = IntegerProperty.create("west_down_position", 0, 4);
-    private static final IntegerProperty EAST_UP_POSITION = IntegerProperty.create("east_up_position", 0, 4);
-    private static final IntegerProperty EAST_DOWN_POSITION = IntegerProperty.create("east_down_position", 0, 4);
-
-    private static final IntegerProperty NORTH_EXPOSED = IntegerProperty.create("north_exposed", 0, 3);
-    private static final IntegerProperty SOUTH_EXPOSED = IntegerProperty.create("south_exposed", 0, 3);
-    private static final IntegerProperty WEST_EXPOSED = IntegerProperty.create("west_exposed", 0, 3);
-    private static final IntegerProperty EAST_EXPOSED = IntegerProperty.create("east_exposed", 0, 3);
-
-    private static final IntegerProperty VERTICAL_POSITION = IntegerProperty.create("vertical_position", 0, 3);
-
-    private static final Map<GufyEightWayPosition, Direction[]> PROPERTY_BY_POSITION =
-            ImmutableMap.copyOf(Maps.newEnumMap(Map.of(
-                    GufyEightWayPosition.NORTH_UP, new Direction[] { Direction.NORTH, Direction.UP },
-                    GufyEightWayPosition.NORTH_DOWN, new Direction[] { Direction.NORTH, Direction.DOWN },
-                    GufyEightWayPosition.SOUTH_UP, new Direction[] { Direction.SOUTH, Direction.UP },
-                    GufyEightWayPosition.SOUTH_DOWN, new Direction[] { Direction.SOUTH, Direction.DOWN },
-                    GufyEightWayPosition.WEST_UP, new Direction[] { Direction.WEST, Direction.UP },
-                    GufyEightWayPosition.WEST_DOWN, new Direction[] { Direction.WEST, Direction.DOWN },
-                    GufyEightWayPosition.EAST_UP, new Direction[] { Direction.EAST, Direction.UP },
-                    GufyEightWayPosition.EAST_DOWN, new Direction[] { Direction.EAST, Direction.DOWN }
-                    )));
+    private static final IntegerProperty EIGHTWAY_POSITION = IntegerProperty.create("eightway_position", 0, 46);
 
     public GufyEightWayConnectedPane(BlockBehaviour.Properties properties) {
         super(properties);
@@ -66,27 +31,12 @@ public class GufyEightWayConnectedPane extends IronBarsBlock {
                 .setValue(SOUTH, Boolean.FALSE)
                 .setValue(WEST, Boolean.FALSE)
                 .setValue(WATERLOGGED, Boolean.FALSE)
-                .setValue(NORTH_UP_POSITION, 0)
-                .setValue(NORTH_DOWN_POSITION, 0)
-                .setValue(SOUTH_UP_POSITION, 0)
-                .setValue(SOUTH_DOWN_POSITION, 0)
-                .setValue(WEST_UP_POSITION, 0)
-                .setValue(WEST_DOWN_POSITION, 0)
-                .setValue(EAST_UP_POSITION, 0)
-                .setValue(EAST_DOWN_POSITION, 0)
-                .setValue(NORTH_EXPOSED, 0)
-                .setValue(SOUTH_EXPOSED, 0)
-                .setValue(WEST_EXPOSED, 0)
-                .setValue(EAST_EXPOSED, 0)
-                .setValue(VERTICAL_POSITION, 0));
+                .setValue(EIGHTWAY_POSITION, 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{ NORTH, EAST, WEST, SOUTH, WATERLOGGED,
-                NORTH_UP_POSITION, NORTH_DOWN_POSITION, SOUTH_UP_POSITION, SOUTH_DOWN_POSITION,
-                WEST_UP_POSITION, WEST_DOWN_POSITION, EAST_UP_POSITION, EAST_DOWN_POSITION,
-                NORTH_EXPOSED, SOUTH_EXPOSED, WEST_EXPOSED, EAST_EXPOSED, VERTICAL_POSITION });
+        builder.add(new Property[]{ NORTH, EAST, WEST, SOUTH, WATERLOGGED, EIGHTWAY_POSITION });
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
@@ -101,26 +51,20 @@ public class GufyEightWayConnectedPane extends IronBarsBlock {
         BlockState blockstate1 = blockgetter.getBlockState(blockpos2);
         BlockState blockstate2 = blockgetter.getBlockState(blockpos3);
         BlockState blockstate3 = blockgetter.getBlockState(blockpos4);
+
+        boolean north = this.attachsTo(blockstate, blockstate.isFaceSturdy(blockgetter, blockpos1, Direction.SOUTH));
+        boolean south = this.attachsTo(blockstate1, blockstate1.isFaceSturdy(blockgetter, blockpos2, Direction.NORTH));
+        boolean west = this.attachsTo(blockstate2, blockstate2.isFaceSturdy(blockgetter, blockpos3, Direction.EAST));
+        boolean east = this.attachsTo(blockstate3, blockstate3.isFaceSturdy(blockgetter, blockpos4, Direction.WEST));
+
         return (BlockState) ((BlockState)((BlockState)((BlockState)((BlockState)
                 this.defaultBlockState()
-                .setValue(NORTH, this.attachsTo(blockstate, blockstate.isFaceSturdy(blockgetter, blockpos1, Direction.SOUTH))))
-                .setValue(SOUTH, this.attachsTo(blockstate1, blockstate1.isFaceSturdy(blockgetter, blockpos2, Direction.NORTH))))
-                .setValue(WEST, this.attachsTo(blockstate2, blockstate2.isFaceSturdy(blockgetter, blockpos3, Direction.EAST))))
-                .setValue(EAST, this.attachsTo(blockstate3, blockstate3.isFaceSturdy(blockgetter, blockpos4, Direction.WEST))))
+                .setValue(NORTH, north))
+                .setValue(SOUTH, south))
+                .setValue(WEST, west))
+                .setValue(EAST, east))
                 .setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER)
-                .setValue(NORTH_UP_POSITION, computePosition(GufyEightWayPosition.NORTH_UP, context.getLevel(), blockpos))
-                .setValue(NORTH_DOWN_POSITION, computePosition(GufyEightWayPosition.NORTH_DOWN, context.getLevel(), blockpos))
-                .setValue(SOUTH_UP_POSITION, computePosition(GufyEightWayPosition.SOUTH_UP, context.getLevel(), blockpos))
-                .setValue(SOUTH_DOWN_POSITION, computePosition(GufyEightWayPosition.SOUTH_DOWN, context.getLevel(), blockpos))
-                .setValue(WEST_UP_POSITION, computePosition(GufyEightWayPosition.WEST_UP, context.getLevel(), blockpos))
-                .setValue(WEST_DOWN_POSITION, computePosition(GufyEightWayPosition.WEST_DOWN, context.getLevel(), blockpos))
-                .setValue(EAST_UP_POSITION, computePosition(GufyEightWayPosition.EAST_UP, context.getLevel(), blockpos))
-                .setValue(EAST_DOWN_POSITION, computePosition(GufyEightWayPosition.EAST_DOWN, context.getLevel(), blockpos))
-                .setValue(NORTH_EXPOSED, checkDirectionExposed(Direction.NORTH, context.getLevel(), blockpos))
-                .setValue(SOUTH_EXPOSED, checkDirectionExposed(Direction.SOUTH, context.getLevel(), blockpos))
-                .setValue(WEST_EXPOSED, checkDirectionExposed(Direction.WEST, context.getLevel(), blockpos))
-                .setValue(EAST_EXPOSED, checkDirectionExposed(Direction.EAST, context.getLevel(), blockpos))
-                .setValue(VERTICAL_POSITION, computeVertical(context.getLevel(), blockpos));
+                .setValue(EIGHTWAY_POSITION, computeEightway(isFullPane(north, south, west, east), context.getLevel(), blockpos));
     }
 
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess tickAccess, BlockPos pos, Direction direction,
@@ -132,62 +76,42 @@ public class GufyEightWayConnectedPane extends IronBarsBlock {
         if (direction.getAxis().isHorizontal()) {
             return (BlockState)state
                     .setValue((BooleanProperty)PROPERTY_BY_DIRECTION.get(direction), this.attachsTo(neighborState, neighborState.isFaceSturdy(level, neighborPos, direction.getOpposite())))
-                    .setValue(NORTH_UP_POSITION, computePosition(GufyEightWayPosition.NORTH_UP, level, pos))
-                    .setValue(NORTH_DOWN_POSITION, computePosition(GufyEightWayPosition.NORTH_DOWN, level, pos))
-                    .setValue(SOUTH_UP_POSITION, computePosition(GufyEightWayPosition.SOUTH_UP, level, pos))
-                    .setValue(SOUTH_DOWN_POSITION, computePosition(GufyEightWayPosition.SOUTH_DOWN, level, pos))
-                    .setValue(WEST_UP_POSITION, computePosition(GufyEightWayPosition.WEST_UP, level, pos))
-                    .setValue(WEST_DOWN_POSITION, computePosition(GufyEightWayPosition.WEST_DOWN, level, pos))
-                    .setValue(EAST_UP_POSITION, computePosition(GufyEightWayPosition.EAST_UP, level, pos))
-                    .setValue(EAST_DOWN_POSITION, computePosition(GufyEightWayPosition.EAST_DOWN, level, pos))
-                    .setValue(NORTH_EXPOSED, checkDirectionExposed(Direction.NORTH, level, pos))
-                    .setValue(SOUTH_EXPOSED, checkDirectionExposed(Direction.SOUTH, level, pos))
-                    .setValue(WEST_EXPOSED, checkDirectionExposed(Direction.WEST, level, pos))
-                    .setValue(EAST_EXPOSED, checkDirectionExposed(Direction.EAST, level, pos))
-                    .setValue(VERTICAL_POSITION, computeVertical(level, pos));
+                    .setValue(EIGHTWAY_POSITION, computeEightway(isFullPane(state), level, pos));
         } else {
             return (BlockState)state
-                    .setValue(NORTH_UP_POSITION, computePosition(GufyEightWayPosition.NORTH_UP, level, pos))
-                    .setValue(NORTH_DOWN_POSITION, computePosition(GufyEightWayPosition.NORTH_DOWN, level, pos))
-                    .setValue(SOUTH_UP_POSITION, computePosition(GufyEightWayPosition.SOUTH_UP, level, pos))
-                    .setValue(SOUTH_DOWN_POSITION, computePosition(GufyEightWayPosition.SOUTH_DOWN, level, pos))
-                    .setValue(WEST_UP_POSITION, computePosition(GufyEightWayPosition.WEST_UP, level, pos))
-                    .setValue(WEST_DOWN_POSITION, computePosition(GufyEightWayPosition.WEST_DOWN, level, pos))
-                    .setValue(EAST_UP_POSITION, computePosition(GufyEightWayPosition.EAST_UP, level, pos))
-                    .setValue(EAST_DOWN_POSITION, computePosition(GufyEightWayPosition.EAST_DOWN, level, pos))
-                    .setValue(NORTH_EXPOSED, checkDirectionExposed(Direction.NORTH, level, pos))
-                    .setValue(SOUTH_EXPOSED, checkDirectionExposed(Direction.SOUTH, level, pos))
-                    .setValue(WEST_EXPOSED, checkDirectionExposed(Direction.WEST, level, pos))
-                    .setValue(EAST_EXPOSED, checkDirectionExposed(Direction.EAST, level, pos))
-                    .setValue(VERTICAL_POSITION, computeVertical(level, pos));
+                    .setValue(EIGHTWAY_POSITION, computeEightway(isFullPane(state), level, pos));
         }
     }
 
-    private int computePosition(GufyEightWayPosition position, LevelReader level, BlockPos pos) {
-        BlockPos hPos = pos.relative(PROPERTY_BY_POSITION.get(position)[0]);
-        BlockPos vPos = pos.relative(PROPERTY_BY_POSITION.get(position)[1]);
-        BlockPos dPos = hPos.relative(PROPERTY_BY_POSITION.get(position)[1]);
+    private int computeEightway(Direction fullPaneAxis, LevelReader level, BlockPos pos) {
+        if (fullPaneAxis == null) return 0;
 
-        boolean horizontal = level.getBlockState(hPos).is(this);
-        boolean vertical = level.getBlockState(vPos).is(this);
-        boolean diagonal = level.getBlockState(dPos).is(this);
+        BlockState b_top = level.getBlockState(pos.above());
+        BlockState b_topRight = level.getBlockState(pos.above().relative(fullPaneAxis));
+        BlockState b_right = level.getBlockState(pos.relative(fullPaneAxis));
+        BlockState b_bottomRight = level.getBlockState(pos.relative(fullPaneAxis).below());
+        BlockState b_bottom = level.getBlockState(pos.below());
+        BlockState b_bottomLeft = level.getBlockState(pos.below().relative(fullPaneAxis.getOpposite()));
+        BlockState b_left = level.getBlockState(pos.relative(fullPaneAxis.getOpposite()));
+        BlockState b_topLeft = level.getBlockState(pos.relative(fullPaneAxis.getOpposite()).above());
 
-        return GufyUtil.getEightwayPositionLegacy(horizontal, vertical, diagonal);
+        boolean top = b_top.is(this) && isFullPane(b_top) != null && isFullPane(b_top) == fullPaneAxis;
+        boolean topRight = b_topRight.is(this) && isFullPane(b_topRight) != null && isFullPane(b_topRight) == fullPaneAxis;
+        boolean right = b_right.is(this) && isFullPane(b_right) != null && isFullPane(b_right) == fullPaneAxis;
+        boolean bottomRight = b_bottomRight.is(this) && isFullPane(b_bottomRight) != null && isFullPane(b_bottomRight) == fullPaneAxis;
+        boolean bottom = b_bottom.is(this) && isFullPane(b_bottom) != null && isFullPane(b_bottom) == fullPaneAxis;
+        boolean bottomLeft = b_bottomLeft.is(this) && isFullPane(b_bottomLeft) != null && isFullPane(b_bottomLeft) == fullPaneAxis;
+        boolean left = b_left.is(this) && isFullPane(b_left) != null && isFullPane(b_left) == fullPaneAxis;
+        boolean topLeft = b_topLeft.is(this) && isFullPane(b_topLeft) != null && isFullPane(b_topLeft) == fullPaneAxis;
+
+        return GufyUtil.getEightwayPosition(top, topRight, right, bottomRight, bottom, bottomLeft, left, topLeft);
     }
 
-    private int checkDirectionExposed(Direction direction, LevelReader level, BlockPos pos) {
-        BlockState above = level.getBlockState(pos.above());
-        BlockState below = level.getBlockState(pos.below());
-        boolean up = above.is(this) && !above.getValue(PROPERTY_BY_DIRECTION.get(direction));
-        boolean down = below.is(this) && !below.getValue(PROPERTY_BY_DIRECTION.get(direction));
+    private Direction isFullPane(BlockState state) { return isFullPane(state.getValue(NORTH), state.getValue(SOUTH), state.getValue(WEST), state.getValue(EAST)); }
 
-        return GufyUtil.getVerticalPosition(up, down);
-    }
-
-    private int computeVertical(LevelReader level, BlockPos pos) {
-        boolean up = level.getBlockState(pos.above()).is(this) ;
-        boolean down = level.getBlockState(pos.below()).is(this);
-
-        return GufyUtil.getVerticalPosition(up, down);
+    private Direction isFullPane(boolean north, boolean south, boolean west, boolean east) {
+        if (north && south && !west && !east) return Direction.NORTH;
+        if (west && east && !north && !south) return Direction.EAST;
+        return null;
     }
 }

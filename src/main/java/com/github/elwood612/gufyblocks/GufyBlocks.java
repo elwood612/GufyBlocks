@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
@@ -33,6 +34,8 @@ public class GufyBlocks
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
+
+		GufyUtil.initializePositionLookup();
 	}
 
 	// gives better error message handling (thru Neoforge)

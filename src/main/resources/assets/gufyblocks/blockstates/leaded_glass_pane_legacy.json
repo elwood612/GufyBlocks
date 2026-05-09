@@ -3,6 +3,54 @@
     {
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_post" }
     },
+	{
+		"when": { "north_exposed": 1, "north": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_1" }
+    },
+	{
+		"when": { "north_exposed": 2, "north": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_2" }
+    },
+	{
+		"when": { "north_exposed": 3, "north": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_3" }
+    },
+	{
+		"when": { "east_exposed": 1, "east": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_1", "y": 90 }
+    },
+	{
+		"when": { "east_exposed": 2, "east": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_2", "y": 90 }
+    },
+	{
+		"when": { "east_exposed": 3, "east": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_3", "y": 90 }
+    },
+	{
+		"when": { "south_exposed": 1, "south": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_1" }
+    },
+	{
+		"when": { "south_exposed": 2, "south": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_2" }
+    },
+	{
+		"when": { "south_exposed": 3, "south": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_3" }
+    },
+	{
+		"when": { "west_exposed": 1, "west": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_1", "y": 90 }
+    },
+	{
+		"when": { "west_exposed": 2, "west": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_2", "y": 90 }
+    },
+	{
+		"when": { "west_exposed": 3, "west": "true" },
+		"apply": { "model": "gufyblocks:block/leaded_glass_pane_culled_alt_3", "y": 90 }
+    },
     {
 		"when": { "north": "true", "vertical_position": "0" },
 		"apply": { "model": "gufyblocks:block/leaded_glass_pane_side" }
