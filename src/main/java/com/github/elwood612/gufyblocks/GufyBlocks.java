@@ -34,8 +34,6 @@ public class GufyBlocks
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
-
-		GufyUtil.initializePositionLookup();
 	}
 
 	// gives better error message handling (thru Neoforge)
