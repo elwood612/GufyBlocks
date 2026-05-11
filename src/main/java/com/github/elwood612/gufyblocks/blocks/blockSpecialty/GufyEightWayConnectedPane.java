@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import org.jspecify.annotations.NonNull;
 
 public class GufyEightWayConnectedPane extends IronBarsBlock {
 
@@ -64,7 +65,7 @@ public class GufyEightWayConnectedPane extends IronBarsBlock {
                 .setValue(WEST, west))
                 .setValue(EAST, east))
                 .setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER)
-                .setValue(EIGHTWAY_POSITION, computeEightway(isFullPane(north, south, west, east), context.getLevel(), blockpos));
+                .setValue(EIGHTWAY_POSITION, computeEightway(north, south, west, east, context.getLevel(), blockpos));
     }
 
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess tickAccess, BlockPos pos, Direction direction,
@@ -76,21 +77,25 @@ public class GufyEightWayConnectedPane extends IronBarsBlock {
         if (direction.getAxis().isHorizontal()) {
             return (BlockState)state
                     .setValue((BooleanProperty)PROPERTY_BY_DIRECTION.get(direction), this.attachsTo(neighborState, neighborState.isFaceSturdy(level, neighborPos, direction.getOpposite())))
-                    .setValue(EIGHTWAY_POSITION, computeEightway(isFullPane(state), level, pos));
+                    .setValue(EIGHTWAY_POSITION, computeEightway(state, level, pos));
         } else {
             return (BlockState)state
-                    .setValue(EIGHTWAY_POSITION, computeEightway(isFullPane(state), level, pos));
+                    .setValue(EIGHTWAY_POSITION, computeEightway(state, level, pos));
         }
     }
 
-    private int computeEightway(Direction fullPaneAxis, LevelReader level, BlockPos pos) {
-        if (fullPaneAxis == null) return 0;
+    private int computeEightway(BlockState state, LevelReader level, BlockPos pos) { return computeEightway(state.getValue(NORTH), state.getValue(SOUTH), state.getValue(WEST), state.getValue(EAST), level, pos); }
+    private int computeEightway(boolean north, boolean south, boolean west, boolean east, LevelReader level, BlockPos pos) {
+        Direction fullPaneAxis = isFullPane(north, south, west, east);
 
         BlockState b_top = level.getBlockState(pos.above());
+        BlockState b_bottom = level.getBlockState(pos.below());
+
+        if (fullPaneAxis == null) return computeAltVertical(north, south, west, east, b_top, b_bottom);
+
         BlockState b_topRight = level.getBlockState(pos.above().relative(fullPaneAxis));
         BlockState b_right = level.getBlockState(pos.relative(fullPaneAxis));
         BlockState b_bottomRight = level.getBlockState(pos.relative(fullPaneAxis).below());
-        BlockState b_bottom = level.getBlockState(pos.below());
         BlockState b_bottomLeft = level.getBlockState(pos.below().relative(fullPaneAxis.getOpposite()));
         BlockState b_left = level.getBlockState(pos.relative(fullPaneAxis.getOpposite()));
         BlockState b_topLeft = level.getBlockState(pos.relative(fullPaneAxis.getOpposite()).above());
@@ -108,10 +113,32 @@ public class GufyEightWayConnectedPane extends IronBarsBlock {
     }
 
     private Direction isFullPane(BlockState state) { return isFullPane(state.getValue(NORTH), state.getValue(SOUTH), state.getValue(WEST), state.getValue(EAST)); }
-
     private Direction isFullPane(boolean north, boolean south, boolean west, boolean east) {
         if (north && south && !west && !east) return Direction.NORTH;
         if (west && east && !north && !south) return Direction.EAST;
         return null;
+    }
+
+    private int computeAltVertical(boolean north, boolean south, boolean west, boolean east, BlockState up, BlockState down) {
+        boolean matchUp = (up.hasProperty(NORTH) && north == up.getValue(NORTH)) &&
+                (up.hasProperty(SOUTH) && south == up.getValue(SOUTH)) &&
+                (up.hasProperty(WEST) && west == up.getValue(WEST)) &&
+                (up.hasProperty(EAST) && east == up.getValue(EAST));
+        boolean matchDown = (down.hasProperty(NORTH) && north == down.getValue(NORTH)) &&
+                (down.hasProperty(SOUTH) && south == down.getValue(SOUTH)) &&
+                (down.hasProperty(WEST) && west == down.getValue(WEST)) &&
+                (down.hasProperty(EAST) && east == down.getValue(EAST));
+
+        // 0 = isolated
+        // 12 = top
+        // 24 = both
+        // 36 = bottom
+        if (matchUp) {
+            if (matchDown) return 24;
+            else return 36;
+        } else {
+            if (matchDown) return 12;
+            else return 0;
+        }
     }
 }

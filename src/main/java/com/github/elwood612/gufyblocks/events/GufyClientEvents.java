@@ -114,23 +114,7 @@ public class GufyClientEvents
         }
     }
 
-//    @SubscribeEvent
-//    public static void onRenderLiving(RenderLivingEvent.Post<?, ?> event) {
-//        if (GufyMonocleParticles.HIGHLIGHTED.contains(event.getEntity().getUUID())) {
-//
-//            // render your own outline layer OR reuse outline buffer
-//            event.getRenderer().render(
-//                    event.getEntity(),
-//                    event.getEntity().getYRot(),
-//                    event.getPartialTick(),
-//                    event.getPoseStack(),
-//                    event.getMultiBufferSource(),
-//                    event.getPackedLight()
-//            );
-//        }
-//    }
-
-    // Adds tooltips to relics
+    // Adds tooltips to items
     @SubscribeEvent
     public static void onItemTooltip(ItemTooltipEvent event) {
         ItemStack itemstack = event.getItemStack();
