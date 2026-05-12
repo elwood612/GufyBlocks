@@ -25,5 +25,5 @@ run-data
 repo
 
 .datapacks/
-.textures/Shaderpacks backup
-.textures/Default Textures
+.textures/Shaderpacks_backup/
+.textures/Default Textures/
