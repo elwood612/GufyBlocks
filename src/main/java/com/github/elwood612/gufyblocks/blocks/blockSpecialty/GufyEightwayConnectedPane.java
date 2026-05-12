@@ -18,13 +18,12 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import org.jspecify.annotations.NonNull;
 
-public class GufyEightWayConnectedPane extends IronBarsBlock {
+public class GufyEightwayConnectedPane extends IronBarsBlock {
 
     private static final IntegerProperty EIGHTWAY_POSITION = IntegerProperty.create("eightway_position", 0, 46);
 
-    public GufyEightWayConnectedPane(BlockBehaviour.Properties properties) {
+    public GufyEightwayConnectedPane(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState()
                 .setValue(NORTH, Boolean.FALSE)

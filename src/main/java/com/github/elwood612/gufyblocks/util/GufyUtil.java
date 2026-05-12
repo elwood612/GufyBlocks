@@ -11,7 +11,6 @@ import net.minecraft.ReportedException;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -205,7 +204,7 @@ public class GufyUtil
             case VERTICAL_CONNECTED_RIGHT -> createRegistry(name + "_right", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             case VERTICAL_CONNECTED_CROSS -> createRegistry(name + "_cross", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
             case VERTICAL_CONNECTED_PANE -> createRegistry(name + "_pane", () -> new GufyVerticalConnectedPane(blockProperties), blockProperties);
-            case EIGHTWAY_CONNECTED_PANE -> createRegistry(name + "_pane", () -> new GufyEightWayConnectedPane(blockProperties), blockProperties);
+            case EIGHTWAY_CONNECTED_PANE -> createRegistry(name + "_pane", () -> new GufyEightwayConnectedPane(blockProperties), blockProperties);
             default -> null;
         };
     }
