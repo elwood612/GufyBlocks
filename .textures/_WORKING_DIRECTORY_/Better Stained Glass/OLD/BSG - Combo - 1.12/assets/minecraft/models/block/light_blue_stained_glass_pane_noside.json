@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pane_noside",
+  "textures": {
+    "pane": "minecraft:blocks/light_blue_stained_glass_pane"
+  }
+}

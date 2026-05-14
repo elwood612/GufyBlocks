@@ -1,0 +1,12 @@
+{
+   "pack":{
+      "description":"\u00A7eRequires Optifine,\nFusion, or Continuity",
+	  "pack_format": 15,
+	  "supported_formats": {"min_inclusive": 15, "max_inclusive": 9999},
+	  "min_format": 15,
+	  "max_format": 9999
+   },
+    "fusion": {
+        "overrides_folder": "fusion_overrides"
+    }
+}

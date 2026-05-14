@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/pane_post",
+  "textures": {
+    "pane": "minecraft:blocks/pink_stained_glass_pane",
+    "edge": "minecraft:blocks/pink_stained_glass_pane_top"
+  }
+}

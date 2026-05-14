@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/pane_side",
+  "textures": {
+    "pane": "minecraft:blocks/light_blue_stained_glass_pane",
+    "edge": "minecraft:blocks/light_blue_stained_glass_pane_top"
+  }
+}
