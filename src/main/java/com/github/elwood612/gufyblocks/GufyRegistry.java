@@ -310,41 +310,6 @@ public class GufyRegistry
         add(familyBuilder("magenta_wool", Blocks.MAGENTA_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
         add(familyBuilder("pink_wool", Blocks.PINK_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
 
-        // ~~ GLASS ~~ //
-        add(familyBuilder("leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.VERTICAL_CONNECTED_PANE));
-        add(familyBuilder("white_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.EIGHTWAY_CONNECTED_PANE));
-        add(familyBuilder("light_gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("black_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("brown_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("red_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("orange_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("yellow_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("lime_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("green_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("cyan_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("light_blue_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("blue_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("purple_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("magenta_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("pink_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("oakfield_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("avalon_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("gufy_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("midland_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("ring_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("oak_framed_glass", GufyProperties.OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("spruce_framed_glass", GufyProperties.SPRUCE_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("birch_framed_glass", GufyProperties.BIRCH_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("dark_oak_framed_glass", GufyProperties.DARK_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("jungle_framed_glass", GufyProperties.JUNGLE_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("acacia_framed_glass", GufyProperties.ACACIA_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("mangrove_framed_glass", GufyProperties.MANGROVE_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("cherry_framed_glass", GufyProperties.CHERRY_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("bamboo_framed_glass", GufyProperties.BAMBOO_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("crimson_framed_glass", GufyProperties.CRIMSON_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("warped_framed_glass", GufyProperties.WARPED_FRAMED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("pale_oak_framed_glass", GufyProperties.PALE_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
 
         // ~~ FRAMED TERRACOTTA ~~ //
         add(familyBuilder("oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES));
@@ -448,6 +413,40 @@ public class GufyRegistry
         add(familyBuilder("mushroom_stem", Blocks.BROWN_MUSHROOM_BLOCK, ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR))); // DEPRECATED
         add(familyBuilder("mushroom_framed_glass", GufyProperties.MUSHROOM_FRAMED_GLASS, GufyBlockTypes.PANE)); // DEPRECATED
         add(familyBuilder("mushroom_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES)); // DEPRECATED
+        add(familyBuilder("leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("white_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("light_gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("black_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("brown_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("red_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("orange_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("yellow_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("lime_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("green_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("cyan_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("light_blue_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("blue_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("purple_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("magenta_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("pink_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("oakfield_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("avalon_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("gufy_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("midland_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("ring_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("oak_framed_glass", GufyProperties.OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("spruce_framed_glass", GufyProperties.SPRUCE_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("birch_framed_glass", GufyProperties.BIRCH_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("dark_oak_framed_glass", GufyProperties.DARK_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("jungle_framed_glass", GufyProperties.JUNGLE_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("acacia_framed_glass", GufyProperties.ACACIA_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("mangrove_framed_glass", GufyProperties.MANGROVE_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("cherry_framed_glass", GufyProperties.CHERRY_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("bamboo_framed_glass", GufyProperties.BAMBOO_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("crimson_framed_glass", GufyProperties.CRIMSON_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("warped_framed_glass", GufyProperties.WARPED_FRAMED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("pale_oak_framed_glass", GufyProperties.PALE_OAK_FRAMED_GLASS, GufyBlockTypes.PANE));
     }};
     //**************************************************************//
 

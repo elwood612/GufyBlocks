@@ -1,0 +1,7 @@
+-> run this in powershell in the texture directory
+
+$replacement = "deprecated.png"
+
+Get-ChildItem *.png | Where-Object { $_.Name -ne $replacement } | ForEach-Object {
+    Copy-Item $replacement $_.Name -Force
+}
