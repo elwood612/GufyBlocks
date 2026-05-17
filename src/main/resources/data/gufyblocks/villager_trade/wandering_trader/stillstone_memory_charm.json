@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "gufyblocks:memory_charm"
+  },
+  "max_uses": 1.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 2.0,
+    "id": "gufyblocks:stillstone"
+  }
+}

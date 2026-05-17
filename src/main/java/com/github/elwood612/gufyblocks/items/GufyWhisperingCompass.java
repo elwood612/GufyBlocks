@@ -62,7 +62,7 @@ public class GufyWhisperingCompass extends Item
                 return;
             }
             // if server is struggling - skip half the searches
-            if (averageTickTime > 50_000_000L && level.random.nextFloat() < 0.5f) {
+            if (averageTickTime > 50_000_000L && level.getRandom().nextFloat() < 0.5f) {
                 return;
             }
 

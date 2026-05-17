@@ -82,9 +82,9 @@ public class GufyHopper extends Block implements SimpleWaterloggedBlock
     {
         return true;
     }
-    
-    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type) 
-    {
+
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 

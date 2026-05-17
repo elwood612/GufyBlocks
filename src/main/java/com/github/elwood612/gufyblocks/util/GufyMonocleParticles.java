@@ -45,7 +45,7 @@ public class GufyMonocleParticles
             double y = pos.getY() + 1.01;
             double z = pos.getZ() + 0.5;
 
-            if (level.random.nextInt(3) == 0) {
+            if (level.getRandom().nextInt(3) == 0) {
                 spawnSmallParticles(level, pos, x, y, z);
             }
             if ((pos.asLong() % 20) == Math.max(level.getGameTime() % 40, 1)) {
@@ -90,9 +90,9 @@ public class GufyMonocleParticles
     private static void spawnSmallParticles(Level level, BlockPos pos, double x, double y, double z) {
         Particle p = Minecraft.getInstance().particleEngine.createParticle(
                 GufyRegistry.MONOCLE_PARTICLE.get(),
-                pos.getX() + level.random.nextDouble(),
+                pos.getX() + level.getRandom().nextDouble(),
                 pos.getY() + 1.1,
-                pos.getZ() + level.random.nextDouble(),
+                pos.getZ() + level.getRandom().nextDouble(),
                 0.0,
                 0.05,
                 0.0);
@@ -100,10 +100,10 @@ public class GufyMonocleParticles
     }
 
     private static void spawnBigParticles(Level level, BlockPos pos, double x, double y, double z) {
-        float scale = 1 + (level.random.nextFloat() / 3);
-        float xSpeed = level.random.nextFloat() / 8;
-        float ySpeed = level.random.nextFloat() / 4;
-        float zSpeed = level.random.nextFloat() / 8;
+        float scale = 1 + (level.getRandom().nextFloat() / 3);
+        float xSpeed = level.getRandom().nextFloat() / 8;
+        float ySpeed = level.getRandom().nextFloat() / 4;
+        float zSpeed = level.getRandom().nextFloat() / 8;
 
         Particle p = Minecraft.getInstance().particleEngine.createParticle(new DustParticleOptions(0xFF0000, scale), x, y, z, xSpeed, ySpeed, zSpeed);
         if (p != null) myParticles.add(p);

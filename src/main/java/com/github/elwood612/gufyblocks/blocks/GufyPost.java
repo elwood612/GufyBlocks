@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks.blocks;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.LevelReader;
@@ -19,6 +20,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
@@ -65,8 +67,7 @@ public class GufyPost extends Block implements SimpleWaterloggedBlock
         return BlockState;
     }
 	
-	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context)
-	{
+	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
@@ -90,13 +91,22 @@ public class GufyPost extends Block implements SimpleWaterloggedBlock
 
     @Override
     @SuppressWarnings("deprecation")
-    public FluidState getFluidState(BlockState state) 
-    {
+    public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
-    
-    public boolean isPathfindable(BlockState state, BlockGetter worldIn, BlockPos pos, PathComputationType type) 
-    {
+
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    public PathType getBlockPathType(BlockState state, BlockGetter level, BlockPos pos, Mob mob) {
+        return PathType.DAMAGING;
     }
 }

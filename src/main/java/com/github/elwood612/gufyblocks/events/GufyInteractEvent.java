@@ -12,6 +12,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -47,6 +48,7 @@ public class GufyInteractEvent
         Player player = event.getEntity();
         ItemStack stack = event.getItemStack();
         Entity target = event.getTarget();
+        InteractionHand handIn = event.getHand();
 
         if (!(target instanceof LivingEntity living)) return;
 
@@ -62,6 +64,7 @@ public class GufyInteractEvent
                 }
 
                 pacifyMob(serverLevel, mob, player);
+                player.swing(handIn, true);
 
                 if (!player.getAbilities().instabuild) {
                     stack.consume(1, player);
@@ -77,6 +80,7 @@ public class GufyInteractEvent
             if (!(level.isClientSide()) && level instanceof ServerLevel serverLevel && target instanceof Villager villager) {
 
                 resetVillager(villager);
+                player.swing(handIn, true);
 
                 if (!player.getAbilities().instabuild) {
                     stack.consume(1, player);

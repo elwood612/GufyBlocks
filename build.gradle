@@ -20,7 +20,7 @@ base {
     archivesName = mod_id_pascal
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of("${project.java_version}")
 
 neoForge {
     version = project.neo_version
@@ -28,11 +28,6 @@ neoForge {
     validateAccessTransformers = true
     accessTransformers {
         file('src/main/resources/META-INF/accesstransformer.cfg')
-    }
-
-    parchment {
-        mappingsVersion = project.parchment_mappings_version
-        minecraftVersion = project.parchment_minecraft_version
     }
 
     runs {

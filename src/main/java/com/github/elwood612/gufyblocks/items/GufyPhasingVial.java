@@ -104,9 +104,9 @@ public class GufyPhasingVial extends Item
     }
 
     private void addSpark(ServerLevel level, Vec3 center) {
-        double dx = (level.random.nextDouble() - 0.5) * 2.5;
-        double dy = level.random.nextDouble() * 1.5;
-        double dz = (level.random.nextDouble() - 0.5) * 2.5;
+        double dx = (level.getRandom().nextDouble() - 0.5) * 2.5;
+        double dy = level.getRandom().nextDouble() * 1.5;
+        double dz = (level.getRandom().nextDouble() - 0.5) * 2.5;
         level.sendParticles(
                 ParticleTypes.CRIT,
                 center.x, center.y + 1, center.z,

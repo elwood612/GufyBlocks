@@ -1,6 +1,7 @@
 package com.github.elwood612.gufyblocks.items;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -11,6 +12,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.clock.ServerClockManager;
+import net.minecraft.world.clock.WorldClock;
+import net.minecraft.world.clock.WorldClocks;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -30,6 +34,8 @@ public class GufySunlightShard extends Item
         boolean fail = false;
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
+            Holder.Reference<WorldClock> worldClock = serverLevel.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
+            ServerClockManager clockManager = serverLevel.clockManager();
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));
@@ -39,7 +45,7 @@ public class GufySunlightShard extends Item
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_outdoors"));
                 fail = true;
             }
-            if (!level.isRaining() && (level.getDayTime() % 24000 < 11000 || level.getDayTime() % 24000 > 22500)) {
+            if (!level.isRaining() && (clockManager.getTotalTicks(worldClock) % 24000 < 11000 || clockManager.getTotalTicks(worldClock) % 24000 > 22500)) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.sunlight_daytime"));
                 fail = true;
             }
@@ -52,14 +58,10 @@ public class GufySunlightShard extends Item
                 itemstack.consume(1, player);
             }
 
-            long currentTotalTime = serverLevel.getDayTime();
+            long currentTotalTime = clockManager.getTotalTicks(worldClock);
             long currentTimeOfDay = currentTotalTime % 24000L;
-
             long timeToAdvance = 24000L - currentTimeOfDay;
-
-            long newTime = currentTotalTime + timeToAdvance;
-            serverLevel.setDayTime(newTime);
-//            serverLevel.setDayTime(0);
+            clockManager.addTicks(worldClock, (int)timeToAdvance);
             serverLevel.resetWeatherCycle();
 
             level.playSound((Player) null, position, SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
@@ -96,7 +98,7 @@ public class GufySunlightShard extends Item
                 0.05
         );
 
-        RandomSource random = serverLevel.random;
+        RandomSource random = serverLevel.getRandom();
         for (int i = 0; i < 40; i++) {
             double dx = (random.nextDouble() - 0.5) * 0.2;
             double dy = random.nextDouble() * 0.5 + i * 0.05; // mostly upward

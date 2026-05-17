@@ -3,6 +3,7 @@ package com.github.elwood612.gufyblocks.blocks;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.LevelReader;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
@@ -134,5 +136,20 @@ public class GufyVerticalSlab extends HorizontalDirectionalBlock implements Simp
     {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
+
+    @Override
+    protected boolean isPathfindable(BlockState state, PathComputationType type) {
+        return false;
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return this.getShape(state, level, pos, context);
+    }
+
+//    @Override
+//    public PathType getBlockPathType(BlockState state, BlockGetter level, BlockPos pos, Mob mob) {
+//        return PathType.DAMAGING;
+//    }
 
 }

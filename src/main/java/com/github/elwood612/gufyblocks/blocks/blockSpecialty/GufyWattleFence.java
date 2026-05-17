@@ -1,9 +1,8 @@
 package com.github.elwood612.gufyblocks.blocks.blockSpecialty;
 
-import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyMaterials;
-import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
@@ -20,10 +19,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
 
 public class GufyWattleFence extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock
 {
@@ -88,21 +87,6 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
-    	switch((Direction)state.getValue(FACING).getOpposite())
-        {
-            case WEST:
-                return (VoxelShape) COLLISION_WEST_SHAPE;
-            case EAST:
-                return (VoxelShape) COLLISION_EAST_SHAPE;
-            case SOUTH:
-                return (VoxelShape) COLLISION_SOUTH_SHAPE;
-            default:
-                return (VoxelShape) COLLISION_NORTH_SHAPE;
-        }
-     }
-
-    @Override
     protected BlockState updateShape(
             BlockState stateIn,
             LevelReader levelIn,
@@ -128,7 +112,17 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
     }
 
     @Override
-    protected boolean isPathfindable(BlockState p_53306_, PathComputationType p_53309_) {
+    protected boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return this.getShape(state, level, pos, context);
+    }
+
+    @Override
+    public PathType getBlockPathType(BlockState state, BlockGetter level, BlockPos pos, Mob mob) {
+        return PathType.DAMAGING;
     }
 }

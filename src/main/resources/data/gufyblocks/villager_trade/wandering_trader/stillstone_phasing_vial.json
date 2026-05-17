@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "gufyblocks:phasing_vial"
+  },
+  "max_uses": 1.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 5.0,
+    "id": "gufyblocks:stillstone"
+  }
+}

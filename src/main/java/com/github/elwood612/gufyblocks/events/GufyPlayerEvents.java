@@ -5,9 +5,13 @@ import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
 import com.github.elwood612.gufyblocks.util.GufyPhasingHandler;
 import com.github.elwood612.gufyblocks.util.GufyScheduler;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
+import net.minecraft.core.Holder;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.clock.ServerClockManager;
+import net.minecraft.world.clock.WorldClock;
+import net.minecraft.world.clock.WorldClocks;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -44,18 +48,18 @@ public class GufyPlayerEvents
 
         if (level instanceof ServerLevel serverLevel) {
             MinecraftServer server = serverLevel.getServer();
+            Holder.Reference<WorldClock> worldClock = serverLevel.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
+            ServerClockManager clockManager = serverLevel.clockManager();
 
             // set time to day if nobody was on when you joined
             if (server != null && server.getPlayerList().getPlayerCount() == 1) {
-                int desiredTime = level.random.nextIntBetweenInclusive(0, 5500); // 2000
-                long currentTotalTime = serverLevel.getDayTime();
-                long currentTimeOfDay = currentTotalTime % 24000L; // 3000
+                int desiredTime = level.getRandom().nextIntBetweenInclusive(0, 5500); // 2000
 
+                long currentTotalTime = clockManager.getTotalTicks(worldClock);
+                long currentTimeOfDay = currentTotalTime % 24000L;
                 long timeToAdvance = currentTimeOfDay < desiredTime ?
                         desiredTime - currentTimeOfDay : 24000L + desiredTime - currentTimeOfDay;
-
-                long newTime = currentTotalTime + timeToAdvance;
-                serverLevel.setDayTime(newTime);
+                clockManager.addTicks(worldClock, (int)timeToAdvance);
             }
 
             // set compass login delay

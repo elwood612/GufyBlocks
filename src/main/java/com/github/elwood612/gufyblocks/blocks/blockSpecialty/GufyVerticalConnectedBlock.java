@@ -17,10 +17,6 @@ import org.jetbrains.annotations.NotNull;
 public class GufyVerticalConnectedBlock extends Block
 {
     private static final IntegerProperty VERTICAL_POSITION = IntegerProperty.create("vertical_position", 0, 3);
-        // 0 = isolated
-        // 1 = top (has bottom only)
-        // 2 = middle (both)
-        // 3 = bottom (has top only)
 
     public GufyVerticalConnectedBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -51,6 +47,18 @@ public class GufyVerticalConnectedBlock extends Block
         boolean up = level.getBlockState(pos.above()).is(this);
         boolean down = level.getBlockState(pos.below()).is(this);
 
-        return GufyUtil.getVerticalPosition(up, down);
+        // Key:
+        // 0 = isolated
+        // 1 = top position (has bottom neighbor only)
+        // 2 = middle position (both)
+        // 3 = bottom position (has top neighbor only)
+
+        if (up) {
+            if (down) return 2;
+            else return 3;
+        } else {
+            if (down) return 1;
+            else return 0;
+        }
     }
 }

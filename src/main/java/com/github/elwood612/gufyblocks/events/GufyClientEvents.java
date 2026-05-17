@@ -6,11 +6,10 @@ import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -47,7 +46,7 @@ public class GufyClientEvents
     }
 
     @SubscribeEvent
-    public static void onAfterParticles(RenderLevelStageEvent.AfterParticles event) {
+    public static void onAfterParticles(RenderLevelStageEvent.AfterTranslucentParticles event) {
         Minecraft mc = Minecraft.getInstance();
         GameRenderer renderer = mc.gameRenderer;
         Player player = mc.player;
@@ -82,7 +81,7 @@ public class GufyClientEvents
         Player player = mc.player;
 
         if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
-            GuiGraphics gui = event.getGuiGraphics();
+            GuiGraphicsExtractor gui = event.getGuiGraphics();
             float scale = 1.25f;
             int width = event.getGuiGraphics().guiWidth();
             int height = event.getGuiGraphics().guiHeight();

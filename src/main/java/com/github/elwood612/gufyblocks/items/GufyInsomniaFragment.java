@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -11,6 +12,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.clock.ServerClockManager;
+import net.minecraft.world.clock.WorldClock;
+import net.minecraft.world.clock.WorldClocks;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -29,6 +33,8 @@ public class GufyInsomniaFragment extends Item
         boolean fail = false;
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, true);
+            Holder.Reference<WorldClock> worldClock = serverLevel.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
+            ServerClockManager clockManager = serverLevel.clockManager();
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));
@@ -42,7 +48,7 @@ public class GufyInsomniaFragment extends Item
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_altitude"));
                 fail = true;
             }
-            if ((level.getDayTime() % 24000 < 13000 || level.getDayTime() % 24000 > 22500)) {
+            if ((clockManager.getTotalTicks(worldClock) % 24000 < 13000 || clockManager.getTotalTicks(worldClock) % 24000 > 22500)) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.sunlight_daytime"));
                 fail = true;
             }
@@ -69,7 +75,7 @@ public class GufyInsomniaFragment extends Item
             GufyUtil.execute("effect give @p minecraft:nausea 3 0 true", serverLevel, position, player);
             GufyUtil.execute("gamerule spawn_phantoms true", serverLevel, position, player);
             GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", serverLevel, position, player);
-            if (level.random.nextFloat() < 0.5f) {
+            if (level.getRandom().nextFloat() < 0.5f) {
                 GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", serverLevel, position, player);
             }
 

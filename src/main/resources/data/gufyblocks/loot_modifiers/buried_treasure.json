@@ -1,5 +1,6 @@
 {
     "type": "neoforge:add_table",
+    "priority": 1000,
     "conditions": [
 		{
 			"condition": "neoforge:loot_table_id",

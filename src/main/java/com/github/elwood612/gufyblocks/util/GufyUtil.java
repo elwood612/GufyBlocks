@@ -68,7 +68,7 @@ public class GufyUtil
         properties.jumpFactor = parent.jumpFactor;
         properties.isRedstoneConductor = parent.isRedstoneConductor;
         properties.isValidSpawn = parent.isValidSpawn;
-        properties.hasPostProcess = parent.hasPostProcess;
+//        properties.hasPostProcess = parent.hasPostProcess;
         properties.isSuffocating = parent.isSuffocating;
         properties.isViewBlocking = parent.isViewBlocking;
 
@@ -202,20 +202,6 @@ public class GufyUtil
             return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name + "s"));
 
         else return Blocks.OAK_PLANKS;
-    }
-
-    public static int getVerticalPosition(boolean up, boolean down) {
-        // 0 = isolated
-        // 1 = top (has bottom only)
-        // 2 = middle (both)
-        // 3 = bottom (has top only)
-        if (up) {
-            if (down) return 2;
-            else return 3;
-        } else {
-            if (down) return 1;
-            else return 0;
-        }
     }
 
 
