@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:deepslate",
+  "result": {
+    "id": "gufyblocks:cobbled_deepslate_post",
+  "count": 2
+  }
+}

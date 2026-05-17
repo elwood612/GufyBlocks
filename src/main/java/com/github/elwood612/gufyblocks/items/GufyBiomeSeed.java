@@ -22,6 +22,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
@@ -95,6 +97,13 @@ public class GufyBiomeSeed extends Item
                 );
 
                 GufyUtil.execute(command, serverLevel, position, serverPlayer);
+
+                BlockState state = level.getBlockState(position);
+                if (state.getBlock() instanceof BonemealableBlock block && block.isValidBonemealTarget(level, position, state)) {
+                    if (block.isBonemealSuccess(level, level.getRandom(), position, state)) {
+                        block.performBonemeal(serverLevel, level.getRandom(), position, state);
+                    }
+                }
 
                 serverLevel.sendParticles(
                         ParticleTypes.COMPOSTER,
