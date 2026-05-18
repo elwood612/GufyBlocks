@@ -5,7 +5,10 @@
   "max_uses": 2.0,
   "reputation_discount": 0.05,
   "wants": {
-    "count": 8.0,
+    "count": {
+      "min": 6,
+      "max": 16
+    },
     "id": "minecraft:emerald"
   }
 }

@@ -6,7 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:memory_charm"
+          "name": "gufyblocks:memory_charm",
+		  "weight": 2
+        },
+		{
+          "type": "minecraft:item",
+          "name": "gufyblocks:stillstone"
         }
       ],
       "rolls": 1.0,

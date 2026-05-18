@@ -5,7 +5,10 @@
   "max_uses": 1.0,
   "reputation_discount": 0.05,
   "wants": {
-    "count": 3.0,
+    "count": {
+      "min": 2,
+      "max": 4
+    },
     "id": "gufyblocks:stillstone"
   }
 }
