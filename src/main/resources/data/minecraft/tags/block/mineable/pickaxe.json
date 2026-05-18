@@ -1,7 +1,30 @@
 { 
   "replace": false, 
   "values": [ 
-    "gufyblocks:pale_oak_framed_terracotta_left", 
+    "gufyblocks:ring_leaded_glass_pane",
+	"gufyblocks:midland_leaded_glass_pane", 
+	"gufyblocks:gufy_leaded_glass_pane", 
+	"gufyblocks:avalon_leaded_glass_pane", 
+	"gufyblocks:oakfield_leaded_glass_pane", 
+	"gufyblocks:pink_leaded_glass_pane", 
+	"gufyblocks:magenta_leaded_glass_pane", 
+	"gufyblocks:purple_leaded_glass_pane", 
+	"gufyblocks:blue_leaded_glass_pane", 
+	"gufyblocks:light_blue_leaded_glass_pane", 
+	"gufyblocks:cyan_leaded_glass_pane", 
+	"gufyblocks:green_leaded_glass_pane", 
+	"gufyblocks:lime_leaded_glass_pane", 
+	"gufyblocks:yellow_leaded_glass_pane", 
+	"gufyblocks:orange_leaded_glass_pane", 
+	"gufyblocks:red_leaded_glass_pane", 
+	"gufyblocks:brown_leaded_glass_pane", 
+	"gufyblocks:black_leaded_glass_pane", 
+	"gufyblocks:gray_leaded_glass_pane", 
+	"gufyblocks:light_gray_leaded_glass_pane", 
+	"gufyblocks:white_leaded_glass_pane", 
+	"gufyblocks:leaded_glass_pane",
+	
+	"gufyblocks:pale_oak_framed_terracotta_left", 
  
     "gufyblocks:pale_oak_framed_terracotta_right", 
  

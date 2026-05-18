@@ -325,9 +325,6 @@ public class GufyRegistry
         add(familyBuilder("warped_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
         add(familyBuilder("pale_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
 
-        // ~~ NEW FRAMED TERRACOTTA ~~ //
-//        add(familyBuilder("spruce_framed_white_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-
 
         // ~~ COPPER ~~ //
         add(weatheringBuilder("copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));

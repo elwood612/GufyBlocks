@@ -29,7 +29,7 @@ public class GufyMonocle extends Item
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         player.playSound(SoundEvents.SPYGLASS_USE, 1.0F, 1.0F);
         player.startUsingItem(hand);
-        GufyMonocleParticles.OVERRIDE = false;
+//        GufyMonocleParticles.OVERRIDE = false;
         return InteractionResult.CONSUME;
     }
 
@@ -46,12 +46,7 @@ public class GufyMonocle extends Item
     }
 
     private void stopUsing(LivingEntity user) {
-        GufyMonocleParticles.OVERRIDE = true;
+//        GufyMonocleParticles.OVERRIDE = true;
         user.playSound(SoundEvents.SPYGLASS_STOP_USING, 1.0F, 1.0F);
     }
-
-//    @Override
-//    public boolean canPerformAction(ItemStack stack, net.neoforged.neoforge.common.ItemAbility itemAbility) {
-//        return net.neoforged.neoforge.common.ItemAbilities.DEFAULT_SPYGLASS_ACTIONS.contains(itemAbility);
-//    }
 }

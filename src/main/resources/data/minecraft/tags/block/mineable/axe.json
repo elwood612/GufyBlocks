@@ -1,7 +1,20 @@
 { 
   "replace": false, 
   "values": [ 
-    "gufyblocks:chiseled_stripped_pale_oak_wood", 
+    "gufyblocks:warped_framed_glass_pane",
+	"gufyblocks:crimson_framed_glass_pane", 
+	"gufyblocks:jungle_framed_glass_pane", 
+	"gufyblocks:acacia_framed_glass_pane", 
+	"gufyblocks:dark_oak_framed_glass_pane", 
+	"gufyblocks:birch_framed_glass_pane", 
+	"gufyblocks:oak_framed_glass_pane", 
+	"gufyblocks:spruce_framed_glass_pane",
+	"gufyblocks:mangrove_framed_glass_pane",
+	"gufyblocks:cherry_framed_glass_pane",
+	"gufyblocks:bamboo_framed_glass_pane",
+	"gufyblocks:pale_oak_framed_glass_pane",
+	
+	"gufyblocks:chiseled_stripped_pale_oak_wood", 
  
     "gufyblocks:stripped_pale_oak_wood_stairs", 
     "gufyblocks:stripped_pale_oak_wood_slab", 

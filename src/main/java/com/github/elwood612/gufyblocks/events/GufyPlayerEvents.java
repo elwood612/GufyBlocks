@@ -26,6 +26,7 @@ public class GufyPlayerEvents
 {
     public static long lastGlobalLoginTick = -1;
 
+    // Phasing Vial safety cleanup
     @SubscribeEvent
     public static void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
@@ -38,6 +39,9 @@ public class GufyPlayerEvents
         }
     }
 
+    // Packed login check
+    // Set time to day if no one is on
+    // Phasing Vial safety cleanup
     @SubscribeEvent
     public static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;

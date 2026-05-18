@@ -6,22 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:ring_leaded_glass_pane"
+          "name": "medievalglass:ring_leaded_glass_pane"
         }
       ],
       "conditions": [
         {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantment": "minecraft:silk_touch",
-                "levels": {
-                  "min": 1
-                }
-              }
-            ]
-          }
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

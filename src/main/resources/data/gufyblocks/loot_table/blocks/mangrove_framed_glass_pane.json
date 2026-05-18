@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:mangrove_framed_glass_pane"
+          "name": "medievalglass:mangrove_framed_glass_pane"
         }
       ],
       "conditions": [

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:bamboo_framed_glass_pane"
+          "name": "medievalglass:bamboo_framed_glass_pane"
         }
       ],
       "conditions": [
