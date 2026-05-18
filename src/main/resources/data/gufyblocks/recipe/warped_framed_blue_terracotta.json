@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "framed_terracotta",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": "minecraft:blue_terracotta",
+    "X": "minecraft:warped_planks"
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:warped_framed_blue_terracotta"
+  }
+}

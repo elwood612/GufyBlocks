@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "framed_terracotta",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": "minecraft:brown_terracotta",
+    "X": "minecraft:dark_oak_planks"
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:dark_oak_framed_brown_terracotta"
+  }
+}

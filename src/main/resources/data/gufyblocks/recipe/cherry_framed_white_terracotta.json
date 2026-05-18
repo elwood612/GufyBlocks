@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "framed_terracotta",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": "minecraft:white_terracotta",
+    "X": "minecraft:cherry_planks"
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:cherry_framed_white_terracotta"
+  }
+}

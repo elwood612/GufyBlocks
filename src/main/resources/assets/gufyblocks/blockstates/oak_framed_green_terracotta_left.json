@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "vertical_position=0": {
+      "model": "gufyblocks:block/oak_framed_green_terracotta_left"
+    },
+	"vertical_position=1": {
+      "model": "gufyblocks:block/oak_framed_green_terracotta_left_1"
+    },
+	"vertical_position=2": {
+      "model": "gufyblocks:block/oak_framed_green_terracotta_left_2"
+    },
+	"vertical_position=3": {
+      "model": "gufyblocks:block/oak_framed_green_terracotta_left_3"
+    }
+  }
+}

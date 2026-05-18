@@ -1,0 +1,7 @@
+{
+    "parent": "gufyblocks:block/template_vertical_connected_block_2",
+    "textures": {
+        "end": "gufyblocks:block/atlas/crimson_framed_orange_terracotta_atlas",
+        "side": "gufyblocks:block/atlas/crimson_framed_orange_terracotta_atlas"
+    }
+}

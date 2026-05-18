@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "framed_terracotta",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": "minecraft:yellow_terracotta",
+    "X": "minecraft:spruce_planks"
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:spruce_framed_yellow_terracotta"
+  }
+}

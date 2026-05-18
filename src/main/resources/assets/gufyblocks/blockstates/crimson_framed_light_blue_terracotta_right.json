@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "vertical_position=0": {
+      "model": "gufyblocks:block/crimson_framed_light_blue_terracotta_right"
+    },
+	"vertical_position=1": {
+      "model": "gufyblocks:block/crimson_framed_light_blue_terracotta_right_1"
+    },
+	"vertical_position=2": {
+      "model": "gufyblocks:block/crimson_framed_light_blue_terracotta_right_2"
+    },
+	"vertical_position=3": {
+      "model": "gufyblocks:block/crimson_framed_light_blue_terracotta_right_3"
+    }
+  }
+}

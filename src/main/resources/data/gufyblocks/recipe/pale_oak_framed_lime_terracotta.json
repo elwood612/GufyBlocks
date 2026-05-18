@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "framed_terracotta",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": "minecraft:lime_terracotta",
+    "X": "minecraft:pale_oak_planks"
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:pale_oak_framed_lime_terracotta"
+  }
+}

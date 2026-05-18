@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "framed_terracotta",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": "minecraft:magenta_terracotta",
+    "X": "minecraft:mangrove_planks"
+  },
+  "result": 
+  { 
+    "id": "gufyblocks:mangrove_framed_magenta_terracotta"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "vertical_position=0": {
+      "model": "gufyblocks:block/mangrove_framed_red_terracotta"
+    },
+	"vertical_position=1": {
+      "model": "gufyblocks:block/mangrove_framed_red_terracotta_1"
+    },
+	"vertical_position=2": {
+      "model": "gufyblocks:block/mangrove_framed_red_terracotta_2"
+    },
+	"vertical_position=3": {
+      "model": "gufyblocks:block/mangrove_framed_red_terracotta_3"
+    }
+  }
+}
