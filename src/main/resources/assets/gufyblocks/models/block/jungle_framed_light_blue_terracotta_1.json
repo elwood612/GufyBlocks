@@ -2,6 +2,7 @@
     "parent": "gufyblocks:block/template_vertical_connected_block_1",
     "textures": {
         "end": "gufyblocks:block/atlas/jungle_framed_light_blue_terracotta_atlas",
-        "side": "gufyblocks:block/atlas/jungle_framed_light_blue_terracotta_atlas"
+        "side": "gufyblocks:block/atlas/jungle_framed_light_blue_terracotta_atlas",
+        "base": "minecraft:light_blue_terracotta"
     }
 }

@@ -312,18 +312,18 @@ public class GufyRegistry
 
 
         // ~~ FRAMED TERRACOTTA ~~ //
-        add(familyBuilder("oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("spruce_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("birch_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("dark_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("jungle_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("acacia_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("mangrove_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("cherry_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("bamboo_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("crimson_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("warped_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(familyBuilder("pale_oak_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("oak", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("spruce", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("birch", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("dark_oak", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("jungle", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("acacia", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("mangrove", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("cherry", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("bamboo", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("crimson", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("warped", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(framedBuilderAllColors("pale_oak", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
 
 
         // ~~ COPPER ~~ //

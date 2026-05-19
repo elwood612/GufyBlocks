@@ -117,6 +117,27 @@ public class GufyUtil
         }};
     }
 
+    public static List<DeferredBlock<Block>> framedBuilderAllColors(String woodType, Block parentBlock, GufyBlockTypes ... blockTypes) {
+        return new ArrayList<>() {{
+            BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock)
+                    .strength(1.5f, 6.0f);
+            String name = woodType + "_framed_terracotta";
+            for (GufyBlockTypes blockType: blockTypes) {
+                add(getVariant(name, blockProperties, parentBlock, blockType));
+            }
+
+            for (GufyColors color : GufyColors.values()) {
+                BlockBehaviour.Properties colorBlockProperties = copyPropertiesOf(parentBlock)
+                        .mapColor(GufyColorMap.TERRACOTTA_COLOR_MAP.get(color))
+                        .strength(1.5f, 6.0f);
+                String colorName = woodType + "_framed_" + color.toString() + "_terracotta";
+                for (GufyBlockTypes blockType: blockTypes) {
+                    add(getVariant(colorName, colorBlockProperties, parentBlock, blockType));
+                }
+            }
+        }};
+    }
+
     //************************GET VARIANT***************************//
     public static DeferredBlock<Block> getVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, GufyBlockTypes blockType)
     {
@@ -206,38 +227,32 @@ public class GufyUtil
 
 
     //***********************GET MAPPED BLOCKS*********************************//
-    public static Optional<BlockState> getWaxedOn(BlockState blockState)
-    {
+    public static Optional<BlockState> getWaxedOn(BlockState blockState) {
         return Optional.ofNullable(GufyWaxable.WAXABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    public static Optional<BlockState> getWaxedOff(BlockState blockState)
-    {
+    public static Optional<BlockState> getWaxedOff(BlockState blockState) {
         return Optional.ofNullable(GufyWaxable.WAX_OFF_BY_BLOCK.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    public static Optional<BlockState> getMossy(BlockState blockState)
-    {
+    public static Optional<BlockState> getMossy(BlockState blockState) {
         return Optional.ofNullable(GufyMossable.MOSSABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    public static Optional<BlockState> getCracked(BlockState blockState)
-    {
+    public static Optional<BlockState> getCracked(BlockState blockState) {
         return Optional.ofNullable(GufyCrackable.CRACKABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    public static Optional<BlockState> getStripped(BlockState blockState)
-    {
+    public static Optional<BlockState> getStripped(BlockState blockState) {
         return Optional.ofNullable(GufyStrippable.STRIPPABLES.get().get(blockState.getBlock())).map((newBlockState) ->
                 newBlockState.withPropertiesOf(blockState));
     }
 
-    public static Optional<BlockState> getPotted(Item item, BlockState state)
-    {
+    public static Optional<BlockState> getPotted(Item item, BlockState state) {
         return Optional.ofNullable(GufyPottable.POTTABLES.get().get(item)).map((newBlockState) ->
                 newBlockState.withPropertiesOf(state));
     }

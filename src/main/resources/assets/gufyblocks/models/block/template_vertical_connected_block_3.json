@@ -3,7 +3,7 @@
   "textures": {
     "side": "#side",
 	"end": "#end",
-	"particle": "#side"
+	"particle": "#base"
   },
   "elements": [
     {

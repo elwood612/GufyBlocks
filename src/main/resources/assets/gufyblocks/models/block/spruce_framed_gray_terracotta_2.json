@@ -2,6 +2,7 @@
     "parent": "gufyblocks:block/template_vertical_connected_block_2",
     "textures": {
         "end": "gufyblocks:block/atlas/spruce_framed_gray_terracotta_atlas",
-        "side": "gufyblocks:block/atlas/spruce_framed_gray_terracotta_atlas"
+        "side": "gufyblocks:block/atlas/spruce_framed_gray_terracotta_atlas",
+        "base": "minecraft:gray_terracotta"
     }
 }

@@ -1,7 +1,8 @@
 {
     "parent": "gufyblocks:block/template_vertical_connected_block",
     "textures": {
-        "end": "gufyblocks:block/atlas/jungle_framed_white_terracotta_right_atlas",
-        "side": "gufyblocks:block/atlas/jungle_framed_white_terracotta_right_atlas"
+        "end": "gufyblocks:block/atlas/jungle_framed_white_terracotta_atlas",
+        "side": "gufyblocks:block/atlas/jungle_framed_white_terracotta_right_atlas",
+        "base": "minecraft:white_terracotta"
     }
 }

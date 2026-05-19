@@ -1,7 +1,8 @@
 {
     "parent": "gufyblocks:block/template_vertical_connected_block_3",
     "textures": {
-        "end": "gufyblocks:block/atlas/oak_framed_yellow_terracotta_left_atlas",
-        "side": "gufyblocks:block/atlas/oak_framed_yellow_terracotta_left_atlas"
+        "end": "gufyblocks:block/atlas/oak_framed_yellow_terracotta_atlas",
+        "side": "gufyblocks:block/atlas/oak_framed_yellow_terracotta_left_atlas",
+        "base": "minecraft:yellow_terracotta"
     }
 }
