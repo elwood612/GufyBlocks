@@ -27,33 +27,33 @@ public class GufyClientEvents
     // Client setup
     @SubscribeEvent
     public static void onClientSetup(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet(GufyRegistry.MONOCLE_PARTICLE.get(), GufyParticleProvider::new);
+//        event.registerSpriteSet(GufyRegistry.MONOCLE_PARTICLE.get(), GufyParticleProvider::new);
     }
 
     // Render black & white shader while holding monocle
     @SubscribeEvent
     public static void onRenderLevel(RenderLevelStageEvent.AfterTranslucentBlocks event) {
-        Minecraft mc = Minecraft.getInstance();
-        GameRenderer renderer = mc.gameRenderer;
-        Player player = mc.player;
-
-        // this works fine
-        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+//        Minecraft mc = Minecraft.getInstance();
+//        GameRenderer renderer = mc.gameRenderer;
+//        Player player = mc.player;
+//
+//        // this works fine
+//        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
 //            renderer.setPostEffect(Identifier.fromNamespaceAndPath("gufyblocks", "monocle_vision"));
-        } else {
+//        } else {
 //            renderer.clearPostEffect();
-        }
+//        }
     }
 
     @SubscribeEvent
     public static void onAfterParticles(RenderLevelStageEvent.AfterTranslucentParticles event) {
-        Minecraft mc = Minecraft.getInstance();
-        GameRenderer renderer = mc.gameRenderer;
-        Player player = mc.player;
-
-        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
-            // render custom pass particles here
-        }
+//        Minecraft mc = Minecraft.getInstance();
+//        GameRenderer renderer = mc.gameRenderer;
+//        Player player = mc.player;
+//
+//        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+//            // render custom pass particles here
+//        }
     }
 
     // Adds model properties to alter appearance of certain items
@@ -63,54 +63,54 @@ public class GufyClientEvents
         event.register(Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "has_stored_biome"), GufyStoredBiome.MAP_CODEC);
     }
 
-    // Detect using the monocle
+    // Detect using the monocle.
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
-        Minecraft mc = Minecraft.getInstance();
-        Player player = mc.player;
-        if (player == null) return;
-        Level level = player.level();
-        GufyMonocleParticles.showLightLevelParticles(level, player);
+//        Minecraft mc = Minecraft.getInstance();
+//        Player player = mc.player;
+//        if (player == null) return;
+//        Level level = player.level();
+//        GufyMonocleParticles.showLightLevelParticles(level, player);
 //        GufyMonocleParticles.highlightNearbyMobs(level, player);
     }
 
     // Render the GUI overlay for the monocle
     @SubscribeEvent
     public static void onGuiRender(RenderGuiLayerEvent.Pre event) {
-        Minecraft mc = Minecraft.getInstance();
-        Player player = mc.player;
-
-        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
-            GuiGraphicsExtractor gui = event.getGuiGraphics();
-            float scale = 1.25f;
-            int width = event.getGuiGraphics().guiWidth();
-            int height = event.getGuiGraphics().guiHeight();
-            int size = (int) (Math.min(width, height) * scale);
-            int x0 = (width - size) / 2;
-            int y0 = (height - size) / 2;
-            int x1 = x0 + size;
-            int y1 = y0 + size;
-            int black = 0xFF000000;
-
-
-            gui.fill(0, 0, x0, height, black);
-            gui.fill(x1, 0, width, height, black);
-            gui.fill(x0, 0, x1, y0, black);
-            gui.fill(x0, y1, x1, height, black);
-
-            gui.blit(OVERLAY, x0, y0, x0 + size, y0 + size, 0f, 1f, 0f, 1f);
-        }
+//        Minecraft mc = Minecraft.getInstance();
+//        Player player = mc.player;
+//
+//        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+//            GuiGraphicsExtractor gui = event.getGuiGraphics();
+//            float scale = 1.25f;
+//            int width = event.getGuiGraphics().guiWidth();
+//            int height = event.getGuiGraphics().guiHeight();
+//            int size = (int) (Math.min(width, height) * scale);
+//            int x0 = (width - size) / 2;
+//            int y0 = (height - size) / 2;
+//            int x1 = x0 + size;
+//            int y1 = y0 + size;
+//            int black = 0xFF000000;
+//
+//
+//            gui.fill(0, 0, x0, height, black);
+//            gui.fill(x1, 0, width, height, black);
+//            gui.fill(x0, 0, x1, y0, black);
+//            gui.fill(x0, y1, x1, height, black);
+//
+//            gui.blit(OVERLAY, x0, y0, x0 + size, y0 + size, 0f, 1f, 0f, 1f);
+//        }
     }
 
     // Hide player's hands when holding the monocle
     @SubscribeEvent
     public static void onRenderHand(RenderHandEvent event) {
-        Minecraft mc = Minecraft.getInstance();
-        Player player = mc.player;
-
-        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
-            event.setCanceled(true);
-        }
+//        Minecraft mc = Minecraft.getInstance();
+//        Player player = mc.player;
+//
+//        if (player != null && player.isUsingItem() && player.getUseItem().is(GufyRegistry.MONOCLE) && mc.options.getCameraType().isFirstPerson()) {
+//            event.setCanceled(true);
+//        }
     }
 
     // Adds tooltips to items
