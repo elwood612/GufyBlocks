@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/cherry_framed_lime_terracotta_atlas",
         "side": "gufyblocks:block/atlas/cherry_framed_lime_terracotta_atlas",
-        "base": "minecraft:lime_terracotta"
+        "base": "minecraft:block/lime_terracotta"
     }
 }

@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/crimson_framed_purple_terracotta_atlas",
         "side": "gufyblocks:block/atlas/crimson_framed_purple_terracotta_atlas",
-        "base": "minecraft:purple_terracotta"
+        "base": "minecraft:block/purple_terracotta"
     }
 }

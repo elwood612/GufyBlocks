@@ -9,7 +9,7 @@
   ],
   "key": {
     "#": "minecraft:blue_terracotta",
-    "X": "minecraft:birch_planks"
+    "X": "#gufyblocks:birch_planks"
   },
   "result": 
   { 

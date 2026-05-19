@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/acacia_framed_white_terracotta_atlas",
         "side": "gufyblocks:block/atlas/acacia_framed_white_terracotta_right_atlas",
-        "base": "minecraft:white_terracotta"
+        "base": "minecraft:block/white_terracotta"
     }
 }

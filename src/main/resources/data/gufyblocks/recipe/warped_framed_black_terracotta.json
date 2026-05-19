@@ -9,7 +9,7 @@
   ],
   "key": {
     "#": "minecraft:black_terracotta",
-    "X": "minecraft:warped_planks"
+    "X": "#gufyblocks:warped_planks"
   },
   "result": 
   { 

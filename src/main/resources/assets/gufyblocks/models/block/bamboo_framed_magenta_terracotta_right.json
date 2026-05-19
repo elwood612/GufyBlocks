@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/bamboo_framed_magenta_terracotta_atlas",
         "side": "gufyblocks:block/atlas/bamboo_framed_magenta_terracotta_right_atlas",
-        "base": "minecraft:magenta_terracotta"
+        "base": "minecraft:block/magenta_terracotta"
     }
 }

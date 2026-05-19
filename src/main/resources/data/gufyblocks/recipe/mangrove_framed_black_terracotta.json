@@ -9,7 +9,7 @@
   ],
   "key": {
     "#": "minecraft:black_terracotta",
-    "X": "minecraft:mangrove_planks"
+    "X": "#gufyblocks:mangrove_planks"
   },
   "result": 
   { 

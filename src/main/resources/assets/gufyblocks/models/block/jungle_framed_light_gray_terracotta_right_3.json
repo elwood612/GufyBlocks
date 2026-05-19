@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/jungle_framed_light_gray_terracotta_atlas",
         "side": "gufyblocks:block/atlas/jungle_framed_light_gray_terracotta_right_atlas",
-        "base": "minecraft:light_gray_terracotta"
+        "base": "minecraft:block/light_gray_terracotta"
     }
 }

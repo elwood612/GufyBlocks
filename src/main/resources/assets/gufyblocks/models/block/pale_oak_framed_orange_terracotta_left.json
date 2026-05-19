@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/pale_oak_framed_orange_terracotta_atlas",
         "side": "gufyblocks:block/atlas/pale_oak_framed_orange_terracotta_left_atlas",
-        "base": "minecraft:orange_terracotta"
+        "base": "minecraft:block/orange_terracotta"
     }
 }

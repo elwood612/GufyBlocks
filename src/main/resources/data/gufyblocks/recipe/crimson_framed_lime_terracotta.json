@@ -9,7 +9,7 @@
   ],
   "key": {
     "#": "minecraft:lime_terracotta",
-    "X": "minecraft:crimson_planks"
+    "X": "#gufyblocks:crimson_planks"
   },
   "result": 
   { 

@@ -3,7 +3,7 @@
     "textures": {
         "end": "gufyblocks:block/atlas/pale_oak_framed_light_blue_terracotta_atlas",
         "side": "gufyblocks:block/atlas/pale_oak_framed_light_blue_terracotta_right_atlas",
-        "base": "minecraft:light_blue_terracotta",
-        "base": "minecraft:light_blue_terracotta"
+        "base": "minecraft:block/light_blue_terracotta",
+        "base": "minecraft:block/light_blue_terracotta"
     }
 }

@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/mangrove_framed_yellow_terracotta_atlas",
         "side": "gufyblocks:block/atlas/mangrove_framed_yellow_terracotta_atlas",
-        "base": "minecraft:yellow_terracotta"
+        "base": "minecraft:block/yellow_terracotta"
     }
 }

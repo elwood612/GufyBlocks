@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/mangrove_framed_pink_terracotta_atlas",
         "side": "gufyblocks:block/atlas/mangrove_framed_pink_terracotta_left_atlas",
-        "base": "minecraft:pink_terracotta"
+        "base": "minecraft:block/pink_terracotta"
     }
 }

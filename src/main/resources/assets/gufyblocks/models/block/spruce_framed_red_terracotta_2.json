@@ -3,6 +3,6 @@
     "textures": {
         "end": "gufyblocks:block/atlas/spruce_framed_red_terracotta_atlas",
         "side": "gufyblocks:block/atlas/spruce_framed_red_terracotta_atlas",
-        "base": "minecraft:red_terracotta"
+        "base": "minecraft:block/red_terracotta"
     }
 }

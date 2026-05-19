@@ -9,7 +9,7 @@
   ],
   "key": {
     "#": "minecraft:light_gray_terracotta",
-    "X": "minecraft:acacia_planks"
+    "X": "#gufyblocks:acacia_planks"
   },
   "result": 
   { 
