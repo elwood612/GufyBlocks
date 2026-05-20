@@ -547,18 +547,47 @@ public class GufyRegistry
 
 
     //****************************TABS & UTILITY******************************//
-    public static final Supplier<CreativeModeTab> GUFY_TAB = TABS.register("gufyblocks",
+    public static final Supplier<CreativeModeTab> BLOCKS_TAB = TABS.register("gufyblocks_blocks",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + MODID + ".tab"))
                     .icon(() -> new ItemStack(GufyUtil.getGufyBlock("cobblestone_bricks")))
                     .displayItems((params, output) -> {
-                        for (DeferredHolder<Block, ? extends Block> block : BLOCKS.getEntries())
-                        {
-                            output.accept(block.get());
+                        for (DeferredHolder<Block, ? extends Block> block : BLOCKS.getEntries()) {
+                            if (!block.getId().toShortString().contains("framed") || block.getId().toShortString().contains("glass")) {
+                                output.accept(block.get());
+                            }
                         }
-                        for (DeferredHolder<Item, ? extends Item> item : ITEMS.getEntries())
-                        {
-                            output.accept(item.get());
+                    })
+                    .build()
+    );
+    public static final Supplier<CreativeModeTab> ITEMS_TAB = TABS.register("gufyblocks_items",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + MODID + ".item_tab"))
+                    .icon(() -> new ItemStack(GufyUtil.getGufyItem("hammer")))
+                    .displayItems((params, output) -> {
+                        for (DeferredHolder<Item, ? extends Item> item : ITEMS.getEntries()) {
+                            if (!item.getId().toShortString().contains("framed") || item.getId().toShortString().contains("glass")) {
+                                if (!BuiltInRegistries.BLOCK.containsKey(item.getId())) {
+                                    output.accept(item.get());
+                                }
+                            }
+                        }
+                    })
+                    .build()
+    );
+    public static final Supplier<CreativeModeTab> FRAMED_TAB = TABS.register("gufyblocks_framed",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + MODID + ".framed_tab"))
+                    .icon(() -> new ItemStack(GufyUtil.getGufyBlock("spruce_framed_white_terracotta")))
+                    .displayItems((params, output) -> {
+                        for (DeferredHolder<Block, ? extends Block> block : BLOCKS.getEntries()) {
+                            if (block.getId().toShortString().contains("framed")
+                                    && !block.getId().toShortString().contains("glass")
+                                    && !block.getId().toShortString().contains("cross")
+                                    && !block.getId().toShortString().contains("left")
+                                    && !block.getId().toShortString().contains("right")) {
+                                output.accept(block.get());
+                            }
                         }
                     })
                     .build()
