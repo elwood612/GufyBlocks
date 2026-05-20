@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": "gufyblocks:biome_seed",
-    "X": "minecraft:amethyst_shard"
+    "X": "minecraft:wheat_seeds"
   },
   "pattern": [
     "XXX",
