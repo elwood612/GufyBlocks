@@ -1,6 +1,7 @@
 {
   "values": [
     "gufyblocks:big_crimson",
-    "minecraft:crimson_planks"
+    "minecraft:crimson_planks",
+	"gufyblocks:crimson_parquet"
   ]
 }

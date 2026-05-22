@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "minecraft:oak_planks",
+  "result":{
+    "id": "gufyblocks:oak_panel",
+    "count": 4}
+}

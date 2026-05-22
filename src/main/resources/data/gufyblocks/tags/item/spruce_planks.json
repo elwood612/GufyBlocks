@@ -1,6 +1,7 @@
 {
   "values": [
     "gufyblocks:big_spruce",
-    "minecraft:spruce_planks"
+    "minecraft:spruce_planks",
+	"gufyblocks:spruce_parquet"
   ]
 }

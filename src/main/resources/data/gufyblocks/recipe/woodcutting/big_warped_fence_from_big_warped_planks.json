@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:big_warped",
+  "result":{
+    "id": "gufyblocks:big_warped_fence",
+    "count": 1}
+}

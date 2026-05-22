@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_mangrove_woods",
+  "result":{
+    "id": "gufyblocks:stripped_mangrove_wood_fence",
+    "count": 1}
+}

@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:spruce_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:stripped_spruce_wood_verticalslab",
+    "count": 2}
+}

@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#minecraft:warped_stems",
+  "result":{
+    "id": "gufyblocks:warped_parquet_stairs",
+    "count": 4}
+}

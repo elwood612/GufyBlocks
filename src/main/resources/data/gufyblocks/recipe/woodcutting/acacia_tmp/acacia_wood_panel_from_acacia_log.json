@@ -1,7 +1,0 @@
-{
-  "type":"minecraft:stonecutting",
-  "ingredient": "minecraft:acacia_log",
-  "result":{
-    "id": "gufyblocks:acacia_wood_panel",
-    "count": 4}
-}

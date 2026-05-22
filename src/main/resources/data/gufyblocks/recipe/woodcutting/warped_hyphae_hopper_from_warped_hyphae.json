@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:warped_unstripped_hyphae",
+  "result":{
+    "id": "gufyblocks:warped_hyphae_hopper",
+    "count": 1}
+}

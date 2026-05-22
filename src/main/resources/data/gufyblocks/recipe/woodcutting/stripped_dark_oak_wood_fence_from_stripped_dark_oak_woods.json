@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_dark_oak_woods",
+  "result":{
+    "id": "gufyblocks:stripped_dark_oak_wood_fence",
+    "count": 1}
+}

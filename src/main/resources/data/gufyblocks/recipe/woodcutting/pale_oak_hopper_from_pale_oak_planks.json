@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "minecraft:pale_oak_planks",
+  "result":{
+    "id": "gufyblocks:pale_oak_hopper",
+    "count": 1}
+}

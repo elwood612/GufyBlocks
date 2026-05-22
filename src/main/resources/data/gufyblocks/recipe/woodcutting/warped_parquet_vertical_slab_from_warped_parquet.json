@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:warped_parquet",
+  "result":{
+    "id": "gufyblocks:warped_parquet_verticalslab",
+    "count": 2}
+}

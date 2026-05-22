@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:cherry_parquet",
+  "result":{
+    "id": "gufyblocks:cherry_parquet_stairs",
+    "count": 1}
+}

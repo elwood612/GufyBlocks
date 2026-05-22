@@ -1,6 +1,7 @@
 {
   "values": [
     "gufyblocks:big_jungle",
-    "minecraft:jungle_planks"
+    "minecraft:jungle_planks",
+	"gufyblocks:jungle_parquet"
   ]
 }

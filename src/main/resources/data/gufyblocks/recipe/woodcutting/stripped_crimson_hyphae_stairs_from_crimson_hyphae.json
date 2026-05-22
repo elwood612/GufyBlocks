@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:crimson_unstripped_hyphae",
+  "result":{
+    "id": "gufyblocks:stripped_crimson_hyphae_stairs",
+    "count": 1}
+}

@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:oak_parquet",
+  "result":{
+    "id": "gufyblocks:oak_parquet_verticalslab",
+    "count": 2}
+}

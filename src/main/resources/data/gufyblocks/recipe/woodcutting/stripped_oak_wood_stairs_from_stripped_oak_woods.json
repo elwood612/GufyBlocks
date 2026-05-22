@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_oak_woods",
+  "result":{
+    "id": "gufyblocks:stripped_oak_wood_stairs",
+    "count": 1}
+}

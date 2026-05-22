@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_birch_woods",
+  "result":{
+    "id": "gufyblocks:stripped_birch_wood_slab",
+    "count": 2}
+}

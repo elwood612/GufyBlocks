@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#minecraft:acacia_logs",
+  "result":{
+    "id": "gufyblocks:acacia_parquet_slab",
+    "count": 8}
+}

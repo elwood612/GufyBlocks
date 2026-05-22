@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:big_mangrove",
+  "result":{
+    "id": "gufyblocks:big_mangrove_fence",
+    "count": 1}
+}

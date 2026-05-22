@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_crimson_hyphae",
+  "result":{
+    "id": "gufyblocks:stripped_crimson_hyphae_panel",
+    "count": 4}
+}

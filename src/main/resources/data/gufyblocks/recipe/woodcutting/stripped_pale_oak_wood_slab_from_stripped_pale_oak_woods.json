@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_pale_oak_woods",
+  "result":{
+    "id": "gufyblocks:stripped_pale_oak_wood_slab",
+    "count": 2}
+}

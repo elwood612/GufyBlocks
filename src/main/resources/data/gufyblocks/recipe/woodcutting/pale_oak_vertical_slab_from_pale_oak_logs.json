@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#minecraft:pale_oak_logs",
+  "result":{
+    "id": "gufyblocks:pale_oak_verticalslab",
+    "count": 8}
+}

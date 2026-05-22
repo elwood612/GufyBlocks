@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:big_spruce",
+  "result":{
+    "id": "gufyblocks:big_spruce_stairs",
+    "count": 1}
+}

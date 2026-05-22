@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:birch_parquet",
+  "result":{
+    "id": "gufyblocks:birch_parquet_slab",
+    "count": 2}
+}

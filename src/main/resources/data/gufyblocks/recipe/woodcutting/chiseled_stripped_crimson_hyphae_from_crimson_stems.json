@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#minecraft:crimson_stems",
+  "result":{
+    "id": "gufyblocks:chiseled_stripped_crimson_hyphae",
+    "count": 1}
+}

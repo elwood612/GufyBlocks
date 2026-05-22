@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:big_oak",
+  "result":{
+    "id": "gufyblocks:big_oak_hopper",
+    "count": 1}
+}

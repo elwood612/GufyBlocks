@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:jungle_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:stripped_jungle_wood_hopper",
+    "count": 1}
+}

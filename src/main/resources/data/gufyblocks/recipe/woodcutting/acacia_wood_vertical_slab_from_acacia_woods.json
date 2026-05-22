@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:acacia_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:acacia_wood_verticalslab",
+    "count": 2}
+}

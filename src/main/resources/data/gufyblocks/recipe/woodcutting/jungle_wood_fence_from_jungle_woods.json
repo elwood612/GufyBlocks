@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:jungle_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:jungle_wood_fence",
+    "count": 1}
+}

@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:acacia_planks",
-	"gufyblocks:big_acacia"
+	"gufyblocks:big_acacia",
+	"gufyblocks:acacia_parquet"
   ]
 }

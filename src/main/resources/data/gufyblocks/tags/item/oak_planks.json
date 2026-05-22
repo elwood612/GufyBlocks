@@ -1,6 +1,7 @@
 {
   "values": [
     "gufyblocks:big_oak",
-    "minecraft:oak_planks"
+    "minecraft:oak_planks",
+	"gufyblocks:oak_parquet"
   ]
 }

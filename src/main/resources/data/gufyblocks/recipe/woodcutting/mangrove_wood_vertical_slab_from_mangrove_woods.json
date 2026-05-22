@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:mangrove_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:mangrove_wood_verticalslab",
+    "count": 2}
+}

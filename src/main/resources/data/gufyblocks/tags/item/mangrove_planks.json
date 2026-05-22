@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:mangrove_planks",
-	"gufyblocks:big_mangrove"
+	"gufyblocks:big_mangrove",
+	"gufyblocks:mangrove_parquet"
   ]
 }

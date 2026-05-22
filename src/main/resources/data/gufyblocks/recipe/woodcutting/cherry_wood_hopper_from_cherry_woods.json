@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:cherry_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:cherry_wood_hopper",
+    "count": 1}
+}

@@ -1,6 +1,7 @@
 {
   "values": [
     "gufyblocks:big_birch",
-    "minecraft:birch_planks"
+    "minecraft:birch_planks",
+	"gufyblocks:birch_parquet"
   ]
 }

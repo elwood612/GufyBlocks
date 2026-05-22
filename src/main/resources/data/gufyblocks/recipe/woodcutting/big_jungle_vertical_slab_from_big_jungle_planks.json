@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:big_jungle",
+  "result":{
+    "id": "gufyblocks:big_jungle_verticalslab",
+    "count": 2}
+}

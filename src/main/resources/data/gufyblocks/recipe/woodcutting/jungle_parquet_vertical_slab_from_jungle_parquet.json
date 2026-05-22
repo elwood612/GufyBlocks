@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:jungle_parquet",
+  "result":{
+    "id": "gufyblocks:jungle_parquet_verticalslab",
+    "count": 2}
+}
