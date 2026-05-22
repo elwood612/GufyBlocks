@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#minecraft:acacia_logs",
+  "result":{
+    "id": "gufyblocks:chiseled_stripped_acacia_wood",
+    "count": 1}
+}

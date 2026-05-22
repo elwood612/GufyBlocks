@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:acacia_planks",
+  "result":{
+    "id": "minecraft:acacia_button",
+    "count": 1}
+}

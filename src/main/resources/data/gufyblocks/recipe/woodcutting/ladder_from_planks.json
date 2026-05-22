@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#minecraft:planks",
+  "result":{
+    "id": "minecraft:ladder",
+    "count": 1}
+}

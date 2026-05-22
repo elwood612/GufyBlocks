@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:warped_planks",
+  "result":{
+    "id": "minecraft:warped_button",
+    "count": 1}
+}

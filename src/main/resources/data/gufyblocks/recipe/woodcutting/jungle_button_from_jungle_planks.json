@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:jungle_planks",
+  "result":{
+    "id": "minecraft:jungle_button",
+    "count": 1}
+}

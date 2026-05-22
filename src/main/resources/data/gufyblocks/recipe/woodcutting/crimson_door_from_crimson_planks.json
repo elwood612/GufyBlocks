@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:crimson_planks",
+  "result":{
+    "id": "minecraft:crimson_door",
+    "count": 1}
+}
