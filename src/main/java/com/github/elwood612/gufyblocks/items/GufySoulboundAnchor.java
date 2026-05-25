@@ -46,6 +46,8 @@ public class GufySoulboundAnchor extends Item
             ServerLevel targetLevel = server.getLevel(deathPos.dimension());
 
             if (targetLevel == null) {
+                serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.soulbound_nodeath"));
+                player.level().playSound((Player) null, player.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
             if (!(targetLevel.dimension().equals(player.level().dimension()))){
