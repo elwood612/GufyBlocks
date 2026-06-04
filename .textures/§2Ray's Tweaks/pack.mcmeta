@@ -1,7 +1,7 @@
 {
    "pack":{
       "pack_format":15,
-      "description":"Optional. Various small tweaks.\n§oPut near the top!",
+      "description":"Optional. Various small tweaks.",
 	  "supported_formats": {"min_inclusive": 15, "max_inclusive": 9999},
 	  "min_format": 15,
 	  "max_format": 9999
