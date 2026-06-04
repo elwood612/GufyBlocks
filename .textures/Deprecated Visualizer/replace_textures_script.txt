@@ -1,4 +1,4 @@
--> run this in powershell in the texture directory
+-> just add new textures to deprecate and run this in powershell in the texture directory
 
 $replacement = "deprecated.png"
 
