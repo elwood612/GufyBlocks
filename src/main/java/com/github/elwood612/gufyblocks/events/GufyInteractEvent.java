@@ -3,9 +3,11 @@ package com.github.elwood612.gufyblocks.events;
 import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.items.GufyMemoryCharm;
 import com.github.elwood612.gufyblocks.items.GufyStillstone;
+import com.github.elwood612.gufyblocks.util.GufyScheduler;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -35,8 +37,6 @@ import net.minecraft.world.scores.Scoreboard;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-
-import java.util.Optional;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyInteractEvent
@@ -149,31 +149,28 @@ public class GufyInteractEvent
         mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
     }
 
-    private static void resetVillager (Villager villager) {
+    private static void resetVillager(Villager villager) {
+        ServerLevel level = (ServerLevel) villager.level();
+
         // 0. Release POIs first
         villager.releasePoi(MemoryModuleType.JOB_SITE);
         villager.releasePoi(MemoryModuleType.POTENTIAL_JOB_SITE);
 
         // 1. Reset profession to NONE
-        HolderGetter<VillagerProfession> professions = villager.registryAccess().lookupOrThrow(Registries.VILLAGER_PROFESSION);
-        Holder<VillagerProfession> noneProfession = professions.getOrThrow(VillagerProfession.NONE);
-        villager.setVillagerData(villager.getVillagerData().withProfession(noneProfession).withLevel(1));
+        Holder<VillagerProfession> prof = BuiltInRegistries.VILLAGER_PROFESSION.getOrThrow(VillagerProfession.NONE);
+        villager.setVillagerData(villager.getVillagerData().withProfession(prof).withLevel(1));
 
-        // 2. Clear all trades
-        villager.setOffers(new MerchantOffers());
-
-        // 3. Reset XP
+        // 2. Reset XP & inventory & trades
         villager.setVillagerXp(0);
-
-        // 4. Clear inventory
         villager.getInventory().clearContent();
 
-        // 5. Forget job site
+        // 3. Forget job site
         Brain<Villager> brain = villager.getBrain();
         brain.eraseMemory(MemoryModuleType.JOB_SITE);
         brain.eraseMemory(MemoryModuleType.POTENTIAL_JOB_SITE);
 
-        // 6. Force brain refresh (important)
-        villager.refreshBrain((ServerLevel) villager.level());
+        // 4. Force brain refresh (not needed? only use one)
+//        villager.refreshBrain((ServerLevel) villager.level());
+//        GufyScheduler.schedule(level, 100, villager.getUUID(), () -> { villager.refreshBrain((ServerLevel) villager.level()); });
     }
 }

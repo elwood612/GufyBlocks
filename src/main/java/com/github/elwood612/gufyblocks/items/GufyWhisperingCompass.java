@@ -53,7 +53,7 @@ public class GufyWhisperingCompass extends Item
             HolderLookup.RegistryLookup<Structure> structureLookup = registryAccess.lookupOrThrow(Registries.STRUCTURE);
             HolderSet<Structure> targets = structureLookup.getOrThrow(GufyTags.ALL_COMPASS_TARGETS);
             long averageTickTime = level.getServer().getAverageTickTimeNanos();
-            int radius = averageTickTime > 40_000_000L ? 2 : 3; // would be nice to actually measure this
+            int radius = 5;
             GufyCompassData lastSearchData = stack.get(GufyRegistry.COMPASS_DATA.get());
 
             // if we haven't moved far enough - skip search
@@ -80,7 +80,7 @@ public class GufyWhisperingCompass extends Item
             if (result != null) {
                 BlockPos candidatePos = result.getFirst();
                 double distSqr = candidatePos.distSqr(playerPos);
-                double maxDistance = 28 * 16;
+                double maxDistance = 36 * 16;
 
                 if (distSqr <= maxDistance * maxDistance && !isUndergroundPortal(level, candidatePos)) {
                     newTarget = GlobalPos.of(level.dimension(), result.getFirst());
