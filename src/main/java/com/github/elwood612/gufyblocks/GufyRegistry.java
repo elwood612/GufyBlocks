@@ -473,7 +473,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> STORM_ECHO = ITEMS.registerItem(
             "storm_echo",
             GufyStormEcho::new,
-            () -> new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
+            () -> new Item.Properties().stacksTo(16).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> SPECTRAL_GEM = ITEMS.registerItem(
             "spectral_gem",
@@ -488,7 +488,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> INSOMNIA_FRAGMENT = ITEMS.registerItem(
             "insomnia_fragment",
             GufyInsomniaFragment::new,
-            () -> new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
+            () -> new Item.Properties().stacksTo(16).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> PHASING_VIAL = ITEMS.registerItem(
             "phasing_vial",
