@@ -59,18 +59,19 @@ public class GufyPhasingVial extends Item
                 });
                 if (i == 2 || delay - i == 100 || delay - i == 54 || delay - i == 34 || delay - i == 16) {
                     GufyScheduler.schedule(serverLevel, i, serverPlayer.getUUID(), () -> {
-                        addSpark(serverLevel, center, playerPos);
+                        addSpark(serverLevel, center, serverPlayer);
                     });
                 }
             }
 
             GufyPhasingHandler.originalMode = serverPlayer.gameMode.getGameModeForPlayer();
             serverPlayer.setGameMode(GameType.SPECTATOR);
+//            GufyScheduler.schedule(serverLevel, 1, serverPlayer.getUUID(), () -> { serverPlayer.setGameMode(GameType.SPECTATOR); });
             GufyScheduler.schedule(serverLevel, delay, serverPlayer.getUUID(), () -> { GufyPhasingHandler.returnPlayer(serverPlayer); });
             GufyPhasingHandler.activePhasing.put(serverPlayer.getUUID(), origin);
             GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, origin, serverPlayer);
 
-            return itemstack;
+            return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
         }
 
         return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
@@ -98,7 +99,7 @@ public class GufyPhasingVial extends Item
         );
     }
 
-    private void addSpark(ServerLevel level, Vec3 center, Vec3 playerPos) {
+    private void addSpark(ServerLevel level, Vec3 center, ServerPlayer player) {
         double dx = (level.getRandom().nextDouble() - 0.5) * 2.5;
         double dy = level.getRandom().nextDouble() * 1.5;
         double dz = (level.getRandom().nextDouble() - 0.5) * 2.5;
@@ -117,10 +118,7 @@ public class GufyPhasingVial extends Item
                 0.1
         );
         level.playSound((Player) null, center.x, center.y + 1, center.z, SoundEvents.BEACON_AMBIENT, SoundSource.NEUTRAL, 0.8f, 0.4f);
-        level.playSound((Player) null, center.x, center.y + 1, center.z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 1f, 2.5f);
+        level.playSound((Player) null, player.position().x, player.position().y + 1, player.position().z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 1f, 2.5f);
         level.playSound((Player) null, center.x, center.y + 1, center.z, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL, 0.4f, 0.5f);
-        level.playSound((Player) null, playerPos.x, playerPos.y + 1, playerPos.z, SoundEvents.BEACON_AMBIENT, SoundSource.NEUTRAL, 0.8f, 0.4f);
-        level.playSound((Player) null, playerPos.x, playerPos.y + 1, playerPos.z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 1f, 2.5f);
-        level.playSound((Player) null, playerPos.x, playerPos.y + 1, playerPos.z, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL, 0.4f, 0.5f);
     }
 }

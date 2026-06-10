@@ -145,7 +145,7 @@
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:biome_seed",
-		  "weight": 5
+		  "weight": 20
         }
       ],
       "rolls": 1.0

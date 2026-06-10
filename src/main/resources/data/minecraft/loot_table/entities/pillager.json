@@ -41,6 +41,27 @@
         }
       ],
       "rolls": 1.0
+    },
+	{
+      "rolls": 1.0,
+	  "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type_specific": {
+              "type": "minecraft:raider",
+              "is_captain": true
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gufyblocks:stillstone"
+        }
+      ]
     }
   ],
   "random_sequence": "minecraft:entities/pillager"
