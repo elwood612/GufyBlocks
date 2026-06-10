@@ -21,8 +21,8 @@
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:storm_echo",
-		  "weight": 20
+          "name": "gufyblocks:memory_charm",
+		  "weight": 1
         }
       ],
       "rolls": 1.0,

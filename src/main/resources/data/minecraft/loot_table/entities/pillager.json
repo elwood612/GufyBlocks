@@ -34,10 +34,6 @@
             }
           ],
           "name": "minecraft:ominous_bottle"
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:stillstone"
         }
       ],
       "rolls": 1.0
