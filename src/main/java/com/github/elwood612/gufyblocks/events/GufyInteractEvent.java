@@ -3,12 +3,9 @@ package com.github.elwood612.gufyblocks.events;
 import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.items.GufyMemoryCharm;
 import com.github.elwood612.gufyblocks.items.GufyStillstone;
-import com.github.elwood612.gufyblocks.util.GufyScheduler;
 import net.minecraft.core.Holder;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -30,7 +27,6 @@ import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
@@ -150,8 +146,6 @@ public class GufyInteractEvent
     }
 
     private static void resetVillager(Villager villager) {
-        ServerLevel level = (ServerLevel) villager.level();
-
         // 0. Release POIs first
         villager.releasePoi(MemoryModuleType.JOB_SITE);
         villager.releasePoi(MemoryModuleType.POTENTIAL_JOB_SITE);
