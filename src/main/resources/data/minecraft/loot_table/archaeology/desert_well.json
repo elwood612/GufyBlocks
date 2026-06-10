@@ -87,7 +87,8 @@
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:biome_seed"
+          "name": "gufyblocks:biome_seed",
+		  "weight": 2
         }
       ],
       "rolls": 1.0

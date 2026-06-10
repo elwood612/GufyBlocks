@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gufyblocks:phasing_vial"
+        }
+      ],
+      "rolls": 1.0
+    },
+	{
+	  "type": "minecraft:item",
+	  "functions": [
+		{
+		  "enchantment": "minecraft:fortune",
+		  "formula": "minecraft:ore_drops",
+		  "function": "minecraft:apply_bonus"
+		},
+		{
+		  "function": "minecraft:explosion_decay"
+		}
+	  ],
+	  "name": "gufyblocks:experience_orb"
+	}
+  ],
+  "random_sequence": "minecraft:blocks/spawner"
+}

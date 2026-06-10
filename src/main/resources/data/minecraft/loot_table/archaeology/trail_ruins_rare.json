@@ -51,10 +51,6 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:music_disc_relic"
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:biome_seed"
         }
       ],
       "rolls": 1.0
