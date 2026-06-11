@@ -156,7 +156,7 @@ public class GufyClientEvents
             case GufyInsomniaFragment gufyInsomniaFragment -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
-                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_drunk").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.insomnia_fragment_instructions").withStyle(ChatFormatting.GOLD));
             }
             case GufyBiomeSeed gufyBiomeSeed -> {

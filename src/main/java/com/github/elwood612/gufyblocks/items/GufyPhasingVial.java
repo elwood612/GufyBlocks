@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class GufyPhasingVial extends Item
 {
-    private static final int delay = 240; // 240 ticks = 12 seconds
+    private static final int delay = 600; // 600 ticks = 30 seconds
 
     public GufyPhasingVial(Item.Properties properties) { super(properties); }
 
@@ -108,6 +108,13 @@ public class GufyPhasingVial extends Item
                 30,
                 dx / 2, dy / 2, dz / 2,
                 0.1
+        );
+        level.sendParticles(
+                ParticleTypes.CRIT,
+                player.position().x, player.position().y + 1, player.position().z,
+                30,
+                dx, dy, dz,
+                0.2
         );
         level.playSound((Player) null, center.x, center.y + 1, center.z, SoundEvents.BEACON_AMBIENT, SoundSource.NEUTRAL, 0.8f, 0.4f);
         level.playSound((Player) null, player.position().x, player.position().y + 1, player.position().z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 1f, 2.5f);

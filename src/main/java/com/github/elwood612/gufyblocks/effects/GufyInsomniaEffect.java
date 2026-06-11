@@ -2,9 +2,13 @@ package com.github.elwood612.gufyblocks.effects;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.clock.ServerClockManager;
+import net.minecraft.world.clock.WorldClock;
+import net.minecraft.world.clock.WorldClocks;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,6 +41,13 @@ public class GufyInsomniaEffect extends MobEffect {
         }
         if (pos.getY() < 64) {
             player.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_effect_yLevel"));
+            return true;
+        }
+
+        Holder.Reference<WorldClock> worldClock = level.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
+        ServerClockManager clockManager = level.clockManager();
+        if ((clockManager.getTotalTicks(worldClock) % 24000 < 13000 || clockManager.getTotalTicks(worldClock) % 24000 > 22500)) {
+            player.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_effect_time"));
             return true;
         }
 
@@ -75,7 +86,7 @@ public class GufyInsomniaEffect extends MobEffect {
     private void spawnPhantoms(ServerLevel level, BlockPos position, ServerPlayer player) {
         int numSpawns = level.getRandom().nextInt(1, 4);
         for (int i = 0; i < numSpawns; i++) {
-            GufyUtil.execute("summon minecraft:phantom ~ ~25 ~", level, position, player);
+            GufyUtil.execute("summon minecraft:phantom ~ ~20 ~", level, position, player);
         }
     }
 }

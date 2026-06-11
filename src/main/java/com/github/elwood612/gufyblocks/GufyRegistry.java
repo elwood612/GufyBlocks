@@ -493,7 +493,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> INSOMNIA_FRAGMENT = ITEMS.registerItem(
             "insomnia_fragment",
             GufyInsomniaFragment::new,
-            () -> new Item.Properties().stacksTo(16).rarity(Rarity.EPIC)
+            () -> new Item.Properties().stacksTo(16).component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> PHASING_VIAL = ITEMS.registerItem(
             "phasing_vial",
