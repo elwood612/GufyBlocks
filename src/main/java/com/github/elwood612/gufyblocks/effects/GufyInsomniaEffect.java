@@ -39,10 +39,6 @@ public class GufyInsomniaEffect extends MobEffect {
             player.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_effect_skyLight"));
             return true;
         }
-        if (pos.getY() < 64) {
-            player.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_effect_yLevel"));
-            return true;
-        }
 
         Holder.Reference<WorldClock> worldClock = level.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
         ServerClockManager clockManager = level.clockManager();
