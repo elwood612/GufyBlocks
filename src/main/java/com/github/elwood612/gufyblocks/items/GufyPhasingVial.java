@@ -64,7 +64,6 @@ public class GufyPhasingVial extends Item
 
             GufyPhasingHandler.originalMode = serverPlayer.gameMode.getGameModeForPlayer();
             serverPlayer.setGameMode(GameType.SPECTATOR);
-//            GufyScheduler.schedule(serverLevel, 1, serverPlayer.getUUID(), () -> { serverPlayer.setGameMode(GameType.SPECTATOR); });
             GufyScheduler.schedule(serverLevel, delay, serverPlayer.getUUID(), () -> { GufyPhasingHandler.returnPlayer(serverPlayer); });
             GufyPhasingHandler.activePhasing.put(serverPlayer.getUUID(), origin);
             GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, origin, serverPlayer);

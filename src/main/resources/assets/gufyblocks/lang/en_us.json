@@ -2677,9 +2677,9 @@
 "item.gufyblocks.spectral_gem": "Spectral Shard",
 "item.gufyblocks.biome_seed": "Dormant Biome Seedling",
 "item.gufyblocks.phasing_vial": "Phasing Vial",
-"item.gufyblocks.insomnia_fragment": "Pearl of Insomnia",
+"item.gufyblocks.insomnia_fragment": "Potion of Insomnia",
 "item.gufyblocks.whispering_compass": "Finder's Compass",
-"item.gufyblocks.experience_orb": "Crystallized Experience",
+"item.gufyblocks.experience_orb": "Crystallized XP",
 "item.gufyblocks.totem_keeping": "Totem of Keeping",
 "item.gufyblocks.soulbound_anchor": "Soulbound Crystal",
 "item.gufyblocks.memory_charm": "Memory Charm",
@@ -2700,6 +2700,9 @@
 "message.gufyblocks.stillstone_resisted":  "§c This mob is too powerful! §r",
 "message.gufyblocks.server_thunder":  "Summoning a thunderstorm",
 "message.gufyblocks.server_night":  "Summoning the night",
+"message.gufyblocks.insomnia_effect_yLevel":  "Get to higher ground to spawn phantoms",
+"message.gufyblocks.insomnia_effect_skyLight":  "Get outside to spawn phantoms",
+"message.gufyblocks.insomnia_effect_dimension":  "Get to the Overworld to spawn phantoms",
 
 "tooltip.gufyblocks.relic_title": "Trinket",
 "tooltip.gufyblocks.relic_blank": " ",
@@ -2737,6 +2740,8 @@
 "tooltip.gufyblocks.potent_instructions": " Reveals nearby hostile",
 "tooltip.gufyblocks.potent_instructions_2": " spawn points",
 "tooltip.gufyblocks.stillstone_instructions": " Silences and befriends them",
+
+"effect.gufyblocks.gufy_insomnia": "Potent Insomnia",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks",
 "itemGroup.gufyblocks.item_tab": "Gufy Items",

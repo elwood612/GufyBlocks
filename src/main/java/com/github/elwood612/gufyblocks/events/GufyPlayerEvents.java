@@ -39,7 +39,7 @@ public class GufyPlayerEvents
         }
     }
 
-    // Packed login check
+    // Packet login check
     // Set time to day if no one is on
     // Phasing Vial safety cleanup
     @SubscribeEvent

@@ -2,12 +2,14 @@ package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
+import com.github.elwood612.gufyblocks.effects.GufyInsomniaEffect;
 import com.github.elwood612.gufyblocks.seat.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
+import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleType;
@@ -18,6 +20,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.*;
@@ -46,6 +50,7 @@ public class GufyRegistry
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, MODID);
     public static final DeferredRegister<ParticleType<?>> PARTICLES = DeferredRegister.create(BuiltInRegistries.PARTICLE_TYPE, MODID);
+    public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, MODID);
 
     private static final GufyBlockTypes[] GUFY_STONE_TYPES = GufyUtil.blocktypeBuilder().get(0);
     private static final GufyBlockTypes[] VANILLA_STONE_TYPES = GufyUtil.blocktypeBuilder().get(1);
@@ -536,12 +541,20 @@ public class GufyRegistry
             () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
     );
 
+    //**************************************************************//
+
+
+    //****************************MISC******************************//
+
     public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
             () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MODID, "seat"))));
 
     public static final Supplier<SimpleParticleType> MONOCLE_PARTICLE = PARTICLES.register("monocle_particle",
             () -> new SimpleParticleType(false));
+
+    public static final Holder<MobEffect> INSOMNIA = MOB_EFFECTS.register("gufy_insomnia",
+            () -> new GufyInsomniaEffect(MobEffectCategory.HARMFUL, 0xffffff));
 
     //**************************************************************//
 

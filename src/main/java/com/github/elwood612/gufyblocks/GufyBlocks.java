@@ -31,6 +31,7 @@ public class GufyBlocks
 		GufyRegistry.TABS.register(modEventBus);
 		GufyRegistry.DATA_COMPONENT_TYPES.register(modEventBus);
 		GufyRegistry.PARTICLES.register(modEventBus);
+		GufyRegistry.MOB_EFFECTS.register(modEventBus);
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
