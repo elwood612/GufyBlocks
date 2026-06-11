@@ -21,7 +21,7 @@ public class GufyInsomniaEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
-        // Apply your effect logic here.
+
         BlockPos pos = entity.getOnPos();
         delay = level.getRandom().nextInt(200, 1200);
 
@@ -55,7 +55,7 @@ public class GufyInsomniaEffect extends MobEffect {
             return true;
         }
 
-        return tickCount % delay == 0; // replace this with whatever check you want
+        return tickCount % delay == 0;
     }
 
     // Utility method that is called when the effect is first added to the entity.

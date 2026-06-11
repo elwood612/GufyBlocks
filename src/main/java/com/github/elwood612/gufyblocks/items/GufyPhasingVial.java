@@ -74,11 +74,6 @@ public class GufyPhasingVial extends Item
         return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
     }
 
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
-    }
-
     private void spawnPhasingOrb(ServerLevel level, Vec3 center) {
         level.sendParticles(
                 ParticleTypes.END_ROD,

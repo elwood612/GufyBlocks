@@ -554,7 +554,7 @@ public class GufyRegistry
             () -> new SimpleParticleType(false));
 
     public static final Holder<MobEffect> INSOMNIA = MOB_EFFECTS.register("gufy_insomnia",
-            () -> new GufyInsomniaEffect(MobEffectCategory.HARMFUL, 0xffffff));
+            () -> new GufyInsomniaEffect(MobEffectCategory.HARMFUL, 0xBF1DBB));
 
     //**************************************************************//
 
