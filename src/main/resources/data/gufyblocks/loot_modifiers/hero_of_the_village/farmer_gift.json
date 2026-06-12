@@ -1,0 +1,11 @@
+{
+    "type": "neoforge:add_table",
+    "priority": 1000,
+    "conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "minecraft:gameplay/hero_of_the_village/farmer_gift"
+		}
+	],
+    "table": "gufyblocks:inject/relics_hero_village"
+}
