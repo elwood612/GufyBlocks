@@ -10,7 +10,12 @@
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:memory_charm"
+          "name": "minecraft:emerald",
+		  "weight": 3
+        },
+		{
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block"
         }
       ]
     }

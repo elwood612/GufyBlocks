@@ -62,6 +62,26 @@ public class GufyInteractEvent
                 pacifyMob(serverLevel, mob, player);
                 player.swing(handIn, true);
 
+                mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
+                mob.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
+
+                serverLevel.playSound(null, mob.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.NEUTRAL);
+                serverLevel.playSound((Player) null, mob.blockPosition(), SoundEvents.GLASS_BREAK, SoundSource.NEUTRAL, 0.6f, 1.5f);
+                serverLevel.sendParticles(
+                        ParticleTypes.COMPOSTER,
+                        player.getX(), player.getY(), player.getZ(),
+                        40,
+                        0.5, 0.5, 0.5,
+                        0.1
+                );
+                serverLevel.sendParticles(
+                        ParticleTypes.END_ROD,
+                        mob.getX(), mob.getY(), mob.getZ(),
+                        20,
+                        0.5, 0.5, 0.5,
+                        0.1
+                );
+
                 if (!player.getAbilities().instabuild) {
                     stack.consume(1, player);
                 }
@@ -108,30 +128,8 @@ public class GufyInteractEvent
 
     private static void pacifyMob(ServerLevel serverLevel, Mob mob, Player player) {
         mob.setSilent(true);
-        mob.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
 
-        addToTeam(serverLevel, player, mob);
-
-        serverLevel.playSound(null, mob.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.NEUTRAL);
-        serverLevel.playSound((Player) null, mob.blockPosition(), SoundEvents.GLASS_BREAK, SoundSource.NEUTRAL, 0.6f, 1.5f);
-        serverLevel.sendParticles(
-                ParticleTypes.COMPOSTER,
-                player.getX(), player.getY(), player.getZ(),
-                40,
-                0.5, 0.5, 0.5,
-                0.1
-        );
-        serverLevel.sendParticles(
-                ParticleTypes.END_ROD,
-                mob.getX(), mob.getY(), mob.getZ(),
-                20,
-                0.5, 0.5, 0.5,
-                0.1
-        );
-    }
-
-    private static void addToTeam(Level level, Player player, Mob mob) {
-        Scoreboard scoreboard = level.getScoreboard();
+        Scoreboard scoreboard = serverLevel.getScoreboard();
         PlayerTeam team = scoreboard.getPlayersTeam(player.getScoreboardName());
 
         if (team == null) {
@@ -142,7 +140,6 @@ public class GufyInteractEvent
             scoreboard.addPlayerToTeam(player.getScoreboardName(), team);
         }
         scoreboard.addPlayerToTeam(mob.getScoreboardName(), team);
-        mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
     }
 
     private static void resetVillager(Villager villager) {

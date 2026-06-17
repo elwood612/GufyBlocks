@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:sandstone",
-  "result": {
-    "id": "gufyblocks:sandstone_bricks",
-  "count": 1
-  }
-}
