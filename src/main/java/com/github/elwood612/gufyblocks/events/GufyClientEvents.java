@@ -231,6 +231,10 @@ public class GufyClientEvents
                 event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.relic_blank"));
                 event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GRAY));
             }
+            case GufyLedger gufyLedger -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.ledger_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.ledger_instructions_2").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+            }
             default -> { }
         }
     }

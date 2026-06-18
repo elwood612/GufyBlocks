@@ -2686,6 +2686,7 @@
 "item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
 "item.gufyblocks.monocle": "Monocle",
 "item.gufyblocks.stillstone": "Quelling Amulet",
+"item.gufyblocks.ledger": "Inspector's Ledger",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -2741,6 +2742,8 @@
 "tooltip.gufyblocks.potent_instructions": " Reveals nearby hostile",
 "tooltip.gufyblocks.potent_instructions_2": " spawn points",
 "tooltip.gufyblocks.stillstone_instructions": " Silences and befriends them",
+"tooltip.gufyblocks.ledger_instructions": "Reveals a villager's",
+"tooltip.gufyblocks.ledger_instructions_2": "current workstation",
 
 "effect.gufyblocks.gufy_insomnia": "Potent Insomnia",
 

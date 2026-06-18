@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:paper",
+    "X": "gufyblocks:memory_charm",
+	"Y": "minecraft:stick"
+  },
+  "pattern": [
+    "Y#Y",
+    "YXY",
+	"Y#Y"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:ledger"
+  }
+}

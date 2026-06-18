@@ -540,6 +540,11 @@ public class GufyRegistry
             GufyStillstone::new,
             () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
     );
+    public static final DeferredItem<Item> LEDGER = ITEMS.registerItem(
+            "ledger",
+            GufyLedger::new,
+            () -> new Item.Properties().stacksTo(1).useCooldown(1f).rarity(Rarity.RARE)
+    );
 
     //**************************************************************//
 
