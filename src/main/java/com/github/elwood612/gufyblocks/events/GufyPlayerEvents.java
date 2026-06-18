@@ -12,6 +12,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.clock.ServerClockManager;
 import net.minecraft.world.clock.WorldClock;
 import net.minecraft.world.clock.WorldClocks;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -41,6 +44,7 @@ public class GufyPlayerEvents
 
     // Packet login check
     // Set time to day if no one is on
+    // Gives players all recipes
     // Phasing Vial safety cleanup
     @SubscribeEvent
     public static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
@@ -68,6 +72,9 @@ public class GufyPlayerEvents
 
             // set compass login delay
             lastGlobalLoginTick = serverLevel.getGameTime() + 100;
+
+            // Give players any new recipes
+            player.awardRecipes(server.getRecipeManager().getRecipes());
         }
 
         // This is more for safety, the logout event should normally have this covered
