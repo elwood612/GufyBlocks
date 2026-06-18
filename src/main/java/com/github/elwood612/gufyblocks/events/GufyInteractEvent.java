@@ -143,7 +143,7 @@ public class GufyInteractEvent
                 if (jobSite.isPresent()) {
                     BlockPos pos = jobSite.get().pos();
                     serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_YES, SoundSource.NEUTRAL);
-                    serverLevel.playSound((Player) null, villager.blockPosition(), SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
+                    serverLevel.playSound((Player) null, pos, SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
                     serverLevel.sendParticles(
                             ParticleTypes.HAPPY_VILLAGER,
                             villager.getX(), villager.getY() + 1, villager.getZ(),
@@ -168,8 +168,8 @@ public class GufyInteractEvent
                     }
                     // reveal workstation
                     // use 26.2 Shapes Outline?
+
                 } else {
-                    // villager.setUnhappy(); // currently private access
                     villager.setUnhappyCounter(40);
                     serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_NO, SoundSource.NEUTRAL);
                 }
