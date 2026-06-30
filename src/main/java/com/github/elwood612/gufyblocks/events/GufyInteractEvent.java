@@ -4,6 +4,7 @@ import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.items.GufyLedger;
 import com.github.elwood612.gufyblocks.items.GufyMemoryCharm;
 import com.github.elwood612.gufyblocks.items.GufyStillstone;
+import com.github.elwood612.gufyblocks.packets.GufyHighlightWorkstationPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Holder;
@@ -38,6 +39,7 @@ import net.minecraft.world.scores.Scoreboard;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import java.util.Optional;
 
@@ -141,16 +143,16 @@ public class GufyInteractEvent
                 // if villager has a workstation, reveal it
                 Optional<GlobalPos> jobSite = villager.getBrain().getMemory(MemoryModuleType.JOB_SITE);
                 if (jobSite.isPresent()) {
-                    BlockPos pos = jobSite.get().pos();
+                    BlockPos jobSitePos = jobSite.get().pos();
                     serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_YES, SoundSource.NEUTRAL);
-                    serverLevel.playSound((Player) null, pos, SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
+                    serverLevel.playSound((Player) null, jobSitePos, SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
                     serverLevel.sendParticles(
                             ParticleTypes.HAPPY_VILLAGER,
                             villager.getX(), villager.getY() + 1, villager.getZ(),
                             5, 0.5, 0.5, 0.5, 0.02
                     );
                     Vec3 from = villager.position();
-                    Vec3 to = pos.getCenter();
+                    Vec3 to = jobSitePos.getCenter();
 
                     for (int i = 0; i < 5; i++) {
                         double t = i / 20.0;
@@ -166,7 +168,11 @@ public class GufyInteractEvent
                                 0.02
                         );
                     }
+                    villager.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
+
                     // reveal workstation
+                    PacketDistributor.sendToPlayer((ServerPlayer) player, new GufyHighlightWorkstationPacket(jobSitePos));
+
                     // use 26.2 Shapes Outline?
 
                 } else {

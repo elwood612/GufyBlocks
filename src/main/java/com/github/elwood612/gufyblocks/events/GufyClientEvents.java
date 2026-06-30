@@ -4,20 +4,36 @@ import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.*;
+import com.mojang.blaze3d.vertex.DefaultVertexFormat;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.ShapeRenderer;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+
+import java.util.OptionalDouble;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID, value = Dist.CLIENT)
 public class GufyClientEvents
@@ -43,6 +59,58 @@ public class GufyClientEvents
 //        } else {
 //            renderer.clearPostEffect();
 //        }
+    }
+
+    @SubscribeEvent
+    public static void onAfterSolidBlocks(RenderLevelStageEvent.AfterOpaqueBlocks event) {
+        Minecraft mc = Minecraft.getInstance();
+        Level level = mc.level;
+
+        if (level == null || GufyHighlightRenderer.pos == null) return;
+        if (level.getGameTime() >= GufyHighlightRenderer.endTick) {
+            GufyHighlightRenderer.pos = null;
+            return;
+        }
+
+        PoseStack poseStack = event.getPoseStack();
+        MultiBufferSource bufferSource = mc.renderBuffers().bufferSource();
+        Camera camera = mc.gameRenderer.getMainCamera();
+        Vec3 cameraPos = camera.position();
+        BlockPos pos = GufyHighlightRenderer.pos;
+        BlockState state = level.getBlockState(pos);
+        // RenderType translucent = RenderTypes.entityTranslucent(Identifier.fromNamespaceAndPath("minecraft", "textures/misc/forcefield.png"));
+        VoxelShape shape = state.getShape(level, pos);
+
+//        RenderType GLOW_OUTLINE = RenderType.create(
+//                "ledger_glow_outline",
+//                DefaultVertexFormat.POSITION_COLOR,
+//                VertexFormat.Mode.QUADS,
+//                256,
+//                false,
+//                false,
+//                RenderType.CompositeState.builder()
+//                        .setTransparencyState(RenderStateShard.TRANSLUCENT_TRANSPARENCY)
+//                        .setDepthTestState(RenderStateShard.NO_DEPTH_TEST) // key: visible through blocks
+//                        .setWriteMaskState(RenderStateShard.COLOR_WRITE)
+//                        .setCullState(RenderStateShard.NO_CULL)
+//                        .setLightmapState(RenderStateShard.NO_LIGHTMAP)
+//                        .createCompositeState(false)
+//        );
+
+
+//        poseStack.pushPose();
+//        poseStack.translate(0, 0.01f, 0);
+//        ShapeRenderer.renderShape(
+//                poseStack,
+//                bufferSource.getBuffer(RenderTypes.lines()),
+//                shape,
+//                pos.getX() - cameraPos.x,
+//                pos.getY() - cameraPos.y,
+//                pos.getZ() - cameraPos.z,
+//                1, 1.0f
+//        );
+//        poseStack.popPose();
+
     }
 
     @SubscribeEvent

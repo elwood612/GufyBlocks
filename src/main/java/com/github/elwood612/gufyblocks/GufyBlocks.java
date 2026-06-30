@@ -1,6 +1,7 @@
 package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
+import com.github.elwood612.gufyblocks.packets.GufyHighlightWorkstationPacket;
 import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.logging.LogUtils;
@@ -37,10 +38,12 @@ public class GufyBlocks
 		modEventBus.addListener(this::registerPackets);
 	}
 
-	// gives better error message handling (thru Neoforge)
-	// when attempting to connect to the server with vanilla client
+
 	private void registerPackets(RegisterPayloadHandlersEvent event) {
 		final PayloadRegistrar registrar = event.registrar(MODID);
+
+		// gives better error message handling (thru Neoforge)
+		// when attempting to connect to the server with vanilla client
 		registrar.playToClient(
 				GufyVersionCheckPayload.TYPE,
 				GufyVersionCheckPayload.CODEC,
@@ -55,6 +58,13 @@ public class GufyBlocks
 						));
 					}
 				}
+		);
+
+		// register workstation highlight packet
+		registrar.playToClient(
+				GufyHighlightWorkstationPacket.TYPE,
+				GufyHighlightWorkstationPacket.CODEC,
+				GufyHighlightWorkstationPacket::handle
 		);
 	}
 }

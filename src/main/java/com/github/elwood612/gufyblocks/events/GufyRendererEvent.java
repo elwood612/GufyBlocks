@@ -4,6 +4,7 @@ import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.seat.GufySeatRenderer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 
 public class GufyRendererEvent
 {
