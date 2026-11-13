@@ -77,6 +77,7 @@ public class GufyRegistry
     private static final ResourceKey<ContextIntProvider> BURN_TIME_300 = ContextIntProviders.COOKING_TIME_WOOD_BLOCKS;
     private static final ResourceKey<ContextIntProvider> BURN_TIME_100 = ContextIntProviders.COOKING_TIME_WOOL;
     private static final ResourceKey<ContextIntProvider> COMPOSTABLE_65 = ContextIntProviders.COMPOSTABLE_MEDIUM;
+    private static final ResourceKey<ContextIntProvider> COMPOSTABLE_85 = ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH;
 
     //**************************************************************//
 
@@ -86,380 +87,391 @@ public class GufyRegistry
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
         // ~~ WOOD ~~ //
-//        add(familyBuilder("oak", Blocks.OAK_PLANKS, VANILLA_WOOD_TYPES));
+//        add(familyBuilder("oak", OAK_PLANKS, VANILLA_WOOD_TYPES));
         add(new GufyFamilyBuilder().name("oak").parent(OAK_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-
-        add(familyBuilder("oak_parquet", Blocks.OAK_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_oak", Blocks.OAK_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("oak_wood", Blocks.OAK_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_oak_wood", Blocks.OAK_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_oak_wood", Blocks.OAK_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("spruce", Blocks.SPRUCE_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("spruce_parquet", Blocks.SPRUCE_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_spruce", Blocks.SPRUCE_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("spruce_wood", Blocks.SPRUCE_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_spruce_wood", Blocks.SPRUCE_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_spruce_wood", Blocks.SPRUCE_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("birch", Blocks.BIRCH_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("birch_parquet", Blocks.BIRCH_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_birch", Blocks.BIRCH_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("birch_wood", Blocks.BIRCH_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_birch_wood", Blocks.BIRCH_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_birch_wood", Blocks.BIRCH_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("dark_oak", Blocks.DARK_OAK_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("dark_oak_parquet", Blocks.DARK_OAK_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_dark_oak", Blocks.DARK_OAK_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("dark_oak_wood", Blocks.DARK_OAK_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_dark_oak_wood", Blocks.DARK_OAK_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_dark_oak_wood", Blocks.DARK_OAK_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("jungle", Blocks.JUNGLE_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("jungle_parquet", Blocks.JUNGLE_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_jungle", Blocks.JUNGLE_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("jungle_wood", Blocks.JUNGLE_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_jungle_wood", Blocks.JUNGLE_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_jungle_wood", Blocks.JUNGLE_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("acacia", Blocks.ACACIA_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("acacia_parquet", Blocks.ACACIA_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_acacia", Blocks.ACACIA_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("acacia_wood", Blocks.ACACIA_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_acacia_wood", Blocks.ACACIA_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_acacia_wood", Blocks.ACACIA_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("mangrove", Blocks.MANGROVE_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("mangrove_parquet", Blocks.MANGROVE_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_mangrove", Blocks.MANGROVE_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("mangrove_wood", Blocks.MANGROVE_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_mangrove_wood", Blocks.MANGROVE_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_mangrove_wood", Blocks.MANGROVE_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("cherry", Blocks.CHERRY_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("cherry_parquet", Blocks.CHERRY_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_cherry", Blocks.CHERRY_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("cherry_wood", Blocks.CHERRY_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_cherry_wood", Blocks.CHERRY_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_cherry_wood", Blocks.CHERRY_WOOD, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("bamboo", Blocks.BAMBOO_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("bamboo_mosaic", Blocks.BAMBOO_PLANKS, GufyBlockTypes.VERTICALSLAB));
-        add(familyBuilder("chiseled_stripped_bamboo_block", Blocks.STRIPPED_BAMBOO_BLOCK, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("crimson", Blocks.CRIMSON_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("crimson_parquet", Blocks.CRIMSON_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_crimson", Blocks.CRIMSON_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("crimson_hyphae", Blocks.CRIMSON_HYPHAE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_crimson_hyphae", Blocks.CRIMSON_HYPHAE, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_crimson_hyphae", Blocks.CRIMSON_HYPHAE, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("warped", Blocks.WARPED_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("warped_parquet", Blocks.WARPED_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_warped", Blocks.WARPED_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("warped_hyphae", Blocks.WARPED_HYPHAE, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_warped_hyphae", Blocks.WARPED_HYPHAE, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_warped_hyphae", Blocks.WARPED_HYPHAE, GufyBlockTypes.CARVED_LOG));
-        add(familyBuilder("pale_oak", Blocks.PALE_OAK_PLANKS, VANILLA_WOOD_TYPES));
-        add(familyBuilder("pale_oak_parquet", Blocks.PALE_OAK_PLANKS, GUFY_DIRT_TYPES));
-        add(familyBuilder("big_pale_oak", Blocks.PALE_OAK_PLANKS, GUFY_WOOD_TYPES));
-        add(familyBuilder("pale_oak_wood", Blocks.PALE_OAK_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
-        add(familyBuilder("stripped_pale_oak_wood", Blocks.PALE_OAK_WOOD, VANILLA_WOOD_TYPES_ALL));
-        add(familyBuilder("chiseled_stripped_pale_oak_wood", Blocks.PALE_OAK_WOOD, GufyBlockTypes.CARVED_LOG));
+        add(new GufyFamilyBuilder().name("oak_parquet").parent(OAK_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_oak").parent(OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("oak_wood").parent(OAK_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_oak_wood").parent(OAK_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_oak_wood").parent(OAK_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("spruce").parent(SPRUCE_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("spruce_parquet").parent(SPRUCE_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_spruce").parent(SPRUCE_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("spruce_wood").parent(SPRUCE_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_spruce_wood").parent(SPRUCE_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_spruce_wood").parent(SPRUCE_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("birch").parent(BIRCH_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("birch_parquet").parent(BIRCH_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_birch").parent(BIRCH_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("birch_wood").parent(BIRCH_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_birch_wood").parent(BIRCH_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_birch_wood").parent(BIRCH_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("dark_oak").parent(DARK_OAK_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("dark_oak_parquet").parent(DARK_OAK_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_dark_oak").parent(DARK_OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("dark_oak_wood").parent(DARK_OAK_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_dark_oak_wood").parent(DARK_OAK_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_dark_oak_wood").parent(DARK_OAK_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("jungle").parent(JUNGLE_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("jungle_parquet").parent(JUNGLE_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_jungle").parent(JUNGLE_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("jungle_wood").parent(JUNGLE_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_jungle_wood").parent(JUNGLE_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_jungle_wood").parent(JUNGLE_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("acacia").parent(ACACIA_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("acacia_parquet").parent(ACACIA_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_acacia").parent(ACACIA_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("acacia_wood").parent(ACACIA_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_acacia_wood").parent(ACACIA_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_acacia_wood").parent(ACACIA_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("mangrove").parent(MANGROVE_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("mangrove_parquet").parent(MANGROVE_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_mangrove").parent(MANGROVE_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("mangrove_wood").parent(MANGROVE_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_mangrove_wood").parent(MANGROVE_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_mangrove_wood").parent(MANGROVE_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("cherry").parent(CHERRY_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("cherry_parquet").parent(CHERRY_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_cherry").parent(CHERRY_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("cherry_wood").parent(CHERRY_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_cherry_wood").parent(CHERRY_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_cherry_wood").parent(CHERRY_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("bamboo").parent(BAMBOO_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("bamboo_mosaic").parent(BAMBOO_PLANKS).blockTypes(GufyBlockTypes.VERTICALSLAB).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_bamboo_block").parent(STRIPPED_BAMBOO_BLOCK).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson").parent(CRIMSON_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson_parquet").parent(CRIMSON_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_crimson").parent(CRIMSON_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("warped").parent(WARPED_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("warped_parquet").parent(WARPED_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_warped").parent(WARPED_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("warped_hyphae").parent(WARPED_HYPHAE).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_warped_hyphae").parent(WARPED_HYPHAE).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_warped_hyphae").parent(WARPED_HYPHAE).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("pale_oak").parent(PALE_OAK_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("pale_oak_parquet").parent(PALE_OAK_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_pale_oak").parent(PALE_OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("pale_oak_wood").parent(PALE_OAK_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_pale_oak_wood").parent(PALE_OAK_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_pale_oak_wood").parent(PALE_OAK_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
 
         // ~~ DIRTS ~~ //
-        add(familyBuilder("coarse_dirt", Blocks.COARSE_DIRT, VANILLA_DIRT_TYPES));
-        add(familyBuilder("packed_mud", Blocks.PACKED_MUD, VANILLA_DIRT_TYPES));
-        add(familyBuilder("mud_bricks", Blocks.MUD_BRICKS, VANILLA_STONE_TYPES));
-        add(familyBuilder("hay", Blocks.HAY_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("moss", Blocks.MOSS_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("pale_moss", Blocks.PALE_MOSS_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("rooted_dirt", Blocks.ROOTED_DIRT, VANILLA_DIRT_TYPES));
-        add(familyBuilder("nether_wart_block", Blocks.NETHER_WART_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("warped_wart", Blocks.WARPED_WART_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("snow", Blocks.SNOW_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("packed_ice", Blocks.PACKED_ICE, VANILLA_DIRT_TYPES));
-        add(familyBuilder("resin", Blocks.RESIN_BLOCK, VANILLA_DIRT_TYPES));
-        add(familyBuilder("resin_bricks", Blocks.RESIN_BRICKS, VANILLA_STONE_TYPES));
+        add(new GufyFamilyBuilder().name("coarse_dirt").parent(COARSE_DIRT).blockTypes(VANILLA_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("packed_mud").parent(PACKED_MUD).blockTypes(VANILLA_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mud_bricks").parent(MUD_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("hay").parent(HAY_BLOCK).blockTypes(VANILLA_DIRT_TYPES).compostable(COMPOSTABLE_85).buildFamily());
+        add(new GufyFamilyBuilder().name("moss").parent(MOSS_BLOCK).blockTypes(VANILLA_DIRT_TYPES).compostable(COMPOSTABLE_65).buildFamily());
+        add(new GufyFamilyBuilder().name("pale_moss").parent(PALE_MOSS_BLOCK).blockTypes(VANILLA_DIRT_TYPES).compostable(COMPOSTABLE_65).buildFamily());
+        add(new GufyFamilyBuilder().name("rooted_dirt").parent(ROOTED_DIRT).blockTypes(VANILLA_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("nether_wart_block").parent(NETHER_WART_BLOCK).blockTypes(VANILLA_DIRT_TYPES).compostable(COMPOSTABLE_85).buildFamily());
+        add(new GufyFamilyBuilder().name("warped_wart").parent(WARPED_WART_BLOCK).blockTypes(VANILLA_DIRT_TYPES).compostable(COMPOSTABLE_85).buildFamily());
+        add(new GufyFamilyBuilder().name("snow").parent(SNOW_BLOCK).blockTypes(VANILLA_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("packed_ice").parent(PACKED_ICE).blockTypes(VANILLA_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("resin").parent(RESIN_BLOCK).blockTypes(VANILLA_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("resin_bricks").parent(RESIN_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
 
         // ~~ STONES ~~ //
-        add(familyBuilder("stone", Blocks.STONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("smooth_stone", Blocks.SMOOTH_STONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL, GufyBlockTypes.STAIRS)));
-        add(familyBuilder("cobblestone", Blocks.COBBLESTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("mossy_cobblestone", Blocks.MOSSY_COBBLESTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("cobblestone_bricks", Blocks.STONE_BRICKS, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_cobblestone_bricks", Blocks.MOSSY_STONE_BRICKS, GUFY_STONE_TYPES));
-        add(familyBuilder("cracked_cobblestone_bricks", Blocks.CRACKED_STONE_BRICKS, GUFY_STONE_TYPES));
-        add(familyBuilder("stone_bricks", Blocks.STONE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)));
-        add(familyBuilder("mossy_stone_bricks", Blocks.MOSSY_STONE_BRICKS, VANILLA_STONE_TYPES));
-        add(familyBuilder("cracked_stone_bricks", Blocks.CRACKED_STONE_BRICKS, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("diorite", Blocks.DIORITE, VANILLA_STONE_TYPES));
-        add(familyBuilder("polished_diorite", Blocks.POLISHED_DIORITE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("diorite_bricks", Blocks.DIORITE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR, GufyBlockTypes.CHISELED)));
-        add(familyBuilder("mossy_diorite_bricks", Blocks.DIORITE, GUFY_STONE_TYPES));
-        add(familyBuilder("cracked_diorite_bricks", Blocks.DIORITE, GUFY_STONE_TYPES));
-        add(familyBuilder("diorite_cobble_bricks", Blocks.DIORITE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_diorite_cobble_bricks", Blocks.DIORITE, GUFY_STONE_TYPES));
-        add(familyBuilder("cracked_diorite_cobble_bricks", Blocks.DIORITE, GUFY_STONE_TYPES));
-        add(familyBuilder("granite", Blocks.GRANITE, VANILLA_STONE_TYPES));
-        add(familyBuilder("polished_granite", Blocks.GRANITE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("granite_bricks", Blocks.GRANITE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR, GufyBlockTypes.CHISELED)));
-        add(familyBuilder("cracked_granite_bricks", Blocks.GRANITE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_granite_bricks", Blocks.GRANITE, GUFY_STONE_TYPES));
-        add(familyBuilder("granite_cobble_bricks", Blocks.GRANITE, GUFY_STONE_TYPES));
-        add(familyBuilder("cracked_granite_cobble_bricks", Blocks.GRANITE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_granite_cobble_bricks", Blocks.GRANITE, GUFY_STONE_TYPES));
-        add(familyBuilder("andesite", Blocks.ANDESITE, VANILLA_STONE_TYPES));
-        add(familyBuilder("polished_andesite", Blocks.ANDESITE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("andesite_bricks", Blocks.ANDESITE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR, GufyBlockTypes.CHISELED)));
-        add(familyBuilder("cracked_andesite_bricks", Blocks.ANDESITE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_andesite_bricks", Blocks.ANDESITE, GUFY_STONE_TYPES));
-        add(familyBuilder("brick", Blocks.BRICKS, VANILLA_STONE_TYPES));
-        add(familyBuilder("cracked_bricks", Blocks.BRICKS, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_bricks", Blocks.BRICKS, GUFY_STONE_TYPES));
-        add(familyBuilder("nether_brick", Blocks.NETHER_BRICKS, GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER));
-        add(familyBuilder("cracked_nether_bricks", Blocks.NETHER_BRICKS,
-                GufyBlockTypes.STAIRS, GufyBlockTypes.SLAB, GufyBlockTypes.WALL, GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER, GufyBlockTypes.FENCE));
-        add(familyBuilder("red_nether_bricks", Blocks.RED_NETHER_BRICKS, VANILLA_STONE_TYPES));
-        add(familyBuilder("calcite", Blocks.CALCITE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("tuff", Blocks.TUFF, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("tuff_bricks", Blocks.TUFF_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)));
-        add(familyBuilder("polished_tuff", Blocks.POLISHED_TUFF, VANILLA_STONE_TYPES));
-        add(familyBuilder("smooth_basalt", Blocks.SMOOTH_BASALT, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("deepslate", Blocks.DEEPSLATE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("cobbled_deepslate", Blocks.COBBLED_DEEPSLATE, VANILLA_STONE_TYPES));
-        add(familyBuilder("mossy_cobbled_deepslate", Blocks.COBBLED_DEEPSLATE, GUFY_STONE_TYPES));
-        add(familyBuilder("deepslate_bricks", Blocks.DEEPSLATE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)));
-        add(familyBuilder("deepslate_tiles", Blocks.DEEPSLATE_TILES, VANILLA_STONE_TYPES));
-        add(familyBuilder("polished_deepslate", Blocks.POLISHED_DEEPSLATE, VANILLA_STONE_TYPES));
-        add(familyBuilder("cracked_deepslate_bricks", Blocks.DEEPSLATE_BRICKS, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("cracked_deepslate_tiles", Blocks.DEEPSLATE_TILES, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("mossy_deepslate_bricks", Blocks.DEEPSLATE_BRICKS, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_deepslate_tiles", Blocks.DEEPSLATE_TILES, GUFY_STONE_TYPES));
-        add(familyBuilder("quartz", Blocks.QUARTZ_BLOCK, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("smooth_quartz", Blocks.SMOOTH_QUARTZ, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("quartz_bricks", Blocks.QUARTZ_BRICKS, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("iron", Blocks.IRON_BLOCK, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("gold", Blocks.GOLD_BLOCK, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("emerald", Blocks.EMERALD_BLOCK, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("diamond", Blocks.DIAMOND_BLOCK, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("sandstone", Blocks.SANDSTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("cut_sandstone", Blocks.SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.STAIRS, GufyBlockTypes.WALL)));
-        add(familyBuilder("smooth_sandstone", Blocks.SMOOTH_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("sandstone_bricks", Blocks.SANDSTONE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR)));
-        add(familyBuilder("cracked_sandstone_bricks", Blocks.SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_sandstone_bricks", Blocks.SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("sandstone_cobble_bricks", Blocks.SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("cracked_sandstone_cobble_bricks", Blocks.SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_sandstone_cobble_bricks", Blocks.SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("red_sandstone", Blocks.RED_SANDSTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("cut_red_sandstone", Blocks.RED_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.STAIRS, GufyBlockTypes.WALL)));
-        add(familyBuilder("smooth_red_sandstone", Blocks.SMOOTH_RED_SANDSTONE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("red_sandstone_bricks", Blocks.RED_SANDSTONE, ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR)));
-        add(familyBuilder("cracked_red_sandstone_bricks", Blocks.RED_SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_red_sandstone_bricks", Blocks.RED_SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("red_sandstone_cobble_bricks", Blocks.RED_SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("cracked_red_sandstone_cobble_bricks", Blocks.RED_SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("mossy_red_sandstone_cobble_bricks", Blocks.RED_SANDSTONE, GUFY_STONE_TYPES));
-        add(familyBuilder("amethyst", Blocks.AMETHYST_BLOCK, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("end_stone", Blocks.END_STONE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("end_stone_brick", Blocks.END_STONE_BRICKS, VANILLA_STONE_TYPES));
-        add(familyBuilder("purpur", Blocks.PURPUR_BLOCK, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("blackstone", Blocks.BLACKSTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("polished_blackstone", Blocks.POLISHED_BLACKSTONE, VANILLA_STONE_TYPES));
-        add(familyBuilder("polished_blackstone_brick", Blocks.POLISHED_BLACKSTONE_BRICKS, VANILLA_STONE_TYPES));
-        add(familyBuilder("cracked_polished_blackstone_brick", Blocks.POLISHED_BLACKSTONE_BRICKS, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("gilded_blackstone", Blocks.GILDED_BLACKSTONE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("dripstone", Blocks.DRIPSTONE_BLOCK, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("stone", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("diorite", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("andesite", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("granite", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("cobbled_deepslate", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("sandstone", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("red_sandstone", GufyProperties.STONE_TRAPDOOR, GufyBlockTypes.STONE_TRAPDOOR));
-        add(familyBuilder("prismarine", Blocks.PRISMARINE, VANILLA_STONE_TYPES));
-        add(familyBuilder("prismarine_bricks", Blocks.PRISMARINE_BRICKS, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
-        add(familyBuilder("dark_prismarine", Blocks.DARK_PRISMARINE, ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)));
+        add(new GufyFamilyBuilder().name("stone").parent(STONE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("smooth_stone").parent(SMOOTH_STONE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL, GufyBlockTypes.STAIRS)).buildFamily());
+        add(new GufyFamilyBuilder().name("cobblestone").parent(COBBLESTONE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_cobblestone").parent(MOSSY_COBBLESTONE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cobblestone_bricks").parent(STONE_BRICKS).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_cobblestone_bricks").parent(MOSSY_STONE_BRICKS).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_cobblestone_bricks").parent(CRACKED_STONE_BRICKS).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("stone_bricks").parent(STONE_BRICKS).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_stone_bricks").parent(MOSSY_STONE_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_stone_bricks").parent(CRACKED_STONE_BRICKS).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("diorite").parent(DIORITE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_diorite").parent(POLISHED_DIORITE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("diorite_bricks").parent(DIORITE).blockTypes(ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR, GufyBlockTypes.CHISELED)).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_diorite_bricks").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_diorite_bricks").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("diorite_cobble_bricks").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_diorite_cobble_bricks").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_diorite_cobble_bricks").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("granite").parent(GRANITE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_granite").parent(GRANITE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("granite_bricks").parent(GRANITE).blockTypes(ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR, GufyBlockTypes.CHISELED)).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_granite_bricks").parent(GRANITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_granite_bricks").parent(GRANITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("granite_cobble_bricks").parent(GRANITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_granite_cobble_bricks").parent(GRANITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_granite_cobble_bricks").parent(GRANITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("andesite").parent(ANDESITE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_andesite").parent(ANDESITE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("andesite_bricks").parent(ANDESITE).blockTypes(ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR, GufyBlockTypes.CHISELED)).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_andesite_bricks").parent(ANDESITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_andesite_bricks").parent(ANDESITE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("brick").parent(BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_bricks").parent(BRICKS).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_bricks").parent(BRICKS).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("nether_brick").parent(NETHER_BRICKS).blockTypes(GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_nether_bricks").parent(NETHER_BRICKS).blockTypes(GufyBlockTypes.STAIRS, GufyBlockTypes.SLAB, GufyBlockTypes.WALL, GufyBlockTypes.VERTICALSLAB, GufyBlockTypes.HOPPER, GufyBlockTypes.FENCE).buildFamily());
+        add(new GufyFamilyBuilder().name("red_nether_bricks").parent(RED_NETHER_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("calcite").parent(CALCITE).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("tuff").parent(TUFF).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("tuff_bricks").parent(TUFF_BRICKS).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_tuff").parent(POLISHED_TUFF).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("smooth_basalt").parent(SMOOTH_BASALT).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("deepslate").parent(DEEPSLATE).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("cobbled_deepslate").parent(COBBLED_DEEPSLATE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_cobbled_deepslate").parent(COBBLED_DEEPSLATE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("deepslate_bricks").parent(DEEPSLATE_BRICKS).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.PILLAR)).buildFamily());
+        add(new GufyFamilyBuilder().name("deepslate_tiles").parent(DEEPSLATE_TILES).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_deepslate").parent(POLISHED_DEEPSLATE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_deepslate_bricks").parent(DEEPSLATE_BRICKS).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_deepslate_tiles").parent(DEEPSLATE_TILES).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_deepslate_bricks").parent(DEEPSLATE_BRICKS).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_deepslate_tiles").parent(DEEPSLATE_TILES).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("quartz").parent(QUARTZ_BLOCK).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("smooth_quartz").parent(SMOOTH_QUARTZ).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("quartz_bricks").parent(QUARTZ_BRICKS).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("iron").parent(IRON_BLOCK).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("gold").parent(GOLD_BLOCK).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("emerald").parent(EMERALD_BLOCK).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("diamond").parent(DIAMOND_BLOCK).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("sandstone").parent(SANDSTONE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cut_sandstone").parent(SANDSTONE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.STAIRS, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("smooth_sandstone").parent(SMOOTH_SANDSTONE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("sandstone_bricks").parent(SANDSTONE).blockTypes(ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR)).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_sandstone_bricks").parent(SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_sandstone_bricks").parent(SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("sandstone_cobble_bricks").parent(SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_sandstone_cobble_bricks").parent(SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_sandstone_cobble_bricks").parent(SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("red_sandstone").parent(RED_SANDSTONE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cut_red_sandstone").parent(RED_SANDSTONE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.STAIRS, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("smooth_red_sandstone").parent(SMOOTH_RED_SANDSTONE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("red_sandstone_bricks").parent(RED_SANDSTONE).blockTypes(ArrayUtils.addAll(GUFY_STONE_TYPES, GufyBlockTypes.PILLAR)).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_red_sandstone_bricks").parent(RED_SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_red_sandstone_bricks").parent(RED_SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("red_sandstone_cobble_bricks").parent(RED_SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_red_sandstone_cobble_bricks").parent(RED_SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("mossy_red_sandstone_cobble_bricks").parent(RED_SANDSTONE).blockTypes(GUFY_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("amethyst").parent(AMETHYST_BLOCK).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("end_stone").parent(END_STONE).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("end_stone_brick").parent(END_STONE_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("purpur").parent(PURPUR_BLOCK).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("blackstone").parent(BLACKSTONE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_blackstone").parent(POLISHED_BLACKSTONE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_blackstone_brick").parent(POLISHED_BLACKSTONE_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cracked_polished_blackstone_brick").parent(POLISHED_BLACKSTONE_BRICKS).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("gilded_blackstone").parent(GILDED_BLACKSTONE).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("dripstone").parent(DRIPSTONE_BLOCK).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("stone").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("diorite").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("andesite").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("granite").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("cobbled_deepslate").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("sandstone").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("red_sandstone").properties(GufyProperties.STONE_TRAPDOOR).blockTypes(GufyBlockTypes.STONE_TRAPDOOR).buildFamily());
+        add(new GufyFamilyBuilder().name("prismarine").parent(PRISMARINE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("prismarine_bricks").parent(PRISMARINE_BRICKS).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("dark_prismarine").parent(DARK_PRISMARINE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
 
         // ~~ TERRACOTTA ~~ //
-        add(familyBuilder("terracotta", Blocks.TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("white_terracotta", Blocks.DYED_TERRACOTTA.white(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_gray_terracotta", Blocks.DYED_TERRACOTTA.lightGray(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("gray_terracotta", Blocks.DYED_TERRACOTTA.gray(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("black_terracotta", Blocks.DYED_TERRACOTTA.black(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("brown_terracotta", Blocks.DYED_TERRACOTTA.brown(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("red_terracotta", Blocks.DYED_TERRACOTTA.red(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("orange_terracotta", Blocks.DYED_TERRACOTTA.orange(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("yellow_terracotta", Blocks.DYED_TERRACOTTA.yellow(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("lime_terracotta", Blocks.DYED_TERRACOTTA.lime(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("green_terracotta", Blocks.DYED_TERRACOTTA.green(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("cyan_terracotta", Blocks.DYED_TERRACOTTA.cyan(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_blue_terracotta", Blocks.DYED_TERRACOTTA.lightBlue(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("blue_terracotta", Blocks.DYED_TERRACOTTA.blue(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("purple_terracotta", Blocks.DYED_TERRACOTTA.purple(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("magenta_terracotta", Blocks.DYED_TERRACOTTA.magenta(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("pink_terracotta", Blocks.DYED_TERRACOTTA.pink(), VANILLA_STONE_TYPES_ALL));
+        add(new GufyFamilyBuilder().name("terracotta").parent(TERRACOTTA).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("white_terracotta").parent(DYED_TERRACOTTA.white()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("light_gray_terracotta").parent(DYED_TERRACOTTA.lightGray()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("gray_terracotta").parent(DYED_TERRACOTTA.gray()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("black_terracotta").parent(DYED_TERRACOTTA.black()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("brown_terracotta").parent(DYED_TERRACOTTA.brown()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("red_terracotta").parent(DYED_TERRACOTTA.red()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("orange_terracotta").parent(DYED_TERRACOTTA.orange()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("yellow_terracotta").parent(DYED_TERRACOTTA.yellow()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("lime_terracotta").parent(DYED_TERRACOTTA.lime()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("green_terracotta").parent(DYED_TERRACOTTA.green()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("cyan_terracotta").parent(DYED_TERRACOTTA.cyan()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("light_blue_terracotta").parent(DYED_TERRACOTTA.lightBlue()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("blue_terracotta").parent(DYED_TERRACOTTA.blue()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("purple_terracotta").parent(DYED_TERRACOTTA.purple()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("magenta_terracotta").parent(DYED_TERRACOTTA.magenta()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("pink_terracotta").parent(DYED_TERRACOTTA.pink()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
 
         // ~~ CONCRETE ~~ //
-        add(familyBuilder("white_concrete", Blocks.CONCRETE.white(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_gray_concrete", Blocks.CONCRETE.lightGray(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("gray_concrete", Blocks.CONCRETE.gray(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("black_concrete", Blocks.CONCRETE.black(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("brown_concrete", Blocks.CONCRETE.brown(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("red_concrete", Blocks.CONCRETE.red(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("orange_concrete", Blocks.CONCRETE.orange(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("yellow_concrete", Blocks.CONCRETE.yellow(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("lime_concrete", Blocks.CONCRETE.lime(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("green_concrete", Blocks.CONCRETE.green(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("cyan_concrete", Blocks.CONCRETE.cyan(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_blue_concrete", Blocks.CONCRETE.lightBlue(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("blue_concrete", Blocks.CONCRETE.blue(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("purple_concrete", Blocks.CONCRETE.purple(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("magenta_concrete", Blocks.CONCRETE.magenta(), VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("pink_concrete", Blocks.CONCRETE.pink(), VANILLA_STONE_TYPES_ALL));
+        add(new GufyFamilyBuilder().name("white_concrete").parent(CONCRETE.white()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("light_gray_concrete").parent(CONCRETE.lightGray()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("gray_concrete").parent(CONCRETE.gray()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("black_concrete").parent(CONCRETE.black()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("brown_concrete").parent(CONCRETE.brown()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("red_concrete").parent(CONCRETE.red()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("orange_concrete").parent(CONCRETE.orange()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("yellow_concrete").parent(CONCRETE.yellow()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("lime_concrete").parent(CONCRETE.lime()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("green_concrete").parent(CONCRETE.green()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("cyan_concrete").parent(CONCRETE.cyan()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("light_blue_concrete").parent(CONCRETE.lightBlue()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("blue_concrete").parent(CONCRETE.blue()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("purple_concrete").parent(CONCRETE.purple()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("magenta_concrete").parent(CONCRETE.magenta()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("pink_concrete").parent(CONCRETE.pink()).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());
 
         // ~~ WOOL ~~ //
-        add(familyBuilder("white_wool", Blocks.WOOL.white(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("light_gray_wool", Blocks.WOOL.lightGray(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("gray_wool", Blocks.WOOL.gray(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("black_wool", Blocks.WOOL.black(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("brown_wool", Blocks.WOOL.brown(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("red_wool", Blocks.WOOL.red(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("orange_wool", Blocks.WOOL.orange(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("yellow_wool", Blocks.WOOL.yellow(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("lime_wool", Blocks.WOOL.lime(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("green_wool", Blocks.WOOL.green(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("cyan_wool", Blocks.WOOL.cyan(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("light_blue_wool", Blocks.WOOL.lightBlue(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("blue_wool", Blocks.WOOL.blue(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("purple_wool", Blocks.WOOL.purple(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("magenta_wool", Blocks.WOOL.magenta(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("pink_wool", Blocks.WOOL.pink(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(new GufyFamilyBuilder().name("white_wool").parent(WOOL.white()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("light_gray_wool").parent(WOOL.lightGray()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("gray_wool").parent(WOOL.gray()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("black_wool").parent(WOOL.black()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("brown_wool").parent(WOOL.brown()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("red_wool").parent(WOOL.red()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("orange_wool").parent(WOOL.orange()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("yellow_wool").parent(WOOL.yellow()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("lime_wool").parent(WOOL.lime()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("green_wool").parent(WOOL.green()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("cyan_wool").parent(WOOL.cyan()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("light_blue_wool").parent(WOOL.lightBlue()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("blue_wool").parent(WOOL.blue()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("purple_wool").parent(WOOL.purple()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("magenta_wool").parent(WOOL.magenta()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
+        add(new GufyFamilyBuilder().name("pink_wool").parent(WOOL.pink()).blockTypes(ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)).buildFamily());
 
 
         // ~~ FRAMED TERRACOTTA ~~ //
-        add(framedBuilderAllColors("oak", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("spruce", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("birch", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("dark_oak", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("jungle", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("acacia", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("mangrove", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("cherry", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("bamboo", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("crimson", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("warped", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
-        add(framedBuilderAllColors("pale_oak", Blocks.TERRACOTTA, VERTICAL_FRAMED_BLOCK_TYPES));
+        add(new GufyFamilyBuilder().name("oak").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("spruce").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("birch").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("dark_oak").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("jungle").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("acacia").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("mangrove").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("cherry").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("bamboo").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("crimson").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("warped").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("pale_oak").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
 
 
         // ~~ COPPER ~~ //
-        add(weatheringBuilder("copper", Blocks.COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
-        add(weatheringBuilder("exposed_copper", Blocks.COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
-        add(weatheringBuilder("weathered_copper", Blocks.COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
-        add(weatheringBuilder("oxidized_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
-        add(weatheringBuilder("cut_copper", Blocks.COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("exposed_cut_copper", Blocks.COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("weathered_cut_copper", Blocks.COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("oxidized_cut_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_copper", Blocks.COPPER_BLOCK.weathering().unaffected(), WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_exposed_copper", Blocks.COPPER_BLOCK.weathering().exposed(), WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_weathered_copper", Blocks.COPPER_BLOCK.weathering().weathered(), WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_oxidized_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_cut_copper", Blocks.COPPER_BLOCK.weathering().unaffected(), WAXED_CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_exposed_cut_copper", Blocks.COPPER_BLOCK.weathering().exposed(), WAXED_CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_weathered_cut_copper", Blocks.COPPER_BLOCK.weathering().weathered(), WAXED_CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_oxidized_cut_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), WAXED_CUT_COPPER_TYPES));
+        // keep these just in case
+        add(weatheringBuilder("copper", COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
+        add(weatheringBuilder("exposed_copper", COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
+        add(weatheringBuilder("weathered_copper", COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
+        add(weatheringBuilder("oxidized_copper", COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
+        add(weatheringBuilder("cut_copper", COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("exposed_cut_copper", COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("weathered_cut_copper", COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("oxidized_cut_copper", COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
+//        add(new GufyFamilyBuilder().name("copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("exposed_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("weathered_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("oxidized_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("cut_copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(CUT_COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("exposed_cut_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(CUT_COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("weathered_cut_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(CUT_COPPER_TYPES).buildFamily());
+//        add(new GufyFamilyBuilder().name("oxidized_cut_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(CUT_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_exposed_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_weathered_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_oxidized_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_cut_copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(WAXED_CUT_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_exposed_cut_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(WAXED_CUT_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_weathered_cut_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(WAXED_CUT_COPPER_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("waxed_oxidized_cut_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(WAXED_CUT_COPPER_TYPES).buildFamily());
+
+
+        // ~~ POTTED PLANTS ~~ //
+        add(new GufyFamilyBuilder().name("flower_box").parent(FLOWER_POT).flower(Items.AIR).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_large_fern").parent(FLOWER_POT).flower(Items.LARGE_FERN).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_tall_grass").parent(FLOWER_POT).flower(Items.TALL_GRASS).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_lilac").parent(FLOWER_POT).flower(Items.LILAC).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_peony").parent(FLOWER_POT).flower(Items.PEONY).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_pitcher_plant").parent(FLOWER_POT).flower(Items.PITCHER_PLANT).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_rose_bush").parent(FLOWER_POT).flower(Items.ROSE_BUSH).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_sunflower").parent(FLOWER_POT).flower(Items.SUNFLOWER).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_twisting_vine").parent(FLOWER_POT).flower(Items.TWISTING_VINES).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_vine").parent(FLOWER_POT).flower(Items.VINE).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+        add(new GufyFamilyBuilder().name("potted_weeping_vine").parent(FLOWER_POT).flower(Items.WEEPING_VINES).blockTypes(GufyBlockTypes.FLOWER_BOX).buildPottedFamily());
+
 
         // ~~ MISCELLANEOUS ~~ //
-        add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
-        add(pottedFlowerBuilder("flower_box", Blocks.FLOWER_POT, Items.AIR, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_large_fern", Blocks.FLOWER_POT, Items.LARGE_FERN, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_tall_grass", Blocks.FLOWER_POT, Items.TALL_GRASS, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_lilac", Blocks.FLOWER_POT, Items.LILAC, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_peony", Blocks.FLOWER_POT, Items.PEONY, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_pitcher_plant", Blocks.FLOWER_POT, Items.PITCHER_PLANT, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_rose_bush", Blocks.FLOWER_POT, Items.ROSE_BUSH, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_sunflower", Blocks.FLOWER_POT, Items.SUNFLOWER, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_twisting_vine", Blocks.FLOWER_POT, Items.TWISTING_VINES, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_vine", Blocks.FLOWER_POT, Items.VINE, GufyBlockTypes.FLOWER_BOX));
-        add(pottedFlowerBuilder("potted_weeping_vine", Blocks.FLOWER_POT, Items.WEEPING_VINES, GufyBlockTypes.FLOWER_BOX));
+        add(new GufyFamilyBuilder().name("wattle_fence").properties(GufyProperties.WATTLE).blockTypes(GufyBlockTypes.WATTLEFENCE).furnaceFuel(BURN_TIME_100).buildFamily());
 
         // ~~ DEPRECATED BLOCKS ~~ //
-        add(familyBuilder("wagon_wheel", Blocks.SPRUCE_TRAPDOOR, GufyBlockTypes.WAGONWHEEL)); // DEPRECATED
-        add(familyBuilder("mossy_oak", Blocks.OAK_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_oak", Blocks.OAK_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_spruce", Blocks.SPRUCE_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_spruce", Blocks.SPRUCE_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_birch", Blocks.BIRCH_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_birch", Blocks.BIRCH_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_dark_oak", Blocks.DARK_OAK_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_dark_oak", Blocks.DARK_OAK_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_jungle", Blocks.JUNGLE_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_jungle", Blocks.JUNGLE_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_acacia", Blocks.ACACIA_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_acacia", Blocks.ACACIA_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_crimson", Blocks.CRIMSON_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_crimson", Blocks.CRIMSON_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_warped", Blocks.WARPED_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("cracked_warped", Blocks.WARPED_PLANKS, GUFY_WOOD_TYPES)); // DEPRECATED
-        add(familyBuilder("diorite_cobble", Blocks.DIORITE, GUFY_STONE_TYPES)); // DEPRECATED
-        add(familyBuilder("mossy_diorite_cobble", Blocks.DIORITE, GUFY_STONE_TYPES)); // DEPRECATED
-        add(familyBuilder("oak_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("spruce_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("birch_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("dark_oak_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("jungle_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("acacia_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("crimson_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("warped_framed_daub", Blocks.PACKED_MUD, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("daub", Blocks.PACKED_MUD, GUFY_DIRT_TYPES)); // DEPRECATED
-        add(familyBuilder("thatch", Blocks.HAY_BLOCK, GUFY_DIRT_TYPES)); // DEPRECATED
-        add(familyBuilder("mushroom_stem", Blocks.BROWN_MUSHROOM_BLOCK, ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR))); // DEPRECATED
-        add(familyBuilder("mushroom_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE)); // DEPRECATED
-        add(familyBuilder("mushroom_framed_terracotta", GufyProperties.WHITE_FRAMED_TERRACOTTA, FRAMED_BLOCK_TYPES)); // DEPRECATED
-        add(familyBuilder("leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("white_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("light_gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("gray_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("black_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("brown_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("red_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("orange_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("yellow_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("lime_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("green_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("cyan_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("light_blue_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("blue_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("purple_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("magenta_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("pink_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("oakfield_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("avalon_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("gufy_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("midland_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("ring_leaded_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("oak_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("spruce_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("birch_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("dark_oak_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("jungle_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("acacia_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("mangrove_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("cherry_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("bamboo_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("crimson_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("warped_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("pale_oak_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
-        add(familyBuilder("seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("white_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("light_gray_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("gray_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("black_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("brown_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("red_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("orange_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("yellow_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("lime_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("green_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("cyan_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("light_blue_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("blue_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("purple_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("magenta_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
-        add(familyBuilder("pink_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(new GufyFamilyBuilder().name("wagon_wheel").parent(SPRUCE_TRAPDOOR).blockTypes(GufyBlockTypes.WAGONWHEEL).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_oak").parent(OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_oak").parent(OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_spruce").parent(SPRUCE_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_spruce").parent(SPRUCE_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_birch").parent(BIRCH_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_birch").parent(BIRCH_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_dark_oak").parent(DARK_OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_dark_oak").parent(DARK_OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_jungle").parent(JUNGLE_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_jungle").parent(JUNGLE_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_acacia").parent(ACACIA_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_acacia").parent(ACACIA_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_crimson").parent(CRIMSON_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_crimson").parent(CRIMSON_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_warped").parent(WARPED_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("cracked_warped").parent(WARPED_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("diorite_cobble").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mossy_diorite_cobble").parent(DIORITE).blockTypes(GUFY_STONE_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("oak_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("spruce_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("birch_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("dark_oak_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("jungle_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("acacia_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("crimson_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("warped_framed_daub").parent(PACKED_MUD).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("daub").parent(PACKED_MUD).blockTypes(GUFY_DIRT_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("thatch").parent(HAY_BLOCK).blockTypes(GUFY_DIRT_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mushroom_stem").parent(BROWN_MUSHROOM_BLOCK).blockTypes(ArrayUtils.addAll(VANILLA_WOOD_TYPES_ALL, GufyBlockTypes.TRAPDOOR)).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mushroom_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("mushroom_framed_terracotta").properties(GufyProperties.WHITE_FRAMED_TERRACOTTA).blockTypes(FRAMED_BLOCK_TYPES).buildFamily()); // DEPRECATED
+        add(new GufyFamilyBuilder().name("leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("white_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("light_gray_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("gray_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("black_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("brown_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("red_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("orange_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("yellow_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("lime_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("green_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("cyan_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("light_blue_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("blue_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("purple_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("magenta_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("pink_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("oakfield_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("avalon_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("gufy_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("midland_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("ring_leaded_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("oak_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("spruce_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("birch_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("dark_oak_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("jungle_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("acacia_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("mangrove_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("cherry_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("bamboo_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("warped_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("pale_oak_framed_glass").properties(GufyProperties.LEADED_GLASS).blockTypes(GufyBlockTypes.PANE).buildFamily());
+        add(new GufyFamilyBuilder().name("seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("white_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("light_gray_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("gray_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("black_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("brown_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("red_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("orange_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("yellow_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("lime_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("green_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("cyan_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("light_blue_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("blue_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("purple_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("magenta_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
+        add(new GufyFamilyBuilder().name("pink_seat").parent(OAK_SLAB).blockTypes(GufyBlockTypes.SEAT).buildFamily());
     }};
     //**************************************************************//
 
@@ -469,7 +481,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> MOSS_CLUMP = ITEMS.registerItem(
             "moss_clump",
             GufyMossClump::new,
-            () -> new Item.Properties()
+            () -> new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_LOW)
     );
     public static final DeferredItem<Item> HAMMER = ITEMS.registerItem(
             "hammer",

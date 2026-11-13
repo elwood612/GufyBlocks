@@ -36,8 +36,7 @@ public class GufyFamilyBuilder
                 if (_parentBlock == null) _parentBlock = getParent(_name);
                 if (_parentProperties == null) _parentProperties = GufyUtil.copyPropertiesOf(_parentBlock);
 
-                if (_flower != null) add(GufyUtil.getPottedVariant(_name, _parentProperties, _parentBlock, _flower, blockType));
-                else add(GufyUtil.getVariant(_name, _parentProperties, _parentBlock, blockType, _compostable, _furnaceFuel));
+                add(GufyUtil.getVariant(_name, _parentProperties, _parentBlock, blockType, _compostable, _furnaceFuel));
             }
         }};
     }
@@ -60,6 +59,17 @@ public class GufyFamilyBuilder
                 for (GufyBlockTypes blockType: _blockTypes) {
                     add(GufyUtil.getVariant(colorName, colorBlockProperties, _parentBlock, blockType, null, null));
                 }
+            }
+        }};
+    }
+
+    public List<DeferredBlock<Block>> buildPottedFamily() {
+        return new ArrayList<>() {{
+            for (GufyBlockTypes blockType : _blockTypes) {
+                if (_parentBlock == null) _parentBlock = getParent(_name);
+                if (_parentProperties == null) _parentProperties = GufyUtil.copyPropertiesOf(_parentBlock);
+
+                add(GufyUtil.getPottedVariant(_name, _parentProperties, _parentBlock, _flower, blockType));
             }
         }};
     }
