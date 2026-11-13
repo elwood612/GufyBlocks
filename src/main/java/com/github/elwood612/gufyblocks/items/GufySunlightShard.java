@@ -33,7 +33,7 @@ public class GufySunlightShard extends Item
         ItemStack itemstack = player.getItemInHand(handIn);
         boolean fail = false;
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
             Holder.Reference<WorldClock> worldClock = serverLevel.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
             ServerClockManager clockManager = serverLevel.clockManager();
 
@@ -45,7 +45,7 @@ public class GufySunlightShard extends Item
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_outdoors"));
                 fail = true;
             }
-            if (!level.isRaining() && (clockManager.getTotalTicks(worldClock) % 24000 < 11000 || clockManager.getTotalTicks(worldClock) % 24000 > 22500)) {
+            if (!level.isRaining() && (clockManager.getInstance(worldClock).totalTicks() % 24000 < 11000 || clockManager.getInstance(worldClock).totalTicks() % 24000 > 22500)) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.sunlight_daytime"));
                 fail = true;
             }
@@ -58,7 +58,7 @@ public class GufySunlightShard extends Item
                 itemstack.consume(1, player);
             }
 
-            long currentTotalTime = clockManager.getTotalTicks(worldClock);
+            long currentTotalTime = clockManager.getInstance(worldClock).totalTicks();
             long currentTimeOfDay = currentTotalTime % 24000L;
             long timeToAdvance = 24000L - currentTimeOfDay;
             clockManager.addTicks(worldClock, (int)timeToAdvance);

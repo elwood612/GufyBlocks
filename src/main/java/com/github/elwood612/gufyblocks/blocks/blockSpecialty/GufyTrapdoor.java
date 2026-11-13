@@ -39,7 +39,11 @@ import java.util.function.BiConsumer;
 //      Modify the playSound method to use soundEvent
 
 public class GufyTrapdoor extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
-    public static final MapCodec<GufyTrapdoor> CODEC = RecordCodecBuilder.mapCodec((p_368443_) -> p_368443_.group(BlockSetType.CODEC.fieldOf("block_set_type").forGetter((p_304735_) -> p_304735_.type), propertiesCodec()).apply(p_368443_, GufyTrapdoor::new));
+//    public static final MapCodec<GufyTrapdoor> CODEC = RecordCodecBuilder.mapCodec((p_368443_)
+//            -> p_368443_.group(BlockSetType.CODEC
+//            .fieldOf("block_set_type")
+//            .forGetter((p_304735_) -> p_304735_.type), propertiesCodec())
+//            .apply(p_368443_, GufyTrapdoor::new));
     public static final BooleanProperty OPEN;
     public static final EnumProperty<Half> HALF;
     public static final BooleanProperty POWERED;
@@ -54,9 +58,9 @@ public class GufyTrapdoor extends HorizontalDirectionalBlock implements SimpleWa
     private final BlockSetType type;
     private final SoundEvent soundEvent;
 
-    public MapCodec<? extends GufyTrapdoor> codec() {
-        return CODEC;
-    }
+//    public MapCodec<? extends GufyTrapdoor> codec() {
+//        return CODEC;
+//    }
 
     public GufyTrapdoor(BlockSetType type, BlockBehaviour.Properties properties) {
         super(properties);

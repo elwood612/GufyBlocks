@@ -49,7 +49,7 @@ public class GufyPhasingVial extends Item
         {
             BlockPos origin = serverPlayer.getOnPos();
             Vec3 center = Vec3.atCenterOf(origin);
-            Vec3 playerPos = origin.getCenter();
+            Vec3 playerPos = Vec3.atBottomCenterOf(origin);
 
             for (int i = 0; i < delay; i += 2) { // every 2 ticks
                 GufyScheduler.schedule(serverLevel, i, serverPlayer.getUUID(), () -> {

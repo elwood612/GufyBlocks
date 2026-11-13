@@ -42,7 +42,7 @@ public class GufyInsomniaEffect extends MobEffect {
 
         Holder.Reference<WorldClock> worldClock = level.registryAccess().getOrThrow(WorldClocks.OVERWORLD);
         ServerClockManager clockManager = level.clockManager();
-        if ((clockManager.getTotalTicks(worldClock) % 24000 < 13000 || clockManager.getTotalTicks(worldClock) % 24000 > 22500)) {
+        if ((clockManager.getInstance(worldClock).totalTicks() % 24000 < 13000 || clockManager.getInstance(worldClock).totalTicks() % 24000 > 22500)) {
             player.sendSystemMessage(Component.translatable("message.gufyblocks.insomnia_effect_time"));
             return true;
         }

@@ -42,16 +42,16 @@ public class GufyPost extends Block implements SimpleWaterloggedBlock
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)));
 	}
 
-    @Nullable
-    @Override
-    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
-    {
-        ItemStack itemStack = context.getItemInHand();
-        if (!itemStack.canPerformAction(toolAction) || !GufyUtil.isScrapeable(state)) return null;
-        if(ItemAbilities.AXE_WAX_OFF.equals(toolAction))
-            return GufyUtil.getWaxedOff(state).orElse(null);
-        return null;
-    }
+//    @Nullable
+//    @Override
+//    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
+//    {
+//        ItemStack itemStack = context.getItemInHand();
+//        if (!itemStack.canPerformAction(toolAction) || !GufyUtil.isScrapeable(state)) return null;
+//        if(ItemAbilities.AXE_WAX_OFF.equals(toolAction))
+//            return GufyUtil.getWaxedOff(state).orElse(null);
+//        return null;
+//    }
 	
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) 

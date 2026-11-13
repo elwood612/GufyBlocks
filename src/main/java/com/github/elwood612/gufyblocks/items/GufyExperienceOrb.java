@@ -28,7 +28,7 @@ public class GufyExperienceOrb extends Item
         BlockPos position = player.blockPosition();
         ItemStack itemstack = player.getItemInHand(handIn);
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
 
             int basePerItem = 10 + serverLevel.getRandom().nextInt(5) + serverLevel.getRandom().nextInt(5);
             int itemsUsed = player.isShiftKeyDown() ? itemstack.getCount() : 1;

@@ -5,6 +5,7 @@ import com.github.elwood612.gufyblocks.items.GufyLedger;
 import com.github.elwood612.gufyblocks.items.GufyMemoryCharm;
 import com.github.elwood612.gufyblocks.items.GufyStillstone;
 import com.github.elwood612.gufyblocks.packets.GufyHighlightWorkstationPacket;
+import com.github.elwood612.gufyblocks.util.GufyScheduler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Holder;
@@ -32,6 +33,9 @@ import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwingAnimationType;
+import net.minecraft.world.item.component.SwingAnimation;
+import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.PlayerTeam;
@@ -57,7 +61,7 @@ public class GufyInteractEvent
 
         if (!(target instanceof LivingEntity living)) return;
 
-        // Amulet of Peace
+        // Quelling Amulet
         if (stack.getItem() instanceof GufyStillstone) {
             if (!(level.isClientSide()) && level instanceof ServerLevel serverLevel && target instanceof Mob mob) {
                 if (player instanceof ServerPlayer serverPlayer &&
@@ -69,7 +73,7 @@ public class GufyInteractEvent
                 }
 
                 pacifyMob(serverLevel, mob, player);
-                player.swing(handIn, true);
+//                player.swing(handIn, true);
 
                 mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
                 mob.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
@@ -102,10 +106,14 @@ public class GufyInteractEvent
 
         // Memory Charm
         if (stack.getItem() instanceof GufyMemoryCharm) {
-            if (!(level.isClientSide()) && level instanceof ServerLevel serverLevel && target instanceof Villager villager) {
+            if (!(level.isClientSide())
+                    && level instanceof ServerLevel serverLevel
+                    && target instanceof Villager villager
+                    && player instanceof ServerPlayer serverPlayer) {
 
-                resetVillager(villager);
-                player.swing(handIn, true);
+//                resetVillager(villager);
+                downgradeVillager(villager, serverLevel, serverPlayer);
+//                player.swing(handIn, true);
 
                 if (!player.getAbilities().instabuild) {
                     stack.consume(1, player);
@@ -138,7 +146,7 @@ public class GufyInteractEvent
         if (stack.getItem() instanceof GufyLedger) {
             if (!(level.isClientSide()) && level instanceof ServerLevel serverLevel && target instanceof Villager villager) {
 
-                player.swing(handIn, true);
+//                player.swing(handIn, true);
 
                 // if villager has a workstation, reveal it
                 Optional<GlobalPos> jobSite = villager.getBrain().getMemory(MemoryModuleType.JOB_SITE);
@@ -152,7 +160,7 @@ public class GufyInteractEvent
                             5, 0.5, 0.5, 0.5, 0.02
                     );
                     Vec3 from = villager.position();
-                    Vec3 to = jobSitePos.getCenter();
+                    Vec3 to = Vec3.atBottomCenterOf(jobSitePos);
 
                     for (int i = 0; i < 5; i++) {
                         double t = i / 20.0;
@@ -202,7 +210,7 @@ public class GufyInteractEvent
         scoreboard.addPlayerToTeam(mob.getScoreboardName(), team);
     }
 
-    private static void resetVillager(Villager villager) {
+    private static void resetVillager(Villager villager, ServerLevel serverLevel, ServerPlayer serverPlayer) {
         // 0. Release POIs first
         villager.releasePoi(MemoryModuleType.JOB_SITE);
         villager.releasePoi(MemoryModuleType.POTENTIAL_JOB_SITE);
@@ -215,13 +223,46 @@ public class GufyInteractEvent
         villager.setVillagerXp(0);
         villager.getInventory().clearContent();
 
-        // 3. Forget job site
+        // 3. Forget job site after 3 seconds
         Brain<Villager> brain = villager.getBrain();
-        brain.eraseMemory(MemoryModuleType.JOB_SITE);
-        brain.eraseMemory(MemoryModuleType.POTENTIAL_JOB_SITE);
+        GufyScheduler.schedule(serverLevel, 60, serverPlayer.getUUID(), () -> {
+            brain.eraseMemory(MemoryModuleType.JOB_SITE);
+            brain.eraseMemory(MemoryModuleType.POTENTIAL_JOB_SITE);
+        });
+    }
 
-        // 4. Force brain refresh (not needed? only use one)
-//        villager.refreshBrain((ServerLevel) villager.level());
-//        GufyScheduler.schedule(level, 100, villager.getUUID(), () -> { villager.refreshBrain((ServerLevel) villager.level()); });
+    private static void downgradeVillager(Villager villager, ServerLevel serverLevel, ServerPlayer serverPlayer) {
+        int initialVillagerLevel = villager.getVillagerData().level();
+
+        // If already at level 1, perform a full reset.
+        if (initialVillagerLevel <= 1) {
+            resetVillager(villager, serverLevel, serverPlayer);
+            return;
+        }
+
+        // Remove the latest unlocked trades.
+        MerchantOffers offers = villager.getOffers();
+
+        // For now, remove 2 trades
+        // If villager trade rebalance happens,
+        // might need to adjust based on profession too
+        int tradesToRemove = switch (initialVillagerLevel) {
+            case 5 -> 2; // Master
+            case 4 -> 2; // Expert
+            case 3 -> 2; // Journeyman
+            case 2 -> 2; // Apprentice
+            default -> 0;
+        };
+
+        for (int i = 0; i < tradesToRemove && !offers.isEmpty(); i++) {
+            offers.remove(offers.size() - 1);
+        }
+
+        // Downgrade the villager and reset XP.
+        villager.setVillagerData(
+                villager.getVillagerData().withLevel(initialVillagerLevel - 1)
+        );
+
+        villager.setVillagerXp(initialVillagerLevel == 2 ? 1 : 0);
     }
 }

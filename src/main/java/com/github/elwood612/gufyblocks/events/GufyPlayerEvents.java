@@ -63,7 +63,7 @@ public class GufyPlayerEvents
             if (server != null && server.getPlayerList().getPlayerCount() == 1) {
                 int desiredTime = level.getRandom().nextIntBetweenInclusive(0, 5500); // 2000
 
-                long currentTotalTime = clockManager.getTotalTicks(worldClock);
+                long currentTotalTime = clockManager.getInstance(worldClock).totalTicks();
                 long currentTimeOfDay = currentTotalTime % 24000L;
                 long timeToAdvance = currentTimeOfDay < desiredTime ?
                         desiredTime - currentTimeOfDay : 24000L + desiredTime - currentTimeOfDay;

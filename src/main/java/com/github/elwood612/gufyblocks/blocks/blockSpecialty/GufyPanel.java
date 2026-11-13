@@ -49,27 +49,21 @@ public class GufyPanel extends HorizontalDirectionalBlock implements SimpleWater
 	}
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec()
-    {
-        return null;
-    }
-
-    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) 
     {
         builder.add(FACING, WATERLOGGED);
     }
 
-    @Nullable
-    @Override
-    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
-    {
-        ItemStack itemStack = context.getItemInHand();
-        if (!itemStack.canPerformAction(toolAction)) return null;
-        if(ItemAbilities.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
-            return GufyUtil.getStripped(state).orElse(null);
-        return null;
-    }
+//    @Nullable
+//    @Override
+//    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
+//    {
+//        ItemStack itemStack = context.getItemInHand();
+//        if (!itemStack.canPerformAction(toolAction)) return null;
+//        if(ItemAbilities.AXE_STRIP.equals(toolAction) && GufyUtil.isStrippable(state))
+//            return GufyUtil.getStripped(state).orElse(null);
+//        return null;
+//    }
 	
 	@Override
     public BlockState getStateForPlacement(BlockPlaceContext context) 

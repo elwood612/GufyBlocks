@@ -26,7 +26,7 @@ public class GufyPotentSpectralShard extends Item
         ItemStack itemstack = player.getItemInHand(handIn);
         int duration = 60;
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
 
             if (!player.getAbilities().instabuild) {
                 itemstack.consume(1, player);

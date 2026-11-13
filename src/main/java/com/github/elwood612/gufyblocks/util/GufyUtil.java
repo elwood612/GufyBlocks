@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.permissions.LevelBasedPermissionSet;
@@ -28,6 +29,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -68,7 +71,6 @@ public class GufyUtil
         properties.jumpFactor = parent.jumpFactor;
         properties.isRedstoneConductor = parent.isRedstoneConductor;
         properties.isValidSpawn = parent.isValidSpawn;
-//        properties.hasPostProcess = parent.hasPostProcess;
         properties.isSuffocating = parent.isSuffocating;
         properties.isViewBlocking = parent.isViewBlocking;
 
@@ -81,22 +83,28 @@ public class GufyUtil
     }
 
     //***********************FAMILY BUILDER***********************//
-    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyBlockTypes ... blockTypes) {
+    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, ResourceKey<ContextIntProvider> compostable, ResourceKey<ContextIntProvider> furnaceFuel, GufyBlockTypes ... blockTypes) {
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType: blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
-                add(getVariant(name, blockProperties, parentBlock, blockType));
+                add(getVariant(name, blockProperties, parentBlock, blockType, compostable, furnaceFuel));
             }
         }};
     }
+    public static List<DeferredBlock<Block>> familyBuilder(String name, Block parentBlock, GufyBlockTypes ... blockTypes) {
+        return familyBuilder(name, parentBlock, null, null, blockTypes);
+    }
 
-    public static List<DeferredBlock<Block>> familyBuilder(String name, BlockBehaviour.Properties parentProperties, GufyBlockTypes ... blockTypes) {
+    public static List<DeferredBlock<Block>> familyBuilder(String name, BlockBehaviour.Properties parentProperties, ResourceKey<ContextIntProvider> compostable, ResourceKey<ContextIntProvider> furnaceFuel, GufyBlockTypes ... blockTypes) {
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType: blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentProperties);
-                add(getVariant(name, blockProperties, getStairParent(name), blockType));
+                add(getVariant(name, blockProperties, getStairParent(name), blockType, compostable, furnaceFuel));
             }
         }};
+    }
+    public static List<DeferredBlock<Block>> familyBuilder(String name, BlockBehaviour.Properties parentProperties, GufyBlockTypes ... blockTypes) {
+        return familyBuilder(name, parentProperties, null, null, blockTypes);
     }
 
     public static List<DeferredBlock<Block>> weatheringBuilder(String name, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes ... blockTypes) {
@@ -123,7 +131,7 @@ public class GufyUtil
                     .strength(1.5f, 6.0f);
             String name = woodType + "_framed_terracotta";
             for (GufyBlockTypes blockType: blockTypes) {
-                add(getVariant(name, blockProperties, parentBlock, blockType));
+                add(getVariant(name, blockProperties, parentBlock, blockType, null, null));
             }
 
             for (GufyColors color : GufyColors.values()) {
@@ -132,69 +140,94 @@ public class GufyUtil
                         .strength(1.5f, 6.0f);
                 String colorName = woodType + "_framed_" + color.toString() + "_terracotta";
                 for (GufyBlockTypes blockType: blockTypes) {
-                    add(getVariant(colorName, colorBlockProperties, parentBlock, blockType));
+                    add(getVariant(colorName, colorBlockProperties, parentBlock, blockType, null, null));
                 }
             }
         }};
     }
 
     //************************GET VARIANT***************************//
-    public static DeferredBlock<Block> getVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, GufyBlockTypes blockType)
+    public static DeferredBlock<Block> getVariant(
+            String name,
+            BlockBehaviour.Properties blockProperties,
+            Block parentBlock,
+            GufyBlockTypes blockType,
+            ResourceKey<ContextIntProvider> compostableBlock,
+            ResourceKey<ContextIntProvider> furnaceFuelBlock)
     {
+        ResourceKey<ContextIntProvider> furnaceFuelSlab = null;
+        if (furnaceFuelBlock == ContextIntProviders.COOKING_TIME_WOOD_BLOCKS) furnaceFuelSlab = ContextIntProviders.COOKING_TIME_WOOD_SLABS;
+        if (furnaceFuelBlock == ContextIntProviders.COOKING_TIME_WOOL) furnaceFuelSlab = ContextIntProviders.COOKING_TIME_WOOL_SLABS;
+
+        ResourceKey<ContextIntProvider> compostableSlab = null;
+        if (compostableBlock == ContextIntProviders.COMPOSTABLE_MEDIUM) compostableSlab = ContextIntProviders.COMPOSTABLE_LOW_MEDIUM;
+        if (compostableBlock == ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH) compostableSlab = ContextIntProviders.COMPOSTABLE_MEDIUM;
+        if (compostableBlock == ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE) compostableSlab = ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH;
+
         return switch (blockType) {
-            case BLOCK -> createRegistry(name, () -> new Block(blockProperties), blockProperties);
-            case STAIRS -> createRegistry(name + "_stairs", () -> new StairBlock(parentBlock.defaultBlockState(), blockProperties), blockProperties);
-            case GUFYSTAIRS -> createRegistry(name + "_stairs", () -> new GufyStairs(parentBlock.defaultBlockState(), blockProperties), blockProperties);
-            case SLAB -> createRegistry(name + "_slab", () -> new SlabBlock(blockProperties), blockProperties);
-            case GUFYSLAB -> createRegistry(name + "_slab", () -> new GufySlab(blockProperties), blockProperties);
-            case VERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyVerticalSlab(blockProperties), blockProperties);
-            case WALL -> createRegistry(name + "_wall", () -> new WallBlock(blockProperties), blockProperties);
-            case GUFYWALL -> createRegistry(name + "_wall", () -> new GufyWall(blockProperties), blockProperties);
-            case HOPPER -> createRegistry(name + "_hopper", () -> new GufyHopper(blockProperties), blockProperties);
-            case POST -> createRegistry(name + "_post", () -> new GufyPost(blockProperties), blockProperties);
-            case PILLAR -> createRegistry(name + "_pillar", () -> new RotatedPillarBlock(blockProperties), blockProperties);
-            case TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties);
-            case STONE_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new GufyTrapdoor(BlockSetType.IRON, blockProperties), blockProperties);
-            case WOOL_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new GufyTrapdoor(BlockSetType.OAK, blockProperties), blockProperties);
-            case PANEL -> createRegistry(name + "_panel", () -> new GufyPanel(blockProperties), blockProperties);
-            case FENCE -> createRegistry(name + "_fence", () -> new FenceBlock(blockProperties), blockProperties);
-            case GUFYFENCE -> createRegistry(name + "_fence", () -> new GufyFence(blockProperties), blockProperties);
-            case FENCEGATE -> createRegistry(name + "_fence_gate", () -> new FenceGateBlock(blockProperties, SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN), blockProperties);
-            case PARQUET -> createRegistry(name + "_parquet", () -> new Block(blockProperties), blockProperties);
-            case WATTLEFENCE -> createRegistry(name, () -> new GufyWattleFence(blockProperties), blockProperties);
-            case WAGONWHEEL -> createRegistry(name, () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties);
-            case PANE -> createRegistry(name + "_pane", () -> new IronBarsBlock(blockProperties), blockProperties);
-            case CHISELED -> createRegistry("chiseled_" + name, () -> new Block(blockProperties), blockProperties);
-            case FRAMED_LEFT -> createRegistry(name + "_left", () -> new Block(blockProperties), blockProperties);
-            case FRAMED_RIGHT -> createRegistry(name + "_right", () -> new Block(blockProperties), blockProperties);
-            case FRAMED_CROSS -> createRegistry(name + "_cross", () -> new Block(blockProperties), blockProperties);
-            case CARVED_LOG -> createRegistry(name, () -> new RotatedPillarBlock(blockProperties), blockProperties);
-            case SEAT -> createRegistry(name, () -> new GufySeat(blockProperties), blockProperties);
-            case VERTICAL_CONNECTED_BLOCK -> createRegistry(name, () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
-            case VERTICAL_CONNECTED_LEFT -> createRegistry(name + "_left", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
-            case VERTICAL_CONNECTED_RIGHT -> createRegistry(name + "_right", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
-            case VERTICAL_CONNECTED_CROSS -> createRegistry(name + "_cross", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties);
+            case BLOCK -> createRegistry(name, () -> new Block(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case STAIRS -> createRegistry(name + "_stairs", () -> new StairBlock(parentBlock.defaultBlockState(), blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case GUFYSTAIRS -> createRegistry(name + "_stairs", () -> new GufyStairs(parentBlock.defaultBlockState(), blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case SLAB -> createRegistry(name + "_slab", () -> new SlabBlock(blockProperties), blockProperties, compostableSlab, furnaceFuelSlab);
+            case GUFYSLAB -> createRegistry(name + "_slab", () -> new GufySlab(blockProperties), blockProperties, compostableSlab, furnaceFuelSlab);
+            case VERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyVerticalSlab(blockProperties), blockProperties, compostableSlab, furnaceFuelSlab);
+            case WALL -> createRegistry(name + "_wall", () -> new WallBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case GUFYWALL -> createRegistry(name + "_wall", () -> new GufyWall(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case HOPPER -> createRegistry(name + "_hopper", () -> new GufyHopper(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case POST -> createRegistry(name + "_post", () -> new GufyPost(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case PILLAR -> createRegistry(name + "_pillar", () -> new RotatedPillarBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case STONE_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new GufyTrapdoor(BlockSetType.IRON, blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case WOOL_TRAPDOOR -> createRegistry(name + "_trapdoor", () -> new GufyTrapdoor(BlockSetType.OAK, blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case PANEL -> createRegistry(name + "_panel", () -> new GufyPanel(blockProperties), blockProperties, compostableSlab, furnaceFuelSlab);
+            case FENCE -> createRegistry(name + "_fence", () -> new FenceBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case GUFYFENCE -> createRegistry(name + "_fence", () -> new GufyFence(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case FENCEGATE -> createRegistry(name + "_fence_gate", () -> new FenceGateBlock(blockProperties, SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN), blockProperties, compostableBlock, furnaceFuelBlock);
+            case PARQUET -> createRegistry(name + "_parquet", () -> new Block(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case WATTLEFENCE -> createRegistry(name, () -> new GufyWattleFence(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case WAGONWHEEL -> createRegistry(name, () -> new TrapDoorBlock(BlockSetType.OAK, blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case PANE -> createRegistry(name + "_pane", () -> new IronBarsBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case CHISELED -> createRegistry("chiseled_" + name, () -> new Block(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case FRAMED_LEFT -> createRegistry(name + "_left", () -> new Block(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case FRAMED_RIGHT -> createRegistry(name + "_right", () -> new Block(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case FRAMED_CROSS -> createRegistry(name + "_cross", () -> new Block(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case CARVED_LOG -> createRegistry(name, () -> new RotatedPillarBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case SEAT -> createRegistry(name, () -> new GufySeat(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case VERTICAL_CONNECTED_BLOCK -> createRegistry(name, () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case VERTICAL_CONNECTED_LEFT -> createRegistry(name + "_left", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case VERTICAL_CONNECTED_RIGHT -> createRegistry(name + "_right", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
+            case VERTICAL_CONNECTED_CROSS -> createRegistry(name + "_cross", () -> new GufyVerticalConnectedBlock(blockProperties), blockProperties, compostableBlock, furnaceFuelBlock);
             default -> null;
         };
     }
 
-    public static DeferredBlock<Block> getWeatheringVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, GufyWeathering.WeatherState state, GufyBlockTypes blockType)
+    public static DeferredBlock<Block> getWeatheringVariant(
+            String name,
+            BlockBehaviour.Properties blockProperties,
+            Block parentBlock,
+            GufyWeathering.WeatherState state,
+            GufyBlockTypes blockType)
     {
         return switch (blockType) {
-            case WEATHERINGSTAIRS -> createRegistry(name + "_stairs", () -> new GufyWeatheringStairs(parentBlock.defaultBlockState(), blockProperties, state), blockProperties);
-            case WEATHERINGSLAB -> createRegistry(name + "_slab", () -> new GufyWeatheringSlab(blockProperties, state), blockProperties);
-            case WEATHERINGVERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(blockProperties, state), blockProperties);
-            case WEATHERINGWALL -> createRegistry(name + "_wall", () -> new GufyWeatheringWall(blockProperties, state), blockProperties);
-            case WEATHERINGHOPPER -> createRegistry(name + "_hopper", () -> new GufyWeatheringHopper(blockProperties, state), blockProperties);
-            case WEATHERINGPOST -> createRegistry(name + "_post", () -> new GufyWeatheringPost(blockProperties, state), blockProperties);
+            case WEATHERINGSTAIRS -> createRegistry(name + "_stairs", () -> new GufyWeatheringStairs(parentBlock.defaultBlockState(), blockProperties, state), blockProperties, null, null);
+            case WEATHERINGSLAB -> createRegistry(name + "_slab", () -> new GufyWeatheringSlab(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGVERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGWALL -> createRegistry(name + "_wall", () -> new GufyWeatheringWall(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGHOPPER -> createRegistry(name + "_hopper", () -> new GufyWeatheringHopper(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGPOST -> createRegistry(name + "_post", () -> new GufyWeatheringPost(blockProperties, state), blockProperties, null, null);
             default -> null;
         };
     }
 
-    public static DeferredBlock<Block> getPottedVariant(String name, BlockBehaviour.Properties blockProperties, Block parentBlock, Item flower, GufyBlockTypes blockType)
+    public static DeferredBlock<Block> getPottedVariant(
+            String name,
+            BlockBehaviour.Properties blockProperties,
+            Block parentBlock,
+            Item flower,
+            GufyBlockTypes blockType)
     {
         return switch (blockType) {
-            case FLOWER_BOX -> createRegistry(name, () -> new GufyFlowerBox(flower, blockProperties), blockProperties);
+            case FLOWER_BOX -> createRegistry(name, () -> new GufyFlowerBox(flower, blockProperties), blockProperties, null, null);
             default -> null;
         };
     }
@@ -222,7 +255,7 @@ public class GufyUtil
         if (BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath("minecraft", name + "s")))
             return BuiltInRegistries.BLOCK.getValue(Identifier.fromNamespaceAndPath("minecraft", name + "s"));
 
-        else return Blocks.OAK_PLANKS;
+        return Blocks.OAK_PLANKS;
     }
 
 
@@ -291,7 +324,7 @@ public class GufyUtil
         var name = Component.literal("@");
         try {
             CommandSourceStack commandsourcestack = new CommandSourceStack(
-                    CommandSource.NULL, Vec3.atCenterOf(pos), Vec2.ZERO, level, LevelBasedPermissionSet.OWNER, name.getString(), name, minecraftserver, castingPlayer);
+                    CommandSource.NULL, Vec3.atCenterOf(pos), Vec2.ZERO, level, LevelBasedPermissionSet.OWNER, minecraftserver, castingPlayer);
             minecraftserver.getCommands().performPrefixedCommand(commandsourcestack, command);
         } catch (Throwable throwable) {
             CrashReport crashreport = CrashReport.forThrowable(throwable, "Executing command block");

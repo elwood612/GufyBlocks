@@ -6,6 +6,7 @@ import com.github.elwood612.gufyblocks.effects.GufyInsomniaEffect;
 import com.github.elwood612.gufyblocks.seat.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
+import com.github.elwood612.gufyblocks.util.GufyFamilyBuilder;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyProperties;
 import com.mojang.serialization.Codec;
@@ -16,8 +17,10 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffect;
@@ -28,6 +31,8 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -40,6 +45,7 @@ import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.*;
+import static net.minecraft.world.level.block.Blocks.*;
 
 public class GufyRegistry
 {
@@ -67,6 +73,11 @@ public class GufyRegistry
     private static final GufyBlockTypes[] VANILLA_STRIPPABLE_WOOD_TYPES_ALL = GufyUtil.blocktypeBuilder().get(12);
     private static final GufyBlockTypes[] FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(13);
     private static final GufyBlockTypes[] VERTICAL_FRAMED_BLOCK_TYPES = GufyUtil.blocktypeBuilder().get(14);
+
+    private static final ResourceKey<ContextIntProvider> BURN_TIME_300 = ContextIntProviders.COOKING_TIME_WOOD_BLOCKS;
+    private static final ResourceKey<ContextIntProvider> BURN_TIME_100 = ContextIntProviders.COOKING_TIME_WOOL;
+    private static final ResourceKey<ContextIntProvider> COMPOSTABLE_65 = ContextIntProviders.COMPOSTABLE_MEDIUM;
+
     //**************************************************************//
 
 
@@ -75,7 +86,9 @@ public class GufyRegistry
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
         // ~~ WOOD ~~ //
-        add(familyBuilder("oak", Blocks.OAK_PLANKS, VANILLA_WOOD_TYPES));
+//        add(familyBuilder("oak", Blocks.OAK_PLANKS, VANILLA_WOOD_TYPES));
+        add(new GufyFamilyBuilder().name("oak").parent(OAK_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+
         add(familyBuilder("oak_parquet", Blocks.OAK_PLANKS, GUFY_DIRT_TYPES));
         add(familyBuilder("big_oak", Blocks.OAK_PLANKS, GUFY_WOOD_TYPES));
         add(familyBuilder("oak_wood", Blocks.OAK_WOOD, VANILLA_STRIPPABLE_WOOD_TYPES_ALL));
@@ -262,58 +275,58 @@ public class GufyRegistry
 
         // ~~ TERRACOTTA ~~ //
         add(familyBuilder("terracotta", Blocks.TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("white_terracotta", Blocks.WHITE_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_gray_terracotta", Blocks.LIGHT_GRAY_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("gray_terracotta", Blocks.GRAY_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("black_terracotta", Blocks.BLACK_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("brown_terracotta", Blocks.BROWN_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("red_terracotta", Blocks.RED_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("orange_terracotta", Blocks.ORANGE_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("yellow_terracotta", Blocks.YELLOW_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("lime_terracotta", Blocks.LIME_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("green_terracotta", Blocks.GREEN_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("cyan_terracotta", Blocks.CYAN_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_blue_terracotta", Blocks.LIGHT_BLUE_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("blue_terracotta", Blocks.BLUE_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("purple_terracotta", Blocks.PURPLE_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("magenta_terracotta", Blocks.MAGENTA_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("pink_terracotta", Blocks.PINK_TERRACOTTA, VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("white_terracotta", Blocks.DYED_TERRACOTTA.white(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("light_gray_terracotta", Blocks.DYED_TERRACOTTA.lightGray(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("gray_terracotta", Blocks.DYED_TERRACOTTA.gray(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("black_terracotta", Blocks.DYED_TERRACOTTA.black(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("brown_terracotta", Blocks.DYED_TERRACOTTA.brown(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("red_terracotta", Blocks.DYED_TERRACOTTA.red(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("orange_terracotta", Blocks.DYED_TERRACOTTA.orange(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("yellow_terracotta", Blocks.DYED_TERRACOTTA.yellow(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("lime_terracotta", Blocks.DYED_TERRACOTTA.lime(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("green_terracotta", Blocks.DYED_TERRACOTTA.green(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("cyan_terracotta", Blocks.DYED_TERRACOTTA.cyan(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("light_blue_terracotta", Blocks.DYED_TERRACOTTA.lightBlue(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("blue_terracotta", Blocks.DYED_TERRACOTTA.blue(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("purple_terracotta", Blocks.DYED_TERRACOTTA.purple(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("magenta_terracotta", Blocks.DYED_TERRACOTTA.magenta(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("pink_terracotta", Blocks.DYED_TERRACOTTA.pink(), VANILLA_STONE_TYPES_ALL));
 
         // ~~ CONCRETE ~~ //
-        add(familyBuilder("white_concrete", Blocks.WHITE_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_gray_concrete", Blocks.LIGHT_GRAY_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("gray_concrete", Blocks.GRAY_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("black_concrete", Blocks.BLACK_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("brown_concrete", Blocks.BROWN_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("red_concrete", Blocks.RED_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("orange_concrete", Blocks.ORANGE_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("yellow_concrete", Blocks.YELLOW_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("lime_concrete", Blocks.LIME_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("green_concrete", Blocks.GREEN_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("cyan_concrete", Blocks.CYAN_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("light_blue_concrete", Blocks.LIGHT_BLUE_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("blue_concrete", Blocks.BLUE_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("purple_concrete", Blocks.PURPLE_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("magenta_concrete", Blocks.MAGENTA_CONCRETE, VANILLA_STONE_TYPES_ALL));
-        add(familyBuilder("pink_concrete", Blocks.PINK_CONCRETE, VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("white_concrete", Blocks.CONCRETE.white(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("light_gray_concrete", Blocks.CONCRETE.lightGray(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("gray_concrete", Blocks.CONCRETE.gray(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("black_concrete", Blocks.CONCRETE.black(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("brown_concrete", Blocks.CONCRETE.brown(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("red_concrete", Blocks.CONCRETE.red(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("orange_concrete", Blocks.CONCRETE.orange(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("yellow_concrete", Blocks.CONCRETE.yellow(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("lime_concrete", Blocks.CONCRETE.lime(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("green_concrete", Blocks.CONCRETE.green(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("cyan_concrete", Blocks.CONCRETE.cyan(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("light_blue_concrete", Blocks.CONCRETE.lightBlue(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("blue_concrete", Blocks.CONCRETE.blue(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("purple_concrete", Blocks.CONCRETE.purple(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("magenta_concrete", Blocks.CONCRETE.magenta(), VANILLA_STONE_TYPES_ALL));
+        add(familyBuilder("pink_concrete", Blocks.CONCRETE.pink(), VANILLA_STONE_TYPES_ALL));
 
         // ~~ WOOL ~~ //
-        add(familyBuilder("white_wool", Blocks.WHITE_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("light_gray_wool", Blocks.LIGHT_GRAY_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("gray_wool", Blocks.GRAY_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("black_wool", Blocks.BLACK_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("brown_wool", Blocks.BROWN_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("red_wool", Blocks.RED_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("orange_wool", Blocks.ORANGE_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("yellow_wool", Blocks.YELLOW_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("lime_wool", Blocks.LIME_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("green_wool", Blocks.GREEN_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("cyan_wool", Blocks.CYAN_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("light_blue_wool", Blocks.LIGHT_BLUE_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("blue_wool", Blocks.BLUE_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("purple_wool", Blocks.PURPLE_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("magenta_wool", Blocks.MAGENTA_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
-        add(familyBuilder("pink_wool", Blocks.PINK_WOOL, ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("white_wool", Blocks.WOOL.white(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("light_gray_wool", Blocks.WOOL.lightGray(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("gray_wool", Blocks.WOOL.gray(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("black_wool", Blocks.WOOL.black(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("brown_wool", Blocks.WOOL.brown(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("red_wool", Blocks.WOOL.red(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("orange_wool", Blocks.WOOL.orange(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("yellow_wool", Blocks.WOOL.yellow(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("lime_wool", Blocks.WOOL.lime(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("green_wool", Blocks.WOOL.green(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("cyan_wool", Blocks.WOOL.cyan(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("light_blue_wool", Blocks.WOOL.lightBlue(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("blue_wool", Blocks.WOOL.blue(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("purple_wool", Blocks.WOOL.purple(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("magenta_wool", Blocks.WOOL.magenta(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
+        add(familyBuilder("pink_wool", Blocks.WOOL.pink(), ArrayUtils.addAll(VANILLA_DIRT_TYPES, GufyBlockTypes.WOOL_TRAPDOOR)));
 
 
         // ~~ FRAMED TERRACOTTA ~~ //
@@ -332,41 +345,22 @@ public class GufyRegistry
 
 
         // ~~ COPPER ~~ //
-        add(weatheringBuilder("copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
-        add(weatheringBuilder("exposed_copper", Blocks.EXPOSED_COPPER, GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
-        add(weatheringBuilder("weathered_copper", Blocks.WEATHERED_COPPER, GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
-        add(weatheringBuilder("oxidized_copper", Blocks.OXIDIZED_COPPER, GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
-        add(weatheringBuilder("cut_copper", Blocks.COPPER_BLOCK, GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("exposed_cut_copper", Blocks.EXPOSED_COPPER, GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("weathered_cut_copper", Blocks.WEATHERED_COPPER, GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("oxidized_cut_copper", Blocks.OXIDIZED_COPPER, GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_copper", Blocks.COPPER_BLOCK, WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_exposed_copper", Blocks.EXPOSED_COPPER, WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_weathered_copper", Blocks.WEATHERED_COPPER, WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_oxidized_copper", Blocks.OXIDIZED_COPPER, WAXED_COPPER_TYPES));
-        add(familyBuilder("waxed_cut_copper", Blocks.COPPER_BLOCK, WAXED_CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_exposed_cut_copper", Blocks.EXPOSED_COPPER, WAXED_CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_weathered_cut_copper", Blocks.WEATHERED_COPPER, WAXED_CUT_COPPER_TYPES));
-        add(familyBuilder("waxed_oxidized_cut_copper", Blocks.OXIDIZED_COPPER, WAXED_CUT_COPPER_TYPES));
-
-        // ~~ SEATS ~~ //
-        add(familyBuilder("seat", GufyProperties.WOODEN_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("white_seat", GufyProperties.WHITE_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("light_gray_seat", GufyProperties.LIGHT_GRAY_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("gray_seat", GufyProperties.GRAY_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("black_seat", GufyProperties.BLACK_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("brown_seat", GufyProperties.BROWN_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("red_seat", GufyProperties.RED_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("orange_seat", GufyProperties.ORANGE_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("yellow_seat", GufyProperties.YELLOW_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("lime_seat", GufyProperties.LIME_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("green_seat", GufyProperties.GREEN_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("cyan_seat", GufyProperties.CYAN_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("light_blue_seat", GufyProperties.LIGHT_BLUE_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("blue_seat", GufyProperties.BLUE_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("purple_seat", GufyProperties.PURPLE_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("magenta_seat", GufyProperties.MAGENTA_SEAT, GufyBlockTypes.SEAT));
-        add(familyBuilder("pink_seat", GufyProperties.PINK_SEAT, GufyBlockTypes.SEAT));
+        add(weatheringBuilder("copper", Blocks.COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
+        add(weatheringBuilder("exposed_copper", Blocks.COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
+        add(weatheringBuilder("weathered_copper", Blocks.COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
+        add(weatheringBuilder("oxidized_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
+        add(weatheringBuilder("cut_copper", Blocks.COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("exposed_cut_copper", Blocks.COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("weathered_cut_copper", Blocks.COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
+        add(weatheringBuilder("oxidized_cut_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
+        add(familyBuilder("waxed_copper", Blocks.COPPER_BLOCK.weathering().unaffected(), WAXED_COPPER_TYPES));
+        add(familyBuilder("waxed_exposed_copper", Blocks.COPPER_BLOCK.weathering().exposed(), WAXED_COPPER_TYPES));
+        add(familyBuilder("waxed_weathered_copper", Blocks.COPPER_BLOCK.weathering().weathered(), WAXED_COPPER_TYPES));
+        add(familyBuilder("waxed_oxidized_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), WAXED_COPPER_TYPES));
+        add(familyBuilder("waxed_cut_copper", Blocks.COPPER_BLOCK.weathering().unaffected(), WAXED_CUT_COPPER_TYPES));
+        add(familyBuilder("waxed_exposed_cut_copper", Blocks.COPPER_BLOCK.weathering().exposed(), WAXED_CUT_COPPER_TYPES));
+        add(familyBuilder("waxed_weathered_cut_copper", Blocks.COPPER_BLOCK.weathering().weathered(), WAXED_CUT_COPPER_TYPES));
+        add(familyBuilder("waxed_oxidized_cut_copper", Blocks.COPPER_BLOCK.weathering().oxidized(), WAXED_CUT_COPPER_TYPES));
 
         // ~~ MISCELLANEOUS ~~ //
         add(familyBuilder("wattle_fence", GufyProperties.WATTLE, GufyBlockTypes.WATTLEFENCE));
@@ -449,6 +443,23 @@ public class GufyRegistry
         add(familyBuilder("crimson_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("warped_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
         add(familyBuilder("pale_oak_framed_glass", GufyProperties.LEADED_GLASS, GufyBlockTypes.PANE));
+        add(familyBuilder("seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("white_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("light_gray_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("gray_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("black_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("brown_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("red_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("orange_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("yellow_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("lime_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("green_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("cyan_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("light_blue_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("blue_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("purple_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("magenta_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
+        add(familyBuilder("pink_seat", Blocks.OAK_SLAB, GufyBlockTypes.SEAT));
     }};
     //**************************************************************//
 
@@ -613,13 +624,21 @@ public class GufyRegistry
     public static final Supplier<DataComponentType<String>> OWNER = DATA_COMPONENT_TYPES.register("owner", () ->
             DataComponentType.<String>builder()
                     .persistent(Codec.STRING)
-                    .networkSynchronized(ByteBufCodecs.STRING_UTF8)
+//                    .networkSynchronized(ByteBufCodecs.STRING_UTF8)
+                    .networkSynchronized(StreamCodec.of(
+                            (buf, value) -> ByteBufCodecs.STRING_UTF8.encode(buf.copy(), value),
+                            buf -> ByteBufCodecs.STRING_UTF8.decode(buf.copy())
+                    ))
                     .build()
     );
     public static final Supplier<DataComponentType<Identifier>> STORED_BIOME = DATA_COMPONENT_TYPES.register("stored_biome", () ->
             DataComponentType.<Identifier>builder()
                     .persistent(Identifier.CODEC)
-                    .networkSynchronized(Identifier.STREAM_CODEC)
+//                    .networkSynchronized(Identifier.STREAM_CODEC)
+                    .networkSynchronized(StreamCodec.of(
+                            (buf, value) -> Identifier.STREAM_CODEC.encode(buf.copy(), value),
+                            buf -> Identifier.STREAM_CODEC.decode(buf.copy())
+                    ))
                     .build()
     );
     public static final Supplier<DataComponentType<GufyCompassData>> COMPASS_DATA = DATA_COMPONENT_TYPES.register("compass_data", () ->
@@ -634,13 +653,23 @@ public class GufyRegistry
 
 
     //***********************REGISTRY METHODS***********************//
-    public static <T extends Block>DeferredBlock<T> createRegistry(String name, Supplier<T> blockSupplier, BlockBehaviour.Properties blockProperties)
+    public static <T extends Block>DeferredBlock<T> createRegistry(
+            String name,
+            Supplier<T> blockSupplier,
+            BlockBehaviour.Properties blockProperties,
+            ResourceKey<ContextIntProvider> compostable,
+            ResourceKey<ContextIntProvider> furnaceFuel)
     {
         ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, name));
         blockProperties.setId(blockKey);
 
         DeferredBlock<T> block = BLOCKS.register(name, blockSupplier);
-        ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
+
+        Item.Properties itemProperties = new Item.Properties();
+        if (compostable != null) itemProperties.compostable(compostable);
+        if (furnaceFuel != null) itemProperties.cookingFuel(furnaceFuel);
+
+        ITEMS.registerSimpleBlockItem(name, block, () -> itemProperties);
 
         return block;
     }

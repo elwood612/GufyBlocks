@@ -46,12 +46,6 @@ public class GufyWattleFence extends HorizontalDirectionalBlock implements Simpl
 	}
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec()
-    {
-        return null;
-    }
-
-    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) 
     {
         builder.add(FACING, WATERLOGGED);

@@ -7,14 +7,14 @@ import com.github.elwood612.gufyblocks.util.*;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.VertexFormat;
+//import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.ShapeRenderer;
+//import net.minecraft.client.renderer.MultiBufferSource;
+//import net.minecraft.client.renderer.ShapeRenderer;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.core.BlockPos;
@@ -73,9 +73,9 @@ public class GufyClientEvents
         }
 
         PoseStack poseStack = event.getPoseStack();
-        MultiBufferSource bufferSource = mc.renderBuffers().bufferSource();
-        Camera camera = mc.gameRenderer.getMainCamera();
-        Vec3 cameraPos = camera.position();
+//        MultiBufferSource bufferSource = mc.renderBuffers().bufferSource();
+//        Camera camera = mc.gameRenderer.getMainCamera();
+//        Vec3 cameraPos = camera.position();
         BlockPos pos = GufyHighlightRenderer.pos;
         BlockState state = level.getBlockState(pos);
         // RenderType translucent = RenderTypes.entityTranslucent(Identifier.fromNamespaceAndPath("minecraft", "textures/misc/forcefield.png"));

@@ -2,10 +2,11 @@ package com.github.elwood612.gufyblocks.blocks.blockSpecialty;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Prediction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -49,13 +50,6 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock
         super(properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
         this.flower = flower;
-    }
-
-
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec()
-    {
-        return null;
     }
 
     @Override
@@ -119,7 +113,7 @@ public class GufyFlowerBox extends HorizontalDirectionalBlock
         BlockState newFlowerBox = GufyUtil.getGufyBlock("flower_box").withPropertiesOf(state);
         ItemStack itemstack = new ItemStack(flower);
         if (!player.addItem(itemstack)) {
-            player.drop(itemstack, false);
+            player.drop(itemstack, false, Prediction.PREDICTED);
         }
         level.setBlock(pos, newFlowerBox, 3);
         level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);

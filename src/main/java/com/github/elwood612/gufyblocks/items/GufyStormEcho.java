@@ -2,6 +2,7 @@ package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.ChatFormatting;
+import net.minecraft.advancements.predicates.entity.EntityTypePredicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
@@ -11,9 +12,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EntitySpawnReason;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +29,7 @@ public class GufyStormEcho extends Item
         BlockPos position = player.getOnPos();
         ItemStack itemstack = player.getItemInHand(handIn);
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));
@@ -50,9 +49,9 @@ public class GufyStormEcho extends Item
             GufyUtil.execute("weather thunder 6000", serverLevel, position, player);
             level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("message.gufyblocks.server_thunder"), true);
 
-            LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(serverLevel, EntitySpawnReason.COMMAND);
+            LightningBolt lightning = EntityTypes.LIGHTNING_BOLT.create(serverLevel, EntitySpawnReason.COMMAND);
             if (lightning != null) {
-                lightning.moveOrInterpolateTo(player.position());
+                lightning.moveOrInterpolateTo(PositionPath.of(player.position()));
                 serverLevel.addFreshEntity(lightning);
             }
 

@@ -3,7 +3,7 @@ package com.github.elwood612.gufyblocks.blocks.blockWeathering;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -54,15 +54,15 @@ public class GufyWeatheringVerticalSlab extends HorizontalDirectionalBlock imple
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
-    @Nullable
-    @Override
-    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
-    {
-        ItemStack itemStack = context.getItemInHand();
-        if (!itemStack.canPerformAction(toolAction)) return null;
-        if (ItemAbilities.AXE_SCRAPE.equals(toolAction)) return GufyWeathering.getPrevious(state).orElse(null);
-        return null;
-    }
+//    @Nullable
+//    @Override
+//    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate)
+//    {
+//        ItemStack itemStack = context.getItemInHand();
+//        if (!itemStack.canPerformAction(toolAction)) return null;
+//        if (ItemAbilities.AXE_SCRAPE.equals(toolAction)) return GufyWeathering.getPrevious(state).orElse(null);
+//        return null;
+//    }
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
@@ -174,11 +174,5 @@ public class GufyWeatheringVerticalSlab extends HorizontalDirectionalBlock imple
     public FluidState getFluidState(BlockState state)
     {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
-    }
-
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec()
-    {
-        return null;
     }
 }

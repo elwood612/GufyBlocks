@@ -33,7 +33,7 @@ public class GufyAnchor extends Item
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer && itemstack.has(GufyRegistry.OWNER.get())) {
             String ownerName = itemstack.getOrDefault(GufyRegistry.OWNER.get(), "");
 
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
 
             if (ownerName.isEmpty()) return InteractionResult.PASS;
 

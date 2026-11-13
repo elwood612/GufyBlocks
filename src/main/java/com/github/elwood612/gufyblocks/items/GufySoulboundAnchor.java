@@ -31,7 +31,7 @@ public class GufySoulboundAnchor extends Item
         BlockPos position = player.blockPosition();
         ItemStack itemstack = player.getItemInHand(handIn);
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
 
             Optional<GlobalPos> optional = player.getLastDeathLocation();
 

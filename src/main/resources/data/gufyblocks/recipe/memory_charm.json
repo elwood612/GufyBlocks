@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "gufyblocks:memory_charm",
+    "X": "minecraft:gold_ingot",
+	"Y": "minecraft:gold_nugget"
+  },
+  "pattern": [
+    "YXY",
+    "X#X",
+	"YXY"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:memory_charm",
+    "count": 2
+  }
+}

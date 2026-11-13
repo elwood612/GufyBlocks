@@ -13,6 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
+import net.minecraft.util.Prediction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -22,6 +23,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.block.BonemealSource;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -47,7 +50,7 @@ public class GufyBiomeSeed extends Item
             Holder<Biome> biomeHolder = level.getBiome(player.blockPosition());
             Identifier biomeID = biomeHolder.unwrapKey().get().identifier();
 
-            player.swing(handIn, true);
+//            player.swing(handIn, true);
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));
@@ -56,11 +59,16 @@ public class GufyBiomeSeed extends Item
             }
 
             if (!itemstack.has(GufyRegistry.STORED_BIOME.get())){
+//                if (biomeID == Biomes.PALE_GARDEN.identifier()) {
+//                    serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.biome_wrong"));
+//                    level.playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
+//                    return InteractionResult.FAIL;
+//                }
                 if (itemstack.getCount() > 1) {
                     ItemStack single = itemstack.split(1);
                     single.set(GufyRegistry.STORED_BIOME.get(), biomeID);
                     if (!player.getInventory().add(single)) {
-                        player.drop(single, false);
+                        player.drop(single, false, Prediction.PREDICTED);
                     }
                 } else {
                     itemstack.set(GufyRegistry.STORED_BIOME.get(), biomeID);
@@ -99,9 +107,9 @@ public class GufyBiomeSeed extends Item
                 GufyUtil.execute(command, serverLevel, position, serverPlayer);
 
                 BlockState state = level.getBlockState(position);
-                if (state.getBlock() instanceof BonemealableBlock block && block.isValidBonemealTarget(level, position, state)) {
-                    if (block.isBonemealSuccess(level, level.getRandom(), position, state)) {
-                        block.performBonemeal(serverLevel, level.getRandom(), position, state);
+                if (state.getBlock() instanceof BonemealableBlock block && block.isValidBonemealTarget(level, position, state, BonemealSource.INTERACTION)) {
+                    if (block.isBonemealSuccess(level, level.getRandom(), position, state, BonemealSource.INTERACTION)) {
+                        block.performBonemeal(serverLevel, level.getRandom(), position, state, BonemealSource.INTERACTION);
                     }
                 }
 
