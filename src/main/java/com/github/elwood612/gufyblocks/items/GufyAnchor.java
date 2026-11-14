@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -33,7 +34,7 @@ public class GufyAnchor extends Item
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer && itemstack.has(GufyRegistry.OWNER.get())) {
             String ownerName = itemstack.getOrDefault(GufyRegistry.OWNER.get(), "");
 
-//            player.swing(handIn, true);
+            player.swing(handIn, SwingAnimation.DEFAULT, true);
 
             if (ownerName.isEmpty()) return InteractionResult.PASS;
 

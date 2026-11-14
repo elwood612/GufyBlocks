@@ -1,0 +1,36 @@
+{
+	"replace": false,
+	"values": {
+		"gufyblocks:copper_stairs": { "next_oxidation_stage": "gufyblocks:exposed_copper_stairs" },
+		"gufyblocks:exposed_copper_stairs": { "next_oxidation_stage": "gufyblocks:weathered_copper_stairs" },
+		"gufyblocks:weathered_copper_stairs": { "next_oxidation_stage": "gufyblocks:oxidized_copper_stairs" },
+		"gufyblocks:copper_slab": { "next_oxidation_stage": "gufyblocks:exposed_copper_slab" },
+		"gufyblocks:exposed_copper_slab": { "next_oxidation_stage": "gufyblocks:weathered_copper_slab" },
+		"gufyblocks:weathered_copper_slab": { "next_oxidation_stage": "gufyblocks:oxidized_copper_slab" },
+		"gufyblocks:copper_verticalslab": { "next_oxidation_stage": "gufyblocks:exposed_copper_verticalslab" },
+		"gufyblocks:exposed_copper_verticalslab": { "next_oxidation_stage": "gufyblocks:weathered_copper_verticalslab" },
+		"gufyblocks:weathered_copper_verticalslab": { "next_oxidation_stage": "gufyblocks:oxidized_copper_verticalslab" },
+		"gufyblocks:copper_wall": { "next_oxidation_stage": "gufyblocks:exposed_copper_wall" },
+		"gufyblocks:exposed_copper_wall": { "next_oxidation_stage": "gufyblocks:weathered_copper_wall" },
+		"gufyblocks:weathered_copper_wall": { "next_oxidation_stage": "gufyblocks:oxidized_copper_wall" },
+		"gufyblocks:copper_hopper": { "next_oxidation_stage": "gufyblocks:exposed_copper_hopper" },
+		"gufyblocks:exposed_copper_hopper": { "next_oxidation_stage": "gufyblocks:weathered_copper_hopper" },
+		"gufyblocks:weathered_copper_hopper": { "next_oxidation_stage": "gufyblocks:oxidized_copper_hopper" },
+		"gufyblocks:copper_post": { "next_oxidation_stage": "gufyblocks:exposed_copper_post" },
+		"gufyblocks:exposed_copper_post": { "next_oxidation_stage": "gufyblocks:weathered_copper_post" },
+		"gufyblocks:weathered_copper_post": { "next_oxidation_stage": "gufyblocks:oxidized_copper_post" },
+		
+		"gufyblocks:cut_copper_verticalslab": { "next_oxidation_stage": "gufyblocks:exposed_cut_copper_verticalslab" },
+		"gufyblocks:exposed_cut_copper_verticalslab": { "next_oxidation_stage": "gufyblocks:weathered_cut_copper_verticalslab" },
+		"gufyblocks:weathered_cut_copper_verticalslab": { "next_oxidation_stage": "gufyblocks:oxidized_cut_copper_verticalslab" },
+		"gufyblocks:cut_copper_wall": { "next_oxidation_stage": "gufyblocks:exposed_cut_copper_wall" },
+		"gufyblocks:exposed_cut_copper_wall": { "next_oxidation_stage": "gufyblocks:weathered_cut_copper_wall" },
+		"gufyblocks:weathered_cut_copper_wall": { "next_oxidation_stage": "gufyblocks:oxidized_cut_copper_wall" },
+		"gufyblocks:cut_copper_hopper": { "next_oxidation_stage": "gufyblocks:exposed_cut_copper_hopper" },
+		"gufyblocks:exposed_cut_copper_hopper": { "next_oxidation_stage": "gufyblocks:weathered_cut_copper_hopper" },
+		"gufyblocks:weathered_cut_copper_hopper": { "next_oxidation_stage": "gufyblocks:oxidized_cut_copper_hopper" },
+		"gufyblocks:cut_copper_post": { "next_oxidation_stage": "gufyblocks:exposed_cut_copper_post" },
+		"gufyblocks:exposed_cut_copper_post": { "next_oxidation_stage": "gufyblocks:weathered_cut_copper_post" },
+		"gufyblocks:weathered_cut_copper_post": { "next_oxidation_stage": "gufyblocks:oxidized_cut_copper_post" }
+	}
+}

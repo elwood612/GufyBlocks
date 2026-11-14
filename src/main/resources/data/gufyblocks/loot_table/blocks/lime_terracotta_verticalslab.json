@@ -9,11 +9,9 @@
           "name": "gufyblocks:lime_terracotta_verticalslab"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

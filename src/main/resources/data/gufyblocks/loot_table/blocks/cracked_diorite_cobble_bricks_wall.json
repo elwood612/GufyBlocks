@@ -9,11 +9,9 @@
           "name": "gufyblocks:cracked_diorite_cobble_bricks_wall"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
@@ -31,7 +32,7 @@ public class GufySoulboundAnchor extends Item
         BlockPos position = player.blockPosition();
         ItemStack itemstack = player.getItemInHand(handIn);
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-//            player.swing(handIn, true);
+            player.swing(handIn, SwingAnimation.DEFAULT, true);
 
             Optional<GlobalPos> optional = player.getLastDeathLocation();
 

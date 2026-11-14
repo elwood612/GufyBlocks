@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -27,6 +28,7 @@ public class GufyFamilyBuilder
     private ResourceKey<ContextIntProvider> _compostable = null;
     private ResourceKey<ContextIntProvider> _furnaceFuel = null;
     private Item _flower = null;
+    private WeatheringCopper.WeatherState _weatherState;
 
     public GufyFamilyBuilder() {}
 
@@ -34,20 +36,19 @@ public class GufyFamilyBuilder
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType : _blockTypes) {
                 if (_parentBlock == null) _parentBlock = getParent(_name);
-                if (_parentProperties == null) _parentProperties = GufyUtil.copyPropertiesOf(_parentBlock);
-
-                add(GufyUtil.getVariant(_name, _parentProperties, _parentBlock, blockType, _compostable, _furnaceFuel));
+                BlockBehaviour.Properties blockProperties = GufyUtil.copyPropertiesOf(_parentProperties);
+                add(GufyUtil.getVariant(_name, blockProperties, _parentBlock, blockType, _compostable, _furnaceFuel));
             }
         }};
     }
 
     public List<DeferredBlock<Block>> buildFramedFamily() {
         return new ArrayList<>() {{
-            BlockBehaviour.Properties framedProperties = GufyUtil.copyPropertiesOf(_parentBlock)
-                    .strength(1.5f, 6.0f);
             String framedName = _name + "_framed_terracotta";
 
             for (GufyBlockTypes blockType: _blockTypes) {
+                BlockBehaviour.Properties framedProperties = GufyUtil.copyPropertiesOf(_parentBlock)
+                        .strength(1.5f, 6.0f);
                 add(GufyUtil.getVariant(framedName, framedProperties, _parentBlock, blockType, null, null));
             }
 
@@ -67,9 +68,18 @@ public class GufyFamilyBuilder
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType : _blockTypes) {
                 if (_parentBlock == null) _parentBlock = getParent(_name);
-                if (_parentProperties == null) _parentProperties = GufyUtil.copyPropertiesOf(_parentBlock);
+                BlockBehaviour.Properties blockProperties = GufyUtil.copyPropertiesOf(_parentProperties);
+                add(GufyUtil.getPottedVariant(_name, blockProperties, _parentBlock, _flower, blockType));
+            }
+        }};
+    }
 
-                add(GufyUtil.getPottedVariant(_name, _parentProperties, _parentBlock, _flower, blockType));
+    public List<DeferredBlock<Block>> buildWeatheringFamily() {
+        return new ArrayList<>() {{
+            for (GufyBlockTypes blockType : _blockTypes) {
+                if (_parentBlock == null) _parentBlock = getParent(_name);
+                BlockBehaviour.Properties blockProperties = GufyUtil.copyPropertiesOf(_parentProperties);
+                add(GufyUtil.getWeatheringVariant(_name, blockProperties, _parentBlock, _weatherState, blockType));
             }
         }};
     }
@@ -81,6 +91,7 @@ public class GufyFamilyBuilder
 
     public GufyFamilyBuilder parent(Block parent) {
         this._parentBlock = parent;
+        this._parentProperties = GufyUtil.copyPropertiesOf(parent);
         return this;
     }
 
@@ -106,6 +117,11 @@ public class GufyFamilyBuilder
 
     public GufyFamilyBuilder flower(Item flower) {
         this._flower = flower;
+        return this;
+    }
+
+    public GufyFamilyBuilder weather(WeatheringCopper.WeatherState state) {
+        this._weatherState = state;
         return this;
     }
 

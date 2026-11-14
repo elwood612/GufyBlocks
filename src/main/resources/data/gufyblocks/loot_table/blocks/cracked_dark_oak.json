@@ -9,11 +9,9 @@
           "name": "gufyblocks:cracked_dark_oak"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

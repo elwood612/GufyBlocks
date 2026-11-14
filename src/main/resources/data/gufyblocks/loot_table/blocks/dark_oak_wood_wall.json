@@ -9,11 +9,9 @@
           "name": "gufyblocks:dark_oak_wood_wall"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

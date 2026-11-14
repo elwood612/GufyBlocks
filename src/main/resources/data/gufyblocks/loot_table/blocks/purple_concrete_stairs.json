@@ -6,14 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:purple_concrete_stairs"
+          "name": "minecraft:purple_concrete_stairs"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

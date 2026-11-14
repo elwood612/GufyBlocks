@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": 
-    "minecraft:cyan_concrete",
-  "result": {
-    "id": "gufyblocks:cyan_concrete_slab",
-  "count": 2
-  }
-}

@@ -9,11 +9,9 @@
           "name": "gufyblocks:bamboo_framed_red_terracotta"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

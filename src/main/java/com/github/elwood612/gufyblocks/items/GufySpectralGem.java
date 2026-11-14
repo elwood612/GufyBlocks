@@ -14,6 +14,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
@@ -27,7 +28,7 @@ public class GufySpectralGem extends Item
         BlockPos position = player.getOnPos();
         ItemStack itemstack = player.getItemInHand(handIn);
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
-//            player.swing(handIn, true);
+            player.swing(handIn, SwingAnimation.DEFAULT, true);
 
             if (!player.getAbilities().instabuild) {
                 itemstack.consume(1, player);

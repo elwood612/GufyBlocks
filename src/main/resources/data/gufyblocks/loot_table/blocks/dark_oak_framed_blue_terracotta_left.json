@@ -9,11 +9,9 @@
           "name": "gufyblocks:dark_oak_framed_blue_terracotta"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

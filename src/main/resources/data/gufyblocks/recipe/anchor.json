@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "gufyblocks:anchor",
+    "X": "minecraft:diamond",
+	"Y": "minecraft:amethyst_shard"
+  },
+  "pattern": [
+    "YXY",
+    "X#X",
+	"YXY"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:anchor",
+    "count": 2
+  }
+}

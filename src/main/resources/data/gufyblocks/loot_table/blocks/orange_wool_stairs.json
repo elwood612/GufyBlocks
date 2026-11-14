@@ -6,14 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:orange_wool_stairs"
+          "name": "minecraft:orange_wool_stairs"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

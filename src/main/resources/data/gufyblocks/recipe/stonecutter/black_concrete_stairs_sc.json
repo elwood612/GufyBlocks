@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": 
-    "minecraft:black_concrete",
-  "result": {
-    "id": "gufyblocks:black_concrete_stairs",
-  "count": 1
-  }
-}

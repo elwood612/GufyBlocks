@@ -1,22 +1,13 @@
 package com.github.elwood612.gufyblocks.events;
 
 import com.github.elwood612.gufyblocks.GufyBlocks;
-import com.github.elwood612.gufyblocks.items.GufyLedger;
-import com.github.elwood612.gufyblocks.items.GufyMemoryCharm;
 import com.github.elwood612.gufyblocks.items.GufyStillstone;
-import com.github.elwood612.gufyblocks.packets.GufyHighlightWorkstationPacket;
-import com.github.elwood612.gufyblocks.util.GufyScheduler;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.GlobalPos;
-import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,33 +15,23 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.ai.Brain;
-import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.monster.warden.Warden;
-import net.minecraft.world.entity.npc.villager.Villager;
-import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwingAnimationType;
 import net.minecraft.world.item.component.SwingAnimation;
-import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.neoforge.network.PacketDistributor;
-
-import java.util.Optional;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyInteractEvent
 {
-    // Used for Amulet of Peace and Memory Charm
+    // Used for Amulet of Peace
     @SubscribeEvent
     public static void onEntityInteract(PlayerInteractEvent.EntityInteract event) {
         Level level = event.getLevel();
@@ -73,7 +54,7 @@ public class GufyInteractEvent
                 }
 
                 pacifyMob(serverLevel, mob, player);
-//                player.swing(handIn, true);
+                player.swing(handIn, SwingAnimation.DEFAULT, true);
 
                 mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
                 mob.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
@@ -103,95 +84,6 @@ public class GufyInteractEvent
                 event.setCancellationResult(InteractionResult.SUCCESS);
             }
         }
-
-        // Memory Charm
-        if (stack.getItem() instanceof GufyMemoryCharm) {
-            if (!(level.isClientSide())
-                    && level instanceof ServerLevel serverLevel
-                    && target instanceof Villager villager
-                    && player instanceof ServerPlayer serverPlayer) {
-
-//                resetVillager(villager);
-                downgradeVillager(villager, serverLevel, serverPlayer);
-//                player.swing(handIn, true);
-
-                if (!player.getAbilities().instabuild) {
-                    stack.consume(1, player);
-                }
-
-                serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_YES, SoundSource.NEUTRAL);
-                serverLevel.playSound((Player) null, villager.blockPosition(), SoundEvents.DECORATED_POT_SHATTER, SoundSource.NEUTRAL, 0.6f, 1.2f);
-                serverLevel.playSound((Player) null, villager.blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
-                serverLevel.sendParticles(
-                        ParticleTypes.HAPPY_VILLAGER,
-                        villager.getX(), villager.getY() + 1, villager.getZ(),
-                        20, 0.5, 0.5, 0.5, 0.02
-                );
-                serverLevel.sendParticles(
-                        ParticleTypes.END_ROD,
-                        player.getX(), player.getY(), player.getZ(),
-                        10,
-                        0.5, 0.5, 0.5,
-                        0.1
-                );
-                villager.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
-                villager.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
-
-                event.setCanceled(true);
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-
-        // Ledger
-        if (stack.getItem() instanceof GufyLedger) {
-            if (!(level.isClientSide()) && level instanceof ServerLevel serverLevel && target instanceof Villager villager) {
-
-//                player.swing(handIn, true);
-
-                // if villager has a workstation, reveal it
-                Optional<GlobalPos> jobSite = villager.getBrain().getMemory(MemoryModuleType.JOB_SITE);
-                if (jobSite.isPresent()) {
-                    BlockPos jobSitePos = jobSite.get().pos();
-                    serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_YES, SoundSource.NEUTRAL);
-                    serverLevel.playSound((Player) null, jobSitePos, SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
-                    serverLevel.sendParticles(
-                            ParticleTypes.HAPPY_VILLAGER,
-                            villager.getX(), villager.getY() + 1, villager.getZ(),
-                            5, 0.5, 0.5, 0.5, 0.02
-                    );
-                    Vec3 from = villager.position();
-                    Vec3 to = Vec3.atBottomCenterOf(jobSitePos);
-
-                    for (int i = 0; i < 5; i++) {
-                        double t = i / 20.0;
-                        double x = Mth.lerp(t, from.x, to.x);
-                        double y = Mth.lerp(t, from.y + 1, to.y);
-                        double z = Mth.lerp(t, from.z, to.z);
-
-                        serverLevel.sendParticles(
-                                ParticleTypes.END_ROD,
-                                x, y, z,
-                                1,
-                                0.02, 0.02, 0.02,
-                                0.02
-                        );
-                    }
-                    villager.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0));
-
-                    // reveal workstation
-                    PacketDistributor.sendToPlayer((ServerPlayer) player, new GufyHighlightWorkstationPacket(jobSitePos));
-
-                    // use 26.2 Shapes Outline?
-
-                } else {
-                    villager.setUnhappyCounter(40);
-                    serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_NO, SoundSource.NEUTRAL);
-                }
-
-                event.setCanceled(true);
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
     }
 
     private static void pacifyMob(ServerLevel serverLevel, Mob mob, Player player) {
@@ -208,61 +100,5 @@ public class GufyInteractEvent
             scoreboard.addPlayerToTeam(player.getScoreboardName(), team);
         }
         scoreboard.addPlayerToTeam(mob.getScoreboardName(), team);
-    }
-
-    private static void resetVillager(Villager villager, ServerLevel serverLevel, ServerPlayer serverPlayer) {
-        // 0. Release POIs first
-        villager.releasePoi(MemoryModuleType.JOB_SITE);
-        villager.releasePoi(MemoryModuleType.POTENTIAL_JOB_SITE);
-
-        // 1. Reset profession to NONE
-        Holder<VillagerProfession> prof = BuiltInRegistries.VILLAGER_PROFESSION.getOrThrow(VillagerProfession.NONE);
-        villager.setVillagerData(villager.getVillagerData().withProfession(prof).withLevel(1));
-
-        // 2. Reset XP & inventory & trades
-        villager.setVillagerXp(0);
-        villager.getInventory().clearContent();
-
-        // 3. Forget job site after 3 seconds
-        Brain<Villager> brain = villager.getBrain();
-        GufyScheduler.schedule(serverLevel, 60, serverPlayer.getUUID(), () -> {
-            brain.eraseMemory(MemoryModuleType.JOB_SITE);
-            brain.eraseMemory(MemoryModuleType.POTENTIAL_JOB_SITE);
-        });
-    }
-
-    private static void downgradeVillager(Villager villager, ServerLevel serverLevel, ServerPlayer serverPlayer) {
-        int initialVillagerLevel = villager.getVillagerData().level();
-
-        // If already at level 1, perform a full reset.
-        if (initialVillagerLevel <= 1) {
-            resetVillager(villager, serverLevel, serverPlayer);
-            return;
-        }
-
-        // Remove the latest unlocked trades.
-        MerchantOffers offers = villager.getOffers();
-
-        // For now, remove 2 trades
-        // If villager trade rebalance happens,
-        // might need to adjust based on profession too
-        int tradesToRemove = switch (initialVillagerLevel) {
-            case 5 -> 2; // Master
-            case 4 -> 2; // Expert
-            case 3 -> 2; // Journeyman
-            case 2 -> 2; // Apprentice
-            default -> 0;
-        };
-
-        for (int i = 0; i < tradesToRemove && !offers.isEmpty(); i++) {
-            offers.remove(offers.size() - 1);
-        }
-
-        // Downgrade the villager and reset XP.
-        villager.setVillagerData(
-                villager.getVillagerData().withLevel(initialVillagerLevel - 1)
-        );
-
-        villager.setVillagerXp(initialVillagerLevel == 2 ? 1 : 0);
     }
 }

@@ -9,11 +9,9 @@
           "name": "gufyblocks:mossy_warped_verticalslab"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

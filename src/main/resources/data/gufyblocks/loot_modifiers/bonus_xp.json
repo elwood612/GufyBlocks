@@ -1,176 +1,173 @@
 {
   "type": "neoforge:add_table",
-    "priority": 1000,
-  "conditions": [
-    {
-      "condition": "minecraft:any_of",
-      "terms": [
-        {
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/abandoned_mineshaft"
-        },
+	"condition": {
+	  "type": "minecraft:all_of",
+	  "terms": [
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/ancient_city"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/abandoned_mineshaft"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/ancient_city_ice_box"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/ancient_city"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/bastion_bridge"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/ancient_city_ice_box"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/bastion_hoglin_stable"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/bastion_bridge"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/bastion_other"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/bastion_hoglin_stable"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/bastion_treasure"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/bastion_other"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/end_city_treasure"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/bastion_treasure"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/buried_treasure"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/end_city_treasure"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/desert_pyramid"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/buried_treasure"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/igloo_chest"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/desert_pyramid"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/jungle_temple"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/igloo_chest"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/nether_bridge"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/jungle_temple"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/pillager_outpost"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/nether_bridge"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/ruined_portal"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/pillager_outpost"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/shipwreck_map"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/ruined_portal"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/shipwreck_supply"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/shipwreck_map"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/shipwreck_treasure"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/shipwreck_supply"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/simple_dungeon"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/shipwreck_treasure"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/stronghold_corridor"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/simple_dungeon"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/stronghold_crossing"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/stronghold_corridor"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/stronghold_library"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/stronghold_crossing"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/underwater_ruin_big"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/stronghold_library"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/underwater_ruin_small"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/underwater_ruin_big"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/woodland_mansion"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/underwater_ruin_small"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_armorer"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/woodland_mansion"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_butcher"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_armorer"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_cartographer"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_butcher"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_desert_house"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_cartographer"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_fisher"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_desert_house"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_fletcher"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_fisher"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_mason"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_fletcher"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_plains_house"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_mason"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_savanna_house"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_plains_house"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_shepherd"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_savanna_house"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_snowy_house"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_shepherd"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_taiga_house"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_snowy_house"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_tannery"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_taiga_house"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_temple"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_tannery"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_toolsmith"
-        },
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_temple"
+		},
 		{
-          "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_weaponsmith"
-        }
-      ]
-    }
-  ],
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_toolsmith"
+		},
+		{
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/village/village_weaponsmith"
+		}
+	]
+  },
   "table": "gufyblocks:inject/relics_bonus_xp"
 }

@@ -9,11 +9,9 @@
           "name": "gufyblocks:spruce_framed_magenta_terracotta"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

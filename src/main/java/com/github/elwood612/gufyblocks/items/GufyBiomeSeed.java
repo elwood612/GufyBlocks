@@ -20,6 +20,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
@@ -50,7 +51,7 @@ public class GufyBiomeSeed extends Item
             Holder<Biome> biomeHolder = level.getBiome(player.blockPosition());
             Identifier biomeID = biomeHolder.unwrapKey().get().identifier();
 
-//            player.swing(handIn, true);
+            player.swing(handIn, SwingAnimation.DEFAULT, true);
 
             if (level.dimension() != Level.OVERWORLD) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.weather_dimension"));

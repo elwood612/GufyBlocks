@@ -1,0 +1,1929 @@
+{
+	"values": {
+		"gufyblocks:oak_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:oak_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:oak_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:oak_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:oak_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:oak_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:oak_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oak_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_oak_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:spruce_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:spruce_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_spruce_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:birch_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:birch_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_birch_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:dark_oak_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:dark_oak_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_dark_oak_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:jungle_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:jungle_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_jungle_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:acacia_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:acacia_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_acacia_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:crimson_hyphae_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:crimson_hyphae_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_crimson_hyphae_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:warped_hyphae_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:warped_hyphae_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_warped_hyphae_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:mangrove_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:mangrove_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_mangrove_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:cherry_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:cherry_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_cherry_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:pale_oak_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:pale_oak_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_pale_oak_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		}
+	}
+}

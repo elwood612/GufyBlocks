@@ -9,11 +9,9 @@
           "name": "gufyblocks:cracked_jungle_fence_gate"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

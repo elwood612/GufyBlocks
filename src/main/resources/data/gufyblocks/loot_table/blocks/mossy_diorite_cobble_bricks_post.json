@@ -9,11 +9,9 @@
           "name": "gufyblocks:mossy_diorite_cobble_bricks_post"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

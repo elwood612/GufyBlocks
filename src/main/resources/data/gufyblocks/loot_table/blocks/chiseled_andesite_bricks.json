@@ -9,11 +9,9 @@
           "name": "gufyblocks:chiseled_andesite_bricks"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

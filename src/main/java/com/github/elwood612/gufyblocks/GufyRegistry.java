@@ -47,6 +47,7 @@ import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.*;
 import static net.minecraft.world.level.block.Blocks.*;
 
+
 public class GufyRegistry
 {
     //***************************VARIABLES**************************//
@@ -78,6 +79,11 @@ public class GufyRegistry
     private static final ResourceKey<ContextIntProvider> BURN_TIME_100 = ContextIntProviders.COOKING_TIME_WOOL;
     private static final ResourceKey<ContextIntProvider> COMPOSTABLE_65 = ContextIntProviders.COMPOSTABLE_MEDIUM;
     private static final ResourceKey<ContextIntProvider> COMPOSTABLE_85 = ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH;
+    
+    private static final WeatheringCopper.WeatherState UNAFFECTED = WeatheringCopper.WeatherState.UNAFFECTED;
+    private static final WeatheringCopper.WeatherState EXPOSED = WeatheringCopper.WeatherState.EXPOSED;
+    private static final WeatheringCopper.WeatherState WEATHERED = WeatheringCopper.WeatherState.WEATHERED;
+    private static final WeatheringCopper.WeatherState OXIDIZED = WeatheringCopper.WeatherState.OXIDIZED;
 
     //**************************************************************//
 
@@ -87,7 +93,6 @@ public class GufyRegistry
     public static final List<List<DeferredBlock<Block>>> newBlockList = new ArrayList<List<DeferredBlock<Block>>>()
     {{
         // ~~ WOOD ~~ //
-//        add(familyBuilder("oak", OAK_PLANKS, VANILLA_WOOD_TYPES));
         add(new GufyFamilyBuilder().name("oak").parent(OAK_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("oak_parquet").parent(OAK_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("big_oak").parent(OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
@@ -139,18 +144,18 @@ public class GufyRegistry
         add(new GufyFamilyBuilder().name("bamboo").parent(BAMBOO_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("bamboo_mosaic").parent(BAMBOO_PLANKS).blockTypes(GufyBlockTypes.VERTICALSLAB).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("chiseled_stripped_bamboo_block").parent(STRIPPED_BAMBOO_BLOCK).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("crimson").parent(CRIMSON_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("crimson_parquet").parent(CRIMSON_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("big_crimson").parent(CRIMSON_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("stripped_crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("chiseled_stripped_crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("warped").parent(WARPED_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("warped_parquet").parent(WARPED_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("big_warped").parent(WARPED_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("warped_hyphae").parent(WARPED_HYPHAE).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("stripped_warped_hyphae").parent(WARPED_HYPHAE).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
-        add(new GufyFamilyBuilder().name("chiseled_stripped_warped_hyphae").parent(WARPED_HYPHAE).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson").parent(CRIMSON_PLANKS).blockTypes(VANILLA_WOOD_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson_parquet").parent(CRIMSON_PLANKS).blockTypes(GUFY_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("big_crimson").parent(CRIMSON_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(VANILLA_WOOD_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_crimson_hyphae").parent(CRIMSON_HYPHAE).blockTypes(GufyBlockTypes.CARVED_LOG).buildFamily());
+        add(new GufyFamilyBuilder().name("warped").parent(WARPED_PLANKS).blockTypes(VANILLA_WOOD_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("warped_parquet").parent(WARPED_PLANKS).blockTypes(GUFY_DIRT_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("big_warped").parent(WARPED_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("warped_hyphae").parent(WARPED_HYPHAE).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_warped_hyphae").parent(WARPED_HYPHAE).blockTypes(VANILLA_WOOD_TYPES_ALL).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_warped_hyphae").parent(WARPED_HYPHAE).blockTypes(GufyBlockTypes.CARVED_LOG).buildFamily());
         add(new GufyFamilyBuilder().name("pale_oak").parent(PALE_OAK_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("pale_oak_parquet").parent(PALE_OAK_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("big_pale_oak").parent(PALE_OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
@@ -345,22 +350,24 @@ public class GufyRegistry
 
         // ~~ COPPER ~~ //
         // keep these just in case
-        add(weatheringBuilder("copper", COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
-        add(weatheringBuilder("exposed_copper", COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
-        add(weatheringBuilder("weathered_copper", COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
-        add(weatheringBuilder("oxidized_copper", COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
-        add(weatheringBuilder("cut_copper", COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("exposed_cut_copper", COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("weathered_cut_copper", COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
-        add(weatheringBuilder("oxidized_cut_copper", COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
-//        add(new GufyFamilyBuilder().name("copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("exposed_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("weathered_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("oxidized_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("cut_copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(CUT_COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("exposed_cut_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(CUT_COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("weathered_cut_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(CUT_COPPER_TYPES).buildFamily());
-//        add(new GufyFamilyBuilder().name("oxidized_cut_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(CUT_COPPER_TYPES).buildFamily());
+//        add(weatheringBuilder("copper", COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, COPPER_TYPES));
+//        add(weatheringBuilder("exposed_copper", COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, COPPER_TYPES));
+//        add(weatheringBuilder("weathered_copper", COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, COPPER_TYPES));
+//        add(weatheringBuilder("oxidized_copper", COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, COPPER_TYPES));
+//        add(weatheringBuilder("cut_copper", COPPER_BLOCK.weathering().unaffected(), GufyWeathering.WeatherState.UNAFFECTED, CUT_COPPER_TYPES));
+//        add(weatheringBuilder("exposed_cut_copper", COPPER_BLOCK.weathering().exposed(), GufyWeathering.WeatherState.EXPOSED, CUT_COPPER_TYPES));
+//        add(weatheringBuilder("weathered_cut_copper", COPPER_BLOCK.weathering().weathered(), GufyWeathering.WeatherState.WEATHERED, CUT_COPPER_TYPES));
+//        add(weatheringBuilder("oxidized_cut_copper", COPPER_BLOCK.weathering().oxidized(), GufyWeathering.WeatherState.OXIDIZED, CUT_COPPER_TYPES));
+        
+        add(new GufyFamilyBuilder().name("copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(COPPER_TYPES).weather(UNAFFECTED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("exposed_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(COPPER_TYPES).weather(EXPOSED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("weathered_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(COPPER_TYPES).weather(WEATHERED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("oxidized_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(COPPER_TYPES).weather(OXIDIZED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("cut_copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(CUT_COPPER_TYPES).weather(UNAFFECTED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("exposed_cut_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(CUT_COPPER_TYPES).weather(EXPOSED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("weathered_cut_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(CUT_COPPER_TYPES).weather(WEATHERED).buildWeatheringFamily());
+        add(new GufyFamilyBuilder().name("oxidized_cut_copper").parent(COPPER_BLOCK.weathering().oxidized()).blockTypes(CUT_COPPER_TYPES).weather(OXIDIZED).buildWeatheringFamily());
+
         add(new GufyFamilyBuilder().name("waxed_copper").parent(COPPER_BLOCK.weathering().unaffected()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
         add(new GufyFamilyBuilder().name("waxed_exposed_copper").parent(COPPER_BLOCK.weathering().exposed()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
         add(new GufyFamilyBuilder().name("waxed_weathered_copper").parent(COPPER_BLOCK.weathering().weathered()).blockTypes(WAXED_COPPER_TYPES).buildFamily());
@@ -563,11 +570,6 @@ public class GufyRegistry
             GufyStillstone::new,
             () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
     );
-    public static final DeferredItem<Item> LEDGER = ITEMS.registerItem(
-            "ledger",
-            GufyLedger::new,
-            () -> new Item.Properties().stacksTo(1).useCooldown(1f).rarity(Rarity.RARE)
-    );
 
     //**************************************************************//
 
@@ -636,21 +638,13 @@ public class GufyRegistry
     public static final Supplier<DataComponentType<String>> OWNER = DATA_COMPONENT_TYPES.register("owner", () ->
             DataComponentType.<String>builder()
                     .persistent(Codec.STRING)
-//                    .networkSynchronized(ByteBufCodecs.STRING_UTF8)
-                    .networkSynchronized(StreamCodec.of(
-                            (buf, value) -> ByteBufCodecs.STRING_UTF8.encode(buf.copy(), value),
-                            buf -> ByteBufCodecs.STRING_UTF8.decode(buf.copy())
-                    ))
+                    .networkSynchronized(ByteBufCodecs.STRING_UTF8)
                     .build()
     );
     public static final Supplier<DataComponentType<Identifier>> STORED_BIOME = DATA_COMPONENT_TYPES.register("stored_biome", () ->
             DataComponentType.<Identifier>builder()
                     .persistent(Identifier.CODEC)
-//                    .networkSynchronized(Identifier.STREAM_CODEC)
-                    .networkSynchronized(StreamCodec.of(
-                            (buf, value) -> Identifier.STREAM_CODEC.encode(buf.copy(), value),
-                            buf -> Identifier.STREAM_CODEC.decode(buf.copy())
-                    ))
+                    .networkSynchronized(Identifier.STREAM_CODEC)
                     .build()
     );
     public static final Supplier<DataComponentType<GufyCompassData>> COMPASS_DATA = DATA_COMPONENT_TYPES.register("compass_data", () ->

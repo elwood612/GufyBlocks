@@ -9,11 +9,9 @@
           "name": "gufyblocks:red_sandstone_cobble_bricks_stairs"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

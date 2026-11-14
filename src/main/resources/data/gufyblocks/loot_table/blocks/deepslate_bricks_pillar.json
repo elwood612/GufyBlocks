@@ -9,11 +9,9 @@
           "name": "gufyblocks:deepslate_bricks_pillar"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

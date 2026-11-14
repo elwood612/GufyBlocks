@@ -1,14 +1,15 @@
 package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
-import com.github.elwood612.gufyblocks.packets.GufyHighlightWorkstationPacket;
-import com.github.elwood612.gufyblocks.packets.GufyVersionCheckPayload;
-import com.github.elwood612.gufyblocks.util.GufyUtil;
+import com.github.elwood612.gufyblocks.memoryCharm.*;
+import com.github.elwood612.gufyblocks.network.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.network.event.RegisterClientPayloadHandlersEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.slf4j.Logger;
@@ -36,8 +37,10 @@ public class GufyBlocks
 
 		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
-	}
+		modEventBus.addListener(this::registerClientPackets);
 
+		NeoForge.EVENT_BUS.register(MemoryCharmRendering.class);
+	}
 
 	private void registerPackets(RegisterPayloadHandlersEvent event) {
 		final PayloadRegistrar registrar = event.registrar(MODID);
@@ -60,11 +63,25 @@ public class GufyBlocks
 				}
 		);
 
-		// register workstation highlight packet
+		// Register both Request and Response for getting a villager's workstation
+		// As called in GufyClientEvents for the Memory Charm
+		registrar.playToServer(
+				WorkstationRequest.TYPE,
+				WorkstationRequest.STREAM_CODEC,
+                ServerPayloadHandler::handle
+		);
 		registrar.playToClient(
-				GufyHighlightWorkstationPacket.TYPE,
-				GufyHighlightWorkstationPacket.CODEC,
-				GufyHighlightWorkstationPacket::handle
+				WorkstationResponse.TYPE,
+				WorkstationResponse.STREAM_CODEC
+		);
+	}
+
+	private void registerClientPackets(RegisterClientPayloadHandlersEvent event) {
+		// Client-side registering for the villager's workstation request
+		// As called in GufyClientEvents for the Memory Charm
+		event.register(
+				WorkstationResponse.TYPE,
+				ClientPayloadHandler::handle
 		);
 	}
 }

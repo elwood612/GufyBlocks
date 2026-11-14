@@ -7,7 +7,7 @@ public class GufyMemoryCharm extends Item
 {
     public GufyMemoryCharm(Item.Properties properties) { super(properties); }
 
-    // Code for Memory charm is in InteractEvent
+    // Code for Memory charm is in memoryCharm package
 
     @Override
     public boolean isFoil(ItemStack stack) {

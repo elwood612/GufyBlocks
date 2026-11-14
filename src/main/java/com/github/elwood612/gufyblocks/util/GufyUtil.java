@@ -4,7 +4,11 @@ import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.blocks.*;
 import com.github.elwood612.gufyblocks.blocks.blockSpecialty.*;
 import com.github.elwood612.gufyblocks.blocks.blockUtil.*;
-import com.github.elwood612.gufyblocks.blocks.blockWeathering.*;
+import com.github.elwood612.gufyblocks.blocks.blockWeathering.GufyWeatheringHopper;
+import com.github.elwood612.gufyblocks.blocks.blockWeathering.GufyWeatheringPost;
+import com.github.elwood612.gufyblocks.blocks.blockWeathering.GufyWeatheringVerticalSlab;
+import com.github.elwood612.gufyblocks.blocks.blockWeathering.GufyWeatheringWall;
+import com.github.elwood612.gufyblocks.blocks.blockWeatheringLegacy.*;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.ReportedException;
@@ -111,7 +115,7 @@ public class GufyUtil
         return new ArrayList<>() {{
             for (GufyBlockTypes blockType : blockTypes) {
                 BlockBehaviour.Properties blockProperties = copyPropertiesOf(parentBlock);
-                add(getWeatheringVariant(name, blockProperties, parentBlock, state, blockType));
+                add(getWeatheringVariantLEGACY(name, blockProperties, parentBlock, state, blockType));
             }
         }};
     }
@@ -201,7 +205,7 @@ public class GufyUtil
         };
     }
 
-    public static DeferredBlock<Block> getWeatheringVariant(
+    public static DeferredBlock<Block> getWeatheringVariantLEGACY(
             String name,
             BlockBehaviour.Properties blockProperties,
             Block parentBlock,
@@ -209,12 +213,30 @@ public class GufyUtil
             GufyBlockTypes blockType)
     {
         return switch (blockType) {
-            case WEATHERINGSTAIRS -> createRegistry(name + "_stairs", () -> new GufyWeatheringStairs(parentBlock.defaultBlockState(), blockProperties, state), blockProperties, null, null);
-            case WEATHERINGSLAB -> createRegistry(name + "_slab", () -> new GufyWeatheringSlab(blockProperties, state), blockProperties, null, null);
-            case WEATHERINGVERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(blockProperties, state), blockProperties, null, null);
-            case WEATHERINGWALL -> createRegistry(name + "_wall", () -> new GufyWeatheringWall(blockProperties, state), blockProperties, null, null);
-            case WEATHERINGHOPPER -> createRegistry(name + "_hopper", () -> new GufyWeatheringHopper(blockProperties, state), blockProperties, null, null);
-            case WEATHERINGPOST -> createRegistry(name + "_post", () -> new GufyWeatheringPost(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGSTAIRS -> createRegistry(name + "_stairs", () -> new GufyWeatheringStairsLEGACY(parentBlock.defaultBlockState(), blockProperties, state), blockProperties, null, null);
+            case WEATHERINGSLAB -> createRegistry(name + "_slab", () -> new GufyWeatheringSlabLEGACY(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGVERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyWeatheringVerticalSlabLEGACY(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGWALL -> createRegistry(name + "_wall", () -> new GufyWeatheringWallLEGACY(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGHOPPER -> createRegistry(name + "_hopper", () -> new GufyWeatheringHopperLEGACY(blockProperties, state), blockProperties, null, null);
+            case WEATHERINGPOST -> createRegistry(name + "_post", () -> new GufyWeatheringPostLEGACY(blockProperties, state), blockProperties, null, null);
+            default -> null;
+        };
+    }
+
+    public static DeferredBlock<Block> getWeatheringVariant(
+            String name,
+            BlockBehaviour.Properties blockProperties,
+            Block parentBlock,
+            WeatheringCopper.WeatherState state,
+            GufyBlockTypes blockType)
+    {
+        return switch (blockType) {
+            case WEATHERINGSTAIRS -> createRegistry(name + "_stairs", () -> new WeatheringCopperStairBlock(state, parentBlock.defaultBlockState(), blockProperties), blockProperties, null, null);
+            case WEATHERINGSLAB -> createRegistry(name + "_slab", () -> new WeatheringCopperSlabBlock(state, blockProperties), blockProperties, null, null);
+            case WEATHERINGVERTICALSLAB -> createRegistry(name + "_verticalslab", () -> new GufyWeatheringVerticalSlab(state, blockProperties), blockProperties, null, null);
+            case WEATHERINGWALL -> createRegistry(name + "_wall", () -> new GufyWeatheringWall(state, blockProperties), blockProperties, null, null);
+            case WEATHERINGHOPPER -> createRegistry(name + "_hopper", () -> new GufyWeatheringHopper(state, blockProperties), blockProperties, null, null);
+            case WEATHERINGPOST -> createRegistry(name + "_post", () -> new GufyWeatheringPost(state, blockProperties), blockProperties, null, null);
             default -> null;
         };
     }

@@ -9,11 +9,9 @@
           "name": "gufyblocks:jungle_framed_gray_terracotta"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }

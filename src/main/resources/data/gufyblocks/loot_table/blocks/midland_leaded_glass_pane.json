@@ -9,11 +9,9 @@
           "name": "medievalglass:midland_leaded_glass_pane"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
+      "condition": {
+          "type": "minecraft:survives_explosion"
+      }
     }
   ]
 }
