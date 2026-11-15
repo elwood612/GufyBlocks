@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "gufyblocks:memory_charm",
-		  "weight": 2
+		  "weight": 3
         },
 		{
           "type": "minecraft:item",
@@ -18,7 +18,7 @@
 	  "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.45
+          "chance": 0.65
         }
       ]
     }

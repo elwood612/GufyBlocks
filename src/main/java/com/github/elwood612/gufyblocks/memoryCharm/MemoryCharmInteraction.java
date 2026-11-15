@@ -56,7 +56,7 @@ public class MemoryCharmInteraction
                 }
 
                 serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_YES, SoundSource.NEUTRAL);
-                serverLevel.playSound((Player) null, villager.blockPosition(), SoundEvents.DECORATED_POT_SHATTER, SoundSource.NEUTRAL, 0.6f, 1.2f);
+                serverLevel.playSound((Player) null, villager.blockPosition(), SoundEvents.TUFF_BRICKS_BREAK, SoundSource.NEUTRAL, 0.9f, 1.2f);
                 serverLevel.playSound((Player) null, villager.blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL, 0.5f, 1.5f);
                 serverLevel.sendParticles(
                         ParticleTypes.HAPPY_VILLAGER,
@@ -82,13 +82,12 @@ public class MemoryCharmInteraction
     private static void downgradeVillager(Villager villager, ServerLevel serverLevel, ServerPlayer serverPlayer) {
         int initialVillagerLevel = villager.getVillagerData().level();
 
-        // If already at level 1, perform a full reset.
+        // If already at level 1, perform a full reset instead
         if (initialVillagerLevel <= 1) {
             resetVillager(villager, serverLevel, serverPlayer);
             return;
         }
 
-        // Remove the latest unlocked trades.
         MerchantOffers offers = villager.getOffers();
 
         // For now, remove 2 trades
@@ -101,37 +100,33 @@ public class MemoryCharmInteraction
             case 2 -> 2; // Apprentice
             default -> 0;
         };
-
         for (int i = 0; i < tradesToRemove && !offers.isEmpty(); i++) {
             offers.remove(offers.size() - 1);
         }
 
         // Downgrade the villager and reset XP.
-        villager.setVillagerData(
-                villager.getVillagerData().withLevel(initialVillagerLevel - 1)
-        );
-
+        villager.setVillagerData(villager.getVillagerData().withLevel(initialVillagerLevel - 1));
         villager.setVillagerXp(initialVillagerLevel == 2 ? 1 : 0);
+        villager.playWorkSound();
     }
 
     private static void resetVillager(Villager villager, ServerLevel serverLevel, ServerPlayer serverPlayer) {
-        // 0. Release POIs first
+        // Release POIs first
         villager.releasePoi(MemoryModuleType.JOB_SITE);
         villager.releasePoi(MemoryModuleType.POTENTIAL_JOB_SITE);
 
-        // 1. Reset profession to NONE
+        // Reset profession to NONE
         Holder<VillagerProfession> prof = BuiltInRegistries.VILLAGER_PROFESSION.getOrThrow(VillagerProfession.NONE);
         villager.setVillagerData(villager.getVillagerData().withProfession(prof).withLevel(1));
+        serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_NO, SoundSource.NEUTRAL);
 
-        // 2. Reset XP & inventory & trades
+        // Reset XP & inventory & trades
         villager.setVillagerXp(0);
         villager.getInventory().clearContent();
 
-        // 3. Forget job site after 3 seconds
-        Brain<Villager> brain = villager.getBrain();
+        // Forget job site after 3 seconds
         GufyScheduler.schedule(serverLevel, 60, serverPlayer.getUUID(), () -> {
-            brain.eraseMemory(MemoryModuleType.JOB_SITE);
-            brain.eraseMemory(MemoryModuleType.POTENTIAL_JOB_SITE);
+            villager.refreshBrain(serverLevel);
         });
     }
 

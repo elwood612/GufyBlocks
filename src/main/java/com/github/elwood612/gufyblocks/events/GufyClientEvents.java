@@ -3,24 +3,19 @@ package com.github.elwood612.gufyblocks.events;
 import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.items.*;
-import com.github.elwood612.gufyblocks.memoryCharm.WorkstationRequest;
+import com.github.elwood612.gufyblocks.spectralChime.LightyActivator;
 import com.github.elwood612.gufyblocks.util.*;
 //import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
 //import net.minecraft.client.renderer.MultiBufferSource;
 //import net.minecraft.client.renderer.ShapeRenderer;
-import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.phys.EntityHitResult;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.*;
-import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID, value = Dist.CLIENT)
@@ -31,6 +26,16 @@ public class GufyClientEvents
     public static void registerConditionalProperties(RegisterConditionalItemModelPropertyEvent event) {
         event.register(Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "has_owner"), GufyOwnership.MAP_CODEC);
         event.register(Identifier.fromNamespaceAndPath(GufyBlocks.MODID, "has_stored_biome"), GufyStoredBiome.MAP_CODEC);
+    }
+
+    @SubscribeEvent
+    public static void onLogin(ClientPlayerNetworkEvent.LoggingIn event) {
+        LightyActivator.initialize();
+    }
+
+    @SubscribeEvent
+    public static void onLogout(ClientPlayerNetworkEvent.LoggingOut event) {
+        LightyActivator.cleanup();
     }
 
     // Adds tooltips to items
@@ -68,10 +73,9 @@ public class GufyClientEvents
             case GufySpectralGem gufySpectralGem -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
-                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_rung").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions").withStyle(ChatFormatting.GOLD));
-                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.relic_blank"));
-                event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GOLD));
             }
             case GufyInsomniaFragment gufyInsomniaFragment -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
@@ -149,7 +153,14 @@ public class GufyClientEvents
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_used").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.stillstone_instructions").withStyle(ChatFormatting.GOLD));
                 event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.relic_blank"));
-                event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(6, Component.translatable("tooltip.gufyblocks.stillstone_instructions_2").withStyle(ChatFormatting.GRAY));
+            }
+            case GufyHomeboundAnchor gufyHomeboundAnchor -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
+                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
+                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.homebound_instructions").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.homebound_instructions_2").withStyle(ChatFormatting.GOLD));
             }
             default -> { }
         }

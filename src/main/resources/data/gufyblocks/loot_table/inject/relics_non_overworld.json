@@ -6,15 +6,7 @@
       "entries": [
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:stillstone"
-        },
-		{
-          "type": "minecraft:item",
           "name": "gufyblocks:anchor"
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:phasing_vial"
         },
 		{
           "type": "minecraft:item",

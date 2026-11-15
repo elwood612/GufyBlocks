@@ -2,12 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": "gufyblocks:anchor",
-    "X": "minecraft:echo_shard"
+    "X": "minecraft:echo_shard",
+	"Y": "minecraft:amethyst_shard"
   },
   "pattern": [
-    "XXX",
+    "YXY",
     "X#X",
-	"XXX"
+	"YXY"
   ],
   "result": 
   { 

@@ -166,6 +166,14 @@
 		{
 		  "type": "neoforge:loot_table_id",
 		  "loot_table_id": "minecraft:chests/village/village_weaponsmith"
+		},
+		{
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/abandoned_camp_common_chest"
+		},
+		{
+		  "type": "neoforge:loot_table_id",
+		  "loot_table_id": "minecraft:chests/abandoned_camp_secret_chest"
 		}
 	]
   },

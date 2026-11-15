@@ -1,0 +1,8 @@
+{
+  "replace": false,	
+  "values": [
+    "gufyblocks:wandering_trader/stillstone_teleportation_crystal",
+	"gufyblocks:wandering_trader/stillstone_storm_echo",
+	"gufyblocks:wandering_trader/stillstone_insomnia_fragment"
+  ]
+}

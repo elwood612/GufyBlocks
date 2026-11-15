@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "minecraft:bell",
+	"Y": "#gufyblocks:bell_spawn_eggs",
+	"Z": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    "ZYZ",
+    " X ",
+	" # "
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:spectral_gem"
+  }
+}

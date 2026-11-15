@@ -85,8 +85,4 @@ public class GufySoulboundAnchor extends Item
     public boolean isFoil(ItemStack stack) {
         return true;
     }
-
-    private void teleportToLastDeath(ServerPlayer player) {
-
-    }
 }

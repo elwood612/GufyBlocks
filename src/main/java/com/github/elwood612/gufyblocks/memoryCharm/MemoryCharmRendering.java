@@ -13,7 +13,6 @@ public class MemoryCharmRendering
     @SubscribeEvent
     public static void onRender(SubmitCustomGeometryEvent event) {
         BlockPos pos = MemoryCharmClient.workstationPos;
-
         if (pos == null) return;
 
         Vec3 cameraPos = event.getLevelRenderState().cameraRenderState.pos;

@@ -9,8 +9,8 @@ public class GufyMemoryCharm extends Item
 
     // Code for Memory charm is in memoryCharm package
 
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
-    }
+//    @Override
+//    public boolean isFoil(ItemStack stack) {
+//        return true;
+//    }
 }

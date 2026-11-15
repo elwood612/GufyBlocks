@@ -12,7 +12,7 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 import java.util.Optional;
 
-public class ServerPayloadHandler
+public class ServerMemoryPayloadHandler
 {
     public static void handle(WorkstationRequest payload, IPayloadContext context) {
         if (!(context.player() instanceof ServerPlayer player)) return;

@@ -21,11 +21,6 @@
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:phasing_vial",
-		  "weight": 1
-        },
-		{
-          "type": "minecraft:item",
           "name": "gufyblocks:storm_echo",
 		  "weight": 1
         }

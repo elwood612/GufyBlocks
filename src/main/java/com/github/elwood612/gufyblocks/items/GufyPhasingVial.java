@@ -45,31 +45,31 @@ public class GufyPhasingVial extends Item
     public ItemStack finishUsingItem(ItemStack itemstack, Level level, LivingEntity livingEntity) {
         Consumable consumable = itemstack.get(DataComponents.CONSUMABLE);
 
-        if (!level.isClientSide() && level instanceof ServerLevel serverLevel && livingEntity instanceof ServerPlayer serverPlayer)
-        {
-            BlockPos origin = serverPlayer.getOnPos();
-            Vec3 center = Vec3.atCenterOf(origin);
-            Vec3 playerPos = Vec3.atBottomCenterOf(origin);
-
-            for (int i = 0; i < delay; i += 2) { // every 2 ticks
-                GufyScheduler.schedule(serverLevel, i, serverPlayer.getUUID(), () -> {
-                    spawnPhasingOrb(serverLevel, center);
-                });
-                if (i == 2 || delay - i == 100 || delay - i == 54 || delay - i == 34 || delay - i == 16) {
-                    GufyScheduler.schedule(serverLevel, i, serverPlayer.getUUID(), () -> {
-                        addSpark(serverLevel, center, serverPlayer);
-                    });
-                }
-            }
-
-            GufyPhasingHandler.originalMode = serverPlayer.gameMode.getGameModeForPlayer();
-            serverPlayer.setGameMode(GameType.SPECTATOR);
-            GufyScheduler.schedule(serverLevel, delay, serverPlayer.getUUID(), () -> { GufyPhasingHandler.returnPlayer(serverPlayer); });
-            GufyPhasingHandler.activePhasing.put(serverPlayer.getUUID(), origin);
-            GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, origin, serverPlayer);
-
-            return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
-        }
+//        if (!level.isClientSide() && level instanceof ServerLevel serverLevel && livingEntity instanceof ServerPlayer serverPlayer)
+//        {
+//            BlockPos origin = serverPlayer.getOnPos();
+//            Vec3 center = Vec3.atCenterOf(origin);
+//            Vec3 playerPos = Vec3.atBottomCenterOf(origin);
+//
+//            for (int i = 0; i < delay; i += 2) { // every 2 ticks
+//                GufyScheduler.schedule(serverLevel, i, serverPlayer.getUUID(), () -> {
+//                    spawnPhasingOrb(serverLevel, center);
+//                });
+//                if (i == 2 || delay - i == 100 || delay - i == 54 || delay - i == 34 || delay - i == 16) {
+//                    GufyScheduler.schedule(serverLevel, i, serverPlayer.getUUID(), () -> {
+//                        addSpark(serverLevel, center, serverPlayer);
+//                    });
+//                }
+//            }
+//
+//            GufyPhasingHandler.originalMode = serverPlayer.gameMode.getGameModeForPlayer();
+//            serverPlayer.setGameMode(GameType.SPECTATOR);
+//            GufyScheduler.schedule(serverLevel, delay, serverPlayer.getUUID(), () -> { GufyPhasingHandler.returnPlayer(serverPlayer); });
+//            GufyPhasingHandler.activePhasing.put(serverPlayer.getUUID(), origin);
+//            GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, origin, serverPlayer);
+//
+//            return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
+//        }
 
         return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
     }

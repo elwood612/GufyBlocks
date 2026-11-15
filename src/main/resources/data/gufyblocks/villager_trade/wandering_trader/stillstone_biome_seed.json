@@ -2,7 +2,7 @@
   "gives": {
     "id": "gufyblocks:biome_seed"
   },
-  "max_uses": 1.0,
+  "max_uses": 4.0,
   "reputation_discount": 0.05,
   "wants": {
     "count": 3,

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "gufyblocks:anchor",
+    "X": "minecraft:heart_of_the_sea",
+	"Y": "minecraft:amethyst_shard"
+  },
+  "pattern": [
+    "YXY",
+    "X#X",
+	"YXY"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:homebound_anchor"
+  }
+}

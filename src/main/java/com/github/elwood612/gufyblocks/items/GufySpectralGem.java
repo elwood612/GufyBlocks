@@ -1,21 +1,27 @@
 package com.github.elwood612.gufyblocks.items;
 
+import com.github.elwood612.gufyblocks.spectralChime.LightyRequest;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
-import net.minecraft.ChatFormatting;
+import com.github.elwood612.gufyblocks.spectralChime.LightyActivator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.NotNull;
 
 public class GufySpectralGem extends Item
@@ -27,20 +33,49 @@ public class GufySpectralGem extends Item
     public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
         BlockPos position = player.getOnPos();
         ItemStack itemstack = player.getItemInHand(handIn);
+        double radius = 64.0;
+        int durationTicks = 400;
+        int durationSeconds = 20;
+        AABB area = player.getBoundingBox().inflate(radius);
+
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, SwingAnimation.DEFAULT, true);
 
             if (!player.getAbilities().instabuild) {
-                itemstack.consume(1, player);
+                itemstack.hurtAndBreak(1, player, handIn);
             }
 
-            GufyUtil.execute("effect give @p minecraft:night_vision 20 0 true", serverLevel, position, player);
-            GufyUtil.execute("execute at @p run effect give @e[distance=..64] minecraft:glowing 20 0 true", serverLevel, position, player);
-            GufyUtil.execute("effect give @p minecraft:blindness 1 0 true", serverLevel, position, player);
+            player.addEffect(new MobEffectInstance(
+                    MobEffects.GLOWING,
+                    durationTicks,
+                    0,
+                    false,
+                    true
+            ));
+            for (Entity entity : level.getEntities(player, area)) {
+                if (entity instanceof Mob mob) {
+                    mob.addEffect(new MobEffectInstance(
+                            MobEffects.GLOWING,
+                            durationTicks,
+                            0,
+                            false,
+                            true
+                    ));
+                }
+            }
 
-            level.playSound((Player) null, position, SoundEvents.ENDERMAN_AMBIENT, SoundSource.NEUTRAL, 0.4f, 0.2f);
-            level.playSound((Player) null, position, SoundEvents.AMETHYST_BLOCK_BREAK, SoundSource.NEUTRAL, 1f, 0.4f);
-            level.playSound((Player) null, position, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL, 0.8f, 0.5f);
+            for (ServerPlayer nearbyPlayer : serverLevel.players()) {
+                if (nearbyPlayer.distanceToSqr(player) <= radius * radius) {
+                    PacketDistributor.sendToPlayer(
+                            nearbyPlayer,
+                            new LightyRequest(durationSeconds)
+                    );
+                }
+            }
+
+            level.playSound((Player) null, position, SoundEvents.BELL_RESONATE, SoundSource.NEUTRAL, 0.8f, 0.35f);
+            level.playSound((Player) null, position, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.NEUTRAL, 0.8f, 0.6f);
+            level.playSound((Player) null, position, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.NEUTRAL, 4f, 0.8f);
 
             ((ServerLevel) player.level()).sendParticles(
                     ParticleTypes.PORTAL,
@@ -58,8 +93,8 @@ public class GufySpectralGem extends Item
         }
     }
 
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
-    }
+//    @Override
+//    public boolean isFoil(ItemStack stack) {
+//        return true;
+//    }
 }

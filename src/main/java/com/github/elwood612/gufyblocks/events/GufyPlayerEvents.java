@@ -5,9 +5,6 @@ import com.github.elwood612.gufyblocks.network.GufyVersionCheckPayload;
 import com.github.elwood612.gufyblocks.util.GufyPhasingHandler;
 import com.github.elwood612.gufyblocks.util.GufyScheduler;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Holder;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -15,39 +12,21 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.clock.ServerClockManager;
 import net.minecraft.world.clock.WorldClock;
 import net.minecraft.world.clock.WorldClocks;
-import net.minecraft.world.entity.ai.memory.MemoryModuleType;
-import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.EntityHitResult;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.startup.Server;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import java.util.Optional;
 import java.util.UUID;
 
 @EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyPlayerEvents
 {
     public static long lastGlobalLoginTick = -1;
-
-    // Phasing Vial safety cleanup
-    @SubscribeEvent
-    public static void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent event) {
-        if (!(event.getEntity() instanceof ServerPlayer player)) return;
-
-        UUID playerID = player.getUUID();
-        GufyScheduler.cancelPlayerTasks(playerID);
-
-        if (GufyPhasingHandler.activePhasing.containsKey(player.getUUID())) {
-            GufyPhasingHandler.returnPlayer(player);
-        }
-    }
+    public static boolean isLightyLoaded = ModList.get().isLoaded("lighty");
 
     // Packet login check
     // Set time to day if no one is on
@@ -58,7 +37,7 @@ public class GufyPlayerEvents
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
         Level level = player.level();
 
-        // should prevent out-of-date clients loggin in to the server
+        // should prevent out-of-date clients logging in to the server
         PacketDistributor.sendToPlayer(player, new GufyVersionCheckPayload(GufyBlocks.VERSION));
 
         if (level instanceof ServerLevel serverLevel) {
@@ -85,6 +64,19 @@ public class GufyPlayerEvents
         }
 
         // This is more for safety, the logout event should normally have this covered
+        UUID playerID = player.getUUID();
+        GufyScheduler.cancelPlayerTasks(playerID);
+
+        if (GufyPhasingHandler.activePhasing.containsKey(player.getUUID())) {
+            GufyPhasingHandler.returnPlayer(player);
+        }
+    }
+
+    // Phasing Vial safety cleanup
+    @SubscribeEvent
+    public static void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player)) return;
+
         UUID playerID = player.getUUID();
         GufyScheduler.cancelPlayerTasks(playerID);
 

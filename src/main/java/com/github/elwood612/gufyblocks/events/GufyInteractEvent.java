@@ -31,7 +31,6 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 @EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyInteractEvent
 {
-    // Used for Amulet of Peace
     @SubscribeEvent
     public static void onEntityInteract(PlayerInteractEvent.EntityInteract event) {
         Level level = event.getLevel();
@@ -42,7 +41,7 @@ public class GufyInteractEvent
 
         if (!(target instanceof LivingEntity living)) return;
 
-        // Quelling Amulet
+        // Ancient Coin
         if (stack.getItem() instanceof GufyStillstone) {
             if (!(level.isClientSide()) && level instanceof ServerLevel serverLevel && target instanceof Mob mob) {
                 if (player instanceof ServerPlayer serverPlayer &&

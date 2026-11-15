@@ -513,7 +513,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> SPECTRAL_GEM = ITEMS.registerItem(
             "spectral_gem",
             GufySpectralGem::new,
-            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE).durability(32)
     );
     public static final DeferredItem<Item> BIOME_SEED = ITEMS.registerItem(
             "biome_seed",
@@ -548,6 +548,11 @@ public class GufyRegistry
     public static final DeferredItem<Item> SOULBOUND_ANCHOR = ITEMS.registerItem(
             "soulbound_anchor",
             GufySoulboundAnchor::new,
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.EPIC)
+    );
+    public static final DeferredItem<Item> HOMEBOUND_ANCHOR = ITEMS.registerItem(
+            "homebound_anchor",
+            GufyHomeboundAnchor::new,
             () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.EPIC)
     );
     public static final DeferredItem<Item> MEMORY_CHARM = ITEMS.registerItem(

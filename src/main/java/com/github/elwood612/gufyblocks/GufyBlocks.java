@@ -3,6 +3,8 @@ package com.github.elwood612.gufyblocks;
 import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.memoryCharm.*;
 import com.github.elwood612.gufyblocks.network.*;
+import com.github.elwood612.gufyblocks.spectralChime.ClientLightyPayloadHandler;
+import com.github.elwood612.gufyblocks.spectralChime.LightyRequest;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
@@ -64,15 +66,23 @@ public class GufyBlocks
 		);
 
 		// Register both Request and Response for getting a villager's workstation
-		// As called in GufyClientEvents for the Memory Charm
+		// As called in MemoryCharmInteraction
 		registrar.playToServer(
 				WorkstationRequest.TYPE,
 				WorkstationRequest.STREAM_CODEC,
-                ServerPayloadHandler::handle
+                ServerMemoryPayloadHandler::handle
 		);
 		registrar.playToClient(
 				WorkstationResponse.TYPE,
 				WorkstationResponse.STREAM_CODEC
+		);
+
+		// Register Lighty payload request
+		// As called in GufySpectralGem
+		registrar.playToClient(
+				LightyRequest.TYPE,
+				LightyRequest.STREAM_CODEC,
+				ClientLightyPayloadHandler::handle
 		);
 	}
 
@@ -81,7 +91,7 @@ public class GufyBlocks
 		// As called in GufyClientEvents for the Memory Charm
 		event.register(
 				WorkstationResponse.TYPE,
-				ClientPayloadHandler::handle
+				ClientMemoryPayloadHandler::handle
 		);
 	}
 }

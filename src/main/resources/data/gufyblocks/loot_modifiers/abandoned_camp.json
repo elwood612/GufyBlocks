@@ -1,0 +1,17 @@
+{
+    "type": "neoforge:add_table",
+    "condition": {
+	  "type": "minecraft:all_of",
+      "terms": [
+		{
+			"type": "neoforge:loot_table_id",
+			"loot_table_id": "minecraft:chests/abandoned_camp_common_chest"
+		},
+		{
+			"type": "neoforge:loot_table_id",
+			"loot_table_id": "minecraft:chests/abandoned_camp_secret_chest"
+		}
+	  ]
+	},
+    "table": "gufyblocks:inject/relics_aboveground"
+}

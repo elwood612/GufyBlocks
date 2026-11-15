@@ -7,10 +7,10 @@ public class GufyStillstone extends Item
 {
     public GufyStillstone(Item.Properties properties) { super(properties); }
 
-    // Code for Stillstone (Amulet of Peace) is in InteractEvent
+    // Code for Stillstone (Ancient Coins) is in InteractEvent
 
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
-    }
+//    @Override
+//    public boolean isFoil(ItemStack stack) {
+//        return true;
+//    }
 }

@@ -3,7 +3,7 @@
   "key": {
     "#": "gufyblocks:memory_charm",
     "X": "minecraft:gold_ingot",
-	"Y": "minecraft:gold_nugget"
+	"Y": "minecraft:tuff"
   },
   "pattern": [
     "YXY",
