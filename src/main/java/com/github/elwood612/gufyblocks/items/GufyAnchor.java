@@ -4,6 +4,7 @@ import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.SwingAnimation;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -123,4 +125,9 @@ public class GufyAnchor extends Item
     public boolean isFoil(ItemStack stack) {
         return stack.has(GufyRegistry.OWNER.get());
     }
+
+//    @Override
+//    public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
+//        return false;
+//    }
 }

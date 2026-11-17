@@ -3,6 +3,7 @@ package com.github.elwood612.gufyblocks.items;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -63,4 +65,9 @@ public class GufyHammer extends Item
         Player player = context.getPlayer();
         return context.getHand().equals(InteractionHand.MAIN_HAND) && player.getOffhandItem().is(Items.SHIELD) && !player.isSecondaryUseActive();
     }
+
+//    @Override
+//    public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
+//        return false;
+//    }
 }

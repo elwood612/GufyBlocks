@@ -31,7 +31,8 @@ public class GufyHomeboundAnchor extends Item
             player.swing(handIn, SwingAnimation.DEFAULT, true);
 
             // Get world spawn
-            GlobalPos spawnPos = serverLevel.getServer().overworld().getRespawnData().globalPos();
+            MinecraftServer server = serverLevel.getServer();
+            GlobalPos spawnPos = server.overworld().getRespawnData().globalPos();
 
             // If player spawn exists, use that
             ServerPlayer.RespawnConfig config = serverPlayer.getRespawnConfig();
@@ -39,7 +40,6 @@ public class GufyHomeboundAnchor extends Item
                 spawnPos = config.respawnData().globalPos();
             }
 
-            MinecraftServer server = player.level().getServer();
             ServerLevel targetLevel = server.getLevel(spawnPos.dimension());
 
             if (targetLevel == null) {

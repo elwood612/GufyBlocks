@@ -1,9 +1,7 @@
 package com.github.elwood612.gufyblocks;
 
 import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyBlockTypes;
-import com.github.elwood612.gufyblocks.blocks.blockUtil.GufyWeathering;
 import com.github.elwood612.gufyblocks.effects.GufyInsomniaEffect;
-import com.github.elwood612.gufyblocks.seat.GufySeatEntity;
 import com.github.elwood612.gufyblocks.items.*;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
 import com.github.elwood612.gufyblocks.util.GufyFamilyBuilder;
@@ -17,10 +15,8 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
-import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffect;
@@ -44,7 +40,6 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import static com.github.elwood612.gufyblocks.GufyBlocks.MODID;
-import static com.github.elwood612.gufyblocks.util.GufyUtil.*;
 import static net.minecraft.world.level.block.Blocks.*;
 
 
@@ -395,6 +390,7 @@ public class GufyRegistry
         // ~~ MISCELLANEOUS ~~ //
         add(new GufyFamilyBuilder().name("wattle_fence").properties(GufyProperties.WATTLE).blockTypes(GufyBlockTypes.WATTLEFENCE).furnaceFuel(BURN_TIME_100).buildFamily());
 
+
         // ~~ DEPRECATED BLOCKS ~~ //
         add(new GufyFamilyBuilder().name("wagon_wheel").parent(SPRUCE_TRAPDOOR).blockTypes(GufyBlockTypes.WAGONWHEEL).buildFamily()); // DEPRECATED
         add(new GufyFamilyBuilder().name("mossy_oak").parent(OAK_PLANKS).blockTypes(GUFY_WOOD_TYPES).buildFamily()); // DEPRECATED
@@ -513,7 +509,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> SPECTRAL_GEM = ITEMS.registerItem(
             "spectral_gem",
             GufySpectralGem::new,
-            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE).durability(32)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE).durability(64)
     );
     public static final DeferredItem<Item> BIOME_SEED = ITEMS.registerItem(
             "biome_seed",
@@ -580,11 +576,6 @@ public class GufyRegistry
 
 
     //****************************MISC******************************//
-
-    public static final DeferredHolder<EntityType<?>, EntityType<GufySeatEntity>> SEAT = ENTITIES.register("seat",
-            () -> EntityType.Builder.<GufySeatEntity>of(GufySeatEntity::new, MobCategory.MISC).sized(0.0f, 0.0f)
-                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MODID, "seat"))));
-
     public static final Supplier<SimpleParticleType> MONOCLE_PARTICLE = PARTICLES.register("monocle_particle",
             () -> new SimpleParticleType(false));
 

@@ -1,6 +1,5 @@
 package com.github.elwood612.gufyblocks;
 
-import com.github.elwood612.gufyblocks.events.GufyRendererEvent;
 import com.github.elwood612.gufyblocks.memoryCharm.*;
 import com.github.elwood612.gufyblocks.network.*;
 import com.github.elwood612.gufyblocks.spectralChime.ClientLightyPayloadHandler;
@@ -37,11 +36,10 @@ public class GufyBlocks
 		GufyRegistry.PARTICLES.register(modEventBus);
 		GufyRegistry.MOB_EFFECTS.register(modEventBus);
 
-		modEventBus.register(new GufyRendererEvent());
 		modEventBus.addListener(this::registerPackets);
 		modEventBus.addListener(this::registerClientPackets);
 
-		NeoForge.EVENT_BUS.register(MemoryCharmRendering.class);
+//		NeoForge.EVENT_BUS.register(MemoryCharmRendering.class);
 	}
 
 	private void registerPackets(RegisterPayloadHandlersEvent event) {

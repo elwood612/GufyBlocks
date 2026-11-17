@@ -1,13 +1,16 @@
 package com.github.elwood612.gufyblocks.memoryCharm;
 
+import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.SubmitCustomGeometryEvent;
 
+@EventBusSubscriber(modid = GufyBlocks.MODID)
 public class MemoryCharmRendering
 {
     @SubscribeEvent

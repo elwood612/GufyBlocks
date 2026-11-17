@@ -1,5 +1,1826 @@
 {
+	"replace": false,
 	"values": {
+		"gufyblocks:waxed_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_exposed_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_exposed_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_weathered_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_weathered_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:waxed_oxidized_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:waxed_oxidized_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:oxidized_cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.wax_off",
+					"item_damage_per_use": 1,
+					"particle": "wax_off"
+				}
+			}
+		},
+		"gufyblocks:exposed_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_copper_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_copper_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_copper_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_copper_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_cut_copper_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_cut_copper_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_cut_copper_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_cut_copper_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_cut_copper_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_cut_copper_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:exposed_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:exposed_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:weathered_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:weathered_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:exposed_cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
+		"gufyblocks:oxidized_cut_copper_post": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:oxidized_cut_copper_post"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:weathered_cut_copper_post"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.scrape",
+					"item_damage_per_use": 1,
+					"particle": "scrape"
+				}
+			}
+		},
 		"gufyblocks:oak_wood_stairs": {
 			"transformers": {
 				"minecraft:axe": {

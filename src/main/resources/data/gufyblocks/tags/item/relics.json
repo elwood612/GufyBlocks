@@ -6,8 +6,8 @@
 	"gufyblocks:experience_orb",
 	"gufyblocks:insomnia_fragment",
 	"gufyblocks:memory_charm",
-	"gufyblocks:phasing_vial",
 	"gufyblocks:soulbound_anchor",
+	"gufyblocks:homebound_anchor",
 	"gufyblocks:totem_keeping"
   ]
 }

@@ -1,6 +1,5 @@
 package com.github.elwood612.gufyblocks.items;
 
-import com.github.elwood612.gufyblocks.util.GufyMonocleParticles;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

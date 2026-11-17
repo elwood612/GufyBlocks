@@ -15,6 +15,7 @@ import net.neoforged.neoforge.event.level.BlockDropsEvent;
 @EventBusSubscriber(modid = GufyBlocks.MODID)
 public class GufyBlockDropsEvents
 {
+    // Make spawners drop their eggs
     @SubscribeEvent
     public static void onBreakSpawner(BlockDropsEvent event) {
         if (!(event.getBlockEntity() instanceof SpawnerBlockEntity spawner))

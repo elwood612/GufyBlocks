@@ -40,7 +40,6 @@ public class GufyBiomeSeed extends Item
 
     @NotNull
     @Override
-//    public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
     public InteractionResult useOn(UseOnContext context) {
         Player player = context.getPlayer();
         InteractionHand handIn = context.getHand();

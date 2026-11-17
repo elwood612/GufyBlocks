@@ -2700,7 +2700,7 @@
 "message.gufyblocks.sunlight_daytime":  "§cYou must wait for night to use this! §r",
 "message.gufyblocks.soulbound_nodeath":  "§cNo death location available! §r",
 "message.gufyblocks.soulbound_dimension":  "§cYou must be in the same dimension as your death to use! §r",
-"message.gufyblocks.homebound_nospawn":  "§cNo spawn location available! §r",
+"message.gufyblocks.homebound_nospawn":  "§cYour spawn is obstructed! §r",
 "message.gufyblocks.homebound_dimension":  "§cYou must be in the same dimension as your spawn to use! §r",
 "message.gufyblocks.stillstone_resisted":  "§c This mob is too powerful! §r",
 "message.gufyblocks.server_thunder":  "Summoning a thunderstorm",
