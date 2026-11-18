@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:cinnabar_brick_wall"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:cinnabar_brick_post",
+    "count": 4
+  }
+}

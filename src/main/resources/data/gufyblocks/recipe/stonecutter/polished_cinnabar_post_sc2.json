@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:cinnabar",
+  "result":  {
+  "id": "gufyblocks:polished_cinnabar_post",
+  "count": 2
+  }
+}

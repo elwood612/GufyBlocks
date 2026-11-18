@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sulfur",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:sulfur_post"
+  },
+  "result": 
+  {
+    "id": "minecraft:sulfur",
+    "count": 1
+  }
+}

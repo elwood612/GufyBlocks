@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:polished_cinnabar",
+  "result":  {
+  "id": "gufyblocks:cinnabar_brick_hopper",
+  "count": 1
+  }
+}

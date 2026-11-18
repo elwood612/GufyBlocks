@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "polished_sulfur",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:polished_sulfur_verticalslab"
+  },
+  "result": 
+  {
+    "id": "minecraft:polished_sulfur",
+    "count": 2
+  }
+}

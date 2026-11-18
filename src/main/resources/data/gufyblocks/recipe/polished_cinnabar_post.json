@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:polished_cinnabar_wall"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:polished_cinnabar_post",
+    "count": 4
+  }
+}

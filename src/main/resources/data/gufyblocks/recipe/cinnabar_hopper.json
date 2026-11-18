@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:cinnabar"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:cinnabar_hopper",
+    "count": 6
+  }
+}

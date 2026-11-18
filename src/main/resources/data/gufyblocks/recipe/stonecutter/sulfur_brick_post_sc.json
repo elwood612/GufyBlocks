@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:sulfur_bricks",
+  "result":  {
+  "id": "gufyblocks:sulfur_brick_post",
+  "count": 2
+  }
+}

@@ -271,6 +271,12 @@ public class GufyRegistry
         add(new GufyFamilyBuilder().name("prismarine").parent(PRISMARINE).blockTypes(VANILLA_STONE_TYPES).buildFamily());
         add(new GufyFamilyBuilder().name("prismarine_bricks").parent(PRISMARINE_BRICKS).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
         add(new GufyFamilyBuilder().name("dark_prismarine").parent(DARK_PRISMARINE).blockTypes(ArrayUtils.addAll(VANILLA_STONE_TYPES, GufyBlockTypes.WALL)).buildFamily());
+        add(new GufyFamilyBuilder().name("cinnabar").parent(CINNABAR).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("cinnabar_brick").parent(CINNABAR_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_cinnabar").parent(POLISHED_CINNABAR).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("sulfur").parent(SULFUR).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("sulfur_brick").parent(SULFUR_BRICKS).blockTypes(VANILLA_STONE_TYPES).buildFamily());
+        add(new GufyFamilyBuilder().name("polished_sulfur").parent(POLISHED_SULFUR).blockTypes(VANILLA_STONE_TYPES).buildFamily());
 
         // ~~ TERRACOTTA ~~ //
         add(new GufyFamilyBuilder().name("terracotta").parent(TERRACOTTA).blockTypes(VANILLA_STONE_TYPES_ALL).buildFamily());

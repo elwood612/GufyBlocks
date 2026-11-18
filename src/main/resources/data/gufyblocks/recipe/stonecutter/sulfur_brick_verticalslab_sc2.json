@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:sulfur",
+  "result":  {
+  "id": "gufyblocks:sulfur_brick_verticalslab",
+  "count": 2
+  }
+}

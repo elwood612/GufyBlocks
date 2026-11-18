@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "polished_cinnabar",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:polished_cinnabar_post"
+  },
+  "result": 
+  {
+    "id": "minecraft:polished_cinnabar",
+    "count": 1
+  }
+}

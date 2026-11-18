@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#",
+    "#"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:polished_sulfur_wall"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:polished_sulfur_post",
+    "count": 4
+  }
+}

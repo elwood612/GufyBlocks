@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:polished_sulfur"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:polished_sulfur_hopper",
+    "count": 6
+  }
+}

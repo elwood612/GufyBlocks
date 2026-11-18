@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:polished_sulfur",
+  "result":  {
+  "id": "gufyblocks:polished_sulfur_verticalslab",
+  "count": 2
+  }
+}

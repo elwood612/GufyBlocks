@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cinnabar_brick",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:cinnabar_brick_post"
+  },
+  "result": 
+  {
+    "id": "minecraft:cinnabar_bricks",
+    "count": 1
+  }
+}

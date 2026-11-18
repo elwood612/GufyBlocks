@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:cinnabar_bricks"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:cinnabar_brick_hopper",
+    "count": 6
+  }
+}
