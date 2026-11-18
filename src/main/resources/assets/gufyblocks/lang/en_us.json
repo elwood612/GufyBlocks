@@ -2710,8 +2710,7 @@
 "item.gufyblocks.memory_charm": "Trade Token",
 "item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
 "item.gufyblocks.monocle": "Monocle",
-"item.gufyblocks.stillstone": "Ancient Coin",
-"item.gufyblocks.ledger": "Inspector's Ledger",
+"item.gufyblocks.stillstone": "Curious Coin",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",

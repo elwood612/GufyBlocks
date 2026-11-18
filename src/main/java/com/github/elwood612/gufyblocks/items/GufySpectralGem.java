@@ -93,8 +93,8 @@ public class GufySpectralGem extends Item
         }
     }
 
-//    @Override
-//    public boolean isFoil(ItemStack stack) {
-//        return true;
-//    }
+    @Override
+    public boolean isFoil(ItemStack stack) {
+        return true;
+    }
 }
