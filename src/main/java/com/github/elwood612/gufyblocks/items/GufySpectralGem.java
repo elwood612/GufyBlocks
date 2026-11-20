@@ -14,6 +14,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -34,8 +35,8 @@ public class GufySpectralGem extends Item
         BlockPos position = player.getOnPos();
         ItemStack itemstack = player.getItemInHand(handIn);
         double radius = 64.0;
-        int durationTicks = 400;
-        int durationSeconds = 20;
+        int durationTicks = 500;
+        int durationSeconds = 25;
         AABB area = player.getBoundingBox().inflate(radius);
 
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
@@ -45,16 +46,10 @@ public class GufySpectralGem extends Item
                 itemstack.hurtAndBreak(1, player, handIn);
             }
 
-            player.addEffect(new MobEffectInstance(
-                    MobEffects.GLOWING,
-                    durationTicks,
-                    0,
-                    false,
-                    true
-            ));
+            // Give all mobs & players the glowing effect
             for (Entity entity : level.getEntities(player, area)) {
-                if (entity instanceof Mob mob) {
-                    mob.addEffect(new MobEffectInstance(
+                if (entity instanceof LivingEntity livingEntity) {
+                    livingEntity.addEffect(new MobEffectInstance(
                             MobEffects.GLOWING,
                             durationTicks,
                             0,
@@ -64,6 +59,7 @@ public class GufySpectralGem extends Item
                 }
             }
 
+            // Activate Lighty for all surrounding players
             for (ServerPlayer nearbyPlayer : serverLevel.players()) {
                 if (nearbyPlayer.distanceToSqr(player) <= radius * radius) {
                     PacketDistributor.sendToPlayer(
