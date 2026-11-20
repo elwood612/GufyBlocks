@@ -1,6 +1,10 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:stripped_poplar_wood_wall", 
+    "gufyblocks:poplar_wood_wall", 
+    "gufyblocks:big_poplar_wall", 
+    "gufyblocks:poplar_wall", 
     "gufyblocks:stripped_pale_oak_wood_wall", 
     "gufyblocks:pale_oak_wood_wall", 
     "gufyblocks:big_pale_oak_wall", 

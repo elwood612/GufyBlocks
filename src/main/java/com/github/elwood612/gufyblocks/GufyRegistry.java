@@ -157,6 +157,12 @@ public class GufyRegistry
         add(new GufyFamilyBuilder().name("pale_oak_wood").parent(PALE_OAK_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("stripped_pale_oak_wood").parent(PALE_OAK_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
         add(new GufyFamilyBuilder().name("chiseled_stripped_pale_oak_wood").parent(PALE_OAK_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("poplar").parent(POPLAR_PLANKS).blockTypes(VANILLA_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("poplar_parquet").parent(POPLAR_PLANKS).blockTypes(GUFY_DIRT_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("big_poplar").parent(POPLAR_PLANKS).blockTypes(GUFY_WOOD_TYPES).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("poplar_wood").parent(POPLAR_WOOD).blockTypes(VANILLA_STRIPPABLE_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("stripped_poplar_wood").parent(POPLAR_WOOD).blockTypes(VANILLA_WOOD_TYPES_ALL).furnaceFuel(BURN_TIME_300).buildFamily());
+        add(new GufyFamilyBuilder().name("chiseled_stripped_poplar_wood").parent(POPLAR_WOOD).blockTypes(GufyBlockTypes.CARVED_LOG).furnaceFuel(BURN_TIME_300).buildFamily());
 
         // ~~ DIRTS ~~ //
         add(new GufyFamilyBuilder().name("coarse_dirt").parent(COARSE_DIRT).blockTypes(VANILLA_DIRT_TYPES).buildFamily());

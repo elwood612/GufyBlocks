@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "gufyblocks:big_poplar",
+  "result":{
+    "id": "gufyblocks:big_poplar_verticalslab",
+    "count": 2}
+}

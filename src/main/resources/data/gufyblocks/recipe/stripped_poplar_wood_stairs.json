@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:stripped_poplar_log"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:stripped_poplar_wood_stairs",
+    "count": 6
+  }
+}

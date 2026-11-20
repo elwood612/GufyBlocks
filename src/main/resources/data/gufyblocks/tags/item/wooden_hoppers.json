@@ -36,6 +36,11 @@
 	"gufyblocks:stripped_crimson_hyphae_hopper",
 	"gufyblocks:stripped_warped_hyphae_hopper",
 	"gufyblocks:stripped_pale_oak_wood_hopper",
-	"gufyblocks:bamboo_hopper"
+	"gufyblocks:bamboo_hopper",
+	
+	"gufyblocks:poplar_hopper",
+	"gufyblocks:big_poplar_hopper",
+	"gufyblocks:poplar_wood_hopper",
+	"gufyblocks:stripped_poplar_wood_hopper"
   ]
 }

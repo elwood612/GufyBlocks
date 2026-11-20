@@ -7,12 +7,11 @@
         {
           "type": "minecraft:item",
           "name": "gufyblocks:experience_orb",
-		  "conditions": [
+		  "condition":
 		  {
-			  "condition": "minecraft:random_chance",
+			  "type": "minecraft:random_chance",
 			  "chance": 0.35
 		  }
-		  ]
         }
       ]
     }

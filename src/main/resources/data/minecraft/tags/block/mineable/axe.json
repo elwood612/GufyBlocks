@@ -1,6 +1,46 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:chiseled_stripped_poplar_wood", 
+ 
+    "gufyblocks:stripped_poplar_wood_stairs", 
+    "gufyblocks:stripped_poplar_wood_slab", 
+    "gufyblocks:stripped_poplar_wood_verticalslab", 
+    "gufyblocks:stripped_poplar_wood_wall", 
+    "gufyblocks:stripped_poplar_wood_hopper", 
+    "gufyblocks:stripped_poplar_wood_fence", 
+    "gufyblocks:stripped_poplar_wood_fence_gate", 
+    "gufyblocks:stripped_poplar_wood_panel", 
+ 
+    "gufyblocks:poplar_wood_stairs", 
+    "gufyblocks:poplar_wood_slab", 
+    "gufyblocks:poplar_wood_verticalslab", 
+    "gufyblocks:poplar_wood_wall", 
+    "gufyblocks:poplar_wood_hopper", 
+    "gufyblocks:poplar_wood_fence", 
+    "gufyblocks:poplar_wood_fence_gate", 
+    "gufyblocks:poplar_wood_panel", 
+ 
+    "gufyblocks:big_poplar", 
+    "gufyblocks:big_poplar_stairs", 
+    "gufyblocks:big_poplar_slab", 
+    "gufyblocks:big_poplar_verticalslab", 
+    "gufyblocks:big_poplar_wall", 
+    "gufyblocks:big_poplar_hopper", 
+    "gufyblocks:big_poplar_fence", 
+    "gufyblocks:big_poplar_fence_gate", 
+    "gufyblocks:big_poplar_panel", 
+ 
+    "gufyblocks:poplar_parquet", 
+    "gufyblocks:poplar_parquet_stairs", 
+    "gufyblocks:poplar_parquet_slab", 
+    "gufyblocks:poplar_parquet_verticalslab", 
+ 
+    "gufyblocks:poplar_verticalslab", 
+    "gufyblocks:poplar_wall", 
+    "gufyblocks:poplar_hopper", 
+    "gufyblocks:poplar_panel", 
+ 
     "gufyblocks:warped_framed_glass_pane",
 	"gufyblocks:crimson_framed_glass_pane", 
 	"gufyblocks:jungle_framed_glass_pane", 

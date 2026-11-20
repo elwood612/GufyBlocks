@@ -1,6 +1,181 @@
 {
 	"replace": false,
 	"values": {
+		"gufyblocks:poplar_wood_stairs": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_stairs"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_stairs"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:poplar_wood_slab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_slab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_slab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:poplar_wood_verticalslab": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_verticalslab"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_verticalslab"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:poplar_wood_wall": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_wall"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_wall"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:poplar_wood_hopper": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_hopper"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_hopper"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:poplar_wood_fence": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_fence"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_fence"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
+		"gufyblocks:poplar_wood_panel": {
+			"transformers": {
+				"minecraft:axe": {
+					"block_state_provider": {
+						"type": "minecraft:rule_based",
+						"rules": [
+							{
+								"if_true": {
+									"type": "minecraft:matching_blocks",
+									"blocks": "gufyblocks:poplar_wood_panel"
+								},
+								"then": {
+									"type": "minecraft:copy_properties",
+									"source": {
+										"id": "gufyblocks:stripped_poplar_wood_panel"
+									}
+								}
+							}
+						]
+					},
+					"sound": "minecraft:item.axe.strip",
+					"item_damage_per_use": 1
+				}
+			}
+		},
 		"gufyblocks:waxed_copper_stairs": {
 			"transformers": {
 				"minecraft:axe": {

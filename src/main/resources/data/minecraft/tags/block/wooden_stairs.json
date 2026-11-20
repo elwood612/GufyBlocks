@@ -22,6 +22,8 @@
 	"gufyblocks:mangrove_parquet_stairs",
 	"gufyblocks:cherry_parquet_stairs",
 	"gufyblocks:big_pale_oak_stairs",
-	"gufyblocks:pale_oak_parquet_stairs"
+	"gufyblocks:pale_oak_parquet_stairs",
+	"gufyblocks:big_poplar_stairs",
+	"gufyblocks:poplar_parquet_stairs"
   ]
 }

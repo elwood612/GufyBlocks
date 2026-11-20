@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:stripped_poplar_woods",
+  "result":{
+    "id": "gufyblocks:stripped_poplar_wood_fence",
+    "count": 1}
+}

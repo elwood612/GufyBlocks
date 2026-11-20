@@ -45,6 +45,12 @@
 	"gufyblocks:stripped_warped_hyphae_verticalslab",
 	"gufyblocks:stripped_pale_oak_wood_verticalslab",
 	"gufyblocks:bamboo_verticalslab",
-	"gufyblocks:bamboo_mosaic_verticalslab"
+	"gufyblocks:bamboo_mosaic_verticalslab",
+	
+	"gufyblocks:poplar_verticalslab",
+	"gufyblocks:big_poplar_verticalslab",
+	"gufyblocks:poplar_wood_verticalslab",
+	"gufyblocks:stripped_poplar_wood_verticalslab",
+	"gufyblocks:poplar_parquet_verticalslab"
   ]
 }

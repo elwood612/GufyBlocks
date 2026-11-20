@@ -22,6 +22,8 @@
 	"gufyblocks:mangrove_parquet_slab",
 	"gufyblocks:cherry_parquet_slab",
 	"gufyblocks:big_pale_oak_slab",
-	"gufyblocks:pale_oak_parquet_slab"	
+	"gufyblocks:pale_oak_parquet_slab",
+	"gufyblocks:big_poplar_slab",
+	"gufyblocks:poplar_parquet_slab"		
   ]
 }

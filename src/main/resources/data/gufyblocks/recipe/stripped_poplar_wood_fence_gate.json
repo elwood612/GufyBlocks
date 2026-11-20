@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": "minecraft:stick",
+    "W": "minecraft:stripped_poplar_log"
+  },
+  "result": {
+    "id": "gufyblocks:stripped_poplar_wood_fence_gate",
+	"count": 1
+  }
+}

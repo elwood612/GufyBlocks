@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": "minecraft:stick",
+    "W": "gufyblocks:big_poplar"
+  },
+  "result": {
+    "id": "gufyblocks:big_poplar_fence",
+    "count": 4
+  }
+}

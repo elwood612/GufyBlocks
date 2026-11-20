@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "poplar",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:poplar_wall"
+  },
+  "result": 
+  {
+    "id": "minecraft:poplar_planks",
+    "count": 2
+  }
+}

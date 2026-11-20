@@ -23,6 +23,8 @@
 	"gufyblocks:crimson_parquet",
 	"gufyblocks:warped_parquet",
 	"gufyblocks:big_pale_oak",
-	"gufyblocks:pale_oak_parquet"
+	"gufyblocks:pale_oak_parquet",
+	"gufyblocks:big_poplar",
+	"gufyblocks:poplar_parquet"
   ]
 }

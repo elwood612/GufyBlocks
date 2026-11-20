@@ -1,6 +1,9 @@
 { 
   "replace": false, 
   "values": [ 
+    "gufyblocks:stripped_poplar_wood_fence", 
+    "gufyblocks:poplar_wood_fence", 
+    "gufyblocks:big_poplar_fence", 
     "gufyblocks:stripped_pale_oak_wood_fence", 
     "gufyblocks:pale_oak_wood_fence", 
     "gufyblocks:big_pale_oak_fence", 

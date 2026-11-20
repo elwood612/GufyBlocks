@@ -36,6 +36,11 @@
 	"gufyblocks:stripped_crimson_hyphae_panel",
 	"gufyblocks:stripped_warped_hyphae_panel",
 	"gufyblocks:stripped_pale_oak_wood_panel",
-	"gufyblocks:bamboo_panel"
+	"gufyblocks:bamboo_panel",
+	
+	"gufyblocks:poplar_panel",
+	"gufyblocks:big_poplar_panel",
+	"gufyblocks:poplar_wood_panel",
+	"gufyblocks:stripped_poplar_wood_panel"
   ]
 }

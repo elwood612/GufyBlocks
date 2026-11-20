@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "# #",
+    "###",
+    " # "
+  ],
+  "key": 
+  {
+    "#": 
+    "minecraft:poplar_planks"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:poplar_hopper",
+    "count": 6
+  }
+}

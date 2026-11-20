@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:stonecutting",
+  "ingredient": "#gufyblocks:poplar_unstripped_woods",
+  "result":{
+    "id": "gufyblocks:poplar_wood_panel",
+    "count": 4}
+}

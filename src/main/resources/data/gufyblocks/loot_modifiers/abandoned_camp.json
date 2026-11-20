@@ -1,7 +1,7 @@
 {
     "type": "neoforge:add_table",
     "condition": {
-	  "type": "minecraft:all_of",
+	  "type": "minecraft:any_of",
       "terms": [
 		{
 			"type": "neoforge:loot_table_id",

@@ -44,6 +44,10 @@
 	"gufyblocks:stripped_warped_hyphae_stairs",
 	"gufyblocks:stripped_mangrove_wood_stairs",
 	"gufyblocks:stripped_cherry_wood_stairs",
-	"gufyblocks:stripped_pale_oak_wood_stairs"
+	"gufyblocks:stripped_pale_oak_wood_stairs",
+	"gufyblocks:poplar_wood_stairs",
+	"gufyblocks:stripped_poplar_wood_stairs",
+	"gufyblocks:big_poplar_stairs",
+	"gufyblocks:poplar_parquet_stairs"
   ]
 }

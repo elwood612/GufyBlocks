@@ -44,6 +44,10 @@
 	"gufyblocks:stripped_warped_hyphae_slab",
 	"gufyblocks:stripped_mangrove_wood_slab",
 	"gufyblocks:stripped_cherry_wood_slab",
-	"gufyblocks:stripped_pale_oak_wood_slab"
+	"gufyblocks:stripped_pale_oak_wood_slab",
+	"gufyblocks:poplar_wood_slab",
+	"gufyblocks:stripped_poplar_wood_slab",
+	"gufyblocks:big_poplar_slab",
+	"gufyblocks:poplar_parquet_slab"
   ]
 }

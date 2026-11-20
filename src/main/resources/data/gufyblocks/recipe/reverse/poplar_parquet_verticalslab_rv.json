@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "poplar_parquet",
+  "pattern":
+  [
+    "##",
+    "##"
+  ],
+  "key":
+  {
+    "#": 
+    "gufyblocks:poplar_parquet_verticalslab"
+  },
+  "result": 
+  {
+    "id": "gufyblocks:poplar_parquet",
+    "count": 2
+  }
+}
