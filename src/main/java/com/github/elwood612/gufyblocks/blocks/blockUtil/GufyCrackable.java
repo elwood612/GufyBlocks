@@ -11,22 +11,7 @@ import java.util.function.Supplier;
 import static com.github.elwood612.gufyblocks.util.GufyUtil.getGufyBlock;
 
 public interface GufyCrackable {
-    public static final String[] woodTypes = {
-            "oak",
-            "spruce",
-            "birch",
-            "dark_oak",
-            "jungle",
-            "acacia",
-            "mangrove",
-            "cherry",
-            "crimson",
-            "warped",
-            "bamboo",
-            "pale_oak"
-    };
-
-    public static final Supplier<BiMap<Block, Block>> CRACKABLES = Suppliers.memoize(() -> {
+    Supplier<BiMap<Block, Block>> CRACKABLES = Suppliers.memoize(() -> {
 
         ImmutableBiMap.Builder<Block, Block> builder = ImmutableBiMap.builder();
 
@@ -173,7 +158,7 @@ public interface GufyCrackable {
         builder.put(Blocks.STRIPPED_PALE_OAK_WOOD, getGufyBlock("chiseled_stripped_pale_oak_wood"));
 
         // FRAMED TERRACOTTA
-        for (String woodType : woodTypes) {
+        for (GufyWoods woodType : GufyWoods.values()) {
             String block = woodType + "_framed_terracotta";
 
             builder.put(getGufyBlock(block), getGufyBlock(block + "_left"));

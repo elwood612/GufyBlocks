@@ -353,6 +353,7 @@ public class GufyRegistry
         add(new GufyFamilyBuilder().name("crimson").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
         add(new GufyFamilyBuilder().name("warped").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
         add(new GufyFamilyBuilder().name("pale_oak").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
+        add(new GufyFamilyBuilder().name("poplar").parent(TERRACOTTA).blockTypes(VERTICAL_FRAMED_BLOCK_TYPES).buildFramedFamily());
 
 
         // ~~ COPPER ~~ //
