@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:poplar_planks"
+  },
+  "result": {
+    "id": "minecraft:poplar_stairs",
+    "count": 6
+  }
+}

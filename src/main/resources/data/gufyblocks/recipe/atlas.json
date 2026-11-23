@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:map",
+    "X": "minecraft:writable_book"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+	"###"
+  ],
+  "result": 
+  { 
+    "id": "gufyblocks:atlas"
+  }
+}

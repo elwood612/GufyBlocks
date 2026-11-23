@@ -11,11 +11,15 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.portal.TeleportTransition;
+import net.minecraft.world.level.storage.LevelData;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
 public class GufyHomeboundAnchor extends Item
@@ -30,52 +34,54 @@ public class GufyHomeboundAnchor extends Item
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
             player.swing(handIn, SwingAnimation.DEFAULT, true);
 
-            // Get world spawn
-            MinecraftServer server = serverLevel.getServer();
-            GlobalPos spawnPos = server.overworld().getRespawnData().globalPos();
+            TeleportTransition spawnData = serverPlayer.findRespawnPositionAndUseSpawnBlock(false, TeleportTransition.DO_NOTHING);
+            Vec3 spawnPos = spawnData.position();
 
-            // If player spawn exists, use that
-            ServerPlayer.RespawnConfig config = serverPlayer.getRespawnConfig();
-            if (config != null) {
-                spawnPos = config.respawnData().globalPos();
-            }
-
-            ServerLevel targetLevel = server.getLevel(spawnPos.dimension());
-
-            if (targetLevel == null) {
-                serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.homebound_nospawn"));
-                player.level().playSound((Player) null, player.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
-                return InteractionResult.FAIL;
-            }
-            if (!(targetLevel.dimension().equals(player.level().dimension()))){
+            if (!spawnData.newLevel().dimension().equals(level.dimension())) {
                 serverPlayer.sendSystemMessage(Component.translatable("message.gufyblocks.homebound_dimension"));
-                player.level().playSound((Player) null, player.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
+                player.level().playSound((Player) null, position, SoundEvents.ENDERMAN_TELEPORT, SoundSource.NEUTRAL, 0.5f, 0.4f);
                 return InteractionResult.FAIL;
             }
 
-            BlockPos pos = spawnPos.pos();
-            player.teleportTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+            player.teleportTo(spawnPos.x + 0.5, spawnPos.y, spawnPos.z + 0.5);
 
             if (!player.getAbilities().instabuild) {
                 itemstack.shrink(1);
             }
 
             player.level().playSound((Player) null, player.blockPosition(), SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL);
-            player.level().playSound((Player) null, pos, SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 0.5F, 0.4F);
+            player.level().playSound((Player) null, spawnPos.x, spawnPos.y, spawnPos.z, SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 0.5F, 0.4F);
 
             ((ServerLevel) player.level()).sendParticles(
                     ParticleTypes.PORTAL,
-                    pos.getX(), pos.getY(), pos.getZ(),
+                    spawnPos.x, spawnPos.y, spawnPos.z,
                     32,
                     0.5, 0.5, 0.5,
                     0.1
             );
-
-            return InteractionResult.SUCCESS;
+           return InteractionResult.SUCCESS;
         } else {
             return InteractionResult.FAIL;
         }
     }
+
+//    private TeleportTransition getPlayerSpawn(ServerPlayer player, ServerLevel level) {
+//        ServerPlayer.RespawnConfig config = player.getRespawnConfig();
+//
+//        if (config != null) {
+//            LevelData.RespawnData data = config.respawnData();
+//            GlobalPos spawn = data.globalPos();
+//
+//            ServerLevel spawnLevel = level.getServer().getLevel(spawn.dimension());
+//
+//            if (spawnLevel != null) {
+//                var playerSpawn = player.findRespawnPositionAndUseSpawnBlock(false, TeleportTransition.DO_NOTHING);
+//                return playerSpawn;
+//            }
+//        }
+//
+//        return TeleportTransition.;
+//    }
 
     @Override
     public boolean isFoil(ItemStack stack) {

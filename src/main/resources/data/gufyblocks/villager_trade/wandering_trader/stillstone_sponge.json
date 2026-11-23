@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "minecraft:sponge"
+  },
+  "max_uses": 4.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 4,
+    "id": "gufyblocks:stillstone"
+  }
+}

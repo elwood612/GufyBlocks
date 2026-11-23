@@ -3,7 +3,7 @@ package com.github.elwood612.gufyblocks.events;
 import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.items.*;
-import com.github.elwood612.gufyblocks.spectralChime.LightyActivator;
+import com.github.elwood612.gufyblocks.items.itemUtil.LightyActivator;
 import com.github.elwood612.gufyblocks.util.*;
 //import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.ChatFormatting;
@@ -71,11 +71,7 @@ public class GufyClientEvents
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.storm_echo_instructions").withStyle(ChatFormatting.GOLD));
             }
             case GufySpectralGem gufySpectralGem -> {
-                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
-                event.getToolTip().add(2, Component.translatable("tooltip.gufyblocks.relic_blank"));
-                event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_rung").withStyle(ChatFormatting.GRAY));
-                event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions").withStyle(ChatFormatting.GOLD));
-                event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions_2").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.spectral_gem_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
             }
             case GufyInsomniaFragment gufyInsomniaFragment -> {
                 event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.relic_title").withStyle(ChatFormatting.GRAY));
@@ -161,6 +157,9 @@ public class GufyClientEvents
                 event.getToolTip().add(3, Component.translatable("tooltip.gufyblocks.relic_subtitle_broken").withStyle(ChatFormatting.GRAY));
                 event.getToolTip().add(4, Component.translatable("tooltip.gufyblocks.homebound_instructions").withStyle(ChatFormatting.GOLD));
                 event.getToolTip().add(5, Component.translatable("tooltip.gufyblocks.homebound_instructions_2").withStyle(ChatFormatting.GOLD));
+            }
+            case GufyAtlas gufyAtlas -> {
+                event.getToolTip().add(1, Component.translatable("tooltip.gufyblocks.atlas_instructions").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
             }
             default -> { }
         }

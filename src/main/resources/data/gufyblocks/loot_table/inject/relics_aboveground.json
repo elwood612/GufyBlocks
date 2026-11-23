@@ -6,11 +6,27 @@
       "entries": [
 		{
           "type": "minecraft:item",
+		  "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "max": 3,
+              "min": 1
+            }
+          },
           "name": "gufyblocks:stillstone",
 		  "weight": 10
         },
 		{
           "type": "minecraft:item",
+		  "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "max": 3,
+              "min": 1
+            }
+          },
           "name": "gufyblocks:memory_charm",
 		  "weight": 10
         },

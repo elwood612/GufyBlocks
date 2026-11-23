@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "minecraft:enchanted_golden_apple"
+  },
+  "max_uses": 1.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 8,
+    "id": "gufyblocks:stillstone"
+  }
+}

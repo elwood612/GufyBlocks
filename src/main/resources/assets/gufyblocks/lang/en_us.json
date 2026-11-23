@@ -2820,6 +2820,7 @@
 "item.gufyblocks.potent_spectral_shard": "Potent Spectral Shard",
 "item.gufyblocks.monocle": "Monocle",
 "item.gufyblocks.stillstone": "Curious Coin",
+"item.gufyblocks.atlas": "Atlas",
 
 "message.gufyblocks.teleport_self":  "§cYou cannot teleport to yourself! §r",
 "message.gufyblocks.teleport_dimension":  "§cLinked player is in another dimension! §r",
@@ -2841,6 +2842,7 @@
 "message.gufyblocks.insomnia_effect_skyLight":  "Get outside to spawn phantoms",
 "message.gufyblocks.insomnia_effect_dimension":  "Get to the Overworld to spawn phantoms",
 "message.gufyblocks.insomnia_effect_time":  "Wait for nighttime to spawn phantoms",
+"message.gufyblocks.atlas_no_xaero":  "You must install the full modpack to use the atlas",
 
 "tooltip.gufyblocks.relic_title": "Trinket",
 "tooltip.gufyblocks.relic_blank": " ",
@@ -2857,8 +2859,7 @@
 "tooltip.gufyblocks.anchor_empty": "Put in your inventory to claim",
 "tooltip.gufyblocks.sunlight_shard_instructions": " Summons daylight",
 "tooltip.gufyblocks.storm_echo_instructions": " Summons a thunderstorm",
-"tooltip.gufyblocks.spectral_gem_instructions": " Reveals nearby mobs",
-"tooltip.gufyblocks.spectral_gem_instructions_2": " and hostile spawn points",
+"tooltip.gufyblocks.spectral_gem_instructions": "Reveals nearby mobs and hostile spawn points",
 "tooltip.gufyblocks.biome_seed_instructions": " Spreads ",
 "tooltip.gufyblocks.biome_seed_instructions_2": " around you",
 "tooltip.gufyblocks.biome_seed_dormant": "Right click to save current biome",
@@ -2884,6 +2885,7 @@
 "tooltip.gufyblocks.stillstone_instructions_2": "Can be traded",
 "tooltip.gufyblocks.ledger_instructions": "Reveals a villager's",
 "tooltip.gufyblocks.ledger_instructions_2": "current workstation",
+"tooltip.gufyblocks.atlas_instructions": "Opens a map of the explored world",
 
 "effect.gufyblocks.gufy_insomnia": "Potent Insomnia",
 

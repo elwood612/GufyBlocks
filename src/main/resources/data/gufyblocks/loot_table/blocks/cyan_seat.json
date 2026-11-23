@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gufyblocks:cyan_seat"
+          "name": "minecraft:cyan_cushion"
         }
       ],
       "condition": {

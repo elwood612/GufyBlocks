@@ -22,7 +22,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.*;
@@ -542,7 +541,7 @@ public class GufyRegistry
     public static final DeferredItem<Item> WHISPERING_COMPASS = ITEMS.registerItem(
             "whispering_compass",
             GufyWhisperingCompass::new,
-            () -> new Item.Properties()
+            () -> new Item.Properties().rarity(Rarity.UNCOMMON)
     );
     public static final DeferredItem<Item> EXPERIENCE_ORB = ITEMS.registerItem(
             "experience_orb",
@@ -557,17 +556,17 @@ public class GufyRegistry
     public static final DeferredItem<Item> SOULBOUND_ANCHOR = ITEMS.registerItem(
             "soulbound_anchor",
             GufySoulboundAnchor::new,
-            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.EPIC)
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.RARE)
     );
     public static final DeferredItem<Item> HOMEBOUND_ANCHOR = ITEMS.registerItem(
             "homebound_anchor",
             GufyHomeboundAnchor::new,
-            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.EPIC)
+            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.RARE)
     );
     public static final DeferredItem<Item> MEMORY_CHARM = ITEMS.registerItem(
             "memory_charm",
             GufyMemoryCharm::new,
-            () -> new Item.Properties().stacksTo(16).useCooldown(1f).rarity(Rarity.RARE)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.UNCOMMON)
     );
     public static final DeferredItem<Item> POTENT_SPECTRAL_SHARD = ITEMS.registerItem(
             "potent_spectral_shard",
@@ -582,7 +581,12 @@ public class GufyRegistry
     public static final DeferredItem<Item> STILLSTONE = ITEMS.registerItem(
             "stillstone",
             GufyStillstone::new,
-            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.RARE)
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.UNCOMMON)
+    );
+    public static final DeferredItem<Item> ATLAS = ITEMS.registerItem(
+            "atlas",
+            GufyAtlas::new,
+            () -> new Item.Properties().useCooldown(1f).rarity(Rarity.UNCOMMON)
     );
 
     //**************************************************************//

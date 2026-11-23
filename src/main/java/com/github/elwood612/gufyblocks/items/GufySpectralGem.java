@@ -1,8 +1,6 @@
 package com.github.elwood612.gufyblocks.items;
 
-import com.github.elwood612.gufyblocks.spectralChime.LightyRequest;
-import com.github.elwood612.gufyblocks.util.GufyUtil;
-import com.github.elwood612.gufyblocks.spectralChime.LightyActivator;
+import com.github.elwood612.gufyblocks.items.itemUtil.LightyRequest;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -15,7 +13,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -47,7 +44,7 @@ public class GufySpectralGem extends Item
             }
 
             // Give all mobs & players the glowing effect
-            for (Entity entity : level.getEntities(player, area)) {
+            for (Entity entity : level.getEntities(null, area)) {
                 if (entity instanceof LivingEntity livingEntity) {
                     livingEntity.addEffect(new MobEffectInstance(
                             MobEffects.GLOWING,
@@ -87,10 +84,5 @@ public class GufySpectralGem extends Item
         } else {
             return InteractionResult.FAIL;
         }
-    }
-
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
     }
 }

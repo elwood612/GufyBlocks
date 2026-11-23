@@ -1,16 +1,18 @@
 package com.github.elwood612.gufyblocks;
 
-import com.github.elwood612.gufyblocks.memoryCharm.*;
+import com.github.elwood612.gufyblocks.items.itemUtil.ClientMemoryPayloadHandler;
+import com.github.elwood612.gufyblocks.items.itemUtil.ServerMemoryPayloadHandler;
+import com.github.elwood612.gufyblocks.items.itemUtil.WorkstationRequest;
+import com.github.elwood612.gufyblocks.items.itemUtil.WorkstationResponse;
 import com.github.elwood612.gufyblocks.network.*;
-import com.github.elwood612.gufyblocks.spectralChime.ClientLightyPayloadHandler;
-import com.github.elwood612.gufyblocks.spectralChime.LightyRequest;
+import com.github.elwood612.gufyblocks.items.itemUtil.ClientLightyPayloadHandler;
+import com.github.elwood612.gufyblocks.items.itemUtil.LightyRequest;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.network.event.RegisterClientPayloadHandlersEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.slf4j.Logger;
@@ -38,8 +40,6 @@ public class GufyBlocks
 
 		modEventBus.addListener(this::registerPackets);
 		modEventBus.addListener(this::registerClientPackets);
-
-//		NeoForge.EVENT_BUS.register(MemoryCharmRendering.class);
 	}
 
 	private void registerPackets(RegisterPayloadHandlersEvent event) {
