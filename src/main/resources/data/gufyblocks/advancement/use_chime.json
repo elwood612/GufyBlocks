@@ -1,0 +1,32 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "on_chime_use": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gufyblocks:spectral_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:item_durability_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_chime_description"
+    },
+    "icon": {
+      "id": "gufyblocks:spectral_gem"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_chime_title"
+    }
+  },
+  "requirements": [
+    [
+      "on_chime_use"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

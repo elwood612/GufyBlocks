@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "undo_trade": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.undo_trade_description"
+    },
+    "icon": {
+      "id": "gufyblocks:memory_charm"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.undo_trade_title"
+    }
+  },
+  "requirements": [
+    [
+      "undo_trade"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
