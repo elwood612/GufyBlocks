@@ -1,6 +1,7 @@
 package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.items.itemUtil.AtlasClient;
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -39,6 +40,10 @@ public class GufyAtlas extends Item
         if (level.isClientSide()) AtlasClient.openMap();
 
         level.playSound((Player) null, player.blockPosition(), SoundEvents.BOOK_PAGE_TURN, SoundSource.NEUTRAL, 1f, 1f);
+
+        if (!player.getAbilities().instabuild && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer) {
+            GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_atlas");
+        }
 
         return InteractionResult.SUCCESS;
     }

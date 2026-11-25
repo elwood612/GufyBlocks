@@ -4,11 +4,13 @@ import com.github.elwood612.gufyblocks.GufyRegistry;
 import com.github.elwood612.gufyblocks.events.GufyPlayerEvents;
 import com.github.elwood612.gufyblocks.util.GufyCompassData;
 import com.github.elwood612.gufyblocks.util.GufyTags;
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
@@ -97,6 +99,9 @@ public class GufyWhisperingCompass extends Item
 
             if (newTarget != null && (oldTarget == null || !oldTarget.equals(newTarget))) {
                 level.playSound(null, playerPos, SoundEvents.SPYGLASS_USE, SoundSource.NEUTRAL, 1f, 1.5f);
+                if (player instanceof ServerPlayer serverPlayer){
+                    GufyUtil.awardAdvancement(level, serverPlayer, "have_active_compass");
+                }
             } else if (oldTarget != null && newTarget == null) {
                 level.playSound(null, playerPos, SoundEvents.SPYGLASS_STOP_USING, SoundSource.NEUTRAL, 1f, 1.2f);
                 level.playSound(null, playerPos, SoundEvents.NOTE_BLOCK_HAT.value(), SoundSource.NEUTRAL, 0.4f, 1.2f);

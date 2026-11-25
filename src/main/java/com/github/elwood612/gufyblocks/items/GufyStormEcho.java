@@ -45,6 +45,7 @@ public class GufyStormEcho extends Item
 
             if (!player.getAbilities().instabuild) {
                 itemstack.consume(1, player);
+                GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_echo");
             }
 
             GufyUtil.execute("weather thunder 6000", serverLevel, position, player);

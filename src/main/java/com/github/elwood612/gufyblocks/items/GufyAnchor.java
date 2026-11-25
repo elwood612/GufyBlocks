@@ -33,7 +33,7 @@ public class GufyAnchor extends Item
     public InteractionResult use(Level level, Player player, @NotNull InteractionHand handIn) {
         ItemStack itemstack = player.getItemInHand(handIn);
         BlockPos position = player.getOnPos();
-        if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer && itemstack.has(GufyRegistry.OWNER.get())) {
+        if (!level.isClientSide() && level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer && itemstack.has(GufyRegistry.OWNER.get())) {
             String ownerName = itemstack.getOrDefault(GufyRegistry.OWNER.get(), "");
 
             player.swing(handIn, SwingAnimation.DEFAULT, true);
@@ -60,6 +60,7 @@ public class GufyAnchor extends Item
 
                 if (!player.getAbilities().instabuild) {
                     itemstack.consume(1, player);
+                    GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_teleportation_crystal");
                 }
 
                 level.playSound((Player) null, position, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL);

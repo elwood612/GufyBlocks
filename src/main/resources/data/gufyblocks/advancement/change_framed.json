@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:make_mossy",
+  "criteria": {
+    "change_framed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.change_framed_description"
+    },
+    "icon": {
+      "id": "gufyblocks:spruce_framed_white_terracotta_cross"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.change_framed_title"
+    }
+  },
+  "requirements": [
+    [
+      "change_framed"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

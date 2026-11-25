@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:use_teleportation_crystal",
+  "criteria": {
+    "use_soulbound_crystal": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_soulbound_crystal_description"
+    },
+    "icon": {
+      "id": "gufyblocks:soulbound_anchor"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_soulbound_crystal_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_soulbound_crystal"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

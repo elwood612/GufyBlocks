@@ -1,15 +1,8 @@
 {
   "parent": "gufyblocks:root",
   "criteria": {
-    "on_chime_use": {
-      "conditions": {
-        "items": [
-          {
-            "items": "gufyblocks:spectral_gem"
-          }
-        ]
-      },
-      "trigger": "minecraft:item_durability_changed"
+    "use_chime": {
+      "trigger": "minecraft:impossible"
     }
   },
   "display": {
@@ -25,7 +18,7 @@
   },
   "requirements": [
     [
-      "on_chime_use"
+      "use_chime"
     ]
   ],
   "sends_telemetry_event": false

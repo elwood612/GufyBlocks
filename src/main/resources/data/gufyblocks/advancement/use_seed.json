@@ -1,0 +1,28 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "use_seed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_seed_description"
+    },
+    "icon": {
+      "id": "gufyblocks:biome_seed",
+	  "components": {
+		  "gufyblocks:stored_biome": "minecraft:plains"
+	  }
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_seed_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_seed"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

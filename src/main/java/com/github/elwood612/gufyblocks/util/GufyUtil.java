@@ -10,6 +10,7 @@ import com.github.elwood612.gufyblocks.blocks.GufyWeatheringWall;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.ReportedException;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
@@ -19,6 +20,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -204,6 +206,14 @@ public class GufyUtil
         return null;
     }
 
+
+    //***********************AWARD ADVANCEMENT*******************************//
+    public static void awardAdvancement(ServerLevel level, ServerPlayer player, String advancement) {
+        AdvancementHolder advancementHolder = level.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath("gufyblocks", advancement));
+        if (advancementHolder != null) player.getAdvancements().award(advancementHolder, advancement);
+    }
+
+
     //***********************PLAYER UTIL*******************************//
     @Nullable
     public static Player getPlayerEntityByName(Level level, String name) {
@@ -244,6 +254,9 @@ public class GufyUtil
         if (!(player.level() instanceof ServerLevel level)) return;
         level.broadcastEntityEvent(player, (byte)35);
         level.playSound(null, player.blockPosition(), SoundEvents.TOTEM_USE, SoundSource.PLAYERS);
+        if (player instanceof ServerPlayer serverPlayer) {
+            GufyUtil.awardAdvancement(level, serverPlayer, "use_totem");
+        }
     }
 
     //*******************BLOCKTYPES BUILDER**************************//
@@ -383,7 +396,7 @@ public class GufyUtil
                     GufyBlockTypes.FRAMED_CROSS
             });
 
-            // FRAMED_BLOCK_TYPES - 14
+            // VERTICAL_FRAMED_BLOCK_TYPES - 14
             add(new GufyBlockTypes[] {
                     GufyBlockTypes.VERTICAL_CONNECTED_BLOCK,
                     GufyBlockTypes.VERTICAL_CONNECTED_LEFT,

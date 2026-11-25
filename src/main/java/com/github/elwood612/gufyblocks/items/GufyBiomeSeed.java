@@ -105,6 +105,7 @@ public class GufyBiomeSeed extends Item
                 );
 
                 GufyUtil.execute(command, serverLevel, position, serverPlayer);
+                if (!player.getAbilities().instabuild) GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_seed");
 
                 BlockState state = level.getBlockState(position);
                 if (state.getBlock() instanceof BonemealableBlock block && block.isValidBonemealTarget(level, position, state, BonemealSource.INTERACTION)) {

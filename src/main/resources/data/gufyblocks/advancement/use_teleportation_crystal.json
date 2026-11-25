@@ -1,0 +1,28 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "use_teleportation_crystal": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_teleportation_crystal_description"
+    },
+    "icon": {
+      "id": "gufyblocks:anchor",
+	  "components": {
+		  "gufyblocks:owner": "elwood612"
+	  }
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_teleportation_crystal_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_teleportation_crystal"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

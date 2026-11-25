@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "use_atlas": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_atlas_description"
+    },
+    "icon": {
+      "id": "gufyblocks:atlas"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_atlas_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_atlas"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

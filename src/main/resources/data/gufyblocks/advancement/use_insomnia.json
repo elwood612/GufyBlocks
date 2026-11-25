@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "use_insomnia": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_insomnia_description"
+    },
+    "icon": {
+      "id": "gufyblocks:insomnia_fragment"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_insomnia_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_insomnia"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

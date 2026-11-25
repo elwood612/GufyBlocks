@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:use_atlas",
+  "criteria": {
+    "have_active_compass": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.have_active_compass_description"
+    },
+    "icon": {
+      "id": "gufyblocks:whispering_compass"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.have_active_compass_title"
+    }
+  },
+  "requirements": [
+    [
+      "have_active_compass"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,6 +1,7 @@
 package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.GufyRegistry;
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -40,7 +41,9 @@ public class GufyInsomniaFragment extends Item
             MobEffectInstance instance = new MobEffectInstance(
                     GufyRegistry.INSOMNIA,7200, 0, false, true, true);
             serverPlayer.addEffect(instance);
-
+            if (!serverPlayer.getAbilities().instabuild){
+                GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_insomnia");
+            }
             return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
         }
 

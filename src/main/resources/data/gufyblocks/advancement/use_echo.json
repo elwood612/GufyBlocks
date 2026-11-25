@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "use_echo": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_echo_description"
+    },
+    "icon": {
+      "id": "gufyblocks:storm_echo"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_echo_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_echo"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

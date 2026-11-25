@@ -1,5 +1,6 @@
 package com.github.elwood612.gufyblocks.items;
 
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -62,6 +63,7 @@ public class GufySoulboundAnchor extends Item
 
             if (!player.getAbilities().instabuild) {
                 itemstack.shrink(1);
+                GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_soulbound_crystal");
             }
 
             player.level().playSound((Player) null, player.blockPosition(), SoundEvents.AMETHYST_CLUSTER_BREAK, SoundSource.NEUTRAL);

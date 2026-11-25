@@ -1,9 +1,11 @@
 package com.github.elwood612.gufyblocks.items;
 
+import com.github.elwood612.gufyblocks.blocks.GufyVerticalConnectedBlock;
 import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -33,13 +35,13 @@ public class GufyHammer extends Item
         Level level = context.getLevel();
         BlockPos blockpos = context.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
-        Optional<BlockState> optional = GufyUtil.getCracked(blockstate);
+        Optional<BlockState> crackedVersion = GufyUtil.getCracked(blockstate);
 
         if (playerHasShieldUseIntent(context)) {
             return InteractionResult.PASS;
         }
         else {
-            if (optional.isEmpty()) {
+            if (crackedVersion.isEmpty()) {
                 return InteractionResult.PASS;
             } else {
                 Player player = context.getPlayer();
@@ -47,12 +49,20 @@ public class GufyHammer extends Item
                 SoundType soundType = blockstate.getSoundType(level, blockpos, player);
                 SoundEvent soundEvent = soundType.getBreakSound();
 
-                if (player instanceof ServerPlayer) {
-                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockpos, itemstack);
+                if (player instanceof ServerPlayer serverPlayer) {
+                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockpos, itemstack);
                     itemstack.hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
+                    if (level instanceof ServerLevel serverLevel) {
+                        if (crackedVersion.get().getBlock() instanceof GufyVerticalConnectedBlock) {
+                            GufyUtil.awardAdvancement(serverLevel, serverPlayer, "change_framed");
+                        }
+                        else {
+                            GufyUtil.awardAdvancement(serverLevel, serverPlayer, "make_cracked");
+                        }
+                    }
                 }
-                level.setBlock(blockpos, (BlockState)optional.get(), 11);
-                level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));
+                level.setBlock(blockpos, (BlockState)crackedVersion.get(), 11);
+                level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)crackedVersion.get()));
                 level.playSound(player, blockpos, soundEvent, SoundSource.BLOCKS, 1.0F, level.getRandom().nextFloat() * 0.1F + 0.9F);
                 level.levelEvent(player, 2001, blockpos, Block.BLOCK_STATE_REGISTRY.getId(blockstate));
 

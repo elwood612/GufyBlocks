@@ -1,0 +1,26 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "use_totem": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.use_totem_description"
+    },
+	"frame": "goal",
+    "icon": {
+      "id": "gufyblocks:totem_keeping"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.use_totem_title"
+    }
+  },
+  "requirements": [
+    [
+      "use_totem"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

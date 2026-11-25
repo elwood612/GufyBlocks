@@ -4,6 +4,7 @@ import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -37,9 +38,12 @@ public class GufyMossClump extends Item
         } else {
             Player player = context.getPlayer();
             ItemStack itemstack = context.getItemInHand();
-            if (player instanceof ServerPlayer) {
-                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, blockpos, itemstack);
+            if (player instanceof ServerPlayer serverPlayer) {
+                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockpos, itemstack);
                 itemstack.shrink(1);
+                if (level instanceof ServerLevel serverLevel) {
+                    GufyUtil.awardAdvancement(serverLevel, serverPlayer, "make_mossy");
+                }
             }
             level.setBlock(blockpos, (BlockState)optional.get(), 11);
             level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, (BlockState)optional.get()));

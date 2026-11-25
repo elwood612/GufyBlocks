@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:root",
+  "criteria": {
+    "make_mossy": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.make_mossy_description"
+    },
+    "icon": {
+      "id": "gufyblocks:moss_clump"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.make_mossy_title"
+    }
+  },
+  "requirements": [
+    [
+      "make_mossy"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

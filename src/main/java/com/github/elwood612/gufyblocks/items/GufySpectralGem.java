@@ -1,6 +1,7 @@
 package com.github.elwood612.gufyblocks.items;
 
 import com.github.elwood612.gufyblocks.items.itemUtil.LightyRequest;
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -41,6 +42,7 @@ public class GufySpectralGem extends Item
 
             if (!player.getAbilities().instabuild) {
                 itemstack.hurtAndBreak(1, player, handIn);
+                GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_chime");
             }
 
             // Give all mobs & players the glowing effect

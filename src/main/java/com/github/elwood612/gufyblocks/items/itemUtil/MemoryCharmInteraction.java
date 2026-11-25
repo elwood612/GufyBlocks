@@ -3,6 +3,7 @@ package com.github.elwood612.gufyblocks.items.itemUtil;
 import com.github.elwood612.gufyblocks.GufyBlocks;
 import com.github.elwood612.gufyblocks.items.GufyMemoryCharm;
 import com.github.elwood612.gufyblocks.util.GufyScheduler;
+import com.github.elwood612.gufyblocks.util.GufyUtil;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
@@ -55,8 +56,9 @@ public class MemoryCharmInteraction
 
                 if (!player.getAbilities().instabuild) {
                     stack.consume(1, player);
-                    AdvancementHolder advancementHolder = serverLevel.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath("gufyblocks", "undo_trade"));
-                    if (advancementHolder != null) serverPlayer.getAdvancements().award(advancementHolder, "undo_trade");
+//                    AdvancementHolder advancementHolder = serverLevel.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath("gufyblocks", "undo_trade"));
+//                    if (advancementHolder != null) serverPlayer.getAdvancements().award(advancementHolder, "undo_trade");
+                    GufyUtil.awardAdvancement(serverLevel, serverPlayer, "undo_trade");
                 }
 
                 serverLevel.playSound(null, villager.blockPosition(), SoundEvents.VILLAGER_YES, SoundSource.NEUTRAL);

@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:make_mossy",
+  "criteria": {
+    "make_cracked": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.make_cracked_description"
+    },
+    "icon": {
+      "id": "gufyblocks:hammer"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.make_cracked_title"
+    }
+  },
+  "requirements": [
+    [
+      "make_cracked"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
