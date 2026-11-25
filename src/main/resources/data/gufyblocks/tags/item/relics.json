@@ -5,9 +5,13 @@
 	"gufyblocks:biome_seed",
 	"gufyblocks:experience_orb",
 	"gufyblocks:insomnia_fragment",
+	"gufyblocks:storm_echo",
 	"gufyblocks:memory_charm",
 	"gufyblocks:soulbound_anchor",
 	"gufyblocks:homebound_anchor",
-	"gufyblocks:totem_keeping"
+	"gufyblocks:totem_keeping",
+	"gufyblocks:atlas",
+	"gufyblocks:whispering_compass",
+	"gufyblocks:spectral_gem"
   ]
 }

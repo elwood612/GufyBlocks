@@ -2889,6 +2889,13 @@
 
 "effect.gufyblocks.gufy_insomnia": "Potent Insomnia",
 
+"advancements.gufyblocks.root_title": "Just a trinket",
+"advancements.gufyblocks.root_description": "Obtain any trinket",
+"advancements.gufyblocks.use_chime_title": "Show yourselves!",
+"advancements.gufyblocks.use_chime_description": "Reveal nearby mobs & hostile spawn points",
+"advancements.gufyblocks.undo_trade_title": "What a bad deal...",
+"advancements.gufyblocks.undo_trade_description": "Revert a villager's latest trade",
+
 "itemGroup.gufyblocks.tab": "Gufy Blocks",
 "itemGroup.gufyblocks.item_tab": "Gufy Items",
 "itemGroup.gufyblocks.framed_tab": "Framed Blocks"
