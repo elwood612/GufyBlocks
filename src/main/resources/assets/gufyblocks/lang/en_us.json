@@ -2919,6 +2919,8 @@
 "advancements.gufyblocks.make_cracked_description": "Use a hammer to give a stone cracks",
 "advancements.gufyblocks.change_framed_title": "Frame it",
 "advancements.gufyblocks.change_framed_description": "Use a hammer to change a framed block's look",
+"advancements.gufyblocks.trade_coin_title": "A better deal",
+"advancements.gufyblocks.trade_coin_description": "Trade a Curious Coin to a Wandering Trader",
 
 "itemGroup.gufyblocks.tab": "Gufy Blocks",
 "itemGroup.gufyblocks.item_tab": "Gufy Items",

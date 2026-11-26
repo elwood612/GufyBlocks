@@ -48,6 +48,9 @@ public class GufyInsomniaEffect extends MobEffect {
         }
 
         spawnPhantoms(level, pos, player);
+        if (!player.getAbilities().instabuild) {
+            GufyUtil.awardAdvancement(level, player, "use_insomnia");
+        }
 
         // If this returns false when shouldApplyEffectTickThisTick returns true, the effect will immediately be removed
         return true;

@@ -1,0 +1,25 @@
+{
+  "parent": "gufyblocks:undo_trade",
+  "criteria": {
+    "trade_coin": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.gufyblocks.trade_coin_description"
+    },
+    "icon": {
+      "id": "gufyblocks:stillstone"
+    },
+    "title": {
+      "translate": "advancements.gufyblocks.trade_coin_title"
+    }
+  },
+  "requirements": [
+    [
+      "trade_coin"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

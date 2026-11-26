@@ -41,9 +41,6 @@ public class GufyInsomniaFragment extends Item
             MobEffectInstance instance = new MobEffectInstance(
                     GufyRegistry.INSOMNIA,7200, 0, false, true, true);
             serverPlayer.addEffect(instance);
-            if (!serverPlayer.getAbilities().instabuild){
-                GufyUtil.awardAdvancement(serverLevel, serverPlayer, "use_insomnia");
-            }
             return consumable != null ? consumable.onConsume(level, livingEntity, itemstack) : itemstack;
         }
 
