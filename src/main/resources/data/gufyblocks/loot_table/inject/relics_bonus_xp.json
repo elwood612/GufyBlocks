@@ -1,11 +1,12 @@
 {
+  "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": "",
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "gufyblocks:relics_bonus_xp_entries",
+          "value": "gufyblocks:inject/relics_bonus_xp_entries",
           "condition": {
             "type": "minecraft:random_chance",
             "chance": 0.25
