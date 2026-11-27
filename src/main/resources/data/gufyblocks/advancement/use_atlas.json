@@ -1,5 +1,5 @@
 {
-  "parent": "gufyblocks:root",
+  "parent": "gufyblocks:have_active_compass",
   "criteria": {
     "use_atlas": {
       "trigger": "minecraft:impossible"

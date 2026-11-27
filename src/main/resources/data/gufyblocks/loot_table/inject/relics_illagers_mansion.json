@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "entries": [
+		{
+          "type": "minecraft:item",
+		  "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "max": 6,
+              "min": 1
+            }
+          },
+          "name": "gufyblocks:stillstone",
+		  "weight": 10
+        },
+		{
+          "type": "minecraft:item",
+          "name": "gufyblocks:anchor",
+		  "weight": 1
+        }
+      ],
+      "rolls": 1.0,
+	  "condition":
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.45
+        }
+    }
+  ]
+}

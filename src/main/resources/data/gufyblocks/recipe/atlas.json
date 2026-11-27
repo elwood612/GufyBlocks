@@ -2,11 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": "minecraft:map",
-    "X": "minecraft:writable_book"
+    "X": "minecraft:writable_book",
+	"Y": "gufyblocks:whispering_compass",
+	"Z": "minecraft:ender_eye"
   },
   "pattern": [
     "###",
-    "#X#",
+    "YXZ",
 	"###"
   ],
   "result": 

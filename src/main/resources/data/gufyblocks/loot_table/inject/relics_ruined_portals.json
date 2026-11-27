@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+		{
+          "type": "minecraft:item",
+		  "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "max": 3,
+              "min": 1
+            }
+          },
+          "name": "gufyblocks:stillstone",
+		  "weight": 3
+        },
+		{
+          "type": "minecraft:item",
+		  "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "max": 3,
+              "min": 1
+            }
+          },
+          "name": "gufyblocks:memory_charm",
+		  "weight": 3
+        },
+		{
+          "type": "minecraft:item",
+          "name": "gufyblocks:anchor"
+        },
+		{
+          "type": "minecraft:item",
+          "name": "gufyblocks:totem_keeping"
+        }
+      ],
+      "rolls": 1.0,
+	  "condition":
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.35
+        }
+    }
+  ]
+}

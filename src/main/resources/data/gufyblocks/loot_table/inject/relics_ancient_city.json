@@ -15,24 +15,19 @@
             }
           },
           "name": "gufyblocks:stillstone",
-		  "weight": 5
+		  "weight": 3
         },
 		{
           "type": "minecraft:item",
-          "name": "gufyblocks:anchor",
+          "name": "gufyblocks:soulbound_anchor",
 		  "weight": 1
-        },
-		{
-          "type": "minecraft:item",
-          "name": "gufyblocks:totem_keeping",
-		  "weight": 20
         }
       ],
       "rolls": 1.0,
 	  "condition":
         {
           "type": "minecraft:random_chance",
-          "chance": 0.35
+          "chance": 0.25
         }
     }
   ]
