@@ -2,7 +2,6 @@
   "type": "minecraft:archaeology",
   "pools": [
     {
-      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -145,10 +144,10 @@
 		{
           "type": "minecraft:item",
           "name": "gufyblocks:biome_seed",
-		  "weight": 20
+		  "weight": 15
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     }
   ],
   "random_sequence": "minecraft:archaeology/trail_ruins_common"

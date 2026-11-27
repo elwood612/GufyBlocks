@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": "gufyblocks:memory_charm",
-    "X": "minecraft:gold_ingot",
+    "X": "gufyblocks:memory_charm",
+    "#": "minecraft:gold_ingot",
 	"Y": "minecraft:tuff"
   },
   "pattern": [
-    "YXY",
-    "X#X",
-	"YXY"
+    "#X#",
+    "#Y#",
+	"###"
   ],
   "result": 
   { 

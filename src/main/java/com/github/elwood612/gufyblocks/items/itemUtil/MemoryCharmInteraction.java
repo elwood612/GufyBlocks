@@ -56,8 +56,6 @@ public class MemoryCharmInteraction
 
                 if (!player.getAbilities().instabuild) {
                     stack.consume(1, player);
-//                    AdvancementHolder advancementHolder = serverLevel.getServer().getAdvancements().get(Identifier.fromNamespaceAndPath("gufyblocks", "undo_trade"));
-//                    if (advancementHolder != null) serverPlayer.getAdvancements().award(advancementHolder, "undo_trade");
                     GufyUtil.awardAdvancement(serverLevel, serverPlayer, "undo_trade");
                 }
 

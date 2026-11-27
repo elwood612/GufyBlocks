@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:weighted_list",
+              "distribution": [
+                {
+                  "weight": 1,
+                  "data": 1
+                },
+                {
+                  "weight": 3,
+                  "data": 2
+                },
+                {
+                  "weight": 3,
+                  "data": 3
+                },
+                {
+                  "weight": 1,
+                  "data": 4
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gufyblocks:experience_orb",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:weighted_list",
+              "distribution": [
+                {
+                  "weight": 3,
+                  "data": 1
+                },
+                {
+                  "weight": 1,
+                  "data": 2
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
